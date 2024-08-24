@@ -30,7 +30,8 @@ namespace TheCoffe.App
             row2.Cells[0].Value = 20;
             row2.Cells[1].Value = "Cafe";
             row2.Cells[2].Value = 2000;
-            row2.Cells[3].Value = "Cafes";
+            row2.Cells[3].Value = "Cocido";
+
         }
 
         private void roundButton2_Click(object sender, EventArgs e)
