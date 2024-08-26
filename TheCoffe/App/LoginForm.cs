@@ -28,5 +28,12 @@ namespace TheCoffe
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void modernTextBox3__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

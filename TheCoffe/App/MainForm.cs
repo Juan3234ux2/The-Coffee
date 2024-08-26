@@ -13,6 +13,7 @@ namespace TheCoffe
 {
     public partial class MainForm : Form
     {
+        private UserControl activeForm = null;
         public MainForm()
         {
             InitializeComponent();
@@ -23,7 +24,15 @@ namespace TheCoffe
         }
         private void LoadUserControl(UserControl userControl)
         {
-            pnlMain.Controls.Clear();
+            if(activeForm != null && activeForm.GetType() == userControl.GetType())
+            {
+                return;
+            }
+            if(activeForm != null)
+            {
+                pnlMain.Controls.Remove(activeForm); 
+            }
+            activeForm = userControl;
             userControl.Dock = DockStyle.Fill;
             pnlMain.Controls.Add(userControl);
         }
@@ -59,9 +68,14 @@ namespace TheCoffe
         }
 
         private void btnProducts_Click(object sender, EventArgs e)
-        {
+        {   
             SetActiveSection(sender as RoundButton);
-            LoadUserControl(new ProductListForm());
+            LoadUserControl(new ProductListForm());            
+        }
+
+        private void pnlMain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

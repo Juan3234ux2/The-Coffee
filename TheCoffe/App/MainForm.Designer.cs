@@ -98,14 +98,18 @@
             this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUser.FlatAppearance.BorderSize = 0;
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< Updated upstream
             this.btnUser.Font = new System.Drawing.Font("Gilroy-SemiBold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+=======
+            this.btnUser.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+>>>>>>> Stashed changes
             this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnUser.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnUser.IconColor = System.Drawing.Color.DimGray;
             this.btnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUser.IconSize = 35;
             this.btnUser.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnUser.Location = new System.Drawing.Point(57, 105);
+            this.btnUser.Location = new System.Drawing.Point(58, 105);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(130, 30);
             this.btnUser.TabIndex = 18;
@@ -117,30 +121,51 @@
             // label3
             // 
             this.label3.AutoSize = true;
+<<<<<<< Updated upstream
             this.label3.Font = new System.Drawing.Font("Gilroy-Bold", 8.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(83, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 14);
+=======
+            this.label3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(85, 88);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 13);
+>>>>>>> Stashed changes
             this.label3.TabIndex = 19;
             this.label3.Text = "Administrador";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+<<<<<<< Updated upstream
             this.label2.Font = new System.Drawing.Font("Gilroy-Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(70, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 19);
+=======
+            this.label2.Font = new System.Drawing.Font("Roboto Medium", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(74, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 18);
+>>>>>>> Stashed changes
             this.label2.TabIndex = 2;
             this.label2.Text = "Juan Coronel";
             // 
             // imgUser
             // 
             this.imgUser.Image = ((System.Drawing.Image)(resources.GetObject("imgUser.Image")));
+<<<<<<< Updated upstream
             this.imgUser.Location = new System.Drawing.Point(91, 17);
             this.imgUser.Name = "imgUser";
             this.imgUser.Size = new System.Drawing.Size(61, 50);
+=======
+            this.imgUser.Location = new System.Drawing.Point(97, 17);
+            this.imgUser.Name = "imgUser";
+            this.imgUser.Size = new System.Drawing.Size(55, 50);
+>>>>>>> Stashed changes
             this.imgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgUser.TabIndex = 18;
             this.imgUser.TabStop = false;
@@ -155,7 +180,11 @@
             this.roundButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton4.FlatAppearance.BorderSize = 0;
             this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< Updated upstream
             this.roundButton4.Font = new System.Drawing.Font("Gilroy-SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+=======
+            this.roundButton4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+>>>>>>> Stashed changes
             this.roundButton4.ForeColor = System.Drawing.Color.DimGray;
             this.roundButton4.IconChar = FontAwesome.Sharp.IconChar.Cog;
             this.roundButton4.IconColor = System.Drawing.Color.DimGray;
@@ -185,7 +214,11 @@
             this.roundButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton3.FlatAppearance.BorderSize = 0;
             this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< Updated upstream
             this.roundButton3.Font = new System.Drawing.Font("Gilroy-SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+=======
+            this.roundButton3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+>>>>>>> Stashed changes
             this.roundButton3.ForeColor = System.Drawing.Color.DimGray;
             this.roundButton3.IconChar = FontAwesome.Sharp.IconChar.File;
             this.roundButton3.IconColor = System.Drawing.Color.DimGray;
@@ -215,7 +248,11 @@
             this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton2.FlatAppearance.BorderSize = 0;
             this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< Updated upstream
             this.roundButton2.Font = new System.Drawing.Font("Gilroy-SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+=======
+            this.roundButton2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+>>>>>>> Stashed changes
             this.roundButton2.ForeColor = System.Drawing.Color.DimGray;
             this.roundButton2.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.roundButton2.IconColor = System.Drawing.Color.DimGray;
@@ -246,7 +283,11 @@
             this.btnProducts.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProducts.FlatAppearance.BorderSize = 0;
             this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< Updated upstream
             this.btnProducts.Font = new System.Drawing.Font("Gilroy-SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+=======
+            this.btnProducts.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+>>>>>>> Stashed changes
             this.btnProducts.ForeColor = System.Drawing.Color.DimGray;
             this.btnProducts.IconChar = FontAwesome.Sharp.IconChar.Coffee;
             this.btnProducts.IconColor = System.Drawing.Color.DimGray;
@@ -277,7 +318,11 @@
             this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< Updated upstream
             this.btnDashboard.Font = new System.Drawing.Font("Gilroy-SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+=======
+            this.btnDashboard.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+>>>>>>> Stashed changes
             this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnDashboard.IconChar = FontAwesome.Sharp.IconChar.ChartPie;
             this.btnDashboard.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
@@ -306,6 +351,10 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1019, 681);
             this.pnlMain.TabIndex = 2;
+<<<<<<< Updated upstream
+=======
+            this.pnlMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMain_Paint);
+>>>>>>> Stashed changes
             // 
             // MainForm
             // 
