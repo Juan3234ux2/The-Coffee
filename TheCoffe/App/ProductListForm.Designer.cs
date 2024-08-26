@@ -33,9 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.roundButton1 = new WindowsFormsApplication1.RoundButton();
-            this.roundButton2 = new WindowsFormsApplication1.RoundButton();
             this.roundButton3 = new WindowsFormsApplication1.RoundButton();
+            this.roundButton2 = new WindowsFormsApplication1.RoundButton();
+            this.roundButton1 = new WindowsFormsApplication1.RoundButton();
             this.label1 = new System.Windows.Forms.Label();
             this.roundButton4 = new WindowsFormsApplication1.RoundButton();
             this.input1 = new TheCoffe.Input();
@@ -62,53 +62,6 @@
             this.panel1.Size = new System.Drawing.Size(1030, 45);
             this.panel1.TabIndex = 0;
             // 
-            // roundButton1
-            // 
-            this.roundButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(200)))), ((int)(((byte)(160)))));
-            this.roundButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(200)))), ((int)(((byte)(160)))));
-            this.roundButton1.BorderColor = System.Drawing.Color.Black;
-            this.roundButton1.BorderRadius = 8;
-            this.roundButton1.BorderSize = 0;
-            this.roundButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton1.FlatAppearance.BorderSize = 0;
-            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton1.Font = new System.Drawing.Font("Gilroy-Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton1.ForeColor = System.Drawing.Color.White;
-            this.roundButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton1.IconColor = System.Drawing.Color.Black;
-            this.roundButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton1.Location = new System.Drawing.Point(2, -1);
-            this.roundButton1.Name = "roundButton1";
-            this.roundButton1.Size = new System.Drawing.Size(227, 47);
-            this.roundButton1.TabIndex = 0;
-            this.roundButton1.Text = "Administrar Productos";
-            this.roundButton1.TextColor = System.Drawing.Color.White;
-            this.roundButton1.UseVisualStyleBackColor = false;
-            // 
-            // roundButton2
-            // 
-            this.roundButton2.BackColor = System.Drawing.Color.Transparent;
-            this.roundButton2.BackgroundColor = System.Drawing.Color.Transparent;
-            this.roundButton2.BorderColor = System.Drawing.Color.Black;
-            this.roundButton2.BorderRadius = 8;
-            this.roundButton2.BorderSize = 0;
-            this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton2.FlatAppearance.BorderSize = 0;
-            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton2.Font = new System.Drawing.Font("Gilroy-Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton2.ForeColor = System.Drawing.Color.DimGray;
-            this.roundButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton2.IconColor = System.Drawing.Color.Black;
-            this.roundButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton2.Location = new System.Drawing.Point(229, -1);
-            this.roundButton2.Name = "roundButton2";
-            this.roundButton2.Size = new System.Drawing.Size(227, 47);
-            this.roundButton2.TabIndex = 1;
-            this.roundButton2.Text = "Administrar Categorías";
-            this.roundButton2.TextColor = System.Drawing.Color.DimGray;
-            this.roundButton2.UseVisualStyleBackColor = false;
-            this.roundButton2.Click += new System.EventHandler(this.roundButton2_Click);
-            // 
             // roundButton3
             // 
             this.roundButton3.BackColor = System.Drawing.Color.Transparent;
@@ -119,7 +72,7 @@
             this.roundButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton3.FlatAppearance.BorderSize = 0;
             this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton3.Font = new System.Drawing.Font("Gilroy-Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundButton3.ForeColor = System.Drawing.Color.DimGray;
             this.roundButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             this.roundButton3.IconColor = System.Drawing.Color.Black;
@@ -132,13 +85,59 @@
             this.roundButton3.TextColor = System.Drawing.Color.DimGray;
             this.roundButton3.UseVisualStyleBackColor = false;
             // 
+            // roundButton2
+            // 
+            this.roundButton2.BackColor = System.Drawing.Color.Transparent;
+            this.roundButton2.BackgroundColor = System.Drawing.Color.Transparent;
+            this.roundButton2.BorderColor = System.Drawing.Color.Black;
+            this.roundButton2.BorderRadius = 8;
+            this.roundButton2.BorderSize = 0;
+            this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton2.FlatAppearance.BorderSize = 0;
+            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton2.ForeColor = System.Drawing.Color.DimGray;
+            this.roundButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton2.IconColor = System.Drawing.Color.Black;
+            this.roundButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton2.Location = new System.Drawing.Point(229, -1);
+            this.roundButton2.Name = "roundButton2";
+            this.roundButton2.Size = new System.Drawing.Size(227, 47);
+            this.roundButton2.TabIndex = 1;
+            this.roundButton2.Text = "Administrar Categorías";
+            this.roundButton2.TextColor = System.Drawing.Color.DimGray;
+            this.roundButton2.UseVisualStyleBackColor = false;
+            // 
+            // roundButton1
+            // 
+            this.roundButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(200)))), ((int)(((byte)(160)))));
+            this.roundButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(200)))), ((int)(((byte)(160)))));
+            this.roundButton1.BorderColor = System.Drawing.Color.Black;
+            this.roundButton1.BorderRadius = 8;
+            this.roundButton1.BorderSize = 0;
+            this.roundButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton1.FlatAppearance.BorderSize = 0;
+            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton1.ForeColor = System.Drawing.Color.White;
+            this.roundButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton1.IconColor = System.Drawing.Color.Black;
+            this.roundButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton1.Location = new System.Drawing.Point(2, -1);
+            this.roundButton1.Name = "roundButton1";
+            this.roundButton1.Size = new System.Drawing.Size(227, 47);
+            this.roundButton1.TabIndex = 0;
+            this.roundButton1.Text = "Administrar Productos";
+            this.roundButton1.TextColor = System.Drawing.Color.White;
+            this.roundButton1.UseVisualStyleBackColor = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gilroy-Black", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 43);
+            this.label1.Size = new System.Drawing.Size(179, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "Productos";
             // 
@@ -152,7 +151,7 @@
             this.roundButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton4.FlatAppearance.BorderSize = 0;
             this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton4.Font = new System.Drawing.Font("Gilroy-Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundButton4.ForeColor = System.Drawing.Color.White;
             this.roundButton4.IconChar = FontAwesome.Sharp.IconChar.None;
             this.roundButton4.IconColor = System.Drawing.Color.White;
@@ -166,12 +165,13 @@
             this.roundButton4.Text = "  Agregar Producto";
             this.roundButton4.TextColor = System.Drawing.Color.White;
             this.roundButton4.UseVisualStyleBackColor = false;
+            this.roundButton4.Click += new System.EventHandler(this.roundButton4_Click);
             // 
             // input1
             // 
             this.input1.BackColor = System.Drawing.Color.Transparent;
             this.input1.Br = System.Drawing.Color.White;
-            this.input1.Font = new System.Drawing.Font("Gilroy-SemiBold", 11F);
+            this.input1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.input1.ForeColor = System.Drawing.Color.DimGray;
             this.input1.Location = new System.Drawing.Point(25, 128);
             this.input1.Name = "input1";
@@ -212,7 +212,7 @@
             this.dataProducts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(200)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gilroy-Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(200)))), ((int)(((byte)(160)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -228,7 +228,7 @@
             this.Acciones});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gilroy-SemiBold", 9F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
@@ -241,7 +241,7 @@
             this.dataProducts.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(200)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Gilroy-Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(200)))), ((int)(((byte)(160)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;

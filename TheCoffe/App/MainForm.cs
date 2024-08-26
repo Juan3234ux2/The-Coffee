@@ -52,12 +52,7 @@ namespace TheCoffe
         {
 
         }
-
-        private void roundButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void btnProducts_Click(object sender, EventArgs e)
         {
             SetActiveSection(sender as RoundButton);

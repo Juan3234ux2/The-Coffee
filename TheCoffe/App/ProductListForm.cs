@@ -34,9 +34,10 @@ namespace TheCoffe.App
 
         }
 
-        private void roundButton2_Click(object sender, EventArgs e)
+        private void roundButton4_Click(object sender, EventArgs e)
         {
-
+            AddProductForm form = new AddProductForm();
+            form.Show();
         }
     }
 }

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
@@ -38,6 +37,7 @@
             this.txtUser = new TheCoffe.Input();
             this.txtContraseña = new TheCoffe.Input();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,46 +54,35 @@
             this.panel1.Size = new System.Drawing.Size(304, 475);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TheCoffe.Properties.Resources.The_Coffee__600_x_600_px___1_;
-            this.pictureBox1.InitialImage = global::TheCoffe.Properties.Resources.The_Coffee__600_x_600_px___1_;
-            this.pictureBox1.Location = new System.Drawing.Point(-9, 168);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(324, 276);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Gilroy-Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(48, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 18);
+            this.label2.Size = new System.Drawing.Size(119, 17);
             this.label2.TabIndex = 11;
             this.label2.Text = "Al punto de venta";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gilroy-Black", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(42, 85);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(227, 50);
+            this.label1.Size = new System.Drawing.Size(217, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bienvenido";
             // 
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Font = new System.Drawing.Font("Gilroy-Bold", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.Location = new System.Drawing.Point(388, 85);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(268, 49);
+            this.lblLogin.Size = new System.Drawing.Size(274, 46);
             this.lblLogin.TabIndex = 1;
             this.lblLogin.Text = "Iniciar Sesión";
             // 
@@ -104,7 +93,7 @@
             this.btnLogin.BackColor = System.Drawing.Color.Transparent;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnLogin.Font = new System.Drawing.Font("Gilroy-Bold", 11F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnLogin.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
@@ -123,7 +112,7 @@
             // 
             this.txtUser.BackColor = System.Drawing.Color.Transparent;
             this.txtUser.Br = System.Drawing.Color.White;
-            this.txtUser.Font = new System.Drawing.Font("Gilroy-Bold", 11F);
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtUser.ForeColor = System.Drawing.Color.DimGray;
             this.txtUser.Location = new System.Drawing.Point(374, 168);
             this.txtUser.Name = "txtUser";
@@ -136,7 +125,7 @@
             // 
             this.txtContraseña.BackColor = System.Drawing.Color.Transparent;
             this.txtContraseña.Br = System.Drawing.Color.White;
-            this.txtContraseña.Font = new System.Drawing.Font("Gilroy-Bold", 11F);
+            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
             this.txtContraseña.Location = new System.Drawing.Point(374, 248);
             this.txtContraseña.Name = "txtContraseña";
@@ -162,6 +151,17 @@
             this.btnClose.TabIndex = 10;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TheCoffe.Properties.Resources.The_Coffee__600_x_600_px___1_;
+            this.pictureBox1.InitialImage = global::TheCoffe.Properties.Resources.The_Coffee__600_x_600_px___1_;
+            this.pictureBox1.Location = new System.Drawing.Point(-9, 168);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(324, 276);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
