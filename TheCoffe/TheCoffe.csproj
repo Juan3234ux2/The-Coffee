@@ -95,7 +95,7 @@
       <DependentUpon>ProductListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="App\Program.cs" />
-    <Compile Include="Input.cs">
+    <Compile Include="Components\Input.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="App\LoginForm.cs">
@@ -104,8 +104,14 @@
     <Compile Include="App\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\ModernTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ModernTextBox.Designer.cs">
+      <DependentUpon>ModernTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RoundButton.cs">
+    <Compile Include="Components\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="App\AddProductForm.resx">
@@ -123,8 +129,11 @@
     <EmbeddedResource Include="App\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Input.resx">
+    <EmbeddedResource Include="Components\Input.resx">
       <DependentUpon>Input.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ModernTextBox.resx">
+      <DependentUpon>ModernTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

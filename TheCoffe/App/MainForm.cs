@@ -13,6 +13,7 @@ namespace TheCoffe
 {
     public partial class MainForm : Form
     {
+        UserControl activeSection = null;
         public MainForm()
         {
             InitializeComponent();
@@ -23,7 +24,15 @@ namespace TheCoffe
         }
         private void LoadUserControl(UserControl userControl)
         {
-            pnlMain.Controls.Clear();
+            if (activeSection != null && activeSection.GetType() == userControl.GetType())
+            {
+                return;
+            }
+            if (activeSection != null)
+            {
+                pnlMain.Controls.Remove(activeSection);
+            }
+            activeSection = userControl;
             userControl.Dock = DockStyle.Fill;
             pnlMain.Controls.Add(userControl);
         }
