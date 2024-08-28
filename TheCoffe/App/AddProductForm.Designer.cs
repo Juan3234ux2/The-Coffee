@@ -148,7 +148,7 @@
             this.txtPrice.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtPrice.Location = new System.Drawing.Point(31, 198);
+            this.txtPrice.Location = new System.Drawing.Point(31, 183);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PlaceHolder = null;
             this.txtPrice.Size = new System.Drawing.Size(322, 28);
