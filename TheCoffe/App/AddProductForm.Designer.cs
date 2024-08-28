@@ -30,30 +30,30 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.roundButton1 = new WindowsFormsApplication1.RoundButton();
             this.btnAdd = new AltoControls.AltoButton();
             this.cboCategory = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtPrice = new TheCoffe.Input();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtName = new TheCoffe.Input();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.txtPrice = new TheCoffe.Components.ModernTextBox();
+            this.roundButton1 = new WindowsFormsApplication1.RoundButton();
+            this.txtName = new TheCoffe.Components.ModernTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.txtName);
+            this.panel1.Controls.Add(this.txtPrice);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.roundButton1);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.cboCategory);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txtPrice);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.btnClose);
@@ -61,40 +61,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(386, 545);
             this.panel1.TabIndex = 24;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(28, 327);
+            this.label6.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(31, 318);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 14);
+            this.label6.Size = new System.Drawing.Size(50, 15);
             this.label6.TabIndex = 34;
             this.label6.Text = "Imágen";
-            // 
-            // roundButton1
-            // 
-            this.roundButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.roundButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.roundButton1.BorderColor = System.Drawing.Color.Black;
-            this.roundButton1.BorderRadius = 20;
-            this.roundButton1.BorderSize = 0;
-            this.roundButton1.FlatAppearance.BorderSize = 0;
-            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton1.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton1.ForeColor = System.Drawing.Color.DimGray;
-            this.roundButton1.IconChar = FontAwesome.Sharp.IconChar.CloudUploadAlt;
-            this.roundButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.roundButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton1.Location = new System.Drawing.Point(26, 361);
-            this.roundButton1.Name = "roundButton1";
-            this.roundButton1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.roundButton1.Size = new System.Drawing.Size(322, 79);
-            this.roundButton1.TabIndex = 33;
-            this.roundButton1.Text = "Navega para elegir el archivo";
-            this.roundButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.roundButton1.TextColor = System.Drawing.Color.DimGray;
-            this.roundButton1.UseVisualStyleBackColor = false;
             // 
             // btnAdd
             // 
@@ -107,10 +84,10 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnAdd.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnAdd.Location = new System.Drawing.Point(26, 488);
+            this.btnAdd.Location = new System.Drawing.Point(34, 478);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Radius = 10;
-            this.btnAdd.Size = new System.Drawing.Size(322, 45);
+            this.btnAdd.Size = new System.Drawing.Size(317, 45);
             this.btnAdd.Stroke = false;
             this.btnAdd.StrokeColor = System.Drawing.Color.Gray;
             this.btnAdd.TabIndex = 32;
@@ -128,77 +105,49 @@
             "Café",
             "Tortas",
             "Jugos"});
-            this.cboCategory.Location = new System.Drawing.Point(31, 278);
+            this.cboCategory.Location = new System.Drawing.Point(32, 266);
             this.cboCategory.Name = "cboCategory";
-            this.cboCategory.Size = new System.Drawing.Size(322, 21);
+            this.cboCategory.Size = new System.Drawing.Size(317, 21);
             this.cboCategory.TabIndex = 31;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(28, 246);
+            this.label7.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(30, 237);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 14);
+            this.label7.Size = new System.Drawing.Size(64, 15);
             this.label7.TabIndex = 30;
             this.label7.Text = "Categoría";
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.BackColor = System.Drawing.Color.Transparent;
-            this.txtPrice.Br = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.txtPrice.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtPrice.Location = new System.Drawing.Point(31, 183);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.PlaceHolder = null;
-            this.txtPrice.Size = new System.Drawing.Size(322, 28);
-            this.txtPrice.TabIndex = 29;
-            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(28, 161);
+            this.label8.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(31, 154);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 14);
+            this.label8.Size = new System.Drawing.Size(44, 15);
             this.label8.TabIndex = 28;
             this.label8.Text = "Precio";
-            // 
-            // txtName
-            // 
-            this.txtName.BackColor = System.Drawing.Color.Transparent;
-            this.txtName.Br = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.txtName.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtName.Location = new System.Drawing.Point(31, 112);
-            this.txtName.Name = "txtName";
-            this.txtName.PlaceHolder = null;
-            this.txtName.Size = new System.Drawing.Size(322, 28);
-            this.txtName.TabIndex = 27;
-            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(28, 73);
+            this.label9.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(30, 63);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 14);
+            this.label9.Size = new System.Drawing.Size(53, 15);
             this.label9.TabIndex = 26;
             this.label9.Text = "Nombre";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Roboto", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.label10.Location = new System.Drawing.Point(28, 18);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(187, 19);
+            this.label10.Size = new System.Drawing.Size(210, 22);
             this.label10.TabIndex = 25;
             this.label10.Text = "Agregar Nuevo Producto";
             // 
@@ -219,6 +168,74 @@
             this.btnClose.TabIndex = 24;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtPrice.BorderColor = System.Drawing.Color.Black;
+            this.txtPrice.BorderFocusColor = System.Drawing.Color.Black;
+            this.txtPrice.BorderRadius = 10;
+            this.txtPrice.BorderSize = 1;
+            this.txtPrice.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPrice.Location = new System.Drawing.Point(33, 175);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrice.Multiline = false;
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtPrice.PasswordChar = false;
+            this.txtPrice.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtPrice.PlaceholderText = "";
+            this.txtPrice.Size = new System.Drawing.Size(317, 46);
+            this.txtPrice.TabIndex = 35;
+            this.txtPrice.Texts = "";
+            this.txtPrice.UnderlinedStyle = false;
+            // 
+            // roundButton1
+            // 
+            this.roundButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.roundButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.roundButton1.BorderColor = System.Drawing.Color.Black;
+            this.roundButton1.BorderRadius = 20;
+            this.roundButton1.BorderSize = 0;
+            this.roundButton1.FlatAppearance.BorderSize = 0;
+            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton1.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton1.ForeColor = System.Drawing.Color.DimGray;
+            this.roundButton1.IconChar = FontAwesome.Sharp.IconChar.CloudUploadAlt;
+            this.roundButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.roundButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton1.Location = new System.Drawing.Point(34, 342);
+            this.roundButton1.Name = "roundButton1";
+            this.roundButton1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.roundButton1.Size = new System.Drawing.Size(317, 79);
+            this.roundButton1.TabIndex = 33;
+            this.roundButton1.Text = "Navega para elegir el archivo";
+            this.roundButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.roundButton1.TextColor = System.Drawing.Color.DimGray;
+            this.roundButton1.UseVisualStyleBackColor = false;
+            // 
+            // txtName
+            // 
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtName.BorderColor = System.Drawing.Color.Black;
+            this.txtName.BorderFocusColor = System.Drawing.Color.Black;
+            this.txtName.BorderRadius = 10;
+            this.txtName.BorderSize = 1;
+            this.txtName.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtName.Location = new System.Drawing.Point(33, 84);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Multiline = false;
+            this.txtName.Name = "txtName";
+            this.txtName.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtName.PasswordChar = false;
+            this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtName.PlaceholderText = "";
+            this.txtName.Size = new System.Drawing.Size(317, 46);
+            this.txtName.TabIndex = 36;
+            this.txtName.Texts = "";
+            this.txtName.UnderlinedStyle = false;
             // 
             // AddProductForm
             // 
@@ -245,11 +262,11 @@
         private AltoControls.AltoButton btnAdd;
         private System.Windows.Forms.ComboBox cboCategory;
         private System.Windows.Forms.Label label7;
-        private Input txtPrice;
         private System.Windows.Forms.Label label8;
-        private Input txtName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private FontAwesome.Sharp.IconButton btnClose;
+        private Components.ModernTextBox txtPrice;
+        private Components.ModernTextBox txtName;
     }
 }

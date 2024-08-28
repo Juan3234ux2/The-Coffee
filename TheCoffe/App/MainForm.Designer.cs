@@ -32,16 +32,16 @@
             this.pnlSideBar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnUser = new WindowsFormsApplication1.RoundButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.imgUser = new System.Windows.Forms.PictureBox();
-            this.pnlMain = new System.Windows.Forms.Panel();
-            this.btnUser = new WindowsFormsApplication1.RoundButton();
             this.roundButton4 = new WindowsFormsApplication1.RoundButton();
             this.roundButton3 = new WindowsFormsApplication1.RoundButton();
             this.roundButton2 = new WindowsFormsApplication1.RoundButton();
             this.btnProducts = new WindowsFormsApplication1.RoundButton();
             this.btnDashboard = new WindowsFormsApplication1.RoundButton();
+            this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -88,6 +88,32 @@
             this.panel3.Size = new System.Drawing.Size(250, 155);
             this.panel3.TabIndex = 2;
             // 
+            // btnUser
+            // 
+            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.btnUser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.btnUser.BorderColor = System.Drawing.Color.Transparent;
+            this.btnUser.BorderRadius = 10;
+            this.btnUser.BorderSize = 0;
+            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUser.FlatAppearance.BorderSize = 0;
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnUser.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnUser.IconColor = System.Drawing.Color.DimGray;
+            this.btnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUser.IconSize = 35;
+            this.btnUser.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnUser.Location = new System.Drawing.Point(57, 105);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(130, 30);
+            this.btnUser.TabIndex = 18;
+            this.btnUser.Tag = "";
+            this.btnUser.Text = "Ver Perfil";
+            this.btnUser.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnUser.UseVisualStyleBackColor = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -119,41 +145,6 @@
             this.imgUser.TabIndex = 18;
             this.imgUser.TabStop = false;
             // 
-            // pnlMain
-            // 
-            this.pnlMain.BackColor = System.Drawing.Color.Red;
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlMain.Location = new System.Drawing.Point(245, 0);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1019, 681);
-            this.pnlMain.TabIndex = 2;
-            // 
-            // btnUser
-            // 
-            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.btnUser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.btnUser.BorderColor = System.Drawing.Color.Transparent;
-            this.btnUser.BorderRadius = 10;
-            this.btnUser.BorderSize = 0;
-            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.FlatAppearance.BorderSize = 0;
-            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnUser.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnUser.IconColor = System.Drawing.Color.DimGray;
-            this.btnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUser.IconSize = 35;
-            this.btnUser.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnUser.Location = new System.Drawing.Point(57, 105);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(130, 30);
-            this.btnUser.TabIndex = 18;
-            this.btnUser.Tag = "";
-            this.btnUser.Text = "Ver Perfil";
-            this.btnUser.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnUser.UseVisualStyleBackColor = false;
-            // 
             // roundButton4
             // 
             this.roundButton4.BackColor = System.Drawing.Color.Transparent;
@@ -164,7 +155,7 @@
             this.roundButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton4.FlatAppearance.BorderSize = 0;
             this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton4.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundButton4.ForeColor = System.Drawing.Color.DimGray;
             this.roundButton4.IconChar = FontAwesome.Sharp.IconChar.Cog;
             this.roundButton4.IconColor = System.Drawing.Color.DimGray;
@@ -194,7 +185,7 @@
             this.roundButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton3.FlatAppearance.BorderSize = 0;
             this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton3.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundButton3.ForeColor = System.Drawing.Color.DimGray;
             this.roundButton3.IconChar = FontAwesome.Sharp.IconChar.File;
             this.roundButton3.IconColor = System.Drawing.Color.DimGray;
@@ -224,7 +215,7 @@
             this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton2.FlatAppearance.BorderSize = 0;
             this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton2.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundButton2.ForeColor = System.Drawing.Color.DimGray;
             this.roundButton2.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.roundButton2.IconColor = System.Drawing.Color.DimGray;
@@ -254,7 +245,7 @@
             this.btnProducts.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProducts.FlatAppearance.BorderSize = 0;
             this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProducts.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProducts.ForeColor = System.Drawing.Color.DimGray;
             this.btnProducts.IconChar = FontAwesome.Sharp.IconChar.Coffee;
             this.btnProducts.IconColor = System.Drawing.Color.DimGray;
@@ -285,7 +276,7 @@
             this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnDashboard.IconChar = FontAwesome.Sharp.IconChar.ChartPie;
             this.btnDashboard.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
@@ -305,6 +296,15 @@
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
+            // pnlMain
+            // 
+            this.pnlMain.BackColor = System.Drawing.Color.Red;
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlMain.Location = new System.Drawing.Point(245, 0);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1019, 681);
+            this.pnlMain.TabIndex = 2;
             // 
             // MainForm
             // 

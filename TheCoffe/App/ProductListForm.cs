@@ -39,5 +39,12 @@ namespace TheCoffe.App
             AddProductForm form = new AddProductForm();
             form.Show();
         }
+
+        private void dataProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        
     }
 }

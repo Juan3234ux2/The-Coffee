@@ -31,16 +31,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.roundButton5 = new WindowsFormsApplication1.RoundButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.input1 = new TheCoffe.Input();
-            this.roundButton5 = new WindowsFormsApplication1.RoundButton();
+            this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -71,9 +71,9 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.iconButton1);
-            this.panel2.Controls.Add(this.input1);
+            this.panel2.Controls.Add(this.iconButton5);
             this.panel2.Controls.Add(this.iconButton2);
+            this.panel2.Controls.Add(this.modernTextBox1);
             this.panel2.Controls.Add(this.iconButton3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(629, 0);
@@ -81,24 +81,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(390, 59);
             this.panel2.TabIndex = 2;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.White;
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(321, 17);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(38, 32);
-            this.iconButton1.TabIndex = 9;
-            this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // iconButton2
             // 
@@ -137,10 +119,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gilroy-Black", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Roboto", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(56, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 43);
+            this.label1.Size = new System.Drawing.Size(181, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dashboard";
             // 
@@ -160,52 +142,18 @@
             // 
             this.iconButton4.FlatAppearance.BorderSize = 0;
             this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Gilroy-Regular", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton4.Font = new System.Drawing.Font("Roboto", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.ArrowUp;
             this.iconButton4.IconColor = System.Drawing.Color.Black;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 13;
-            this.iconButton4.Location = new System.Drawing.Point(20, 48);
+            this.iconButton4.Location = new System.Drawing.Point(21, 48);
             this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(181, 38);
+            this.iconButton4.Size = new System.Drawing.Size(157, 23);
             this.iconButton4.TabIndex = 12;
             this.iconButton4.Text = "2.1% vs última semana";
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Gilroy-Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.label5.Location = new System.Drawing.Point(25, 26);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 24);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "2.548";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Gilroy-Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Ventas Diarias";
-            // 
-            // input1
-            // 
-            this.input1.BackColor = System.Drawing.Color.Transparent;
-            this.input1.Br = System.Drawing.Color.White;
-            this.input1.Font = new System.Drawing.Font("Gilroy-SemiBold", 11F);
-            this.input1.ForeColor = System.Drawing.Color.DimGray;
-            this.input1.Location = new System.Drawing.Point(95, 12);
-            this.input1.Name = "input1";
-            this.input1.PlaceHolder = "Buscar...";
-            this.input1.Size = new System.Drawing.Size(273, 40);
-            this.input1.TabIndex = 4;
-            this.input1.Text = "Buscar...";
             // 
             // roundButton5
             // 
@@ -217,14 +165,14 @@
             this.roundButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton5.FlatAppearance.BorderSize = 0;
             this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton5.Font = new System.Drawing.Font("Gilroy-SemiBold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton5.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundButton5.ForeColor = System.Drawing.Color.White;
             this.roundButton5.IconChar = FontAwesome.Sharp.IconChar.None;
             this.roundButton5.IconColor = System.Drawing.Color.DimGray;
             this.roundButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.roundButton5.IconSize = 35;
             this.roundButton5.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.roundButton5.Location = new System.Drawing.Point(290, 6);
+            this.roundButton5.Location = new System.Drawing.Point(290, 8);
             this.roundButton5.Name = "roundButton5";
             this.roundButton5.Size = new System.Drawing.Size(100, 30);
             this.roundButton5.TabIndex = 20;
@@ -232,6 +180,67 @@
             this.roundButton5.Text = "Ver Reporte";
             this.roundButton5.TextColor = System.Drawing.Color.White;
             this.roundButton5.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.label5.Location = new System.Drawing.Point(25, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 23);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "2.548";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(25, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 19);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Ventas Diarias";
+            // 
+            // modernTextBox1
+            // 
+            this.modernTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.modernTextBox1.BorderColor = System.Drawing.Color.Black;
+            this.modernTextBox1.BorderFocusColor = System.Drawing.Color.Black;
+            this.modernTextBox1.BorderRadius = 10;
+            this.modernTextBox1.BorderSize = 1;
+            this.modernTextBox1.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modernTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.modernTextBox1.Location = new System.Drawing.Point(92, 11);
+            this.modernTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.modernTextBox1.Multiline = false;
+            this.modernTextBox1.Name = "modernTextBox1";
+            this.modernTextBox1.Padding = new System.Windows.Forms.Padding(10, 16, 10, 7);
+            this.modernTextBox1.PasswordChar = false;
+            this.modernTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.modernTextBox1.PlaceholderText = "Buscar...";
+            this.modernTextBox1.Size = new System.Drawing.Size(273, 44);
+            this.modernTextBox1.TabIndex = 4;
+            this.modernTextBox1.Texts = "";
+            this.modernTextBox1.UnderlinedStyle = false;
+            // 
+            // iconButton5
+            // 
+            this.iconButton5.BackColor = System.Drawing.Color.White;
+            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton5.FlatAppearance.BorderSize = 0;
+            this.iconButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.iconButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.IconSize = 25;
+            this.iconButton5.Location = new System.Drawing.Point(322, 19);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Size = new System.Drawing.Size(38, 32);
+            this.iconButton5.TabIndex = 12;
+            this.iconButton5.UseVisualStyleBackColor = false;
             // 
             // DashboardForm
             // 
@@ -256,8 +265,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private Input input1;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.Label label1;
@@ -266,5 +273,7 @@
         private WindowsFormsApplication1.RoundButton roundButton5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private FontAwesome.Sharp.IconButton iconButton5;
+        private Components.ModernTextBox modernTextBox1;
     }
 }
