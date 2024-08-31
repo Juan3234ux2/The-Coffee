@@ -177,11 +177,12 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataProducts.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataProducts.EnableHeadersVisualStyles = false;
-            this.dataProducts.GridColor = System.Drawing.Color.LightGray;
+            this.dataProducts.GridColor = System.Drawing.Color.Silver;
             this.dataProducts.ImeMode = System.Windows.Forms.ImeMode.On;
             this.dataProducts.Location = new System.Drawing.Point(25, 194);
             this.dataProducts.MultiSelect = false;
             this.dataProducts.Name = "dataProducts";
+            this.dataProducts.ReadOnly = true;
             this.dataProducts.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -199,8 +200,8 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dataProducts.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataProducts.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Transparent;
-            this.dataProducts.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Transparent;
+            this.dataProducts.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.dataProducts.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
             this.dataProducts.RowTemplate.DividerHeight = 1;
             this.dataProducts.RowTemplate.Height = 45;
             this.dataProducts.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -209,34 +210,44 @@
             this.dataProducts.ShowCellToolTips = false;
             this.dataProducts.ShowEditingIcon = false;
             this.dataProducts.ShowRowErrors = false;
-            this.dataProducts.Size = new System.Drawing.Size(976, 150);
+            this.dataProducts.Size = new System.Drawing.Size(976, 479);
             this.dataProducts.TabIndex = 11;
             this.dataProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataProducts_CellContentClick);
             // 
             // ID
             // 
+            this.ID.FillWeight = 58.95526F;
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
             // Nombre
             // 
+            this.Nombre.FillWeight = 62.10778F;
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             // 
             // Precio
             // 
+            this.Precio.FillWeight = 64.88885F;
             this.Precio.HeaderText = "Precio";
             this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
             // 
             // Categoria
             // 
+            this.Categoria.FillWeight = 60.21396F;
             this.Categoria.HeaderText = "Categoria";
             this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
             // 
             // Acciones
             // 
+            this.Acciones.FillWeight = 100.027F;
             this.Acciones.HeaderText = "Acciones";
             this.Acciones.Name = "Acciones";
+            this.Acciones.ReadOnly = true;
             // 
             // roundButton4
             // 
@@ -276,7 +287,7 @@
             this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 25;
-            this.iconButton5.Location = new System.Drawing.Point(271, 138);
+            this.iconButton5.Location = new System.Drawing.Point(310, 138);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(38, 32);
             this.iconButton5.TabIndex = 14;
@@ -285,7 +296,7 @@
             // modernTextBox1
             // 
             this.modernTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.modernTextBox1.BorderColor = System.Drawing.Color.Black;
+            this.modernTextBox1.BorderColor = System.Drawing.Color.Transparent;
             this.modernTextBox1.BorderFocusColor = System.Drawing.Color.Black;
             this.modernTextBox1.BorderRadius = 10;
             this.modernTextBox1.BorderSize = 1;
@@ -299,7 +310,7 @@
             this.modernTextBox1.PasswordChar = false;
             this.modernTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
             this.modernTextBox1.PlaceholderText = "Buscar...";
-            this.modernTextBox1.Size = new System.Drawing.Size(290, 44);
+            this.modernTextBox1.Size = new System.Drawing.Size(329, 44);
             this.modernTextBox1.TabIndex = 13;
             this.modernTextBox1.Texts = "";
             this.modernTextBox1.UnderlinedStyle = false;
@@ -308,7 +319,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.iconButton5);
             this.Controls.Add(this.modernTextBox1);
             this.Controls.Add(this.dataProducts);
@@ -333,13 +344,13 @@
         private WindowsFormsApplication1.RoundButton roundButton3;
         private System.Windows.Forms.Label label1;
         private WindowsFormsApplication1.RoundButton roundButton4;
+        private FontAwesome.Sharp.IconButton iconButton5;
+        private Components.ModernTextBox modernTextBox1;
+        private System.Windows.Forms.DataGridView dataProducts;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn Acciones;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private Components.ModernTextBox modernTextBox1;
-        private System.Windows.Forms.DataGridView dataProducts;
     }
 }
