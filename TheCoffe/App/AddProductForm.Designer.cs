@@ -61,7 +61,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(386, 545);
             this.panel1.TabIndex = 24;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtName
             // 
@@ -140,7 +139,6 @@
             this.roundButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.roundButton1.TextColor = System.Drawing.Color.DimGray;
             this.roundButton1.UseVisualStyleBackColor = false;
-            this.roundButton1.Click += new System.EventHandler(this.roundButton1_Click);
             // 
             // btnAdd
             // 
@@ -223,6 +221,7 @@
             // btnClose
             // 
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -242,13 +241,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(387, 545);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddProductForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddProductForm";
+            this.Deactivate += new System.EventHandler(this.AddProductForm_Deactivate);
+            this.Load += new System.EventHandler(this.AddProductForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

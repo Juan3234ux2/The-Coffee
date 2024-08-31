@@ -21,7 +21,6 @@ namespace TheCoffe.App
         {
             if (string.IsNullOrWhiteSpace(txtName.Text) || string.IsNullOrWhiteSpace(txtPrice.Text) || cboCategory.SelectedIndex == -1)
             {
-
                 MessageBox.Show("Debe Completar todos los campos",
                     "Error",
                     MessageBoxButtons.OK,
@@ -51,9 +50,24 @@ namespace TheCoffe.App
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void AddProductForm_Load(object sender, EventArgs e)
         {
+            this.Opacity = 0;
+            Timer timer = new Timer();
+            timer.Interval = 10;
+            timer.Tick += (s, ev) =>
+            {
+                if (this.Opacity < 1)
+                    this.Opacity += 0.10;
+                else
+                    timer.Stop();
+            };
+            timer.Start();
+        }
 
+        private void AddProductForm_Deactivate(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void roundButton1_Click(object sender, EventArgs e)

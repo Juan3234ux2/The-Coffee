@@ -35,16 +35,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dataProducts = new System.Windows.Forms.DataGridView();
-            this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
-            this.Acciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Acciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.roundButton4 = new WindowsFormsApplication1.RoundButton();
             this.roundButton3 = new WindowsFormsApplication1.RoundButton();
-            this.btnManageCategories = new WindowsFormsApplication1.RoundButton();
+            this.roundButton2 = new WindowsFormsApplication1.RoundButton();
             this.roundButton1 = new WindowsFormsApplication1.RoundButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).BeginInit();
@@ -54,7 +54,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.roundButton3);
-            this.panel1.Controls.Add(this.btnManageCategories);
+            this.panel1.Controls.Add(this.roundButton2);
             this.panel1.Controls.Add(this.roundButton1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -145,6 +145,41 @@
             this.dataProducts.TabIndex = 11;
             this.dataProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataProducts_CellContentClick);
             // 
+            // ID
+            // 
+            this.ID.FillWeight = 58.95526F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.FillWeight = 62.10778F;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.FillWeight = 64.88885F;
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Categoria
+            // 
+            this.Categoria.FillWeight = 60.21396F;
+            this.Categoria.HeaderText = "Categoria";
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
+            // 
+            // Acciones
+            // 
+            this.Acciones.FillWeight = 100.027F;
+            this.Acciones.HeaderText = "Acciones";
+            this.Acciones.Name = "Acciones";
+            this.Acciones.ReadOnly = true;
+            // 
             // modernTextBox1
             // 
             this.modernTextBox1.BackColor = System.Drawing.SystemColors.Window;
@@ -166,41 +201,6 @@
             this.modernTextBox1.TabIndex = 13;
             this.modernTextBox1.Texts = "";
             this.modernTextBox1.UnderlinedStyle = false;
-            // 
-            // Acciones
-            // 
-            this.Acciones.FillWeight = 100.027F;
-            this.Acciones.HeaderText = "Acciones";
-            this.Acciones.Name = "Acciones";
-            this.Acciones.ReadOnly = true;
-            // 
-            // Categoria
-            // 
-            this.Categoria.FillWeight = 60.21396F;
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.FillWeight = 64.88885F;
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.FillWeight = 62.10778F;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // ID
-            // 
-            this.ID.FillWeight = 58.95526F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
             // 
             // iconButton5
             // 
@@ -269,28 +269,28 @@
             this.roundButton3.TextColor = System.Drawing.Color.DimGray;
             this.roundButton3.UseVisualStyleBackColor = false;
             // 
-            // btnManageCategories
+            // roundButton2
             // 
-            this.btnManageCategories.BackColor = System.Drawing.Color.Transparent;
-            this.btnManageCategories.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnManageCategories.BorderColor = System.Drawing.Color.Black;
-            this.btnManageCategories.BorderRadius = 8;
-            this.btnManageCategories.BorderSize = 0;
-            this.btnManageCategories.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnManageCategories.FlatAppearance.BorderSize = 0;
-            this.btnManageCategories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageCategories.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageCategories.ForeColor = System.Drawing.Color.DimGray;
-            this.btnManageCategories.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnManageCategories.IconColor = System.Drawing.Color.Black;
-            this.btnManageCategories.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnManageCategories.Location = new System.Drawing.Point(229, -1);
-            this.btnManageCategories.Name = "btnManageCategories";
-            this.btnManageCategories.Size = new System.Drawing.Size(227, 47);
-            this.btnManageCategories.TabIndex = 1;
-            this.btnManageCategories.Text = "Administrar Categorías";
-            this.btnManageCategories.TextColor = System.Drawing.Color.DimGray;
-            this.btnManageCategories.UseVisualStyleBackColor = false;
+            this.roundButton2.BackColor = System.Drawing.Color.Transparent;
+            this.roundButton2.BackgroundColor = System.Drawing.Color.Transparent;
+            this.roundButton2.BorderColor = System.Drawing.Color.Black;
+            this.roundButton2.BorderRadius = 8;
+            this.roundButton2.BorderSize = 0;
+            this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton2.FlatAppearance.BorderSize = 0;
+            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton2.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton2.ForeColor = System.Drawing.Color.DimGray;
+            this.roundButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton2.IconColor = System.Drawing.Color.Black;
+            this.roundButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton2.Location = new System.Drawing.Point(229, -1);
+            this.roundButton2.Name = "roundButton2";
+            this.roundButton2.Size = new System.Drawing.Size(227, 47);
+            this.roundButton2.TabIndex = 1;
+            this.roundButton2.Text = "Administrar Categorías";
+            this.roundButton2.TextColor = System.Drawing.Color.DimGray;
+            this.roundButton2.UseVisualStyleBackColor = false;
             // 
             // roundButton1
             // 
@@ -339,7 +339,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private WindowsFormsApplication1.RoundButton btnManageCategories;
+        private WindowsFormsApplication1.RoundButton roundButton2;
         private WindowsFormsApplication1.RoundButton roundButton1;
         private WindowsFormsApplication1.RoundButton roundButton3;
         private System.Windows.Forms.Label label1;

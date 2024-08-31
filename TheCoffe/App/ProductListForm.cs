@@ -32,13 +32,31 @@ namespace TheCoffe.App
 
         private void roundButton4_Click(object sender, EventArgs e)
         {
-            AddProductForm form = new AddProductForm();
-            form.Show();
+            Form parentForm = this.FindForm();
+            using (OverlayForm overlay = new OverlayForm())
+            {
+                overlay.Size = parentForm.ClientSize;
+                overlay.Location = parentForm.PointToScreen(Point.Empty);
+                overlay.Owner = parentForm;
+
+                overlay.Show();
+                using (AddProductForm modal = new AddProductForm())
+                {
+                    modal.ShowDialog(overlay);
+                }
+                overlay.Close();
+            }
         }
+
 
         private void dataProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void altoButton1_Click(object sender, EventArgs e)
+        {
+        
         }
     }
 }
