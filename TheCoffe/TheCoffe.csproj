@@ -76,6 +76,12 @@
     <Compile Include="App\AddProductForm.Designer.cs">
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="App\CategoryListForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="App\CategoryListForm.Designer.cs">
+      <DependentUpon>CategoryListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="App\DashboardForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
