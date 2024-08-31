@@ -103,6 +103,12 @@
       <DependentUpon>ProductListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="App\Program.cs" />
+    <Compile Include="App\UserListForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="App\UserListForm.Designer.cs">
+      <DependentUpon>UserListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Input.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="App\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\UserListForm.resx">
+      <DependentUpon>UserListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Input.resx">
       <DependentUpon>Input.cs</DependentUpon>
