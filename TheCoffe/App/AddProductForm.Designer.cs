@@ -37,9 +37,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.txtName = new TheCoffe.Components.ModernTextBox();
             this.txtPrice = new TheCoffe.Components.ModernTextBox();
             this.roundButton1 = new WindowsFormsApplication1.RoundButton();
-            this.txtName = new TheCoffe.Components.ModernTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -169,11 +169,33 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
+            // txtName
+            // 
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtName.BorderColor = System.Drawing.Color.Transparent;
+            this.txtName.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtName.BorderRadius = 10;
+            this.txtName.BorderSize = 1;
+            this.txtName.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtName.Location = new System.Drawing.Point(33, 84);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Multiline = false;
+            this.txtName.Name = "txtName";
+            this.txtName.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtName.PasswordChar = false;
+            this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtName.PlaceholderText = "";
+            this.txtName.Size = new System.Drawing.Size(317, 46);
+            this.txtName.TabIndex = 36;
+            this.txtName.Texts = "";
+            this.txtName.UnderlinedStyle = false;
+            // 
             // txtPrice
             // 
             this.txtPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.txtPrice.BorderColor = System.Drawing.Color.Black;
-            this.txtPrice.BorderFocusColor = System.Drawing.Color.Black;
+            this.txtPrice.BorderColor = System.Drawing.Color.Transparent;
+            this.txtPrice.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtPrice.BorderRadius = 10;
             this.txtPrice.BorderSize = 1;
             this.txtPrice.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -196,7 +218,7 @@
             this.roundButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
             this.roundButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
             this.roundButton1.BorderColor = System.Drawing.Color.Black;
-            this.roundButton1.BorderRadius = 20;
+            this.roundButton1.BorderRadius = 15;
             this.roundButton1.BorderSize = 0;
             this.roundButton1.FlatAppearance.BorderSize = 0;
             this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -214,28 +236,6 @@
             this.roundButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.roundButton1.TextColor = System.Drawing.Color.DimGray;
             this.roundButton1.UseVisualStyleBackColor = false;
-            // 
-            // txtName
-            // 
-            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.txtName.BorderColor = System.Drawing.Color.Black;
-            this.txtName.BorderFocusColor = System.Drawing.Color.Black;
-            this.txtName.BorderRadius = 10;
-            this.txtName.BorderSize = 1;
-            this.txtName.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtName.Location = new System.Drawing.Point(33, 84);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtName.Multiline = false;
-            this.txtName.Name = "txtName";
-            this.txtName.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
-            this.txtName.PasswordChar = false;
-            this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtName.PlaceholderText = "";
-            this.txtName.Size = new System.Drawing.Size(317, 46);
-            this.txtName.TabIndex = 36;
-            this.txtName.Texts = "";
-            this.txtName.UnderlinedStyle = false;
             // 
             // AddProductForm
             // 
@@ -260,7 +260,6 @@
         private System.Windows.Forms.Label label6;
         private WindowsFormsApplication1.RoundButton roundButton1;
         private AltoControls.AltoButton btnAdd;
-        private System.Windows.Forms.ComboBox cboCategory;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -268,5 +267,6 @@
         private FontAwesome.Sharp.IconButton btnClose;
         private Components.ModernTextBox txtPrice;
         private Components.ModernTextBox txtName;
+        private System.Windows.Forms.ComboBox cboCategory;
     }
 }

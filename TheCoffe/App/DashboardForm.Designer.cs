@@ -31,7 +31,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -39,8 +41,6 @@
             this.roundButton5 = new WindowsFormsApplication1.RoundButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -82,6 +82,24 @@
             this.panel2.Size = new System.Drawing.Size(390, 59);
             this.panel2.TabIndex = 2;
             // 
+            // iconButton5
+            // 
+            this.iconButton5.BackColor = System.Drawing.Color.White;
+            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton5.FlatAppearance.BorderSize = 0;
+            this.iconButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.iconButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.IconSize = 25;
+            this.iconButton5.Location = new System.Drawing.Point(322, 19);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Size = new System.Drawing.Size(38, 32);
+            this.iconButton5.TabIndex = 12;
+            this.iconButton5.UseVisualStyleBackColor = false;
+            // 
             // iconButton2
             // 
             this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -98,6 +116,28 @@
             this.iconButton2.Size = new System.Drawing.Size(36, 38);
             this.iconButton2.TabIndex = 10;
             this.iconButton2.UseVisualStyleBackColor = true;
+            // 
+            // modernTextBox1
+            // 
+            this.modernTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.modernTextBox1.BorderColor = System.Drawing.Color.Transparent;
+            this.modernTextBox1.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.modernTextBox1.BorderRadius = 10;
+            this.modernTextBox1.BorderSize = 1;
+            this.modernTextBox1.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modernTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.modernTextBox1.Location = new System.Drawing.Point(92, 11);
+            this.modernTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.modernTextBox1.Multiline = false;
+            this.modernTextBox1.Name = "modernTextBox1";
+            this.modernTextBox1.Padding = new System.Windows.Forms.Padding(10, 16, 10, 7);
+            this.modernTextBox1.PasswordChar = false;
+            this.modernTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.modernTextBox1.PlaceholderText = "Buscar...";
+            this.modernTextBox1.Size = new System.Drawing.Size(273, 44);
+            this.modernTextBox1.TabIndex = 4;
+            this.modernTextBox1.Texts = "";
+            this.modernTextBox1.UnderlinedStyle = false;
             // 
             // iconButton3
             // 
@@ -201,46 +241,6 @@
             this.label4.Size = new System.Drawing.Size(113, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "Ventas Diarias";
-            // 
-            // modernTextBox1
-            // 
-            this.modernTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.modernTextBox1.BorderColor = System.Drawing.Color.Black;
-            this.modernTextBox1.BorderFocusColor = System.Drawing.Color.Black;
-            this.modernTextBox1.BorderRadius = 10;
-            this.modernTextBox1.BorderSize = 1;
-            this.modernTextBox1.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modernTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox1.Location = new System.Drawing.Point(92, 11);
-            this.modernTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.modernTextBox1.Multiline = false;
-            this.modernTextBox1.Name = "modernTextBox1";
-            this.modernTextBox1.Padding = new System.Windows.Forms.Padding(10, 16, 10, 7);
-            this.modernTextBox1.PasswordChar = false;
-            this.modernTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.modernTextBox1.PlaceholderText = "Buscar...";
-            this.modernTextBox1.Size = new System.Drawing.Size(273, 44);
-            this.modernTextBox1.TabIndex = 4;
-            this.modernTextBox1.Texts = "";
-            this.modernTextBox1.UnderlinedStyle = false;
-            // 
-            // iconButton5
-            // 
-            this.iconButton5.BackColor = System.Drawing.Color.White;
-            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.iconButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 25;
-            this.iconButton5.Location = new System.Drawing.Point(322, 19);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(38, 32);
-            this.iconButton5.TabIndex = 12;
-            this.iconButton5.UseVisualStyleBackColor = false;
             // 
             // DashboardForm
             // 

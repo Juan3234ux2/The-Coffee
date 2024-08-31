@@ -165,6 +165,9 @@ namespace TheCoffe.Components
         public ModernTextBox()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -173,14 +176,20 @@ namespace TheCoffe.Components
         }
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            isFocused = true;
-            this.Invalidate();
+            if (!isFocused)
+            {
+                isFocused = true;
+                this.Invalidate();
+            }
             RemovePlaceholder();
         }
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            isFocused = false;
-            this.Invalidate();
+            if (isFocused)
+            {
+                isFocused = false;
+                this.Invalidate();
+            }
             SetPlaceholder();
         }
         private void SetPlaceholder()
