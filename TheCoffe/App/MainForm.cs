@@ -28,13 +28,15 @@ namespace TheCoffe
             {
                 return;
             }
+
             if (activeSection != null)
-            {
+            {        
                 pnlMain.Controls.Remove(activeSection);
             }
             activeSection = userControl;
-            userControl.Dock = DockStyle.Fill;
-            pnlMain.Controls.Add(userControl);
+            activeSection.Dock = DockStyle.Fill;
+            pnlMain.Controls.Add(activeSection);
+
         }
         private void SetActiveSection(RoundButton activeButton) {
             foreach (Control control in pnlSideBar.Controls)
@@ -56,16 +58,21 @@ namespace TheCoffe
             SetActiveSection(sender as RoundButton);
             LoadUserControl(new DashboardForm());
         }
-
-        private void pnlSideBar_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         
         private void btnProducts_Click(object sender, EventArgs e)
         {
             SetActiveSection(sender as RoundButton);
             LoadUserControl(new ProductListForm());
+        }
+
+        private void transitionTimer_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
