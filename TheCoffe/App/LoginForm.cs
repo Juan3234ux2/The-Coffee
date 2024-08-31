@@ -28,5 +28,20 @@ namespace TheCoffe
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            this.Opacity = 0;
+            Timer timer = new Timer();
+            timer.Interval = 10;
+            timer.Tick += (s, ev) =>
+            {
+                if (this.Opacity < 1)
+                    this.Opacity += 0.15;
+                else
+                    timer.Stop();
+            };
+            timer.Start();
+        }
     }
 }

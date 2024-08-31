@@ -28,20 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnlSideBar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnUser = new WindowsFormsApplication1.RoundButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.imgUser = new System.Windows.Forms.PictureBox();
+            this.pnlMain = new System.Windows.Forms.Panel();
+            this.transitionTimer = new System.Windows.Forms.Timer(this.components);
+            this.btnUser = new WindowsFormsApplication1.RoundButton();
             this.roundButton4 = new WindowsFormsApplication1.RoundButton();
             this.roundButton3 = new WindowsFormsApplication1.RoundButton();
             this.roundButton2 = new WindowsFormsApplication1.RoundButton();
             this.btnProducts = new WindowsFormsApplication1.RoundButton();
             this.btnDashboard = new WindowsFormsApplication1.RoundButton();
-            this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -64,7 +66,6 @@
             this.pnlSideBar.Name = "pnlSideBar";
             this.pnlSideBar.Size = new System.Drawing.Size(250, 681);
             this.pnlSideBar.TabIndex = 0;
-            this.pnlSideBar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSideBar_Paint);
             // 
             // pictureBox1
             // 
@@ -87,32 +88,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(250, 155);
             this.panel3.TabIndex = 2;
-            // 
-            // btnUser
-            // 
-            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.btnUser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.btnUser.BorderColor = System.Drawing.Color.Transparent;
-            this.btnUser.BorderRadius = 10;
-            this.btnUser.BorderSize = 0;
-            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.FlatAppearance.BorderSize = 0;
-            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnUser.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnUser.IconColor = System.Drawing.Color.DimGray;
-            this.btnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUser.IconSize = 35;
-            this.btnUser.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnUser.Location = new System.Drawing.Point(57, 105);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(130, 30);
-            this.btnUser.TabIndex = 18;
-            this.btnUser.Tag = "";
-            this.btnUser.Text = "Ver Perfil";
-            this.btnUser.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnUser.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -144,6 +119,45 @@
             this.imgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgUser.TabIndex = 18;
             this.imgUser.TabStop = false;
+            // 
+            // pnlMain
+            // 
+            this.pnlMain.BackColor = System.Drawing.Color.Red;
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlMain.Location = new System.Drawing.Point(250, 0);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1014, 681);
+            this.pnlMain.TabIndex = 2;
+            // 
+            // transitionTimer
+            // 
+            this.transitionTimer.Interval = 30;
+            // 
+            // btnUser
+            // 
+            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.btnUser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.btnUser.BorderColor = System.Drawing.Color.Transparent;
+            this.btnUser.BorderRadius = 10;
+            this.btnUser.BorderSize = 0;
+            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUser.FlatAppearance.BorderSize = 0;
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnUser.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnUser.IconColor = System.Drawing.Color.DimGray;
+            this.btnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUser.IconSize = 35;
+            this.btnUser.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnUser.Location = new System.Drawing.Point(57, 105);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(130, 30);
+            this.btnUser.TabIndex = 18;
+            this.btnUser.Tag = "";
+            this.btnUser.Text = "Ver Perfil";
+            this.btnUser.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnUser.UseVisualStyleBackColor = false;
             // 
             // roundButton4
             // 
@@ -234,6 +248,7 @@
             this.roundButton2.TextColor = System.Drawing.Color.DimGray;
             this.roundButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.roundButton2.UseVisualStyleBackColor = false;
+            this.roundButton2.Click += new System.EventHandler(this.roundButton2_Click);
             // 
             // btnProducts
             // 
@@ -297,23 +312,14 @@
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // pnlMain
-            // 
-            this.pnlMain.BackColor = System.Drawing.Color.Red;
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlMain.Location = new System.Drawing.Point(245, 0);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1019, 681);
-            this.pnlMain.TabIndex = 2;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.pnlSideBar);
             this.Controls.Add(this.pnlMain);
+            this.Controls.Add(this.pnlSideBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -345,6 +351,7 @@
         private WindowsFormsApplication1.RoundButton btnUser;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer transitionTimer;
     }
 }
 
