@@ -40,7 +40,5 @@ namespace TheCoffe.App
         {
 
         }
-
-        
     }
 }
