@@ -72,11 +72,23 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\AddEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\AddEmployeeForm.Designer.cs">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="App\AddProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="App\AddProductForm.Designer.cs">
       <DependentUpon>AddProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App\AddTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\AddTableForm.Designer.cs">
+      <DependentUpon>AddTableForm.cs</DependentUpon>
     </Compile>
     <Compile Include="App\CategoryListForm.cs">
       <SubType>UserControl</SubType>
@@ -115,6 +127,12 @@
       <DependentUpon>ProductListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="App\Program.cs" />
+    <Compile Include="App\TableListForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="App\TableListForm.Designer.cs">
+      <DependentUpon>TableListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Input.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -134,8 +152,14 @@
     <Compile Include="Components\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="App\AddEmployeeForm.resx">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="App\AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\AddTableForm.resx">
+      <DependentUpon>AddTableForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App\CategoryListForm.resx">
       <DependentUpon>CategoryListForm.cs</DependentUpon>
@@ -157,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="App\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\TableListForm.resx">
+      <DependentUpon>TableListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Input.resx">
       <DependentUpon>Input.cs</DependentUpon>
