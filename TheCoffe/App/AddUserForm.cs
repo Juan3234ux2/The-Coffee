@@ -10,33 +10,27 @@ using System.Windows.Forms;
 
 namespace TheCoffe.App
 {
-    public partial class AddCategoryForm : Form
+    public partial class AddUserForm : Form
     {
-        public AddCategoryForm()
+        public AddUserForm()
         {
             InitializeComponent();
         }
 
-      
-        private void btnAddCategory_Click(object sender, EventArgs e)
+        private void btnWatchPassword_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtDescripcion.Text))
+            txtPassword.PasswordChar = !txtPassword.PasswordChar;
+            if (txtPassword.PasswordChar)
             {
-
-                MessageBox.Show("Debe Completar todos los campos",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-                return;
+                btnWatchPassword.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            }
+            else
+            {
+                btnWatchPassword.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
             }
         }
 
-        private void AddCategoryForm_Deactivate(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void AddCategoryForm_Load(object sender, EventArgs e)
+        private void AddUserForm_Load(object sender, EventArgs e)
         {
             this.Opacity = 0;
             Timer timer = new Timer();
@@ -51,9 +45,19 @@ namespace TheCoffe.App
             timer.Start();
         }
 
+        private void AddUserForm_Deactivate(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnRol_Click(object sender, EventArgs e)
+        {
+            cboRol.DroppedDown = !cboRol.DroppedDown;
         }
     }
 }

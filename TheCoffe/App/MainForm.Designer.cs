@@ -33,17 +33,18 @@
             this.pnlSideBar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnUserDetails = new WindowsFormsApplication1.RoundButton();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.imgUser = new System.Windows.Forms.PictureBox();
-            this.pnlMain = new System.Windows.Forms.Panel();
-            this.transitionTimer = new System.Windows.Forms.Timer(this.components);
-            this.btnUser = new WindowsFormsApplication1.RoundButton();
             this.roundButton4 = new WindowsFormsApplication1.RoundButton();
             this.roundButton3 = new WindowsFormsApplication1.RoundButton();
             this.roundButton2 = new WindowsFormsApplication1.RoundButton();
             this.btnProducts = new WindowsFormsApplication1.RoundButton();
             this.btnDashboard = new WindowsFormsApplication1.RoundButton();
+            this.pnlMain = new System.Windows.Forms.Panel();
+            this.transitionTimer = new System.Windows.Forms.Timer(this.components);
+            this.btnUserList = new WindowsFormsApplication1.RoundButton();
             this.pnlSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -53,6 +54,7 @@
             // pnlSideBar
             // 
             this.pnlSideBar.BackColor = System.Drawing.Color.White;
+            this.pnlSideBar.Controls.Add(this.btnUserList);
             this.pnlSideBar.Controls.Add(this.pictureBox1);
             this.pnlSideBar.Controls.Add(this.panel3);
             this.pnlSideBar.Controls.Add(this.roundButton4);
@@ -79,9 +81,9 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnUser);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.btnUserDetails);
+            this.panel3.Controls.Add(this.lblRol);
+            this.panel3.Controls.Add(this.lblUser);
             this.panel3.Controls.Add(this.imgUser);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 526);
@@ -89,26 +91,52 @@
             this.panel3.Size = new System.Drawing.Size(250, 155);
             this.panel3.TabIndex = 2;
             // 
-            // label3
+            // btnUserDetails
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(83, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Administrador";
+            this.btnUserDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.btnUserDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.btnUserDetails.BorderColor = System.Drawing.Color.Transparent;
+            this.btnUserDetails.BorderRadius = 10;
+            this.btnUserDetails.BorderSize = 0;
+            this.btnUserDetails.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUserDetails.FlatAppearance.BorderSize = 0;
+            this.btnUserDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserDetails.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnUserDetails.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnUserDetails.IconColor = System.Drawing.Color.DimGray;
+            this.btnUserDetails.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUserDetails.IconSize = 35;
+            this.btnUserDetails.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnUserDetails.Location = new System.Drawing.Point(57, 105);
+            this.btnUserDetails.Name = "btnUserDetails";
+            this.btnUserDetails.Size = new System.Drawing.Size(130, 30);
+            this.btnUserDetails.TabIndex = 18;
+            this.btnUserDetails.Tag = "";
+            this.btnUserDetails.Text = "Ver Perfil";
+            this.btnUserDetails.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnUserDetails.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // lblRol
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(70, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Juan Coronel";
+            this.lblRol.AutoSize = true;
+            this.lblRol.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.ForeColor = System.Drawing.Color.DimGray;
+            this.lblRol.Location = new System.Drawing.Point(83, 88);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(78, 13);
+            this.lblRol.TabIndex = 19;
+            this.lblRol.Text = "Administrador";
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(74, 70);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(95, 18);
+            this.lblUser.TabIndex = 2;
+            this.lblUser.Text = "Juan Coronel";
             // 
             // imgUser
             // 
@@ -120,49 +148,10 @@
             this.imgUser.TabIndex = 18;
             this.imgUser.TabStop = false;
             // 
-            // pnlMain
-            // 
-            this.pnlMain.BackColor = System.Drawing.Color.Red;
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlMain.Location = new System.Drawing.Point(250, 0);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1014, 681);
-            this.pnlMain.TabIndex = 2;
-            // 
-            // transitionTimer
-            // 
-            this.transitionTimer.Interval = 30;
-            // 
-            // btnUser
-            // 
-            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.btnUser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.btnUser.BorderColor = System.Drawing.Color.Transparent;
-            this.btnUser.BorderRadius = 10;
-            this.btnUser.BorderSize = 0;
-            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.FlatAppearance.BorderSize = 0;
-            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnUser.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnUser.IconColor = System.Drawing.Color.DimGray;
-            this.btnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUser.IconSize = 35;
-            this.btnUser.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnUser.Location = new System.Drawing.Point(57, 105);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(130, 30);
-            this.btnUser.TabIndex = 18;
-            this.btnUser.Tag = "";
-            this.btnUser.Text = "Ver Perfil";
-            this.btnUser.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnUser.UseVisualStyleBackColor = false;
-            // 
             // roundButton4
             // 
-            this.roundButton4.BackColor = System.Drawing.Color.Transparent;
-            this.roundButton4.BackgroundColor = System.Drawing.Color.Transparent;
+            this.roundButton4.BackColor = System.Drawing.Color.White;
+            this.roundButton4.BackgroundColor = System.Drawing.Color.White;
             this.roundButton4.BorderColor = System.Drawing.Color.Transparent;
             this.roundButton4.BorderRadius = 10;
             this.roundButton4.BorderSize = 0;
@@ -176,7 +165,7 @@
             this.roundButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.roundButton4.IconSize = 35;
             this.roundButton4.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.roundButton4.Location = new System.Drawing.Point(3, 290);
+            this.roundButton4.Location = new System.Drawing.Point(3, 334);
             this.roundButton4.MinimumSize = new System.Drawing.Size(58, 0);
             this.roundButton4.Name = "roundButton4";
             this.roundButton4.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
@@ -191,8 +180,8 @@
             // 
             // roundButton3
             // 
-            this.roundButton3.BackColor = System.Drawing.Color.Transparent;
-            this.roundButton3.BackgroundColor = System.Drawing.Color.Transparent;
+            this.roundButton3.BackColor = System.Drawing.Color.White;
+            this.roundButton3.BackgroundColor = System.Drawing.Color.White;
             this.roundButton3.BorderColor = System.Drawing.Color.Transparent;
             this.roundButton3.BorderRadius = 10;
             this.roundButton3.BorderSize = 0;
@@ -221,8 +210,8 @@
             // 
             // roundButton2
             // 
-            this.roundButton2.BackColor = System.Drawing.Color.Transparent;
-            this.roundButton2.BackgroundColor = System.Drawing.Color.Transparent;
+            this.roundButton2.BackColor = System.Drawing.Color.White;
+            this.roundButton2.BackgroundColor = System.Drawing.Color.White;
             this.roundButton2.BorderColor = System.Drawing.Color.Transparent;
             this.roundButton2.BorderRadius = 10;
             this.roundButton2.BorderSize = 0;
@@ -252,8 +241,8 @@
             // 
             // btnProducts
             // 
-            this.btnProducts.BackColor = System.Drawing.Color.Transparent;
-            this.btnProducts.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnProducts.BackColor = System.Drawing.Color.White;
+            this.btnProducts.BackgroundColor = System.Drawing.Color.White;
             this.btnProducts.BorderColor = System.Drawing.Color.Transparent;
             this.btnProducts.BorderRadius = 10;
             this.btnProducts.BorderSize = 0;
@@ -283,8 +272,8 @@
             // 
             // btnDashboard
             // 
-            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.btnDashboard.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.btnDashboard.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.btnDashboard.BorderColor = System.Drawing.Color.Transparent;
             this.btnDashboard.BorderRadius = 10;
             this.btnDashboard.BorderSize = 0;
@@ -311,6 +300,50 @@
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
+            // pnlMain
+            // 
+            this.pnlMain.BackColor = System.Drawing.Color.DarkGray;
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlMain.Location = new System.Drawing.Point(250, 0);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1014, 681);
+            this.pnlMain.TabIndex = 2;
+            // 
+            // transitionTimer
+            // 
+            this.transitionTimer.Interval = 30;
+            // 
+            // btnUserList
+            // 
+            this.btnUserList.BackColor = System.Drawing.Color.White;
+            this.btnUserList.BackgroundColor = System.Drawing.Color.White;
+            this.btnUserList.BorderColor = System.Drawing.Color.Transparent;
+            this.btnUserList.BorderRadius = 10;
+            this.btnUserList.BorderSize = 0;
+            this.btnUserList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUserList.FlatAppearance.BorderSize = 0;
+            this.btnUserList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserList.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserList.ForeColor = System.Drawing.Color.DimGray;
+            this.btnUserList.IconChar = FontAwesome.Sharp.IconChar.UserCheck;
+            this.btnUserList.IconColor = System.Drawing.Color.DimGray;
+            this.btnUserList.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUserList.IconSize = 35;
+            this.btnUserList.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnUserList.Location = new System.Drawing.Point(3, 289);
+            this.btnUserList.MinimumSize = new System.Drawing.Size(58, 0);
+            this.btnUserList.Name = "btnUserList";
+            this.btnUserList.Padding = new System.Windows.Forms.Padding(8, 3, 0, 0);
+            this.btnUserList.Size = new System.Drawing.Size(244, 45);
+            this.btnUserList.TabIndex = 18;
+            this.btnUserList.Tag = "Reportes";
+            this.btnUserList.Text = "  Usuarios";
+            this.btnUserList.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUserList.TextColor = System.Drawing.Color.DimGray;
+            this.btnUserList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUserList.UseVisualStyleBackColor = false;
+            this.btnUserList.Click += new System.EventHandler(this.btnUserList_Click);
             // 
             // MainForm
             // 
@@ -345,13 +378,14 @@
         private WindowsFormsApplication1.RoundButton roundButton2;
         private WindowsFormsApplication1.RoundButton btnProducts;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblRol;
+        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.PictureBox imgUser;
-        private WindowsFormsApplication1.RoundButton btnUser;
+        private WindowsFormsApplication1.RoundButton btnUserDetails;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer transitionTimer;
+        private WindowsFormsApplication1.RoundButton btnUserList;
     }
 }
 
