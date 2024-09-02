@@ -32,10 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.roundButton3 = new WindowsFormsApplication1.RoundButton();
-            this.roundButton2 = new WindowsFormsApplication1.RoundButton();
-            this.roundButton1 = new WindowsFormsApplication1.RoundButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dataProducts = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,90 +42,13 @@
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.roundButton4 = new WindowsFormsApplication1.RoundButton();
-            this.panel1.SuspendLayout();
+            this.roundButton1 = new WindowsFormsApplication1.RoundButton();
+            this.roundButton2 = new WindowsFormsApplication1.RoundButton();
+            this.roundButton3 = new WindowsFormsApplication1.RoundButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.roundButton3);
-            this.panel1.Controls.Add(this.roundButton2);
-            this.panel1.Controls.Add(this.roundButton1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1030, 45);
-            this.panel1.TabIndex = 0;
-            // 
-            // roundButton3
-            // 
-            this.roundButton3.BackColor = System.Drawing.Color.Transparent;
-            this.roundButton3.BackgroundColor = System.Drawing.Color.Transparent;
-            this.roundButton3.BorderColor = System.Drawing.Color.Black;
-            this.roundButton3.BorderRadius = 8;
-            this.roundButton3.BorderSize = 0;
-            this.roundButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton3.FlatAppearance.BorderSize = 0;
-            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton3.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton3.ForeColor = System.Drawing.Color.DimGray;
-            this.roundButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton3.IconColor = System.Drawing.Color.Black;
-            this.roundButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton3.Location = new System.Drawing.Point(456, -1);
-            this.roundButton3.Name = "roundButton3";
-            this.roundButton3.Size = new System.Drawing.Size(197, 47);
-            this.roundButton3.TabIndex = 2;
-            this.roundButton3.Text = "Administrar Mesas";
-            this.roundButton3.TextColor = System.Drawing.Color.DimGray;
-            this.roundButton3.UseVisualStyleBackColor = false;
-            // 
-            // roundButton2
-            // 
-            this.roundButton2.BackColor = System.Drawing.Color.Transparent;
-            this.roundButton2.BackgroundColor = System.Drawing.Color.Transparent;
-            this.roundButton2.BorderColor = System.Drawing.Color.Black;
-            this.roundButton2.BorderRadius = 8;
-            this.roundButton2.BorderSize = 0;
-            this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton2.FlatAppearance.BorderSize = 0;
-            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton2.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton2.ForeColor = System.Drawing.Color.DimGray;
-            this.roundButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton2.IconColor = System.Drawing.Color.Black;
-            this.roundButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton2.Location = new System.Drawing.Point(229, -1);
-            this.roundButton2.Name = "roundButton2";
-            this.roundButton2.Size = new System.Drawing.Size(227, 47);
-            this.roundButton2.TabIndex = 1;
-            this.roundButton2.Text = "Administrar Categorías";
-            this.roundButton2.TextColor = System.Drawing.Color.DimGray;
-            this.roundButton2.UseVisualStyleBackColor = false;
-            // 
-            // roundButton1
-            // 
-            this.roundButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.roundButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.roundButton1.BorderColor = System.Drawing.Color.Black;
-            this.roundButton1.BorderRadius = 8;
-            this.roundButton1.BorderSize = 0;
-            this.roundButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton1.FlatAppearance.BorderSize = 0;
-            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton1.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton1.ForeColor = System.Drawing.Color.White;
-            this.roundButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton1.IconColor = System.Drawing.Color.Black;
-            this.roundButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton1.Location = new System.Drawing.Point(2, -1);
-            this.roundButton1.Name = "roundButton1";
-            this.roundButton1.Size = new System.Drawing.Size(227, 47);
-            this.roundButton1.TabIndex = 0;
-            this.roundButton1.Text = "Administrar Productos";
-            this.roundButton1.TextColor = System.Drawing.Color.White;
-            this.roundButton1.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -293,7 +212,6 @@
             // 
             this.roundButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.roundButton4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.roundButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.roundButton4.BorderColor = System.Drawing.Color.Black;
             this.roundButton4.BorderRadius = 5;
             this.roundButton4.BorderSize = 0;
@@ -316,6 +234,88 @@
             this.roundButton4.UseVisualStyleBackColor = false;
             this.roundButton4.Click += new System.EventHandler(this.roundButton4_Click);
             // 
+            // roundButton1
+            // 
+            this.roundButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.roundButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.roundButton1.BorderColor = System.Drawing.Color.Black;
+            this.roundButton1.BorderRadius = 8;
+            this.roundButton1.BorderSize = 0;
+            this.roundButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton1.FlatAppearance.BorderSize = 0;
+            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton1.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton1.ForeColor = System.Drawing.Color.White;
+            this.roundButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton1.IconColor = System.Drawing.Color.Black;
+            this.roundButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton1.Location = new System.Drawing.Point(2, -1);
+            this.roundButton1.Name = "roundButton1";
+            this.roundButton1.Size = new System.Drawing.Size(227, 47);
+            this.roundButton1.TabIndex = 0;
+            this.roundButton1.Text = "Administrar Productos";
+            this.roundButton1.TextColor = System.Drawing.Color.White;
+            this.roundButton1.UseVisualStyleBackColor = false;
+            // 
+            // roundButton2
+            // 
+            this.roundButton2.BackColor = System.Drawing.Color.Transparent;
+            this.roundButton2.BackgroundColor = System.Drawing.Color.Transparent;
+            this.roundButton2.BorderColor = System.Drawing.Color.Black;
+            this.roundButton2.BorderRadius = 8;
+            this.roundButton2.BorderSize = 0;
+            this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton2.FlatAppearance.BorderSize = 0;
+            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton2.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton2.ForeColor = System.Drawing.Color.DimGray;
+            this.roundButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton2.IconColor = System.Drawing.Color.Black;
+            this.roundButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton2.Location = new System.Drawing.Point(229, -1);
+            this.roundButton2.Name = "roundButton2";
+            this.roundButton2.Size = new System.Drawing.Size(227, 47);
+            this.roundButton2.TabIndex = 1;
+            this.roundButton2.Text = "Administrar Categorías";
+            this.roundButton2.TextColor = System.Drawing.Color.DimGray;
+            this.roundButton2.UseVisualStyleBackColor = false;
+            this.roundButton2.Click += new System.EventHandler(this.roundButton2_Click);
+            // 
+            // roundButton3
+            // 
+            this.roundButton3.BackColor = System.Drawing.Color.Transparent;
+            this.roundButton3.BackgroundColor = System.Drawing.Color.Transparent;
+            this.roundButton3.BorderColor = System.Drawing.Color.Black;
+            this.roundButton3.BorderRadius = 8;
+            this.roundButton3.BorderSize = 0;
+            this.roundButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton3.FlatAppearance.BorderSize = 0;
+            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton3.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton3.ForeColor = System.Drawing.Color.DimGray;
+            this.roundButton3.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton3.IconColor = System.Drawing.Color.Black;
+            this.roundButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton3.Location = new System.Drawing.Point(456, -1);
+            this.roundButton3.Name = "roundButton3";
+            this.roundButton3.Size = new System.Drawing.Size(197, 47);
+            this.roundButton3.TabIndex = 2;
+            this.roundButton3.Text = "Administrar Mesas";
+            this.roundButton3.TextColor = System.Drawing.Color.DimGray;
+            this.roundButton3.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.roundButton3);
+            this.panel1.Controls.Add(this.roundButton2);
+            this.panel1.Controls.Add(this.roundButton1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1030, 45);
+            this.panel1.TabIndex = 0;
+            // 
             // ProductListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,19 +330,14 @@
             this.Name = "ProductListForm";
             this.Size = new System.Drawing.Size(1030, 720);
             this.Load += new System.EventHandler(this.ProductList_Load);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private WindowsFormsApplication1.RoundButton roundButton2;
-        private WindowsFormsApplication1.RoundButton roundButton1;
-        private WindowsFormsApplication1.RoundButton roundButton3;
         private System.Windows.Forms.Label label1;
         private WindowsFormsApplication1.RoundButton roundButton4;
         private FontAwesome.Sharp.IconButton iconButton5;
@@ -353,5 +348,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn Acciones;
+        private WindowsFormsApplication1.RoundButton roundButton1;
+        private WindowsFormsApplication1.RoundButton roundButton2;
+        private WindowsFormsApplication1.RoundButton roundButton3;
+        private System.Windows.Forms.Panel panel1;
     }
 }

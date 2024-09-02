@@ -214,9 +214,9 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.label10.Location = new System.Drawing.Point(28, 18);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(210, 22);
+            this.label10.Size = new System.Drawing.Size(154, 22);
             this.label10.TabIndex = 25;
-            this.label10.Text = "Agregar Nuevo Producto";
+            this.label10.Text = "Agregar Producto";
             // 
             // btnClose
             // 

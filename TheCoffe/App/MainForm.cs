@@ -17,6 +17,7 @@ namespace TheCoffe
         public MainForm()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -72,7 +73,14 @@ namespace TheCoffe
 
         private void roundButton2_Click(object sender, EventArgs e)
         {
+            SetActiveSection(sender as RoundButton);
+            LoadUserControl(new CategoryList());
+        }
 
+        private void btnUserList_Click(object sender, EventArgs e)
+        {
+            SetActiveSection(sender as RoundButton);
+            LoadUserControl(new UserListForm());
         }
     }
 }

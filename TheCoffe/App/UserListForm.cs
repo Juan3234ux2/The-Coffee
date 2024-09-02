@@ -10,25 +10,28 @@ using System.Windows.Forms;
 
 namespace TheCoffe.App
 {
-    public partial class CategoryList : UserControl
+    public partial class UserListForm : UserControl
     {
-        public CategoryList()
+        public UserListForm()
         {
             InitializeComponent();
         }
 
-        private void CategoryList_Load(object sender, EventArgs e)
+        private void UserListForm_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 6; i++)
             {
-                int rowIndex = dataCategory.Rows.Add();
-                DataGridViewRow row = dataCategory.Rows[rowIndex];
-                row.Cells[0].Value = 1;
-                row.Cells[1].Value = "Cafes";
+                int index = dataUsers.Rows.Add();
+                DataGridViewRow row = dataUsers.Rows[index];
+                row.Cells["Usuario"].Value = "Juan Coronel";
+                row.Cells["Telefono"].Value = "3794457533";
+                row.Cells["Rol"].Value = "Administrador";
+                row.Cells["Creado"].Value = "25 Mar 25";
+                row.Cells["Estado"].Value = "Activo";
             }
         }
 
-        private void btnAddCategory_Click(object sender, EventArgs e)
+        private void btnAddUser_Click(object sender, EventArgs e)
         {
             Form parentForm = this.FindForm();
             using (OverlayForm overlay = new OverlayForm())
@@ -38,7 +41,7 @@ namespace TheCoffe.App
                 overlay.Owner = parentForm;
 
                 overlay.Show();
-                using (AddCategoryForm modal = new AddCategoryForm())
+                using (AddUserForm modal = new AddUserForm())
                 {
                     modal.ShowDialog(overlay);
                 }
