@@ -73,7 +73,8 @@ namespace TheCoffe
 
         private void roundButton2_Click(object sender, EventArgs e)
         {
-
+            SetActiveSection(sender as RoundButton);
+            LoadUserControl(new CategoryList());
         }
 
         private void btnUserList_Click(object sender, EventArgs e)

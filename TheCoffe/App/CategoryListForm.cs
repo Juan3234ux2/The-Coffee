@@ -30,8 +30,20 @@ namespace TheCoffe.App
 
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
-            AddCategoryForm form = new AddCategoryForm();
-            form.Show();
+            Form parentForm = this.FindForm();
+            using (OverlayForm overlay = new OverlayForm())
+            {
+                overlay.Size = parentForm.ClientSize;
+                overlay.Location = parentForm.PointToScreen(Point.Empty);
+                overlay.Owner = parentForm;
+
+                overlay.Show();
+                using (AddCategoryForm modal = new AddCategoryForm())
+                {
+                    modal.ShowDialog(overlay);
+                }
+                overlay.Close();
+            }
         }
     }
 }

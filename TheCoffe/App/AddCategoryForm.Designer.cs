@@ -74,9 +74,9 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.label10.Location = new System.Drawing.Point(28, 19);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(216, 22);
+            this.label10.Size = new System.Drawing.Size(160, 22);
             this.label10.TabIndex = 38;
-            this.label10.Text = "Agregar Nueva Categoría";
+            this.label10.Text = "Agregar Categoría";
             // 
             // btnAddCategory
             // 
@@ -116,6 +116,7 @@
             this.btnClose.Size = new System.Drawing.Size(44, 34);
             this.btnClose.TabIndex = 37;
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // AddCategoryForm
             // 
@@ -132,7 +133,8 @@
             this.Name = "AddCategoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Deactivate += new System.EventHandler(this.AddCategoryForm_Deactivate);
+            this.Load += new System.EventHandler(this.AddCategoryForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

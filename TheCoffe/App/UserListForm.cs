@@ -30,5 +30,23 @@ namespace TheCoffe.App
                 row.Cells["Estado"].Value = "Activo";
             }
         }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            Form parentForm = this.FindForm();
+            using (OverlayForm overlay = new OverlayForm())
+            {
+                overlay.Size = parentForm.ClientSize;
+                overlay.Location = parentForm.PointToScreen(Point.Empty);
+                overlay.Owner = parentForm;
+
+                overlay.Show();
+                using (AddUserForm modal = new AddUserForm())
+                {
+                    modal.ShowDialog(overlay);
+                }
+                overlay.Close();
+            }
+        }
     }
 }
