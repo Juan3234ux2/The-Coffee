@@ -74,5 +74,10 @@ namespace TheCoffe.App
         {
 
         }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            cboCategory.DroppedDown = !cboCategory.DroppedDown;
+        }
     }
 }

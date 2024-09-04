@@ -66,21 +66,22 @@ namespace TheCoffe
             LoadUserControl(new ProductListForm());
         }
 
-        private void transitionTimer_Tick(object sender, EventArgs e)
+        private void btnUserList_Click(object sender, EventArgs e)
         {
-
+            SetActiveSection(sender as RoundButton);
+            LoadUserControl(new UserListForm());
         }
 
-        private void roundButton2_Click(object sender, EventArgs e)
+        private void btnCategory_Click(object sender, EventArgs e)
         {
             SetActiveSection(sender as RoundButton);
             LoadUserControl(new CategoryList());
         }
 
-        private void btnUserList_Click(object sender, EventArgs e)
+        private void btnTables_Click(object sender, EventArgs e)
         {
             SetActiveSection(sender as RoundButton);
-            LoadUserControl(new UserListForm());
+            LoadUserControl(new AddNewProductForm());
         }
     }
 }
