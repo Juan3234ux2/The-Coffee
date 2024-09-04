@@ -72,6 +72,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\AddNewProductForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="App\AddNewProductForm.Designer.cs">
+      <DependentUpon>AddNewProductForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="App\AddProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,9 @@
     <Compile Include="Components\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="App\AddNewProductForm.resx">
+      <DependentUpon>AddNewProductForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="App\AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +234,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hombre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taza-de-cafe.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

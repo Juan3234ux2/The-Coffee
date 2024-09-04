@@ -93,6 +93,16 @@ namespace TheCoffe.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap taza_de_cafe {
+            get {
+                object obj = ResourceManager.GetObject("taza-de-cafe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap The_Coffee__600_x_600_px___1_ {
             get {
                 object obj = ResourceManager.GetObject("The Coffee (600 x 600 px) (1)", resourceCulture);
