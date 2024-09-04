@@ -300,7 +300,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::TheCoffe.Properties.Resources.hombre;
             this.pictureBox1.InitialImage = global::TheCoffe.Properties.Resources.hombre;
             this.pictureBox1.Location = new System.Drawing.Point(22, 326);
