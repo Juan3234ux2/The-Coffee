@@ -45,7 +45,6 @@
             this.modernTextBox4 = new TheCoffe.Components.ModernTextBox();
             this.txtPrice = new TheCoffe.Components.ModernTextBox();
             this.txtName = new TheCoffe.Components.ModernTextBox();
-            this.cuiBorder1 = new CuoreUI.Controls.cuiBorder();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -144,7 +143,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.cuiBorder1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.Imagen);
@@ -322,17 +320,6 @@
             this.txtName.Texts = "";
             this.txtName.UnderlinedStyle = false;
             // 
-            // cuiBorder1
-            // 
-            this.cuiBorder1.Location = new System.Drawing.Point(538, 82);
-            this.cuiBorder1.Name = "cuiBorder1";
-            this.cuiBorder1.OutlineThickness = 1F;
-            this.cuiBorder1.PanelColor = System.Drawing.Color.Coral;
-            this.cuiBorder1.PanelOutlineColor = System.Drawing.Color.Coral;
-            this.cuiBorder1.Rounding = new System.Windows.Forms.Padding(8);
-            this.cuiBorder1.Size = new System.Drawing.Size(462, 456);
-            this.cuiBorder1.TabIndex = 94;
-            // 
             // AddNewProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,6 +366,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Imagen;
-        private CuoreUI.Controls.cuiBorder cuiBorder1;
     }
 }
