@@ -334,6 +334,7 @@
             this.btnWaiter.TextColor = System.Drawing.Color.DimGray;
             this.btnWaiter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnWaiter.UseVisualStyleBackColor = false;
+            this.btnWaiter.Click += new System.EventHandler(this.btnWaiter_Click);
             // 
             // btnProducts
             // 

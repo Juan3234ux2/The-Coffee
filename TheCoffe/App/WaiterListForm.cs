@@ -25,11 +25,11 @@ namespace TheCoffe.App
                 DataGridViewRow row = dataCategory.Rows[rowIndex];
                 row.Cells[0].Value = 1;
                 row.Cells[1].Value = "Emilia";
-                row.Cells[1].Value = "Espinola";
-                row.Cells[1].Value = 45939582;
-                row.Cells[1].Value = "54-379 4997735";
-                row.Cells[1].Value = "08:00";
-                row.Cells[1].Value = "12:00";
+                row.Cells[2].Value = "Espinola";
+                row.Cells[3].Value = 45939582;
+                row.Cells[4].Value = "54-379 4997735";
+                row.Cells[5].Value = "08:00";
+                row.Cells[6].Value = "12:00";
             }
         }
 

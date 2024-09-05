@@ -19,7 +19,7 @@ namespace TheCoffe.App
 
         private void btnAddTable_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNroMesa.Text) || string.IsNullOrWhiteSpace(txtNroSilla.Text))
+            if (string.IsNullOrWhiteSpace(txtNroSilla.Text) || string.IsNullOrWhiteSpace(txtMesa.Text))
             {
 
                 MessageBox.Show("Debe Completar todos los campos",
@@ -53,6 +53,11 @@ namespace TheCoffe.App
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtNroMesa__TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
