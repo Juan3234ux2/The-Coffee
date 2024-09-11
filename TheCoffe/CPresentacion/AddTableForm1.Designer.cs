@@ -31,10 +31,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.btnAdd = new AltoControls.AltoButton();
             this.txtNroSilla = new TheCoffe.Components.ModernTextBox();
             this.txtMesa = new TheCoffe.Components.ModernTextBox();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // label8
@@ -68,24 +68,6 @@
             this.label10.TabIndex = 38;
             this.label10.Text = "Agregar Mesa";
             // 
-            // btnClose
-            // 
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnClose.IconSize = 44;
-            this.btnClose.Location = new System.Drawing.Point(327, 17);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(44, 34);
-            this.btnClose.TabIndex = 37;
-            this.btnClose.UseVisualStyleBackColor = true;
-            // 
             // btnAdd
             // 
             this.btnAdd.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
@@ -106,6 +88,7 @@
             this.btnAdd.TabIndex = 43;
             this.btnAdd.Text = "Agregar";
             this.btnAdd.Transparency = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtNroSilla
             // 
@@ -151,6 +134,24 @@
             this.txtMesa.Texts = "";
             this.txtMesa.UnderlinedStyle = false;
             // 
+            // btnClose
+            // 
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnClose.IconSize = 44;
+            this.btnClose.Location = new System.Drawing.Point(327, 17);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(44, 34);
+            this.btnClose.TabIndex = 37;
+            this.btnClose.UseVisualStyleBackColor = true;
+            // 
             // AddTableForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,6 +169,8 @@
             this.Name = "AddTableForm1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddTableForm1";
+            this.Deactivate += new System.EventHandler(this.AddTableForm1_Deactivate);
+            this.Load += new System.EventHandler(this.AddTableForm1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
