@@ -312,6 +312,7 @@
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddWaiterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddWaiterForm";
             this.Deactivate += new System.EventHandler(this.AddWaiterForm_Deactivate);
             this.Load += new System.EventHandler(this.AddWaiterForm_Load);

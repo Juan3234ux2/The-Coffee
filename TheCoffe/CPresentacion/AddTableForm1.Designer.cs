@@ -28,58 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtName = new TheCoffe.Components.ModernTextBox();
-            this.txtPrice = new TheCoffe.Components.ModernTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.btnAdd = new AltoControls.AltoButton();
+            this.txtNroSilla = new TheCoffe.Components.ModernTextBox();
+            this.txtMesa = new TheCoffe.Components.ModernTextBox();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
-            // 
-            // txtName
-            // 
-            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.txtName.BorderColor = System.Drawing.Color.Transparent;
-            this.txtName.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtName.BorderRadius = 10;
-            this.txtName.BorderSize = 1;
-            this.txtName.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtName.Location = new System.Drawing.Point(29, 90);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtName.Multiline = false;
-            this.txtName.Name = "txtName";
-            this.txtName.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
-            this.txtName.PasswordChar = false;
-            this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtName.PlaceholderText = "";
-            this.txtName.Size = new System.Drawing.Size(317, 46);
-            this.txtName.TabIndex = 42;
-            this.txtName.Texts = "";
-            this.txtName.UnderlinedStyle = false;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.txtPrice.BorderColor = System.Drawing.Color.Transparent;
-            this.txtPrice.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtPrice.BorderRadius = 10;
-            this.txtPrice.BorderSize = 1;
-            this.txtPrice.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPrice.Location = new System.Drawing.Point(29, 181);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPrice.Multiline = false;
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
-            this.txtPrice.PasswordChar = false;
-            this.txtPrice.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPrice.PlaceholderText = "";
-            this.txtPrice.Size = new System.Drawing.Size(317, 46);
-            this.txtPrice.TabIndex = 41;
-            this.txtPrice.Texts = "";
-            this.txtPrice.UnderlinedStyle = false;
             // 
             // label8
             // 
@@ -87,9 +43,9 @@
             this.label8.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(27, 160);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 15);
+            this.label8.Size = new System.Drawing.Size(72, 15);
             this.label8.TabIndex = 40;
-            this.label8.Text = "Nro de Mesa";
+            this.label8.Text = "Nro de Silla";
             // 
             // label9
             // 
@@ -112,6 +68,72 @@
             this.label10.TabIndex = 38;
             this.label10.Text = "Agregar Mesa";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnAdd.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnAdd.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnAdd.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnAdd.Location = new System.Drawing.Point(26, 260);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Radius = 10;
+            this.btnAdd.Size = new System.Drawing.Size(317, 45);
+            this.btnAdd.Stroke = false;
+            this.btnAdd.StrokeColor = System.Drawing.Color.Gray;
+            this.btnAdd.TabIndex = 43;
+            this.btnAdd.Text = "Agregar";
+            this.btnAdd.Transparency = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // txtNroSilla
+            // 
+            this.txtNroSilla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtNroSilla.BorderColor = System.Drawing.Color.Transparent;
+            this.txtNroSilla.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtNroSilla.BorderRadius = 10;
+            this.txtNroSilla.BorderSize = 1;
+            this.txtNroSilla.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNroSilla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNroSilla.Location = new System.Drawing.Point(29, 181);
+            this.txtNroSilla.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNroSilla.Multiline = false;
+            this.txtNroSilla.Name = "txtNroSilla";
+            this.txtNroSilla.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtNroSilla.PasswordChar = false;
+            this.txtNroSilla.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtNroSilla.PlaceholderText = "";
+            this.txtNroSilla.Size = new System.Drawing.Size(317, 46);
+            this.txtNroSilla.TabIndex = 41;
+            this.txtNroSilla.Texts = "";
+            this.txtNroSilla.UnderlinedStyle = false;
+            // 
+            // txtMesa
+            // 
+            this.txtMesa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtMesa.BorderColor = System.Drawing.Color.Transparent;
+            this.txtMesa.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtMesa.BorderRadius = 10;
+            this.txtMesa.BorderSize = 1;
+            this.txtMesa.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMesa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMesa.Location = new System.Drawing.Point(30, 99);
+            this.txtMesa.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMesa.Multiline = false;
+            this.txtMesa.Name = "txtMesa";
+            this.txtMesa.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtMesa.PasswordChar = false;
+            this.txtMesa.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtMesa.PlaceholderText = "";
+            this.txtMesa.Size = new System.Drawing.Size(317, 46);
+            this.txtMesa.TabIndex = 44;
+            this.txtMesa.Texts = "";
+            this.txtMesa.UnderlinedStyle = false;
+            // 
             // btnClose
             // 
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -130,36 +152,15 @@
             this.btnClose.TabIndex = 37;
             this.btnClose.UseVisualStyleBackColor = true;
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnAdd.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnAdd.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnAdd.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnAdd.Location = new System.Drawing.Point(29, 260);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Radius = 10;
-            this.btnAdd.Size = new System.Drawing.Size(317, 45);
-            this.btnAdd.Stroke = false;
-            this.btnAdd.StrokeColor = System.Drawing.Color.Gray;
-            this.btnAdd.TabIndex = 43;
-            this.btnAdd.Text = "Agregar";
-            this.btnAdd.Transparency = false;
-            // 
             // AddTableForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(387, 328);
+            this.Controls.Add(this.txtMesa);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.txtName);
-            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.txtNroSilla);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
@@ -168,6 +169,8 @@
             this.Name = "AddTableForm1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddTableForm1";
+            this.Deactivate += new System.EventHandler(this.AddTableForm1_Deactivate);
+            this.Load += new System.EventHandler(this.AddTableForm1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,12 +178,13 @@
 
         #endregion
 
-        private Components.ModernTextBox txtName;
-        private Components.ModernTextBox txtPrice;
+        private Components.ModernTextBox txtNroMesa;
+        private Components.ModernTextBox txtNroSilla;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private FontAwesome.Sharp.IconButton btnClose;
         private AltoControls.AltoButton btnAdd;
+        private Components.ModernTextBox txtMesa;
     }
 }

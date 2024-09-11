@@ -72,101 +72,107 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App\AddNewProductForm.cs">
+    <Compile Include="CPresentacion\AddNewProductForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="App\AddNewProductForm.Designer.cs">
+    <Compile Include="CPresentacion\AddNewProductForm.Designer.cs">
       <DependentUpon>AddNewProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="App\AddProductForm.cs">
+    <Compile Include="CPresentacion\AddProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="App\AddProductForm.Designer.cs">
+    <Compile Include="CPresentacion\AddProductForm.Designer.cs">
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="App\AddTableForm1.cs">
+    <Compile Include="CPresentacion\AddTableForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="App\AddTableForm1.Designer.cs">
+    <Compile Include="CPresentacion\AddTableForm1.Designer.cs">
       <DependentUpon>AddTableForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="App\AddUserForm.cs">
+    <Compile Include="CPresentacion\AddUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="App\AddUserForm.Designer.cs">
+    <Compile Include="CPresentacion\AddUserForm.Designer.cs">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="App\AddWaiterForm.cs">
+    <Compile Include="CPresentacion\AddWaiterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="App\AddWaiterForm.Designer.cs">
+    <Compile Include="CPresentacion\AddWaiterForm.Designer.cs">
       <DependentUpon>AddWaiterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="App\CategoryListForm.cs">
+    <Compile Include="CPresentacion\AlertBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\AlertBox.Designer.cs">
+      <DependentUpon>AlertBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\CategoryListForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="App\CategoryListForm.Designer.cs">
+    <Compile Include="CPresentacion\CategoryListForm.Designer.cs">
       <DependentUpon>CategoryListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="App\WaiterListForm.cs">
+    <Compile Include="CPresentacion\WaiterListForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="App\WaiterListForm.Designer.cs">
+    <Compile Include="CPresentacion\WaiterListForm.Designer.cs">
       <DependentUpon>WaiterListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="App\TableListForm1.cs">
+    <Compile Include="CPresentacion\TableListForm1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="App\TableListForm1.Designer.cs">
+    <Compile Include="CPresentacion\TableListForm1.Designer.cs">
       <DependentUpon>TableListForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\CustomComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="App\DashboardForm.cs">
+    <Compile Include="CPresentacion\DashboardForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="App\DashboardForm.Designer.cs">
+    <Compile Include="CPresentacion\DashboardForm.Designer.cs">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="App\AddCategoryForm.cs">
+    <Compile Include="CPresentacion\AddCategoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="App\AddCategoryForm.Designer.cs">
+    <Compile Include="CPresentacion\AddCategoryForm.Designer.cs">
       <DependentUpon>AddCategoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="App\MainForm.cs">
+    <Compile Include="CPresentacion\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="App\MainForm.Designer.cs">
+    <Compile Include="CPresentacion\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="App\OverlayForm.cs">
+    <Compile Include="CPresentacion\OverlayForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="App\OverlayForm.Designer.cs">
+    <Compile Include="CPresentacion\OverlayForm.Designer.cs">
       <DependentUpon>OverlayForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="App\ProductListForm.cs">
+    <Compile Include="CPresentacion\ProductListForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="App\ProductListForm.Designer.cs">
+    <Compile Include="CPresentacion\ProductListForm.Designer.cs">
       <DependentUpon>ProductListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="App\Program.cs" />
-    <Compile Include="App\UserListForm.cs">
+    <Compile Include="CPresentacion\Program.cs" />
+    <Compile Include="CPresentacion\UserListForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="App\UserListForm.Designer.cs">
+    <Compile Include="CPresentacion\UserListForm.Designer.cs">
       <DependentUpon>UserListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\Input.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="App\LoginForm.cs">
+    <Compile Include="CPresentacion\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="App\LoginForm.Designer.cs">
+    <Compile Include="CPresentacion\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\ModernTextBox.cs">
@@ -179,49 +185,52 @@
     <Compile Include="Components\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="App\AddNewProductForm.resx">
+    <EmbeddedResource Include="CPresentacion\AddNewProductForm.resx">
       <DependentUpon>AddNewProductForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="App\AddProductForm.resx">
+    <EmbeddedResource Include="CPresentacion\AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="App\AddTableForm1.resx">
+    <EmbeddedResource Include="CPresentacion\AddTableForm1.resx">
       <DependentUpon>AddTableForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="App\AddUserForm.resx">
+    <EmbeddedResource Include="CPresentacion\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="App\AddWaiterForm.resx">
+    <EmbeddedResource Include="CPresentacion\AddWaiterForm.resx">
       <DependentUpon>AddWaiterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="App\CategoryListForm.resx">
+    <EmbeddedResource Include="CPresentacion\AlertBox.resx">
+      <DependentUpon>AlertBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\CategoryListForm.resx">
       <DependentUpon>CategoryListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="App\DashboardForm.resx">
+    <EmbeddedResource Include="CPresentacion\DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="App\AddCategoryForm.resx">
+    <EmbeddedResource Include="CPresentacion\AddCategoryForm.resx">
       <DependentUpon>AddCategoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="App\WaiterListForm.resx">
+    <EmbeddedResource Include="CPresentacion\WaiterListForm.resx">
       <DependentUpon>WaiterListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="App\MainForm.resx">
+    <EmbeddedResource Include="CPresentacion\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="App\OverlayForm.resx">
+    <EmbeddedResource Include="CPresentacion\OverlayForm.resx">
       <DependentUpon>OverlayForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="App\ProductListForm.resx">
+    <EmbeddedResource Include="CPresentacion\ProductListForm.resx">
       <DependentUpon>ProductListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="App\LoginForm.resx">
+    <EmbeddedResource Include="CPresentacion\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="App\TableListForm1.resx">
+    <EmbeddedResource Include="CPresentacion\TableListForm1.resx">
       <DependentUpon>TableListForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="App\UserListForm.resx">
+    <EmbeddedResource Include="CPresentacion\UserListForm.resx">
       <DependentUpon>UserListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Input.resx">
@@ -273,6 +282,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\taza-de-cafe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486485589-about-error-notification-help-info-information_81162.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

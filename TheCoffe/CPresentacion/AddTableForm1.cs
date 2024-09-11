@@ -17,9 +17,20 @@ namespace TheCoffe.App
             InitializeComponent();
         }
 
+        void AlertBox(Color backColor, Color color, string title, string text, Image icon)
+        {
+            AlertBox frm = new AlertBox();
+            frm.BackColor = backColor;
+            frm.ColorAlertBox = color;
+            frm.TitleAlertBox = title;
+            frm.TextAlertBox = text;
+            frm.IconAlertBox = icon;
+            frm.Show();
+        }
+
         private void btnAddTable_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNroMesa.Text) || string.IsNullOrWhiteSpace(txtNroSilla.Text))
+            if (string.IsNullOrWhiteSpace(txtNroSilla.Text) || string.IsNullOrWhiteSpace(txtMesa.Text))
             {
 
                 MessageBox.Show("Debe Completar todos los campos",
@@ -53,6 +64,16 @@ namespace TheCoffe.App
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtNroMesa__TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            AlertBox(Color.LightGreen, Color.SeaGreen, "Hola Mundo", "Emilia...", Properties.Resources.informacion);
         }
     }
 }
