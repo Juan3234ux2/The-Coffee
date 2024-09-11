@@ -76,7 +76,7 @@
             this.txtDNI.BorderSize = 1;
             this.txtDNI.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDNI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDNI.Location = new System.Drawing.Point(28, 173);
+            this.txtDNI.Location = new System.Drawing.Point(28, 171);
             this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNI.Multiline = false;
             this.txtDNI.Name = "txtDNI";
@@ -180,7 +180,7 @@
             this.txtTel.BorderSize = 1;
             this.txtTel.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTel.Location = new System.Drawing.Point(248, 173);
+            this.txtTel.Location = new System.Drawing.Point(248, 171);
             this.txtTel.Margin = new System.Windows.Forms.Padding(4);
             this.txtTel.Multiline = false;
             this.txtTel.Name = "txtTel";
@@ -197,7 +197,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(245, 152);
+            this.label2.Location = new System.Drawing.Point(245, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 45;
