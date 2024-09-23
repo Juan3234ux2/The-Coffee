@@ -27,7 +27,6 @@ namespace TheCoffe.App
                 row.Cells["Telefono"].Value = "3794457533";
                 row.Cells["Rol"].Value = "Administrador";
                 row.Cells["Creado"].Value = "25 Mar 25";
-                row.Cells["Estado"].Value = "Activo";
             }
         }
 
