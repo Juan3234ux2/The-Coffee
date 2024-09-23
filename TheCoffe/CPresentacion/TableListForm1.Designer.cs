@@ -34,13 +34,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.dataCategory = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NrodeSilla = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Acciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.btnAddTable = new WindowsFormsApplication1.RoundButton();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NrodeSilla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataCategory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +92,8 @@
             this.ID,
             this.Nombre,
             this.NrodeSilla,
-            this.Acciones});
+            this.editar,
+            this.eliminar});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,33 +138,6 @@
             this.dataCategory.ShowRowErrors = false;
             this.dataCategory.Size = new System.Drawing.Size(976, 479);
             this.dataCategory.TabIndex = 22;
-            // 
-            // ID
-            // 
-            this.ID.FillWeight = 58.95526F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.FillWeight = 62.10778F;
-            this.Nombre.HeaderText = "Nro de Mesa";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // NrodeSilla
-            // 
-            this.NrodeSilla.HeaderText = "Nro de Silla";
-            this.NrodeSilla.Name = "NrodeSilla";
-            this.NrodeSilla.ReadOnly = true;
-            // 
-            // Acciones
-            // 
-            this.Acciones.FillWeight = 100.027F;
-            this.Acciones.HeaderText = "Acciones";
-            this.Acciones.Name = "Acciones";
-            this.Acciones.ReadOnly = true;
             // 
             // label1
             // 
@@ -218,6 +193,47 @@
             this.btnAddTable.UseVisualStyleBackColor = false;
             this.btnAddTable.Click += new System.EventHandler(this.btnAddTable_Click);
             // 
+            // ID
+            // 
+            this.ID.FillWeight = 65.14275F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.FillWeight = 170.2603F;
+            this.Nombre.HeaderText = "Nro de Mesa";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // NrodeSilla
+            // 
+            this.NrodeSilla.FillWeight = 136.8174F;
+            this.NrodeSilla.HeaderText = "Nro de Silla";
+            this.NrodeSilla.Name = "NrodeSilla";
+            this.NrodeSilla.ReadOnly = true;
+            // 
+            // editar
+            // 
+            this.editar.FillWeight = 27.78767F;
+            this.editar.HeaderText = "Acciones";
+            this.editar.Image = global::TheCoffe.Properties.Resources.editarr;
+            this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // eliminar
+            // 
+            this.eliminar.FillWeight = 21.082F;
+            this.eliminar.HeaderText = "";
+            this.eliminar.Image = global::TheCoffe.Properties.Resources.eliminate;
+            this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
+            // 
             // TableList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,6 +263,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn NrodeSilla;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Acciones;
+        private System.Windows.Forms.DataGridViewImageColumn editar;
+        private System.Windows.Forms.DataGridViewImageColumn eliminar;
     }
 }

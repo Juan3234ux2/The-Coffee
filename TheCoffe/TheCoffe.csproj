@@ -76,12 +76,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CNegocio\InputValidator.cs" />
-    <Compile Include="Components\DashboardForm.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Components\DashboardForm.Designer.cs">
-      <DependentUpon>DashboardForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="CPresentacion\AddProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,9 +195,6 @@
     <Compile Include="Components\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="Components\DashboardForm.resx">
-      <DependentUpon>DashboardForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,6 +313,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eliminate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editarr.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

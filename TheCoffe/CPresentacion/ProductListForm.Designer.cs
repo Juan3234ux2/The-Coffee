@@ -222,37 +222,37 @@
             // 
             // ID
             // 
-            this.ID.FillWeight = 93.13654F;
+            this.ID.FillWeight = 94.16002F;
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             // 
             // Nombre
             // 
-            this.Nombre.FillWeight = 98.11684F;
+            this.Nombre.FillWeight = 99.19505F;
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
             // 
             // Precio
             // 
-            this.Precio.FillWeight = 102.5103F;
+            this.Precio.FillWeight = 103.6368F;
             this.Precio.HeaderText = "Precio";
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
             // 
             // Categoria
             // 
-            this.Categoria.FillWeight = 95.12503F;
+            this.Categoria.FillWeight = 96.17036F;
             this.Categoria.HeaderText = "Categoria";
             this.Categoria.Name = "Categoria";
             this.Categoria.ReadOnly = true;
             // 
             // editar
             // 
-            this.editar.FillWeight = 33.97408F;
+            this.editar.FillWeight = 29.4442F;
             this.editar.HeaderText = "Acciones";
-            this.editar.Image = global::TheCoffe.Properties.Resources.edit;
+            this.editar.Image = global::TheCoffe.Properties.Resources.editarr;
             this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.editar.Name = "editar";
             this.editar.ReadOnly = true;
@@ -260,7 +260,7 @@
             // 
             // eliminar
             // 
-            this.eliminar.FillWeight = 23.33003F;
+            this.eliminar.FillWeight = 23.58641F;
             this.eliminar.HeaderText = "";
             this.eliminar.Image = global::TheCoffe.Properties.Resources.eliminate;
             this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
