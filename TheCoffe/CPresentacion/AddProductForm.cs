@@ -38,7 +38,7 @@ namespace TheCoffe.App
                 return;
             }
             else
-            {
+            { 
                 new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Producto agregado correctamente", Properties.Resources.informacion);
             }
         }
@@ -83,7 +83,7 @@ namespace TheCoffe.App
 
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            InputValidator.ValidateInput(e, InputValidator.InputType.Digits);
+            InputValidator.ValidateInput(e, InputValidator.InputType.Letters);
         }
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)

@@ -15,7 +15,6 @@ namespace TheCoffe.App
         public WaiterListForm()
         {
             InitializeComponent();
-            Console.WriteLine("Juan capooo");
         }
 
         private void WaiterListForm_Load(object sender, EventArgs e)
