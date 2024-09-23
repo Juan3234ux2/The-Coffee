@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheCoffe.CNegocio;
 
 namespace TheCoffe.App
 {
     public partial class AddCategoryForm : Form
     {
+        private bool isShowingMsgBox = false;
         public AddCategoryForm()
         {
             InitializeComponent();
@@ -20,20 +22,28 @@ namespace TheCoffe.App
       
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtDescripcion.Text))
+            if (string.IsNullOrWhiteSpace(txtDescripcion.Texts))
             {
-
+                isShowingMsgBox = true;
                 MessageBox.Show("Debe Completar todos los campos",
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
+                isShowingMsgBox = false;
                 return;
+            }
+            else
+            {
+                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Categoría agregada correctamente", Properties.Resources.informacion);
             }
         }
 
         private void AddCategoryForm_Deactivate(object sender, EventArgs e)
         {
-            this.Close();
+            if (!isShowingMsgBox)
+            {
+              this.Close();
+            }
         }
 
         private void AddCategoryForm_Load(object sender, EventArgs e)
@@ -54,6 +64,11 @@ namespace TheCoffe.App
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidator.ValidateInput(e, InputValidator.InputType.Letters);
         }
     }
 }

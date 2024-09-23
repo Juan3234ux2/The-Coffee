@@ -12,9 +12,17 @@ namespace TheCoffe.App
 {
     public partial class AlertBox : Form
     {
-        public AlertBox()
+        private Form mainForm;
+        public AlertBox(Form parentForm, Color backColor, Color color, string title, string text, Image icon)
         {
             InitializeComponent();
+            this.mainForm = parentForm;
+            this.BackColor = backColor;
+            this.ColorAlertBox = color;
+            this.TitleAlertBox = title;
+            this.TextAlertBox = text;
+            this.IconAlertBox = icon;
+            this.Show();
         }
 
         public Color BackColorAlertBox
@@ -50,14 +58,14 @@ namespace TheCoffe.App
         private void PositionAlertBox()
         {
             int xPos = 0; int yPos = 0;
-            xPos = Screen.GetWorkingArea(this).Width;
-            yPos = Screen.GetWorkingArea(this).Height;
-            this.Location = new Point(xPos - this.Width, yPos - this.Height);
+            xPos = this.mainForm.Width;
+            yPos = this.mainForm.Height;
+            this.Location = this.mainForm.PointToScreen(new Point(xPos - this.Width, yPos - this.Height));
         }
 
         private void timerAnimasion_Tick(object sender, EventArgs e)
         {
-            linAlertBox.Width = linAlertBox.Width + 2;
+            linAlertBox.Width = linAlertBox.Width + 3;
             if (linAlertBox.Width >= 350)
             {
                 timerAnimasion.Stop();
@@ -72,9 +80,5 @@ namespace TheCoffe.App
             timerAnimasion.Start();
         }
 
-        private void AlertBox_Deactivate(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

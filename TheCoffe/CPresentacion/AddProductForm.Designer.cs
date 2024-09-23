@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
+            this.txtDescription = new TheCoffe.Components.ModernTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.altoButton1 = new AltoControls.AltoButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,7 +43,7 @@
             this.btnAdd = new AltoControls.AltoButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,7 +52,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.modernTextBox1);
+            this.panel1.Controls.Add(this.txtDescription);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.altoButton1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -66,34 +66,35 @@
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.lblTitle);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(732, 547);
+            this.panel1.Size = new System.Drawing.Size(732, 533);
             this.panel1.TabIndex = 24;
             // 
-            // modernTextBox1
+            // txtDescription
             // 
-            this.modernTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.modernTextBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.modernTextBox1.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.modernTextBox1.BorderRadius = 10;
-            this.modernTextBox1.BorderSize = 1;
-            this.modernTextBox1.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modernTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox1.Location = new System.Drawing.Point(372, 84);
-            this.modernTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.modernTextBox1.Multiline = true;
-            this.modernTextBox1.Name = "modernTextBox1";
-            this.modernTextBox1.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
-            this.modernTextBox1.PasswordChar = false;
-            this.modernTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.modernTextBox1.PlaceholderText = "";
-            this.modernTextBox1.Size = new System.Drawing.Size(317, 206);
-            this.modernTextBox1.TabIndex = 77;
-            this.modernTextBox1.Texts = "";
-            this.modernTextBox1.UnderlinedStyle = false;
+            this.txtDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtDescription.BorderColor = System.Drawing.Color.Transparent;
+            this.txtDescription.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtDescription.BorderRadius = 10;
+            this.txtDescription.BorderSize = 1;
+            this.txtDescription.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDescription.Location = new System.Drawing.Point(372, 84);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtDescription.PasswordChar = false;
+            this.txtDescription.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtDescription.PlaceholderText = "";
+            this.txtDescription.Size = new System.Drawing.Size(317, 206);
+            this.txtDescription.TabIndex = 77;
+            this.txtDescription.Texts = "";
+            this.txtDescription.UnderlinedStyle = false;
+            this.txtDescription.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescription_KeyPress);
             // 
             // label1
             // 
@@ -129,7 +130,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::TheCoffe.Properties.Resources.taza_de_cafe;
             this.pictureBox1.InitialImage = global::TheCoffe.Properties.Resources.hombre;
             this.pictureBox1.Location = new System.Drawing.Point(33, 325);
             this.pictureBox1.Name = "pictureBox1";
@@ -160,7 +160,7 @@
             this.btnCategory.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnCategory.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnCategory.IconSize = 25;
-            this.btnCategory.Location = new System.Drawing.Point(305, 251);
+            this.btnCategory.Location = new System.Drawing.Point(310, 251);
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.Size = new System.Drawing.Size(33, 35);
             this.btnCategory.TabIndex = 72;
@@ -182,7 +182,7 @@
             "Cafe",
             "Cocido",
             "Chocolate"});
-            this.cboCategory.Location = new System.Drawing.Point(32, 255);
+            this.cboCategory.Location = new System.Drawing.Point(38, 255);
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.Size = new System.Drawing.Size(280, 24);
             this.cboCategory.TabIndex = 71;
@@ -241,6 +241,7 @@
             this.txtName.TabIndex = 36;
             this.txtName.Texts = "";
             this.txtName.UnderlinedStyle = false;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtPrice
             // 
@@ -263,6 +264,7 @@
             this.txtPrice.TabIndex = 35;
             this.txtPrice.Texts = "";
             this.txtPrice.UnderlinedStyle = false;
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // btnAdd
             // 
@@ -275,7 +277,7 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnAdd.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnAdd.Location = new System.Drawing.Point(34, 478);
+            this.btnAdd.Location = new System.Drawing.Point(34, 457);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Radius = 10;
             this.btnAdd.Size = new System.Drawing.Size(651, 45);
@@ -306,16 +308,16 @@
             this.label9.TabIndex = 26;
             this.label9.Text = "Nombre";
             // 
-            // label10
+            // lblTitle
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Roboto", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.label10.Location = new System.Drawing.Point(28, 18);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(154, 22);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Agregar Producto";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Roboto", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.lblTitle.Location = new System.Drawing.Point(28, 18);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(154, 22);
+            this.lblTitle.TabIndex = 25;
+            this.lblTitle.Text = "Agregar Producto";
             // 
             // btnClose
             // 
@@ -340,15 +342,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(719, 545);
+            this.CausesValidation = false;
+            this.ClientSize = new System.Drawing.Size(719, 531);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Name = "AddProductForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddProductForm";
+            this.TopMost = true;
             this.Deactivate += new System.EventHandler(this.AddProductForm_Deactivate);
             this.Load += new System.EventHandler(this.AddProductForm_Load);
             this.panel1.ResumeLayout(false);
@@ -364,18 +368,18 @@
         private AltoControls.AltoButton btnAdd;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblTitle;
         private FontAwesome.Sharp.IconButton btnClose;
         private Components.ModernTextBox txtPrice;
         private Components.ModernTextBox txtName;
-        private Components.ModernTextBox modernTextBox1;
+        private Components.ModernTextBox txtDescription;
         private System.Windows.Forms.Label label1;
         private AltoControls.AltoButton altoButton1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private FontAwesome.Sharp.IconButton btnCategory;
         private CustomComboBox cboCategory;
         private Components.ModernTextBox modernTextBox4;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

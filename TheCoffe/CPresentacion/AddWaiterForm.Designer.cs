@@ -66,6 +66,7 @@
             this.txtName.TabIndex = 42;
             this.txtName.Texts = "";
             this.txtName.UnderlinedStyle = false;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateLetters_KeyPress);
             // 
             // txtDNI
             // 
@@ -88,6 +89,7 @@
             this.txtDNI.TabIndex = 41;
             this.txtDNI.Texts = "";
             this.txtDNI.UnderlinedStyle = false;
+            this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
             // 
             // label8
             // 
@@ -160,6 +162,7 @@
             this.txtApellido.TabIndex = 44;
             this.txtApellido.Texts = "";
             this.txtApellido.UnderlinedStyle = false;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateLetters_KeyPress);
             // 
             // label1
             // 
@@ -192,6 +195,7 @@
             this.txtTel.TabIndex = 46;
             this.txtTel.Texts = "";
             this.txtTel.UnderlinedStyle = false;
+            this.txtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
             // 
             // label2
             // 
@@ -224,6 +228,7 @@
             this.txtSalida.TabIndex = 50;
             this.txtSalida.Texts = "";
             this.txtSalida.UnderlinedStyle = false;
+            this.txtSalida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
             // 
             // label3
             // 
@@ -256,6 +261,7 @@
             this.txtIngreso.TabIndex = 48;
             this.txtIngreso.Texts = "";
             this.txtIngreso.UnderlinedStyle = false;
+            this.txtIngreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
             // 
             // label4
             // 
@@ -312,6 +318,7 @@
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddWaiterForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddWaiterForm";
             this.Deactivate += new System.EventHandler(this.AddWaiterForm_Deactivate);

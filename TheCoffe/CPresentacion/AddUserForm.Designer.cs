@@ -31,16 +31,16 @@
             this.lblAddUser = new System.Windows.Forms.Label();
             this.txtName = new TheCoffe.Components.ModernTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
+            this.txtLastName = new TheCoffe.Components.ModernTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.modernTextBox2 = new TheCoffe.Components.ModernTextBox();
+            this.txtUser = new TheCoffe.Components.ModernTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPassword = new TheCoffe.Components.ModernTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnWatchPassword = new WindowsFormsApplication1.RoundButton();
-            this.modernTextBox3 = new TheCoffe.Components.ModernTextBox();
+            this.txtNumber = new TheCoffe.Components.ModernTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAdd = new AltoControls.AltoButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -84,6 +84,7 @@
             this.txtName.TabIndex = 38;
             this.txtName.Texts = "";
             this.txtName.UnderlinedStyle = false;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateLetters_KeyPress);
             // 
             // label9
             // 
@@ -95,27 +96,28 @@
             this.label9.TabIndex = 37;
             this.label9.Text = "Nombre";
             // 
-            // modernTextBox1
+            // txtLastName
             // 
-            this.modernTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.modernTextBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.modernTextBox1.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.modernTextBox1.BorderRadius = 10;
-            this.modernTextBox1.BorderSize = 1;
-            this.modernTextBox1.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modernTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox1.Location = new System.Drawing.Point(239, 81);
-            this.modernTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.modernTextBox1.Multiline = false;
-            this.modernTextBox1.Name = "modernTextBox1";
-            this.modernTextBox1.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
-            this.modernTextBox1.PasswordChar = false;
-            this.modernTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.modernTextBox1.PlaceholderText = "";
-            this.modernTextBox1.Size = new System.Drawing.Size(195, 46);
-            this.modernTextBox1.TabIndex = 40;
-            this.modernTextBox1.Texts = "";
-            this.modernTextBox1.UnderlinedStyle = false;
+            this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtLastName.BorderColor = System.Drawing.Color.Transparent;
+            this.txtLastName.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtLastName.BorderRadius = 10;
+            this.txtLastName.BorderSize = 1;
+            this.txtLastName.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtLastName.Location = new System.Drawing.Point(239, 81);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLastName.Multiline = false;
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtLastName.PasswordChar = false;
+            this.txtLastName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtLastName.PlaceholderText = "";
+            this.txtLastName.Size = new System.Drawing.Size(195, 46);
+            this.txtLastName.TabIndex = 40;
+            this.txtLastName.Texts = "";
+            this.txtLastName.UnderlinedStyle = false;
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateLetters_KeyPress);
             // 
             // label1
             // 
@@ -156,27 +158,27 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // modernTextBox2
+            // txtUser
             // 
-            this.modernTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.modernTextBox2.BorderColor = System.Drawing.Color.Transparent;
-            this.modernTextBox2.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.modernTextBox2.BorderRadius = 10;
-            this.modernTextBox2.BorderSize = 1;
-            this.modernTextBox2.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modernTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox2.Location = new System.Drawing.Point(21, 244);
-            this.modernTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.modernTextBox2.Multiline = false;
-            this.modernTextBox2.Name = "modernTextBox2";
-            this.modernTextBox2.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
-            this.modernTextBox2.PasswordChar = false;
-            this.modernTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.modernTextBox2.PlaceholderText = "";
-            this.modernTextBox2.Size = new System.Drawing.Size(195, 46);
-            this.modernTextBox2.TabIndex = 44;
-            this.modernTextBox2.Texts = "";
-            this.modernTextBox2.UnderlinedStyle = false;
+            this.txtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtUser.BorderColor = System.Drawing.Color.Transparent;
+            this.txtUser.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtUser.BorderRadius = 10;
+            this.txtUser.BorderSize = 1;
+            this.txtUser.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtUser.Location = new System.Drawing.Point(21, 244);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUser.Multiline = false;
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtUser.PasswordChar = false;
+            this.txtUser.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtUser.PlaceholderText = "";
+            this.txtUser.Size = new System.Drawing.Size(195, 46);
+            this.txtUser.TabIndex = 44;
+            this.txtUser.Texts = "";
+            this.txtUser.UnderlinedStyle = false;
             // 
             // label2
             // 
@@ -245,27 +247,28 @@
             this.btnWatchPassword.UseVisualStyleBackColor = false;
             this.btnWatchPassword.Click += new System.EventHandler(this.btnWatchPassword_Click);
             // 
-            // modernTextBox3
+            // txtNumber
             // 
-            this.modernTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.modernTextBox3.BorderColor = System.Drawing.Color.Transparent;
-            this.modernTextBox3.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.modernTextBox3.BorderRadius = 10;
-            this.modernTextBox3.BorderSize = 1;
-            this.modernTextBox3.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modernTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox3.Location = new System.Drawing.Point(239, 163);
-            this.modernTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.modernTextBox3.Multiline = false;
-            this.modernTextBox3.Name = "modernTextBox3";
-            this.modernTextBox3.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
-            this.modernTextBox3.PasswordChar = false;
-            this.modernTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.modernTextBox3.PlaceholderText = "";
-            this.modernTextBox3.Size = new System.Drawing.Size(195, 46);
-            this.modernTextBox3.TabIndex = 50;
-            this.modernTextBox3.Texts = "";
-            this.modernTextBox3.UnderlinedStyle = false;
+            this.txtNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtNumber.BorderColor = System.Drawing.Color.Transparent;
+            this.txtNumber.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtNumber.BorderRadius = 10;
+            this.txtNumber.BorderSize = 1;
+            this.txtNumber.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNumber.Location = new System.Drawing.Point(239, 163);
+            this.txtNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumber.Multiline = false;
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtNumber.PasswordChar = false;
+            this.txtNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtNumber.PlaceholderText = "";
+            this.txtNumber.Size = new System.Drawing.Size(195, 46);
+            this.txtNumber.TabIndex = 50;
+            this.txtNumber.Texts = "";
+            this.txtNumber.UnderlinedStyle = false;
+            this.txtNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumber_KeyPress);
             // 
             // label4
             // 
@@ -297,6 +300,7 @@
             this.btnAdd.TabIndex = 51;
             this.btnAdd.Text = "Agregar";
             this.btnAdd.Transparency = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // pictureBox1
             // 
@@ -415,15 +419,15 @@
             this.Controls.Add(this.altoButton1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.modernTextBox3);
+            this.Controls.Add(this.txtNumber);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnWatchPassword);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.modernTextBox2);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.modernTextBox1);
+            this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label9);
@@ -432,6 +436,7 @@
             this.Controls.Add(this.modernTextBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddUserForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddUserForm";
             this.Deactivate += new System.EventHandler(this.AddUserForm_Deactivate);
@@ -448,15 +453,15 @@
         private FontAwesome.Sharp.IconButton btnClose;
         private Components.ModernTextBox txtName;
         private System.Windows.Forms.Label label9;
-        private Components.ModernTextBox modernTextBox1;
+        private Components.ModernTextBox txtLastName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
-        private Components.ModernTextBox modernTextBox2;
+        private Components.ModernTextBox txtUser;
         private System.Windows.Forms.Label label2;
         private Components.ModernTextBox txtPassword;
         private System.Windows.Forms.Label label3;
         private WindowsFormsApplication1.RoundButton btnWatchPassword;
-        private Components.ModernTextBox modernTextBox3;
+        private Components.ModernTextBox txtNumber;
         private System.Windows.Forms.Label label4;
         private AltoControls.AltoButton btnAdd;
         private System.Windows.Forms.PictureBox pictureBox1;

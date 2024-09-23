@@ -11,14 +11,13 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace TheCoffe.App
 {
-    public partial class DashboardForm : UserControl
+    public partial class DashboardForm2 : UserControl
     {
-        public DashboardForm()
+        public DashboardForm2()
         {
             InitializeComponent();
             PoblarChart();
             PoblarChartDonas();
-            PoblarChartChicos();
         }
         private void PoblarChartDonas()
         {
@@ -64,24 +63,13 @@ namespace TheCoffe.App
             chart1.Series.Clear(); 
             chart1.Series.Add(serie);
         }
-        private void PoblarChartChicos()
-        {
-            Series serie = chart2.Series["Productos"];
-            AgregarDatos(serie);
-            Series serie2 = chart3.Series["Empleados"];
-            AgregarDatos(serie2);
-            Series serie3 = chart4.Series["Pedidos"];
-            AgregarDatos(serie3);
-            Series serie4 = chart5.Series["Recaudado"];
-            AgregarDatos(serie4);
 
-        }
         private void AgregarDatos(Series serie)
         {
             Random random = new Random();
             for (int i = 1; i <= 7; i++)
             {
-                int valorAleatorio = random.Next(0, 201);
+                int valorAleatorio = random.Next(50, 201);
                 serie.Points.AddXY(i, valorAleatorio);
             }
         }

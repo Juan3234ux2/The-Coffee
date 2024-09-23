@@ -23,6 +23,7 @@ namespace TheCoffe.Components
         private Color placeholderColor = Color.DarkGray;
         private string placeholderText = "";
         private bool isPlaceholder = false;
+        public event KeyPressEventHandler KeyPress;
         private bool isPasswordChar = false;
         public event EventHandler _TextChanged;
         [Category("Personalizado")]
@@ -168,6 +169,7 @@ namespace TheCoffe.Components
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            textBox1.KeyPress += textBox1_KeyPress;
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -318,7 +320,10 @@ namespace TheCoffe.Components
         }
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.OnKeyPress(e);
+            if (this.KeyPress != null)
+            {
+                this.KeyPress.Invoke(this, e); // Propaga el evento hacia afuera
+            }
         }
 
         private void ModernTextBox_Load(object sender, EventArgs e)

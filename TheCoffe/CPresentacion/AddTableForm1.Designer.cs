@@ -111,6 +111,7 @@
             this.txtNroSilla.TabIndex = 41;
             this.txtNroSilla.Texts = "";
             this.txtNroSilla.UnderlinedStyle = false;
+            this.txtNroSilla.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroSilla_KeyPress);
             // 
             // txtMesa
             // 
@@ -133,6 +134,7 @@
             this.txtMesa.TabIndex = 44;
             this.txtMesa.Texts = "";
             this.txtMesa.UnderlinedStyle = false;
+            this.txtMesa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMesa_KeyPress);
             // 
             // btnClose
             // 
@@ -167,6 +169,7 @@
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddTableForm1";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddTableForm1";
             this.Deactivate += new System.EventHandler(this.AddTableForm1_Deactivate);
@@ -178,7 +181,6 @@
 
         #endregion
 
-        private Components.ModernTextBox txtNroMesa;
         private Components.ModernTextBox txtNroSilla;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;

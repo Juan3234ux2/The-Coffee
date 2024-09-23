@@ -35,9 +35,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnLogin = new AltoControls.AltoButton();
-            this.txtUser = new TheCoffe.Input();
-            this.txtContraseña = new TheCoffe.Input();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.txtUser = new TheCoffe.Components.ModernTextBox();
+            this.txtPassword = new TheCoffe.Components.ModernTextBox();
+            this.btnWatchPassword = new WindowsFormsApplication1.RoundButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -111,39 +112,13 @@
             this.btnLogin.Location = new System.Drawing.Point(372, 325);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Radius = 10;
-            this.btnLogin.Size = new System.Drawing.Size(295, 45);
+            this.btnLogin.Size = new System.Drawing.Size(297, 45);
             this.btnLogin.Stroke = false;
             this.btnLogin.StrokeColor = System.Drawing.Color.Gray;
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Ingresar";
             this.btnLogin.Transparency = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // txtUser
-            // 
-            this.txtUser.BackColor = System.Drawing.Color.Transparent;
-            this.txtUser.Br = System.Drawing.Color.White;
-            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txtUser.ForeColor = System.Drawing.Color.DimGray;
-            this.txtUser.Location = new System.Drawing.Point(374, 168);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.PlaceHolder = "Usuario";
-            this.txtUser.Size = new System.Drawing.Size(295, 45);
-            this.txtUser.TabIndex = 8;
-            this.txtUser.Text = "Usuario";
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.BackColor = System.Drawing.Color.Transparent;
-            this.txtContraseña.Br = System.Drawing.Color.White;
-            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
-            this.txtContraseña.Location = new System.Drawing.Point(374, 248);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PlaceHolder = "Contraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(295, 45);
-            this.txtContraseña.TabIndex = 9;
-            this.txtContraseña.Text = "Contraseña";
             // 
             // btnClose
             // 
@@ -163,15 +138,85 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // txtUser
+            // 
+            this.txtUser.BackColor = System.Drawing.SystemColors.Window;
+            this.txtUser.BorderColor = System.Drawing.Color.DimGray;
+            this.txtUser.BorderFocusColor = System.Drawing.Color.DimGray;
+            this.txtUser.BorderRadius = 10;
+            this.txtUser.BorderSize = 1;
+            this.txtUser.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
+            this.txtUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtUser.Location = new System.Drawing.Point(374, 168);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUser.Multiline = false;
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Padding = new System.Windows.Forms.Padding(10, 16, 10, 7);
+            this.txtUser.PasswordChar = false;
+            this.txtUser.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtUser.PlaceholderText = "Usuario";
+            this.txtUser.Size = new System.Drawing.Size(295, 47);
+            this.txtUser.TabIndex = 11;
+            this.txtUser.Texts = "";
+            this.txtUser.UnderlinedStyle = false;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPassword.BorderColor = System.Drawing.Color.Gray;
+            this.txtPassword.BorderFocusColor = System.Drawing.Color.DimGray;
+            this.txtPassword.BorderRadius = 10;
+            this.txtPassword.BorderSize = 1;
+            this.txtPassword.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPassword.Location = new System.Drawing.Point(374, 243);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Multiline = false;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Padding = new System.Windows.Forms.Padding(10, 16, 10, 7);
+            this.txtPassword.PasswordChar = true;
+            this.txtPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtPassword.PlaceholderText = "Contraseña";
+            this.txtPassword.Size = new System.Drawing.Size(295, 47);
+            this.txtPassword.TabIndex = 12;
+            this.txtPassword.Texts = "";
+            this.txtPassword.UnderlinedStyle = false;
+            // 
+            // btnWatchPassword
+            // 
+            this.btnWatchPassword.BackColor = System.Drawing.Color.White;
+            this.btnWatchPassword.BackgroundColor = System.Drawing.Color.White;
+            this.btnWatchPassword.BorderColor = System.Drawing.Color.Black;
+            this.btnWatchPassword.BorderRadius = 0;
+            this.btnWatchPassword.BorderSize = 0;
+            this.btnWatchPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnWatchPassword.FlatAppearance.BorderSize = 0;
+            this.btnWatchPassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnWatchPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnWatchPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWatchPassword.ForeColor = System.Drawing.Color.White;
+            this.btnWatchPassword.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.btnWatchPassword.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnWatchPassword.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnWatchPassword.IconSize = 36;
+            this.btnWatchPassword.Location = new System.Drawing.Point(628, 251);
+            this.btnWatchPassword.Name = "btnWatchPassword";
+            this.btnWatchPassword.Size = new System.Drawing.Size(34, 36);
+            this.btnWatchPassword.TabIndex = 49;
+            this.btnWatchPassword.TextColor = System.Drawing.Color.White;
+            this.btnWatchPassword.UseVisualStyleBackColor = false;
+            this.btnWatchPassword.Click += new System.EventHandler(this.btnWatchPassword_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(750, 475);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.btnWatchPassword);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.panel1);
@@ -194,11 +239,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblLogin;
         private AltoControls.AltoButton btnLogin;
-        private Input txtUser;
-        private Input txtContraseña;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Components.ModernTextBox txtUser;
+        private Components.ModernTextBox txtPassword;
+        private WindowsFormsApplication1.RoundButton btnWatchPassword;
     }
 }

@@ -213,6 +213,7 @@
             this.btnUserDetails.Text = "Ver Perfil";
             this.btnUserDetails.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnUserDetails.UseVisualStyleBackColor = false;
+            this.btnUserDetails.Click += new System.EventHandler(this.btnUserDetails_Click);
             // 
             // lblRol
             // 

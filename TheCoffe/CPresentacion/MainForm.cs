@@ -4,9 +4,8 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using AltoControls;
 using FontAwesome.Sharp;
-using LiveCharts;
-using LiveCharts.Wpf;
 using TheCoffe.App;
+using TheCoffe.CPresentacion;
 using WindowsFormsApplication1;
 
 namespace TheCoffe
@@ -40,6 +39,13 @@ namespace TheCoffe
 
         }
         private void SetActiveSection(RoundButton activeButton) {
+            RemoveActiveSection();
+            activeButton.ForeColor = Color.FromArgb(96, 75, 232);
+            activeButton.BackgroundColor = Color.FromArgb(222, 232, 250);
+            activeButton.IconColor = Color.FromArgb(96, 75, 232);
+        }
+        private void RemoveActiveSection()
+        {
             foreach (Control control in pnlSideBar.Controls)
             {
                 if (control is RoundButton button)
@@ -49,11 +55,7 @@ namespace TheCoffe
                     button.IconColor = Color.DimGray;
                 }
             }
-            activeButton.ForeColor = Color.FromArgb(96, 75, 232);
-            activeButton.BackgroundColor = Color.FromArgb(222, 232, 250);
-            activeButton.IconColor = Color.FromArgb(96, 75, 232);
         }
-     
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             SetActiveSection(sender as RoundButton);
@@ -88,6 +90,12 @@ namespace TheCoffe
         {
             SetActiveSection(sender as RoundButton);
             LoadUserControl(new WaiterListForm());
+        }
+
+        private void btnUserDetails_Click(object sender, EventArgs e)
+        {
+            RemoveActiveSection();
+            LoadUserControl(new ProfileForm());
         }
     }
 }
