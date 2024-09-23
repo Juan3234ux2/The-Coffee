@@ -34,13 +34,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.dataCategory = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.btnAddCategory = new WindowsFormsApplication1.RoundButton();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.btnAddCategory = new WindowsFormsApplication1.RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataCategory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,6 +136,40 @@
             this.dataCategory.ShowRowErrors = false;
             this.dataCategory.Size = new System.Drawing.Size(976, 479);
             this.dataCategory.TabIndex = 17;
+            this.dataCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCategory_CellClick);
+            // 
+            // ID
+            // 
+            this.ID.FillWeight = 24.46955F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.FillWeight = 258.7863F;
+            this.Nombre.HeaderText = "Descripción";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // editar
+            // 
+            this.editar.FillWeight = 21.18868F;
+            this.editar.HeaderText = "Acciones";
+            this.editar.Image = global::TheCoffe.Properties.Resources.editarr;
+            this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // eliminar
+            // 
+            this.eliminar.FillWeight = 16.64549F;
+            this.eliminar.HeaderText = "";
+            this.eliminar.Image = global::TheCoffe.Properties.Resources.eliminate;
+            this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
             // 
             // label1
             // 
@@ -190,39 +224,6 @@
             this.btnAddCategory.TextColor = System.Drawing.Color.White;
             this.btnAddCategory.UseVisualStyleBackColor = false;
             this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
-            // 
-            // ID
-            // 
-            this.ID.FillWeight = 24.46955F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.FillWeight = 258.7863F;
-            this.Nombre.HeaderText = "Descripción";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // editar
-            // 
-            this.editar.FillWeight = 21.18868F;
-            this.editar.HeaderText = "Acciones";
-            this.editar.Image = global::TheCoffe.Properties.Resources.editarr;
-            this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.editar.Name = "editar";
-            this.editar.ReadOnly = true;
-            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // eliminar
-            // 
-            this.eliminar.FillWeight = 16.64549F;
-            this.eliminar.HeaderText = "";
-            this.eliminar.Image = global::TheCoffe.Properties.Resources.eliminate;
-            this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.eliminar.Name = "eliminar";
-            this.eliminar.ReadOnly = true;
             // 
             // CategoryList
             // 

@@ -33,16 +33,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
-            this.dataCategory = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.btnAddTable = new WindowsFormsApplication1.RoundButton();
+            this.dataTable = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NrodeSilla = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataCategory)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.btnAddTable = new WindowsFormsApplication1.RoundButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable)).BeginInit();
             this.SuspendLayout();
             // 
             // modernTextBox1
@@ -67,17 +67,17 @@
             this.modernTextBox1.Texts = "";
             this.modernTextBox1.UnderlinedStyle = false;
             // 
-            // dataCategory
+            // dataTable
             // 
-            this.dataCategory.AllowUserToAddRows = false;
-            this.dataCategory.AllowUserToDeleteRows = false;
-            this.dataCategory.AllowUserToResizeColumns = false;
-            this.dataCategory.AllowUserToResizeRows = false;
-            this.dataCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataCategory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.dataCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataCategory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataCategory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataTable.AllowUserToAddRows = false;
+            this.dataTable.AllowUserToDeleteRows = false;
+            this.dataTable.AllowUserToResizeColumns = false;
+            this.dataTable.AllowUserToResizeRows = false;
+            this.dataTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.dataTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto Medium", 10F);
@@ -85,10 +85,10 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataCategory.ColumnHeadersHeight = 45;
-            this.dataCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataTable.ColumnHeadersHeight = 45;
+            this.dataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Nombre,
             this.NrodeSilla,
@@ -101,43 +101,85 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataCategory.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataCategory.EnableHeadersVisualStyles = false;
-            this.dataCategory.GridColor = System.Drawing.Color.Silver;
-            this.dataCategory.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dataCategory.Location = new System.Drawing.Point(21, 138);
-            this.dataCategory.MultiSelect = false;
-            this.dataCategory.Name = "dataCategory";
-            this.dataCategory.ReadOnly = true;
-            this.dataCategory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataTable.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataTable.EnableHeadersVisualStyles = false;
+            this.dataTable.GridColor = System.Drawing.Color.Silver;
+            this.dataTable.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.dataTable.Location = new System.Drawing.Point(21, 138);
+            this.dataTable.MultiSelect = false;
+            this.dataTable.Name = "dataTable";
+            this.dataTable.ReadOnly = true;
+            this.dataTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataCategory.RowHeadersVisible = false;
-            this.dataCategory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataTable.RowHeadersVisible = false;
+            this.dataTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataCategory.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataCategory.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.dataCategory.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.dataCategory.RowTemplate.DividerHeight = 1;
-            this.dataCategory.RowTemplate.Height = 45;
-            this.dataCategory.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataCategory.ShowCellErrors = false;
-            this.dataCategory.ShowCellToolTips = false;
-            this.dataCategory.ShowEditingIcon = false;
-            this.dataCategory.ShowRowErrors = false;
-            this.dataCategory.Size = new System.Drawing.Size(976, 479);
-            this.dataCategory.TabIndex = 22;
+            this.dataTable.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataTable.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.dataTable.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.dataTable.RowTemplate.DividerHeight = 1;
+            this.dataTable.RowTemplate.Height = 45;
+            this.dataTable.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dataTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataTable.ShowCellErrors = false;
+            this.dataTable.ShowCellToolTips = false;
+            this.dataTable.ShowEditingIcon = false;
+            this.dataTable.ShowRowErrors = false;
+            this.dataTable.Size = new System.Drawing.Size(976, 479);
+            this.dataTable.TabIndex = 22;
+            this.dataTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCategory_CellClick);
+            // 
+            // ID
+            // 
+            this.ID.FillWeight = 65.14275F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.FillWeight = 170.2603F;
+            this.Nombre.HeaderText = "Nro de Mesa";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // NrodeSilla
+            // 
+            this.NrodeSilla.FillWeight = 136.8174F;
+            this.NrodeSilla.HeaderText = "Nro de Silla";
+            this.NrodeSilla.Name = "NrodeSilla";
+            this.NrodeSilla.ReadOnly = true;
+            // 
+            // editar
+            // 
+            this.editar.FillWeight = 27.78767F;
+            this.editar.HeaderText = "Acciones";
+            this.editar.Image = global::TheCoffe.Properties.Resources.editarr;
+            this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // eliminar
+            // 
+            this.eliminar.FillWeight = 21.082F;
+            this.eliminar.HeaderText = "";
+            this.eliminar.Image = global::TheCoffe.Properties.Resources.eliminate;
+            this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
             // 
             // label1
             // 
@@ -193,47 +235,6 @@
             this.btnAddTable.UseVisualStyleBackColor = false;
             this.btnAddTable.Click += new System.EventHandler(this.btnAddTable_Click);
             // 
-            // ID
-            // 
-            this.ID.FillWeight = 65.14275F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.FillWeight = 170.2603F;
-            this.Nombre.HeaderText = "Nro de Mesa";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // NrodeSilla
-            // 
-            this.NrodeSilla.FillWeight = 136.8174F;
-            this.NrodeSilla.HeaderText = "Nro de Silla";
-            this.NrodeSilla.Name = "NrodeSilla";
-            this.NrodeSilla.ReadOnly = true;
-            // 
-            // editar
-            // 
-            this.editar.FillWeight = 27.78767F;
-            this.editar.HeaderText = "Acciones";
-            this.editar.Image = global::TheCoffe.Properties.Resources.editarr;
-            this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.editar.Name = "editar";
-            this.editar.ReadOnly = true;
-            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // eliminar
-            // 
-            this.eliminar.FillWeight = 21.082F;
-            this.eliminar.HeaderText = "";
-            this.eliminar.Image = global::TheCoffe.Properties.Resources.eliminate;
-            this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.eliminar.Name = "eliminar";
-            this.eliminar.ReadOnly = true;
-            // 
             // TableList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,13 +242,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.iconButton5);
             this.Controls.Add(this.modernTextBox1);
-            this.Controls.Add(this.dataCategory);
+            this.Controls.Add(this.dataTable);
             this.Controls.Add(this.btnAddTable);
             this.Controls.Add(this.label1);
             this.Name = "TableList";
             this.Size = new System.Drawing.Size(1030, 720);
             this.Load += new System.EventHandler(this.TableList_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataCategory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,7 +258,7 @@
 
         private FontAwesome.Sharp.IconButton iconButton5;
         private Components.ModernTextBox modernTextBox1;
-        private System.Windows.Forms.DataGridView dataCategory;
+        private System.Windows.Forms.DataGridView dataTable;
         private WindowsFormsApplication1.RoundButton btnAddTable;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;

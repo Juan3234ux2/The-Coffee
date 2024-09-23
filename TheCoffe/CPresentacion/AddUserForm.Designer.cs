@@ -379,9 +379,8 @@
             this.cboRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cboRol.FormattingEnabled = true;
             this.cboRol.Items.AddRange(new object[] {
-            "Cafe",
-            "Cocido",
-            "Chocolate"});
+            "Administrador",
+            "Cajero"});
             this.cboRol.Location = new System.Drawing.Point(27, 175);
             this.cboRol.Name = "cboRol";
             this.cboRol.Size = new System.Drawing.Size(160, 24);

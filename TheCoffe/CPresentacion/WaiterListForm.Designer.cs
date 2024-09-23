@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
-            this.dataCategory = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.btnAddWaiter = new WindowsFormsApplication1.RoundButton();
+            this.dataWaiter = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +43,10 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataCategory)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.btnAddWaiter = new WindowsFormsApplication1.RoundButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dataWaiter)).BeginInit();
             this.SuspendLayout();
             // 
             // modernTextBox1
@@ -71,28 +71,28 @@
             this.modernTextBox1.Texts = "";
             this.modernTextBox1.UnderlinedStyle = false;
             // 
-            // dataCategory
+            // dataWaiter
             // 
-            this.dataCategory.AllowUserToAddRows = false;
-            this.dataCategory.AllowUserToDeleteRows = false;
-            this.dataCategory.AllowUserToResizeColumns = false;
-            this.dataCategory.AllowUserToResizeRows = false;
-            this.dataCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataCategory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.dataCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataCategory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataCategory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Roboto Medium", 10F);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            this.dataCategory.ColumnHeadersHeight = 45;
-            this.dataCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataWaiter.AllowUserToAddRows = false;
+            this.dataWaiter.AllowUserToDeleteRows = false;
+            this.dataWaiter.AllowUserToResizeColumns = false;
+            this.dataWaiter.AllowUserToResizeRows = false;
+            this.dataWaiter.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataWaiter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.dataWaiter.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataWaiter.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataWaiter.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto Medium", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataWaiter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataWaiter.ColumnHeadersHeight = 45;
+            this.dataWaiter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataWaiter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Nombre,
             this.Column1,
@@ -102,104 +102,51 @@
             this.Column4,
             this.editar,
             this.eliminar});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataCategory.DefaultCellStyle = dataGridViewCellStyle18;
-            this.dataCategory.EnableHeadersVisualStyles = false;
-            this.dataCategory.GridColor = System.Drawing.Color.Silver;
-            this.dataCategory.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dataCategory.Location = new System.Drawing.Point(21, 138);
-            this.dataCategory.MultiSelect = false;
-            this.dataCategory.Name = "dataCategory";
-            this.dataCategory.ReadOnly = true;
-            this.dataCategory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            this.dataCategory.RowHeadersVisible = false;
-            this.dataCategory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataCategory.RowsDefaultCellStyle = dataGridViewCellStyle20;
-            this.dataCategory.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.dataCategory.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.dataCategory.RowTemplate.DividerHeight = 1;
-            this.dataCategory.RowTemplate.Height = 45;
-            this.dataCategory.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataCategory.ShowCellErrors = false;
-            this.dataCategory.ShowCellToolTips = false;
-            this.dataCategory.ShowEditingIcon = false;
-            this.dataCategory.ShowRowErrors = false;
-            this.dataCategory.Size = new System.Drawing.Size(976, 479);
-            this.dataCategory.TabIndex = 22;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 41);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Meseros";
-            // 
-            // iconButton5
-            // 
-            this.iconButton5.BackColor = System.Drawing.Color.White;
-            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.iconButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 25;
-            this.iconButton5.Location = new System.Drawing.Point(306, 81);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(38, 32);
-            this.iconButton5.TabIndex = 24;
-            this.iconButton5.UseVisualStyleBackColor = false;
-            // 
-            // btnAddWaiter
-            // 
-            this.btnAddWaiter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnAddWaiter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnAddWaiter.BorderColor = System.Drawing.Color.Black;
-            this.btnAddWaiter.BorderRadius = 5;
-            this.btnAddWaiter.BorderSize = 0;
-            this.btnAddWaiter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddWaiter.FlatAppearance.BorderSize = 0;
-            this.btnAddWaiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddWaiter.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddWaiter.ForeColor = System.Drawing.Color.White;
-            this.btnAddWaiter.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAddWaiter.IconColor = System.Drawing.Color.White;
-            this.btnAddWaiter.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddWaiter.IconSize = 20;
-            this.btnAddWaiter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddWaiter.Location = new System.Drawing.Point(841, 14);
-            this.btnAddWaiter.Name = "btnAddWaiter";
-            this.btnAddWaiter.Size = new System.Drawing.Size(156, 43);
-            this.btnAddWaiter.TabIndex = 21;
-            this.btnAddWaiter.Text = "  Agregar Mesero";
-            this.btnAddWaiter.TextColor = System.Drawing.Color.White;
-            this.btnAddWaiter.UseVisualStyleBackColor = false;
-            this.btnAddWaiter.Click += new System.EventHandler(this.btnAddWaiter_Click);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataWaiter.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataWaiter.EnableHeadersVisualStyles = false;
+            this.dataWaiter.GridColor = System.Drawing.Color.Silver;
+            this.dataWaiter.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.dataWaiter.Location = new System.Drawing.Point(21, 138);
+            this.dataWaiter.MultiSelect = false;
+            this.dataWaiter.Name = "dataWaiter";
+            this.dataWaiter.ReadOnly = true;
+            this.dataWaiter.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataWaiter.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataWaiter.RowHeadersVisible = false;
+            this.dataWaiter.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataWaiter.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataWaiter.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.dataWaiter.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.dataWaiter.RowTemplate.DividerHeight = 1;
+            this.dataWaiter.RowTemplate.Height = 45;
+            this.dataWaiter.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dataWaiter.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataWaiter.ShowCellErrors = false;
+            this.dataWaiter.ShowCellToolTips = false;
+            this.dataWaiter.ShowEditingIcon = false;
+            this.dataWaiter.ShowRowErrors = false;
+            this.dataWaiter.Size = new System.Drawing.Size(976, 479);
+            this.dataWaiter.TabIndex = 22;
+            this.dataWaiter.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataWaiter_CellContentClick);
             // 
             // ID
             // 
@@ -270,6 +217,60 @@
             this.eliminar.Name = "eliminar";
             this.eliminar.ReadOnly = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 41);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Meseros";
+            // 
+            // iconButton5
+            // 
+            this.iconButton5.BackColor = System.Drawing.Color.White;
+            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton5.FlatAppearance.BorderSize = 0;
+            this.iconButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.iconButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.IconSize = 25;
+            this.iconButton5.Location = new System.Drawing.Point(306, 81);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Size = new System.Drawing.Size(38, 32);
+            this.iconButton5.TabIndex = 24;
+            this.iconButton5.UseVisualStyleBackColor = false;
+            // 
+            // btnAddWaiter
+            // 
+            this.btnAddWaiter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnAddWaiter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnAddWaiter.BorderColor = System.Drawing.Color.Black;
+            this.btnAddWaiter.BorderRadius = 5;
+            this.btnAddWaiter.BorderSize = 0;
+            this.btnAddWaiter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddWaiter.FlatAppearance.BorderSize = 0;
+            this.btnAddWaiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddWaiter.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddWaiter.ForeColor = System.Drawing.Color.White;
+            this.btnAddWaiter.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAddWaiter.IconColor = System.Drawing.Color.White;
+            this.btnAddWaiter.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddWaiter.IconSize = 20;
+            this.btnAddWaiter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddWaiter.Location = new System.Drawing.Point(841, 14);
+            this.btnAddWaiter.Name = "btnAddWaiter";
+            this.btnAddWaiter.Size = new System.Drawing.Size(156, 43);
+            this.btnAddWaiter.TabIndex = 21;
+            this.btnAddWaiter.Text = "  Agregar Mesero";
+            this.btnAddWaiter.TextColor = System.Drawing.Color.White;
+            this.btnAddWaiter.UseVisualStyleBackColor = false;
+            this.btnAddWaiter.Click += new System.EventHandler(this.btnAddWaiter_Click);
+            // 
             // WaiterListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,13 +278,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.iconButton5);
             this.Controls.Add(this.modernTextBox1);
-            this.Controls.Add(this.dataCategory);
+            this.Controls.Add(this.dataWaiter);
             this.Controls.Add(this.btnAddWaiter);
             this.Controls.Add(this.label1);
             this.Name = "WaiterListForm";
             this.Size = new System.Drawing.Size(1030, 720);
             this.Load += new System.EventHandler(this.WaiterListForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataCategory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataWaiter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,7 +294,7 @@
 
         private FontAwesome.Sharp.IconButton iconButton5;
         private Components.ModernTextBox modernTextBox1;
-        private System.Windows.Forms.DataGridView dataCategory;
+        private System.Windows.Forms.DataGridView dataWaiter;
         private WindowsFormsApplication1.RoundButton btnAddWaiter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;

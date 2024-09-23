@@ -19,7 +19,14 @@ namespace TheCoffe.App
             InitializeComponent();
         }
 
-      
+        public AddCategoryForm(string descripcion)
+        {
+            InitializeComponent();
+            lblTitle.Text = "Editar Categoría";
+            btnAddCategory.Text = "Editar";
+            txtDescripcion.Texts = descripcion;
+        }
+
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtDescripcion.Texts))

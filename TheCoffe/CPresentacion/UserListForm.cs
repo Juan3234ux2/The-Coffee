@@ -47,5 +47,33 @@ namespace TheCoffe.App
                 overlay.Close();
             }
         }
+
+        private void dataUsers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataUsers.Columns[e.ColumnIndex].Name == "editar")
+            {
+                Form parentForm = this.FindForm();
+                using (OverlayForm overlay = new OverlayForm())
+                {
+                    overlay.Size = parentForm.ClientSize;
+                    overlay.Location = parentForm.PointToScreen(Point.Empty);
+                    overlay.Owner = parentForm;
+
+                    overlay.Show();
+                    using (AddUserForm modal = new AddUserForm("Juan", "Coronel", "3794457533", "Juan Coronel", "12345678"))
+                    {
+                        modal.ShowDialog(overlay);
+                    }
+                    overlay.Close();
+                }
+            }
+            else if (dataUsers.Columns[e.ColumnIndex].Name == "eliminar")
+            {
+                if (MessageBox.Show("¿Está seguro que desea eliminar este registro?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    dataUsers.Rows.RemoveAt(e.RowIndex);
+                }
+            }
+        }
     }
 }
