@@ -39,7 +39,7 @@
             // 
             // picAlertBox
             // 
-            this.picAlertBox.Location = new System.Drawing.Point(33, 11);
+            this.picAlertBox.Location = new System.Drawing.Point(13, 11);
             this.picAlertBox.Name = "picAlertBox";
             this.picAlertBox.Size = new System.Drawing.Size(50, 50);
             this.picAlertBox.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             this.lblTitleAlertBox.AutoSize = true;
             this.lblTitleAlertBox.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleAlertBox.Location = new System.Drawing.Point(89, 20);
+            this.lblTitleAlertBox.Location = new System.Drawing.Point(69, 13);
             this.lblTitleAlertBox.Name = "lblTitleAlertBox";
             this.lblTitleAlertBox.Size = new System.Drawing.Size(122, 23);
             this.lblTitleAlertBox.TabIndex = 1;
@@ -58,10 +58,10 @@
             // lblTextAlertBox
             // 
             this.lblTextAlertBox.AutoSize = true;
-            this.lblTextAlertBox.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTextAlertBox.Location = new System.Drawing.Point(99, 43);
+            this.lblTextAlertBox.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTextAlertBox.Location = new System.Drawing.Point(76, 41);
             this.lblTextAlertBox.Name = "lblTextAlertBox";
-            this.lblTextAlertBox.Size = new System.Drawing.Size(93, 18);
+            this.lblTextAlertBox.Size = new System.Drawing.Size(91, 17);
             this.lblTextAlertBox.TabIndex = 2;
             this.lblTextAlertBox.Text = "TextAlertBox";
             // 
@@ -70,12 +70,12 @@
             this.linAlertBox.BackColor = System.Drawing.Color.Black;
             this.linAlertBox.Location = new System.Drawing.Point(0, 73);
             this.linAlertBox.Name = "linAlertBox";
-            this.linAlertBox.Size = new System.Drawing.Size(5, 7);
+            this.linAlertBox.Size = new System.Drawing.Size(2, 7);
             this.linAlertBox.TabIndex = 3;
             // 
             // timerAnimasion
             // 
-            this.timerAnimasion.Interval = 10;
+            this.timerAnimasion.Interval = 2;
             this.timerAnimasion.Tick += new System.EventHandler(this.timerAnimasion_Tick);
             // 
             // AlertBox
@@ -92,7 +92,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AlertBox";
             this.Text = "AlertBox";
-            this.Deactivate += new System.EventHandler(this.AlertBox_Deactivate);
             this.Load += new System.EventHandler(this.AlertBox_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picAlertBox)).EndInit();
             this.ResumeLayout(false);

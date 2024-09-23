@@ -66,6 +66,7 @@
             this.txtName.TabIndex = 42;
             this.txtName.Texts = "";
             this.txtName.UnderlinedStyle = false;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateLetters_KeyPress);
             // 
             // txtDNI
             // 
@@ -76,7 +77,7 @@
             this.txtDNI.BorderSize = 1;
             this.txtDNI.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDNI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDNI.Location = new System.Drawing.Point(28, 173);
+            this.txtDNI.Location = new System.Drawing.Point(28, 171);
             this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNI.Multiline = false;
             this.txtDNI.Name = "txtDNI";
@@ -88,6 +89,7 @@
             this.txtDNI.TabIndex = 41;
             this.txtDNI.Texts = "";
             this.txtDNI.UnderlinedStyle = false;
+            this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
             // 
             // label8
             // 
@@ -160,6 +162,7 @@
             this.txtApellido.TabIndex = 44;
             this.txtApellido.Texts = "";
             this.txtApellido.UnderlinedStyle = false;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateLetters_KeyPress);
             // 
             // label1
             // 
@@ -180,7 +183,7 @@
             this.txtTel.BorderSize = 1;
             this.txtTel.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTel.Location = new System.Drawing.Point(248, 173);
+            this.txtTel.Location = new System.Drawing.Point(248, 171);
             this.txtTel.Margin = new System.Windows.Forms.Padding(4);
             this.txtTel.Multiline = false;
             this.txtTel.Name = "txtTel";
@@ -192,12 +195,13 @@
             this.txtTel.TabIndex = 46;
             this.txtTel.Texts = "";
             this.txtTel.UnderlinedStyle = false;
+            this.txtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(245, 152);
+            this.label2.Location = new System.Drawing.Point(245, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 45;
@@ -224,6 +228,7 @@
             this.txtSalida.TabIndex = 50;
             this.txtSalida.Texts = "";
             this.txtSalida.UnderlinedStyle = false;
+            this.txtSalida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
             // 
             // label3
             // 
@@ -256,6 +261,7 @@
             this.txtIngreso.TabIndex = 48;
             this.txtIngreso.Texts = "";
             this.txtIngreso.UnderlinedStyle = false;
+            this.txtIngreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
             // 
             // label4
             // 
@@ -312,6 +318,7 @@
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddWaiterForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddWaiterForm";
             this.Deactivate += new System.EventHandler(this.AddWaiterForm_Deactivate);

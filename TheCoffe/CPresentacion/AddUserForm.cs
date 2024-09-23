@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheCoffe.CNegocio;
 
 namespace TheCoffe.App
 {
     public partial class AddUserForm : Form
     {
+        private bool isShowingMsgBox = false;
         public AddUserForm()
         {
             InitializeComponent();
@@ -47,7 +49,10 @@ namespace TheCoffe.App
 
         private void AddUserForm_Deactivate(object sender, EventArgs e)
         {
-            this.Close();
+            if (!isShowingMsgBox)
+            {
+                this.Close();
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -58,6 +63,33 @@ namespace TheCoffe.App
         private void btnRol_Click(object sender, EventArgs e)
         {
             cboRol.DroppedDown = !cboRol.DroppedDown;
+        }
+        private void validateLetters_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidator.ValidateInput(e, InputValidator.InputType.Letters);
+        }
+
+        private void txtNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidator.ValidateInput(e, InputValidator.InputType.Digits);
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(txtName.Texts) || string.IsNullOrWhiteSpace(txtLastName.Texts) || string.IsNullOrWhiteSpace(txtUser.Texts) || string.IsNullOrWhiteSpace(txtPassword.Texts) || string.IsNullOrWhiteSpace(txtNumber.Texts) || cboRol.SelectedIndex == -1)
+            {
+                isShowingMsgBox = true;
+                MessageBox.Show("Debe Completar todos los campos",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                isShowingMsgBox = false;
+                return;
+            }
+            else
+            {
+                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Usuario agregado correctamente", Properties.Resources.informacion);
+            }
         }
     }
 }

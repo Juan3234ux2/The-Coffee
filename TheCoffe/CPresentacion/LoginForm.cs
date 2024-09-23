@@ -43,5 +43,18 @@ namespace TheCoffe
             };
             timer.Start();
         }
+
+        private void btnWatchPassword_Click(object sender, EventArgs e)
+        {
+            txtPassword.PasswordChar = !txtPassword.PasswordChar;
+            if (txtPassword.PasswordChar)
+            {
+                btnWatchPassword.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            }
+            else
+            {
+                btnWatchPassword.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            }
+        }
     }
 }

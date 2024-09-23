@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheCoffe.CNegocio;
 
 namespace TheCoffe.App
 {
     public partial class AddWaiterForm : Form
     {
+        private bool isShowingMsgBox = false;
         public AddWaiterForm()
         {
             InitializeComponent();
@@ -19,13 +21,19 @@ namespace TheCoffe.App
 
         private void btnAddWaiter_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtName.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) || string.IsNullOrWhiteSpace(txtDNI.Text) || string.IsNullOrWhiteSpace(txtTel.Text) || string.IsNullOrWhiteSpace(txtIngreso.Text) || string.IsNullOrWhiteSpace(txtSalida.Text))
+            if (string.IsNullOrWhiteSpace(txtName.Texts) || string.IsNullOrWhiteSpace(txtApellido.Texts) || string.IsNullOrWhiteSpace(txtDNI.Texts) || string.IsNullOrWhiteSpace(txtTel.Texts) || string.IsNullOrWhiteSpace(txtIngreso.Texts) || string.IsNullOrWhiteSpace(txtSalida.Texts))
             {
+                isShowingMsgBox = true;
                 MessageBox.Show("Debe Completar todos los campos",
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
+                isShowingMsgBox = false;
                 return;
+            }
+            else
+            {
+                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Mesero agregado correctamente", Properties.Resources.informacion);
             }
         }
 
@@ -51,7 +59,18 @@ namespace TheCoffe.App
 
         private void AddWaiterForm_Deactivate(object sender, EventArgs e)
         {
-            this.Close();
+            if (!isShowingMsgBox)
+            {
+                this.Close();
+            }
+        }
+        private void validateLetters_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidator.ValidateInput(e, InputValidator.InputType.Letters);
+        }
+        private void validateDigits_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidator.ValidateInput(e, InputValidator.InputType.Digits);
         }
     }
 }

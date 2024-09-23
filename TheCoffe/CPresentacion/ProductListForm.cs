@@ -48,20 +48,5 @@ namespace TheCoffe.App
             }
         }
 
-
-        private void dataProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void altoButton1_Click(object sender, EventArgs e)
-        {
-        
-        }
-
-        private void roundButton2_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

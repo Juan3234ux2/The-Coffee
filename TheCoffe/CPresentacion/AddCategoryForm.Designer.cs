@@ -28,40 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtDescripcion = new TheCoffe.Components.ModernTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btnAddCategory = new AltoControls.AltoButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.txtDescripcion = new TheCoffe.Components.ModernTextBox();
             this.SuspendLayout();
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.txtDescripcion.BorderColor = System.Drawing.Color.Transparent;
-            this.txtDescripcion.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtDescripcion.BorderRadius = 10;
-            this.txtDescripcion.BorderSize = 1;
-            this.txtDescripcion.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDescripcion.Location = new System.Drawing.Point(32, 110);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDescripcion.Multiline = false;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
-            this.txtDescripcion.PasswordChar = false;
-            this.txtDescripcion.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtDescripcion.PlaceholderText = "";
-            this.txtDescripcion.Size = new System.Drawing.Size(429, 46);
-            this.txtDescripcion.TabIndex = 40;
-            this.txtDescripcion.Texts = "";
-            this.txtDescripcion.UnderlinedStyle = false;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(29, 89);
+            this.label9.Location = new System.Drawing.Point(29, 65);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(75, 15);
             this.label9.TabIndex = 39;
@@ -89,7 +67,7 @@
             this.btnAddCategory.ForeColor = System.Drawing.Color.White;
             this.btnAddCategory.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnAddCategory.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnAddCategory.Location = new System.Drawing.Point(32, 188);
+            this.btnAddCategory.Location = new System.Drawing.Point(32, 159);
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Radius = 10;
             this.btnAddCategory.Size = new System.Drawing.Size(429, 45);
@@ -103,6 +81,7 @@
             // btnClose
             // 
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -118,12 +97,35 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtDescripcion.BorderColor = System.Drawing.Color.Transparent;
+            this.txtDescripcion.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtDescripcion.BorderRadius = 10;
+            this.txtDescripcion.BorderSize = 1;
+            this.txtDescripcion.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDescripcion.Location = new System.Drawing.Point(32, 86);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescripcion.Multiline = false;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtDescripcion.PasswordChar = false;
+            this.txtDescripcion.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtDescripcion.PlaceholderText = "";
+            this.txtDescripcion.Size = new System.Drawing.Size(429, 46);
+            this.txtDescripcion.TabIndex = 40;
+            this.txtDescripcion.Texts = "";
+            this.txtDescripcion.UnderlinedStyle = false;
+            this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
+            // 
             // AddCategoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(491, 255);
+            this.ClientSize = new System.Drawing.Size(491, 232);
             this.Controls.Add(this.btnAddCategory);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label9);
@@ -131,6 +133,7 @@
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddCategoryForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Deactivate += new System.EventHandler(this.AddCategoryForm_Deactivate);

@@ -7,43 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheCoffe.CNegocio;
 
 namespace TheCoffe.App
 {
     public partial class AddTableForm1 : Form
     {
+        private bool isShowingMsgBox = false;
         public AddTableForm1()
         {
             InitializeComponent();
         }
 
-        void AlertBox(Color backColor, Color color, string title, string text, Image icon)
-        {
-            AlertBox frm = new AlertBox();
-            frm.BackColor = backColor;
-            frm.ColorAlertBox = color;
-            frm.TitleAlertBox = title;
-            frm.TextAlertBox = text;
-            frm.IconAlertBox = icon;
-            frm.Show();
-        }
-
-        private void btnAddTable_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtNroSilla.Text) || string.IsNullOrWhiteSpace(txtMesa.Text))
-            {
-
-                MessageBox.Show("Debe Completar todos los campos",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-                return;
-            }
-        }
 
         private void AddTableForm1_Deactivate(object sender, EventArgs e)
         {
-            this.Close();
+            if (!isShowingMsgBox)
+            {
+                this.Close();
+            }
         }
 
         private void AddTableForm1_Load(object sender, EventArgs e)
@@ -66,14 +48,32 @@ namespace TheCoffe.App
             this.Close();
         }
 
-        private void txtNroMesa__TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AlertBox(Color.LightGreen, Color.SeaGreen, "Hola Mundo", "Emilia...", Properties.Resources.informacion);
+            if(string.IsNullOrEmpty(txtMesa.Texts) || string.IsNullOrEmpty(txtNroSilla.Texts))
+            {
+                isShowingMsgBox = true;
+                MessageBox.Show("Debe Completar todos los campos",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                isShowingMsgBox = false;
+                return;
+            }
+            else
+            {
+                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Mesa agregada correctamente", Properties.Resources.informacion);
+            }
+        }
+
+        private void txtMesa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidator.ValidateInput(e, InputValidator.InputType.Digits);
+        }
+
+        private void txtNroSilla_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidator.ValidateInput(e, InputValidator.InputType.Digits);
         }
     }
 }
