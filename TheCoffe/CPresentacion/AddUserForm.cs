@@ -14,9 +14,25 @@ namespace TheCoffe.App
     public partial class AddUserForm : Form
     {
         private bool isShowingMsgBox = false;
+
         public AddUserForm()
         {
             InitializeComponent();
+        }
+
+        public AddUserForm(String name, String lastName, String number, String user, String pass)
+        {
+            InitializeComponent();
+            lblAddUser.Text = "Editar Usuario";
+            btnAdd.Text = "Editar";
+            txtLastName.Texts = lastName;
+            txtName.Texts = name;
+            txtNumber.Texts = number;
+            txtUser.Texts = user;
+            txtPassword.Texts = pass;
+            cboRol.SelectedIndex = 0;
+            txtPassword.Enabled = false;
+            btnWatchPassword.Visible = false;
         }
 
         private void btnWatchPassword_Click(object sender, EventArgs e)

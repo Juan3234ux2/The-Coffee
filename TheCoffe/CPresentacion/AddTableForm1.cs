@@ -19,6 +19,14 @@ namespace TheCoffe.App
             InitializeComponent();
         }
 
+        public AddTableForm1(String nroMesa, String nroSillas)
+        {
+            InitializeComponent();
+            lblTitle.Text = "Editar Mesa";
+            btnAdd.Text = "Editar";
+            txtMesa.Texts = nroMesa;
+            txtNroSilla.Texts = nroSillas;
+        }
 
         private void AddTableForm1_Deactivate(object sender, EventArgs e)
         {

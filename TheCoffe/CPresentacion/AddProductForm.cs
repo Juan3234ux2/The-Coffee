@@ -18,13 +18,18 @@ namespace TheCoffe.App
         {
             InitializeComponent();
         }
-        public AddProductForm(String name)
+        public AddProductForm(String name, String price, String description)
         {
             InitializeComponent();
             lblTitle.Text = "Editar Producto";
+            btnAdd.Text = "Editar";
             txtName.Texts = name;
+            txtPrice.Texts = price;
+            txtDescription.Texts = description;
+            cboCategory.SelectedIndex = 0;
 
         }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtName.Texts) || string.IsNullOrWhiteSpace(txtPrice.Texts) || cboCategory.SelectedIndex == -1 || string.IsNullOrWhiteSpace( txtDescription.Texts))
@@ -83,7 +88,7 @@ namespace TheCoffe.App
 
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            InputValidator.ValidateInput(e, InputValidator.InputType.Digits);
+            InputValidator.ValidateInput(e, InputValidator.InputType.Letters);
         }
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)

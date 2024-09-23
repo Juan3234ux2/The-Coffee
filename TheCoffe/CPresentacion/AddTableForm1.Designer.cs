@@ -30,7 +30,7 @@
         {
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.btnAdd = new AltoControls.AltoButton();
             this.txtNroSilla = new TheCoffe.Components.ModernTextBox();
             this.txtMesa = new TheCoffe.Components.ModernTextBox();
@@ -57,16 +57,16 @@
             this.label9.TabIndex = 39;
             this.label9.Text = "Nro de Mesa";
             // 
-            // label10
+            // lblTitle
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Roboto", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.label10.Location = new System.Drawing.Point(24, 24);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(125, 22);
-            this.label10.TabIndex = 38;
-            this.label10.Text = "Agregar Mesa";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Roboto", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.lblTitle.Location = new System.Drawing.Point(24, 24);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(125, 22);
+            this.lblTitle.TabIndex = 38;
+            this.lblTitle.Text = "Agregar Mesa";
             // 
             // btnAdd
             // 
@@ -165,7 +165,7 @@
             this.Controls.Add(this.txtNroSilla);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddTableForm1";
@@ -184,7 +184,7 @@
         private Components.ModernTextBox txtNroSilla;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblTitle;
         private FontAwesome.Sharp.IconButton btnClose;
         private AltoControls.AltoButton btnAdd;
         private Components.ModernTextBox txtMesa;

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.btnAddCategory = new AltoControls.AltoButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.txtDescripcion = new TheCoffe.Components.ModernTextBox();
@@ -45,16 +45,16 @@
             this.label9.TabIndex = 39;
             this.label9.Text = "Descripción";
             // 
-            // label10
+            // lblTitle
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Roboto", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.label10.Location = new System.Drawing.Point(28, 19);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(160, 22);
-            this.label10.TabIndex = 38;
-            this.label10.Text = "Agregar Categoría";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Roboto", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.lblTitle.Location = new System.Drawing.Point(28, 19);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(160, 22);
+            this.lblTitle.TabIndex = 38;
+            this.lblTitle.Text = "Agregar Categoría";
             // 
             // btnAddCategory
             // 
@@ -129,7 +129,7 @@
             this.Controls.Add(this.btnAddCategory);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddCategoryForm";
@@ -147,7 +147,7 @@
 
         private Components.ModernTextBox txtDescripcion;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblTitle;
         private FontAwesome.Sharp.IconButton btnClose;
         private AltoControls.AltoButton btnAddCategory;
     }

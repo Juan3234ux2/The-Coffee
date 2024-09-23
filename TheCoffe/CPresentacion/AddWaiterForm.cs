@@ -14,14 +14,28 @@ namespace TheCoffe.App
     public partial class AddWaiterForm : Form
     {
         private bool isShowingMsgBox = false;
+
         public AddWaiterForm()
         {
             InitializeComponent();
         }
 
+        public AddWaiterForm(String name, String lastName, String number, String dni, String income, String exit)
+        {
+            InitializeComponent();
+            lblAddWaiter.Text = "Editar Mesero";
+            btnAddWaiter.Text = "Editar";
+            txtName.Texts = name;
+            txtLastName.Texts = lastName;
+            txtDNI.Texts = dni;
+            txtNumber.Texts = number;
+            txtIncome.Texts = income;
+            txtExit.Texts = exit;
+        }
+
         private void btnAddWaiter_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtName.Texts) || string.IsNullOrWhiteSpace(txtApellido.Texts) || string.IsNullOrWhiteSpace(txtDNI.Texts) || string.IsNullOrWhiteSpace(txtTel.Texts) || string.IsNullOrWhiteSpace(txtIngreso.Texts) || string.IsNullOrWhiteSpace(txtSalida.Texts))
+            if (string.IsNullOrWhiteSpace(txtName.Texts) || string.IsNullOrWhiteSpace(txtLastName.Texts) || string.IsNullOrWhiteSpace(txtDNI.Texts) || string.IsNullOrWhiteSpace(txtNumber.Texts) || string.IsNullOrWhiteSpace(txtIncome.Texts) || string.IsNullOrWhiteSpace(txtExit.Texts))
             {
                 isShowingMsgBox = true;
                 MessageBox.Show("Debe Completar todos los campos",
