@@ -23,7 +23,9 @@ namespace TheCoffe.Components
         private Color placeholderColor = Color.DarkGray;
         private string placeholderText = "";
         private bool isPlaceholder = false;
+#pragma warning disable CS0108 // El miembro oculta el miembro heredado. Falta una contraseña nueva
         public event KeyPressEventHandler KeyPress;
+#pragma warning restore CS0108 // El miembro oculta el miembro heredado. Falta una contraseña nueva
         private bool isPasswordChar = false;
         public event EventHandler _TextChanged;
         [Category("Personalizado")]
