@@ -146,6 +146,8 @@
             this.label49 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.roundButton19 = new WindowsFormsApplication1.RoundButton();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.sPanel4.SuspendLayout();
@@ -1015,7 +1017,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Roboto", 25F, System.Drawing.FontStyle.Bold);
-            this.label25.Location = new System.Drawing.Point(19, 24);
+            this.label25.Location = new System.Drawing.Point(19, 20);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(173, 41);
             this.label25.TabIndex = 8;
@@ -1036,7 +1038,7 @@
             this.roundButton5.IconChar = FontAwesome.Sharp.IconChar.None;
             this.roundButton5.IconColor = System.Drawing.Color.Black;
             this.roundButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton5.Location = new System.Drawing.Point(18, 81);
+            this.roundButton5.Location = new System.Drawing.Point(18, 92);
             this.roundButton5.Name = "roundButton5";
             this.roundButton5.Size = new System.Drawing.Size(115, 40);
             this.roundButton5.TabIndex = 9;
@@ -1059,7 +1061,7 @@
             this.roundButton6.IconChar = FontAwesome.Sharp.IconChar.None;
             this.roundButton6.IconColor = System.Drawing.Color.Black;
             this.roundButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton6.Location = new System.Drawing.Point(139, 81);
+            this.roundButton6.Location = new System.Drawing.Point(139, 92);
             this.roundButton6.Name = "roundButton6";
             this.roundButton6.Size = new System.Drawing.Size(115, 40);
             this.roundButton6.TabIndex = 10;
@@ -1082,7 +1084,7 @@
             this.roundButton7.IconChar = FontAwesome.Sharp.IconChar.None;
             this.roundButton7.IconColor = System.Drawing.Color.Black;
             this.roundButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton7.Location = new System.Drawing.Point(260, 82);
+            this.roundButton7.Location = new System.Drawing.Point(260, 93);
             this.roundButton7.Name = "roundButton7";
             this.roundButton7.Size = new System.Drawing.Size(115, 40);
             this.roundButton7.TabIndex = 11;
@@ -1105,7 +1107,7 @@
             this.panel6.Controls.Add(this.sPanel14);
             this.panel6.Controls.Add(this.sPanel16);
             this.panel6.Controls.Add(this.sPanel15);
-            this.panel6.Location = new System.Drawing.Point(-6, 133);
+            this.panel6.Location = new System.Drawing.Point(-5, 146);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(699, 548);
             this.panel6.TabIndex = 12;
@@ -1986,12 +1988,54 @@
             this.roundButton19.TextColor = System.Drawing.Color.White;
             this.roundButton19.UseVisualStyleBackColor = false;
             // 
+            // iconButton5
+            // 
+            this.iconButton5.BackColor = System.Drawing.Color.White;
+            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton5.FlatAppearance.BorderSize = 0;
+            this.iconButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.iconButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.IconSize = 25;
+            this.iconButton5.Location = new System.Drawing.Point(637, 30);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Size = new System.Drawing.Size(38, 32);
+            this.iconButton5.TabIndex = 20;
+            this.iconButton5.UseVisualStyleBackColor = false;
+            // 
+            // modernTextBox1
+            // 
+            this.modernTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.modernTextBox1.BorderColor = System.Drawing.Color.DimGray;
+            this.modernTextBox1.BorderFocusColor = System.Drawing.Color.Black;
+            this.modernTextBox1.BorderRadius = 10;
+            this.modernTextBox1.BorderSize = 1;
+            this.modernTextBox1.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modernTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.modernTextBox1.Location = new System.Drawing.Point(380, 23);
+            this.modernTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.modernTextBox1.Multiline = false;
+            this.modernTextBox1.Name = "modernTextBox1";
+            this.modernTextBox1.Padding = new System.Windows.Forms.Padding(10, 16, 10, 7);
+            this.modernTextBox1.PasswordChar = false;
+            this.modernTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.modernTextBox1.PlaceholderText = "Buscar producto...";
+            this.modernTextBox1.Size = new System.Drawing.Size(298, 44);
+            this.modernTextBox1.TabIndex = 19;
+            this.modernTextBox1.Texts = "";
+            this.modernTextBox1.UnderlinedStyle = false;
+            // 
             // TakeOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.iconButton5);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.modernTextBox1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.roundButton7);
             this.Controls.Add(this.roundButton6);
@@ -2178,5 +2222,7 @@
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.PictureBox pictureBox11;
         private WindowsFormsApplication1.RoundButton roundButton18;
+        private FontAwesome.Sharp.IconButton iconButton5;
+        private Components.ModernTextBox modernTextBox1;
     }
 }
