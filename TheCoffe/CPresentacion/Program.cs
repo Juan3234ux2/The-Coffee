@@ -22,7 +22,7 @@ namespace TheCoffe
                 if (loginForm.ShowDialog() == DialogResult.OK)
                 {
                     // Si el login es exitoso, iniciar la aplicación con el DashboardForm
-                    Application.Run(new MainForm());
+                    Application.Run(new MainFormCashier());
                 }
             }
         }

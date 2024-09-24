@@ -106,6 +106,18 @@
     <Compile Include="CPresentacion\AlertBox.Designer.cs">
       <DependentUpon>AlertBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="CPresentacion\Cajero\MainFormCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Cajero\MainFormCashier.Designer.cs">
+      <DependentUpon>MainFormCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\Cajero\TakeOrderForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Cajero\TakeOrderForm.Designer.cs">
+      <DependentUpon>TakeOrderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CPresentacion\CategoryListForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -209,6 +221,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\AlertBox.resx">
       <DependentUpon>AlertBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Cajero\MainFormCashier.resx">
+      <DependentUpon>MainFormCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Cajero\TakeOrderForm.resx">
+      <DependentUpon>TakeOrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\CategoryListForm.resx">
       <DependentUpon>CategoryListForm.cs</DependentUpon>
@@ -316,6 +334,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\editarr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-coffee-cup-aroma-container-png-image_6373241.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cheesecake.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

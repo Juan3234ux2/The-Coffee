@@ -34,6 +34,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.dataWaiter = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.btnAddWaiter = new WindowsFormsApplication1.RoundButton();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,9 +46,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.btnAddWaiter = new WindowsFormsApplication1.RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataWaiter)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,6 +102,7 @@
             this.Column4,
             this.editar,
             this.eliminar});
+            this.dataWaiter.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -147,75 +148,6 @@
             this.dataWaiter.Size = new System.Drawing.Size(976, 479);
             this.dataWaiter.TabIndex = 22;
             this.dataWaiter.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataWaiter_CellContentClick);
-            // 
-            // ID
-            // 
-            this.ID.FillWeight = 69.20951F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.FillWeight = 72.91035F;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 117.3933F;
-            this.Column1.HeaderText = "Apellido";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.FillWeight = 117.3933F;
-            this.Column5.HeaderText = "DNI";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 117.3933F;
-            this.Column2.HeaderText = "Teléfono";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 117.3933F;
-            this.Column3.HeaderText = "Hora de Ingreso";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.FillWeight = 117.3933F;
-            this.Column4.HeaderText = "Hora de Salida";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // editar
-            // 
-            this.editar.FillWeight = 54.49211F;
-            this.editar.HeaderText = "Acciones";
-            this.editar.Image = global::TheCoffe.Properties.Resources.editarr;
-            this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.editar.Name = "editar";
-            this.editar.ReadOnly = true;
-            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // eliminar
-            // 
-            this.eliminar.FillWeight = 37.51173F;
-            this.eliminar.HeaderText = "";
-            this.eliminar.Image = global::TheCoffe.Properties.Resources.eliminate;
-            this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.eliminar.Name = "eliminar";
-            this.eliminar.ReadOnly = true;
             // 
             // label1
             // 
@@ -270,6 +202,75 @@
             this.btnAddWaiter.TextColor = System.Drawing.Color.White;
             this.btnAddWaiter.UseVisualStyleBackColor = false;
             this.btnAddWaiter.Click += new System.EventHandler(this.btnAddWaiter_Click);
+            // 
+            // ID
+            // 
+            this.ID.FillWeight = 33.34377F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.FillWeight = 76.38828F;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 122.9931F;
+            this.Column1.HeaderText = "Apellido";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 122.9931F;
+            this.Column5.HeaderText = "DNI";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 122.9931F;
+            this.Column2.HeaderText = "Teléfono";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 122.9931F;
+            this.Column3.HeaderText = "Hora de Ingreso";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 122.9931F;
+            this.Column4.HeaderText = "Hora de Salida";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // editar
+            // 
+            this.editar.FillWeight = 57.09146F;
+            this.editar.HeaderText = "Acciones";
+            this.editar.Image = global::TheCoffe.Properties.Resources.editarr;
+            this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // eliminar
+            // 
+            this.eliminar.FillWeight = 39.30109F;
+            this.eliminar.HeaderText = "";
+            this.eliminar.Image = global::TheCoffe.Properties.Resources.eliminate;
+            this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
             // 
             // WaiterListForm
             // 

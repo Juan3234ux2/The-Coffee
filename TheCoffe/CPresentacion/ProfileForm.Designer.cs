@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.sPanel1 = new Sipaa.Framework.SPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -54,7 +55,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.modernTextBox4 = new TheCoffe.Components.ModernTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.sPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sPanel2.SuspendLayout();
@@ -89,6 +89,19 @@
             this.sPanel1.Name = "sPanel1";
             this.sPanel1.Size = new System.Drawing.Size(355, 564);
             this.sPanel1.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(349, 269);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(6, 50);
+            this.button1.TabIndex = 6;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // iconButton3
             // 
@@ -257,6 +270,7 @@
             this.btnRol.TabIndex = 73;
             this.btnRol.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRol.UseVisualStyleBackColor = false;
+            this.btnRol.Click += new System.EventHandler(this.btnRol_Click);
             // 
             // cboRol
             // 
@@ -508,19 +522,6 @@
             this.label4.Size = new System.Drawing.Size(232, 25);
             this.label4.TabIndex = 7;
             this.label4.Text = "Información Personal";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(349, 269);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(6, 50);
-            this.button1.TabIndex = 6;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // ProfileForm
             // 

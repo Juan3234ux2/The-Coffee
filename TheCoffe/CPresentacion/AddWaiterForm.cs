@@ -14,7 +14,7 @@ namespace TheCoffe.App
     public partial class AddWaiterForm : Form
     {
         private bool isShowingMsgBox = false;
-
+        private int idMesero = 0;
         public AddWaiterForm()
         {
             InitializeComponent();
@@ -31,6 +31,7 @@ namespace TheCoffe.App
             txtNumber.Texts = number;
             txtIncome.Texts = income;
             txtExit.Texts = exit;
+            this.idMesero = 10;
         }
 
         private void btnAddWaiter_Click(object sender, EventArgs e)
@@ -47,7 +48,14 @@ namespace TheCoffe.App
             }
             else
             {
-                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Mesero agregado correctamente", Properties.Resources.informacion);
+                if(this.idMesero == 0)
+                {
+                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Mesero agregado correctamente", Properties.Resources.informacion);
+                }
+                else
+                {
+                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Mesero editado correctamente", Properties.Resources.informacion);
+                }
             }
         }
 

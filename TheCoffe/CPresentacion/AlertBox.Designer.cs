@@ -92,6 +92,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AlertBox";
             this.Text = "AlertBox";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.AlertBox_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picAlertBox)).EndInit();
             this.ResumeLayout(false);

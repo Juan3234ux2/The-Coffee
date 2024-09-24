@@ -35,6 +35,9 @@
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.lblUserList = new System.Windows.Forms.Label();
             this.dataUsers = new System.Windows.Forms.DataGridView();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.btnAddUser = new WindowsFormsApplication1.RoundButton();
+            this.idUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,8 +45,6 @@
             this.Creado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.btnAddUser = new WindowsFormsApplication1.RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +102,7 @@
             this.dataUsers.ColumnHeadersHeight = 45;
             this.dataUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idUser,
             this.Usuario,
             this.Telefono,
             this.Rol,
@@ -108,6 +110,7 @@
             this.Creado,
             this.editar,
             this.eliminar});
+            this.dataUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,65 +157,6 @@
             this.dataUsers.TabIndex = 19;
             this.dataUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataUsers_CellClick);
             // 
-            // Usuario
-            // 
-            this.Usuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Usuario.FillWeight = 58.95526F;
-            this.Usuario.HeaderText = "Nombre de Usuario";
-            this.Usuario.Name = "Usuario";
-            this.Usuario.ReadOnly = true;
-            this.Usuario.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Usuario.Width = 200;
-            // 
-            // Telefono
-            // 
-            this.Telefono.FillWeight = 73.3951F;
-            this.Telefono.HeaderText = "Teléfono";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            this.Telefono.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Telefono.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Rol
-            // 
-            this.Rol.FillWeight = 84.43533F;
-            this.Rol.HeaderText = "Rol";
-            this.Rol.Name = "Rol";
-            this.Rol.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // Creado
-            // 
-            this.Creado.FillWeight = 100.3949F;
-            this.Creado.HeaderText = "Creado en";
-            this.Creado.Name = "Creado";
-            this.Creado.ReadOnly = true;
-            // 
-            // editar
-            // 
-            this.editar.FillWeight = 64.49741F;
-            this.editar.HeaderText = "Acciones";
-            this.editar.Image = global::TheCoffe.Properties.Resources.editarr;
-            this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.editar.Name = "editar";
-            this.editar.ReadOnly = true;
-            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // eliminar
-            // 
-            this.eliminar.HeaderText = "";
-            this.eliminar.Image = global::TheCoffe.Properties.Resources.eliminate;
-            this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.eliminar.Name = "eliminar";
-            this.eliminar.ReadOnly = true;
-            this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // iconButton5
             // 
             this.iconButton5.BackColor = System.Drawing.Color.White;
@@ -257,6 +201,72 @@
             this.btnAddUser.UseVisualStyleBackColor = false;
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
+            // idUser
+            // 
+            this.idUser.FillWeight = 40.22755F;
+            this.idUser.HeaderText = "ID";
+            this.idUser.Name = "idUser";
+            this.idUser.ReadOnly = true;
+            // 
+            // Usuario
+            // 
+            this.Usuario.FillWeight = 140.7555F;
+            this.Usuario.HeaderText = "Nombre de Usuario";
+            this.Usuario.Name = "Usuario";
+            this.Usuario.ReadOnly = true;
+            this.Usuario.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Telefono
+            // 
+            this.Telefono.FillWeight = 85.82784F;
+            this.Telefono.HeaderText = "Teléfono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            this.Telefono.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Telefono.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Rol
+            // 
+            this.Rol.FillWeight = 98.73823F;
+            this.Rol.HeaderText = "Rol";
+            this.Rol.Name = "Rol";
+            this.Rol.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.FillWeight = 116.9395F;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Creado
+            // 
+            this.Creado.FillWeight = 117.4012F;
+            this.Creado.HeaderText = "Creado en";
+            this.Creado.Name = "Creado";
+            this.Creado.ReadOnly = true;
+            // 
+            // editar
+            // 
+            this.editar.FillWeight = 50.64554F;
+            this.editar.HeaderText = "Acciones";
+            this.editar.Image = global::TheCoffe.Properties.Resources.editarr;
+            this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // eliminar
+            // 
+            this.eliminar.FillWeight = 31.14265F;
+            this.eliminar.HeaderText = "";
+            this.eliminar.Image = global::TheCoffe.Properties.Resources.eliminate;
+            this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
+            this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // UserListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,6 +293,7 @@
         private WindowsFormsApplication1.RoundButton btnAddUser;
         private System.Windows.Forms.Label lblUserList;
         private System.Windows.Forms.DataGridView dataUsers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
