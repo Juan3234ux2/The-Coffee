@@ -166,6 +166,7 @@
             this.btnCategory.TabIndex = 72;
             this.btnCategory.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCategory.UseVisualStyleBackColor = false;
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click_1);
             // 
             // cboCategory
             // 

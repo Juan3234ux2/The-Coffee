@@ -14,6 +14,7 @@ namespace TheCoffe.App
     public partial class AddCategoryForm : Form
     {
         private bool isShowingMsgBox = false;
+        private int idCategoria = 0;
         public AddCategoryForm()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace TheCoffe.App
             lblTitle.Text = "Editar Categoría";
             btnAddCategory.Text = "Editar";
             txtDescripcion.Texts = descripcion;
+            this.idCategoria = 10;
         }
 
         private void btnAddCategory_Click(object sender, EventArgs e)
@@ -41,7 +43,14 @@ namespace TheCoffe.App
             }
             else
             {
-                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Categoría agregada correctamente", Properties.Resources.informacion);
+                if(this.idCategoria == 0)
+                {
+                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Categoría agregada correctamente", Properties.Resources.informacion);
+                }
+                else
+                { 
+                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Categoría editada correctamente", Properties.Resources.informacion);
+                }
             }
         }
 

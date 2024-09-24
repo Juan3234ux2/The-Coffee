@@ -14,6 +14,7 @@ namespace TheCoffe.App
     public partial class AddTableForm1 : Form
     {
         private bool isShowingMsgBox = false;
+        private int idMesa = 0;
         public AddTableForm1()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace TheCoffe.App
             btnAdd.Text = "Editar";
             txtMesa.Texts = nroMesa;
             txtNroSilla.Texts = nroSillas;
+            this.idMesa = 10;
         }
 
         private void AddTableForm1_Deactivate(object sender, EventArgs e)
@@ -70,7 +72,14 @@ namespace TheCoffe.App
             }
             else
             {
-                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Mesa agregada correctamente", Properties.Resources.informacion);
+                if(this.idMesa == 0)
+                {
+                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Mesa agregada correctamente", Properties.Resources.informacion);
+                }
+                else
+                {
+                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Mesa editada correctamente", Properties.Resources.informacion);
+                }
             }
         }
 

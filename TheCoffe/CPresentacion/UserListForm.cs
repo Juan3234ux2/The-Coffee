@@ -23,6 +23,7 @@ namespace TheCoffe.App
             {
                 int index = dataUsers.Rows.Add();
                 DataGridViewRow row = dataUsers.Rows[index];
+                row.Cells["idUser"].Value = 1;
                 row.Cells["Usuario"].Value = "Juan Coronel";
                 row.Cells["Telefono"].Value = "3794457533";
                 row.Cells["Rol"].Value = "Administrador";

@@ -14,7 +14,7 @@ namespace TheCoffe.App
     public partial class AddUserForm : Form
     {
         private bool isShowingMsgBox = false;
-
+        private int idUsuario = 0;
         public AddUserForm()
         {
             InitializeComponent();
@@ -33,6 +33,7 @@ namespace TheCoffe.App
             cboRol.SelectedIndex = 0;
             txtPassword.Enabled = false;
             btnWatchPassword.Visible = false;
+            this.idUsuario = 10;
         }
 
         private void btnWatchPassword_Click(object sender, EventArgs e)
@@ -104,7 +105,14 @@ namespace TheCoffe.App
             }
             else
             {
-                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Usuario agregado correctamente", Properties.Resources.informacion);
+                if(this.idUsuario == 0)
+                {
+                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Usuario agregado correctamente", Properties.Resources.informacion);
+                }
+                else
+                {
+                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Usuario editado correctamente", Properties.Resources.informacion);
+                }
             }
         }
     }

@@ -39,5 +39,10 @@ namespace TheCoffe.CPresentacion
         {
             InputValidator.ValidateInput(e, InputValidator.InputType.Digits);
         }
+
+        private void btnRol_Click(object sender, EventArgs e)
+        {
+            cboRol.DroppedDown = !cboRol.DroppedDown;
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace TheCoffe.App
     public partial class AddProductForm : Form
     {
         private bool isShowingMsgBox = false;
+        private int idProducto = 0;
         public AddProductForm()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace TheCoffe.App
             txtPrice.Texts = price;
             txtDescription.Texts = description;
             cboCategory.SelectedIndex = 0;
-
+            this.idProducto = 10;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -44,7 +45,17 @@ namespace TheCoffe.App
             }
             else
             { 
-                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Producto agregado correctamente", Properties.Resources.informacion);
+                if(this.idProducto == 0)
+                {
+                    /*Logica para agregar*/
+                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Producto agregado correctamente", Properties.Resources.informacion);
+                }
+                else
+                {
+                    /*Logica para editar*/
+                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Producto editado correctamente", Properties.Resources.informacion);
+
+                }
             }
         }
 
@@ -95,6 +106,10 @@ namespace TheCoffe.App
         {
             InputValidator.ValidateInput(e, InputValidator.InputType.Digits);
         }
-  
+
+        private void btnCategory_Click_1(object sender, EventArgs e)
+        {
+            cboCategory.DroppedDown = !cboCategory.DroppedDown;
+        }
     }
 }
