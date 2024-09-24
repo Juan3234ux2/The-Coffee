@@ -136,6 +136,12 @@
     <Compile Include="CPresentacion\ProfileForm.Designer.cs">
       <DependentUpon>ProfileForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CPresentacion\SalesListForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\SalesListForm.Designer.cs">
+      <DependentUpon>SalesListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CPresentacion\WaiterListForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -242,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\ProfileForm.resx">
       <DependentUpon>ProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\SalesListForm.resx">
+      <DependentUpon>SalesListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\WaiterListForm.resx">
       <DependentUpon>WaiterListForm.cs</DependentUpon>
