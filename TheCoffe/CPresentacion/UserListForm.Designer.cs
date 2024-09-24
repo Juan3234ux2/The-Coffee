@@ -35,8 +35,6 @@
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.lblUserList = new System.Windows.Forms.Label();
             this.dataUsers = new System.Windows.Forms.DataGridView();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.btnAddUser = new WindowsFormsApplication1.RoundButton();
             this.idUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +43,8 @@
             this.Creado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.btnAddUser = new WindowsFormsApplication1.RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,50 +157,6 @@
             this.dataUsers.TabIndex = 19;
             this.dataUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataUsers_CellClick);
             // 
-            // iconButton5
-            // 
-            this.iconButton5.BackColor = System.Drawing.Color.White;
-            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.iconButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 25;
-            this.iconButton5.Location = new System.Drawing.Point(313, 82);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(38, 32);
-            this.iconButton5.TabIndex = 18;
-            this.iconButton5.UseVisualStyleBackColor = false;
-            // 
-            // btnAddUser
-            // 
-            this.btnAddUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnAddUser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnAddUser.BorderColor = System.Drawing.Color.Black;
-            this.btnAddUser.BorderRadius = 5;
-            this.btnAddUser.BorderSize = 0;
-            this.btnAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddUser.FlatAppearance.BorderSize = 0;
-            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddUser.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddUser.ForeColor = System.Drawing.Color.White;
-            this.btnAddUser.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAddUser.IconColor = System.Drawing.Color.White;
-            this.btnAddUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddUser.IconSize = 20;
-            this.btnAddUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddUser.Location = new System.Drawing.Point(845, 15);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(156, 43);
-            this.btnAddUser.TabIndex = 16;
-            this.btnAddUser.Text = "  Agregar Usuario";
-            this.btnAddUser.TextColor = System.Drawing.Color.White;
-            this.btnAddUser.UseVisualStyleBackColor = false;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
-            // 
             // idUser
             // 
             this.idUser.FillWeight = 40.22755F;
@@ -266,6 +222,50 @@
             this.eliminar.ReadOnly = true;
             this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // iconButton5
+            // 
+            this.iconButton5.BackColor = System.Drawing.Color.White;
+            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton5.FlatAppearance.BorderSize = 0;
+            this.iconButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.iconButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.IconSize = 25;
+            this.iconButton5.Location = new System.Drawing.Point(313, 82);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Size = new System.Drawing.Size(38, 32);
+            this.iconButton5.TabIndex = 18;
+            this.iconButton5.UseVisualStyleBackColor = false;
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnAddUser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnAddUser.BorderColor = System.Drawing.Color.Black;
+            this.btnAddUser.BorderRadius = 5;
+            this.btnAddUser.BorderSize = 0;
+            this.btnAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddUser.FlatAppearance.BorderSize = 0;
+            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddUser.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUser.ForeColor = System.Drawing.Color.White;
+            this.btnAddUser.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAddUser.IconColor = System.Drawing.Color.White;
+            this.btnAddUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddUser.IconSize = 20;
+            this.btnAddUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddUser.Location = new System.Drawing.Point(845, 15);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(156, 43);
+            this.btnAddUser.TabIndex = 16;
+            this.btnAddUser.Text = "  Agregar Usuario";
+            this.btnAddUser.TextColor = System.Drawing.Color.White;
+            this.btnAddUser.UseVisualStyleBackColor = false;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // UserListForm
             // 

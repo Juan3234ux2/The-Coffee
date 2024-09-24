@@ -41,5 +41,10 @@ namespace TheCoffe.CPresentacion.General
             };
             timer.Start();
         }
+
+        private void btnPos_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
