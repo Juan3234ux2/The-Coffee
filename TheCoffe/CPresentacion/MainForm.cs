@@ -97,5 +97,17 @@ namespace TheCoffe
             RemoveActiveSection();
             LoadUserControl(new ProfileForm());
         }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            SetActiveSection(sender as RoundButton);
+            LoadUserControl(new SalesListForm());
+        }
+
+        private void btnRemovedProducts_Click(object sender, EventArgs e)
+        {
+            SetActiveSection(sender as RoundButton);
+            LoadUserControl(new RemovedProductsListForm());
+        }
     }
 }
