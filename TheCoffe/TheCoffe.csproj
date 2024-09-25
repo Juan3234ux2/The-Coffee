@@ -136,6 +136,24 @@
     <Compile Include="CPresentacion\ProfileForm.Designer.cs">
       <DependentUpon>ProfileForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CPresentacion\RemovedProductsListForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\RemovedProductsListForm.Designer.cs">
+      <DependentUpon>RemovedProductsListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\SaleDetailListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\SaleDetailListForm.Designer.cs">
+      <DependentUpon>SaleDetailListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\SalesListForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\SalesListForm.Designer.cs">
+      <DependentUpon>SalesListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CPresentacion\WaiterListForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -243,6 +261,15 @@
     <EmbeddedResource Include="CPresentacion\ProfileForm.resx">
       <DependentUpon>ProfileForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\RemovedProductsListForm.resx">
+      <DependentUpon>RemovedProductsListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\SaleDetailListForm.resx">
+      <DependentUpon>SaleDetailListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\SalesListForm.resx">
+      <DependentUpon>SalesListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\WaiterListForm.resx">
       <DependentUpon>WaiterListForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -340,6 +367,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cheesecake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_plus_insert_more_icon_134652 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3706878-control-switch-turn-off_108707.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4105935-edit-pencil-update_113934.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch_off_icon_188156.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4105935-edit-pencil-update_113934 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4105949-bin-delete-dustbin-remove-trash-trash-can_113940.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
