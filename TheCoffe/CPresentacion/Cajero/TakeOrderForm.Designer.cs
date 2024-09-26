@@ -83,11 +83,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.sPanel11 = new Sipaa.Framework.SPanel();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.roundButton14 = new WindowsFormsApplication1.RoundButton();
+
             this.sPanel8 = new Sipaa.Framework.SPanel();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
@@ -98,11 +94,7 @@
             this.label31 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.roundButton10 = new WindowsFormsApplication1.RoundButton();
-            this.sPanel12 = new Sipaa.Framework.SPanel();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.roundButton15 = new WindowsFormsApplication1.RoundButton();
+
             this.sPanel9 = new Sipaa.Framework.SPanel();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -113,11 +105,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.roundButton9 = new WindowsFormsApplication1.RoundButton();
-            this.sPanel13 = new Sipaa.Framework.SPanel();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.roundButton16 = new WindowsFormsApplication1.RoundButton();
+
             this.sPanel10 = new Sipaa.Framework.SPanel();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
@@ -138,11 +126,7 @@
             this.label49 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.roundButton19 = new WindowsFormsApplication1.RoundButton();
-            this.sPanel15 = new Sipaa.Framework.SPanel();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.roundButton18 = new WindowsFormsApplication1.RoundButton();
+
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.roundButton7 = new WindowsFormsApplication1.RoundButton();
@@ -160,20 +144,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.sPanel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.sPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.sPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.sPanel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.sPanel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.sPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.sPanel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.sPanel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.sPanel5.SuspendLayout();
@@ -182,8 +160,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.sPanel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.sPanel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -1026,95 +1002,18 @@
             // panel6
             // 
             this.panel6.AutoScroll = true;
-            this.panel6.Controls.Add(this.sPanel11);
             this.panel6.Controls.Add(this.sPanel8);
             this.panel6.Controls.Add(this.sPanel7);
-            this.panel6.Controls.Add(this.sPanel12);
             this.panel6.Controls.Add(this.sPanel9);
             this.panel6.Controls.Add(this.sPanel6);
-            this.panel6.Controls.Add(this.sPanel13);
             this.panel6.Controls.Add(this.sPanel10);
             this.panel6.Controls.Add(this.sPanel5);
             this.panel6.Controls.Add(this.sPanel14);
             this.panel6.Controls.Add(this.sPanel16);
-            this.panel6.Controls.Add(this.sPanel15);
             this.panel6.Location = new System.Drawing.Point(-5, 146);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(699, 548);
+            this.panel6.Size = new System.Drawing.Size(699, 571);
             this.panel6.TabIndex = 12;
-            // 
-            // sPanel11
-            // 
-            this.sPanel11.BackColor = System.Drawing.Color.White;
-            this.sPanel11.BorderColor = System.Drawing.Color.Silver;
-            this.sPanel11.BorderRadius = 6;
-            this.sPanel11.BorderSize = 1;
-            this.sPanel11.Controls.Add(this.label38);
-            this.sPanel11.Controls.Add(this.label39);
-            this.sPanel11.Controls.Add(this.pictureBox7);
-            this.sPanel11.Controls.Add(this.roundButton14);
-            this.sPanel11.ForeColor = System.Drawing.Color.White;
-            this.sPanel11.Location = new System.Drawing.Point(454, 725);
-            this.sPanel11.Name = "sPanel11";
-            this.sPanel11.Size = new System.Drawing.Size(202, 227);
-            this.sPanel11.TabIndex = 33;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.ForeColor = System.Drawing.Color.Black;
-            this.label38.Location = new System.Drawing.Point(129, 160);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(57, 17);
-            this.label38.TabIndex = 17;
-            this.label38.Text = "$5,400";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.Black;
-            this.label39.Location = new System.Drawing.Point(13, 130);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(106, 14);
-            this.label39.TabIndex = 16;
-            this.label39.Text = "Café Con Leche";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox7.Image = global::TheCoffe.Properties.Resources.pngtree_coffee_cup_aroma_container_png_image_6373241;
-            this.pictureBox7.InitialImage = global::TheCoffe.Properties.Resources.pngtree_coffee_cup_aroma_container_png_image_6373241;
-            this.pictureBox7.Location = new System.Drawing.Point(15, 8);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(170, 118);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 1;
-            this.pictureBox7.TabStop = false;
-            // 
-            // roundButton14
-            // 
-            this.roundButton14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.roundButton14.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.roundButton14.BorderColor = System.Drawing.Color.Black;
-            this.roundButton14.BorderRadius = 15;
-            this.roundButton14.BorderSize = 0;
-            this.roundButton14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton14.FlatAppearance.BorderSize = 0;
-            this.roundButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton14.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
-            this.roundButton14.ForeColor = System.Drawing.Color.White;
-            this.roundButton14.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton14.IconColor = System.Drawing.Color.Black;
-            this.roundButton14.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton14.Location = new System.Drawing.Point(12, 180);
-            this.roundButton14.Name = "roundButton14";
-            this.roundButton14.Size = new System.Drawing.Size(178, 40);
-            this.roundButton14.TabIndex = 0;
-            this.roundButton14.Text = "Agregar al pedido";
-            this.roundButton14.TextColor = System.Drawing.Color.White;
-            this.roundButton14.UseVisualStyleBackColor = false;
             // 
             // sPanel8
             // 
@@ -1262,56 +1161,6 @@
             this.roundButton10.TextColor = System.Drawing.Color.White;
             this.roundButton10.UseVisualStyleBackColor = false;
             // 
-            // sPanel12
-            // 
-            this.sPanel12.BackColor = System.Drawing.Color.White;
-            this.sPanel12.BorderColor = System.Drawing.Color.Silver;
-            this.sPanel12.BorderRadius = 6;
-            this.sPanel12.BorderSize = 1;
-            this.sPanel12.Controls.Add(this.label40);
-            this.sPanel12.Controls.Add(this.label41);
-            this.sPanel12.Controls.Add(this.pictureBox8);
-            this.sPanel12.Controls.Add(this.roundButton15);
-            this.sPanel12.ForeColor = System.Drawing.Color.White;
-            this.sPanel12.Location = new System.Drawing.Point(454, 487);
-            this.sPanel12.Name = "sPanel12";
-            this.sPanel12.Size = new System.Drawing.Size(202, 227);
-            this.sPanel12.TabIndex = 29;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.Black;
-            this.label40.Location = new System.Drawing.Point(129, 160);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(57, 17);
-            this.label40.TabIndex = 17;
-            this.label40.Text = "$5,400";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.Black;
-            this.label41.Location = new System.Drawing.Point(13, 130);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(106, 14);
-            this.label41.TabIndex = 16;
-            this.label41.Text = "Café Con Leche";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox8.Image = global::TheCoffe.Properties.Resources.pngtree_coffee_cup_aroma_container_png_image_6373241;
-            this.pictureBox8.InitialImage = global::TheCoffe.Properties.Resources.pngtree_coffee_cup_aroma_container_png_image_6373241;
-            this.pictureBox8.Location = new System.Drawing.Point(15, 8);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(170, 118);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 1;
-            this.pictureBox8.TabStop = false;
-            // 
             // roundButton15
             // 
             this.roundButton15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
@@ -1386,32 +1235,7 @@
             this.pictureBox5.TabStop = false;
             // 
             // roundButton12
-            // 
-            this.roundButton12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.roundButton12.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.roundButton12.BorderColor = System.Drawing.Color.Black;
-            this.roundButton12.BorderRadius = 15;
-            this.roundButton12.BorderSize = 0;
-            this.roundButton12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton12.FlatAppearance.BorderSize = 0;
-            this.roundButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton12.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
-            this.roundButton12.ForeColor = System.Drawing.Color.White;
-            this.roundButton12.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton12.IconColor = System.Drawing.Color.Black;
-            this.roundButton12.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton12.Location = new System.Drawing.Point(12, 180);
-            this.roundButton12.Name = "roundButton12";
-            this.roundButton12.Size = new System.Drawing.Size(178, 40);
-            this.roundButton12.TabIndex = 0;
-            this.roundButton12.Text = "Agregar al pedido";
-            this.roundButton12.TextColor = System.Drawing.Color.White;
-            this.roundButton12.UseVisualStyleBackColor = false;
-            // 
-            // sPanel6
-            // 
-            this.sPanel6.BackColor = System.Drawing.Color.White;
-            this.sPanel6.BorderColor = System.Drawing.Color.White;
+
             this.sPanel6.BorderRadius = 6;
             this.sPanel6.BorderSize = 1;
             this.sPanel6.Controls.Add(this.label28);
@@ -1480,56 +1304,7 @@
             this.roundButton9.Text = "Agregar al pedido";
             this.roundButton9.TextColor = System.Drawing.Color.White;
             this.roundButton9.UseVisualStyleBackColor = false;
-            // 
-            // sPanel13
-            // 
-            this.sPanel13.BackColor = System.Drawing.Color.White;
-            this.sPanel13.BorderColor = System.Drawing.Color.Silver;
-            this.sPanel13.BorderRadius = 6;
-            this.sPanel13.BorderSize = 1;
-            this.sPanel13.Controls.Add(this.label42);
-            this.sPanel13.Controls.Add(this.label43);
-            this.sPanel13.Controls.Add(this.pictureBox9);
-            this.sPanel13.Controls.Add(this.roundButton16);
-            this.sPanel13.ForeColor = System.Drawing.Color.White;
-            this.sPanel13.Location = new System.Drawing.Point(238, 725);
-            this.sPanel13.Name = "sPanel13";
-            this.sPanel13.Size = new System.Drawing.Size(202, 227);
-            this.sPanel13.TabIndex = 32;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.Black;
-            this.label42.Location = new System.Drawing.Point(129, 160);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(57, 17);
-            this.label42.TabIndex = 17;
-            this.label42.Text = "$6,000";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.ForeColor = System.Drawing.Color.Black;
-            this.label43.Location = new System.Drawing.Point(13, 130);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(81, 14);
-            this.label43.TabIndex = 16;
-            this.label43.Text = "Cheesecake";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox9.Image = global::TheCoffe.Properties.Resources.cheesecake;
-            this.pictureBox9.InitialImage = global::TheCoffe.Properties.Resources.pngtree_coffee_cup_aroma_container_png_image_6373241;
-            this.pictureBox9.Location = new System.Drawing.Point(15, 8);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(170, 118);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 1;
-            this.pictureBox9.TabStop = false;
+
             // 
             // roundButton16
             // 
@@ -1845,56 +1620,7 @@
             this.roundButton19.Text = "Agregar al pedido";
             this.roundButton19.TextColor = System.Drawing.Color.White;
             this.roundButton19.UseVisualStyleBackColor = false;
-            // 
-            // sPanel15
-            // 
-            this.sPanel15.BackColor = System.Drawing.Color.White;
-            this.sPanel15.BorderColor = System.Drawing.Color.Silver;
-            this.sPanel15.BorderRadius = 6;
-            this.sPanel15.BorderSize = 1;
-            this.sPanel15.Controls.Add(this.label46);
-            this.sPanel15.Controls.Add(this.label47);
-            this.sPanel15.Controls.Add(this.pictureBox11);
-            this.sPanel15.Controls.Add(this.roundButton18);
-            this.sPanel15.ForeColor = System.Drawing.Color.White;
-            this.sPanel15.Location = new System.Drawing.Point(26, 725);
-            this.sPanel15.Name = "sPanel15";
-            this.sPanel15.Size = new System.Drawing.Size(202, 227);
-            this.sPanel15.TabIndex = 31;
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.Color.Black;
-            this.label46.Location = new System.Drawing.Point(129, 160);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(57, 17);
-            this.label46.TabIndex = 17;
-            this.label46.Text = "$5,400";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ForeColor = System.Drawing.Color.Black;
-            this.label47.Location = new System.Drawing.Point(13, 130);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(106, 14);
-            this.label47.TabIndex = 16;
-            this.label47.Text = "Café Con Leche";
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox11.Image = global::TheCoffe.Properties.Resources.pngtree_coffee_cup_aroma_container_png_image_6373241;
-            this.pictureBox11.InitialImage = global::TheCoffe.Properties.Resources.pngtree_coffee_cup_aroma_container_png_image_6373241;
-            this.pictureBox11.Location = new System.Drawing.Point(15, 8);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(170, 118);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 1;
-            this.pictureBox11.TabStop = false;
+
             // 
             // roundButton18
             // 
@@ -2061,27 +1787,18 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel6.ResumeLayout(false);
-            this.sPanel11.ResumeLayout(false);
-            this.sPanel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.sPanel8.ResumeLayout(false);
             this.sPanel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.sPanel7.ResumeLayout(false);
             this.sPanel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.sPanel12.ResumeLayout(false);
-            this.sPanel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.sPanel9.ResumeLayout(false);
             this.sPanel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.sPanel6.ResumeLayout(false);
             this.sPanel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.sPanel13.ResumeLayout(false);
-            this.sPanel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.sPanel10.ResumeLayout(false);
             this.sPanel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -2094,9 +1811,6 @@
             this.sPanel16.ResumeLayout(false);
             this.sPanel16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            this.sPanel15.ResumeLayout(false);
-            this.sPanel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2162,11 +1876,6 @@
         private WindowsFormsApplication1.RoundButton roundButton6;
         private WindowsFormsApplication1.RoundButton roundButton7;
         private System.Windows.Forms.Panel panel6;
-        private Sipaa.Framework.SPanel sPanel11;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private WindowsFormsApplication1.RoundButton roundButton14;
         private Sipaa.Framework.SPanel sPanel8;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
@@ -2177,11 +1886,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.PictureBox pictureBox3;
         private WindowsFormsApplication1.RoundButton roundButton10;
-        private Sipaa.Framework.SPanel sPanel12;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private WindowsFormsApplication1.RoundButton roundButton15;
         private Sipaa.Framework.SPanel sPanel9;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
@@ -2192,11 +1896,6 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.PictureBox pictureBox2;
         private WindowsFormsApplication1.RoundButton roundButton9;
-        private Sipaa.Framework.SPanel sPanel13;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private WindowsFormsApplication1.RoundButton roundButton16;
         private Sipaa.Framework.SPanel sPanel10;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
@@ -2217,11 +1916,6 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.PictureBox pictureBox12;
         private WindowsFormsApplication1.RoundButton roundButton19;
-        private Sipaa.Framework.SPanel sPanel15;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private WindowsFormsApplication1.RoundButton roundButton18;
         private FontAwesome.Sharp.IconButton iconButton5;
         private Components.ModernTextBox modernTextBox1;
     }
