@@ -112,6 +112,12 @@
     <Compile Include="CPresentacion\Cajero\MainFormCashier.Designer.cs">
       <DependentUpon>MainFormCashier.cs</DependentUpon>
     </Compile>
+    <Compile Include="CPresentacion\Cajero\TablesForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Cajero\TablesForm.Designer.cs">
+      <DependentUpon>TablesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CPresentacion\Cajero\TakeOrderForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -242,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\Cajero\MainFormCashier.resx">
       <DependentUpon>MainFormCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Cajero\TablesForm.resx">
+      <DependentUpon>TablesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\Cajero\TakeOrderForm.resx">
       <DependentUpon>TakeOrderForm.cs</DependentUpon>

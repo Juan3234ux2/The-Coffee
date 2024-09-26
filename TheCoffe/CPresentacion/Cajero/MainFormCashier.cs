@@ -67,7 +67,7 @@ namespace TheCoffe
         private void btnTables_Click(object sender, EventArgs e)
         {
             SetActiveSection(sender as RoundButton);
-            LoadUserControl(new TableList());
+            LoadUserControl(new TablesForm());
         }
     }
 }

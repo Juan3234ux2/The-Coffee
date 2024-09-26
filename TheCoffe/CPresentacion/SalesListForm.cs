@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TheCoffe.App;
 using System.Windows.Forms;
 
 namespace TheCoffe.CPresentacion
@@ -46,7 +47,7 @@ namespace TheCoffe.CPresentacion
             if (dataSales.Columns[e.ColumnIndex].Name == "detalle")
             {
                 Form parentForm = this.FindForm();
-            using (App.OverlayForm overlay = new App.OverlayForm())
+            using (OverlayForm overlay = new OverlayForm())
             {
                 overlay.Size = parentForm.ClientSize;
                 overlay.Location = parentForm.PointToScreen(Point.Empty);
@@ -60,6 +61,16 @@ namespace TheCoffe.CPresentacion
                 overlay.Close();
             }
             }
+        }
+
+        private void btnMesero_Click(object sender, EventArgs e)
+        {
+            cboMesero.DroppedDown = !cboMesero.DroppedDown;
+        }
+
+        private void btnFecha_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

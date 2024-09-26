@@ -35,21 +35,21 @@
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.dataSales = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnRol = new FontAwesome.Sharp.IconButton();
+            this.btnFecha = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnMesero = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.customComboBox1 = new CustomComboBox();
-            this.modernTextBox2 = new TheCoffe.Components.ModernTextBox();
-            this.cboRol = new CustomComboBox();
-            this.modernTextBox4 = new TheCoffe.Components.ModernTextBox();
-            this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detalle = new System.Windows.Forms.DataGridViewImageColumn();
+            this.cboMesero = new CustomComboBox();
+            this.modernTextBox2 = new TheCoffe.Components.ModernTextBox();
+            this.cboFecha = new CustomComboBox();
+            this.modernTextBox4 = new TheCoffe.Components.ModernTextBox();
+            this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataSales)).BeginInit();
             this.SuspendLayout();
             // 
@@ -156,24 +156,25 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Ventas";
             // 
-            // btnRol
+            // btnFecha
             // 
-            this.btnRol.BackColor = System.Drawing.SystemColors.Window;
-            this.btnRol.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRol.FlatAppearance.BorderSize = 0;
-            this.btnRol.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.btnRol.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.btnRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRol.IconChar = FontAwesome.Sharp.IconChar.AngleDown;
-            this.btnRol.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnRol.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnRol.IconSize = 25;
-            this.btnRol.Location = new System.Drawing.Point(962, 83);
-            this.btnRol.Name = "btnRol";
-            this.btnRol.Size = new System.Drawing.Size(33, 35);
-            this.btnRol.TabIndex = 62;
-            this.btnRol.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnRol.UseVisualStyleBackColor = false;
+            this.btnFecha.BackColor = System.Drawing.SystemColors.Window;
+            this.btnFecha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFecha.FlatAppearance.BorderSize = 0;
+            this.btnFecha.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnFecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFecha.IconChar = FontAwesome.Sharp.IconChar.AngleDown;
+            this.btnFecha.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnFecha.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnFecha.IconSize = 25;
+            this.btnFecha.Location = new System.Drawing.Point(962, 83);
+            this.btnFecha.Name = "btnFecha";
+            this.btnFecha.Size = new System.Drawing.Size(33, 35);
+            this.btnFecha.TabIndex = 62;
+            this.btnFecha.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnFecha.UseVisualStyleBackColor = false;
+            this.btnFecha.Click += new System.EventHandler(this.btnFecha_Click);
             // 
             // label7
             // 
@@ -185,24 +186,25 @@
             this.label7.TabIndex = 59;
             this.label7.Text = "Filtar";
             // 
-            // iconButton1
+            // btnMesero
             // 
-            this.iconButton1.BackColor = System.Drawing.SystemColors.Window;
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.AngleDown;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(641, 83);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(33, 35);
-            this.iconButton1.TabIndex = 66;
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.btnMesero.BackColor = System.Drawing.SystemColors.Window;
+            this.btnMesero.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMesero.FlatAppearance.BorderSize = 0;
+            this.btnMesero.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnMesero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnMesero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMesero.IconChar = FontAwesome.Sharp.IconChar.AngleDown;
+            this.btnMesero.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnMesero.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMesero.IconSize = 25;
+            this.btnMesero.Location = new System.Drawing.Point(641, 83);
+            this.btnMesero.Name = "btnMesero";
+            this.btnMesero.Size = new System.Drawing.Size(33, 35);
+            this.btnMesero.TabIndex = 66;
+            this.btnMesero.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMesero.UseVisualStyleBackColor = false;
+            this.btnMesero.Click += new System.EventHandler(this.btnMesero_Click);
             // 
             // label2
             // 
@@ -214,25 +216,69 @@
             this.label2.TabIndex = 63;
             this.label2.Text = "Filtar por Mesero";
             // 
-            // customComboBox1
+            // ID
             // 
-            this.customComboBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.customComboBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.customComboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.customComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.customComboBox1.DropDownWidth = 188;
-            this.customComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customComboBox1.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customComboBox1.FormattingEnabled = true;
-            this.customComboBox1.Items.AddRange(new object[] {
+            this.ID.FillWeight = 94.16002F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.FillWeight = 99.19505F;
+            this.Nombre.HeaderText = "Mesero";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.FillWeight = 103.6368F;
+            this.Precio.HeaderText = "Fecha";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Categoria
+            // 
+            this.Categoria.FillWeight = 96.17036F;
+            this.Categoria.HeaderText = "Hora";
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
+            // 
+            // total
+            // 
+            this.total.HeaderText = "Total";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            // 
+            // detalle
+            // 
+            this.detalle.FillWeight = 70.1602F;
+            this.detalle.HeaderText = "Detalle";
+            this.detalle.Image = global::TheCoffe.Properties.Resources.detalle;
+            this.detalle.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.detalle.Name = "detalle";
+            this.detalle.ReadOnly = true;
+            this.detalle.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // cboMesero
+            // 
+            this.cboMesero.BackColor = System.Drawing.SystemColors.Window;
+            this.cboMesero.BorderColor = System.Drawing.Color.Transparent;
+            this.cboMesero.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboMesero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMesero.DropDownWidth = 188;
+            this.cboMesero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboMesero.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboMesero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cboMesero.FormattingEnabled = true;
+            this.cboMesero.Items.AddRange(new object[] {
             "Emilia",
             "Juan",
             "Facundo"});
-            this.customComboBox1.Location = new System.Drawing.Point(487, 89);
-            this.customComboBox1.Name = "customComboBox1";
-            this.customComboBox1.Size = new System.Drawing.Size(160, 24);
-            this.customComboBox1.TabIndex = 65;
+            this.cboMesero.Location = new System.Drawing.Point(487, 89);
+            this.cboMesero.Name = "cboMesero";
+            this.cboMesero.Size = new System.Drawing.Size(160, 24);
+            this.cboMesero.TabIndex = 65;
             // 
             // modernTextBox2
             // 
@@ -257,25 +303,25 @@
             this.modernTextBox2.Texts = "";
             this.modernTextBox2.UnderlinedStyle = false;
             // 
-            // cboRol
+            // cboFecha
             // 
-            this.cboRol.BackColor = System.Drawing.SystemColors.Window;
-            this.cboRol.BorderColor = System.Drawing.Color.Transparent;
-            this.cboRol.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboRol.DropDownWidth = 188;
-            this.cboRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboRol.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cboRol.FormattingEnabled = true;
-            this.cboRol.Items.AddRange(new object[] {
+            this.cboFecha.BackColor = System.Drawing.SystemColors.Window;
+            this.cboFecha.BorderColor = System.Drawing.Color.Transparent;
+            this.cboFecha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboFecha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboFecha.DropDownWidth = 188;
+            this.cboFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboFecha.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cboFecha.FormattingEnabled = true;
+            this.cboFecha.Items.AddRange(new object[] {
             "Mes",
             "Quicena",
             "semana"});
-            this.cboRol.Location = new System.Drawing.Point(808, 89);
-            this.cboRol.Name = "cboRol";
-            this.cboRol.Size = new System.Drawing.Size(160, 24);
-            this.cboRol.TabIndex = 61;
+            this.cboFecha.Location = new System.Drawing.Point(808, 89);
+            this.cboFecha.Name = "cboFecha";
+            this.cboFecha.Size = new System.Drawing.Size(160, 24);
+            this.cboFecha.TabIndex = 61;
             // 
             // modernTextBox4
             // 
@@ -322,61 +368,17 @@
             this.modernTextBox1.Texts = "";
             this.modernTextBox1.UnderlinedStyle = false;
             // 
-            // ID
-            // 
-            this.ID.FillWeight = 94.16002F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.FillWeight = 99.19505F;
-            this.Nombre.HeaderText = "Mesero";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.FillWeight = 103.6368F;
-            this.Precio.HeaderText = "Fecha";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // Categoria
-            // 
-            this.Categoria.FillWeight = 96.17036F;
-            this.Categoria.HeaderText = "Hora";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            // 
-            // total
-            // 
-            this.total.HeaderText = "Total";
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
-            // 
-            // detalle
-            // 
-            this.detalle.FillWeight = 70.1602F;
-            this.detalle.HeaderText = "Detalle";
-            this.detalle.Image = global::TheCoffe.Properties.Resources.detalle;
-            this.detalle.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.detalle.Name = "detalle";
-            this.detalle.ReadOnly = true;
-            this.detalle.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
             // SalesListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.customComboBox1);
+            this.Controls.Add(this.btnMesero);
+            this.Controls.Add(this.cboMesero);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.modernTextBox2);
-            this.Controls.Add(this.btnRol);
-            this.Controls.Add(this.cboRol);
+            this.Controls.Add(this.btnFecha);
+            this.Controls.Add(this.cboFecha);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.modernTextBox4);
             this.Controls.Add(this.iconButton5);
@@ -398,12 +400,12 @@
         private Components.ModernTextBox modernTextBox1;
         private System.Windows.Forms.DataGridView dataSales;
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton btnRol;
-        private CustomComboBox cboRol;
+        private FontAwesome.Sharp.IconButton btnFecha;
+        private CustomComboBox cboFecha;
         private System.Windows.Forms.Label label7;
         private Components.ModernTextBox modernTextBox4;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private CustomComboBox customComboBox1;
+        private FontAwesome.Sharp.IconButton btnMesero;
+        private CustomComboBox cboMesero;
         private System.Windows.Forms.Label label2;
         private Components.ModernTextBox modernTextBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;

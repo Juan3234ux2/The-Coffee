@@ -83,6 +83,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+
             this.sPanel8 = new Sipaa.Framework.SPanel();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
@@ -93,6 +94,7 @@
             this.label31 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.roundButton10 = new WindowsFormsApplication1.RoundButton();
+
             this.sPanel9 = new Sipaa.Framework.SPanel();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -103,6 +105,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.roundButton9 = new WindowsFormsApplication1.RoundButton();
+
             this.sPanel10 = new Sipaa.Framework.SPanel();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
@@ -123,6 +126,7 @@
             this.label49 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.roundButton19 = new WindowsFormsApplication1.RoundButton();
+
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.roundButton7 = new WindowsFormsApplication1.RoundButton();
@@ -339,7 +343,7 @@
             // sPanel1
             // 
             this.sPanel1.BackColor = System.Drawing.Color.White;
-            this.sPanel1.BorderColor = System.Drawing.Color.Silver;
+            this.sPanel1.BorderColor = System.Drawing.Color.White;
             this.sPanel1.BorderRadius = 6;
             this.sPanel1.BorderSize = 1;
             this.sPanel1.Controls.Add(this.label12);
@@ -637,7 +641,7 @@
             // sPanel2
             // 
             this.sPanel2.BackColor = System.Drawing.Color.White;
-            this.sPanel2.BorderColor = System.Drawing.Color.Silver;
+            this.sPanel2.BorderColor = System.Drawing.Color.White;
             this.sPanel2.BorderRadius = 6;
             this.sPanel2.BorderSize = 1;
             this.sPanel2.Controls.Add(this.label13);
@@ -1087,7 +1091,7 @@
             // sPanel7
             // 
             this.sPanel7.BackColor = System.Drawing.Color.White;
-            this.sPanel7.BorderColor = System.Drawing.Color.Silver;
+            this.sPanel7.BorderColor = System.Drawing.Color.White;
             this.sPanel7.BorderRadius = 6;
             this.sPanel7.BorderSize = 1;
             this.sPanel7.Controls.Add(this.label30);
@@ -1157,6 +1161,29 @@
             this.roundButton10.TextColor = System.Drawing.Color.White;
             this.roundButton10.UseVisualStyleBackColor = false;
             // 
+            // roundButton15
+            // 
+            this.roundButton15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.roundButton15.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.roundButton15.BorderColor = System.Drawing.Color.Black;
+            this.roundButton15.BorderRadius = 15;
+            this.roundButton15.BorderSize = 0;
+            this.roundButton15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton15.FlatAppearance.BorderSize = 0;
+            this.roundButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton15.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
+            this.roundButton15.ForeColor = System.Drawing.Color.White;
+            this.roundButton15.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton15.IconColor = System.Drawing.Color.Black;
+            this.roundButton15.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton15.Location = new System.Drawing.Point(12, 180);
+            this.roundButton15.Name = "roundButton15";
+            this.roundButton15.Size = new System.Drawing.Size(178, 40);
+            this.roundButton15.TabIndex = 0;
+            this.roundButton15.Text = "Agregar al pedido";
+            this.roundButton15.TextColor = System.Drawing.Color.White;
+            this.roundButton15.UseVisualStyleBackColor = false;
+            // 
             // sPanel9
             // 
             this.sPanel9.BackColor = System.Drawing.Color.White;
@@ -1208,32 +1235,7 @@
             this.pictureBox5.TabStop = false;
             // 
             // roundButton12
-            // 
-            this.roundButton12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.roundButton12.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.roundButton12.BorderColor = System.Drawing.Color.Black;
-            this.roundButton12.BorderRadius = 15;
-            this.roundButton12.BorderSize = 0;
-            this.roundButton12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton12.FlatAppearance.BorderSize = 0;
-            this.roundButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton12.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
-            this.roundButton12.ForeColor = System.Drawing.Color.White;
-            this.roundButton12.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton12.IconColor = System.Drawing.Color.Black;
-            this.roundButton12.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton12.Location = new System.Drawing.Point(12, 180);
-            this.roundButton12.Name = "roundButton12";
-            this.roundButton12.Size = new System.Drawing.Size(178, 40);
-            this.roundButton12.TabIndex = 0;
-            this.roundButton12.Text = "Agregar al pedido";
-            this.roundButton12.TextColor = System.Drawing.Color.White;
-            this.roundButton12.UseVisualStyleBackColor = false;
-            // 
-            // sPanel6
-            // 
-            this.sPanel6.BackColor = System.Drawing.Color.White;
-            this.sPanel6.BorderColor = System.Drawing.Color.Silver;
+
             this.sPanel6.BorderRadius = 6;
             this.sPanel6.BorderSize = 1;
             this.sPanel6.Controls.Add(this.label28);
@@ -1302,6 +1304,30 @@
             this.roundButton9.Text = "Agregar al pedido";
             this.roundButton9.TextColor = System.Drawing.Color.White;
             this.roundButton9.UseVisualStyleBackColor = false;
+
+            // 
+            // roundButton16
+            // 
+            this.roundButton16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.roundButton16.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.roundButton16.BorderColor = System.Drawing.Color.Black;
+            this.roundButton16.BorderRadius = 15;
+            this.roundButton16.BorderSize = 0;
+            this.roundButton16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton16.FlatAppearance.BorderSize = 0;
+            this.roundButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton16.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
+            this.roundButton16.ForeColor = System.Drawing.Color.White;
+            this.roundButton16.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton16.IconColor = System.Drawing.Color.Black;
+            this.roundButton16.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton16.Location = new System.Drawing.Point(12, 180);
+            this.roundButton16.Name = "roundButton16";
+            this.roundButton16.Size = new System.Drawing.Size(178, 40);
+            this.roundButton16.TabIndex = 0;
+            this.roundButton16.Text = "Agregar al pedido";
+            this.roundButton16.TextColor = System.Drawing.Color.White;
+            this.roundButton16.UseVisualStyleBackColor = false;
             // 
             // sPanel10
             // 
@@ -1379,7 +1405,7 @@
             // sPanel5
             // 
             this.sPanel5.BackColor = System.Drawing.Color.White;
-            this.sPanel5.BorderColor = System.Drawing.Color.Silver;
+            this.sPanel5.BorderColor = System.Drawing.Color.White;
             this.sPanel5.BorderRadius = 6;
             this.sPanel5.BorderSize = 1;
             this.sPanel5.Controls.Add(this.label27);
@@ -1594,6 +1620,30 @@
             this.roundButton19.Text = "Agregar al pedido";
             this.roundButton19.TextColor = System.Drawing.Color.White;
             this.roundButton19.UseVisualStyleBackColor = false;
+
+            // 
+            // roundButton18
+            // 
+            this.roundButton18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.roundButton18.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.roundButton18.BorderColor = System.Drawing.Color.Black;
+            this.roundButton18.BorderRadius = 15;
+            this.roundButton18.BorderSize = 0;
+            this.roundButton18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton18.FlatAppearance.BorderSize = 0;
+            this.roundButton18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton18.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
+            this.roundButton18.ForeColor = System.Drawing.Color.White;
+            this.roundButton18.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton18.IconColor = System.Drawing.Color.Black;
+            this.roundButton18.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton18.Location = new System.Drawing.Point(12, 180);
+            this.roundButton18.Name = "roundButton18";
+            this.roundButton18.Size = new System.Drawing.Size(178, 40);
+            this.roundButton18.TabIndex = 0;
+            this.roundButton18.Text = "Agregar al pedido";
+            this.roundButton18.TextColor = System.Drawing.Color.White;
+            this.roundButton18.UseVisualStyleBackColor = false;
             // 
             // iconButton5
             // 
@@ -1708,7 +1758,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.iconButton5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.modernTextBox1);
