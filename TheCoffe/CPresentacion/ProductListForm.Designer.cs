@@ -254,10 +254,10 @@
             // 
             this.editar.FillWeight = 29.4442F;
             this.editar.HeaderText = "Acciones";
-            this.editar.Image = ((System.Drawing.Image)(resources.GetObject("editar.Image")));
+            this.editar.Image = global::TheCoffe.Properties.Resources.pencil;
             this.editar.Name = "editar";
             this.editar.ReadOnly = true;
-            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // eliminar
             // 

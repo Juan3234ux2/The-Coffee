@@ -132,36 +132,10 @@
   <metadata name="editar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="editar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAwCAYAAABwrHhvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAQk5AAEJOQEpy9TcAAAEiElE
-        QVRYR73YaahuUxjA8XNds5syzymED0IIKYXORXSmTm4kFEm5khuZi5AbxQdJ5rp8QYZEyAeEW8g1Zfog
-        mTNn5pj//9V6ds/Z8mG973vuU7/ec85+1rP2WXvvtdZ+xxYqpqamtC62xGZY7N8WPOwE6+Ag3IqX8SJu
-        wF7wWM0ecVi4Mj7BPz0f4UJsgbGZmZnackRhUWyPNeh3Hv7Ek9gbteUIwmJweK/E37Czv3Af7sev9W/B
-        k9y9Nh8uKBSOwFeITt7ATtgIp+F95JO4tpYYLiikbfFsLayfcTzi+CJ4E65G5KyuJQYPikTxyxFDr59w
-        ETZF5K0PL0fkrKllBg+K6EB8Votmv+MxLJ2cnPT+OAGeWBxfVcsMFhTQEjxQC8pR8OaL3/UNbsGb6W9f
-        4/Baqj1oHM7CHKLwIzgbubM+T/IqLK7l2oPG2hcfIAo70RwAj+2Km5GHPLyGHVGrNYYNsQnuQRT1ep8z
-        Nzc3Nj09HTnedMuR5wCfjpNQ8prDhpWP2C+Iwg+j3PGR51TL56XIT8cd2AAlrzlsiN3gMEbRz3EIalaX
-        tx8+RuS9hT1RsxrDhnBYvaOjqLyhulXOT3iJ7kXk/IaTUY43R7quy/AjorCz33YoeTzvkXsG7DTy5l2i
-        5rAhvHNfRRT1+V6K7obyZzjlvofI+xTuD0pOc9gQDnGebv1cScfdTsdPbIhViM5dfi+enZ0d+q4fh7NX
-        FHYkumfZz2oG+dl/HG7JSl5z2BDb4GlEUTs4EeWapzxP6AVEnid8GEpOc9gQDr13eRSVT4FPQ87zUlyP
-        nHcdBt+M2hBOrd5EUfRt7IGco6PwLSLPHc/OKHnNYUP42DyEKOrMV4ZeKW8rPI/I+x7T6PKawkb1WT4T
-        zvFR2JNx+e3yqhXwbo+8m7AeSl5z2BD7I690/uzUWrO6PJ/vPN2+C6fqmtUYNsTGcDcbRf/ACu94PnNe
-        /xI5Wsvr6JW8pogO4HXOK92DmLfS1VyHPl8i5/7uEjWHDbELXkcUdaU7GDWry3NVy9Pth5h3iZrChnCd
-        vg1R1On2CvRXOvNuR+Q5Cm7NyvHmiIY4Dnka9dFyv1/y4tqin/cMNkfJaw4bwmk0v9M5jR6NcjzludfL
-        mxHfhJyEurymqA19scjvdFqJ/tD7vn8jIuc/ec1hQ7jSfYko+gp8p8s5cu3P0+1z6DYjAwWNt0Ze6dy1
-        uuspndYc+U3HU4i8H3AMuryBgsZ2lp95R8KbzOGOzh3iy5DfeHxaBt/dRlDgXORrr+9wDXaAOYfiC8Tx
-        d9CtiEMFRS6oRfs8qZdwOvxGI/7uaJ2KMjpDB0XyCTjEeWqV60Ae+rvgvq9WGDIolE/AYT4P3pT9yyJX
-        xH1QW48gKJZPwG+2JnE38voufz8foxn6CIpdgujE1+z8nAcfOd90B9/d/l9Q8Gr0OwzOCY/iSIzuuueg
-        qN9g9jt2T+erlOE7Xs1egKD4nYiOfedzh+PiUv7j8fHxmrlAQSfuYhzqJ3As3I7Vo2sh6OwU+B8vcb2f
-        mJioR9ZSsLdbFK9Xaz/Gxv4FKc4icMS67cIAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="eliminar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="eliminar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACoAAAAwCAYAAABnjuimAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6

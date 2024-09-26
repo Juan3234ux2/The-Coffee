@@ -256,7 +256,7 @@
             // 
             this.editar.FillWeight = 57.09146F;
             this.editar.HeaderText = "Acciones";
-            this.editar.Image = global::TheCoffe.Properties.Resources.editarr;
+            this.editar.Image = global::TheCoffe.Properties.Resources.pencil;
             this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.editar.Name = "editar";
             this.editar.ReadOnly = true;
@@ -267,7 +267,7 @@
             // 
             this.eliminar.FillWeight = 39.30109F;
             this.eliminar.HeaderText = "";
-            this.eliminar.Image = global::TheCoffe.Properties.Resources.eliminate;
+            this.eliminar.Image = global::TheCoffe.Properties.Resources.delete;
             this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.eliminar.Name = "eliminar";
             this.eliminar.ReadOnly = true;
