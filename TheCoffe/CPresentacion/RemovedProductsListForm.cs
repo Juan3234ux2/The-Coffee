@@ -6,12 +6,14 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TheCoffe.App;
 using System.Windows.Forms;
 
 namespace TheCoffe.CPresentacion
 {
-    public partial class RemovedProductsListForm : UserControl
+    public partial class RemovedProductsListForm : Form
     {
+        private bool isShowingMsgBox = false;
         public RemovedProductsListForm()
         {
             InitializeComponent();
@@ -19,6 +21,17 @@ namespace TheCoffe.CPresentacion
 
         private void RemovedProductsListForm_Load(object sender, EventArgs e)
         {
+            this.Opacity = 0;
+            Timer timer = new Timer();
+            timer.Interval = 10;
+            timer.Tick += (s, ev) =>
+            {
+                if (this.Opacity < 1)
+                    this.Opacity += 0.10;
+                else
+                    timer.Stop();
+            };
+            timer.Start();
             for (int i = 0; i < 4; i++)
             {
                 int rowIndex = dataRemovedProducts.Rows.Add();
@@ -35,13 +48,23 @@ namespace TheCoffe.CPresentacion
             if (dataRemovedProducts.Columns[e.ColumnIndex].Name == "activar")
             {
                 Form parentForm = this.FindForm();
-                using (App.OverlayForm overlay = new App.OverlayForm())
+                using (OverlayForm overlay = new OverlayForm())
                 {
-                    if (MessageBox.Show("¿Está seguro que desea activar este registro?", "Confirmar Activación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    isShowingMsgBox = true;
+                    if (MessageBox.Show("¿Está seguro que desea activar este registro?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         dataRemovedProducts.Rows.RemoveAt(e.RowIndex);
                     }
+                    isShowingMsgBox = false;
                 }
+            }
+        }
+
+        private void RemovedProductsListForm_Deactivate(object sender, EventArgs e)
+        {
+            if (!isShowingMsgBox)
+            {
+                this.Close();
             }
         }
     }

@@ -46,7 +46,7 @@
             this.btnClose.IconColor = System.Drawing.Color.Red;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnClose.IconSize = 44;
-            this.btnClose.Location = new System.Drawing.Point(396, 0);
+            this.btnClose.Location = new System.Drawing.Point(399, -2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 34);
             this.btnClose.TabIndex = 11;
@@ -57,7 +57,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(62, 25);
+            this.label1.Location = new System.Drawing.Point(63, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(293, 29);
             this.label1.TabIndex = 13;
