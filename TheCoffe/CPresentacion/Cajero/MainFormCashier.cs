@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using AltoControls;
 using FontAwesome.Sharp;
@@ -23,7 +24,7 @@ namespace TheCoffe
         {
            LoadUserControl(new TakeOrderForm());
         }
-        private void LoadUserControl(UserControl userControl)
+        private async void LoadUserControl(UserControl userControl)
         {
             if (activeSection != null && activeSection.GetType() == userControl.GetType())
             {
@@ -33,6 +34,7 @@ namespace TheCoffe
             if (activeSection != null)
             {        
                 pnlMain.Controls.Remove(activeSection);
+                await Task.Delay(200);
             }
             activeSection = userControl;
             activeSection.Dock = DockStyle.Fill;

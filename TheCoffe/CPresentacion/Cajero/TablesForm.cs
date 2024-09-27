@@ -15,36 +15,8 @@ namespace TheCoffe.CPresentacion.Cajero
         public TablesForm()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
         }
 
-        private void sPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void TablesForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sPanel17_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void sPanel39_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void roundButton7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sPanel51_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
