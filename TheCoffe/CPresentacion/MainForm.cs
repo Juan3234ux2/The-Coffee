@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using AltoControls;
 using FontAwesome.Sharp;
@@ -30,13 +31,12 @@ namespace TheCoffe
             }
 
             if (activeSection != null)
-            {        
+            {
                 pnlMain.Controls.Remove(activeSection);
             }
             activeSection = userControl;
             activeSection.Dock = DockStyle.Fill;
             pnlMain.Controls.Add(activeSection);
-
         }
         private void SetActiveSection(RoundButton activeButton) {
             RemoveActiveSection();

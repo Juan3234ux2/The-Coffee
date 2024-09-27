@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.btnAddTable = new WindowsFormsApplication1.RoundButton();
+            this.btnRemovedTables = new WindowsFormsApplication1.RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,7 +167,7 @@
             // 
             this.editar.FillWeight = 27.78767F;
             this.editar.HeaderText = "Acciones";
-            this.editar.Image = global::TheCoffe.Properties.Resources.editarr;
+            this.editar.Image = global::TheCoffe.Properties.Resources.pencil;
             this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.editar.Name = "editar";
             this.editar.ReadOnly = true;
@@ -177,7 +178,7 @@
             // 
             this.eliminar.FillWeight = 21.082F;
             this.eliminar.HeaderText = "";
-            this.eliminar.Image = global::TheCoffe.Properties.Resources.eliminate;
+            this.eliminar.Image = global::TheCoffe.Properties.Resources.delete;
             this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.eliminar.Name = "eliminar";
             this.eliminar.ReadOnly = true;
@@ -236,11 +237,38 @@
             this.btnAddTable.UseVisualStyleBackColor = false;
             this.btnAddTable.Click += new System.EventHandler(this.btnAddTable_Click);
             // 
+            // btnRemovedTables
+            // 
+            this.btnRemovedTables.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnRemovedTables.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnRemovedTables.BorderColor = System.Drawing.Color.Black;
+            this.btnRemovedTables.BorderRadius = 5;
+            this.btnRemovedTables.BorderSize = 0;
+            this.btnRemovedTables.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemovedTables.FlatAppearance.BorderSize = 0;
+            this.btnRemovedTables.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemovedTables.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemovedTables.ForeColor = System.Drawing.Color.White;
+            this.btnRemovedTables.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnRemovedTables.IconColor = System.Drawing.Color.White;
+            this.btnRemovedTables.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRemovedTables.IconSize = 20;
+            this.btnRemovedTables.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemovedTables.Location = new System.Drawing.Point(648, 15);
+            this.btnRemovedTables.Name = "btnRemovedTables";
+            this.btnRemovedTables.Size = new System.Drawing.Size(156, 43);
+            this.btnRemovedTables.TabIndex = 25;
+            this.btnRemovedTables.Text = "Mesas Eliminadas";
+            this.btnRemovedTables.TextColor = System.Drawing.Color.White;
+            this.btnRemovedTables.UseVisualStyleBackColor = false;
+            this.btnRemovedTables.Click += new System.EventHandler(this.btnRemovedTables_Click);
+            // 
             // TableList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.Controls.Add(this.btnRemovedTables);
             this.Controls.Add(this.iconButton5);
             this.Controls.Add(this.modernTextBox1);
             this.Controls.Add(this.dataTable);
@@ -267,5 +295,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NrodeSilla;
         private System.Windows.Forms.DataGridViewImageColumn editar;
         private System.Windows.Forms.DataGridViewImageColumn eliminar;
+        private WindowsFormsApplication1.RoundButton btnRemovedTables;
     }
 }

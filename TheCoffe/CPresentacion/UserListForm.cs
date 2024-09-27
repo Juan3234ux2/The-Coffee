@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheCoffe.CPresentacion;
 
 namespace TheCoffe.App
 {
@@ -74,6 +75,24 @@ namespace TheCoffe.App
                 {
                     dataUsers.Rows.RemoveAt(e.RowIndex);
                 }
+            }
+        }
+
+        private void btnRemovedUsers_Click(object sender, EventArgs e)
+        {
+            Form parentForm = this.FindForm();
+            using (OverlayForm overlay = new OverlayForm())
+            {
+                overlay.Size = parentForm.ClientSize;
+                overlay.Location = parentForm.PointToScreen(Point.Empty);
+                overlay.Owner = parentForm;
+
+                overlay.Show();
+                using (RemovedUsersForm usersRemoved = new RemovedUsersForm())
+                {
+                    usersRemoved.ShowDialog(overlay);
+                }
+                overlay.Close();
             }
         }
     }
