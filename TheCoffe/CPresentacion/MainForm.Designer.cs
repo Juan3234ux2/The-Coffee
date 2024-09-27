@@ -31,23 +31,22 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnlSideBar = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblRol = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.imgUser = new System.Windows.Forms.PictureBox();
-            this.pnlMain = new System.Windows.Forms.Panel();
-            this.transitionTimer = new System.Windows.Forms.Timer(this.components);
-            this.btnProducts = new WindowsFormsApplication1.RoundButton();
             this.btnTables = new WindowsFormsApplication1.RoundButton();
             this.btnCategory = new WindowsFormsApplication1.RoundButton();
             this.btnUserList = new WindowsFormsApplication1.RoundButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnUserDetails = new WindowsFormsApplication1.RoundButton();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.imgUser = new System.Windows.Forms.PictureBox();
             this.btnConfig = new WindowsFormsApplication1.RoundButton();
             this.btnReports = new WindowsFormsApplication1.RoundButton();
             this.btnWaiter = new WindowsFormsApplication1.RoundButton();
+            this.btnProducts = new WindowsFormsApplication1.RoundButton();
             this.btnDashboard = new WindowsFormsApplication1.RoundButton();
-            this.btnRemovedProducts = new WindowsFormsApplication1.RoundButton();
+            this.pnlMain = new System.Windows.Forms.Panel();
+            this.transitionTimer = new System.Windows.Forms.Timer(this.components);
             this.pnlSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -57,7 +56,6 @@
             // pnlSideBar
             // 
             this.pnlSideBar.BackColor = System.Drawing.Color.White;
-            this.pnlSideBar.Controls.Add(this.btnRemovedProducts);
             this.pnlSideBar.Controls.Add(this.btnTables);
             this.pnlSideBar.Controls.Add(this.btnCategory);
             this.pnlSideBar.Controls.Add(this.btnUserList);
@@ -74,103 +72,6 @@
             this.pnlSideBar.Name = "pnlSideBar";
             this.pnlSideBar.Size = new System.Drawing.Size(250, 681);
             this.pnlSideBar.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TheCoffe.Properties.Resources.logo_sidebar;
-            this.pictureBox1.InitialImage = global::TheCoffe.Properties.Resources.logo_sidebar;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(223, 80);
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnUserDetails);
-            this.panel3.Controls.Add(this.lblRol);
-            this.panel3.Controls.Add(this.lblUser);
-            this.panel3.Controls.Add(this.imgUser);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 526);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(250, 155);
-            this.panel3.TabIndex = 2;
-            // 
-            // lblRol
-            // 
-            this.lblRol.AutoSize = true;
-            this.lblRol.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.ForeColor = System.Drawing.Color.DimGray;
-            this.lblRol.Location = new System.Drawing.Point(83, 88);
-            this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(78, 13);
-            this.lblRol.TabIndex = 19;
-            this.lblRol.Text = "Administrador";
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(74, 70);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(95, 18);
-            this.lblUser.TabIndex = 2;
-            this.lblUser.Text = "Juan Coronel";
-            // 
-            // imgUser
-            // 
-            this.imgUser.Image = ((System.Drawing.Image)(resources.GetObject("imgUser.Image")));
-            this.imgUser.Location = new System.Drawing.Point(91, 17);
-            this.imgUser.Name = "imgUser";
-            this.imgUser.Size = new System.Drawing.Size(61, 50);
-            this.imgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgUser.TabIndex = 18;
-            this.imgUser.TabStop = false;
-            // 
-            // pnlMain
-            // 
-            this.pnlMain.BackColor = System.Drawing.Color.DarkGray;
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlMain.Location = new System.Drawing.Point(250, 0);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1014, 681);
-            this.pnlMain.TabIndex = 2;
-            // 
-            // transitionTimer
-            // 
-            this.transitionTimer.Interval = 30;
-            // 
-            // btnProducts
-            // 
-            this.btnProducts.BackColor = System.Drawing.Color.White;
-            this.btnProducts.BackgroundColor = System.Drawing.Color.White;
-            this.btnProducts.BorderColor = System.Drawing.Color.Transparent;
-            this.btnProducts.BorderRadius = 10;
-            this.btnProducts.BorderSize = 0;
-            this.btnProducts.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProducts.FlatAppearance.BorderSize = 0;
-            this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProducts.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProducts.ForeColor = System.Drawing.Color.DimGray;
-            this.btnProducts.IconChar = FontAwesome.Sharp.IconChar.Coffee;
-            this.btnProducts.IconColor = System.Drawing.Color.DimGray;
-            this.btnProducts.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnProducts.IconSize = 35;
-            this.btnProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducts.Location = new System.Drawing.Point(3, 154);
-            this.btnProducts.MinimumSize = new System.Drawing.Size(58, 0);
-            this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
-            this.btnProducts.Size = new System.Drawing.Size(244, 45);
-            this.btnProducts.TabIndex = 13;
-            this.btnProducts.Tag = "Productos";
-            this.btnProducts.Text = "  Productos";
-            this.btnProducts.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnProducts.TextColor = System.Drawing.Color.DimGray;
-            this.btnProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProducts.UseVisualStyleBackColor = false;
-            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
             // 
             // btnTables
             // 
@@ -265,6 +166,28 @@
             this.btnUserList.UseVisualStyleBackColor = false;
             this.btnUserList.Click += new System.EventHandler(this.btnUserList_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TheCoffe.Properties.Resources.logo_sidebar;
+            this.pictureBox1.InitialImage = global::TheCoffe.Properties.Resources.logo_sidebar;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(223, 80);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnUserDetails);
+            this.panel3.Controls.Add(this.lblRol);
+            this.panel3.Controls.Add(this.lblUser);
+            this.panel3.Controls.Add(this.imgUser);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 526);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(250, 155);
+            this.panel3.TabIndex = 2;
+            // 
             // btnUserDetails
             // 
             this.btnUserDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
@@ -291,6 +214,37 @@
             this.btnUserDetails.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnUserDetails.UseVisualStyleBackColor = false;
             this.btnUserDetails.Click += new System.EventHandler(this.btnUserDetails_Click);
+            // 
+            // lblRol
+            // 
+            this.lblRol.AutoSize = true;
+            this.lblRol.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.ForeColor = System.Drawing.Color.DimGray;
+            this.lblRol.Location = new System.Drawing.Point(83, 88);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(78, 13);
+            this.lblRol.TabIndex = 19;
+            this.lblRol.Text = "Administrador";
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(74, 70);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(95, 18);
+            this.lblUser.TabIndex = 2;
+            this.lblUser.Text = "Juan Coronel";
+            // 
+            // imgUser
+            // 
+            this.imgUser.Image = ((System.Drawing.Image)(resources.GetObject("imgUser.Image")));
+            this.imgUser.Location = new System.Drawing.Point(91, 17);
+            this.imgUser.Name = "imgUser";
+            this.imgUser.Size = new System.Drawing.Size(61, 50);
+            this.imgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgUser.TabIndex = 18;
+            this.imgUser.TabStop = false;
             // 
             // btnConfig
             // 
@@ -384,6 +338,37 @@
             this.btnWaiter.UseVisualStyleBackColor = false;
             this.btnWaiter.Click += new System.EventHandler(this.btnWaiter_Click);
             // 
+            // btnProducts
+            // 
+            this.btnProducts.BackColor = System.Drawing.Color.White;
+            this.btnProducts.BackgroundColor = System.Drawing.Color.White;
+            this.btnProducts.BorderColor = System.Drawing.Color.Transparent;
+            this.btnProducts.BorderRadius = 10;
+            this.btnProducts.BorderSize = 0;
+            this.btnProducts.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProducts.FlatAppearance.BorderSize = 0;
+            this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProducts.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProducts.ForeColor = System.Drawing.Color.DimGray;
+            this.btnProducts.IconChar = FontAwesome.Sharp.IconChar.Coffee;
+            this.btnProducts.IconColor = System.Drawing.Color.DimGray;
+            this.btnProducts.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnProducts.IconSize = 35;
+            this.btnProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProducts.Location = new System.Drawing.Point(3, 154);
+            this.btnProducts.MinimumSize = new System.Drawing.Size(58, 0);
+            this.btnProducts.Name = "btnProducts";
+            this.btnProducts.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
+            this.btnProducts.Size = new System.Drawing.Size(244, 45);
+            this.btnProducts.TabIndex = 13;
+            this.btnProducts.Tag = "Productos";
+            this.btnProducts.Text = "  Productos";
+            this.btnProducts.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnProducts.TextColor = System.Drawing.Color.DimGray;
+            this.btnProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProducts.UseVisualStyleBackColor = false;
+            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
+            // 
             // btnDashboard
             // 
             this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
@@ -415,35 +400,18 @@
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // btnRemovedProducts
+            // pnlMain
             // 
-            this.btnRemovedProducts.BackColor = System.Drawing.Color.White;
-            this.btnRemovedProducts.BackgroundColor = System.Drawing.Color.White;
-            this.btnRemovedProducts.BorderColor = System.Drawing.Color.Transparent;
-            this.btnRemovedProducts.BorderRadius = 10;
-            this.btnRemovedProducts.BorderSize = 0;
-            this.btnRemovedProducts.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRemovedProducts.FlatAppearance.BorderSize = 0;
-            this.btnRemovedProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemovedProducts.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemovedProducts.ForeColor = System.Drawing.Color.DimGray;
-            this.btnRemovedProducts.IconChar = FontAwesome.Sharp.IconChar.Coffee;
-            this.btnRemovedProducts.IconColor = System.Drawing.Color.DimGray;
-            this.btnRemovedProducts.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRemovedProducts.IconSize = 35;
-            this.btnRemovedProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemovedProducts.Location = new System.Drawing.Point(3, 465);
-            this.btnRemovedProducts.MinimumSize = new System.Drawing.Size(58, 0);
-            this.btnRemovedProducts.Name = "btnRemovedProducts";
-            this.btnRemovedProducts.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
-            this.btnRemovedProducts.Size = new System.Drawing.Size(244, 45);
-            this.btnRemovedProducts.TabIndex = 21;
-            this.btnRemovedProducts.Tag = "Productos";
-            this.btnRemovedProducts.Text = "  Productos Eliminados";
-            this.btnRemovedProducts.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRemovedProducts.TextColor = System.Drawing.Color.DimGray;
-            this.btnRemovedProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRemovedProducts.UseVisualStyleBackColor = false;
+            this.pnlMain.BackColor = System.Drawing.Color.DarkGray;
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlMain.Location = new System.Drawing.Point(250, 0);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1014, 681);
+            this.pnlMain.TabIndex = 2;
+            // 
+            // transitionTimer
+            // 
+            this.transitionTimer.Interval = 30;
             // 
             // MainForm
             // 
@@ -488,7 +456,6 @@
         private WindowsFormsApplication1.RoundButton btnUserList;
         private WindowsFormsApplication1.RoundButton btnTables;
         private WindowsFormsApplication1.RoundButton btnCategory;
-        private WindowsFormsApplication1.RoundButton btnRemovedProducts;
     }
 }
 

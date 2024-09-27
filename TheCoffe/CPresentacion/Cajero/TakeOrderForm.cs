@@ -16,8 +16,8 @@ namespace TheCoffe.CPresentacion.Cajero
         public TakeOrderForm()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
         }
 
-       
     }
 }

@@ -130,6 +130,12 @@
     <Compile Include="CPresentacion\CategoryListForm.Designer.cs">
       <DependentUpon>CategoryListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CPresentacion\RemovedCategoriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\RemovedCategoriesForm.Designer.cs">
+      <DependentUpon>RemovedCategoriesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CPresentacion\General\SelectModeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,24 @@
     </Compile>
     <Compile Include="CPresentacion\RemovedProductsListForm.Designer.cs">
       <DependentUpon>RemovedProductsListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\RemovedTablesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\RemovedTablesForm.Designer.cs">
+      <DependentUpon>RemovedTablesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\RemovedUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\RemovedUsersForm.Designer.cs">
+      <DependentUpon>RemovedUsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\RemovedWaiterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\RemovedWaiterForm.Designer.cs">
+      <DependentUpon>RemovedWaiterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CPresentacion\SaleDetailListForm.cs">
       <SubType>Form</SubType>
@@ -264,6 +288,9 @@
     <EmbeddedResource Include="CPresentacion\AddCategoryForm.resx">
       <DependentUpon>AddCategoryForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\RemovedCategoriesForm.resx">
+      <DependentUpon>RemovedCategoriesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\General\SelectModeForm.resx">
       <DependentUpon>SelectModeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,6 +299,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\RemovedProductsListForm.resx">
       <DependentUpon>RemovedProductsListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\RemovedTablesForm.resx">
+      <DependentUpon>RemovedTablesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\RemovedUsersForm.resx">
+      <DependentUpon>RemovedUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\RemovedWaiterForm.resx">
+      <DependentUpon>RemovedWaiterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\SaleDetailListForm.resx">
       <DependentUpon>SaleDetailListForm.cs</DependentUpon>
