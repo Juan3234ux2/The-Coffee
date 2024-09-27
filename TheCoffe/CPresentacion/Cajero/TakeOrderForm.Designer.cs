@@ -857,7 +857,7 @@
             // 
             // btnCategory
             // 
-            this.btnCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.btnCategory.BackColor = System.Drawing.Color.White;
             this.btnCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCategory.FlatAppearance.BorderSize = 0;
             this.btnCategory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
@@ -934,7 +934,7 @@
             // 
             // customComboBox1
             // 
-            this.customComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.customComboBox1.BackColor = System.Drawing.Color.White;
             this.customComboBox1.BorderColor = System.Drawing.Color.Transparent;
             this.customComboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.customComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -954,8 +954,8 @@
             // 
             // modernTextBox4
             // 
-            this.modernTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.modernTextBox4.BorderColor = System.Drawing.Color.Transparent;
+            this.modernTextBox4.BackColor = System.Drawing.Color.White;
+            this.modernTextBox4.BorderColor = System.Drawing.Color.Silver;
             this.modernTextBox4.BorderFocusColor = System.Drawing.Color.Transparent;
             this.modernTextBox4.BorderRadius = 10;
             this.modernTextBox4.BorderSize = 1;
