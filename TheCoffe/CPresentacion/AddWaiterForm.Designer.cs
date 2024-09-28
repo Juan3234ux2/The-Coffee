@@ -49,7 +49,7 @@
             // 
             // txtName
             // 
-            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtName.BorderColor = System.Drawing.Color.Transparent;
             this.txtName.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtName.BorderRadius = 10;
@@ -72,7 +72,7 @@
             // 
             // txtDNI
             // 
-            this.txtDNI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtDNI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtDNI.BorderColor = System.Drawing.Color.Transparent;
             this.txtDNI.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtDNI.BorderRadius = 10;
@@ -145,7 +145,7 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtLastName.BorderColor = System.Drawing.Color.Transparent;
             this.txtLastName.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtLastName.BorderRadius = 10;
@@ -178,7 +178,7 @@
             // 
             // txtNumber
             // 
-            this.txtNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtNumber.BorderColor = System.Drawing.Color.Transparent;
             this.txtNumber.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtNumber.BorderRadius = 10;
@@ -211,7 +211,7 @@
             // 
             // txtExit
             // 
-            this.txtExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtExit.BorderColor = System.Drawing.Color.Transparent;
             this.txtExit.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtExit.BorderRadius = 10;
@@ -246,7 +246,7 @@
             // 
             // txtIncome
             // 
-            this.txtIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtIncome.BorderColor = System.Drawing.Color.Transparent;
             this.txtIncome.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtIncome.BorderRadius = 10;
@@ -302,7 +302,7 @@
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.maskedTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskedTextBox1.Location = new System.Drawing.Point(261, 276);
@@ -314,7 +314,7 @@
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.maskedTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.maskedTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskedTextBox2.Location = new System.Drawing.Point(43, 276);

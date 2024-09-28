@@ -103,30 +103,10 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.sPanel10 = new Sipaa.Framework.SPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.sPanel11 = new Sipaa.Framework.SPanel();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.sPanel12 = new Sipaa.Framework.SPanel();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.sPanel13 = new Sipaa.Framework.SPanel();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.sPanel14 = new Sipaa.Framework.SPanel();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.sPanel15 = new Sipaa.Framework.SPanel();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.sPanel1.SuspendLayout();
@@ -149,18 +129,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.sPanel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.sPanel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.sPanel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.sPanel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.sPanel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.sPanel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -782,7 +752,7 @@
             // modernTextBox4
             // 
             this.modernTextBox4.BackColor = System.Drawing.Color.White;
-            this.modernTextBox4.BorderColor = System.Drawing.Color.Silver;
+            this.modernTextBox4.BorderColor = System.Drawing.Color.Transparent;
             this.modernTextBox4.BorderFocusColor = System.Drawing.Color.Transparent;
             this.modernTextBox4.BorderRadius = 10;
             this.modernTextBox4.BorderSize = 1;
@@ -963,18 +933,13 @@
             // 
             this.panel6.AutoScroll = true;
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel6.Controls.Add(this.sPanel10);
             this.panel6.Controls.Add(this.sPanel5);
             this.panel6.Controls.Add(this.sPanel9);
-            this.panel6.Controls.Add(this.sPanel11);
             this.panel6.Controls.Add(this.sPanel7);
-            this.panel6.Controls.Add(this.sPanel12);
             this.panel6.Controls.Add(this.sPanel8);
             this.panel6.Controls.Add(this.sPanel4);
-            this.panel6.Controls.Add(this.sPanel13);
             this.panel6.Controls.Add(this.sPanel6);
             this.panel6.Controls.Add(this.sPanel14);
-            this.panel6.Controls.Add(this.sPanel15);
             this.panel6.Location = new System.Drawing.Point(-5, 146);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(699, 571);
@@ -989,6 +954,7 @@
             this.sPanel5.Controls.Add(this.label23);
             this.sPanel5.Controls.Add(this.label24);
             this.sPanel5.Controls.Add(this.pictureBox3);
+            this.sPanel5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sPanel5.ForeColor = System.Drawing.Color.White;
             this.sPanel5.Location = new System.Drawing.Point(463, 10);
             this.sPanel5.Name = "sPanel5";
@@ -1038,6 +1004,7 @@
             this.sPanel9.Controls.Add(this.label32);
             this.sPanel9.Controls.Add(this.label33);
             this.sPanel9.Controls.Add(this.pictureBox6);
+            this.sPanel9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sPanel9.ForeColor = System.Drawing.Color.White;
             this.sPanel9.Location = new System.Drawing.Point(250, 222);
             this.sPanel9.Name = "sPanel9";
@@ -1087,6 +1054,7 @@
             this.sPanel7.Controls.Add(this.label26);
             this.sPanel7.Controls.Add(this.label27);
             this.sPanel7.Controls.Add(this.pictureBox4);
+            this.sPanel7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sPanel7.ForeColor = System.Drawing.Color.White;
             this.sPanel7.Location = new System.Drawing.Point(463, 222);
             this.sPanel7.Name = "sPanel7";
@@ -1136,6 +1104,7 @@
             this.sPanel8.Controls.Add(this.label30);
             this.sPanel8.Controls.Add(this.label31);
             this.sPanel8.Controls.Add(this.pictureBox5);
+            this.sPanel8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sPanel8.ForeColor = System.Drawing.Color.White;
             this.sPanel8.Location = new System.Drawing.Point(37, 222);
             this.sPanel8.Name = "sPanel8";
@@ -1185,6 +1154,7 @@
             this.sPanel4.Controls.Add(this.label21);
             this.sPanel4.Controls.Add(this.label22);
             this.sPanel4.Controls.Add(this.pictureBox1);
+            this.sPanel4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sPanel4.ForeColor = System.Drawing.Color.White;
             this.sPanel4.Location = new System.Drawing.Point(37, 10);
             this.sPanel4.Name = "sPanel4";
@@ -1234,6 +1204,7 @@
             this.sPanel6.Controls.Add(this.label28);
             this.sPanel6.Controls.Add(this.label29);
             this.sPanel6.Controls.Add(this.pictureBox2);
+            this.sPanel6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sPanel6.ForeColor = System.Drawing.Color.White;
             this.sPanel6.Location = new System.Drawing.Point(250, 10);
             this.sPanel6.Name = "sPanel6";
@@ -1274,202 +1245,6 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // sPanel10
-            // 
-            this.sPanel10.BackColor = System.Drawing.Color.White;
-            this.sPanel10.BorderColor = System.Drawing.Color.White;
-            this.sPanel10.BorderRadius = 6;
-            this.sPanel10.BorderSize = 0;
-            this.sPanel10.Controls.Add(this.label3);
-            this.sPanel10.Controls.Add(this.label34);
-            this.sPanel10.Controls.Add(this.pictureBox7);
-            this.sPanel10.ForeColor = System.Drawing.Color.White;
-            this.sPanel10.Location = new System.Drawing.Point(463, 441);
-            this.sPanel10.Name = "sPanel10";
-            this.sPanel10.Size = new System.Drawing.Size(187, 195);
-            this.sPanel10.TabIndex = 32;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(126, 169);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 17);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "$6,000";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.Black;
-            this.label34.Location = new System.Drawing.Point(13, 130);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(106, 14);
-            this.label34.TabIndex = 16;
-            this.label34.Text = "Café Con Leche";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox7.Image = global::TheCoffe.Properties.Resources.pngtree_coffee_cup_aroma_container_png_image_6373241;
-            this.pictureBox7.InitialImage = global::TheCoffe.Properties.Resources.pngtree_coffee_cup_aroma_container_png_image_6373241;
-            this.pictureBox7.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(170, 118);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 1;
-            this.pictureBox7.TabStop = false;
-            // 
-            // sPanel11
-            // 
-            this.sPanel11.BackColor = System.Drawing.Color.White;
-            this.sPanel11.BorderColor = System.Drawing.Color.White;
-            this.sPanel11.BorderRadius = 6;
-            this.sPanel11.BorderSize = 0;
-            this.sPanel11.Controls.Add(this.label35);
-            this.sPanel11.Controls.Add(this.label36);
-            this.sPanel11.Controls.Add(this.pictureBox8);
-            this.sPanel11.ForeColor = System.Drawing.Color.White;
-            this.sPanel11.Location = new System.Drawing.Point(250, 653);
-            this.sPanel11.Name = "sPanel11";
-            this.sPanel11.Size = new System.Drawing.Size(187, 195);
-            this.sPanel11.TabIndex = 31;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.Black;
-            this.label35.Location = new System.Drawing.Point(126, 169);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(57, 17);
-            this.label35.TabIndex = 17;
-            this.label35.Text = "$6,000";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.Black;
-            this.label36.Location = new System.Drawing.Point(13, 130);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(106, 14);
-            this.label36.TabIndex = 16;
-            this.label36.Text = "Café Con Leche";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox8.Image = global::TheCoffe.Properties.Resources.pngtree_coffee_cup_aroma_container_png_image_6373241;
-            this.pictureBox8.InitialImage = global::TheCoffe.Properties.Resources.pngtree_coffee_cup_aroma_container_png_image_6373241;
-            this.pictureBox8.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(170, 118);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 1;
-            this.pictureBox8.TabStop = false;
-            // 
-            // sPanel12
-            // 
-            this.sPanel12.BackColor = System.Drawing.Color.White;
-            this.sPanel12.BorderColor = System.Drawing.Color.White;
-            this.sPanel12.BorderRadius = 6;
-            this.sPanel12.BorderSize = 0;
-            this.sPanel12.Controls.Add(this.label37);
-            this.sPanel12.Controls.Add(this.label38);
-            this.sPanel12.Controls.Add(this.pictureBox9);
-            this.sPanel12.ForeColor = System.Drawing.Color.White;
-            this.sPanel12.Location = new System.Drawing.Point(463, 653);
-            this.sPanel12.Name = "sPanel12";
-            this.sPanel12.Size = new System.Drawing.Size(187, 195);
-            this.sPanel12.TabIndex = 34;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.Black;
-            this.label37.Location = new System.Drawing.Point(126, 169);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(57, 17);
-            this.label37.TabIndex = 17;
-            this.label37.Text = "$6,000";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.ForeColor = System.Drawing.Color.Black;
-            this.label38.Location = new System.Drawing.Point(13, 130);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(81, 14);
-            this.label38.TabIndex = 16;
-            this.label38.Text = "Cheesecake";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox9.Image = global::TheCoffe.Properties.Resources.cheesecake;
-            this.pictureBox9.InitialImage = global::TheCoffe.Properties.Resources.pngtree_coffee_cup_aroma_container_png_image_6373241;
-            this.pictureBox9.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(170, 118);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 1;
-            this.pictureBox9.TabStop = false;
-            // 
-            // sPanel13
-            // 
-            this.sPanel13.BackColor = System.Drawing.Color.White;
-            this.sPanel13.BorderColor = System.Drawing.Color.White;
-            this.sPanel13.BorderRadius = 6;
-            this.sPanel13.BorderSize = 0;
-            this.sPanel13.Controls.Add(this.label39);
-            this.sPanel13.Controls.Add(this.label40);
-            this.sPanel13.Controls.Add(this.pictureBox10);
-            this.sPanel13.ForeColor = System.Drawing.Color.White;
-            this.sPanel13.Location = new System.Drawing.Point(37, 653);
-            this.sPanel13.Name = "sPanel13";
-            this.sPanel13.Size = new System.Drawing.Size(187, 195);
-            this.sPanel13.TabIndex = 33;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.Black;
-            this.label39.Location = new System.Drawing.Point(126, 169);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(57, 17);
-            this.label39.TabIndex = 17;
-            this.label39.Text = "$6,000";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.Black;
-            this.label40.Location = new System.Drawing.Point(13, 130);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(81, 14);
-            this.label40.TabIndex = 16;
-            this.label40.Text = "Cheesecake";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox10.Image = global::TheCoffe.Properties.Resources.cheesecake;
-            this.pictureBox10.InitialImage = global::TheCoffe.Properties.Resources.pngtree_coffee_cup_aroma_container_png_image_6373241;
-            this.pictureBox10.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(170, 118);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 1;
-            this.pictureBox10.TabStop = false;
-            // 
             // sPanel14
             // 
             this.sPanel14.BackColor = System.Drawing.Color.White;
@@ -1479,6 +1254,7 @@
             this.sPanel14.Controls.Add(this.label41);
             this.sPanel14.Controls.Add(this.label42);
             this.sPanel14.Controls.Add(this.pictureBox11);
+            this.sPanel14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sPanel14.ForeColor = System.Drawing.Color.White;
             this.sPanel14.Location = new System.Drawing.Point(37, 441);
             this.sPanel14.Name = "sPanel14";
@@ -1518,55 +1294,6 @@
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox11.TabIndex = 1;
             this.pictureBox11.TabStop = false;
-            // 
-            // sPanel15
-            // 
-            this.sPanel15.BackColor = System.Drawing.Color.White;
-            this.sPanel15.BorderColor = System.Drawing.Color.White;
-            this.sPanel15.BorderRadius = 6;
-            this.sPanel15.BorderSize = 0;
-            this.sPanel15.Controls.Add(this.label43);
-            this.sPanel15.Controls.Add(this.label44);
-            this.sPanel15.Controls.Add(this.pictureBox12);
-            this.sPanel15.ForeColor = System.Drawing.Color.White;
-            this.sPanel15.Location = new System.Drawing.Point(250, 441);
-            this.sPanel15.Name = "sPanel15";
-            this.sPanel15.Size = new System.Drawing.Size(187, 195);
-            this.sPanel15.TabIndex = 29;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.ForeColor = System.Drawing.Color.Black;
-            this.label43.Location = new System.Drawing.Point(126, 169);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(57, 17);
-            this.label43.TabIndex = 17;
-            this.label43.Text = "$6,000";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.Black;
-            this.label44.Location = new System.Drawing.Point(13, 130);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(81, 14);
-            this.label44.TabIndex = 16;
-            this.label44.Text = "Cheesecake";
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox12.Image = global::TheCoffe.Properties.Resources.cheesecake;
-            this.pictureBox12.InitialImage = global::TheCoffe.Properties.Resources.pngtree_coffee_cup_aroma_container_png_image_6373241;
-            this.pictureBox12.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(170, 118);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 1;
-            this.pictureBox12.TabStop = false;
             // 
             // TakeOrderForm
             // 
@@ -1616,24 +1343,9 @@
             this.sPanel6.ResumeLayout(false);
             this.sPanel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.sPanel10.ResumeLayout(false);
-            this.sPanel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.sPanel11.ResumeLayout(false);
-            this.sPanel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.sPanel12.ResumeLayout(false);
-            this.sPanel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.sPanel13.ResumeLayout(false);
-            this.sPanel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.sPanel14.ResumeLayout(false);
             this.sPanel14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            this.sPanel15.ResumeLayout(false);
-            this.sPanel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1716,29 +1428,9 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Sipaa.Framework.SPanel sPanel10;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private Sipaa.Framework.SPanel sPanel11;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private Sipaa.Framework.SPanel sPanel12;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private Sipaa.Framework.SPanel sPanel13;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.PictureBox pictureBox10;
         private Sipaa.Framework.SPanel sPanel14;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.PictureBox pictureBox11;
-        private Sipaa.Framework.SPanel sPanel15;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.PictureBox pictureBox12;
     }
 }

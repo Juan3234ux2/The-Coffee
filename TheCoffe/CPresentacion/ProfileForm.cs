@@ -44,5 +44,16 @@ namespace TheCoffe.CPresentacion
         {
             cboRol.DroppedDown = !cboRol.DroppedDown;
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Estás seguro que deseas cerrar sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Form parent = this.FindForm();
+                parent.Close();
+            }
+        }
     }
 }

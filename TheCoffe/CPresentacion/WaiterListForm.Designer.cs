@@ -59,7 +59,7 @@
             this.modernTextBox1.BorderSize = 1;
             this.modernTextBox1.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modernTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox1.Location = new System.Drawing.Point(21, 74);
+            this.modernTextBox1.Location = new System.Drawing.Point(18, 74);
             this.modernTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.modernTextBox1.Multiline = false;
             this.modernTextBox1.Name = "modernTextBox1";
@@ -115,7 +115,7 @@
             this.dataWaiter.EnableHeadersVisualStyles = false;
             this.dataWaiter.GridColor = System.Drawing.Color.Silver;
             this.dataWaiter.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dataWaiter.Location = new System.Drawing.Point(21, 138);
+            this.dataWaiter.Location = new System.Drawing.Point(18, 138);
             this.dataWaiter.MultiSelect = false;
             this.dataWaiter.Name = "dataWaiter";
             this.dataWaiter.ReadOnly = true;
@@ -223,7 +223,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 14);
+            this.label1.Location = new System.Drawing.Point(11, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 41);
             this.label1.TabIndex = 20;
@@ -241,7 +241,7 @@
             this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 25;
-            this.iconButton5.Location = new System.Drawing.Point(306, 81);
+            this.iconButton5.Location = new System.Drawing.Point(303, 81);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(38, 32);
             this.iconButton5.TabIndex = 24;
@@ -264,7 +264,7 @@
             this.btnAddWaiter.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddWaiter.IconSize = 20;
             this.btnAddWaiter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddWaiter.Location = new System.Drawing.Point(841, 14);
+            this.btnAddWaiter.Location = new System.Drawing.Point(838, 14);
             this.btnAddWaiter.Name = "btnAddWaiter";
             this.btnAddWaiter.Size = new System.Drawing.Size(156, 43);
             this.btnAddWaiter.TabIndex = 21;
@@ -290,7 +290,7 @@
             this.btnRemovedWaiter.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRemovedWaiter.IconSize = 20;
             this.btnRemovedWaiter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemovedWaiter.Location = new System.Drawing.Point(648, 15);
+            this.btnRemovedWaiter.Location = new System.Drawing.Point(645, 15);
             this.btnRemovedWaiter.Name = "btnRemovedWaiter";
             this.btnRemovedWaiter.Size = new System.Drawing.Size(156, 43);
             this.btnRemovedWaiter.TabIndex = 26;
@@ -311,7 +311,7 @@
             this.Controls.Add(this.btnAddWaiter);
             this.Controls.Add(this.label1);
             this.Name = "WaiterListForm";
-            this.Size = new System.Drawing.Size(1030, 720);
+            this.Size = new System.Drawing.Size(1014, 681);
             this.Load += new System.EventHandler(this.WaiterListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataWaiter)).EndInit();
             this.ResumeLayout(false);

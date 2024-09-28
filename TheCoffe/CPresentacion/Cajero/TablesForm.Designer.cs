@@ -269,6 +269,7 @@
             this.roundButton1.BorderColor = System.Drawing.Color.Black;
             this.roundButton1.BorderRadius = 20;
             this.roundButton1.BorderSize = 0;
+            this.roundButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton1.FlatAppearance.BorderSize = 0;
             this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton1.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -415,6 +416,7 @@
             this.roundButton2.BorderColor = System.Drawing.Color.Black;
             this.roundButton2.BorderRadius = 20;
             this.roundButton2.BorderSize = 0;
+            this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton2.FlatAppearance.BorderSize = 0;
             this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton2.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -517,6 +519,7 @@
             this.roundButton3.BorderColor = System.Drawing.Color.Black;
             this.roundButton3.BorderRadius = 20;
             this.roundButton3.BorderSize = 0;
+            this.roundButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton3.FlatAppearance.BorderSize = 0;
             this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton3.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -594,6 +597,7 @@
             this.roundButton4.BorderColor = System.Drawing.Color.Black;
             this.roundButton4.BorderRadius = 20;
             this.roundButton4.BorderSize = 0;
+            this.roundButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton4.FlatAppearance.BorderSize = 0;
             this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton4.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -722,6 +726,7 @@
             this.roundButton5.BorderColor = System.Drawing.Color.Black;
             this.roundButton5.BorderRadius = 20;
             this.roundButton5.BorderSize = 0;
+            this.roundButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton5.FlatAppearance.BorderSize = 0;
             this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton5.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -824,6 +829,7 @@
             this.roundButton6.BorderColor = System.Drawing.Color.Black;
             this.roundButton6.BorderRadius = 20;
             this.roundButton6.BorderSize = 0;
+            this.roundButton6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton6.FlatAppearance.BorderSize = 0;
             this.roundButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton6.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -901,6 +907,7 @@
             this.roundButton7.BorderColor = System.Drawing.Color.Black;
             this.roundButton7.BorderRadius = 20;
             this.roundButton7.BorderSize = 0;
+            this.roundButton7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton7.FlatAppearance.BorderSize = 0;
             this.roundButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton7.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

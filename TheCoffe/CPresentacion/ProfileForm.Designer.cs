@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.sPanel1 = new Sipaa.Framework.SPanel();
             this.button1 = new System.Windows.Forms.Button();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.btnLogout = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -64,7 +64,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 15);
+            this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 41);
             this.label1.TabIndex = 2;
@@ -77,7 +77,7 @@
             this.sPanel1.BorderRadius = 15;
             this.sPanel1.BorderSize = 0;
             this.sPanel1.Controls.Add(this.button1);
-            this.sPanel1.Controls.Add(this.iconButton3);
+            this.sPanel1.Controls.Add(this.btnLogout);
             this.sPanel1.Controls.Add(this.iconButton2);
             this.sPanel1.Controls.Add(this.iconButton1);
             this.sPanel1.Controls.Add(this.label3);
@@ -85,7 +85,7 @@
             this.sPanel1.Controls.Add(this.pictureBox1);
             this.sPanel1.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sPanel1.ForeColor = System.Drawing.Color.White;
-            this.sPanel1.Location = new System.Drawing.Point(23, 79);
+            this.sPanel1.Location = new System.Drawing.Point(19, 79);
             this.sPanel1.Name = "sPanel1";
             this.sPanel1.Size = new System.Drawing.Size(355, 564);
             this.sPanel1.TabIndex = 3;
@@ -103,35 +103,36 @@
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // iconButton3
+            // btnLogout
             // 
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.ForeColor = System.Drawing.Color.DimGray;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
-            this.iconButton3.IconColor = System.Drawing.Color.DimGray;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton3.IconSize = 35;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 325);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton3.Size = new System.Drawing.Size(358, 50);
-            this.iconButton3.TabIndex = 5;
-            this.iconButton3.Text = "Cerrar Sesión";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = true;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.ForeColor = System.Drawing.Color.DimGray;
+            this.btnLogout.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            this.btnLogout.IconColor = System.Drawing.Color.DimGray;
+            this.btnLogout.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnLogout.IconSize = 35;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(0, 325);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLogout.Size = new System.Drawing.Size(358, 50);
+            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Text = "Cerrar Sesión";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // iconButton2
             // 
             this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton2.FlatAppearance.BorderSize = 0;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.ForeColor = System.Drawing.Color.Red;
+            this.iconButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.iconButton2.IconColor = System.Drawing.Color.Red;
+            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButton2.IconSize = 35;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -222,7 +223,7 @@
             this.sPanel2.Controls.Add(this.modernTextBox4);
             this.sPanel2.Controls.Add(this.label4);
             this.sPanel2.ForeColor = System.Drawing.Color.Black;
-            this.sPanel2.Location = new System.Drawing.Point(407, 79);
+            this.sPanel2.Location = new System.Drawing.Point(403, 79);
             this.sPanel2.Name = "sPanel2";
             this.sPanel2.Size = new System.Drawing.Size(594, 564);
             this.sPanel2.TabIndex = 4;
@@ -333,8 +334,8 @@
             this.btnWatchPassword.BorderSize = 0;
             this.btnWatchPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnWatchPassword.FlatAppearance.BorderSize = 0;
-            this.btnWatchPassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.btnWatchPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.btnWatchPassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnWatchPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnWatchPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWatchPassword.ForeColor = System.Drawing.Color.White;
             this.btnWatchPassword.IconChar = FontAwesome.Sharp.IconChar.Eye;
@@ -532,7 +533,7 @@
             this.Controls.Add(this.sPanel1);
             this.Controls.Add(this.label1);
             this.Name = "ProfileForm";
-            this.Size = new System.Drawing.Size(1030, 720);
+            this.Size = new System.Drawing.Size(1014, 681);
             this.sPanel1.ResumeLayout(false);
             this.sPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -550,7 +551,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton btnLogout;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private Sipaa.Framework.SPanel sPanel2;
