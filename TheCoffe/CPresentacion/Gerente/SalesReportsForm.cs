@@ -48,7 +48,7 @@ namespace TheCoffe.CPresentacion.Gerente
                 BackGradientStyle = GradientStyle.TopBottom,
                 BackSecondaryColor = Color.FromArgb(230, 230, 230),
                 BorderColor = Color.Navy,
-                BorderWidth = 4
+                BorderWidth = 4,
             };
             serie.Points.AddXY("Enero", 300);
             serie.Points.AddXY("Febrero", 250);
@@ -63,5 +63,7 @@ namespace TheCoffe.CPresentacion.Gerente
             chart1.Series.Clear();
             chart1.Series.Add(serie);
         }
+
+     
     }
 }

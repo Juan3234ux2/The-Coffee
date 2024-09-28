@@ -52,7 +52,7 @@
             // 
             this.lblUserList.AutoSize = true;
             this.lblUserList.Font = new System.Drawing.Font("Roboto", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserList.Location = new System.Drawing.Point(16, 15);
+            this.lblUserList.Location = new System.Drawing.Point(12, 15);
             this.lblUserList.Name = "lblUserList";
             this.lblUserList.Size = new System.Drawing.Size(151, 41);
             this.lblUserList.TabIndex = 15;
@@ -99,7 +99,7 @@
             this.dataUsers.EnableHeadersVisualStyles = false;
             this.dataUsers.GridColor = System.Drawing.Color.Silver;
             this.dataUsers.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dataUsers.Location = new System.Drawing.Point(23, 139);
+            this.dataUsers.Location = new System.Drawing.Point(19, 139);
             this.dataUsers.MultiSelect = false;
             this.dataUsers.Name = "dataUsers";
             this.dataUsers.ReadOnly = true;
@@ -205,7 +205,7 @@
             this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 25;
-            this.iconButton5.Location = new System.Drawing.Point(313, 82);
+            this.iconButton5.Location = new System.Drawing.Point(309, 82);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(38, 32);
             this.iconButton5.TabIndex = 18;
@@ -228,7 +228,7 @@
             this.btnRemovedUsers.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRemovedUsers.IconSize = 20;
             this.btnRemovedUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemovedUsers.Location = new System.Drawing.Point(648, 15);
+            this.btnRemovedUsers.Location = new System.Drawing.Point(644, 15);
             this.btnRemovedUsers.Name = "btnRemovedUsers";
             this.btnRemovedUsers.Size = new System.Drawing.Size(156, 43);
             this.btnRemovedUsers.TabIndex = 27;
@@ -246,7 +246,7 @@
             this.modernTextBox1.BorderSize = 1;
             this.modernTextBox1.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modernTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox1.Location = new System.Drawing.Point(23, 74);
+            this.modernTextBox1.Location = new System.Drawing.Point(19, 74);
             this.modernTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.modernTextBox1.Multiline = false;
             this.modernTextBox1.Name = "modernTextBox1";
@@ -276,7 +276,7 @@
             this.btnAddUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddUser.IconSize = 20;
             this.btnAddUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddUser.Location = new System.Drawing.Point(845, 15);
+            this.btnAddUser.Location = new System.Drawing.Point(841, 15);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(156, 43);
             this.btnAddUser.TabIndex = 16;
@@ -297,7 +297,7 @@
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.lblUserList);
             this.Name = "UserListForm";
-            this.Size = new System.Drawing.Size(1030, 720);
+            this.Size = new System.Drawing.Size(1014, 681);
             this.Load += new System.EventHandler(this.UserListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataUsers)).EndInit();
             this.ResumeLayout(false);

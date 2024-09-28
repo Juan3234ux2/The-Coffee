@@ -31,8 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtDescription = new TheCoffe.Components.ModernTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.altoButton1 = new AltoControls.AltoButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSelectImage = new AltoControls.AltoButton();
+            this.pboImage = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCategory = new FontAwesome.Sharp.IconButton();
             this.cboCategory = new CustomComboBox();
@@ -45,8 +45,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.selectImageDialog = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboImage)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,8 +55,8 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.txtDescription);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.altoButton1);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btnSelectImage);
+            this.panel1.Controls.Add(this.pboImage);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.btnCategory);
             this.panel1.Controls.Add(this.cboCategory);
@@ -106,37 +107,38 @@
             this.label1.TabIndex = 76;
             this.label1.Text = "Descripcion";
             // 
-            // altoButton1
+            // btnSelectImage
             // 
-            this.altoButton1.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.altoButton1.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.altoButton1.BackColor = System.Drawing.Color.Transparent;
-            this.altoButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.altoButton1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.altoButton1.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.altoButton1.ForeColor = System.Drawing.Color.White;
-            this.altoButton1.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.altoButton1.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.altoButton1.Location = new System.Drawing.Point(142, 355);
-            this.altoButton1.Name = "altoButton1";
-            this.altoButton1.Radius = 10;
-            this.altoButton1.Size = new System.Drawing.Size(154, 45);
-            this.altoButton1.Stroke = false;
-            this.altoButton1.StrokeColor = System.Drawing.Color.Gray;
-            this.altoButton1.TabIndex = 75;
-            this.altoButton1.Text = "Cambiar Imagen ";
-            this.altoButton1.Transparency = false;
+            this.btnSelectImage.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnSelectImage.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnSelectImage.BackColor = System.Drawing.Color.Transparent;
+            this.btnSelectImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelectImage.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnSelectImage.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectImage.ForeColor = System.Drawing.Color.White;
+            this.btnSelectImage.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnSelectImage.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnSelectImage.Location = new System.Drawing.Point(142, 355);
+            this.btnSelectImage.Name = "btnSelectImage";
+            this.btnSelectImage.Radius = 10;
+            this.btnSelectImage.Size = new System.Drawing.Size(154, 45);
+            this.btnSelectImage.Stroke = false;
+            this.btnSelectImage.StrokeColor = System.Drawing.Color.Gray;
+            this.btnSelectImage.TabIndex = 75;
+            this.btnSelectImage.Text = "Cambiar Imagen ";
+            this.btnSelectImage.Transparency = false;
+            this.btnSelectImage.Click += new System.EventHandler(this.btnSelectImage_Click);
             // 
-            // pictureBox1
+            // pboImage
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.InitialImage = global::TheCoffe.Properties.Resources.hombre;
-            this.pictureBox1.Location = new System.Drawing.Point(33, 325);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 74;
-            this.pictureBox1.TabStop = false;
+            this.pboImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pboImage.InitialImage = global::TheCoffe.Properties.Resources.hombre;
+            this.pboImage.Location = new System.Drawing.Point(33, 325);
+            this.pboImage.Name = "pboImage";
+            this.pboImage.Size = new System.Drawing.Size(100, 100);
+            this.pboImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboImage.TabIndex = 74;
+            this.pboImage.TabStop = false;
             // 
             // label6
             // 
@@ -339,6 +341,10 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
+            // selectImageDialog
+            // 
+            this.selectImageDialog.FileName = "openFileDialog1";
+            // 
             // AddProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -358,7 +364,7 @@
             this.Load += new System.EventHandler(this.AddProductForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -375,12 +381,13 @@
         private Components.ModernTextBox txtName;
         private Components.ModernTextBox txtDescription;
         private System.Windows.Forms.Label label1;
-        private AltoControls.AltoButton altoButton1;
+        private AltoControls.AltoButton btnSelectImage;
         private System.Windows.Forms.Label label6;
         private FontAwesome.Sharp.IconButton btnCategory;
         private CustomComboBox cboCategory;
         private Components.ModernTextBox modernTextBox4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pboImage;
+        private System.Windows.Forms.OpenFileDialog selectImageDialog;
     }
 }

@@ -45,13 +45,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.sPanel1 = new Sipaa.Framework.SPanel();
+            this.sPanel2 = new Sipaa.Framework.SPanel();
+            this.customDateTimePicker2 = new TheCoffe.Components.CustomDateTimePicker();
             this.customDateTimePicker1 = new TheCoffe.Components.CustomDateTimePicker();
             this.cboMesero = new CustomComboBox();
             this.modernTextBox2 = new TheCoffe.Components.ModernTextBox();
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
-            this.sPanel1 = new Sipaa.Framework.SPanel();
-            this.sPanel2 = new Sipaa.Framework.SPanel();
-            this.customDateTimePicker2 = new TheCoffe.Components.CustomDateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataSales)).BeginInit();
             this.sPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +68,7 @@
             this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 25;
-            this.iconButton5.Location = new System.Drawing.Point(313, 84);
+            this.iconButton5.Location = new System.Drawing.Point(309, 84);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(38, 32);
             this.iconButton5.TabIndex = 19;
@@ -114,7 +114,7 @@
             this.dataSales.EnableHeadersVisualStyles = false;
             this.dataSales.GridColor = System.Drawing.Color.Silver;
             this.dataSales.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dataSales.Location = new System.Drawing.Point(23, 139);
+            this.dataSales.Location = new System.Drawing.Point(19, 139);
             this.dataSales.MultiSelect = false;
             this.dataSales.Name = "dataSales";
             this.dataSales.ReadOnly = true;
@@ -197,7 +197,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 15);
+            this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 41);
             this.label1.TabIndex = 15;
@@ -215,7 +215,7 @@
             this.btnMesero.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnMesero.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMesero.IconSize = 25;
-            this.btnMesero.Location = new System.Drawing.Point(529, 82);
+            this.btnMesero.Location = new System.Drawing.Point(525, 82);
             this.btnMesero.Name = "btnMesero";
             this.btnMesero.Size = new System.Drawing.Size(33, 35);
             this.btnMesero.TabIndex = 66;
@@ -227,7 +227,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(375, 50);
+            this.label2.Location = new System.Drawing.Point(371, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 15);
             this.label2.TabIndex = 63;
@@ -237,7 +237,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(805, 50);
+            this.label3.Location = new System.Drawing.Point(801, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 15);
             this.label3.TabIndex = 70;
@@ -247,11 +247,51 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(589, 50);
+            this.label4.Location = new System.Drawing.Point(585, 50);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 15);
             this.label4.TabIndex = 69;
             this.label4.Text = "Desde:";
+            // 
+            // sPanel1
+            // 
+            this.sPanel1.BackColor = System.Drawing.Color.White;
+            this.sPanel1.BorderColor = System.Drawing.Color.White;
+            this.sPanel1.BorderRadius = 10;
+            this.sPanel1.BorderSize = 0;
+            this.sPanel1.ForeColor = System.Drawing.Color.White;
+            this.sPanel1.Location = new System.Drawing.Point(584, 74);
+            this.sPanel1.Name = "sPanel1";
+            this.sPanel1.Size = new System.Drawing.Size(195, 46);
+            this.sPanel1.TabIndex = 72;
+            // 
+            // sPanel2
+            // 
+            this.sPanel2.BackColor = System.Drawing.Color.White;
+            this.sPanel2.BorderColor = System.Drawing.Color.White;
+            this.sPanel2.BorderRadius = 10;
+            this.sPanel2.BorderSize = 0;
+            this.sPanel2.Controls.Add(this.customDateTimePicker2);
+            this.sPanel2.ForeColor = System.Drawing.Color.White;
+            this.sPanel2.Location = new System.Drawing.Point(800, 74);
+            this.sPanel2.Name = "sPanel2";
+            this.sPanel2.Size = new System.Drawing.Size(195, 46);
+            this.sPanel2.TabIndex = 73;
+            // 
+            // customDateTimePicker2
+            // 
+            this.customDateTimePicker2.BorderColor = System.Drawing.Color.Black;
+            this.customDateTimePicker2.BorderSize = 0;
+            this.customDateTimePicker2.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customDateTimePicker2.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
+            this.customDateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.customDateTimePicker2.Location = new System.Drawing.Point(4, 7);
+            this.customDateTimePicker2.MinimumSize = new System.Drawing.Size(4, 35);
+            this.customDateTimePicker2.Name = "customDateTimePicker2";
+            this.customDateTimePicker2.Size = new System.Drawing.Size(188, 35);
+            this.customDateTimePicker2.SkinColor = System.Drawing.Color.White;
+            this.customDateTimePicker2.TabIndex = 74;
+            this.customDateTimePicker2.TextColor = System.Drawing.Color.Black;
             // 
             // customDateTimePicker1
             // 
@@ -260,7 +300,7 @@
             this.customDateTimePicker1.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customDateTimePicker1.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
             this.customDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.customDateTimePicker1.Location = new System.Drawing.Point(592, 81);
+            this.customDateTimePicker1.Location = new System.Drawing.Point(588, 81);
             this.customDateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
             this.customDateTimePicker1.Name = "customDateTimePicker1";
             this.customDateTimePicker1.Size = new System.Drawing.Size(188, 35);
@@ -283,7 +323,7 @@
             "Emilia",
             "Juan",
             "Facundo"});
-            this.cboMesero.Location = new System.Drawing.Point(378, 89);
+            this.cboMesero.Location = new System.Drawing.Point(374, 89);
             this.cboMesero.Name = "cboMesero";
             this.cboMesero.Size = new System.Drawing.Size(160, 24);
             this.cboMesero.TabIndex = 65;
@@ -298,7 +338,7 @@
             this.modernTextBox2.Enabled = false;
             this.modernTextBox2.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modernTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox2.Location = new System.Drawing.Point(372, 74);
+            this.modernTextBox2.Location = new System.Drawing.Point(368, 74);
             this.modernTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.modernTextBox2.Multiline = false;
             this.modernTextBox2.Name = "modernTextBox2";
@@ -320,7 +360,7 @@
             this.modernTextBox1.BorderSize = 1;
             this.modernTextBox1.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modernTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox1.Location = new System.Drawing.Point(23, 74);
+            this.modernTextBox1.Location = new System.Drawing.Point(19, 74);
             this.modernTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.modernTextBox1.Multiline = false;
             this.modernTextBox1.Name = "modernTextBox1";
@@ -332,46 +372,6 @@
             this.modernTextBox1.TabIndex = 18;
             this.modernTextBox1.Texts = "";
             this.modernTextBox1.UnderlinedStyle = false;
-            // 
-            // sPanel1
-            // 
-            this.sPanel1.BackColor = System.Drawing.Color.White;
-            this.sPanel1.BorderColor = System.Drawing.Color.White;
-            this.sPanel1.BorderRadius = 10;
-            this.sPanel1.BorderSize = 0;
-            this.sPanel1.ForeColor = System.Drawing.Color.White;
-            this.sPanel1.Location = new System.Drawing.Point(588, 74);
-            this.sPanel1.Name = "sPanel1";
-            this.sPanel1.Size = new System.Drawing.Size(195, 46);
-            this.sPanel1.TabIndex = 72;
-            // 
-            // sPanel2
-            // 
-            this.sPanel2.BackColor = System.Drawing.Color.White;
-            this.sPanel2.BorderColor = System.Drawing.Color.White;
-            this.sPanel2.BorderRadius = 10;
-            this.sPanel2.BorderSize = 0;
-            this.sPanel2.Controls.Add(this.customDateTimePicker2);
-            this.sPanel2.ForeColor = System.Drawing.Color.White;
-            this.sPanel2.Location = new System.Drawing.Point(804, 74);
-            this.sPanel2.Name = "sPanel2";
-            this.sPanel2.Size = new System.Drawing.Size(195, 46);
-            this.sPanel2.TabIndex = 73;
-            // 
-            // customDateTimePicker2
-            // 
-            this.customDateTimePicker2.BorderColor = System.Drawing.Color.Black;
-            this.customDateTimePicker2.BorderSize = 0;
-            this.customDateTimePicker2.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customDateTimePicker2.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
-            this.customDateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.customDateTimePicker2.Location = new System.Drawing.Point(4, 7);
-            this.customDateTimePicker2.MinimumSize = new System.Drawing.Size(4, 35);
-            this.customDateTimePicker2.Name = "customDateTimePicker2";
-            this.customDateTimePicker2.Size = new System.Drawing.Size(188, 35);
-            this.customDateTimePicker2.SkinColor = System.Drawing.Color.White;
-            this.customDateTimePicker2.TabIndex = 74;
-            this.customDateTimePicker2.TextColor = System.Drawing.Color.Black;
             // 
             // SalesListForm
             // 
@@ -392,7 +392,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sPanel1);
             this.Name = "SalesListForm";
-            this.Size = new System.Drawing.Size(1030, 720);
+            this.Size = new System.Drawing.Size(1014, 681);
             this.Load += new System.EventHandler(this.SalesListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSales)).EndInit();
             this.sPanel2.ResumeLayout(false);

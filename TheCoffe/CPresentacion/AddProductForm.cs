@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -110,6 +111,35 @@ namespace TheCoffe.App
         private void btnCategory_Click_1(object sender, EventArgs e)
         {
             cboCategory.DroppedDown = !cboCategory.DroppedDown;
+        }
+
+        private void btnSelectImage_Click(object sender, EventArgs e)
+        {
+            selectImageDialog.Filter = "Imagenes (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
+            isShowingMsgBox = true;
+            if (selectImageDialog.ShowDialog() == DialogResult.OK)
+            {
+                string selectedFilePath = selectImageDialog.FileName;
+                string fileName = Path.GetFileName(selectedFilePath);
+                string projectDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                string resourcesFolderPath = Path.Combine(projectDirectory, "Resources");
+                string imagesFolderPath = Path.Combine(resourcesFolderPath, "Products");
+                if (!Directory.Exists(imagesFolderPath))
+                {
+                    Directory.CreateDirectory(imagesFolderPath);
+                }
+                string destinationFilePath = Path.Combine(imagesFolderPath, fileName);
+                try
+                {
+                    File.Copy(selectedFilePath, destinationFilePath, true);
+                    pboImage.Image = Image.FromFile(destinationFilePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al copiar la imagen: {ex.Message}");
+                }
+            }
+            isShowingMsgBox = false;
         }
     }
 }

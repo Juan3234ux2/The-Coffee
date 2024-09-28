@@ -31,9 +31,9 @@
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlSideBar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new WindowsFormsApplication1.RoundButton();
             this.btnReports = new WindowsFormsApplication1.RoundButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMain = new WindowsFormsApplication1.RoundButton();
             this.pnlSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,16 +72,6 @@
             this.panel2.Size = new System.Drawing.Size(2, 680);
             this.panel2.TabIndex = 22;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TheCoffe.Properties.Resources.logo_sidebar;
-            this.pictureBox1.InitialImage = global::TheCoffe.Properties.Resources.logo_sidebar;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(223, 80);
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.White;
@@ -111,6 +101,7 @@
             this.btnLogout.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnReports
             // 
@@ -143,10 +134,20 @@
             this.btnReports.UseVisualStyleBackColor = false;
             this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TheCoffe.Properties.Resources.logo_sidebar;
+            this.pictureBox1.InitialImage = global::TheCoffe.Properties.Resources.logo_sidebar;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(223, 80);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnMain
             // 
-            this.btnMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.btnMain.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.btnMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnMain.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnMain.BorderColor = System.Drawing.Color.Transparent;
             this.btnMain.BorderRadius = 10;
             this.btnMain.BorderSize = 0;
@@ -173,6 +174,7 @@
             this.btnMain.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnMain.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMain.UseVisualStyleBackColor = false;
+            this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
             // 
             // MainFormManager
             // 

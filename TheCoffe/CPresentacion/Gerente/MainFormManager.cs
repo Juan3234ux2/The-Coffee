@@ -50,7 +50,7 @@ namespace TheCoffe.CPresentacion.Gerente
         {
             RemoveActiveSection();
             activeButton.ForeColor = Color.FromArgb(96, 75, 232);
-            activeButton.BackgroundColor = Color.FromArgb(222, 232, 250);
+            activeButton.BackgroundColor = Color.FromArgb(245, 240, 240);
             activeButton.IconColor = Color.FromArgb(96, 75, 232);
         }
 
@@ -60,6 +60,7 @@ namespace TheCoffe.CPresentacion.Gerente
             {
                 if (control is RoundButton button)
                 {
+                    if (control.Name == "btnLogout") continue;
                     button.BackColor = Color.Transparent;
                     button.ForeColor = Color.DimGray;
                     button.IconColor = Color.DimGray;
@@ -71,6 +72,22 @@ namespace TheCoffe.CPresentacion.Gerente
         {
             SetActiveSection(sender as RoundButton);
             LoadUserControl(new SalesListForm());
+        }
+
+        private void btnMain_Click(object sender, EventArgs e)
+        {
+            SetActiveSection(sender as RoundButton);
+            LoadUserControl(new SalesReportsForm());
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Estás seguro que deseas cerrar sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }
