@@ -82,5 +82,10 @@ namespace TheCoffe
             SetActiveSection(sender as RoundButton);
             LoadUserControl(tablesForm);
         }
+
+        private void pnlSideBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
