@@ -54,7 +54,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 15);
+            this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(173, 41);
             this.label1.TabIndex = 1;
@@ -100,7 +100,7 @@
             this.dataProducts.EnableHeadersVisualStyles = false;
             this.dataProducts.GridColor = System.Drawing.Color.Silver;
             this.dataProducts.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dataProducts.Location = new System.Drawing.Point(23, 139);
+            this.dataProducts.Location = new System.Drawing.Point(19, 139);
             this.dataProducts.MultiSelect = false;
             this.dataProducts.Name = "dataProducts";
             this.dataProducts.ReadOnly = true;
@@ -192,7 +192,7 @@
             this.modernTextBox1.BorderSize = 1;
             this.modernTextBox1.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modernTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox1.Location = new System.Drawing.Point(23, 74);
+            this.modernTextBox1.Location = new System.Drawing.Point(19, 74);
             this.modernTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.modernTextBox1.Multiline = false;
             this.modernTextBox1.Name = "modernTextBox1";
@@ -239,7 +239,7 @@
             this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 25;
-            this.iconButton5.Location = new System.Drawing.Point(310, 82);
+            this.iconButton5.Location = new System.Drawing.Point(306, 82);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(38, 32);
             this.iconButton5.TabIndex = 14;
@@ -262,7 +262,7 @@
             this.roundButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.roundButton4.IconSize = 20;
             this.roundButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.roundButton4.Location = new System.Drawing.Point(845, 15);
+            this.roundButton4.Location = new System.Drawing.Point(841, 15);
             this.roundButton4.Name = "roundButton4";
             this.roundButton4.Size = new System.Drawing.Size(156, 43);
             this.roundButton4.TabIndex = 2;
@@ -288,7 +288,7 @@
             this.btnRemovedProducts.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRemovedProducts.IconSize = 20;
             this.btnRemovedProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemovedProducts.Location = new System.Drawing.Point(648, 15);
+            this.btnRemovedProducts.Location = new System.Drawing.Point(644, 15);
             this.btnRemovedProducts.Name = "btnRemovedProducts";
             this.btnRemovedProducts.Size = new System.Drawing.Size(156, 43);
             this.btnRemovedProducts.TabIndex = 15;
@@ -309,7 +309,7 @@
             this.Controls.Add(this.roundButton4);
             this.Controls.Add(this.label1);
             this.Name = "ProductListForm";
-            this.Size = new System.Drawing.Size(1030, 720);
+            this.Size = new System.Drawing.Size(1014, 681);
             this.Load += new System.EventHandler(this.ProductList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).EndInit();
             this.ResumeLayout(false);

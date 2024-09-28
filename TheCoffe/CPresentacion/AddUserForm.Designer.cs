@@ -43,13 +43,14 @@
             this.txtNumber = new TheCoffe.Components.ModernTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAdd = new AltoControls.AltoButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.altoButton1 = new AltoControls.AltoButton();
+            this.pboAvatar = new System.Windows.Forms.PictureBox();
+            this.btnSelectAvatar = new AltoControls.AltoButton();
             this.label5 = new System.Windows.Forms.Label();
             this.modernTextBox4 = new TheCoffe.Components.ModernTextBox();
             this.cboRol = new CustomComboBox();
             this.btnRol = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.selectImageDialog = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.pboAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAddUser
@@ -224,15 +225,15 @@
             // 
             // btnWatchPassword
             // 
-            this.btnWatchPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.btnWatchPassword.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.btnWatchPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnWatchPassword.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnWatchPassword.BorderColor = System.Drawing.Color.Black;
             this.btnWatchPassword.BorderRadius = 0;
             this.btnWatchPassword.BorderSize = 0;
             this.btnWatchPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnWatchPassword.FlatAppearance.BorderSize = 0;
-            this.btnWatchPassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.btnWatchPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.btnWatchPassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnWatchPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnWatchPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWatchPassword.ForeColor = System.Drawing.Color.White;
             this.btnWatchPassword.IconChar = FontAwesome.Sharp.IconChar.Eye;
@@ -302,37 +303,38 @@
             this.btnAdd.Transparency = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // pictureBox1
+            // pboAvatar
             // 
-            this.pictureBox1.Image = global::TheCoffe.Properties.Resources.hombre;
-            this.pictureBox1.InitialImage = global::TheCoffe.Properties.Resources.hombre;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 326);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 52;
-            this.pictureBox1.TabStop = false;
+            this.pboAvatar.Image = global::TheCoffe.Properties.Resources.hombre;
+            this.pboAvatar.InitialImage = global::TheCoffe.Properties.Resources.hombre;
+            this.pboAvatar.Location = new System.Drawing.Point(22, 326);
+            this.pboAvatar.Name = "pboAvatar";
+            this.pboAvatar.Size = new System.Drawing.Size(100, 100);
+            this.pboAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboAvatar.TabIndex = 52;
+            this.pboAvatar.TabStop = false;
             // 
-            // altoButton1
+            // btnSelectAvatar
             // 
-            this.altoButton1.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.altoButton1.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.altoButton1.BackColor = System.Drawing.Color.Transparent;
-            this.altoButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.altoButton1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.altoButton1.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.altoButton1.ForeColor = System.Drawing.Color.White;
-            this.altoButton1.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.altoButton1.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.altoButton1.Location = new System.Drawing.Point(128, 356);
-            this.altoButton1.Name = "altoButton1";
-            this.altoButton1.Radius = 10;
-            this.altoButton1.Size = new System.Drawing.Size(135, 45);
-            this.altoButton1.Stroke = false;
-            this.altoButton1.StrokeColor = System.Drawing.Color.Gray;
-            this.altoButton1.TabIndex = 53;
-            this.altoButton1.Text = "Cambiar Imagen ";
-            this.altoButton1.Transparency = false;
+            this.btnSelectAvatar.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnSelectAvatar.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnSelectAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSelectAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelectAvatar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnSelectAvatar.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectAvatar.ForeColor = System.Drawing.Color.White;
+            this.btnSelectAvatar.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnSelectAvatar.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnSelectAvatar.Location = new System.Drawing.Point(128, 356);
+            this.btnSelectAvatar.Name = "btnSelectAvatar";
+            this.btnSelectAvatar.Radius = 10;
+            this.btnSelectAvatar.Size = new System.Drawing.Size(135, 45);
+            this.btnSelectAvatar.Stroke = false;
+            this.btnSelectAvatar.StrokeColor = System.Drawing.Color.Gray;
+            this.btnSelectAvatar.TabIndex = 53;
+            this.btnSelectAvatar.Text = "Cambiar Imagen ";
+            this.btnSelectAvatar.Transparency = false;
+            this.btnSelectAvatar.Click += new System.EventHandler(this.btnSelectAvatar_Click);
             // 
             // label5
             // 
@@ -406,6 +408,10 @@
             this.btnRol.UseVisualStyleBackColor = false;
             this.btnRol.Click += new System.EventHandler(this.btnRol_Click);
             // 
+            // selectImageDialog
+            // 
+            this.selectImageDialog.FileName = "openFileDialog1";
+            // 
             // AddUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,8 +421,8 @@
             this.Controls.Add(this.btnRol);
             this.Controls.Add(this.cboRol);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.altoButton1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnSelectAvatar);
+            this.Controls.Add(this.pboAvatar);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtNumber);
             this.Controls.Add(this.label4);
@@ -440,7 +446,7 @@
             this.Text = "AddUserForm";
             this.Deactivate += new System.EventHandler(this.AddUserForm_Deactivate);
             this.Load += new System.EventHandler(this.AddUserForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -463,11 +469,12 @@
         private Components.ModernTextBox txtNumber;
         private System.Windows.Forms.Label label4;
         private AltoControls.AltoButton btnAdd;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private AltoControls.AltoButton altoButton1;
+        private System.Windows.Forms.PictureBox pboAvatar;
+        private AltoControls.AltoButton btnSelectAvatar;
         private System.Windows.Forms.Label label5;
         private Components.ModernTextBox modernTextBox4;
         private CustomComboBox cboRol;
         private FontAwesome.Sharp.IconButton btnRol;
+        private System.Windows.Forms.OpenFileDialog selectImageDialog;
     }
 }

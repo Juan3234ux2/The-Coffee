@@ -83,14 +83,15 @@ namespace TheCoffe
             LoadUserControl(tablesForm);
         }
 
-        private void pnlSideBar_Paint(object sender, PaintEventArgs e)
+
+        private void btnLogout_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("¿Estás seguro que deseas cerrar sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-        }
-
-        private void pnlMain_Paint(object sender, PaintEventArgs e)
-        {
-
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

@@ -81,7 +81,7 @@
             this.dataCategory.EnableHeadersVisualStyles = false;
             this.dataCategory.GridColor = System.Drawing.Color.Silver;
             this.dataCategory.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dataCategory.Location = new System.Drawing.Point(23, 139);
+            this.dataCategory.Location = new System.Drawing.Point(20, 139);
             this.dataCategory.MultiSelect = false;
             this.dataCategory.Name = "dataCategory";
             this.dataCategory.ReadOnly = true;
@@ -120,7 +120,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 15);
+            this.label1.Location = new System.Drawing.Point(13, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 41);
             this.label1.TabIndex = 15;
@@ -159,7 +159,7 @@
             this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 25;
-            this.iconButton5.Location = new System.Drawing.Point(308, 82);
+            this.iconButton5.Location = new System.Drawing.Point(305, 82);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(38, 32);
             this.iconButton5.TabIndex = 19;
@@ -182,7 +182,7 @@
             this.btnRemovedCategories.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRemovedCategories.IconSize = 20;
             this.btnRemovedCategories.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemovedCategories.Location = new System.Drawing.Point(639, 15);
+            this.btnRemovedCategories.Location = new System.Drawing.Point(636, 15);
             this.btnRemovedCategories.Name = "btnRemovedCategories";
             this.btnRemovedCategories.Size = new System.Drawing.Size(165, 43);
             this.btnRemovedCategories.TabIndex = 20;
@@ -200,7 +200,7 @@
             this.modernTextBox1.BorderSize = 1;
             this.modernTextBox1.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modernTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox1.Location = new System.Drawing.Point(23, 74);
+            this.modernTextBox1.Location = new System.Drawing.Point(20, 74);
             this.modernTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.modernTextBox1.Multiline = false;
             this.modernTextBox1.Name = "modernTextBox1";
@@ -230,7 +230,7 @@
             this.btnAddCategory.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddCategory.IconSize = 20;
             this.btnAddCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddCategory.Location = new System.Drawing.Point(843, 15);
+            this.btnAddCategory.Location = new System.Drawing.Point(840, 15);
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Size = new System.Drawing.Size(156, 43);
             this.btnAddCategory.TabIndex = 16;
@@ -270,7 +270,7 @@
             this.Controls.Add(this.btnAddCategory);
             this.Controls.Add(this.label1);
             this.Name = "CategoryList";
-            this.Size = new System.Drawing.Size(1030, 720);
+            this.Size = new System.Drawing.Size(1014, 681);
             this.Load += new System.EventHandler(this.CategoryList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataCategory)).EndInit();
             this.ResumeLayout(false);
