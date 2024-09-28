@@ -7,16 +7,16 @@ namespace TheCoffe.Components
 {
     class CustomDateTimePicker : DateTimePicker
     {
-        private Color skinColor = Color.MediumSlateBlue;
+        private Color skinColor = Color.White;
         private Color textColor = Color.White;
-        private Color borderColor = Color.PaleVioletRed;
+        private Color borderColor = Color.Black;
         private int borderSize = 0;
-
         private bool droppedDown = false;
-        private Image calendarIcon = Properties.Resources.calendar;
+        private Image calendarIcon = Properties.Resources.calendarDark;
         private RectangleF iconButtonArea;
         private const int calendarIconWidth = 34;
         private const int arrowIconWidth = 17;
+
 
         public Color SkinColor
         {
@@ -25,11 +25,12 @@ namespace TheCoffe.Components
             {
                 skinColor = value;
                 if (skinColor.GetBrightness() >= 0.8F)
-                    calendarIcon = Properties.Resources.calendar;
-                else calendarIcon = Properties.Resources.calendar;
+                    calendarIcon = Properties.Resources.calendarDark;
+                else calendarIcon = Properties.Resources.calendarWhite;
                 this.Invalidate();
             }
         }
+
         public Color TextColor
         {
             get { return textColor; }
@@ -65,7 +66,6 @@ namespace TheCoffe.Components
             this.MinimumSize = new Size(0, 35);
             this.Font = new Font(this.Font.Name, 9.5F);
         }
-        //Overridden methods
         protected override void OnDropDown(EventArgs eventargs)
         {
             base.OnDropDown(eventargs);
@@ -94,15 +94,10 @@ namespace TheCoffe.Components
                 RectangleF iconArea = new RectangleF(clientArea.Width - calendarIconWidth, 0, calendarIconWidth, clientArea.Height);
                 penBorder.Alignment = PenAlignment.Inset;
                 textFormat.LineAlignment = StringAlignment.Center;
-                //Draw surface
                 graphics.FillRectangle(skinBrush, clientArea);
-                //Draw text
                 graphics.DrawString("   " + this.Text, this.Font, textBrush, clientArea, textFormat);
-                //Draw open calendar icon highlight
                 if (droppedDown == true) graphics.FillRectangle(openIconBrush, iconArea);
-                //Draw border 
                 if (borderSize >= 1) graphics.DrawRectangle(penBorder, clientArea.X, clientArea.Y, clientArea.Width, clientArea.Height);
-                //Draw icon
                 graphics.DrawImage(calendarIcon, this.Width - calendarIcon.Width - 9, (this.Height - calendarIcon.Height) / 2);
             }
         }
