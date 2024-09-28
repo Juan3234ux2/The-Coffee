@@ -41,7 +41,7 @@ namespace TheCoffe
         private void SetActiveSection(RoundButton activeButton) {
             RemoveActiveSection();
             activeButton.ForeColor = Color.FromArgb(96, 75, 232);
-            activeButton.BackgroundColor = Color.FromArgb(222, 232, 250);
+            activeButton.BackgroundColor = Color.FromArgb(245, 240, 240);
             activeButton.IconColor = Color.FromArgb(96, 75, 232);
         }
         private void RemoveActiveSection()

@@ -75,7 +75,7 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtDescription.BorderColor = System.Drawing.Color.Transparent;
             this.txtDescription.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtDescription.BorderRadius = 10;
@@ -150,7 +150,7 @@
             // 
             // btnCategory
             // 
-            this.btnCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.btnCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCategory.FlatAppearance.BorderSize = 0;
             this.btnCategory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
@@ -170,7 +170,7 @@
             // 
             // cboCategory
             // 
-            this.cboCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.cboCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.cboCategory.BorderColor = System.Drawing.Color.Transparent;
             this.cboCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -190,7 +190,7 @@
             // 
             // modernTextBox4
             // 
-            this.modernTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.modernTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.modernTextBox4.BorderColor = System.Drawing.Color.Transparent;
             this.modernTextBox4.BorderFocusColor = System.Drawing.Color.Transparent;
             this.modernTextBox4.BorderRadius = 10;
@@ -223,7 +223,7 @@
             // 
             // txtName
             // 
-            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtName.BorderColor = System.Drawing.Color.Transparent;
             this.txtName.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtName.BorderRadius = 10;
@@ -246,7 +246,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtPrice.BorderColor = System.Drawing.Color.Transparent;
             this.txtPrice.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtPrice.BorderRadius = 10;
