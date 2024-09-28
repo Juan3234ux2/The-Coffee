@@ -31,9 +31,9 @@
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlSideBar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnLogout = new WindowsFormsApplication1.RoundButton();
-            this.btnTables = new WindowsFormsApplication1.RoundButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new WindowsFormsApplication1.RoundButton();
+            this.btnReports = new WindowsFormsApplication1.RoundButton();
             this.btnMain = new WindowsFormsApplication1.RoundButton();
             this.pnlSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,13 +47,14 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1014, 681);
             this.pnlMain.TabIndex = 4;
+            this.pnlMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMain_Paint);
             // 
             // pnlSideBar
             // 
             this.pnlSideBar.BackColor = System.Drawing.Color.White;
             this.pnlSideBar.Controls.Add(this.panel2);
             this.pnlSideBar.Controls.Add(this.btnLogout);
-            this.pnlSideBar.Controls.Add(this.btnTables);
+            this.pnlSideBar.Controls.Add(this.btnReports);
             this.pnlSideBar.Controls.Add(this.pictureBox1);
             this.pnlSideBar.Controls.Add(this.btnMain);
             this.pnlSideBar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -70,6 +71,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(2, 680);
             this.panel2.TabIndex = 22;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TheCoffe.Properties.Resources.logo_sidebar;
+            this.pictureBox1.InitialImage = global::TheCoffe.Properties.Resources.logo_sidebar;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(223, 80);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
             // 
             // btnLogout
             // 
@@ -101,45 +112,36 @@
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogout.UseVisualStyleBackColor = false;
             // 
-            // btnTables
+            // btnReports
             // 
-            this.btnTables.BackColor = System.Drawing.Color.White;
-            this.btnTables.BackgroundColor = System.Drawing.Color.White;
-            this.btnTables.BorderColor = System.Drawing.Color.Transparent;
-            this.btnTables.BorderRadius = 10;
-            this.btnTables.BorderSize = 0;
-            this.btnTables.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTables.FlatAppearance.BorderSize = 0;
-            this.btnTables.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTables.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTables.ForeColor = System.Drawing.Color.DimGray;
-            this.btnTables.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
-            this.btnTables.IconColor = System.Drawing.Color.DimGray;
-            this.btnTables.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTables.IconSize = 35;
-            this.btnTables.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnTables.Location = new System.Drawing.Point(3, 153);
-            this.btnTables.MinimumSize = new System.Drawing.Size(58, 0);
-            this.btnTables.Name = "btnTables";
-            this.btnTables.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
-            this.btnTables.Size = new System.Drawing.Size(244, 45);
-            this.btnTables.TabIndex = 20;
-            this.btnTables.Tag = "Mesas";
-            this.btnTables.Text = "  Reportes";
-            this.btnTables.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTables.TextColor = System.Drawing.Color.DimGray;
-            this.btnTables.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTables.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TheCoffe.Properties.Resources.logo_sidebar;
-            this.pictureBox1.InitialImage = global::TheCoffe.Properties.Resources.logo_sidebar;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(223, 80);
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
+            this.btnReports.BackColor = System.Drawing.Color.White;
+            this.btnReports.BackgroundColor = System.Drawing.Color.White;
+            this.btnReports.BorderColor = System.Drawing.Color.Transparent;
+            this.btnReports.BorderRadius = 10;
+            this.btnReports.BorderSize = 0;
+            this.btnReports.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReports.FlatAppearance.BorderSize = 0;
+            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.ForeColor = System.Drawing.Color.DimGray;
+            this.btnReports.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
+            this.btnReports.IconColor = System.Drawing.Color.DimGray;
+            this.btnReports.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReports.IconSize = 35;
+            this.btnReports.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnReports.Location = new System.Drawing.Point(3, 153);
+            this.btnReports.MinimumSize = new System.Drawing.Size(58, 0);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
+            this.btnReports.Size = new System.Drawing.Size(244, 45);
+            this.btnReports.TabIndex = 20;
+            this.btnReports.Tag = "Mesas";
+            this.btnReports.Text = "  Reportes";
+            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReports.TextColor = System.Drawing.Color.DimGray;
+            this.btnReports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReports.UseVisualStyleBackColor = false;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnMain
             // 
@@ -180,8 +182,11 @@
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlSideBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "MainFormManager";
-            this.Text = "The Coffie";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "The Coffee";
+            this.Load += new System.EventHandler(this.MainFormManager_Load);
             this.pnlSideBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -194,7 +199,7 @@
         private System.Windows.Forms.Panel pnlSideBar;
         private System.Windows.Forms.Panel panel2;
         private WindowsFormsApplication1.RoundButton btnLogout;
-        private WindowsFormsApplication1.RoundButton btnTables;
+        private WindowsFormsApplication1.RoundButton btnReports;
         private System.Windows.Forms.PictureBox pictureBox1;
         private WindowsFormsApplication1.RoundButton btnMain;
     }

@@ -94,5 +94,10 @@ namespace TheCoffe.App
         {
             InputValidator.ValidateInput(e, InputValidator.InputType.Digits);
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

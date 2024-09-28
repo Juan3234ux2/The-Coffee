@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheCoffe.CPresentacion.General;
+using TheCoffe.CPresentacion.Gerente;
 
 namespace TheCoffe
 {
@@ -23,13 +24,18 @@ namespace TheCoffe
                 {
                     using (SelectModeForm selectMode = new SelectModeForm())
                     {
-                        if (selectMode.ShowDialog() == DialogResult.OK)
+                        switch (selectMode.ShowDialog())
                         {
-                            Application.Run(new MainFormCashier());
-                        }
-                        else
-                        {
-                            Application.Run(new MainForm());
+                            case DialogResult.OK:
+                                Application.Run(new MainFormCashier());
+                                    break;
+                            case DialogResult.Yes:
+                                Application.Run(new MainForm());
+                                break;
+                            case DialogResult.Ignore:
+                                Application.Run(new MainFormManager());
+                                break;
+
                         }
                     }
                 }

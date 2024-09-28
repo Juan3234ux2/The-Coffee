@@ -212,7 +212,7 @@
             this.btnMesero.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnMesero.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMesero.IconSize = 25;
-            this.btnMesero.Location = new System.Drawing.Point(614, 83);
+            this.btnMesero.Location = new System.Drawing.Point(583, 83);
             this.btnMesero.Name = "btnMesero";
             this.btnMesero.Size = new System.Drawing.Size(33, 35);
             this.btnMesero.TabIndex = 66;
@@ -224,7 +224,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(451, 50);
+            this.label2.Location = new System.Drawing.Point(420, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 15);
             this.label2.TabIndex = 63;
@@ -245,7 +245,7 @@
             "Emilia",
             "Juan",
             "Facundo"});
-            this.cboMesero.Location = new System.Drawing.Point(460, 89);
+            this.cboMesero.Location = new System.Drawing.Point(429, 89);
             this.cboMesero.Name = "cboMesero";
             this.cboMesero.Size = new System.Drawing.Size(160, 24);
             this.cboMesero.TabIndex = 65;
@@ -260,7 +260,7 @@
             this.modernTextBox2.Enabled = false;
             this.modernTextBox2.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modernTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox2.Location = new System.Drawing.Point(454, 74);
+            this.modernTextBox2.Location = new System.Drawing.Point(423, 74);
             this.modernTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.modernTextBox2.Multiline = false;
             this.modernTextBox2.Name = "modernTextBox2";
@@ -299,7 +299,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(858, 18);
+            this.label3.Location = new System.Drawing.Point(858, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 15);
             this.label3.TabIndex = 70;
@@ -309,7 +309,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(683, 18);
+            this.label4.Location = new System.Drawing.Point(683, 75);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 15);
             this.label4.TabIndex = 69;
@@ -318,7 +318,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(861, 34);
+            this.dateTimePicker2.Location = new System.Drawing.Point(861, 91);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(134, 23);
             this.dateTimePicker2.TabIndex = 68;
@@ -326,7 +326,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(686, 34);
+            this.dateTimePicker1.Location = new System.Drawing.Point(686, 91);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(134, 23);
             this.dateTimePicker1.TabIndex = 67;

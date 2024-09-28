@@ -43,6 +43,8 @@
             this.txtIncome = new TheCoffe.Components.ModernTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAddWaiter = new AltoControls.AltoButton();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // txtName
@@ -214,9 +216,10 @@
             this.txtExit.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtExit.BorderRadius = 10;
             this.txtExit.BorderSize = 1;
+            this.txtExit.Enabled = false;
             this.txtExit.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtExit.Location = new System.Drawing.Point(249, 260);
+            this.txtExit.Location = new System.Drawing.Point(249, 262);
             this.txtExit.Margin = new System.Windows.Forms.Padding(4);
             this.txtExit.Multiline = false;
             this.txtExit.Name = "txtExit";
@@ -239,6 +242,7 @@
             this.label3.Size = new System.Drawing.Size(90, 15);
             this.label3.TabIndex = 49;
             this.label3.Text = "Hora de Salida";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtIncome
             // 
@@ -247,6 +251,7 @@
             this.txtIncome.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtIncome.BorderRadius = 10;
             this.txtIncome.BorderSize = 1;
+            this.txtIncome.Enabled = false;
             this.txtIncome.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIncome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtIncome.Location = new System.Drawing.Point(29, 260);
@@ -295,12 +300,38 @@
             this.btnAddWaiter.Transparency = false;
             this.btnAddWaiter.Click += new System.EventHandler(this.btnAddWaiter_Click);
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(261, 276);
+            this.maskedTextBox1.Mask = "00:00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(149, 19);
+            this.maskedTextBox1.TabIndex = 53;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.maskedTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox2.Location = new System.Drawing.Point(43, 276);
+            this.maskedTextBox2.Mask = "00:00";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(149, 19);
+            this.maskedTextBox2.TabIndex = 54;
+            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            // 
             // AddWaiterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(472, 419);
+            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.btnAddWaiter);
             this.Controls.Add(this.txtExit);
             this.Controls.Add(this.label3);
@@ -345,5 +376,7 @@
         private Components.ModernTextBox txtIncome;
         private System.Windows.Forms.Label label4;
         private AltoControls.AltoButton btnAddWaiter;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
     }
 }

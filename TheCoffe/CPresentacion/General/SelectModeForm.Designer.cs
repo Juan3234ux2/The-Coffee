@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdmin = new WindowsFormsApplication1.RoundButton();
             this.btnPos = new WindowsFormsApplication1.RoundButton();
+            this.roundButton1 = new WindowsFormsApplication1.RoundButton();
             this.SuspendLayout();
             // 
             // btnClose
@@ -91,6 +92,7 @@
             this.btnAdmin.TextColor = System.Drawing.Color.White;
             this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdmin.UseVisualStyleBackColor = false;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // btnPos
             // 
@@ -121,12 +123,42 @@
             this.btnPos.UseVisualStyleBackColor = false;
             this.btnPos.Click += new System.EventHandler(this.btnPos_Click);
             // 
+            // roundButton1
+            // 
+            this.roundButton1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.roundButton1.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.roundButton1.BorderColor = System.Drawing.Color.Black;
+            this.roundButton1.BorderRadius = 20;
+            this.roundButton1.BorderSize = 0;
+            this.roundButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton1.DialogResult = System.Windows.Forms.DialogResult.Ignore;
+            this.roundButton1.FlatAppearance.BorderSize = 0;
+            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton1.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
+            this.roundButton1.ForeColor = System.Drawing.Color.White;
+            this.roundButton1.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
+            this.roundButton1.IconColor = System.Drawing.Color.White;
+            this.roundButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton1.IconSize = 40;
+            this.roundButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundButton1.Location = new System.Drawing.Point(12, 228);
+            this.roundButton1.Name = "roundButton1";
+            this.roundButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.roundButton1.Size = new System.Drawing.Size(410, 60);
+            this.roundButton1.TabIndex = 17;
+            this.roundButton1.Text = "     Panel Gerente";
+            this.roundButton1.TextColor = System.Drawing.Color.White;
+            this.roundButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.roundButton1.UseVisualStyleBackColor = false;
+            this.roundButton1.Click += new System.EventHandler(this.roundButton1_Click);
+            // 
             // SelectModeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(434, 237);
+            this.ClientSize = new System.Drawing.Size(434, 306);
+            this.Controls.Add(this.roundButton1);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.btnPos);
             this.Controls.Add(this.label1);
@@ -150,5 +182,6 @@
         private WindowsFormsApplication1.RoundButton btnPos;
         private WindowsFormsApplication1.RoundButton btnAdmin;
         private System.Windows.Forms.Label label1;
+        private WindowsFormsApplication1.RoundButton roundButton1;
     }
 }

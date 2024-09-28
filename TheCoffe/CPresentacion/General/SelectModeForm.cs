@@ -46,5 +46,15 @@ namespace TheCoffe.CPresentacion.General
         {
             
         }
+
+        private void roundButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

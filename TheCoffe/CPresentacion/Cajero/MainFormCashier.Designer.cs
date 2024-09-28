@@ -177,6 +177,7 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1014, 681);
             this.pnlMain.TabIndex = 2;
+            this.pnlMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMain_Paint);
             // 
             // transitionTimer
             // 
