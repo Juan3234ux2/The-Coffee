@@ -1,16 +1,16 @@
-﻿namespace TheCoffe
+﻿namespace TheCoffe.CPresentacion.Gerente
 {
-    partial class MainFormCashier
+    partial class MainFormManager
     {
         /// <summary>
-        /// Variable del diseñador necesaria.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpiar los recursos que se estén usando.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,27 +20,33 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFormCashier));
+            this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlSideBar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogout = new WindowsFormsApplication1.RoundButton();
             this.btnTables = new WindowsFormsApplication1.RoundButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMain = new WindowsFormsApplication1.RoundButton();
-            this.pnlMain = new System.Windows.Forms.Panel();
-            this.transitionTimer = new System.Windows.Forms.Timer(this.components);
             this.pnlSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pnlMain
+            // 
+            this.pnlMain.BackColor = System.Drawing.Color.DarkGray;
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlMain.Location = new System.Drawing.Point(250, 0);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1014, 681);
+            this.pnlMain.TabIndex = 4;
             // 
             // pnlSideBar
             // 
@@ -55,8 +61,7 @@
             this.pnlSideBar.MaximumSize = new System.Drawing.Size(250, 0);
             this.pnlSideBar.Name = "pnlSideBar";
             this.pnlSideBar.Size = new System.Drawing.Size(250, 681);
-            this.pnlSideBar.TabIndex = 0;
-            this.pnlSideBar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSideBar_Paint);
+            this.pnlSideBar.TabIndex = 3;
             // 
             // panel2
             // 
@@ -108,24 +113,23 @@
             this.btnTables.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTables.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTables.ForeColor = System.Drawing.Color.DimGray;
-            this.btnTables.IconChar = FontAwesome.Sharp.IconChar.Chair;
+            this.btnTables.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             this.btnTables.IconColor = System.Drawing.Color.DimGray;
             this.btnTables.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTables.IconSize = 35;
             this.btnTables.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnTables.Location = new System.Drawing.Point(3, 155);
+            this.btnTables.Location = new System.Drawing.Point(3, 153);
             this.btnTables.MinimumSize = new System.Drawing.Size(58, 0);
             this.btnTables.Name = "btnTables";
             this.btnTables.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
             this.btnTables.Size = new System.Drawing.Size(244, 45);
             this.btnTables.TabIndex = 20;
             this.btnTables.Tag = "Mesas";
-            this.btnTables.Text = "  Mesas";
+            this.btnTables.Text = "  Reportes";
             this.btnTables.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTables.TextColor = System.Drawing.Color.DimGray;
             this.btnTables.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTables.UseVisualStyleBackColor = false;
-            this.btnTables.Click += new System.EventHandler(this.btnTables_Click);
             // 
             // pictureBox1
             // 
@@ -139,8 +143,8 @@
             // 
             // btnMain
             // 
-            this.btnMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnMain.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.btnMain.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.btnMain.BorderColor = System.Drawing.Color.Transparent;
             this.btnMain.BorderRadius = 10;
             this.btnMain.BorderSize = 0;
@@ -167,36 +171,17 @@
             this.btnMain.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnMain.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMain.UseVisualStyleBackColor = false;
-            this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
             // 
-            // pnlMain
-            // 
-            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlMain.Location = new System.Drawing.Point(250, 0);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1014, 681);
-            this.pnlMain.TabIndex = 2;
-            // 
-            // transitionTimer
-            // 
-            this.transitionTimer.Interval = 30;
-            // 
-            // MainFormCashier
+            // MainFormManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlSideBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "MainFormCashier";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "The Coffe";
-            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Name = "MainFormManager";
+            this.Text = "The Coffie";
             this.pnlSideBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -205,14 +190,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlSideBar;
-        private WindowsFormsApplication1.RoundButton btnMain;
         private System.Windows.Forms.Panel pnlMain;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Timer transitionTimer;
-        private WindowsFormsApplication1.RoundButton btnTables;
-        private WindowsFormsApplication1.RoundButton btnLogout;
+        private System.Windows.Forms.Panel pnlSideBar;
         private System.Windows.Forms.Panel panel2;
+        private WindowsFormsApplication1.RoundButton btnLogout;
+        private WindowsFormsApplication1.RoundButton btnTables;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private WindowsFormsApplication1.RoundButton btnMain;
     }
 }
-
