@@ -284,6 +284,7 @@
             this.roundButton1.Text = "2";
             this.roundButton1.TextColor = System.Drawing.Color.White;
             this.roundButton1.UseVisualStyleBackColor = false;
+            this.roundButton1.Click += new System.EventHandler(this.selectTable_click);
             // 
             // panel2
             // 
@@ -429,6 +430,7 @@
             this.roundButton2.Text = "4";
             this.roundButton2.TextColor = System.Drawing.Color.White;
             this.roundButton2.UseVisualStyleBackColor = false;
+            this.roundButton2.Click += new System.EventHandler(this.selectTable_click);
             // 
             // sPanel13
             // 
@@ -530,6 +532,7 @@
             this.roundButton3.Text = "3";
             this.roundButton3.TextColor = System.Drawing.Color.White;
             this.roundButton3.UseVisualStyleBackColor = false;
+            this.roundButton3.Click += new System.EventHandler(this.selectTable_click);
             // 
             // sPanel21
             // 
@@ -606,6 +609,7 @@
             this.roundButton4.Text = "1";
             this.roundButton4.TextColor = System.Drawing.Color.White;
             this.roundButton4.UseVisualStyleBackColor = false;
+            this.roundButton4.Click += new System.EventHandler(this.selectTable_click);
             // 
             // sPanel31
             // 
@@ -733,6 +737,7 @@
             this.roundButton5.Text = "5";
             this.roundButton5.TextColor = System.Drawing.Color.White;
             this.roundButton5.UseVisualStyleBackColor = false;
+            this.roundButton5.Click += new System.EventHandler(this.selectTable_click);
             // 
             // sPanel39
             // 
@@ -834,6 +839,7 @@
             this.roundButton6.Text = "6";
             this.roundButton6.TextColor = System.Drawing.Color.White;
             this.roundButton6.UseVisualStyleBackColor = false;
+            this.roundButton6.Click += new System.EventHandler(this.selectTable_click);
             // 
             // sPanel45
             // 
@@ -910,6 +916,7 @@
             this.roundButton7.Text = "7";
             this.roundButton7.TextColor = System.Drawing.Color.White;
             this.roundButton7.UseVisualStyleBackColor = false;
+            this.roundButton7.Click += new System.EventHandler(this.selectTable_click);
             // 
             // sPanel85
             // 
@@ -961,7 +968,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.sPanel86);

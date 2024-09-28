@@ -34,17 +34,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.dataSales = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnFecha = new FontAwesome.Sharp.IconButton();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnMesero = new FontAwesome.Sharp.IconButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detalle = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnFecha = new FontAwesome.Sharp.IconButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnMesero = new FontAwesome.Sharp.IconButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.cboMesero = new CustomComboBox();
             this.modernTextBox2 = new TheCoffe.Components.ModernTextBox();
             this.cboFecha = new CustomComboBox();
@@ -78,7 +78,7 @@
             this.dataSales.AllowUserToResizeColumns = false;
             this.dataSales.AllowUserToResizeRows = false;
             this.dataSales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataSales.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.dataSales.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dataSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataSales.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataSales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -126,14 +126,14 @@
             this.dataSales.RowHeadersVisible = false;
             this.dataSales.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dataSales.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataSales.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.dataSales.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.dataSales.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dataSales.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dataSales.RowTemplate.DividerHeight = 1;
             this.dataSales.RowTemplate.Height = 45;
             this.dataSales.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -145,6 +145,50 @@
             this.dataSales.Size = new System.Drawing.Size(976, 479);
             this.dataSales.TabIndex = 17;
             this.dataSales.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataSales_CellClick);
+            // 
+            // ID
+            // 
+            this.ID.FillWeight = 94.16002F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.FillWeight = 99.19505F;
+            this.Nombre.HeaderText = "Mesero";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.FillWeight = 103.6368F;
+            this.Precio.HeaderText = "Fecha";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Categoria
+            // 
+            this.Categoria.FillWeight = 96.17036F;
+            this.Categoria.HeaderText = "Hora";
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
+            // 
+            // total
+            // 
+            this.total.HeaderText = "Total";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            // 
+            // detalle
+            // 
+            this.detalle.FillWeight = 70.1602F;
+            this.detalle.HeaderText = "Detalle";
+            this.detalle.Image = global::TheCoffe.Properties.Resources.detalle;
+            this.detalle.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.detalle.Name = "detalle";
+            this.detalle.ReadOnly = true;
+            this.detalle.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // label1
             // 
@@ -215,50 +259,6 @@
             this.label2.Size = new System.Drawing.Size(105, 15);
             this.label2.TabIndex = 63;
             this.label2.Text = "Filtar por Mesero";
-            // 
-            // ID
-            // 
-            this.ID.FillWeight = 94.16002F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.FillWeight = 99.19505F;
-            this.Nombre.HeaderText = "Mesero";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.FillWeight = 103.6368F;
-            this.Precio.HeaderText = "Fecha";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // Categoria
-            // 
-            this.Categoria.FillWeight = 96.17036F;
-            this.Categoria.HeaderText = "Hora";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            // 
-            // total
-            // 
-            this.total.HeaderText = "Total";
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
-            // 
-            // detalle
-            // 
-            this.detalle.FillWeight = 70.1602F;
-            this.detalle.HeaderText = "Detalle";
-            this.detalle.Image = global::TheCoffe.Properties.Resources.detalle;
-            this.detalle.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.detalle.Name = "detalle";
-            this.detalle.ReadOnly = true;
-            this.detalle.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // cboMesero
             // 
@@ -372,7 +372,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Controls.Add(this.btnMesero);
             this.Controls.Add(this.cboMesero);
             this.Controls.Add(this.label2);

@@ -92,7 +92,7 @@
             // 
             // txtNroSilla
             // 
-            this.txtNroSilla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtNroSilla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtNroSilla.BorderColor = System.Drawing.Color.Transparent;
             this.txtNroSilla.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtNroSilla.BorderRadius = 10;
@@ -115,7 +115,7 @@
             // 
             // txtMesa
             // 
-            this.txtMesa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtMesa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtMesa.BorderColor = System.Drawing.Color.Transparent;
             this.txtMesa.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtMesa.BorderRadius = 10;

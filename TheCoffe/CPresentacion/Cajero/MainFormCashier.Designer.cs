@@ -138,8 +138,8 @@
             // 
             // btnMain
             // 
-            this.btnMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.btnMain.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.btnMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnMain.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnMain.BorderColor = System.Drawing.Color.Transparent;
             this.btnMain.BorderRadius = 10;
             this.btnMain.BorderSize = 0;
@@ -170,7 +170,7 @@
             // 
             // pnlMain
             // 
-            this.pnlMain.BackColor = System.Drawing.Color.DarkGray;
+            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlMain.Location = new System.Drawing.Point(250, 0);
             this.pnlMain.Name = "pnlMain";
