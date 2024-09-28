@@ -68,9 +68,5 @@ namespace TheCoffe.CPresentacion
             cboMesero.DroppedDown = !cboMesero.DroppedDown;
         }
 
-        private void btnFecha_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
