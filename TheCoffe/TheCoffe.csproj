@@ -76,6 +76,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CNegocio\InputValidator.cs" />
+    <Compile Include="Components\CustomDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CPresentacion\AddProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -453,6 +456,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\4105949-bin-delete-dustbin-remove-trash-trash-can_113940.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

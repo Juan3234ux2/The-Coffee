@@ -36,9 +36,9 @@
             this.dataRemovedCategory = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activar = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.activar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataRemovedCategory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +59,7 @@
             this.dataRemovedCategory.AllowUserToResizeColumns = false;
             this.dataRemovedCategory.AllowUserToResizeRows = false;
             this.dataRemovedCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataRemovedCategory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.dataRemovedCategory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dataRemovedCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataRemovedCategory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataRemovedCategory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -104,14 +104,14 @@
             this.dataRemovedCategory.RowHeadersVisible = false;
             this.dataRemovedCategory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dataRemovedCategory.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataRemovedCategory.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.dataRemovedCategory.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.dataRemovedCategory.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dataRemovedCategory.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dataRemovedCategory.RowTemplate.DividerHeight = 1;
             this.dataRemovedCategory.RowTemplate.Height = 45;
             this.dataRemovedCategory.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -137,6 +137,16 @@
             this.Nombre.HeaderText = "Descripción";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
+            // 
+            // activar
+            // 
+            this.activar.FillWeight = 21.18868F;
+            this.activar.HeaderText = "Activar";
+            this.activar.Image = global::TheCoffe.Properties.Resources.activar;
+            this.activar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.activar.Name = "activar";
+            this.activar.ReadOnly = true;
+            this.activar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // dataGridViewImageColumn1
             // 
@@ -168,21 +178,11 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // activar
-            // 
-            this.activar.FillWeight = 21.18868F;
-            this.activar.HeaderText = "Activar";
-            this.activar.Image = global::TheCoffe.Properties.Resources.activar;
-            this.activar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.activar.Name = "activar";
-            this.activar.ReadOnly = true;
-            this.activar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
             // RemovedCategoriesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1030, 600);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dataRemovedCategory);

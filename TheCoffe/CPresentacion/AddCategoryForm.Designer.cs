@@ -99,7 +99,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtDescripcion.BorderColor = System.Drawing.Color.Transparent;
             this.txtDescripcion.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtDescripcion.BorderRadius = 10;

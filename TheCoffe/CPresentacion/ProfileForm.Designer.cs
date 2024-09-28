@@ -254,7 +254,7 @@
             // 
             // btnRol
             // 
-            this.btnRol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.btnRol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnRol.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRol.FlatAppearance.BorderSize = 0;
             this.btnRol.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
@@ -274,7 +274,7 @@
             // 
             // cboRol
             // 
-            this.cboRol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.cboRol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.cboRol.BorderColor = System.Drawing.Color.Transparent;
             this.cboRol.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -293,7 +293,7 @@
             // 
             // txtNumber
             // 
-            this.txtNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtNumber.BorderColor = System.Drawing.Color.Transparent;
             this.txtNumber.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtNumber.BorderRadius = 10;
@@ -326,8 +326,8 @@
             // 
             // btnWatchPassword
             // 
-            this.btnWatchPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.btnWatchPassword.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.btnWatchPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnWatchPassword.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnWatchPassword.BorderColor = System.Drawing.Color.Black;
             this.btnWatchPassword.BorderRadius = 0;
             this.btnWatchPassword.BorderSize = 0;
@@ -351,7 +351,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtPassword.BorderColor = System.Drawing.Color.Transparent;
             this.txtPassword.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtPassword.BorderRadius = 10;
@@ -383,7 +383,7 @@
             // 
             // txtUser
             // 
-            this.txtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtUser.BorderColor = System.Drawing.Color.Transparent;
             this.txtUser.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtUser.BorderRadius = 10;
@@ -425,7 +425,7 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtLastName.BorderColor = System.Drawing.Color.Transparent;
             this.txtLastName.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtLastName.BorderRadius = 10;
@@ -458,7 +458,7 @@
             // 
             // txtName
             // 
-            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtName.BorderColor = System.Drawing.Color.Transparent;
             this.txtName.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtName.BorderRadius = 10;
@@ -491,7 +491,7 @@
             // 
             // modernTextBox4
             // 
-            this.modernTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.modernTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.modernTextBox4.BorderColor = System.Drawing.Color.Transparent;
             this.modernTextBox4.BorderFocusColor = System.Drawing.Color.Transparent;
             this.modernTextBox4.BorderRadius = 10;
@@ -527,7 +527,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Controls.Add(this.sPanel2);
             this.Controls.Add(this.sPanel1);
             this.Controls.Add(this.label1);

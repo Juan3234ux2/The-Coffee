@@ -15,16 +15,27 @@ namespace TheCoffe
     public partial class MainFormCashier : Form
     {
         UserControl activeSection = null;
+        private TakeOrderForm TakeOrder;
+        private TablesForm tablesForm;
         public MainFormCashier()
         {
             InitializeComponent();
-            this.DoubleBuffered = true;
+            TakeOrder = new TakeOrderForm();
+            tablesForm = new TablesForm();
+            tablesForm.mesaSeleccionada += selectedTable;        
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
            LoadUserControl(new TakeOrderForm());
         }
-        private async void LoadUserControl(UserControl userControl)
+        private void selectedTable(string p_mesaSeleccionada)
+        {
+            TakeOrder.mesaSeleccionada = p_mesaSeleccionada;
+            LoadUserControl(TakeOrder);
+            SetActiveSection(btnMain);
+            TakeOrder.OnSection1Loaded();
+        }
+        private void LoadUserControl(UserControl userControl)
         {
             if (activeSection != null && activeSection.GetType() == userControl.GetType())
             {
@@ -34,7 +45,6 @@ namespace TheCoffe
             if (activeSection != null)
             {        
                 pnlMain.Controls.Remove(activeSection);
-                await Task.Delay(200);
             }
             activeSection = userControl;
             activeSection.Dock = DockStyle.Fill;
@@ -44,7 +54,7 @@ namespace TheCoffe
         private void SetActiveSection(RoundButton activeButton) {
             RemoveActiveSection();
             activeButton.ForeColor = Color.FromArgb(96, 75, 232);
-            activeButton.BackgroundColor = Color.FromArgb(222, 232, 250);
+            activeButton.BackgroundColor = Color.FromArgb(245, 240, 240);
             activeButton.IconColor = Color.FromArgb(96, 75, 232);
         }
         private void RemoveActiveSection()
@@ -53,6 +63,7 @@ namespace TheCoffe
             {
                 if (control is RoundButton button)
                 {
+                    if (control.Name == "btnLogout") continue;
                     button.BackColor = Color.Transparent;
                     button.ForeColor = Color.DimGray;
                     button.IconColor = Color.DimGray;
@@ -63,13 +74,13 @@ namespace TheCoffe
         private void btnMain_Click(object sender, EventArgs e)
         {
             SetActiveSection(sender as RoundButton);
-            LoadUserControl(new TakeOrderForm());
+            LoadUserControl(TakeOrder);
         }
         
         private void btnTables_Click(object sender, EventArgs e)
         {
             SetActiveSection(sender as RoundButton);
-            LoadUserControl(new TablesForm());
+            LoadUserControl(tablesForm);
         }
 
         private void pnlSideBar_Paint(object sender, PaintEventArgs e)

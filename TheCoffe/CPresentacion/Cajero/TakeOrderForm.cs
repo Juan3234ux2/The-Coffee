@@ -13,11 +13,19 @@ namespace TheCoffe.CPresentacion.Cajero
 {
     public partial class TakeOrderForm : UserControl
     {
+        public string mesaSeleccionada { get; set; }
         public TakeOrderForm()
         {
             InitializeComponent();
             this.DoubleBuffered = true;
         }
-
+        public void OnSection1Loaded()
+        {
+            if (!string.IsNullOrEmpty(mesaSeleccionada))
+            {
+                lblNroMesa.Text = $"Mesa: {mesaSeleccionada}";
+                MessageBox.Show($"Se seleccionó la mesa: {mesaSeleccionada}");
+            }
+        }
     }
 }
