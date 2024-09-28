@@ -75,6 +75,9 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CAccesoADatos\CategoriaDAl.cs" />
+    <Compile Include="CDatos\Categoria.cs" />
+    <Compile Include="CDatos\DBTheCoffee.cs" />
     <Compile Include="CNegocio\InputValidator.cs" />
     <Compile Include="Components\CustomDateTimePicker.cs">
       <SubType>Component</SubType>

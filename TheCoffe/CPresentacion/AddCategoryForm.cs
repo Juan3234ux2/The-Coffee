@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheCoffe.CAccesoADatos;
+using TheCoffe.CDatos;
 using TheCoffe.CNegocio;
 
 namespace TheCoffe.App
@@ -31,29 +33,45 @@ namespace TheCoffe.App
 
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtDescripcion.Texts))
+            Categoria categoria = new Categoria();
+            categoria.descripcion = txtDescripcion.Texts;
+            int result = CategoriaDAl.AgregarCategoria(categoria);
+
+            if (result > 0)
+            {
+                if (string.IsNullOrWhiteSpace(txtDescripcion.Texts))
+                {
+                    isShowingMsgBox = true;
+                    MessageBox.Show("Debe Completar todos los campos",
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    isShowingMsgBox = false;
+                    return;
+                }
+                else
+                {
+                    if (this.idCategoria == 0)
+                    {
+                        new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Categoría agregada correctamente", Properties.Resources.informacion);
+                    }
+                    else
+                    {
+                        new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Categoría editada correctamente", Properties.Resources.informacion);
+                    }
+                }
+            }
+            else
             {
                 isShowingMsgBox = true;
-                MessageBox.Show("Debe Completar todos los campos",
+                MessageBox.Show("No se pudo insertar el registro",
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 isShowingMsgBox = false;
                 return;
             }
-            else
-            {
-                if(this.idCategoria == 0)
-                {
-                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Categoría agregada correctamente", Properties.Resources.informacion);
-                }
-                else
-                { 
-                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Categoría editada correctamente", Properties.Resources.informacion);
-                }
-            }
         }
-
         private void AddCategoryForm_Deactivate(object sender, EventArgs e)
         {
             if (!isShowingMsgBox)

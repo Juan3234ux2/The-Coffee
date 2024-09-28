@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheCoffe.CPresentacion.General;
+using TheCoffe.CAccesoADatos;
 
 namespace TheCoffe.App
 {
@@ -20,13 +21,14 @@ namespace TheCoffe.App
 
         private void CategoryList_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 3; i++)
-            {
-                int rowIndex = dataCategory.Rows.Add();
-                DataGridViewRow row = dataCategory.Rows[rowIndex];
-                row.Cells[0].Value = 1;
-                row.Cells[1].Value = "Cafes";
-            }
+            RefressPantalla();
+            dataCategory.Columns[0].DisplayIndex = dataCategory.Columns.Count - 1;
+            dataCategory.Columns[1].DisplayIndex = dataCategory.Columns.Count - 1;
+        }
+
+        public void RefressPantalla()
+        {
+            dataCategory.DataSource = CategoriaDAl.PresentarRegistro();
         }
 
         private void btnAddCategory_Click(object sender, EventArgs e)
