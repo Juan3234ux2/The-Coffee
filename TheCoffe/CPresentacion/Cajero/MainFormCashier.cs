@@ -35,7 +35,7 @@ namespace TheCoffe
             SetActiveSection(btnMain);
             TakeOrder.OnSection1Loaded();
         }
-        private async void LoadUserControl(UserControl userControl)
+        private void LoadUserControl(UserControl userControl)
         {
             if (activeSection != null && activeSection.GetType() == userControl.GetType())
             {

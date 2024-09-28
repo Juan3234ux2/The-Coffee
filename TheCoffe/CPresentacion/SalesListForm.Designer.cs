@@ -218,7 +218,6 @@
             this.btnFecha.TabIndex = 62;
             this.btnFecha.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnFecha.UseVisualStyleBackColor = false;
-            this.btnFecha.Click += new System.EventHandler(this.btnFecha_Click);
             // 
             // label7
             // 
