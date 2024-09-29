@@ -17,17 +17,29 @@ namespace TheCoffe
         UserControl activeSection = null;
         private TakeOrderForm TakeOrder;
         private TablesForm tablesForm;
+        private SalesBoxForm salesBoxForm;
         public MainFormCashier()
         {
             InitializeComponent();
             TakeOrder = new TakeOrderForm();
             tablesForm = new TablesForm();
+            salesBoxForm = new SalesBoxForm();
             tablesForm.mesaSeleccionada += selectedTable;        
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
            LoadUserControl(tablesForm);
-            SetActiveSection(btnTables);
+           SetActiveSection(btnTables);
+
+            using (OverlayForm overlay = new OverlayForm())
+            {
+                overlay.Show();
+                using (OpenBoxForm modal = new OpenBoxForm())
+                {
+                    modal.ShowDialog(overlay);
+                }
+                overlay.Close();
+            }
         }
         private void selectedTable(string p_mesaSeleccionada)
         {
@@ -86,6 +98,12 @@ namespace TheCoffe
             {
                 this.Close();
             }
+        }
+
+        private void BtnBox_Click(object sender, EventArgs e)
+        {
+            SetActiveSection(sender as RoundButton);
+            LoadUserControl(salesBoxForm);
         }
     }
 }
