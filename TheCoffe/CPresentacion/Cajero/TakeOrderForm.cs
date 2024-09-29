@@ -12,7 +12,7 @@ using TheCoffe.App;
 
 namespace TheCoffe.CPresentacion.Cajero
 {
-    public partial class TakeOrderForm : Form
+    public partial class TakeOrderForm : UserControl
     {
         public string mesaSeleccionada { get; set; }
         public TakeOrderForm()
