@@ -26,13 +26,13 @@ namespace TheCoffe
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-           LoadUserControl(new TakeOrderForm());
+           LoadUserControl(tablesForm);
+            SetActiveSection(btnTables);
         }
         private void selectedTable(string p_mesaSeleccionada)
         {
             TakeOrder.mesaSeleccionada = p_mesaSeleccionada;
             LoadUserControl(TakeOrder);
-            SetActiveSection(btnMain);
             TakeOrder.OnSection1Loaded();
         }
         private void LoadUserControl(UserControl userControl)
@@ -69,12 +69,6 @@ namespace TheCoffe
                     button.IconColor = Color.DimGray;
                 }
             }
-        }
-        
-        private void btnMain_Click(object sender, EventArgs e)
-        {
-            SetActiveSection(sender as RoundButton);
-            LoadUserControl(TakeOrder);
         }
         
         private void btnTables_Click(object sender, EventArgs e)
