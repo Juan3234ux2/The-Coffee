@@ -15,24 +15,24 @@ namespace TheCoffe
     public partial class MainFormCashier : Form
     {
         UserControl activeSection = null;
-        private TakeOrderForm TakeOrder;
         private TablesForm tablesForm;
         public MainFormCashier()
         {
             InitializeComponent();
-            TakeOrder = new TakeOrderForm();
             tablesForm = new TablesForm();
             tablesForm.mesaSeleccionada += selectedTable;        
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-           LoadUserControl(new TakeOrderForm());
+           LoadUserControl(tablesForm);
         }
         private void selectedTable(string p_mesaSeleccionada)
         {
-            TakeOrder.mesaSeleccionada = p_mesaSeleccionada;
-            LoadUserControl(TakeOrder);
-            SetActiveSection(btnMain);
+            TakeOrderForm TakeOrder = new TakeOrderForm
+            {
+                mesaSeleccionada = p_mesaSeleccionada
+            };
+            TakeOrder.Show();;
             TakeOrder.OnSection1Loaded();
         }
         private void LoadUserControl(UserControl userControl)
@@ -71,11 +71,7 @@ namespace TheCoffe
             }
         }
         
-        private void btnMain_Click(object sender, EventArgs e)
-        {
-            SetActiveSection(sender as RoundButton);
-            LoadUserControl(TakeOrder);
-        }
+   
         
         private void btnTables_Click(object sender, EventArgs e)
         {

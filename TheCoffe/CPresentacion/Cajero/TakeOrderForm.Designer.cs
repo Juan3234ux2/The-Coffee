@@ -728,6 +728,7 @@
             this.btnDashboard.Text = "Finalizar Pedido";
             this.btnDashboard.TextColor = System.Drawing.Color.White;
             this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // customComboBox1
             // 
@@ -1300,6 +1301,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.ClientSize = new System.Drawing.Size(998, 683);
             this.Controls.Add(this.iconButton5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.modernTextBox1);
@@ -1309,7 +1311,7 @@
             this.Controls.Add(this.roundButton5);
             this.Controls.Add(this.label25);
             this.Name = "TakeOrderForm";
-            this.Size = new System.Drawing.Size(1014, 681);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);

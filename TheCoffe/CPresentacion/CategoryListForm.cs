@@ -31,13 +31,8 @@ namespace TheCoffe.App
 
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
-            Form parentForm = this.FindForm();
             using (OverlayForm overlay = new OverlayForm())
             {
-                overlay.Size = parentForm.ClientSize;
-                overlay.Location = parentForm.PointToScreen(Point.Empty);
-                overlay.Owner = parentForm;
-
                 overlay.Show();
                 using (AddCategoryForm modal = new AddCategoryForm())
                 {
@@ -51,13 +46,8 @@ namespace TheCoffe.App
         {
             if (dataCategory.Columns[e.ColumnIndex].Name == "editar")
             {
-                Form parentForm = this.FindForm();
                 using (OverlayForm overlay = new OverlayForm())
                 {
-                    overlay.Size = parentForm.ClientSize;
-                    overlay.Location = parentForm.PointToScreen(Point.Empty);
-                    overlay.Owner = parentForm;
-
                     overlay.Show();
                     using (AddCategoryForm modal = new AddCategoryForm("Cafes"))
                     {
@@ -77,13 +67,8 @@ namespace TheCoffe.App
 
         private void btnRemovedCategories_Click(object sender, EventArgs e)
         {
-            Form parentForm = this.FindForm();
             using (OverlayForm overlay = new OverlayForm())
             {
-                overlay.Size = parentForm.ClientSize;
-                overlay.Location = parentForm.PointToScreen(Point.Empty);
-                overlay.Owner = parentForm;
-
                 overlay.Show();
                 using (RemovedCategoriesForm categoriesRemoved = new RemovedCategoriesForm())
                 {

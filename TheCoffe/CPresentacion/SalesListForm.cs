@@ -46,20 +46,15 @@ namespace TheCoffe.CPresentacion
         {
             if (dataSales.Columns[e.ColumnIndex].Name == "detalle")
             {
-                Form parentForm = this.FindForm();
             using (OverlayForm overlay = new OverlayForm())
-            {
-                overlay.Size = parentForm.ClientSize;
-                overlay.Location = parentForm.PointToScreen(Point.Empty);
-                overlay.Owner = parentForm;
-
-                overlay.Show();
-                using (SaleDetailListForm modal = new SaleDetailListForm())
                 {
-                    modal.ShowDialog(overlay);
+                    overlay.Show();
+                    using (SaleDetailListForm modal = new SaleDetailListForm())
+                    {
+                        modal.ShowDialog(overlay);
+                    }
+                    overlay.Close();
                 }
-                overlay.Close();
-            }
             }
         }
 

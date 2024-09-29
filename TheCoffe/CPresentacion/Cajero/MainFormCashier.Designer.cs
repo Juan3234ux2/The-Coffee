@@ -108,19 +108,19 @@
             this.btnTables.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTables.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTables.ForeColor = System.Drawing.Color.DimGray;
-            this.btnTables.IconChar = FontAwesome.Sharp.IconChar.Chair;
+            this.btnTables.IconChar = FontAwesome.Sharp.IconChar.Utensils;
             this.btnTables.IconColor = System.Drawing.Color.DimGray;
             this.btnTables.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTables.IconSize = 35;
             this.btnTables.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnTables.Location = new System.Drawing.Point(3, 155);
+            this.btnTables.Location = new System.Drawing.Point(3, 111);
             this.btnTables.MinimumSize = new System.Drawing.Size(58, 0);
             this.btnTables.Name = "btnTables";
             this.btnTables.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
             this.btnTables.Size = new System.Drawing.Size(244, 45);
             this.btnTables.TabIndex = 20;
             this.btnTables.Tag = "Mesas";
-            this.btnTables.Text = "  Mesas";
+            this.btnTables.Text = "  Pedidos";
             this.btnTables.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTables.TextColor = System.Drawing.Color.DimGray;
             this.btnTables.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -155,7 +155,7 @@
             this.btnMain.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMain.IconSize = 35;
             this.btnMain.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnMain.Location = new System.Drawing.Point(3, 109);
+            this.btnMain.Location = new System.Drawing.Point(3, 206);
             this.btnMain.MinimumSize = new System.Drawing.Size(58, 0);
             this.btnMain.Name = "btnMain";
             this.btnMain.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
@@ -167,7 +167,6 @@
             this.btnMain.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnMain.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMain.UseVisualStyleBackColor = false;
-            this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
             // 
             // pnlMain
             // 
