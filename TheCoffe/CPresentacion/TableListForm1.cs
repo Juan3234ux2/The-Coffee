@@ -32,13 +32,8 @@ namespace TheCoffe.App
 
         private void btnAddTable_Click(object sender, EventArgs e)
         {
-            Form parentForm = this.FindForm();
             using (OverlayForm overlay = new OverlayForm())
             {
-                overlay.Size = parentForm.ClientSize;
-                overlay.Location = parentForm.PointToScreen(Point.Empty);
-                overlay.Owner = parentForm;
-
                 overlay.Show();
                 using (AddTableForm1 modal = new AddTableForm1())
                 {
@@ -52,13 +47,8 @@ namespace TheCoffe.App
         {
             if (dataTable.Columns[e.ColumnIndex].Name == "editar")
             {
-                Form parentForm = this.FindForm();
                 using (OverlayForm overlay = new OverlayForm())
                 {
-                    overlay.Size = parentForm.ClientSize;
-                    overlay.Location = parentForm.PointToScreen(Point.Empty);
-                    overlay.Owner = parentForm;
-
                     overlay.Show();
                     using (AddTableForm1 modal = new AddTableForm1("3","4"))
                     {
@@ -78,13 +68,8 @@ namespace TheCoffe.App
 
         private void btnRemovedTables_Click(object sender, EventArgs e)
         {
-            Form parentForm = this.FindForm();
             using (OverlayForm overlay = new OverlayForm())
             {
-                overlay.Size = parentForm.ClientSize;
-                overlay.Location = parentForm.PointToScreen(Point.Empty);
-                overlay.Owner = parentForm;
-
                 overlay.Show();
                 using (RemovedTablesForm tablesRemoved = new RemovedTablesForm())
                 {

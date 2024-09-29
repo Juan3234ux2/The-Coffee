@@ -33,13 +33,8 @@ namespace TheCoffe.App
 
         private void roundButton4_Click(object sender, EventArgs e)
         {
-            Form parentForm = this.FindForm();
             using (OverlayForm overlay = new OverlayForm())
             {
-                overlay.Size = parentForm.ClientSize;
-                overlay.Location = parentForm.PointToScreen(Point.Empty);
-                overlay.Owner = parentForm;
-
                 overlay.Show();
                 using (AddProductForm modal = new AddProductForm())
                 {
@@ -53,13 +48,8 @@ namespace TheCoffe.App
         {
             if (dataProducts.Columns[e.ColumnIndex].Name == "editar")
             {
-                Form parentForm = this.FindForm();
                 using (OverlayForm overlay = new OverlayForm())
                 {
-                    overlay.Size = parentForm.ClientSize;
-                    overlay.Location = parentForm.PointToScreen(Point.Empty);
-                    overlay.Owner = parentForm;
-
                     overlay.Show();
                     using (AddProductForm modal = new AddProductForm("Cafe", "3000", "Leche, Azucar, Cafe Morenita"))
                     {
@@ -79,13 +69,8 @@ namespace TheCoffe.App
 
         private void btnRemovedProducts_Click(object sender, EventArgs e)
         {
-            Form parentForm = this.FindForm();
             using (OverlayForm overlay = new OverlayForm())
             {
-                overlay.Size = parentForm.ClientSize;
-                overlay.Location = parentForm.PointToScreen(Point.Empty);
-                overlay.Owner = parentForm;
-
                 overlay.Show();
                 using (RemovedProductsListForm productsRemoved = new RemovedProductsListForm())
                 {

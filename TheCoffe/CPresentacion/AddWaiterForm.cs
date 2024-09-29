@@ -29,14 +29,14 @@ namespace TheCoffe.App
             txtLastName.Texts = lastName;
             txtDNI.Texts = dni;
             txtNumber.Texts = number;
-            txtIncome.Texts = income;
-            txtExit.Texts = exit;
+            mtxtIncome.Text = income;
+            mtxtExit.Text = exit;
             this.idMesero = 10;
         }
 
         private void btnAddWaiter_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtName.Texts) || string.IsNullOrWhiteSpace(txtLastName.Texts) || string.IsNullOrWhiteSpace(txtDNI.Texts) || string.IsNullOrWhiteSpace(txtNumber.Texts) || string.IsNullOrWhiteSpace(txtIncome.Texts) || string.IsNullOrWhiteSpace(txtExit.Texts))
+            if (string.IsNullOrWhiteSpace(txtName.Texts) || string.IsNullOrWhiteSpace(txtLastName.Texts) || string.IsNullOrWhiteSpace(txtDNI.Texts) || string.IsNullOrWhiteSpace(txtNumber.Texts) || string.IsNullOrWhiteSpace(mtxtIncome.Text) || string.IsNullOrWhiteSpace(mtxtExit.Text))
             {
                 isShowingMsgBox = true;
                 MessageBox.Show("Debe Completar todos los campos",

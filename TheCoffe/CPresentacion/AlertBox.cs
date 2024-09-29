@@ -12,11 +12,10 @@ namespace TheCoffe.App
 {
     public partial class AlertBox : Form
     {
-        private Form mainForm;
+        private MainForm mainForm = new MainForm();
         public AlertBox(Form parentForm, Color backColor, Color color, string title, string text, Image icon)
         {
             InitializeComponent();
-            this.mainForm = parentForm;
             this.BackColor = backColor;
             this.ColorAlertBox = color;
             this.TitleAlertBox = title;
@@ -57,10 +56,12 @@ namespace TheCoffe.App
 
         private void PositionAlertBox()
         {
-            int xPos = 0; int yPos = 0;
-            xPos = this.mainForm.Width;
-            yPos = this.mainForm.Height;
-            this.Location = this.mainForm.PointToScreen(new Point(xPos - this.Width, yPos - this.Height));
+            Rectangle workingArea = Screen.PrimaryScreen.WorkingArea;
+
+            int xPos = workingArea.Right - this.Width; 
+            int yPos = workingArea.Bottom - this.Height;
+
+            this.Location = new Point(xPos, yPos);
         }
 
         private void timerAnimasion_Tick(object sender, EventArgs e)

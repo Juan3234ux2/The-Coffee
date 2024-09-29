@@ -94,7 +94,7 @@ namespace TheCoffe.App
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(txtName.Texts) || string.IsNullOrWhiteSpace(txtLastName.Texts) || string.IsNullOrWhiteSpace(txtUser.Texts) || string.IsNullOrWhiteSpace(txtPassword.Texts) || string.IsNullOrWhiteSpace(txtNumber.Texts) || cboRol.SelectedIndex == -1)
+            if (string.IsNullOrWhiteSpace(txtName.Texts) || string.IsNullOrWhiteSpace(txtLastName.Texts) || string.IsNullOrWhiteSpace(txtUser.Texts) || string.IsNullOrWhiteSpace(txtPassword.Texts) || string.IsNullOrWhiteSpace(txtNumber.Texts) || cboRol.SelectedIndex == -1)
             {
                 isShowingMsgBox = true;
                 MessageBox.Show("Debe Completar todos los campos",
@@ -106,7 +106,7 @@ namespace TheCoffe.App
             }
             else
             {
-                if(this.idUsuario == 0)
+                if (this.idUsuario == 0)
                 {
                     new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Usuario agregado correctamente", Properties.Resources.informacion);
                 }

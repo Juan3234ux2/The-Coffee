@@ -29,7 +29,7 @@ namespace TheCoffe.CPresentacion.Gerente
         {
             LoadUserControl(new SalesReportsForm());
         }
-        private async void LoadUserControl(UserControl userControl)
+        private void LoadUserControl(UserControl userControl)
         {
             if (activeSection != null && activeSection.GetType() == userControl.GetType())
             {
@@ -39,7 +39,6 @@ namespace TheCoffe.CPresentacion.Gerente
             if (activeSection != null)
             {
                 pnlMain.Controls.Remove(activeSection);
-                await Task.Delay(200);
             }
             activeSection = userControl;
             activeSection.Dock = DockStyle.Fill;

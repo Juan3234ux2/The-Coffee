@@ -36,13 +36,8 @@ namespace TheCoffe.App
 
         private void btnAddWaiter_Click(object sender, EventArgs e)
         {
-            Form parentForm = this.FindForm();
             using (OverlayForm overlay = new OverlayForm())
             {
-                overlay.Size = parentForm.ClientSize;
-                overlay.Location = parentForm.PointToScreen(Point.Empty);
-                overlay.Owner = parentForm;
-
                 overlay.Show();
                 using (AddWaiterForm modal = new AddWaiterForm())
                 {
@@ -56,13 +51,8 @@ namespace TheCoffe.App
         {
             if (dataWaiter.Columns[e.ColumnIndex].Name == "editar")
             {
-                Form parentForm = this.FindForm();
                 using (OverlayForm overlay = new OverlayForm())
                 {
-                    overlay.Size = parentForm.ClientSize;
-                    overlay.Location = parentForm.PointToScreen(Point.Empty);
-                    overlay.Owner = parentForm;
-
                     overlay.Show();
                     using (AddWaiterForm modal = new AddWaiterForm("Emilia", "Espinola", "54 - 379 4997735", "45939582", "08:00", "12:00"))
                     {

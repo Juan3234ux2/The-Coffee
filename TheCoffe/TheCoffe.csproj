@@ -112,6 +112,18 @@
     <Compile Include="CPresentacion\AlertBox.Designer.cs">
       <DependentUpon>AlertBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="CPresentacion\Cajero\AddClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Cajero\AddClientForm.Designer.cs">
+      <DependentUpon>AddClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\Cajero\FinalizeOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Cajero\FinalizeOrder.Designer.cs">
+      <DependentUpon>FinalizeOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="CPresentacion\Cajero\MainFormCashier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +299,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\AlertBox.resx">
       <DependentUpon>AlertBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Cajero\AddClientForm.resx">
+      <DependentUpon>AddClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Cajero\FinalizeOrder.resx">
+      <DependentUpon>FinalizeOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\Cajero\MainFormCashier.resx">
       <DependentUpon>MainFormCashier.cs</DependentUpon>
