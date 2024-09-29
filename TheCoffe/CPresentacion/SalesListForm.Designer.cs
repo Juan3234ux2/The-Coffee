@@ -32,16 +32,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.dataSales = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.detalle = new System.Windows.Forms.DataGridViewImageColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnMesero = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,27 +49,13 @@
             this.cboMesero = new CustomComboBox();
             this.modernTextBox2 = new TheCoffe.Components.ModernTextBox();
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnMesero = new FontAwesome.Sharp.IconButton();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.detalle = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataSales)).BeginInit();
             this.sPanel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // iconButton5
-            // 
-            this.iconButton5.BackColor = System.Drawing.Color.White;
-            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.iconButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 25;
-            this.iconButton5.Location = new System.Drawing.Point(309, 84);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(38, 32);
-            this.iconButton5.TabIndex = 19;
-            this.iconButton5.UseVisualStyleBackColor = false;
             // 
             // dataSales
             // 
@@ -183,16 +166,6 @@
             this.total.Name = "total";
             this.total.ReadOnly = true;
             // 
-            // detalle
-            // 
-            this.detalle.FillWeight = 70.1602F;
-            this.detalle.HeaderText = "Detalle";
-            this.detalle.Image = global::TheCoffe.Properties.Resources.detalle;
-            this.detalle.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.detalle.Name = "detalle";
-            this.detalle.ReadOnly = true;
-            this.detalle.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -202,26 +175,6 @@
             this.label1.Size = new System.Drawing.Size(122, 41);
             this.label1.TabIndex = 15;
             this.label1.Text = "Ventas";
-            // 
-            // btnMesero
-            // 
-            this.btnMesero.BackColor = System.Drawing.SystemColors.Window;
-            this.btnMesero.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMesero.FlatAppearance.BorderSize = 0;
-            this.btnMesero.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnMesero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnMesero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMesero.IconChar = FontAwesome.Sharp.IconChar.AngleDown;
-            this.btnMesero.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnMesero.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnMesero.IconSize = 25;
-            this.btnMesero.Location = new System.Drawing.Point(525, 82);
-            this.btnMesero.Name = "btnMesero";
-            this.btnMesero.Size = new System.Drawing.Size(33, 35);
-            this.btnMesero.TabIndex = 66;
-            this.btnMesero.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMesero.UseVisualStyleBackColor = false;
-            this.btnMesero.Click += new System.EventHandler(this.btnMesero_Click);
             // 
             // label2
             // 
@@ -373,6 +326,65 @@
             this.modernTextBox1.Texts = "";
             this.modernTextBox1.UnderlinedStyle = false;
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.FillWeight = 70.1602F;
+            this.dataGridViewImageColumn1.HeaderText = "Detalle";
+            this.dataGridViewImageColumn1.Image = global::TheCoffe.Properties.Resources.detalle;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewImageColumn1.Width = 121;
+            // 
+            // btnMesero
+            // 
+            this.btnMesero.BackColor = System.Drawing.SystemColors.Window;
+            this.btnMesero.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMesero.FlatAppearance.BorderSize = 0;
+            this.btnMesero.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnMesero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnMesero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMesero.IconChar = FontAwesome.Sharp.IconChar.AngleDown;
+            this.btnMesero.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnMesero.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMesero.IconSize = 25;
+            this.btnMesero.Location = new System.Drawing.Point(525, 82);
+            this.btnMesero.Name = "btnMesero";
+            this.btnMesero.Size = new System.Drawing.Size(33, 35);
+            this.btnMesero.TabIndex = 66;
+            this.btnMesero.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMesero.UseVisualStyleBackColor = false;
+            this.btnMesero.Click += new System.EventHandler(this.btnMesero_Click);
+            // 
+            // iconButton5
+            // 
+            this.iconButton5.BackColor = System.Drawing.Color.White;
+            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton5.FlatAppearance.BorderSize = 0;
+            this.iconButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.iconButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.IconSize = 25;
+            this.iconButton5.Location = new System.Drawing.Point(309, 84);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Size = new System.Drawing.Size(38, 32);
+            this.iconButton5.TabIndex = 19;
+            this.iconButton5.UseVisualStyleBackColor = false;
+            // 
+            // detalle
+            // 
+            this.detalle.FillWeight = 70.1602F;
+            this.detalle.HeaderText = "Detalle";
+            this.detalle.Image = global::TheCoffe.Properties.Resources.detalle;
+            this.detalle.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.detalle.Name = "detalle";
+            this.detalle.ReadOnly = true;
+            this.detalle.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // SalesListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,5 +435,6 @@
         private Sipaa.Framework.SPanel sPanel1;
         private Sipaa.Framework.SPanel sPanel2;
         private Components.CustomDateTimePicker customDateTimePicker2;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
     }
 }

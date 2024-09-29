@@ -118,6 +118,12 @@
     <Compile Include="CPresentacion\Cajero\AddClientForm.Designer.cs">
       <DependentUpon>AddClientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CPresentacion\Cajero\CloseBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Cajero\CloseBoxForm.Designer.cs">
+      <DependentUpon>CloseBoxForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CPresentacion\Cajero\FinalizeOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,18 @@
     </Compile>
     <Compile Include="CPresentacion\Cajero\MainFormCashier.Designer.cs">
       <DependentUpon>MainFormCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\Cajero\OpenBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Cajero\OpenBoxForm.Designer.cs">
+      <DependentUpon>OpenBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\Cajero\SalesBoxForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Cajero\SalesBoxForm.Designer.cs">
+      <DependentUpon>SalesBoxForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CPresentacion\Cajero\TablesForm.cs">
       <SubType>UserControl</SubType>
@@ -303,11 +321,20 @@
     <EmbeddedResource Include="CPresentacion\Cajero\AddClientForm.resx">
       <DependentUpon>AddClientForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Cajero\CloseBoxForm.resx">
+      <DependentUpon>CloseBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\Cajero\FinalizeOrder.resx">
       <DependentUpon>FinalizeOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\Cajero\MainFormCashier.resx">
       <DependentUpon>MainFormCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Cajero\OpenBoxForm.resx">
+      <DependentUpon>OpenBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Cajero\SalesBoxForm.resx">
+      <DependentUpon>SalesBoxForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\Cajero\TablesForm.resx">
       <DependentUpon>TablesForm.cs</DependentUpon>

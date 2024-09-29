@@ -38,6 +38,7 @@
             this.btnMain = new WindowsFormsApplication1.RoundButton();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.transitionTimer = new System.Windows.Forms.Timer(this.components);
+            this.BtnBox = new WindowsFormsApplication1.RoundButton();
             this.pnlSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,6 +46,7 @@
             // pnlSideBar
             // 
             this.pnlSideBar.BackColor = System.Drawing.Color.White;
+            this.pnlSideBar.Controls.Add(this.BtnBox);
             this.pnlSideBar.Controls.Add(this.panel2);
             this.pnlSideBar.Controls.Add(this.btnLogout);
             this.pnlSideBar.Controls.Add(this.btnTables);
@@ -182,6 +184,37 @@
             // 
             this.transitionTimer.Interval = 30;
             // 
+            // BtnBox
+            // 
+            this.BtnBox.BackColor = System.Drawing.Color.White;
+            this.BtnBox.BackgroundColor = System.Drawing.Color.White;
+            this.BtnBox.BorderColor = System.Drawing.Color.Transparent;
+            this.BtnBox.BorderRadius = 10;
+            this.BtnBox.BorderSize = 0;
+            this.BtnBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnBox.FlatAppearance.BorderSize = 0;
+            this.BtnBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBox.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBox.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnBox.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
+            this.BtnBox.IconColor = System.Drawing.Color.DimGray;
+            this.BtnBox.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnBox.IconSize = 35;
+            this.BtnBox.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.BtnBox.Location = new System.Drawing.Point(3, 205);
+            this.BtnBox.MinimumSize = new System.Drawing.Size(58, 0);
+            this.BtnBox.Name = "BtnBox";
+            this.BtnBox.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
+            this.BtnBox.Size = new System.Drawing.Size(244, 45);
+            this.BtnBox.TabIndex = 23;
+            this.BtnBox.Tag = "Mesas";
+            this.BtnBox.Text = "  Caja";
+            this.BtnBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnBox.TextColor = System.Drawing.Color.DimGray;
+            this.BtnBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnBox.UseVisualStyleBackColor = false;
+            this.BtnBox.Click += new System.EventHandler(this.BtnSales_Click);
+            // 
             // MainFormCashier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,6 +246,7 @@
         private WindowsFormsApplication1.RoundButton btnTables;
         private WindowsFormsApplication1.RoundButton btnLogout;
         private System.Windows.Forms.Panel panel2;
+        private WindowsFormsApplication1.RoundButton BtnBox;
     }
 }
 

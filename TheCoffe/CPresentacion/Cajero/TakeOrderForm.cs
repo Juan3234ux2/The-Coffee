@@ -46,5 +46,7 @@ namespace TheCoffe.CPresentacion.Cajero
                 overlay.Close();
             }
         }
+
+     
     }
 }
