@@ -728,6 +728,7 @@
             this.btnDashboard.Text = "Finalizar Pedido";
             this.btnDashboard.TextColor = System.Drawing.Color.White;
             this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // customComboBox1
             // 
