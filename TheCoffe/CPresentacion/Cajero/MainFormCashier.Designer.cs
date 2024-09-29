@@ -35,7 +35,6 @@
             this.btnLogout = new WindowsFormsApplication1.RoundButton();
             this.btnTables = new WindowsFormsApplication1.RoundButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnMain = new WindowsFormsApplication1.RoundButton();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.transitionTimer = new System.Windows.Forms.Timer(this.components);
             this.BtnBox = new WindowsFormsApplication1.RoundButton();
@@ -51,7 +50,6 @@
             this.pnlSideBar.Controls.Add(this.btnLogout);
             this.pnlSideBar.Controls.Add(this.btnTables);
             this.pnlSideBar.Controls.Add(this.pictureBox1);
-            this.pnlSideBar.Controls.Add(this.btnMain);
             this.pnlSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSideBar.Location = new System.Drawing.Point(0, 0);
             this.pnlSideBar.MaximumSize = new System.Drawing.Size(250, 0);
@@ -115,7 +113,7 @@
             this.btnTables.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTables.IconSize = 35;
             this.btnTables.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnTables.Location = new System.Drawing.Point(3, 155);
+            this.btnTables.Location = new System.Drawing.Point(3, 109);
             this.btnTables.MinimumSize = new System.Drawing.Size(58, 0);
             this.btnTables.Name = "btnTables";
             this.btnTables.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
@@ -138,38 +136,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(223, 80);
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnMain
-            // 
-            this.btnMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnMain.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnMain.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMain.BorderRadius = 10;
-            this.btnMain.BorderSize = 0;
-            this.btnMain.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMain.FlatAppearance.BorderSize = 0;
-            this.btnMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMain.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnMain.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnMain.IconChar = FontAwesome.Sharp.IconChar.Coffee;
-            this.btnMain.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnMain.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMain.IconSize = 35;
-            this.btnMain.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnMain.Location = new System.Drawing.Point(3, 109);
-            this.btnMain.MinimumSize = new System.Drawing.Size(58, 0);
-            this.btnMain.Name = "btnMain";
-            this.btnMain.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
-            this.btnMain.Size = new System.Drawing.Size(244, 45);
-            this.btnMain.TabIndex = 1;
-            this.btnMain.Tag = "";
-            this.btnMain.Text = "  Principal";
-            this.btnMain.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMain.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnMain.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMain.UseVisualStyleBackColor = false;
-            this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
             // 
             // pnlMain
             // 
@@ -239,7 +205,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlSideBar;
-        private WindowsFormsApplication1.RoundButton btnMain;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer transitionTimer;

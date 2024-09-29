@@ -17,34 +17,22 @@ namespace TheCoffe
         UserControl activeSection = null;
         private TakeOrderForm TakeOrder;
         private TablesForm tablesForm;
-        private SalesBoxForm salesBox;
-
         public MainFormCashier()
         {
             InitializeComponent();
             TakeOrder = new TakeOrderForm();
             tablesForm = new TablesForm();
-            salesBox = new SalesBoxForm();
             tablesForm.mesaSeleccionada += selectedTable;        
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-           LoadUserControl(new TakeOrderForm());
-            using (OverlayForm overlay = new OverlayForm())
-            {
-                overlay.Show();
-                using (OpenBoxForm modal = new OpenBoxForm())
-                {
-                    modal.ShowDialog(overlay);
-                }
-                overlay.Close();
-            }
+           LoadUserControl(tablesForm);
+            SetActiveSection(btnTables);
         }
         private void selectedTable(string p_mesaSeleccionada)
         {
             TakeOrder.mesaSeleccionada = p_mesaSeleccionada;
             LoadUserControl(TakeOrder);
-            SetActiveSection(btnMain);
             TakeOrder.OnSection1Loaded();
         }
         private void LoadUserControl(UserControl userControl)
@@ -83,12 +71,6 @@ namespace TheCoffe
             }
         }
         
-        private void btnMain_Click(object sender, EventArgs e)
-        {
-            SetActiveSection(sender as RoundButton);
-            LoadUserControl(TakeOrder);
-        }
-        
         private void btnTables_Click(object sender, EventArgs e)
         {
             SetActiveSection(sender as RoundButton);
@@ -104,12 +86,6 @@ namespace TheCoffe
             {
                 this.Close();
             }
-        }
-
-        private void BtnSales_Click(object sender, EventArgs e)
-        {
-            SetActiveSection(sender as RoundButton);
-            LoadUserControl(salesBox);
         }
     }
 }
