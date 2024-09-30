@@ -21,12 +21,12 @@ namespace TheCoffe.App
 
         private void CategoryList_Load(object sender, EventArgs e)
         {
-            RefressPantalla();
+            RefreshPantalla();
             dataCategory.Columns[0].DisplayIndex = dataCategory.Columns.Count - 1;
             dataCategory.Columns[1].DisplayIndex = dataCategory.Columns.Count - 1;
         }
 
-        public void RefressPantalla()
+        public void RefreshPantalla()
         {
             dataCategory.DataSource = CategoriaDAl.PresentarRegistro();
         }
@@ -42,6 +42,7 @@ namespace TheCoffe.App
                 }
                 overlay.Close();
             }
+            RefreshPantalla();
         }
 
         private void dataCategory_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -11,7 +11,7 @@ namespace TheCoffe.CDatos
     {
         public static SqlConnection ObtenerConexion()
         {
-            SqlConnection conexion = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=TheCoffee;Data Source=DESKTOP-LLJLUNV");
+            SqlConnection conexion = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=TheCoffee;Data Source=DESKTOP-F6IRILK");
             conexion.Open();
             return conexion;
         }
