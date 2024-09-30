@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheCoffe.App;
 using TheCoffe.CNegocio;
 
 namespace TheCoffe.CPresentacion.Cajero
@@ -70,7 +71,7 @@ namespace TheCoffe.CPresentacion.Cajero
             }
             if (IsValidEmail(txtEmail.Texts))
             {
-                this.Close();
+                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso Finalizado", "Cliente Agregado Exitosamente", Properties.Resources.informacion);
             }
             else
             {

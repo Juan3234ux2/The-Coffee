@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheCoffe.App;
 using TheCoffe.CNegocio;
 
 namespace TheCoffe.CPresentacion.Cajero
@@ -53,13 +54,21 @@ namespace TheCoffe.CPresentacion.Cajero
             }
             else
             {
-               
+                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso Finalizado", "Caja Cerrada Exitosamente", Properties.Resources.informacion);
             }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void CloseBoxForm_Deactivate(object sender, EventArgs e)
+        {
+            if (!isShowingMsgBox)
+            {
+                this.Close();
+            }
         }
     }
 }

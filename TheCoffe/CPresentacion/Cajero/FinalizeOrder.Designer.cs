@@ -46,27 +46,27 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.txtCash = new TheCoffe.Components.ModernTextBox();
             this.cboRecibo = new CustomComboBox();
             this.modernTextBox2 = new TheCoffe.Components.ModernTextBox();
             this.cboPago = new CustomComboBox();
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
-            this.roundButton2 = new WindowsFormsApplication1.RoundButton();
+            this.btnFinalizeOrder = new WindowsFormsApplication1.RoundButton();
             this.btnAddClient = new WindowsFormsApplication1.RoundButton();
             this.cboClient = new CustomComboBox();
             this.modernTextBox4 = new TheCoffe.Components.ModernTextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -300,6 +300,24 @@
             this.label16.TabIndex = 4;
             this.label16.Text = "1";
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Silver;
+            this.panel5.Location = new System.Drawing.Point(0, 126);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(355, 1);
+            this.panel5.TabIndex = 10;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
+            this.label22.Location = new System.Drawing.Point(304, 100);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(48, 15);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "$ 3,600";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
@@ -307,6 +325,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(355, 1);
             this.panel2.TabIndex = 3;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
+            this.label23.Location = new System.Drawing.Point(24, 100);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(97, 15);
+            this.label23.TabIndex = 8;
+            this.label23.Text = "Café Con Leche";
             // 
             // label13
             // 
@@ -317,6 +345,16 @@
             this.label13.Size = new System.Drawing.Size(48, 15);
             this.label13.TabIndex = 2;
             this.label13.Text = "$ 3,600";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
+            this.label24.Location = new System.Drawing.Point(4, 100);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(14, 15);
+            this.label24.TabIndex = 7;
+            this.label24.Text = "3";
             // 
             // label12
             // 
@@ -357,6 +395,26 @@
             this.label10.Size = new System.Drawing.Size(70, 18);
             this.label10.TabIndex = 84;
             this.label10.Text = "$ 25,499";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
+            this.label17.Location = new System.Drawing.Point(23, 331);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(62, 18);
+            this.label17.TabIndex = 86;
+            this.label17.Text = "Mesero:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
+            this.label18.Location = new System.Drawing.Point(285, 331);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(107, 18);
+            this.label18.TabIndex = 87;
+            this.label18.Text = "Pedro Ramirez";
             // 
             // txtCash
             // 
@@ -465,28 +523,30 @@
             this.modernTextBox1.Texts = "";
             this.modernTextBox1.UnderlinedStyle = false;
             // 
-            // roundButton2
+            // btnFinalizeOrder
             // 
-            this.roundButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.roundButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.roundButton2.BorderColor = System.Drawing.Color.Black;
-            this.roundButton2.BorderRadius = 6;
-            this.roundButton2.BorderSize = 0;
-            this.roundButton2.FlatAppearance.BorderSize = 0;
-            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold);
-            this.roundButton2.ForeColor = System.Drawing.Color.White;
-            this.roundButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton2.IconColor = System.Drawing.Color.White;
-            this.roundButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton2.IconSize = 34;
-            this.roundButton2.Location = new System.Drawing.Point(637, 386);
-            this.roundButton2.Name = "roundButton2";
-            this.roundButton2.Size = new System.Drawing.Size(160, 46);
-            this.roundButton2.TabIndex = 70;
-            this.roundButton2.Text = "Finalizar Pedido";
-            this.roundButton2.TextColor = System.Drawing.Color.White;
-            this.roundButton2.UseVisualStyleBackColor = false;
+            this.btnFinalizeOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnFinalizeOrder.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnFinalizeOrder.BorderColor = System.Drawing.Color.Black;
+            this.btnFinalizeOrder.BorderRadius = 6;
+            this.btnFinalizeOrder.BorderSize = 0;
+            this.btnFinalizeOrder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFinalizeOrder.FlatAppearance.BorderSize = 0;
+            this.btnFinalizeOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinalizeOrder.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnFinalizeOrder.ForeColor = System.Drawing.Color.White;
+            this.btnFinalizeOrder.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnFinalizeOrder.IconColor = System.Drawing.Color.White;
+            this.btnFinalizeOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFinalizeOrder.IconSize = 34;
+            this.btnFinalizeOrder.Location = new System.Drawing.Point(637, 386);
+            this.btnFinalizeOrder.Name = "btnFinalizeOrder";
+            this.btnFinalizeOrder.Size = new System.Drawing.Size(160, 46);
+            this.btnFinalizeOrder.TabIndex = 70;
+            this.btnFinalizeOrder.Text = "Finalizar Pedido";
+            this.btnFinalizeOrder.TextColor = System.Drawing.Color.White;
+            this.btnFinalizeOrder.UseVisualStyleBackColor = false;
+            this.btnFinalizeOrder.Click += new System.EventHandler(this.btnFinalizeOrder_Click);
             // 
             // btnAddClient
             // 
@@ -556,64 +616,6 @@
             this.modernTextBox4.Texts = "";
             this.modernTextBox4.UnderlinedStyle = false;
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
-            this.label17.Location = new System.Drawing.Point(23, 331);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(62, 18);
-            this.label17.TabIndex = 86;
-            this.label17.Text = "Mesero:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
-            this.label18.Location = new System.Drawing.Point(285, 331);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(107, 18);
-            this.label18.TabIndex = 87;
-            this.label18.Text = "Pedro Ramirez";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Silver;
-            this.panel5.Location = new System.Drawing.Point(0, 126);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(355, 1);
-            this.panel5.TabIndex = 10;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
-            this.label22.Location = new System.Drawing.Point(304, 100);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(48, 15);
-            this.label22.TabIndex = 9;
-            this.label22.Text = "$ 3,600";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
-            this.label23.Location = new System.Drawing.Point(24, 100);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(97, 15);
-            this.label23.TabIndex = 8;
-            this.label23.Text = "Café Con Leche";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
-            this.label24.Location = new System.Drawing.Point(4, 100);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(14, 15);
-            this.label24.TabIndex = 7;
-            this.label24.Text = "3";
-            // 
             // FinalizeOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -637,7 +639,7 @@
             this.Controls.Add(this.cboPago);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.modernTextBox1);
-            this.Controls.Add(this.roundButton2);
+            this.Controls.Add(this.btnFinalizeOrder);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddClient);
@@ -653,6 +655,7 @@
             this.Name = "FinalizeOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FinalizeOrder";
+            this.Deactivate += new System.EventHandler(this.FinalizeOrder_Deactivate);
             this.Load += new System.EventHandler(this.FinalizeOrder_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -672,7 +675,7 @@
         private WindowsFormsApplication1.RoundButton btnAddClient;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private WindowsFormsApplication1.RoundButton roundButton2;
+        private WindowsFormsApplication1.RoundButton btnFinalizeOrder;
         private FontAwesome.Sharp.IconButton btnPago;
         private CustomComboBox cboPago;
         private System.Windows.Forms.Label label3;

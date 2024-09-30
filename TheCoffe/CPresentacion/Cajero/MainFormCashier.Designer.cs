@@ -69,12 +69,12 @@
             this.BtnBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBox.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBox.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnBox.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
+            this.BtnBox.IconChar = FontAwesome.Sharp.IconChar.CashRegister;
             this.BtnBox.IconColor = System.Drawing.Color.DimGray;
             this.BtnBox.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnBox.IconSize = 35;
             this.BtnBox.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.BtnBox.Location = new System.Drawing.Point(3, 158);
+            this.BtnBox.Location = new System.Drawing.Point(3, 155);
             this.BtnBox.MinimumSize = new System.Drawing.Size(58, 0);
             this.BtnBox.Name = "BtnBox";
             this.BtnBox.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);

@@ -55,5 +55,18 @@ namespace TheCoffe.CPresentacion.Cajero
             };
             timer.Start();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void OpenBoxForm_Deactivate(object sender, EventArgs e)
+        {
+            if (!isShowingMsgBox)
+            {
+                this.Close();
+            }
+        }
     }
 }

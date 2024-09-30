@@ -26,27 +26,38 @@ namespace TheCoffe.CPresentacion.Cajero
             {
                 lblNroMesa.Text = $"Mesa: {mesaSeleccionada}";
                 MessageBox.Show($"Se seleccionó la mesa: {mesaSeleccionada}");
+                panel6.AutoScroll = false;
+                panel6.AutoScroll = true;
             }
         }
 
         private void btnWaiter_Click(object sender, EventArgs e)
         {
-            customComboBox1.DroppedDown = customComboBox1.DroppedDown;
+            cboWaiter.DroppedDown = cboWaiter.DroppedDown;
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e)
+        private void btnFinalizeOrder_Click(object sender, EventArgs e)
         {
-            using (OverlayForm overlay = new OverlayForm())
+            if(cboWaiter.SelectedIndex == -1)
             {
-                overlay.Show();
-                using (FinalizeOrder modal = new FinalizeOrder())
+                MessageBox.Show("Selecciona un mesero",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                using (OverlayForm overlay = new OverlayForm())
                 {
-                    modal.ShowDialog(overlay);
+                    overlay.Show();
+                    using (FinalizeOrder modal = new FinalizeOrder())
+                    {
+                        modal.ShowDialog(overlay);
+                    }
+                    overlay.Close();
                 }
-                overlay.Close();
             }
         }
-
-     
     }
 }

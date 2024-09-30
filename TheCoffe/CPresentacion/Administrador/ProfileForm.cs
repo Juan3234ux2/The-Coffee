@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheCoffe.CNegocio;
+using TheCoffe.App;
 
 namespace TheCoffe.CPresentacion
 {
@@ -53,6 +54,22 @@ namespace TheCoffe.CPresentacion
             {
                 Form parent = this.FindForm();
                 parent.Close();
+            }
+        }
+
+        private void btnEditUser_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtName.Texts) || string.IsNullOrWhiteSpace(txtLastName.Texts) || string.IsNullOrWhiteSpace(txtUser.Texts) || string.IsNullOrWhiteSpace(txtPassword.Texts) || string.IsNullOrWhiteSpace(txtNumber.Texts) || cboRol.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe Completar todos los campos",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                    new AlertBox(this.FindForm(), Color.LightGreen, Color.SeaGreen, "Proceso completado", "Usuario editado correctamente", Properties.Resources.informacion);
             }
         }
     }

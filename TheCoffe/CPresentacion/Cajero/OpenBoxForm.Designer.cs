@@ -86,6 +86,7 @@
             this.btnOpenBox.BorderColor = System.Drawing.Color.Black;
             this.btnOpenBox.BorderRadius = 6;
             this.btnOpenBox.BorderSize = 0;
+            this.btnOpenBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenBox.FlatAppearance.BorderSize = 0;
             this.btnOpenBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenBox.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold);
@@ -120,6 +121,7 @@
             this.btnClose.Size = new System.Drawing.Size(44, 34);
             this.btnClose.TabIndex = 25;
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // OpenBoxForm
             // 
@@ -136,6 +138,7 @@
             this.Name = "OpenBoxForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OpenBoxForm";
+            this.Deactivate += new System.EventHandler(this.OpenBoxForm_Deactivate);
             this.Load += new System.EventHandler(this.OpenBoxForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

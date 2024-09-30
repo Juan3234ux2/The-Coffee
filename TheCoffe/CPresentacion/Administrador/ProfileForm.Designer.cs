@@ -38,7 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sPanel2 = new Sipaa.Framework.SPanel();
-            this.roundButton4 = new WindowsFormsApplication1.RoundButton();
+            this.btnEditUser = new WindowsFormsApplication1.RoundButton();
             this.btnRol = new FontAwesome.Sharp.IconButton();
             this.cboRol = new CustomComboBox();
             this.txtNumber = new TheCoffe.Components.ModernTextBox();
@@ -205,7 +205,7 @@
             this.sPanel2.BorderColor = System.Drawing.Color.White;
             this.sPanel2.BorderRadius = 15;
             this.sPanel2.BorderSize = 0;
-            this.sPanel2.Controls.Add(this.roundButton4);
+            this.sPanel2.Controls.Add(this.btnEditUser);
             this.sPanel2.Controls.Add(this.btnRol);
             this.sPanel2.Controls.Add(this.cboRol);
             this.sPanel2.Controls.Add(this.txtNumber);
@@ -228,38 +228,39 @@
             this.sPanel2.Size = new System.Drawing.Size(594, 564);
             this.sPanel2.TabIndex = 4;
             // 
-            // roundButton4
+            // btnEditUser
             // 
-            this.roundButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.roundButton4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.roundButton4.BorderColor = System.Drawing.Color.Black;
-            this.roundButton4.BorderRadius = 5;
-            this.roundButton4.BorderSize = 0;
-            this.roundButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton4.FlatAppearance.BorderSize = 0;
-            this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton4.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton4.ForeColor = System.Drawing.Color.White;
-            this.roundButton4.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton4.IconColor = System.Drawing.Color.White;
-            this.roundButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton4.IconSize = 20;
-            this.roundButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.roundButton4.Location = new System.Drawing.Point(35, 496);
-            this.roundButton4.Name = "roundButton4";
-            this.roundButton4.Size = new System.Drawing.Size(528, 43);
-            this.roundButton4.TabIndex = 74;
-            this.roundButton4.Text = "Guardar Cambios";
-            this.roundButton4.TextColor = System.Drawing.Color.White;
-            this.roundButton4.UseVisualStyleBackColor = false;
+            this.btnEditUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnEditUser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnEditUser.BorderColor = System.Drawing.Color.Black;
+            this.btnEditUser.BorderRadius = 5;
+            this.btnEditUser.BorderSize = 0;
+            this.btnEditUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditUser.FlatAppearance.BorderSize = 0;
+            this.btnEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditUser.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditUser.ForeColor = System.Drawing.Color.White;
+            this.btnEditUser.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnEditUser.IconColor = System.Drawing.Color.White;
+            this.btnEditUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEditUser.IconSize = 20;
+            this.btnEditUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditUser.Location = new System.Drawing.Point(35, 496);
+            this.btnEditUser.Name = "btnEditUser";
+            this.btnEditUser.Size = new System.Drawing.Size(528, 43);
+            this.btnEditUser.TabIndex = 74;
+            this.btnEditUser.Text = "Guardar Cambios";
+            this.btnEditUser.TextColor = System.Drawing.Color.White;
+            this.btnEditUser.UseVisualStyleBackColor = false;
+            this.btnEditUser.Click += new System.EventHandler(this.btnEditUser_Click);
             // 
             // btnRol
             // 
             this.btnRol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnRol.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRol.FlatAppearance.BorderSize = 0;
-            this.btnRol.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            this.btnRol.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            this.btnRol.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnRol.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRol.IconChar = FontAwesome.Sharp.IconChar.AngleDown;
             this.btnRol.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
@@ -571,7 +572,7 @@
         private Components.ModernTextBox txtName;
         private System.Windows.Forms.Label label10;
         private Components.ModernTextBox modernTextBox4;
-        private WindowsFormsApplication1.RoundButton roundButton4;
+        private WindowsFormsApplication1.RoundButton btnEditUser;
         private System.Windows.Forms.Button button1;
     }
 }

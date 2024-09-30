@@ -14,6 +14,7 @@ namespace TheCoffe.CPresentacion.Cajero
 {
     public partial class FinalizeOrder : Form
     {
+        private bool isShowingMsgBox = false;
         public FinalizeOrder()
         {
             InitializeComponent();
@@ -58,6 +59,7 @@ namespace TheCoffe.CPresentacion.Cajero
 
         private void btnAddClient_Click(object sender, EventArgs e)
         {
+            isShowingMsgBox = true;
             using (OverlayForm overlay = new OverlayForm())
             {
                 overlay.Show();
@@ -66,6 +68,32 @@ namespace TheCoffe.CPresentacion.Cajero
                     modal.ShowDialog(overlay);
                 }
                 overlay.Close();
+            }
+            isShowingMsgBox = false;
+        }
+
+        private void btnFinalizeOrder_Click(object sender, EventArgs e)
+        {
+            if(cboPago.SelectedIndex == -1 || string.IsNullOrWhiteSpace(txtCash.Texts))
+            {
+                isShowingMsgBox = true;
+                MessageBox.Show("Debe completar todos los campos",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                isShowingMsgBox = false;
+                return;
+            }
+            else {
+                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Pedido Finalizado", "Pedido Finalizado Exitosamente", Properties.Resources.informacion);
+            }
+        }
+
+        private void FinalizeOrder_Deactivate(object sender, EventArgs e)
+        {
+            if (!isShowingMsgBox)
+            {
+                this.Close();
             }
         }
     }

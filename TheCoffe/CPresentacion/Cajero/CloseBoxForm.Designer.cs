@@ -90,6 +90,7 @@
             this.btnCloseBox.BorderColor = System.Drawing.Color.Black;
             this.btnCloseBox.BorderRadius = 6;
             this.btnCloseBox.BorderSize = 0;
+            this.btnCloseBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCloseBox.FlatAppearance.BorderSize = 0;
             this.btnCloseBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseBox.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold);
@@ -197,6 +198,7 @@
             this.Name = "CloseBoxForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CloseBoxForm";
+            this.Deactivate += new System.EventHandler(this.CloseBoxForm_Deactivate);
             this.Load += new System.EventHandler(this.CloseBoxForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
