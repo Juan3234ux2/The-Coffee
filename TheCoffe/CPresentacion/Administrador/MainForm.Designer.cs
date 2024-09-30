@@ -40,7 +40,6 @@
             this.lblRol = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
             this.imgUser = new System.Windows.Forms.PictureBox();
-            this.btnConfig = new WindowsFormsApplication1.RoundButton();
             this.btnReports = new WindowsFormsApplication1.RoundButton();
             this.btnWaiter = new WindowsFormsApplication1.RoundButton();
             this.btnProducts = new WindowsFormsApplication1.RoundButton();
@@ -61,7 +60,6 @@
             this.pnlSideBar.Controls.Add(this.btnUserList);
             this.pnlSideBar.Controls.Add(this.pictureBox1);
             this.pnlSideBar.Controls.Add(this.panel3);
-            this.pnlSideBar.Controls.Add(this.btnConfig);
             this.pnlSideBar.Controls.Add(this.btnReports);
             this.pnlSideBar.Controls.Add(this.btnWaiter);
             this.pnlSideBar.Controls.Add(this.btnProducts);
@@ -246,36 +244,6 @@
             this.imgUser.TabIndex = 18;
             this.imgUser.TabStop = false;
             // 
-            // btnConfig
-            // 
-            this.btnConfig.BackColor = System.Drawing.Color.White;
-            this.btnConfig.BackgroundColor = System.Drawing.Color.White;
-            this.btnConfig.BorderColor = System.Drawing.Color.Transparent;
-            this.btnConfig.BorderRadius = 10;
-            this.btnConfig.BorderSize = 0;
-            this.btnConfig.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfig.FlatAppearance.BorderSize = 0;
-            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfig.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfig.ForeColor = System.Drawing.Color.DimGray;
-            this.btnConfig.IconChar = FontAwesome.Sharp.IconChar.Cog;
-            this.btnConfig.IconColor = System.Drawing.Color.DimGray;
-            this.btnConfig.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnConfig.IconSize = 35;
-            this.btnConfig.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnConfig.Location = new System.Drawing.Point(3, 423);
-            this.btnConfig.MinimumSize = new System.Drawing.Size(58, 0);
-            this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
-            this.btnConfig.Size = new System.Drawing.Size(244, 45);
-            this.btnConfig.TabIndex = 16;
-            this.btnConfig.Tag = "Configuraciones";
-            this.btnConfig.Text = "  Configuraciones";
-            this.btnConfig.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConfig.TextColor = System.Drawing.Color.DimGray;
-            this.btnConfig.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnConfig.UseVisualStyleBackColor = false;
-            // 
             // btnReports
             // 
             this.btnReports.BackColor = System.Drawing.Color.White;
@@ -441,7 +409,6 @@
 
         private System.Windows.Forms.Panel pnlSideBar;
         private WindowsFormsApplication1.RoundButton btnDashboard;
-        private WindowsFormsApplication1.RoundButton btnConfig;
         private WindowsFormsApplication1.RoundButton btnReports;
         private WindowsFormsApplication1.RoundButton btnWaiter;
         private WindowsFormsApplication1.RoundButton btnProducts;
