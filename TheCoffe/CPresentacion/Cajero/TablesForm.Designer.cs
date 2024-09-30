@@ -40,7 +40,6 @@
             this.sPanel4 = new Sipaa.Framework.SPanel();
             this.sPanel3 = new Sipaa.Framework.SPanel();
             this.sPanel2 = new Sipaa.Framework.SPanel();
-            this.roundButton1 = new WindowsFormsApplication1.RoundButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.sPanel11 = new Sipaa.Framework.SPanel();
@@ -51,19 +50,16 @@
             this.sPanel18 = new Sipaa.Framework.SPanel();
             this.sPanel19 = new Sipaa.Framework.SPanel();
             this.sPanel20 = new Sipaa.Framework.SPanel();
-            this.roundButton2 = new WindowsFormsApplication1.RoundButton();
             this.sPanel13 = new Sipaa.Framework.SPanel();
             this.sPanel17 = new Sipaa.Framework.SPanel();
             this.sPanel22 = new Sipaa.Framework.SPanel();
             this.sPanel23 = new Sipaa.Framework.SPanel();
             this.sPanel25 = new Sipaa.Framework.SPanel();
             this.sPanel26 = new Sipaa.Framework.SPanel();
-            this.roundButton3 = new WindowsFormsApplication1.RoundButton();
             this.sPanel21 = new Sipaa.Framework.SPanel();
             this.sPanel24 = new Sipaa.Framework.SPanel();
             this.sPanel28 = new Sipaa.Framework.SPanel();
             this.sPanel30 = new Sipaa.Framework.SPanel();
-            this.roundButton4 = new WindowsFormsApplication1.RoundButton();
             this.sPanel31 = new Sipaa.Framework.SPanel();
             this.sPanel32 = new Sipaa.Framework.SPanel();
             this.sPanel33 = new Sipaa.Framework.SPanel();
@@ -72,23 +68,28 @@
             this.sPanel36 = new Sipaa.Framework.SPanel();
             this.sPanel37 = new Sipaa.Framework.SPanel();
             this.sPanel38 = new Sipaa.Framework.SPanel();
-            this.roundButton5 = new WindowsFormsApplication1.RoundButton();
             this.sPanel39 = new Sipaa.Framework.SPanel();
             this.sPanel40 = new Sipaa.Framework.SPanel();
             this.sPanel41 = new Sipaa.Framework.SPanel();
             this.sPanel42 = new Sipaa.Framework.SPanel();
             this.sPanel43 = new Sipaa.Framework.SPanel();
             this.sPanel44 = new Sipaa.Framework.SPanel();
-            this.roundButton6 = new WindowsFormsApplication1.RoundButton();
             this.sPanel45 = new Sipaa.Framework.SPanel();
             this.sPanel46 = new Sipaa.Framework.SPanel();
             this.sPanel47 = new Sipaa.Framework.SPanel();
             this.sPanel48 = new Sipaa.Framework.SPanel();
-            this.roundButton7 = new WindowsFormsApplication1.RoundButton();
             this.sPanel85 = new Sipaa.Framework.SPanel();
             this.sPanel86 = new Sipaa.Framework.SPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.roundButton7 = new WindowsFormsApplication1.RoundButton();
+            this.roundButton6 = new WindowsFormsApplication1.RoundButton();
+            this.roundButton5 = new WindowsFormsApplication1.RoundButton();
+            this.roundButton4 = new WindowsFormsApplication1.RoundButton();
+            this.roundButton3 = new WindowsFormsApplication1.RoundButton();
+            this.roundButton2 = new WindowsFormsApplication1.RoundButton();
+            this.roundButton1 = new WindowsFormsApplication1.RoundButton();
+            this.label3 = new System.Windows.Forms.Label();
             this.sPanel1.SuspendLayout();
             this.sPanel2.SuspendLayout();
             this.sPanel11.SuspendLayout();
@@ -262,31 +263,6 @@
             this.sPanel2.Size = new System.Drawing.Size(148, 79);
             this.sPanel2.TabIndex = 21;
             // 
-            // roundButton1
-            // 
-            this.roundButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.roundButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.roundButton1.BorderColor = System.Drawing.Color.Black;
-            this.roundButton1.BorderRadius = 20;
-            this.roundButton1.BorderSize = 0;
-            this.roundButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton1.FlatAppearance.BorderSize = 0;
-            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton1.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton1.ForeColor = System.Drawing.Color.White;
-            this.roundButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton1.IconColor = System.Drawing.Color.Black;
-            this.roundButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton1.Location = new System.Drawing.Point(47, 18);
-            this.roundButton1.Name = "roundButton1";
-            this.roundButton1.Padding = new System.Windows.Forms.Padding(10);
-            this.roundButton1.Size = new System.Drawing.Size(51, 41);
-            this.roundButton1.TabIndex = 24;
-            this.roundButton1.Text = "2";
-            this.roundButton1.TextColor = System.Drawing.Color.White;
-            this.roundButton1.UseVisualStyleBackColor = false;
-            this.roundButton1.Click += new System.EventHandler(this.selectTable_click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
@@ -409,31 +385,6 @@
             this.sPanel20.Size = new System.Drawing.Size(100, 80);
             this.sPanel20.TabIndex = 21;
             // 
-            // roundButton2
-            // 
-            this.roundButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.roundButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.roundButton2.BorderColor = System.Drawing.Color.Black;
-            this.roundButton2.BorderRadius = 20;
-            this.roundButton2.BorderSize = 0;
-            this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton2.FlatAppearance.BorderSize = 0;
-            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton2.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton2.ForeColor = System.Drawing.Color.White;
-            this.roundButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton2.IconColor = System.Drawing.Color.Black;
-            this.roundButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton2.Location = new System.Drawing.Point(24, 19);
-            this.roundButton2.Name = "roundButton2";
-            this.roundButton2.Padding = new System.Windows.Forms.Padding(10);
-            this.roundButton2.Size = new System.Drawing.Size(51, 41);
-            this.roundButton2.TabIndex = 25;
-            this.roundButton2.Text = "4";
-            this.roundButton2.TextColor = System.Drawing.Color.White;
-            this.roundButton2.UseVisualStyleBackColor = false;
-            this.roundButton2.Click += new System.EventHandler(this.selectTable_click);
-            // 
             // sPanel13
             // 
             this.sPanel13.BackColor = System.Drawing.Color.Transparent;
@@ -512,31 +463,6 @@
             this.sPanel26.Size = new System.Drawing.Size(80, 80);
             this.sPanel26.TabIndex = 21;
             // 
-            // roundButton3
-            // 
-            this.roundButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.roundButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.roundButton3.BorderColor = System.Drawing.Color.Black;
-            this.roundButton3.BorderRadius = 20;
-            this.roundButton3.BorderSize = 0;
-            this.roundButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton3.FlatAppearance.BorderSize = 0;
-            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton3.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton3.ForeColor = System.Drawing.Color.White;
-            this.roundButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton3.IconColor = System.Drawing.Color.Black;
-            this.roundButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton3.Location = new System.Drawing.Point(14, 19);
-            this.roundButton3.Name = "roundButton3";
-            this.roundButton3.Padding = new System.Windows.Forms.Padding(10);
-            this.roundButton3.Size = new System.Drawing.Size(51, 41);
-            this.roundButton3.TabIndex = 25;
-            this.roundButton3.Text = "3";
-            this.roundButton3.TextColor = System.Drawing.Color.White;
-            this.roundButton3.UseVisualStyleBackColor = false;
-            this.roundButton3.Click += new System.EventHandler(this.selectTable_click);
-            // 
             // sPanel21
             // 
             this.sPanel21.BackColor = System.Drawing.Color.Transparent;
@@ -589,31 +515,6 @@
             this.sPanel30.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.sPanel30.Size = new System.Drawing.Size(80, 80);
             this.sPanel30.TabIndex = 21;
-            // 
-            // roundButton4
-            // 
-            this.roundButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.roundButton4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.roundButton4.BorderColor = System.Drawing.Color.Black;
-            this.roundButton4.BorderRadius = 20;
-            this.roundButton4.BorderSize = 0;
-            this.roundButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton4.FlatAppearance.BorderSize = 0;
-            this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton4.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton4.ForeColor = System.Drawing.Color.White;
-            this.roundButton4.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton4.IconColor = System.Drawing.Color.Black;
-            this.roundButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton4.Location = new System.Drawing.Point(15, 19);
-            this.roundButton4.Name = "roundButton4";
-            this.roundButton4.Padding = new System.Windows.Forms.Padding(10);
-            this.roundButton4.Size = new System.Drawing.Size(51, 41);
-            this.roundButton4.TabIndex = 25;
-            this.roundButton4.Text = "1";
-            this.roundButton4.TextColor = System.Drawing.Color.White;
-            this.roundButton4.UseVisualStyleBackColor = false;
-            this.roundButton4.Click += new System.EventHandler(this.selectTable_click);
             // 
             // sPanel31
             // 
@@ -719,31 +620,6 @@
             this.sPanel38.Size = new System.Drawing.Size(100, 80);
             this.sPanel38.TabIndex = 21;
             // 
-            // roundButton5
-            // 
-            this.roundButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.roundButton5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.roundButton5.BorderColor = System.Drawing.Color.Black;
-            this.roundButton5.BorderRadius = 20;
-            this.roundButton5.BorderSize = 0;
-            this.roundButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton5.FlatAppearance.BorderSize = 0;
-            this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton5.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton5.ForeColor = System.Drawing.Color.White;
-            this.roundButton5.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton5.IconColor = System.Drawing.Color.Black;
-            this.roundButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton5.Location = new System.Drawing.Point(21, 17);
-            this.roundButton5.Name = "roundButton5";
-            this.roundButton5.Padding = new System.Windows.Forms.Padding(10);
-            this.roundButton5.Size = new System.Drawing.Size(51, 41);
-            this.roundButton5.TabIndex = 25;
-            this.roundButton5.Text = "5";
-            this.roundButton5.TextColor = System.Drawing.Color.White;
-            this.roundButton5.UseVisualStyleBackColor = false;
-            this.roundButton5.Click += new System.EventHandler(this.selectTable_click);
-            // 
             // sPanel39
             // 
             this.sPanel39.BackColor = System.Drawing.Color.Transparent;
@@ -822,31 +698,6 @@
             this.sPanel44.Size = new System.Drawing.Size(80, 80);
             this.sPanel44.TabIndex = 21;
             // 
-            // roundButton6
-            // 
-            this.roundButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.roundButton6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.roundButton6.BorderColor = System.Drawing.Color.Black;
-            this.roundButton6.BorderRadius = 20;
-            this.roundButton6.BorderSize = 0;
-            this.roundButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton6.FlatAppearance.BorderSize = 0;
-            this.roundButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton6.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton6.ForeColor = System.Drawing.Color.White;
-            this.roundButton6.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton6.IconColor = System.Drawing.Color.Black;
-            this.roundButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton6.Location = new System.Drawing.Point(13, 17);
-            this.roundButton6.Name = "roundButton6";
-            this.roundButton6.Padding = new System.Windows.Forms.Padding(10);
-            this.roundButton6.Size = new System.Drawing.Size(51, 41);
-            this.roundButton6.TabIndex = 25;
-            this.roundButton6.Text = "6";
-            this.roundButton6.TextColor = System.Drawing.Color.White;
-            this.roundButton6.UseVisualStyleBackColor = false;
-            this.roundButton6.Click += new System.EventHandler(this.selectTable_click);
-            // 
             // sPanel45
             // 
             this.sPanel45.BackColor = System.Drawing.Color.Transparent;
@@ -900,31 +751,6 @@
             this.sPanel48.Size = new System.Drawing.Size(80, 80);
             this.sPanel48.TabIndex = 21;
             // 
-            // roundButton7
-            // 
-            this.roundButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.roundButton7.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.roundButton7.BorderColor = System.Drawing.Color.Black;
-            this.roundButton7.BorderRadius = 20;
-            this.roundButton7.BorderSize = 0;
-            this.roundButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton7.FlatAppearance.BorderSize = 0;
-            this.roundButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton7.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton7.ForeColor = System.Drawing.Color.White;
-            this.roundButton7.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton7.IconColor = System.Drawing.Color.Black;
-            this.roundButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton7.Location = new System.Drawing.Point(14, 20);
-            this.roundButton7.Name = "roundButton7";
-            this.roundButton7.Padding = new System.Windows.Forms.Padding(10);
-            this.roundButton7.Size = new System.Drawing.Size(51, 41);
-            this.roundButton7.TabIndex = 25;
-            this.roundButton7.Text = "7";
-            this.roundButton7.TextColor = System.Drawing.Color.White;
-            this.roundButton7.UseVisualStyleBackColor = false;
-            this.roundButton7.Click += new System.EventHandler(this.selectTable_click);
-            // 
             // sPanel85
             // 
             this.sPanel85.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -971,11 +797,198 @@
             this.label2.TabIndex = 35;
             this.label2.Text = "Disponible";
             // 
+            // roundButton7
+            // 
+            this.roundButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.roundButton7.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.roundButton7.BorderColor = System.Drawing.Color.Black;
+            this.roundButton7.BorderRadius = 20;
+            this.roundButton7.BorderSize = 0;
+            this.roundButton7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton7.FlatAppearance.BorderSize = 0;
+            this.roundButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton7.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton7.ForeColor = System.Drawing.Color.White;
+            this.roundButton7.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton7.IconColor = System.Drawing.Color.Black;
+            this.roundButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton7.Location = new System.Drawing.Point(14, 20);
+            this.roundButton7.Name = "roundButton7";
+            this.roundButton7.Padding = new System.Windows.Forms.Padding(10);
+            this.roundButton7.Size = new System.Drawing.Size(51, 41);
+            this.roundButton7.TabIndex = 25;
+            this.roundButton7.Text = "7";
+            this.roundButton7.TextColor = System.Drawing.Color.White;
+            this.roundButton7.UseVisualStyleBackColor = false;
+            this.roundButton7.Click += new System.EventHandler(this.selectTable_click);
+            // 
+            // roundButton6
+            // 
+            this.roundButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.roundButton6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.roundButton6.BorderColor = System.Drawing.Color.Black;
+            this.roundButton6.BorderRadius = 20;
+            this.roundButton6.BorderSize = 0;
+            this.roundButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton6.FlatAppearance.BorderSize = 0;
+            this.roundButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton6.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton6.ForeColor = System.Drawing.Color.White;
+            this.roundButton6.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton6.IconColor = System.Drawing.Color.Black;
+            this.roundButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton6.Location = new System.Drawing.Point(13, 17);
+            this.roundButton6.Name = "roundButton6";
+            this.roundButton6.Padding = new System.Windows.Forms.Padding(10);
+            this.roundButton6.Size = new System.Drawing.Size(51, 41);
+            this.roundButton6.TabIndex = 25;
+            this.roundButton6.Text = "6";
+            this.roundButton6.TextColor = System.Drawing.Color.White;
+            this.roundButton6.UseVisualStyleBackColor = false;
+            this.roundButton6.Click += new System.EventHandler(this.selectTable_click);
+            // 
+            // roundButton5
+            // 
+            this.roundButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.roundButton5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.roundButton5.BorderColor = System.Drawing.Color.Black;
+            this.roundButton5.BorderRadius = 20;
+            this.roundButton5.BorderSize = 0;
+            this.roundButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton5.FlatAppearance.BorderSize = 0;
+            this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton5.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton5.ForeColor = System.Drawing.Color.White;
+            this.roundButton5.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton5.IconColor = System.Drawing.Color.Black;
+            this.roundButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton5.Location = new System.Drawing.Point(21, 17);
+            this.roundButton5.Name = "roundButton5";
+            this.roundButton5.Padding = new System.Windows.Forms.Padding(10);
+            this.roundButton5.Size = new System.Drawing.Size(51, 41);
+            this.roundButton5.TabIndex = 25;
+            this.roundButton5.Text = "5";
+            this.roundButton5.TextColor = System.Drawing.Color.White;
+            this.roundButton5.UseVisualStyleBackColor = false;
+            this.roundButton5.Click += new System.EventHandler(this.selectTable_click);
+            // 
+            // roundButton4
+            // 
+            this.roundButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.roundButton4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.roundButton4.BorderColor = System.Drawing.Color.Black;
+            this.roundButton4.BorderRadius = 20;
+            this.roundButton4.BorderSize = 0;
+            this.roundButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton4.FlatAppearance.BorderSize = 0;
+            this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton4.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton4.ForeColor = System.Drawing.Color.White;
+            this.roundButton4.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton4.IconColor = System.Drawing.Color.Black;
+            this.roundButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton4.Location = new System.Drawing.Point(15, 19);
+            this.roundButton4.Name = "roundButton4";
+            this.roundButton4.Padding = new System.Windows.Forms.Padding(10);
+            this.roundButton4.Size = new System.Drawing.Size(51, 41);
+            this.roundButton4.TabIndex = 25;
+            this.roundButton4.Text = "1";
+            this.roundButton4.TextColor = System.Drawing.Color.White;
+            this.roundButton4.UseVisualStyleBackColor = false;
+            this.roundButton4.Click += new System.EventHandler(this.selectTable_click);
+            // 
+            // roundButton3
+            // 
+            this.roundButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.roundButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.roundButton3.BorderColor = System.Drawing.Color.Black;
+            this.roundButton3.BorderRadius = 20;
+            this.roundButton3.BorderSize = 0;
+            this.roundButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton3.FlatAppearance.BorderSize = 0;
+            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton3.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton3.ForeColor = System.Drawing.Color.White;
+            this.roundButton3.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton3.IconColor = System.Drawing.Color.Black;
+            this.roundButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton3.Location = new System.Drawing.Point(14, 19);
+            this.roundButton3.Name = "roundButton3";
+            this.roundButton3.Padding = new System.Windows.Forms.Padding(10);
+            this.roundButton3.Size = new System.Drawing.Size(51, 41);
+            this.roundButton3.TabIndex = 25;
+            this.roundButton3.Text = "3";
+            this.roundButton3.TextColor = System.Drawing.Color.White;
+            this.roundButton3.UseVisualStyleBackColor = false;
+            this.roundButton3.Click += new System.EventHandler(this.selectTable_click);
+            // 
+            // roundButton2
+            // 
+            this.roundButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.roundButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.roundButton2.BorderColor = System.Drawing.Color.Black;
+            this.roundButton2.BorderRadius = 20;
+            this.roundButton2.BorderSize = 0;
+            this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton2.FlatAppearance.BorderSize = 0;
+            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton2.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton2.ForeColor = System.Drawing.Color.White;
+            this.roundButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton2.IconColor = System.Drawing.Color.Black;
+            this.roundButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton2.Location = new System.Drawing.Point(24, 19);
+            this.roundButton2.Name = "roundButton2";
+            this.roundButton2.Padding = new System.Windows.Forms.Padding(10);
+            this.roundButton2.Size = new System.Drawing.Size(51, 41);
+            this.roundButton2.TabIndex = 25;
+            this.roundButton2.Text = "4";
+            this.roundButton2.TextColor = System.Drawing.Color.White;
+            this.roundButton2.UseVisualStyleBackColor = false;
+            this.roundButton2.Click += new System.EventHandler(this.selectTable_click);
+            // 
+            // roundButton1
+            // 
+            this.roundButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.roundButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.roundButton1.BorderColor = System.Drawing.Color.Black;
+            this.roundButton1.BorderRadius = 20;
+            this.roundButton1.BorderSize = 0;
+            this.roundButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton1.FlatAppearance.BorderSize = 0;
+            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton1.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton1.ForeColor = System.Drawing.Color.White;
+            this.roundButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton1.IconColor = System.Drawing.Color.Black;
+            this.roundButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton1.Location = new System.Drawing.Point(47, 18);
+            this.roundButton1.Name = "roundButton1";
+            this.roundButton1.Padding = new System.Windows.Forms.Padding(10);
+            this.roundButton1.Size = new System.Drawing.Size(51, 41);
+            this.roundButton1.TabIndex = 24;
+            this.roundButton1.Text = "2";
+            this.roundButton1.TextColor = System.Drawing.Color.White;
+            this.roundButton1.UseVisualStyleBackColor = false;
+            this.roundButton1.Click += new System.EventHandler(this.selectTable_click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(836, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 18);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "Seleccione una Mesa";
+            // 
             // TablesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.sPanel86);
@@ -1073,5 +1086,6 @@
         private Sipaa.Framework.SPanel sPanel86;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
