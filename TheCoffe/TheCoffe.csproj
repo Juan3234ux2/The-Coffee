@@ -514,5 +514,8 @@
   <ItemGroup>
     <None Include="Resources\calendarDark.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="ScriptTheCoffee.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
