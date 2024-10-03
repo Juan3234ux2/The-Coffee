@@ -123,6 +123,7 @@
             this.dataRemovedCategory.Size = new System.Drawing.Size(976, 479);
             this.dataRemovedCategory.TabIndex = 18;
             this.dataRemovedCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCategory_CellClick);
+            this.dataRemovedCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataRemovedCategory_CellContentClick);
             // 
             // ID
             // 

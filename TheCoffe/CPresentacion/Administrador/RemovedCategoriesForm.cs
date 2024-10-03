@@ -66,5 +66,10 @@ namespace TheCoffe.CPresentacion.General
         {
             this.Close();
         }
+
+        private void dataRemovedCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
