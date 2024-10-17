@@ -25,8 +25,19 @@ namespace TheCoffe
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            if(string.IsNullOrWhiteSpace(txtUser.Texts) || string.IsNullOrWhiteSpace(txtPassword.Texts))
+            {
+                MessageBox.Show("Debe Completar todos los campos",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
