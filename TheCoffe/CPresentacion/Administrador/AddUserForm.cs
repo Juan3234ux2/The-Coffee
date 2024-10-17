@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheCoffe.CAccesoADatos;
+using TheCoffe.CDatos;
 using TheCoffe.CNegocio;
 
 namespace TheCoffe.App
@@ -21,20 +23,31 @@ namespace TheCoffe.App
             InitializeComponent();
         }
 
-        public AddUserForm(String name, String lastName, String number, String user, String pass)
+        UsuarioDAL usuarioDAL = new UsuarioDAL();
+        Usuario usuario = null;
+
+        public AddUserForm(int id)
         {
             InitializeComponent();
             lblAddUser.Text = "Editar Usuario";
             btnAdd.Text = "Editar";
-            txtLastName.Texts = lastName;
-            txtName.Texts = name;
-            txtNumber.Texts = number;
-            txtUser.Texts = user;
-            txtPassword.Texts = pass;
-            cboRol.SelectedIndex = 0;
-            txtPassword.Enabled = false;
-            btnWatchPassword.Visible = false;
-            this.idUsuario = 10;
+            this.idUsuario = id;
+            usuario = usuarioDAL.SearchObject(id);
+            txtName.Texts = usuario.nombre;
+            txtLastName.Texts = usuario.apellido;
+            txtNumber.Texts = Convert.ToString(usuario.telefono);
+            txtUser.Texts = usuario.usuario1;
+            txtPassword.Texts = usuario.contraseña;
+        }
+
+        private void CargarDatos()
+        {
+            usuario.nombre = txtName.Texts;
+            usuario.apellido = txtLastName.Texts;
+            usuario.telefono = Convert.ToInt32(txtNumber.Texts);
+            usuario.usuario1 = txtUser.Texts;
+            usuario.contraseña = txtPassword.Texts;
+            usuario.id_rol = Convert.ToInt32(cboRol.SelectedValue);
         }
 
         private void btnWatchPassword_Click(object sender, EventArgs e)
@@ -63,6 +76,36 @@ namespace TheCoffe.App
                     timer.Stop();
             };
             timer.Start();
+            CargarRoles();
+        }
+
+
+        public void CargarRoles()
+        {
+            var listRoles = usuarioDAL.listRoles();
+            cboRol.DataSource = listRoles;
+            cboRol.DisplayMember = "descripcion";
+            cboRol.ValueMember = "id_rol";
+            if (idUsuario != 0)
+            {
+                CargarRolesActual();
+            }
+        }
+
+        public void CargarRolesActual()
+        {
+            var listRoles = usuarioDAL.listRoles();
+
+            int index = 0;
+            for (int i = 0; i < listRoles.Count(); i++)
+            {
+                if (listRoles[i].id_rol == usuario.id_rol)
+                {
+                    index = i;
+                    break;
+                }
+            }
+            cboRol.SelectedIndex = index;
         }
 
         private void AddUserForm_Deactivate(object sender, EventArgs e)
@@ -108,10 +151,15 @@ namespace TheCoffe.App
             {
                 if (this.idUsuario == 0)
                 {
+                    usuario = new Usuario();
+                    CargarDatos();
+                    usuarioDAL.Create(usuario);
                     new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Usuario agregado correctamente", Properties.Resources.informacion);
                 }
                 else
                 {
+                    CargarDatos();
+                    usuarioDAL.Update(usuario);
                     new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Usuario editado correctamente", Properties.Resources.informacion);
                 }
             }

@@ -38,8 +38,10 @@
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.btnRemovedCategories = new WindowsFormsApplication1.RoundButton();
-            this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
+            this.txtSearch = new TheCoffe.Components.ModernTextBox();
             this.btnAddCategory = new WindowsFormsApplication1.RoundButton();
+            this.id_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataCategory)).BeginInit();
@@ -67,6 +69,8 @@
             this.dataCategory.ColumnHeadersHeight = 45;
             this.dataCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_categoria,
+            this.descripcion,
             this.editar,
             this.eliminar});
             this.dataCategory.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -191,27 +195,28 @@
             this.btnRemovedCategories.UseVisualStyleBackColor = false;
             this.btnRemovedCategories.Click += new System.EventHandler(this.btnRemovedCategories_Click);
             // 
-            // modernTextBox1
+            // txtSearch
             // 
-            this.modernTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.modernTextBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.modernTextBox1.BorderFocusColor = System.Drawing.Color.Black;
-            this.modernTextBox1.BorderRadius = 10;
-            this.modernTextBox1.BorderSize = 1;
-            this.modernTextBox1.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modernTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox1.Location = new System.Drawing.Point(20, 74);
-            this.modernTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.modernTextBox1.Multiline = false;
-            this.modernTextBox1.Name = "modernTextBox1";
-            this.modernTextBox1.Padding = new System.Windows.Forms.Padding(10, 16, 10, 7);
-            this.modernTextBox1.PasswordChar = false;
-            this.modernTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.modernTextBox1.PlaceholderText = "Buscar...";
-            this.modernTextBox1.Size = new System.Drawing.Size(329, 44);
-            this.modernTextBox1.TabIndex = 18;
-            this.modernTextBox1.Texts = "";
-            this.modernTextBox1.UnderlinedStyle = false;
+            this.txtSearch.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSearch.BorderColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BorderFocusColor = System.Drawing.Color.Black;
+            this.txtSearch.BorderRadius = 10;
+            this.txtSearch.BorderSize = 1;
+            this.txtSearch.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSearch.Location = new System.Drawing.Point(20, 74);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Multiline = false;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(10, 16, 10, 7);
+            this.txtSearch.PasswordChar = false;
+            this.txtSearch.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.txtSearch.PlaceholderText = "Buscar...";
+            this.txtSearch.Size = new System.Drawing.Size(329, 44);
+            this.txtSearch.TabIndex = 18;
+            this.txtSearch.Texts = "";
+            this.txtSearch.UnderlinedStyle = false;
+            this.txtSearch._TextChanged += new System.EventHandler(this.txtSearch__TextChanged);
             // 
             // btnAddCategory
             // 
@@ -239,9 +244,25 @@
             this.btnAddCategory.UseVisualStyleBackColor = false;
             this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
+            // id_categoria
+            // 
+            this.id_categoria.DataPropertyName = "id_categoria";
+            this.id_categoria.FillWeight = 21.30032F;
+            this.id_categoria.HeaderText = "ID";
+            this.id_categoria.Name = "id_categoria";
+            this.id_categoria.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.DataPropertyName = "descripcion";
+            this.descripcion.FillWeight = 187.5035F;
+            this.descripcion.HeaderText = "Descripcion";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
             // editar
             // 
-            this.editar.FillWeight = 21.18868F;
+            this.editar.FillWeight = 16.95756F;
             this.editar.HeaderText = "Acciones";
             this.editar.Image = global::TheCoffe.Properties.Resources.pencil;
             this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -251,7 +272,7 @@
             // 
             // eliminar
             // 
-            this.eliminar.FillWeight = 16.64549F;
+            this.eliminar.FillWeight = 12.0728F;
             this.eliminar.HeaderText = "";
             this.eliminar.Image = global::TheCoffe.Properties.Resources.delete;
             this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -265,7 +286,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Controls.Add(this.btnRemovedCategories);
             this.Controls.Add(this.iconButton5);
-            this.Controls.Add(this.modernTextBox1);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dataCategory);
             this.Controls.Add(this.btnAddCategory);
             this.Controls.Add(this.label1);
@@ -280,13 +301,15 @@
 
         #endregion
         private FontAwesome.Sharp.IconButton iconButton5;
-        private Components.ModernTextBox modernTextBox1;
+        private Components.ModernTextBox txtSearch;
         private System.Windows.Forms.DataGridView dataCategory;
         private WindowsFormsApplication1.RoundButton btnAddCategory;
         private System.Windows.Forms.Label label1;
         private WindowsFormsApplication1.RoundButton btnRemovedCategories;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewImageColumn editar;
         private System.Windows.Forms.DataGridViewImageColumn eliminar;
     }

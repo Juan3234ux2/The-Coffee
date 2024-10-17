@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheCoffe.CPresentacion;
+using TheCoffe.CAccesoADatos;
+using TheCoffe.CDatos;
 
 namespace TheCoffe.App
 {
@@ -18,20 +20,30 @@ namespace TheCoffe.App
             InitializeComponent();
         }
 
+        MeseroDAL meseroDAL = new MeseroDAL();
+        Mesero mesero = new Mesero();
+        private int id;
+
         private void WaiterListForm_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 3; i++)
-            {
-                int rowIndex = dataWaiter.Rows.Add();
-                DataGridViewRow row = dataWaiter.Rows[rowIndex];
-                row.Cells[0].Value = 1;
-                row.Cells[1].Value = "Emilia";
-                row.Cells[2].Value = "Espinola";
-                row.Cells[3].Value = "45939582";
-                row.Cells[4].Value = "54-379 4997735";
-                row.Cells[5].Value = "08:00";
-                row.Cells[6].Value = "12:00";
-            }
+            RefreshPantalla();
+        }
+
+        public void RefreshPantalla()
+        {
+            var Lst = meseroDAL.Read(false).Select(p => new {
+                p.id_mesero, p.nombre, p.apellido, p.dni, p.telefono, p.hora_entrada, p.hora_salida
+            }).ToList();
+            dataWaiter.DataSource = Lst;
+            dataWaiter.Columns[2].HeaderText = "ID";
+            dataWaiter.Columns[3].HeaderText = "Nombre";
+            dataWaiter.Columns[4].HeaderText = "Apellido";
+            dataWaiter.Columns[5].HeaderText = "DNI";
+            dataWaiter.Columns[6].HeaderText = "Teléfono";
+            dataWaiter.Columns[7].HeaderText = "Hora de Ingreso";
+            dataWaiter.Columns[8].HeaderText = "Hora de Salida";
+            dataWaiter.Columns[0].DisplayIndex = dataWaiter.Columns.Count - 1;
+            dataWaiter.Columns[1].DisplayIndex = dataWaiter.Columns.Count - 1;
         }
 
         private void btnAddWaiter_Click(object sender, EventArgs e)
@@ -45,16 +57,19 @@ namespace TheCoffe.App
                 }
                 overlay.Close();
             }
+            RefreshPantalla();
         }
         
         private void dataWaiter_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataWaiter.Columns[e.ColumnIndex].Name == "editar")
             {
+                id = Convert.ToInt32(dataWaiter.CurrentRow.Cells[2].Value.ToString());
+
                 using (OverlayForm overlay = new OverlayForm())
                 {
                     overlay.Show();
-                    using (AddWaiterForm modal = new AddWaiterForm("Emilia", "Espinola", "54 - 379 4997735", "45939582", "08:00", "12:00"))
+                    using (AddWaiterForm modal = new AddWaiterForm(id))
                     {
                         modal.ShowDialog(overlay);
                     }
@@ -65,9 +80,11 @@ namespace TheCoffe.App
             {
                 if (MessageBox.Show("¿Está seguro que desea eliminar este registro?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    dataWaiter.Rows.RemoveAt(e.RowIndex);
+                    id = Convert.ToInt32(dataWaiter.CurrentRow.Cells[2].Value.ToString());
+                    meseroDAL.Delete(id);
                 }
             }
+            RefreshPantalla();
         }
 
         private void btnRemovedWaiter_Click(object sender, EventArgs e)
@@ -85,6 +102,28 @@ namespace TheCoffe.App
                     waiterRemoved.ShowDialog(overlay);
                 }
                 overlay.Close();
+            }
+            RefreshPantalla();
+        }
+
+        private void txtSearch__TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Texts != string.Empty)
+            {
+                var Lst = meseroDAL.Search(txtSearch.Texts).Select(p => new {
+                    p.id_mesero,
+                    p.nombre,
+                    p.apellido,
+                    p.dni,
+                    p.telefono,
+                    p.hora_entrada,
+                    p.hora_salida
+                }).ToList();
+                dataWaiter.DataSource = Lst;
+            }
+            else
+            {
+                RefreshPantalla();
             }
         }
     }

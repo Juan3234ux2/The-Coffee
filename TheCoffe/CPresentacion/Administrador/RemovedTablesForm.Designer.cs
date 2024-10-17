@@ -35,9 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.dataRemovedTable = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NrodeSilla = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataRemovedTable)).BeginInit();
             this.SuspendLayout();
@@ -93,9 +90,6 @@
             this.dataRemovedTable.ColumnHeadersHeight = 45;
             this.dataRemovedTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataRemovedTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Nombre,
-            this.NrodeSilla,
             this.activar});
             this.dataRemovedTable.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -144,27 +138,6 @@
             this.dataRemovedTable.TabIndex = 32;
             this.dataRemovedTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTable_CellClick);
             // 
-            // ID
-            // 
-            this.ID.FillWeight = 65.14275F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.FillWeight = 170.2603F;
-            this.Nombre.HeaderText = "Nro de Mesa";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // NrodeSilla
-            // 
-            this.NrodeSilla.FillWeight = 136.8174F;
-            this.NrodeSilla.HeaderText = "Nro de Silla";
-            this.NrodeSilla.Name = "NrodeSilla";
-            this.NrodeSilla.ReadOnly = true;
-            // 
             // activar
             // 
             this.activar.FillWeight = 27.78767F;
@@ -204,9 +177,6 @@
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataRemovedTable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NrodeSilla;
         private System.Windows.Forms.DataGridViewImageColumn activar;
     }
 }

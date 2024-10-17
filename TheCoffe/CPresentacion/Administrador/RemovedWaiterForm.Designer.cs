@@ -35,13 +35,6 @@
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dataRemovedWaiter = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataRemovedWaiter)).BeginInit();
             this.SuspendLayout();
@@ -97,13 +90,6 @@
             this.dataRemovedWaiter.ColumnHeadersHeight = 45;
             this.dataRemovedWaiter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataRemovedWaiter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Nombre,
-            this.Column1,
-            this.Column5,
-            this.Column2,
-            this.Column3,
-            this.Column4,
             this.activar});
             this.dataRemovedWaiter.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -152,55 +138,6 @@
             this.dataRemovedWaiter.TabIndex = 32;
             this.dataRemovedWaiter.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataRemovedWaiter_CellClick);
             // 
-            // ID
-            // 
-            this.ID.FillWeight = 33.34377F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.FillWeight = 76.38828F;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 122.9931F;
-            this.Column1.HeaderText = "Apellido";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.FillWeight = 122.9931F;
-            this.Column5.HeaderText = "DNI";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 122.9931F;
-            this.Column2.HeaderText = "Teléfono";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 122.9931F;
-            this.Column3.HeaderText = "Hora de Ingreso";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.FillWeight = 122.9931F;
-            this.Column4.HeaderText = "Hora de Salida";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
             // activar
             // 
             this.activar.FillWeight = 57.09146F;
@@ -239,13 +176,6 @@
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataRemovedWaiter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewImageColumn activar;
     }
 }

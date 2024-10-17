@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheCoffe.CAccesoADatos;
+using TheCoffe.CDatos;
 using TheCoffe.CNegocio;
 
 namespace TheCoffe.App
@@ -20,16 +22,29 @@ namespace TheCoffe.App
         {
             InitializeComponent();
         }
-        public AddProductForm(String name, String price, String description)
+
+        ProductoDAL productoDAL = new ProductoDAL();
+        Producto producto = null;
+
+        public AddProductForm(int id)
         {
             InitializeComponent();
             lblTitle.Text = "Editar Producto";
             btnAdd.Text = "Editar";
-            txtName.Texts = name;
-            txtPrice.Texts = price;
-            txtDescription.Texts = description;
-            cboCategory.SelectedIndex = 0;
-            this.idProducto = 10;
+            this.idProducto = id;
+            producto = productoDAL.SearchObject(id);
+            txtName.Texts = producto.nombre;
+            txtPrice.Texts = Convert.ToString(producto.precio);
+            txtDescription.Texts = producto.descripcion;
+        }
+
+        private void CargarDatos()
+        {
+            producto.nombre = txtName.Texts;
+            producto.descripcion = txtDescription.Texts;
+            producto.precio = Convert.ToInt32(txtPrice.Texts);
+            producto.id_categoria = Convert.ToInt32(cboCategory.SelectedValue);
+            producto.imagen = "";
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -48,12 +63,15 @@ namespace TheCoffe.App
             { 
                 if(this.idProducto == 0)
                 {
-                    /*Logica para agregar*/
+                    producto = new Producto();
+                    CargarDatos();
+                    productoDAL.Create(producto);
                     new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Producto agregado correctamente", Properties.Resources.informacion);
                 }
                 else
                 {
-                    /*Logica para editar*/
+                    CargarDatos();
+                    productoDAL.Update(producto);
                     new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Producto editado correctamente", Properties.Resources.informacion);
 
                 }
@@ -78,6 +96,15 @@ namespace TheCoffe.App
                     timer.Stop();
             };
             timer.Start();
+            CargarCategorias();
+        }
+
+        public void CargarCategorias()
+        {
+            var listCategorias = productoDAL.listCategories();
+            cboCategory.DataSource = listCategorias;
+            cboCategory.DisplayMember = "descripcion";
+            cboCategory.ValueMember = "id_categoria";
         }
 
         private void AddProductForm_Deactivate(object sender, EventArgs e)
@@ -140,6 +167,11 @@ namespace TheCoffe.App
                 }
             }
             isShowingMsgBox = false;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

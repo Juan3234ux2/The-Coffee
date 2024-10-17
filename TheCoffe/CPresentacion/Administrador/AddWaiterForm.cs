@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheCoffe.CAccesoADatos;
+using TheCoffe.CDatos;
 using TheCoffe.CNegocio;
 
 namespace TheCoffe.App
@@ -15,28 +17,44 @@ namespace TheCoffe.App
     {
         private bool isShowingMsgBox = false;
         private int idMesero = 0;
+
         public AddWaiterForm()
         {
             InitializeComponent();
         }
 
-        public AddWaiterForm(String name, String lastName, String number, String dni, String income, String exit)
+        MeseroDAL meseroDAL = new MeseroDAL();
+        Mesero mesero = null;
+
+        public AddWaiterForm(int id)
         {
             InitializeComponent();
             lblAddWaiter.Text = "Editar Mesero";
             btnAddWaiter.Text = "Editar";
-            txtName.Texts = name;
-            txtLastName.Texts = lastName;
-            txtDNI.Texts = dni;
-            txtNumber.Texts = number;
-            mtxtIncome.Text = income;
-            mtxtExit.Text = exit;
-            this.idMesero = 10;
+            this.idMesero = id;
+            mesero = meseroDAL.SearchObject(id);
+            txtName.Texts = mesero.nombre;
+            txtLastName.Texts = mesero.apellido;
+            txtDNI.Texts = Convert.ToString(mesero.dni);
+            txtNumber.Texts = Convert.ToString(mesero.telefono);
+            txtExit.Texts = Convert.ToString(mesero.hora_salida);
+            txtIncome.Texts = Convert.ToString(mesero.hora_entrada);
+        }
+
+        private void CargarDatos()
+        {
+            mesero.nombre = txtName.Texts;
+            mesero.apellido = txtLastName.Texts;
+            mesero.dni = int.Parse(txtDNI.Texts); 
+            mesero.telefono = Convert.ToInt32(txtNumber.Texts);
+            mesero.hora_salida = Convert.ToInt32(txtExit.Texts);
+            mesero.hora_entrada= Convert.ToInt32(txtIncome.Texts);
         }
 
         private void btnAddWaiter_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtName.Texts) || string.IsNullOrWhiteSpace(txtLastName.Texts) || string.IsNullOrWhiteSpace(txtDNI.Texts) || string.IsNullOrWhiteSpace(txtNumber.Texts) || string.IsNullOrWhiteSpace(mtxtIncome.Text) || string.IsNullOrWhiteSpace(mtxtExit.Text))
+            if (string.IsNullOrWhiteSpace(txtName.Texts) || string.IsNullOrWhiteSpace(txtLastName.Texts) || string.IsNullOrWhiteSpace(txtDNI.Texts) ||
+                string.IsNullOrWhiteSpace(txtNumber.Texts) || string.IsNullOrWhiteSpace(txtIncome.Texts) || string.IsNullOrWhiteSpace(txtExit.Texts))
             {
                 isShowingMsgBox = true;
                 MessageBox.Show("Debe Completar todos los campos",
@@ -50,10 +68,15 @@ namespace TheCoffe.App
             {
                 if(this.idMesero == 0)
                 {
+                    mesero = new Mesero();
+                    CargarDatos();
+                    meseroDAL.Create(mesero);
                     new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Mesero agregado correctamente", Properties.Resources.informacion);
                 }
                 else
                 {
+                    CargarDatos();
+                    meseroDAL.Update(mesero);
                     new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Mesero editado correctamente", Properties.Resources.informacion);
                 }
             }
@@ -98,6 +121,14 @@ namespace TheCoffe.App
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtDNI__TextChanged(object sender, EventArgs e)
+        {
+            if (txtDNI.Texts.Length > 8)
+            {
+                txtDNI.Texts = txtDNI.Texts.Substring(0,8);
+            }
         }
     }
 }

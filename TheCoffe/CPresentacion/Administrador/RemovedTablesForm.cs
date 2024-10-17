@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheCoffe.App;
+using TheCoffe.CAccesoADatos;
+using TheCoffe.CDatos;
 
 namespace TheCoffe.CPresentacion
 {
@@ -17,6 +19,25 @@ namespace TheCoffe.CPresentacion
         public RemovedTablesForm()
         {
             InitializeComponent();
+        }
+
+        MesaDAL mesaDAL = new MesaDAL();
+        Mesa mesa = new Mesa();
+        private int id;
+
+
+        public void RefreshPantalla()
+        {
+            var Lst = mesaDAL.Read(true).Select(p => new {
+                p.id_mesa,
+                p.nro_mesa,
+                p.cantidad_sillas
+            }).ToList();
+            dataRemovedTable.DataSource = Lst;
+            dataRemovedTable.Columns[1].HeaderText = "ID";
+            dataRemovedTable.Columns[2].HeaderText = "Nro de Mesa";
+            dataRemovedTable.Columns[3].HeaderText = "Cant. de Sillas";
+            dataRemovedTable.Columns[0].DisplayIndex = dataRemovedTable.Columns.Count - 1;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -37,14 +58,8 @@ namespace TheCoffe.CPresentacion
                     timer.Stop();
             };
             timer.Start();
-            for (int i = 0; i < 3; i++)
-            {
-                int rowIndex = dataRemovedTable.Rows.Add();
-                DataGridViewRow row = dataRemovedTable.Rows[rowIndex];
-                row.Cells[0].Value = 1;
-                row.Cells[1].Value = "3";
-                row.Cells[2].Value = "4";
-            }
+
+            RefreshPantalla();
         }
 
         private void RemovedTablesForm_Deactivate(object sender, EventArgs e)
@@ -62,9 +77,11 @@ namespace TheCoffe.CPresentacion
                     isShowingMsgBox = true;
                     if (MessageBox.Show("¿Está seguro que desea activar este registro?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        dataRemovedTable.Rows.RemoveAt(e.RowIndex);
+                    id = Convert.ToInt32(dataRemovedTable.CurrentRow.Cells[1].Value.ToString());
+                    mesaDAL.Delete(id);
                     }
                     isShowingMsgBox = false;
+                    RefreshPantalla();
             }
         }
     }

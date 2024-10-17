@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheCoffe.CPresentacion;
+using TheCoffe.CAccesoADatos;
+using TheCoffe.CDatos;
+using TheCoffe.CNegocio;
 
 namespace TheCoffe.App
 {
@@ -18,16 +21,28 @@ namespace TheCoffe.App
             InitializeComponent();
         }
 
+        MesaDAL mesaDAL = new MesaDAL();
+        Mesa mesa = new Mesa();
+        private int id;
+
+        public void RefreshPantalla()
+        {
+            var Lst = mesaDAL.Read(false).Select(p => new {
+                p.id_mesa,
+                p.nro_mesa,
+                p.cantidad_sillas
+            }).ToList();
+            dataTable.DataSource = Lst;
+            dataTable.Columns[2].HeaderText = "ID";
+            dataTable.Columns[3].HeaderText = "Nro de Mesa";
+            dataTable.Columns[4].HeaderText = "Cant. de Sillas";
+            dataTable.Columns[0].DisplayIndex = dataTable.Columns.Count - 1;
+            dataTable.Columns[1].DisplayIndex = dataTable.Columns.Count - 1;
+        }
+
         private void TableList_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 3; i++)
-            {
-                int rowIndex = dataTable.Rows.Add();
-                DataGridViewRow row = dataTable.Rows[rowIndex];
-                row.Cells[0].Value = 1;
-                row.Cells[1].Value = "3";
-                row.Cells[2].Value = "4";
-            }
+            RefreshPantalla();
         }
 
         private void btnAddTable_Click(object sender, EventArgs e)
@@ -41,16 +56,18 @@ namespace TheCoffe.App
                 }
                 overlay.Close();
             }
+            RefreshPantalla();
         }
 
         private void dataCategory_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataTable.Columns[e.ColumnIndex].Name == "editar")
             {
+                id = Convert.ToInt32(dataTable.CurrentRow.Cells[2].Value.ToString());
                 using (OverlayForm overlay = new OverlayForm())
                 {
                     overlay.Show();
-                    using (AddTableForm1 modal = new AddTableForm1("3","4"))
+                    using (AddTableForm1 modal = new AddTableForm1(id))
                     {
                         modal.ShowDialog(overlay);
                     }
@@ -61,9 +78,11 @@ namespace TheCoffe.App
             {
                 if (MessageBox.Show("¿Está seguro que desea eliminar este registro?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    dataTable.Rows.RemoveAt(e.RowIndex);
+                    id = Convert.ToInt32(dataTable.CurrentRow.Cells[2].Value.ToString());
+                    mesaDAL.Delete(id);
                 }
             }
+            RefreshPantalla();
         }
 
         private void btnRemovedTables_Click(object sender, EventArgs e)
@@ -77,6 +96,29 @@ namespace TheCoffe.App
                 }
                 overlay.Close();
             }
+            RefreshPantalla();
+        }
+       
+        private void txtSearch__TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Texts != string.Empty)
+            {
+                var lst = mesaDAL.Search(Convert.ToInt32(txtSearch.Texts)).Select(p => new {
+                    p.id_mesa,
+                    p.nro_mesa,
+                    p.cantidad_sillas
+                }).ToList();
+                dataTable.DataSource = lst;
+            }
+            else
+            {
+                RefreshPantalla();
+            }
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidator.ValidateInput(e, InputValidator.InputType.Digits);
         }
     }
 }

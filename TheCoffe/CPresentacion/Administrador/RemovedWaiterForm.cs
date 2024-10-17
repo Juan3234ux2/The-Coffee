@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheCoffe.App;
+using TheCoffe.CAccesoADatos;
+using TheCoffe.CDatos;
 
 namespace TheCoffe.CPresentacion
 {
@@ -17,6 +19,32 @@ namespace TheCoffe.CPresentacion
         public RemovedWaiterForm()
         {
             InitializeComponent();
+        }
+
+        MeseroDAL meseroDAL = new MeseroDAL();
+        Mesero mesero = new Mesero();
+        private int id;
+
+        public void RefreshPantalla()
+        {
+            var Lst = meseroDAL.Read(true).Select(p => new {
+                p.id_mesero,
+                p.nombre,
+                p.apellido,
+                p.dni,
+                p.telefono,
+                p.hora_entrada,
+                p.hora_salida
+            }).ToList();
+            dataRemovedWaiter.DataSource = Lst;
+            dataRemovedWaiter.Columns[1].HeaderText = "ID";
+            dataRemovedWaiter.Columns[2].HeaderText = "Nombre";
+            dataRemovedWaiter.Columns[3].HeaderText = "Apellido";
+            dataRemovedWaiter.Columns[4].HeaderText = "DNI";
+            dataRemovedWaiter.Columns[5].HeaderText = "Teléfono";
+            dataRemovedWaiter.Columns[6].HeaderText = "Hora de Ingreso";
+            dataRemovedWaiter.Columns[7].HeaderText = "Hora de Salida";
+            dataRemovedWaiter.Columns[0].DisplayIndex = dataRemovedWaiter.Columns.Count - 1;
         }
 
         private void RemovedWaiterForm_Load(object sender, EventArgs e)
@@ -32,18 +60,8 @@ namespace TheCoffe.CPresentacion
                     timer.Stop();
             };
             timer.Start();
-            for (int i = 0; i < 3; i++)
-            {
-                int rowIndex = dataRemovedWaiter.Rows.Add();
-                DataGridViewRow row = dataRemovedWaiter.Rows[rowIndex];
-                row.Cells[0].Value = 1;
-                row.Cells[1].Value = "Emilia";
-                row.Cells[2].Value = "Espinola";
-                row.Cells[3].Value = "45939582";
-                row.Cells[4].Value = "54-379 4997735";
-                row.Cells[5].Value = "08:00";
-                row.Cells[6].Value = "12:00";
-            }
+
+            RefreshPantalla();
         }
 
         private void dataRemovedWaiter_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -53,9 +71,11 @@ namespace TheCoffe.CPresentacion
                     isShowingMsgBox = true;
                     if (MessageBox.Show("¿Está seguro que desea activar este registro?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        dataRemovedWaiter.Rows.RemoveAt(e.RowIndex);
+                    id = Convert.ToInt32(dataRemovedWaiter.CurrentRow.Cells[1].Value.ToString());
+                    meseroDAL.Delete(id);
                     }
                     isShowingMsgBox = false;
+                    RefreshPantalla();
             }
         }
 

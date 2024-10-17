@@ -32,41 +32,40 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
+            this.txtSearch = new TheCoffe.Components.ModernTextBox();
             this.dataTable = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NrodeSilla = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.iconSearch = new FontAwesome.Sharp.IconButton();
             this.btnAddTable = new WindowsFormsApplication1.RoundButton();
             this.btnRemovedTables = new WindowsFormsApplication1.RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable)).BeginInit();
             this.SuspendLayout();
             // 
-            // modernTextBox1
+            // txtSearch
             // 
-            this.modernTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.modernTextBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.modernTextBox1.BorderFocusColor = System.Drawing.Color.Black;
-            this.modernTextBox1.BorderRadius = 10;
-            this.modernTextBox1.BorderSize = 1;
-            this.modernTextBox1.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modernTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox1.Location = new System.Drawing.Point(19, 73);
-            this.modernTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.modernTextBox1.Multiline = false;
-            this.modernTextBox1.Name = "modernTextBox1";
-            this.modernTextBox1.Padding = new System.Windows.Forms.Padding(10, 16, 10, 7);
-            this.modernTextBox1.PasswordChar = false;
-            this.modernTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.modernTextBox1.PlaceholderText = "Buscar...";
-            this.modernTextBox1.Size = new System.Drawing.Size(329, 44);
-            this.modernTextBox1.TabIndex = 23;
-            this.modernTextBox1.Texts = "";
-            this.modernTextBox1.UnderlinedStyle = false;
+            this.txtSearch.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSearch.BorderColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BorderFocusColor = System.Drawing.Color.Black;
+            this.txtSearch.BorderRadius = 10;
+            this.txtSearch.BorderSize = 1;
+            this.txtSearch.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSearch.Location = new System.Drawing.Point(19, 73);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Multiline = false;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(10, 16, 10, 7);
+            this.txtSearch.PasswordChar = false;
+            this.txtSearch.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.txtSearch.PlaceholderText = "Buscar...";
+            this.txtSearch.Size = new System.Drawing.Size(329, 44);
+            this.txtSearch.TabIndex = 23;
+            this.txtSearch.Texts = "";
+            this.txtSearch.UnderlinedStyle = false;
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
+            this.txtSearch._TextChanged += new System.EventHandler(this.txtSearch__TextChanged);
             // 
             // dataTable
             // 
@@ -90,9 +89,6 @@
             this.dataTable.ColumnHeadersHeight = 45;
             this.dataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Nombre,
-            this.NrodeSilla,
             this.editar,
             this.eliminar});
             this.dataTable.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -142,27 +138,6 @@
             this.dataTable.TabIndex = 22;
             this.dataTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCategory_CellClick);
             // 
-            // ID
-            // 
-            this.ID.FillWeight = 65.14275F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.FillWeight = 170.2603F;
-            this.Nombre.HeaderText = "Nro de Mesa";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // NrodeSilla
-            // 
-            this.NrodeSilla.FillWeight = 136.8174F;
-            this.NrodeSilla.HeaderText = "Nro de Silla";
-            this.NrodeSilla.Name = "NrodeSilla";
-            this.NrodeSilla.ReadOnly = true;
-            // 
             // editar
             // 
             this.editar.FillWeight = 27.78767F;
@@ -193,23 +168,23 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Mesas";
             // 
-            // iconButton5
+            // iconSearch
             // 
-            this.iconButton5.BackColor = System.Drawing.Color.White;
-            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.iconButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 25;
-            this.iconButton5.Location = new System.Drawing.Point(304, 81);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(38, 32);
-            this.iconButton5.TabIndex = 24;
-            this.iconButton5.UseVisualStyleBackColor = false;
+            this.iconSearch.BackColor = System.Drawing.Color.White;
+            this.iconSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconSearch.FlatAppearance.BorderSize = 0;
+            this.iconSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.iconSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.iconSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconSearch.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.iconSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconSearch.IconSize = 25;
+            this.iconSearch.Location = new System.Drawing.Point(304, 81);
+            this.iconSearch.Name = "iconSearch";
+            this.iconSearch.Size = new System.Drawing.Size(38, 32);
+            this.iconSearch.TabIndex = 24;
+            this.iconSearch.UseVisualStyleBackColor = false;
             // 
             // btnAddTable
             // 
@@ -269,8 +244,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Controls.Add(this.btnRemovedTables);
-            this.Controls.Add(this.iconButton5);
-            this.Controls.Add(this.modernTextBox1);
+            this.Controls.Add(this.iconSearch);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dataTable);
             this.Controls.Add(this.btnAddTable);
             this.Controls.Add(this.label1);
@@ -285,16 +260,13 @@
 
         #endregion
 
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private Components.ModernTextBox modernTextBox1;
+        private FontAwesome.Sharp.IconButton iconSearch;
+        private Components.ModernTextBox txtSearch;
         private System.Windows.Forms.DataGridView dataTable;
         private WindowsFormsApplication1.RoundButton btnAddTable;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NrodeSilla;
+        private WindowsFormsApplication1.RoundButton btnRemovedTables;
         private System.Windows.Forms.DataGridViewImageColumn editar;
         private System.Windows.Forms.DataGridViewImageColumn eliminar;
-        private WindowsFormsApplication1.RoundButton btnRemovedTables;
     }
 }

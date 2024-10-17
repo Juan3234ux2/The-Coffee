@@ -28,70 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtName = new TheCoffe.Components.ModernTextBox();
-            this.txtDNI = new TheCoffe.Components.ModernTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblAddWaiter = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.txtLastName = new TheCoffe.Components.ModernTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNumber = new TheCoffe.Components.ModernTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtExit = new TheCoffe.Components.ModernTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtIncome = new TheCoffe.Components.ModernTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAddWaiter = new AltoControls.AltoButton();
-            this.mtxtExit = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtIncome = new System.Windows.Forms.MaskedTextBox();
+            this.txtExit = new TheCoffe.Components.ModernTextBox();
+            this.txtIncome = new TheCoffe.Components.ModernTextBox();
+            this.txtNumber = new TheCoffe.Components.ModernTextBox();
+            this.txtLastName = new TheCoffe.Components.ModernTextBox();
+            this.txtName = new TheCoffe.Components.ModernTextBox();
+            this.txtDNI = new TheCoffe.Components.ModernTextBox();
             this.SuspendLayout();
-            // 
-            // txtName
-            // 
-            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.txtName.BorderColor = System.Drawing.Color.Transparent;
-            this.txtName.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtName.BorderRadius = 10;
-            this.txtName.BorderSize = 1;
-            this.txtName.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtName.Location = new System.Drawing.Point(28, 82);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtName.Multiline = false;
-            this.txtName.Name = "txtName";
-            this.txtName.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
-            this.txtName.PasswordChar = false;
-            this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtName.PlaceholderText = "";
-            this.txtName.Size = new System.Drawing.Size(195, 46);
-            this.txtName.TabIndex = 42;
-            this.txtName.Texts = "";
-            this.txtName.UnderlinedStyle = false;
-            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateLetters_KeyPress);
-            // 
-            // txtDNI
-            // 
-            this.txtDNI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.txtDNI.BorderColor = System.Drawing.Color.Transparent;
-            this.txtDNI.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtDNI.BorderRadius = 10;
-            this.txtDNI.BorderSize = 1;
-            this.txtDNI.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDNI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDNI.Location = new System.Drawing.Point(28, 171);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDNI.Multiline = false;
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
-            this.txtDNI.PasswordChar = false;
-            this.txtDNI.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtDNI.PlaceholderText = "";
-            this.txtDNI.Size = new System.Drawing.Size(195, 46);
-            this.txtDNI.TabIndex = 41;
-            this.txtDNI.Texts = "";
-            this.txtDNI.UnderlinedStyle = false;
-            this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
             // 
             // label8
             // 
@@ -143,29 +95,6 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // txtLastName
-            // 
-            this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.txtLastName.BorderColor = System.Drawing.Color.Transparent;
-            this.txtLastName.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtLastName.BorderRadius = 10;
-            this.txtLastName.BorderSize = 1;
-            this.txtLastName.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtLastName.Location = new System.Drawing.Point(248, 82);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLastName.Multiline = false;
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
-            this.txtLastName.PasswordChar = false;
-            this.txtLastName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtLastName.PlaceholderText = "";
-            this.txtLastName.Size = new System.Drawing.Size(195, 46);
-            this.txtLastName.TabIndex = 44;
-            this.txtLastName.Texts = "";
-            this.txtLastName.UnderlinedStyle = false;
-            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateLetters_KeyPress);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -175,29 +104,6 @@
             this.label1.Size = new System.Drawing.Size(53, 15);
             this.label1.TabIndex = 43;
             this.label1.Text = "Apellido";
-            // 
-            // txtNumber
-            // 
-            this.txtNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.txtNumber.BorderColor = System.Drawing.Color.Transparent;
-            this.txtNumber.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtNumber.BorderRadius = 10;
-            this.txtNumber.BorderSize = 1;
-            this.txtNumber.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNumber.Location = new System.Drawing.Point(248, 171);
-            this.txtNumber.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNumber.Multiline = false;
-            this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
-            this.txtNumber.PasswordChar = false;
-            this.txtNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtNumber.PlaceholderText = "";
-            this.txtNumber.Size = new System.Drawing.Size(195, 46);
-            this.txtNumber.TabIndex = 46;
-            this.txtNumber.Texts = "";
-            this.txtNumber.UnderlinedStyle = false;
-            this.txtNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
             // 
             // label2
             // 
@@ -209,30 +115,6 @@
             this.label2.TabIndex = 45;
             this.label2.Text = "Teléfono";
             // 
-            // txtExit
-            // 
-            this.txtExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.txtExit.BorderColor = System.Drawing.Color.Transparent;
-            this.txtExit.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtExit.BorderRadius = 10;
-            this.txtExit.BorderSize = 1;
-            this.txtExit.Enabled = false;
-            this.txtExit.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtExit.Location = new System.Drawing.Point(249, 262);
-            this.txtExit.Margin = new System.Windows.Forms.Padding(4);
-            this.txtExit.Multiline = false;
-            this.txtExit.Name = "txtExit";
-            this.txtExit.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
-            this.txtExit.PasswordChar = false;
-            this.txtExit.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtExit.PlaceholderText = "";
-            this.txtExit.Size = new System.Drawing.Size(195, 46);
-            this.txtExit.TabIndex = 50;
-            this.txtExit.Texts = "";
-            this.txtExit.UnderlinedStyle = false;
-            this.txtExit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -243,30 +125,6 @@
             this.label3.TabIndex = 49;
             this.label3.Text = "Hora de Salida";
             this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // txtIncome
-            // 
-            this.txtIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.txtIncome.BorderColor = System.Drawing.Color.Transparent;
-            this.txtIncome.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtIncome.BorderRadius = 10;
-            this.txtIncome.BorderSize = 1;
-            this.txtIncome.Enabled = false;
-            this.txtIncome.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIncome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtIncome.Location = new System.Drawing.Point(29, 260);
-            this.txtIncome.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIncome.Multiline = false;
-            this.txtIncome.Name = "txtIncome";
-            this.txtIncome.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
-            this.txtIncome.PasswordChar = false;
-            this.txtIncome.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtIncome.PlaceholderText = "";
-            this.txtIncome.Size = new System.Drawing.Size(195, 46);
-            this.txtIncome.TabIndex = 48;
-            this.txtIncome.Texts = "";
-            this.txtIncome.UnderlinedStyle = false;
-            this.txtIncome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
             // 
             // label4
             // 
@@ -300,31 +158,144 @@
             this.btnAddWaiter.Transparency = false;
             this.btnAddWaiter.Click += new System.EventHandler(this.btnAddWaiter_Click);
             // 
-            // mtxtExit
+            // txtExit
             // 
-            this.mtxtExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.mtxtExit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mtxtExit.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
-            this.mtxtExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.mtxtExit.Location = new System.Drawing.Point(262, 275);
-            this.mtxtExit.Mask = "00:00";
-            this.mtxtExit.Name = "mtxtExit";
-            this.mtxtExit.Size = new System.Drawing.Size(149, 17);
-            this.mtxtExit.TabIndex = 53;
-            this.mtxtExit.ValidatingType = typeof(System.DateTime);
+            this.txtExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txtExit.BorderColor = System.Drawing.Color.Transparent;
+            this.txtExit.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtExit.BorderRadius = 10;
+            this.txtExit.BorderSize = 1;
+            this.txtExit.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtExit.Location = new System.Drawing.Point(249, 262);
+            this.txtExit.Margin = new System.Windows.Forms.Padding(4);
+            this.txtExit.Multiline = false;
+            this.txtExit.Name = "txtExit";
+            this.txtExit.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtExit.PasswordChar = false;
+            this.txtExit.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtExit.PlaceholderText = "";
+            this.txtExit.Size = new System.Drawing.Size(195, 46);
+            this.txtExit.TabIndex = 50;
+            this.txtExit.Texts = "";
+            this.txtExit.UnderlinedStyle = false;
+            this.txtExit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
             // 
-            // mtxtIncome
+            // txtIncome
             // 
-            this.mtxtIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.mtxtIncome.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mtxtIncome.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
-            this.mtxtIncome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.mtxtIncome.Location = new System.Drawing.Point(43, 275);
-            this.mtxtIncome.Mask = "00:00";
-            this.mtxtIncome.Name = "mtxtIncome";
-            this.mtxtIncome.Size = new System.Drawing.Size(149, 17);
-            this.mtxtIncome.TabIndex = 54;
-            this.mtxtIncome.ValidatingType = typeof(System.DateTime);
+            this.txtIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txtIncome.BorderColor = System.Drawing.Color.Transparent;
+            this.txtIncome.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtIncome.BorderRadius = 10;
+            this.txtIncome.BorderSize = 1;
+            this.txtIncome.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIncome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtIncome.Location = new System.Drawing.Point(29, 260);
+            this.txtIncome.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIncome.Multiline = false;
+            this.txtIncome.Name = "txtIncome";
+            this.txtIncome.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtIncome.PasswordChar = false;
+            this.txtIncome.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtIncome.PlaceholderText = "";
+            this.txtIncome.Size = new System.Drawing.Size(195, 46);
+            this.txtIncome.TabIndex = 48;
+            this.txtIncome.Texts = "";
+            this.txtIncome.UnderlinedStyle = false;
+            this.txtIncome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
+            // 
+            // txtNumber
+            // 
+            this.txtNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txtNumber.BorderColor = System.Drawing.Color.Transparent;
+            this.txtNumber.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtNumber.BorderRadius = 10;
+            this.txtNumber.BorderSize = 1;
+            this.txtNumber.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNumber.Location = new System.Drawing.Point(248, 171);
+            this.txtNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumber.Multiline = false;
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtNumber.PasswordChar = false;
+            this.txtNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtNumber.PlaceholderText = "";
+            this.txtNumber.Size = new System.Drawing.Size(195, 46);
+            this.txtNumber.TabIndex = 46;
+            this.txtNumber.Texts = "";
+            this.txtNumber.UnderlinedStyle = false;
+            this.txtNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txtLastName.BorderColor = System.Drawing.Color.Transparent;
+            this.txtLastName.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtLastName.BorderRadius = 10;
+            this.txtLastName.BorderSize = 1;
+            this.txtLastName.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtLastName.Location = new System.Drawing.Point(248, 82);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLastName.Multiline = false;
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtLastName.PasswordChar = false;
+            this.txtLastName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtLastName.PlaceholderText = "";
+            this.txtLastName.Size = new System.Drawing.Size(195, 46);
+            this.txtLastName.TabIndex = 44;
+            this.txtLastName.Texts = "";
+            this.txtLastName.UnderlinedStyle = false;
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateLetters_KeyPress);
+            // 
+            // txtName
+            // 
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txtName.BorderColor = System.Drawing.Color.Transparent;
+            this.txtName.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtName.BorderRadius = 10;
+            this.txtName.BorderSize = 1;
+            this.txtName.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtName.Location = new System.Drawing.Point(28, 82);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Multiline = false;
+            this.txtName.Name = "txtName";
+            this.txtName.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtName.PasswordChar = false;
+            this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtName.PlaceholderText = "";
+            this.txtName.Size = new System.Drawing.Size(195, 46);
+            this.txtName.TabIndex = 42;
+            this.txtName.Texts = "";
+            this.txtName.UnderlinedStyle = false;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateLetters_KeyPress);
+            // 
+            // txtDNI
+            // 
+            this.txtDNI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txtDNI.BorderColor = System.Drawing.Color.Transparent;
+            this.txtDNI.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtDNI.BorderRadius = 10;
+            this.txtDNI.BorderSize = 1;
+            this.txtDNI.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDNI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDNI.Location = new System.Drawing.Point(28, 171);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDNI.Multiline = false;
+            this.txtDNI.Name = "txtDNI";
+            this.txtDNI.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtDNI.PasswordChar = false;
+            this.txtDNI.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtDNI.PlaceholderText = "";
+            this.txtDNI.Size = new System.Drawing.Size(195, 46);
+            this.txtDNI.TabIndex = 41;
+            this.txtDNI.Texts = "";
+            this.txtDNI.UnderlinedStyle = false;
+            this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
+            this.txtDNI._TextChanged += new System.EventHandler(this.txtDNI__TextChanged);
             // 
             // AddWaiterForm
             // 
@@ -332,8 +303,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(472, 419);
-            this.Controls.Add(this.mtxtIncome);
-            this.Controls.Add(this.mtxtExit);
             this.Controls.Add(this.btnAddWaiter);
             this.Controls.Add(this.txtExit);
             this.Controls.Add(this.label3);
@@ -378,7 +347,5 @@
         private Components.ModernTextBox txtIncome;
         private System.Windows.Forms.Label label4;
         private AltoControls.AltoButton btnAddWaiter;
-        private System.Windows.Forms.MaskedTextBox mtxtExit;
-        private System.Windows.Forms.MaskedTextBox mtxtIncome;
     }
 }

@@ -165,6 +165,9 @@ namespace TheCoffe.Components
                 SetPlaceholder();
             }
         }
+
+        public object SelectionStart { get; internal set; }
+
         public ModernTextBox()
         {
             InitializeComponent();

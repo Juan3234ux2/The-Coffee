@@ -38,6 +38,12 @@
     <Reference Include="AltoControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AltoControls.1.0.1\lib\AltoControls.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net45\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -56,9 +62,12 @@
       <HintPath>..\packages\SipaaFramework.1.1.0\lib\net46\SipaaFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
@@ -76,8 +85,50 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CAccesoADatos\CategoriaDAl.cs" />
+    <Compile Include="CAccesoADatos\ClienteDAL.cs" />
+    <Compile Include="CAccesoADatos\MesaDAL.cs" />
+    <Compile Include="CAccesoADatos\MeseroDAL.cs" />
+    <Compile Include="CAccesoADatos\ProductoDAL.cs" />
+    <Compile Include="CAccesoADatos\UsuarioDAL.cs" />
+    <Compile Include="CDatos\BDTheCoffee.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDTheCoffee.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\BDTheCoffee.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDTheCoffee.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\BDTheCoffee.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDTheCoffee.edmx</DependentUpon>
+    </Compile>
     <Compile Include="CDatos\Categoria.cs" />
+    <Compile Include="CDatos\Categoria1.cs">
+      <DependentUpon>BDTheCoffee.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAccesoADatos\Categoria1DAL.cs" />
+    <Compile Include="CDatos\Cliente.cs">
+      <DependentUpon>BDTheCoffee.tt</DependentUpon>
+    </Compile>
     <Compile Include="CDatos\DBTheCoffee.cs" />
+    <Compile Include="CDatos\Mesa.cs">
+      <DependentUpon>BDTheCoffee.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Mesero.cs">
+      <DependentUpon>BDTheCoffee.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Producto.cs">
+      <DependentUpon>BDTheCoffee.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\rol_usuario.cs">
+      <DependentUpon>BDTheCoffee.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Usuario.cs">
+      <DependentUpon>BDTheCoffee.tt</DependentUpon>
+    </Compile>
     <Compile Include="CNegocio\InputValidator.cs" />
     <Compile Include="CPresentacion\Components\CustomDateTimePicker.cs">
       <SubType>Component</SubType>
@@ -416,6 +467,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="CDatos\BDTheCoffee.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BDTheCoffee.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CDatos\BDTheCoffee.edmx.diagram">
+      <DependentUpon>BDTheCoffee.edmx</DependentUpon>
+    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -515,7 +573,20 @@
     <None Include="Resources\calendarDark.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CDatos\BDTheCoffee.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BDTheCoffee.Context.cs</LastGenOutput>
+      <DependentUpon>BDTheCoffee.edmx</DependentUpon>
+    </Content>
+    <Content Include="CDatos\BDTheCoffee.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDTheCoffee.edmx</DependentUpon>
+      <LastGenOutput>BDTheCoffee.cs</LastGenOutput>
+    </Content>
     <Content Include="ScriptTheCoffee.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

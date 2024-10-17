@@ -34,8 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dataRemovedCategory = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activar = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnClose = new FontAwesome.Sharp.IconButton();
@@ -74,8 +72,6 @@
             this.dataRemovedCategory.ColumnHeadersHeight = 45;
             this.dataRemovedCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataRemovedCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Nombre,
             this.activar});
             this.dataRemovedCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -123,20 +119,7 @@
             this.dataRemovedCategory.Size = new System.Drawing.Size(976, 479);
             this.dataRemovedCategory.TabIndex = 18;
             this.dataRemovedCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCategory_CellClick);
-            // 
-            // ID
-            // 
-            this.ID.FillWeight = 24.46955F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.FillWeight = 258.7863F;
-            this.Nombre.HeaderText = "Descripción";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
+            this.dataRemovedCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataRemovedCategory_CellContentClick);
             // 
             // activar
             // 
@@ -204,10 +187,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataRemovedCategory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewImageColumn activar;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn activar;
     }
 }

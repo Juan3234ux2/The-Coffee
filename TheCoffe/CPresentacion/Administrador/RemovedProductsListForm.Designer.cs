@@ -33,15 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataRemovedProducts = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activar = new System.Windows.Forms.DataGridViewImageColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.activar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataRemovedProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,10 +63,6 @@
             this.dataRemovedProducts.ColumnHeadersHeight = 45;
             this.dataRemovedProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataRemovedProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Nombre,
-            this.Precio,
-            this.Categoria,
             this.activar});
             this.dataRemovedProducts.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -118,44 +110,6 @@
             this.dataRemovedProducts.Size = new System.Drawing.Size(976, 479);
             this.dataRemovedProducts.TabIndex = 17;
             this.dataRemovedProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataRemovedProducts_CellClick);
-            // 
-            // ID
-            // 
-            this.ID.FillWeight = 94.16002F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.FillWeight = 99.19505F;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.FillWeight = 103.6368F;
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // Categoria
-            // 
-            this.Categoria.FillWeight = 96.17036F;
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            // 
-            // activar
-            // 
-            this.activar.FillWeight = 50.4442F;
-            this.activar.HeaderText = "Activar";
-            this.activar.Image = global::TheCoffe.Properties.Resources.activar;
-            this.activar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.activar.Name = "activar";
-            this.activar.ReadOnly = true;
-            this.activar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // label1
             // 
@@ -206,6 +160,16 @@
             this.btnClose.TabIndex = 28;
             this.btnClose.UseVisualStyleBackColor = true;
             // 
+            // activar
+            // 
+            this.activar.FillWeight = 50.4442F;
+            this.activar.HeaderText = "Activar";
+            this.activar.Image = global::TheCoffe.Properties.Resources.activar;
+            this.activar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.activar.Name = "activar";
+            this.activar.ReadOnly = true;
+            this.activar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // RemovedProductsListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,11 +196,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.DataGridViewImageColumn activar;
         private FontAwesome.Sharp.IconButton btnClose;
+        private System.Windows.Forms.DataGridViewImageColumn activar;
     }
 }

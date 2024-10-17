@@ -34,17 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblUserList = new System.Windows.Forms.Label();
             this.dataUsers = new System.Windows.Forms.DataGridView();
-            this.idUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Creado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.btnRemovedUsers = new WindowsFormsApplication1.RoundButton();
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.btnAddUser = new WindowsFormsApplication1.RoundButton();
+            this.editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,11 +75,6 @@
             this.dataUsers.ColumnHeadersHeight = 45;
             this.dataUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idUser,
-            this.Usuario,
-            this.Telefono,
-            this.Rol,
-            this.Creado,
             this.editar,
             this.eliminar});
             this.dataUsers.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -133,65 +123,6 @@
             this.dataUsers.Size = new System.Drawing.Size(978, 479);
             this.dataUsers.TabIndex = 19;
             this.dataUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataUsers_CellClick);
-            // 
-            // idUser
-            // 
-            this.idUser.FillWeight = 41.97315F;
-            this.idUser.HeaderText = "ID";
-            this.idUser.Name = "idUser";
-            this.idUser.ReadOnly = true;
-            // 
-            // Usuario
-            // 
-            this.Usuario.FillWeight = 146.8633F;
-            this.Usuario.HeaderText = "Nombre de Usuario";
-            this.Usuario.Name = "Usuario";
-            this.Usuario.ReadOnly = true;
-            this.Usuario.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Telefono
-            // 
-            this.Telefono.FillWeight = 89.55219F;
-            this.Telefono.HeaderText = "Teléfono";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            this.Telefono.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Telefono.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Rol
-            // 
-            this.Rol.FillWeight = 103.0228F;
-            this.Rol.HeaderText = "Rol";
-            this.Rol.Name = "Rol";
-            this.Rol.ReadOnly = true;
-            // 
-            // Creado
-            // 
-            this.Creado.FillWeight = 122.4956F;
-            this.Creado.HeaderText = "Creado en";
-            this.Creado.Name = "Creado";
-            this.Creado.ReadOnly = true;
-            // 
-            // editar
-            // 
-            this.editar.FillWeight = 37.8979F;
-            this.editar.HeaderText = "Acciones";
-            this.editar.Image = global::TheCoffe.Properties.Resources.pencil;
-            this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.editar.Name = "editar";
-            this.editar.ReadOnly = true;
-            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // eliminar
-            // 
-            this.eliminar.FillWeight = 22.93354F;
-            this.eliminar.HeaderText = "";
-            this.eliminar.Image = global::TheCoffe.Properties.Resources.delete;
-            this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.eliminar.Name = "eliminar";
-            this.eliminar.ReadOnly = true;
-            this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // iconButton5
             // 
@@ -285,6 +216,27 @@
             this.btnAddUser.UseVisualStyleBackColor = false;
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
+            // editar
+            // 
+            this.editar.FillWeight = 37.8979F;
+            this.editar.HeaderText = "Acciones";
+            this.editar.Image = global::TheCoffe.Properties.Resources.pencil;
+            this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // eliminar
+            // 
+            this.eliminar.FillWeight = 22.93354F;
+            this.eliminar.HeaderText = "";
+            this.eliminar.Image = global::TheCoffe.Properties.Resources.delete;
+            this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
+            this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // UserListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,11 +265,6 @@
         private System.Windows.Forms.Label lblUserList;
         private System.Windows.Forms.DataGridView dataUsers;
         private WindowsFormsApplication1.RoundButton btnRemovedUsers;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idUser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Creado;
         private System.Windows.Forms.DataGridViewImageColumn editar;
         private System.Windows.Forms.DataGridViewImageColumn eliminar;
     }

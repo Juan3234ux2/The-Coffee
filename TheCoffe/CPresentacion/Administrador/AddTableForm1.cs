@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheCoffe.CAccesoADatos;
+using TheCoffe.CDatos;
 using TheCoffe.CNegocio;
 
 namespace TheCoffe.App
@@ -19,15 +21,24 @@ namespace TheCoffe.App
         {
             InitializeComponent();
         }
-
-        public AddTableForm1(String nroMesa, String nroSillas)
+        Mesa mesa = null;
+        MesaDAL mesaDAL = new MesaDAL();
+        
+        public AddTableForm1(int id)
         {
             InitializeComponent();
             lblTitle.Text = "Editar Mesa";
             btnAdd.Text = "Editar";
-            txtMesa.Texts = nroMesa;
-            txtNroSilla.Texts = nroSillas;
-            this.idMesa = 10;
+            this.idMesa = id;
+            mesa = mesaDAL.SearchObject(id);
+            txtMesa.Texts = Convert.ToString(mesa.nro_mesa);
+            txtNroSilla.Texts = Convert.ToString(mesa.cantidad_sillas);
+        }
+
+        private void CargarDatos()
+        {
+            mesa.nro_mesa = int.Parse(txtMesa.Texts);
+            mesa.cantidad_sillas = int.Parse(txtNroSilla.Texts);
         }
 
         private void AddTableForm1_Deactivate(object sender, EventArgs e)
@@ -74,10 +85,15 @@ namespace TheCoffe.App
             {
                 if(this.idMesa == 0)
                 {
+                    mesa = new Mesa();
+                    CargarDatos();
+                    mesaDAL.Create(mesa);
                     new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Mesa agregada correctamente", Properties.Resources.informacion);
                 }
                 else
                 {
+                    CargarDatos();
+                    mesaDAL.Update(mesa);
                     new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Mesa editada correctamente", Properties.Resources.informacion);
                 }
             }

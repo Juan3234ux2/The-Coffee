@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheCoffe.CPresentacion;
 using TheCoffe.CPresentacion.Cajero;
+using TheCoffe.CAccesoADatos;
+using TheCoffe.CDatos;
 
 namespace TheCoffe.App
 {
@@ -19,59 +21,79 @@ namespace TheCoffe.App
             InitializeComponent();
         }
 
+        UsuarioDAL usuarioDAL = new UsuarioDAL();
+        Usuario usuario = new Usuario();
+        private int id;
+
+        public void RefreshPantalla()
+        {
+            var usuarios = usuarioDAL.Read(false);
+
+            dataUsers.DataSource = usuarios.Select(p =>
+            new
+            {
+                p.id_usuario,
+                p.usuario1,
+                p.nombre,
+                p.apellido,
+                p.telefono,  
+                c = p.rol_usuario.descripcion
+            }).ToList();
+
+            dataUsers.Columns[2].HeaderText = "ID";
+            dataUsers.Columns[3].HeaderText = "Usuario";
+            dataUsers.Columns[4].HeaderText = "Nombre";
+            dataUsers.Columns[5].HeaderText = "Apellido";
+            dataUsers.Columns[6].HeaderText = "Telefono";
+            dataUsers.Columns[7].HeaderText = "Rol";
+            dataUsers.Columns[0].DisplayIndex = dataUsers.Columns.Count - 1;
+            dataUsers.Columns[1].DisplayIndex = dataUsers.Columns.Count - 1;
+        }
+
         private void UserListForm_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 6; i++)
-            {
-                int index = dataUsers.Rows.Add();
-                DataGridViewRow row = dataUsers.Rows[index];
-                row.Cells["idUser"].Value = 1;
-                row.Cells["Usuario"].Value = "Juan Coronel";
-                row.Cells["Telefono"].Value = "3794457533";
-                row.Cells["Rol"].Value = "Administrador";
-                row.Cells["Creado"].Value = "25 Mar 25";
-            }
+            RefreshPantalla();
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            using (OverlayForm overlay = new OverlayForm())
+            /*using (OverlayForm overlay = new OverlayForm())
             {
-                overlay.Show();
+                overlay.Show();*/
                 using (AddUserForm modal = new AddUserForm())
                 {
-                    modal.ShowDialog(overlay);
+                    modal.ShowDialog();
                 }
-                overlay.Close();
-            }
+                /*overlay.Close();
+            }*/
+            RefreshPantalla();
         }
 
         private void dataUsers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataUsers.Columns[e.ColumnIndex].Name == "editar")
             {
-                Form parentForm = this.FindForm();
-                using (OverlayForm overlay = new OverlayForm())
-                {
-                    overlay.Size = parentForm.ClientSize;
-                    overlay.Location = parentForm.PointToScreen(Point.Empty);
-                    overlay.Owner = parentForm;
+                id = Convert.ToInt32(dataUsers.CurrentRow.Cells[2].Value.ToString());
 
-                    overlay.Show();
-                    using (AddUserForm modal = new AddUserForm("Juan", "Coronel", "3794457533", "Juan Coronel", "12345678"))
+                /*using (OverlayForm overlay = new OverlayForm())
+            {
+                overlay.Show();*/
+                using (AddUserForm modal = new AddUserForm(id))
                     {
-                        modal.ShowDialog(overlay);
+                        modal.ShowDialog();
                     }
-                    overlay.Close();
-                }
+                    /*overlay.Close();
+                }*/
             }
             else if (dataUsers.Columns[e.ColumnIndex].Name == "eliminar")
             {
                 if (MessageBox.Show("¿Está seguro que desea eliminar este registro?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    dataUsers.Rows.RemoveAt(e.RowIndex);
+                    id = Convert.ToInt32(dataUsers.CurrentRow.Cells[2].Value.ToString());
+                    usuarioDAL.Delete(id);
                 }
             }
+            RefreshPantalla();
         }
 
         private void btnRemovedUsers_Click(object sender, EventArgs e)
@@ -90,6 +112,7 @@ namespace TheCoffe.App
                 }
                 overlay.Close();
             }
+            RefreshPantalla();
         }
     }
 }

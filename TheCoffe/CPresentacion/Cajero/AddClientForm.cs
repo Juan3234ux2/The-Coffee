@@ -9,6 +9,8 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheCoffe.App;
+using TheCoffe.CAccesoADatos;
+using TheCoffe.CDatos;
 using TheCoffe.CNegocio;
 
 namespace TheCoffe.CPresentacion.Cajero
@@ -19,6 +21,21 @@ namespace TheCoffe.CPresentacion.Cajero
         public AddClientForm()
         {
             InitializeComponent();
+        }
+
+        Cliente cliente = new Cliente();
+        ClienteDAL clienteDAL = new ClienteDAL();
+
+        private void CargarDatos()
+        {
+            cliente.nombre = txtName.Texts;
+            cliente.apellido = txtLastName.Texts;
+            cliente.cuit =  int.Parse(txtCuit.Texts);
+            cliente.domicilio = txtAdress.Texts;
+            cliente.localidad = txtLocality.Texts;
+            cliente.provincia = txtProvince.Texts;
+            cliente.email = txtEmail.Texts;
+            cliente.telefono = int.Parse(txtPhone.Texts);
         }
 
         private void AddClientForm_Load(object sender, EventArgs e)
@@ -71,6 +88,8 @@ namespace TheCoffe.CPresentacion.Cajero
             }
             if (IsValidEmail(txtEmail.Texts))
             {
+                CargarDatos();
+                clienteDAL.Create(cliente);
                 new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso Finalizado", "Cliente Agregado Exitosamente", Properties.Resources.informacion);
             }
             else

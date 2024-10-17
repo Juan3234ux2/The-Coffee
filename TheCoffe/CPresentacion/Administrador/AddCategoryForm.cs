@@ -17,28 +17,33 @@ namespace TheCoffe.App
     {
         private bool isShowingMsgBox = false;
         private int idCategoria = 0;
+
         public AddCategoryForm()
         {
             InitializeComponent();
         }
 
-        public AddCategoryForm(string descripcion)
+        Categoria1DAL categoriaDAL = new Categoria1DAL();
+        Categoria1 categoria = null;
+
+        public AddCategoryForm(int id)
         {
             InitializeComponent();
             lblTitle.Text = "Editar Categoría";
             btnAddCategory.Text = "Editar";
-            txtDescripcion.Texts = descripcion;
-            this.idCategoria = 10;
+            this.idCategoria = id;
+            categoria = categoriaDAL.SearchObject(id);
+            txtDescripcion.Texts = categoria.descripcion;
+        }
+
+        private void CargarDatos()
+        {
+            categoria.descripcion = txtDescripcion.Texts;
         }
 
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
-            Categoria categoria = new Categoria();
-            categoria.descripcion = txtDescripcion.Texts;
-            int result = CategoriaDAl.AgregarCategoria(categoria);
-
-            if (result > 0)
-            {
+  
                 if (string.IsNullOrWhiteSpace(txtDescripcion.Texts))
                 {
                     isShowingMsgBox = true;
@@ -53,24 +58,28 @@ namespace TheCoffe.App
                 {
                     if (this.idCategoria == 0)
                     {
-                        new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Categoría agregada correctamente", Properties.Resources.informacion);
+                    categoria = new Categoria1();
+                    CargarDatos();
+                    bool result = categoriaDAL.Create(categoria);
+                        if (result)
+                        {
+                            
+                            new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Categoría agregada correctamente", Properties.Resources.informacion);
+                        }
+                        else
+                        {
+                            isShowingMsgBox = true;
+                            MessageBox.Show("Esta categoría ya existe");
+                        isShowingMsgBox = false;
+                        }
                     }
                     else
                     {
+                        CargarDatos();
+                        categoriaDAL.Update(categoria);
                         new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Categoría editada correctamente", Properties.Resources.informacion);
                     }
                 }
-            }
-            else
-            {
-                isShowingMsgBox = true;
-                MessageBox.Show("No se pudo insertar el registro",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-                isShowingMsgBox = false;
-                return;
-            }
         }
         private void AddCategoryForm_Deactivate(object sender, EventArgs e)
         {
