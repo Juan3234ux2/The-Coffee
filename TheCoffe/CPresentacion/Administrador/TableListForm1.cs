@@ -11,33 +11,27 @@ using TheCoffe.CPresentacion;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
 using TheCoffe.CNegocio;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.App
 {
     public partial class TableList : UserControl
     {
+        private readonly TableService _tableService = new TableService();
+        private Mesa mesa = new Mesa();
+        private int id;
         public TableList()
         {
             InitializeComponent();
+            dataTable.AutoGenerateColumns = false;
         }
 
-        MesaDAL mesaDAL = new MesaDAL();
-        Mesa mesa = new Mesa();
-        private int id;
 
-        public void RefreshPantalla()
+        public async void RefreshPantalla()
         {
-            var Lst = mesaDAL.Read(false).Select(p => new {
-                p.id_mesa,
-                p.nro_mesa,
-                p.cantidad_sillas
-            }).ToList();
-            dataTable.DataSource = Lst;
-            dataTable.Columns[2].HeaderText = "ID";
-            dataTable.Columns[3].HeaderText = "Nro de Mesa";
-            dataTable.Columns[4].HeaderText = "Cant. de Sillas";
-            dataTable.Columns[0].DisplayIndex = dataTable.Columns.Count - 1;
-            dataTable.Columns[1].DisplayIndex = dataTable.Columns.Count - 1;
+            TableService service = new TableService();
+            var tables = await service.ObtenerMesasActivas();
+            dataTable.DataSource = tables;
         }
 
         private void TableList_Load(object sender, EventArgs e)
@@ -63,7 +57,7 @@ namespace TheCoffe.App
         {
             if (dataTable.Columns[e.ColumnIndex].Name == "editar")
             {
-                id = Convert.ToInt32(dataTable.CurrentRow.Cells[2].Value.ToString());
+                id = Convert.ToInt32(dataTable.CurrentRow.Cells[0].Value.ToString());
                 using (OverlayForm overlay = new OverlayForm())
                 {
                     overlay.Show();
@@ -78,8 +72,8 @@ namespace TheCoffe.App
             {
                 if (MessageBox.Show("¿Está seguro que desea eliminar este registro?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    id = Convert.ToInt32(dataTable.CurrentRow.Cells[2].Value.ToString());
-                    mesaDAL.Delete(id);
+                    id = Convert.ToInt32(dataTable.CurrentRow.Cells[0].Value.ToString());
+                    _tableService.CambiarEstado(id);
                 }
             }
             RefreshPantalla();
@@ -103,11 +97,7 @@ namespace TheCoffe.App
         {
             if (txtSearch.Texts != string.Empty)
             {
-                var lst = mesaDAL.Search(Convert.ToInt32(txtSearch.Texts)).Select(p => new {
-                    p.id_mesa,
-                    p.nro_mesa,
-                    p.cantidad_sillas
-                }).ToList();
+                var lst = _tableService.BuscarPorNro(Convert.ToInt32(txtSearch.Texts));
                 dataTable.DataSource = lst;
             }
             else

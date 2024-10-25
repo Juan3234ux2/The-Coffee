@@ -180,6 +180,7 @@
             this.txtUser.TabIndex = 44;
             this.txtUser.Texts = "";
             this.txtUser.UnderlinedStyle = false;
+            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateCredendials_KeyPress);
             // 
             // label2
             // 
@@ -212,6 +213,7 @@
             this.txtPassword.TabIndex = 46;
             this.txtPassword.Texts = "";
             this.txtPassword.UnderlinedStyle = false;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateCredendials_KeyPress);
             // 
             // label3
             // 

@@ -13,7 +13,8 @@ namespace TheCoffe.CNegocio
         public enum InputType
         {
             Letters,
-            Digits
+            Digits,
+            Credentials
         }
 
         public static void ValidateInput(KeyPressEventArgs e, InputType type)
@@ -21,12 +22,17 @@ namespace TheCoffe.CNegocio
             switch (type)
             {
                 case InputType.Letters:
-                    if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+                    if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back  && e.KeyChar != (char)Keys.Space)
                         e.Handled = true;
                     break;
 
                 case InputType.Digits:
                     if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+                        e.Handled = true;
+                    break;
+
+                case InputType.Credentials:
+                    if(e.KeyChar == (char)Keys.Space)
                         e.Handled = true;
                     break;
             }

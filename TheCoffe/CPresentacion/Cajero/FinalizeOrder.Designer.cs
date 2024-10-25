@@ -65,7 +65,7 @@
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.btnFinalizeOrder = new WindowsFormsApplication1.RoundButton();
             this.btnAddClient = new WindowsFormsApplication1.RoundButton();
-            this.cboClient = new CustomComboBox();
+            this.cboCustomer = new CustomComboBox();
             this.modernTextBox4 = new TheCoffe.Components.ModernTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -574,24 +574,21 @@
             this.btnAddClient.UseVisualStyleBackColor = false;
             this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
             // 
-            // cboClient
+            // cboCustomer
             // 
-            this.cboClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cboClient.BorderColor = System.Drawing.Color.Transparent;
-            this.cboClient.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cboClient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboClient.DropDownWidth = 307;
-            this.cboClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboClient.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cboClient.FormattingEnabled = true;
-            this.cboClient.Items.AddRange(new object[] {
-            "00000000000-Cliente en el local",
-            "23457595140-Coronel Juan De La Cruz"});
-            this.cboClient.Location = new System.Drawing.Point(437, 120);
-            this.cboClient.Name = "cboClient";
-            this.cboClient.Size = new System.Drawing.Size(267, 24);
-            this.cboClient.TabIndex = 65;
+            this.cboCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cboCustomer.BorderColor = System.Drawing.Color.Transparent;
+            this.cboCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboCustomer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCustomer.DropDownWidth = 307;
+            this.cboCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboCustomer.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cboCustomer.FormattingEnabled = true;
+            this.cboCustomer.Location = new System.Drawing.Point(437, 120);
+            this.cboCustomer.Name = "cboCustomer";
+            this.cboCustomer.Size = new System.Drawing.Size(267, 24);
+            this.cboCustomer.TabIndex = 65;
             // 
             // modernTextBox4
             // 
@@ -644,7 +641,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddClient);
             this.Controls.Add(this.btnClient);
-            this.Controls.Add(this.cboClient);
+            this.Controls.Add(this.cboCustomer);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.modernTextBox4);
             this.Controls.Add(this.lblAddClient);
@@ -669,7 +666,7 @@
         private System.Windows.Forms.Label lblAddClient;
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconButton btnClient;
-        private CustomComboBox cboClient;
+        private CustomComboBox cboCustomer;
         private System.Windows.Forms.Label label7;
         private Components.ModernTextBox modernTextBox4;
         private WindowsFormsApplication1.RoundButton btnAddClient;

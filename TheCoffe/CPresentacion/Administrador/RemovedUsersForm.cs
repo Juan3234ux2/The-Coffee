@@ -7,22 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.CPresentacion
 {
     public partial class RemovedUsersForm : Form
     {
+        private UserService _userService = new UserService();
         private bool isShowingMsgBox = false;
         public RemovedUsersForm()
         {
             InitializeComponent();
+            dataUsersRemoved.AutoGenerateColumns = false;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        public async void RefreshPantalla()
+        {
+            var usuarios = await _userService.ObtenerUsuariosEliminados();
+            dataUsersRemoved.DataSource = usuarios;
+        }
         private void RemovedUsersForm_Load(object sender, EventArgs e)
         {
             this.Opacity = 0;
@@ -36,16 +43,7 @@ namespace TheCoffe.CPresentacion
                     timer.Stop();
             };
             timer.Start();
-            for (int i = 0; i < 6; i++)
-            {
-                int index = dataUsersRemoved.Rows.Add();
-                DataGridViewRow row = dataUsersRemoved.Rows[index];
-                row.Cells["idUser"].Value = 1;
-                row.Cells["Usuario"].Value = "Juan Coronel";
-                row.Cells["Telefono"].Value = "3794457533";
-                row.Cells["Rol"].Value = "Administrador";
-                row.Cells["Creado"].Value = "25 Mar 25";
-            }
+            RefreshPantalla();
         }
 
         private void RemovedUsersForm_Deactivate(object sender, EventArgs e)
@@ -62,10 +60,12 @@ namespace TheCoffe.CPresentacion
                 isShowingMsgBox = true;
                 if (MessageBox.Show("¿Está seguro que desea activar este registro?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    dataUsersRemoved.Rows.RemoveAt(e.RowIndex);
+                    int id = Convert.ToInt32(dataUsersRemoved.CurrentRow.Cells[0].Value.ToString());
+                    _userService.CambiarEstado(id);
                 }
                 isShowingMsgBox = false;
-            }
+                RefreshPantalla();
+            }         
         }
     }
 }

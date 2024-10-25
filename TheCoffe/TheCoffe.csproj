@@ -84,12 +84,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CAccesoADatos\CategoriaDAl.cs" />
-    <Compile Include="CAccesoADatos\ClienteDAL.cs" />
-    <Compile Include="CAccesoADatos\MesaDAL.cs" />
-    <Compile Include="CAccesoADatos\MeseroDAL.cs" />
+    <Compile Include="CAccesoADatos\ClienteRepository.cs" />
+    <Compile Include="CAccesoADatos\MesaRepository.cs" />
+    <Compile Include="CAccesoADatos\MeseroRepository.cs" />
     <Compile Include="CAccesoADatos\ProductoDAL.cs" />
-    <Compile Include="CAccesoADatos\UsuarioDAL.cs" />
+    <Compile Include="CAccesoADatos\UsuarioRepository.cs" />
+    <Compile Include="CDatos\AuthUser.cs" />
     <Compile Include="CDatos\BDTheCoffee.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,11 +109,14 @@
     <Compile Include="CDatos\Categoria1.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
-    <Compile Include="CAccesoADatos\Categoria1DAL.cs" />
+    <Compile Include="CAccesoADatos\CategoriaRepository.cs" />
     <Compile Include="CDatos\Cliente.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
     <Compile Include="CDatos\DBTheCoffee.cs" />
+    <Compile Include="CDatos\DiaDeTrabajo.cs">
+      <DependentUpon>BDTheCoffee.tt</DependentUpon>
+    </Compile>
     <Compile Include="CDatos\Mesa.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
@@ -130,6 +133,19 @@
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
     <Compile Include="CNegocio\InputValidator.cs" />
+    <Compile Include="CNegocio\Services\AuthService.cs" />
+    <Compile Include="CNegocio\Services\CategoryService.cs" />
+    <Compile Include="CNegocio\Services\CustomerService.cs" />
+    <Compile Include="CNegocio\Services\ProductService.cs" />
+    <Compile Include="CNegocio\Services\TableService.cs" />
+    <Compile Include="CNegocio\Services\UserService.cs" />
+    <Compile Include="CNegocio\Services\WaiterService.cs" />
+    <Compile Include="CPresentacion\Cajero\Cajero.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Cajero\Cajero.Designer.cs">
+      <DependentUpon>Cajero.cs</DependentUpon>
+    </Compile>
     <Compile Include="CPresentacion\Components\CustomDateTimePicker.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -366,6 +382,9 @@
     <EmbeddedResource Include="CPresentacion\Administrador\AddWaiterForm.resx">
       <DependentUpon>AddWaiterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Cajero\Cajero.resx">
+      <DependentUpon>Cajero.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\Components\AlertBox.resx">
       <DependentUpon>AlertBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -583,6 +602,9 @@
       <DependentUpon>BDTheCoffee.edmx</DependentUpon>
       <LastGenOutput>BDTheCoffee.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\basura %281%29.png" />
+    <None Include="Resources\lapiz.png" />
+    <None Include="Resources\loading.gif" />
     <Content Include="ScriptTheCoffee.txt" />
   </ItemGroup>
   <ItemGroup>

@@ -148,7 +148,7 @@
             this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnClose.IconSize = 44;
-            this.btnClose.Location = new System.Drawing.Point(327, 17);
+            this.btnClose.Location = new System.Drawing.Point(313, 18);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(44, 34);
             this.btnClose.TabIndex = 37;
@@ -159,7 +159,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(387, 328);
+            this.ClientSize = new System.Drawing.Size(378, 328);
             this.Controls.Add(this.txtMesa);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtNroSilla);

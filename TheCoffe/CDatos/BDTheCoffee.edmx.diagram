@@ -8,12 +8,14 @@
         <EntityTypeShape EntityType="DBTheCoffeeModel.Categoria1" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DBTheCoffeeModel.Cliente" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBTheCoffeeModel.Mesa" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBTheCoffeeModel.Mesero" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTheCoffeeModel.Mesero" Width="1.5" PointX="8.625" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBTheCoffeeModel.Producto" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="DBTheCoffeeModel.rol_usuario" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DBTheCoffeeModel.Usuario" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="DBTheCoffeeModel.FK_Producto_Categoria" ManuallyRouted="false" />
         <AssociationConnector Association="DBTheCoffeeModel.FK_Usuario_id_rol" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBTheCoffeeModel.DiaDeTrabajo" Width="1.5" PointX="5.5" PointY="7.375" />
+        <AssociationConnector Association="DBTheCoffeeModel.MeseroDiaDeTrabajo" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

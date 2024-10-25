@@ -37,12 +37,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAddWaiter = new AltoControls.AltoButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.chkLun = new System.Windows.Forms.CheckBox();
+            this.chkDom = new System.Windows.Forms.CheckBox();
+            this.chkSab = new System.Windows.Forms.CheckBox();
+            this.chkVie = new System.Windows.Forms.CheckBox();
+            this.chkJue = new System.Windows.Forms.CheckBox();
+            this.chkMie = new System.Windows.Forms.CheckBox();
+            this.chkMar = new System.Windows.Forms.CheckBox();
+            this.chkAll = new System.Windows.Forms.CheckBox();
+            this.pnlChecks = new System.Windows.Forms.Panel();
             this.txtExit = new TheCoffe.Components.ModernTextBox();
             this.txtIncome = new TheCoffe.Components.ModernTextBox();
             this.txtNumber = new TheCoffe.Components.ModernTextBox();
             this.txtLastName = new TheCoffe.Components.ModernTextBox();
             this.txtName = new TheCoffe.Components.ModernTextBox();
             this.txtDNI = new TheCoffe.Components.ModernTextBox();
+            this.pnlChecks.SuspendLayout();
             this.SuspendLayout();
             // 
             // label8
@@ -147,7 +158,7 @@
             this.btnAddWaiter.ForeColor = System.Drawing.Color.White;
             this.btnAddWaiter.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnAddWaiter.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnAddWaiter.Location = new System.Drawing.Point(28, 349);
+            this.btnAddWaiter.Location = new System.Drawing.Point(27, 408);
             this.btnAddWaiter.Name = "btnAddWaiter";
             this.btnAddWaiter.Radius = 10;
             this.btnAddWaiter.Size = new System.Drawing.Size(416, 45);
@@ -157,6 +168,126 @@
             this.btnAddWaiter.Text = "Agregar";
             this.btnAddWaiter.Transparency = false;
             this.btnAddWaiter.Click += new System.EventHandler(this.btnAddWaiter_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(27, 325);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 15);
+            this.label5.TabIndex = 53;
+            this.label5.Text = "Dias De Trabajo";
+            // 
+            // chkLun
+            // 
+            this.chkLun.AutoSize = true;
+            this.chkLun.Font = new System.Drawing.Font("Roboto", 8F, System.Drawing.FontStyle.Bold);
+            this.chkLun.Location = new System.Drawing.Point(4, 3);
+            this.chkLun.Name = "chkLun";
+            this.chkLun.Size = new System.Drawing.Size(44, 17);
+            this.chkLun.TabIndex = 54;
+            this.chkLun.Tag = "1";
+            this.chkLun.Text = "Lun";
+            this.chkLun.UseVisualStyleBackColor = true;
+            // 
+            // chkDom
+            // 
+            this.chkDom.AutoSize = true;
+            this.chkDom.Font = new System.Drawing.Font("Roboto", 8F, System.Drawing.FontStyle.Bold);
+            this.chkDom.Location = new System.Drawing.Point(323, 3);
+            this.chkDom.Name = "chkDom";
+            this.chkDom.Size = new System.Drawing.Size(49, 17);
+            this.chkDom.TabIndex = 55;
+            this.chkDom.Tag = "7";
+            this.chkDom.Text = "Dom";
+            this.chkDom.UseVisualStyleBackColor = true;
+            // 
+            // chkSab
+            // 
+            this.chkSab.AutoSize = true;
+            this.chkSab.Font = new System.Drawing.Font("Roboto", 8F, System.Drawing.FontStyle.Bold);
+            this.chkSab.Location = new System.Drawing.Point(269, 3);
+            this.chkSab.Name = "chkSab";
+            this.chkSab.Size = new System.Drawing.Size(45, 17);
+            this.chkSab.TabIndex = 56;
+            this.chkSab.Tag = "6";
+            this.chkSab.Text = "Sab";
+            this.chkSab.UseVisualStyleBackColor = true;
+            // 
+            // chkVie
+            // 
+            this.chkVie.AutoSize = true;
+            this.chkVie.Font = new System.Drawing.Font("Roboto", 8F, System.Drawing.FontStyle.Bold);
+            this.chkVie.Location = new System.Drawing.Point(218, 3);
+            this.chkVie.Name = "chkVie";
+            this.chkVie.Size = new System.Drawing.Size(42, 17);
+            this.chkVie.TabIndex = 57;
+            this.chkVie.Tag = "5";
+            this.chkVie.Text = "Vie";
+            this.chkVie.UseVisualStyleBackColor = true;
+            // 
+            // chkJue
+            // 
+            this.chkJue.AutoSize = true;
+            this.chkJue.Font = new System.Drawing.Font("Roboto", 8F, System.Drawing.FontStyle.Bold);
+            this.chkJue.Location = new System.Drawing.Point(165, 3);
+            this.chkJue.Name = "chkJue";
+            this.chkJue.Size = new System.Drawing.Size(44, 17);
+            this.chkJue.TabIndex = 58;
+            this.chkJue.Tag = "4";
+            this.chkJue.Text = "Jue";
+            this.chkJue.UseVisualStyleBackColor = true;
+            // 
+            // chkMie
+            // 
+            this.chkMie.AutoSize = true;
+            this.chkMie.Font = new System.Drawing.Font("Roboto", 8F, System.Drawing.FontStyle.Bold);
+            this.chkMie.Location = new System.Drawing.Point(112, 3);
+            this.chkMie.Name = "chkMie";
+            this.chkMie.Size = new System.Drawing.Size(45, 17);
+            this.chkMie.TabIndex = 59;
+            this.chkMie.Tag = "3";
+            this.chkMie.Text = "Mie";
+            this.chkMie.UseVisualStyleBackColor = true;
+            // 
+            // chkMar
+            // 
+            this.chkMar.AutoSize = true;
+            this.chkMar.Font = new System.Drawing.Font("Roboto", 8F, System.Drawing.FontStyle.Bold);
+            this.chkMar.Location = new System.Drawing.Point(57, 3);
+            this.chkMar.Name = "chkMar";
+            this.chkMar.Size = new System.Drawing.Size(46, 17);
+            this.chkMar.TabIndex = 60;
+            this.chkMar.Tag = "2";
+            this.chkMar.Text = "Mar";
+            this.chkMar.UseVisualStyleBackColor = true;
+            // 
+            // chkAll
+            // 
+            this.chkAll.AutoSize = true;
+            this.chkAll.Font = new System.Drawing.Font("Roboto", 8F, System.Drawing.FontStyle.Bold);
+            this.chkAll.Location = new System.Drawing.Point(33, 374);
+            this.chkAll.Name = "chkAll";
+            this.chkAll.Size = new System.Drawing.Size(98, 17);
+            this.chkAll.TabIndex = 61;
+            this.chkAll.Text = "Todos los días";
+            this.chkAll.UseVisualStyleBackColor = true;
+            this.chkAll.CheckedChanged += new System.EventHandler(this.chkAll_CheckedChanged);
+            // 
+            // pnlChecks
+            // 
+            this.pnlChecks.Controls.Add(this.chkDom);
+            this.pnlChecks.Controls.Add(this.chkMar);
+            this.pnlChecks.Controls.Add(this.chkLun);
+            this.pnlChecks.Controls.Add(this.chkMie);
+            this.pnlChecks.Controls.Add(this.chkSab);
+            this.pnlChecks.Controls.Add(this.chkJue);
+            this.pnlChecks.Controls.Add(this.chkVie);
+            this.pnlChecks.Location = new System.Drawing.Point(29, 346);
+            this.pnlChecks.Name = "pnlChecks";
+            this.pnlChecks.Size = new System.Drawing.Size(413, 24);
+            this.pnlChecks.TabIndex = 62;
             // 
             // txtExit
             // 
@@ -302,7 +433,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(472, 419);
+            this.ClientSize = new System.Drawing.Size(472, 472);
+            this.Controls.Add(this.chkAll);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnAddWaiter);
             this.Controls.Add(this.txtExit);
             this.Controls.Add(this.label3);
@@ -318,6 +451,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lblAddWaiter);
             this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.pnlChecks);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddWaiterForm";
             this.ShowInTaskbar = false;
@@ -325,6 +459,8 @@
             this.Text = "AddWaiterForm";
             this.Deactivate += new System.EventHandler(this.AddWaiterForm_Deactivate);
             this.Load += new System.EventHandler(this.AddWaiterForm_Load);
+            this.pnlChecks.ResumeLayout(false);
+            this.pnlChecks.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,5 +483,15 @@
         private Components.ModernTextBox txtIncome;
         private System.Windows.Forms.Label label4;
         private AltoControls.AltoButton btnAddWaiter;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox chkLun;
+        private System.Windows.Forms.CheckBox chkDom;
+        private System.Windows.Forms.CheckBox chkSab;
+        private System.Windows.Forms.CheckBox chkVie;
+        private System.Windows.Forms.CheckBox chkJue;
+        private System.Windows.Forms.CheckBox chkMie;
+        private System.Windows.Forms.CheckBox chkMar;
+        private System.Windows.Forms.CheckBox chkAll;
+        private System.Windows.Forms.Panel pnlChecks;
     }
 }

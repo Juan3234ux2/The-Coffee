@@ -35,12 +35,10 @@
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sPanel2 = new Sipaa.Framework.SPanel();
             this.btnEditUser = new WindowsFormsApplication1.RoundButton();
-            this.btnRol = new FontAwesome.Sharp.IconButton();
-            this.cboRol = new CustomComboBox();
             this.txtNumber = new TheCoffe.Components.ModernTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnWatchPassword = new WindowsFormsApplication1.RoundButton();
@@ -53,7 +51,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtName = new TheCoffe.Components.ModernTextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.modernTextBox4 = new TheCoffe.Components.ModernTextBox();
+            this.txtRol = new TheCoffe.Components.ModernTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.sPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,7 +79,7 @@
             this.sPanel1.Controls.Add(this.iconButton2);
             this.sPanel1.Controls.Add(this.iconButton1);
             this.sPanel1.Controls.Add(this.label3);
-            this.sPanel1.Controls.Add(this.label2);
+            this.sPanel1.Controls.Add(this.lblUser);
             this.sPanel1.Controls.Add(this.pictureBox1);
             this.sPanel1.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sPanel1.ForeColor = System.Drawing.Color.White;
@@ -177,16 +175,16 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Administrador";
             // 
-            // label2
+            // lblUser
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(99, 199);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Juan Coronel";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Roboto Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.Black;
+            this.lblUser.Location = new System.Drawing.Point(96, 199);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(149, 25);
+            this.lblUser.TabIndex = 1;
+            this.lblUser.Text = "Juan Coronel";
             // 
             // pictureBox1
             // 
@@ -206,8 +204,6 @@
             this.sPanel2.BorderRadius = 15;
             this.sPanel2.BorderSize = 0;
             this.sPanel2.Controls.Add(this.btnEditUser);
-            this.sPanel2.Controls.Add(this.btnRol);
-            this.sPanel2.Controls.Add(this.cboRol);
             this.sPanel2.Controls.Add(this.txtNumber);
             this.sPanel2.Controls.Add(this.label5);
             this.sPanel2.Controls.Add(this.btnWatchPassword);
@@ -220,7 +216,7 @@
             this.sPanel2.Controls.Add(this.label9);
             this.sPanel2.Controls.Add(this.txtName);
             this.sPanel2.Controls.Add(this.label10);
-            this.sPanel2.Controls.Add(this.modernTextBox4);
+            this.sPanel2.Controls.Add(this.txtRol);
             this.sPanel2.Controls.Add(this.label4);
             this.sPanel2.ForeColor = System.Drawing.Color.Black;
             this.sPanel2.Location = new System.Drawing.Point(403, 79);
@@ -253,45 +249,6 @@
             this.btnEditUser.TextColor = System.Drawing.Color.White;
             this.btnEditUser.UseVisualStyleBackColor = false;
             this.btnEditUser.Click += new System.EventHandler(this.btnEditUser_Click);
-            // 
-            // btnRol
-            // 
-            this.btnRol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnRol.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRol.FlatAppearance.BorderSize = 0;
-            this.btnRol.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnRol.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRol.IconChar = FontAwesome.Sharp.IconChar.AngleDown;
-            this.btnRol.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnRol.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnRol.IconSize = 25;
-            this.btnRol.Location = new System.Drawing.Point(250, 266);
-            this.btnRol.Name = "btnRol";
-            this.btnRol.Size = new System.Drawing.Size(33, 35);
-            this.btnRol.TabIndex = 73;
-            this.btnRol.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnRol.UseVisualStyleBackColor = false;
-            this.btnRol.Click += new System.EventHandler(this.btnRol_Click);
-            // 
-            // cboRol
-            // 
-            this.cboRol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cboRol.BorderColor = System.Drawing.Color.Transparent;
-            this.cboRol.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboRol.DropDownWidth = 245;
-            this.cboRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboRol.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cboRol.FormattingEnabled = true;
-            this.cboRol.Items.AddRange(new object[] {
-            "Cajero",
-            "Administrador"});
-            this.cboRol.Location = new System.Drawing.Point(41, 270);
-            this.cboRol.Name = "cboRol";
-            this.cboRol.Size = new System.Drawing.Size(218, 24);
-            this.cboRol.TabIndex = 72;
             // 
             // txtNumber
             // 
@@ -372,6 +329,7 @@
             this.txtPassword.TabIndex = 67;
             this.txtPassword.Texts = "Juan323";
             this.txtPassword.UnderlinedStyle = false;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateCredendials_KeyPress);
             // 
             // label6
             // 
@@ -404,6 +362,7 @@
             this.txtUser.TabIndex = 65;
             this.txtUser.Texts = "Juan3234";
             this.txtUser.UnderlinedStyle = false;
+            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateCredendials_KeyPress);
             // 
             // label7
             // 
@@ -491,28 +450,28 @@
             this.label10.TabIndex = 59;
             this.label10.Text = "Nombre";
             // 
-            // modernTextBox4
+            // txtRol
             // 
-            this.modernTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.modernTextBox4.BorderColor = System.Drawing.Color.Transparent;
-            this.modernTextBox4.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.modernTextBox4.BorderRadius = 10;
-            this.modernTextBox4.BorderSize = 1;
-            this.modernTextBox4.Enabled = false;
-            this.modernTextBox4.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modernTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox4.Location = new System.Drawing.Point(35, 258);
-            this.modernTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.modernTextBox4.Multiline = false;
-            this.modernTextBox4.Name = "modernTextBox4";
-            this.modernTextBox4.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
-            this.modernTextBox4.PasswordChar = false;
-            this.modernTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.modernTextBox4.PlaceholderText = "";
-            this.modernTextBox4.Size = new System.Drawing.Size(252, 46);
-            this.modernTextBox4.TabIndex = 71;
-            this.modernTextBox4.Texts = "";
-            this.modernTextBox4.UnderlinedStyle = false;
+            this.txtRol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txtRol.BorderColor = System.Drawing.Color.Transparent;
+            this.txtRol.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtRol.BorderRadius = 10;
+            this.txtRol.BorderSize = 1;
+            this.txtRol.Enabled = false;
+            this.txtRol.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtRol.Location = new System.Drawing.Point(35, 258);
+            this.txtRol.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRol.Multiline = false;
+            this.txtRol.Name = "txtRol";
+            this.txtRol.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtRol.PasswordChar = false;
+            this.txtRol.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtRol.PlaceholderText = "";
+            this.txtRol.Size = new System.Drawing.Size(252, 46);
+            this.txtRol.TabIndex = 71;
+            this.txtRol.Texts = "";
+            this.txtRol.UnderlinedStyle = false;
             // 
             // label4
             // 
@@ -550,15 +509,13 @@
         private System.Windows.Forms.Label label1;
         private Sipaa.Framework.SPanel sPanel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton btnLogout;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private Sipaa.Framework.SPanel sPanel2;
         private System.Windows.Forms.Label label4;
-        private FontAwesome.Sharp.IconButton btnRol;
-        private CustomComboBox cboRol;
         private Components.ModernTextBox txtNumber;
         private System.Windows.Forms.Label label5;
         private WindowsFormsApplication1.RoundButton btnWatchPassword;
@@ -571,7 +528,7 @@
         private System.Windows.Forms.Label label9;
         private Components.ModernTextBox txtName;
         private System.Windows.Forms.Label label10;
-        private Components.ModernTextBox modernTextBox4;
+        private Components.ModernTextBox txtRol;
         private WindowsFormsApplication1.RoundButton btnEditUser;
         private System.Windows.Forms.Button button1;
     }

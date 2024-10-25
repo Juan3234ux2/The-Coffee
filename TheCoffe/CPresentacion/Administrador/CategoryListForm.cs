@@ -11,18 +11,20 @@ using TheCoffe.CPresentacion.General;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
 using System.Data.Entity;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.App
 {
     public partial class CategoryList : UserControl
     {
+        private CategoryService _categoryService = new CategoryService();
+        private Categoria1 categoria = new Categoria1();
         public CategoryList()
         {
             InitializeComponent();
+            dataCategory.AutoGenerateColumns = false;
         }
 
-        Categoria1DAL categoriaDAL = new Categoria1DAL();
-        Categoria1 categoria = new Categoria1();
         private int id;
 
         private void CategoryList_Load(object sender, EventArgs e)
@@ -30,13 +32,11 @@ namespace TheCoffe.App
             RefreshPantalla();
         }
 
-        public void RefreshPantalla()
+        public async void RefreshPantalla()
         {
-            var Lst = categoriaDAL.Read(false).Select(p => new {
-                p.id_categoria,
-                p.descripcion
-            }).ToList();
-            dataCategory.DataSource = Lst;
+            CategoryService service = new CategoryService();
+            var categorias = await service.ObtenerCategoriasActivas();
+            dataCategory.DataSource = categorias;
         }
 
         private void btnAddCategory_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace TheCoffe.App
         {
             if (dataCategory.Columns[e.ColumnIndex].Name == "editar")
             {
-                id = Convert.ToInt32(dataCategory.CurrentRow.Cells[2].Value.ToString());
+                id = Convert.ToInt32(dataCategory.CurrentRow.Cells[0].Value.ToString());
 
                 using (OverlayForm overlay = new OverlayForm())
                 {
@@ -73,11 +73,10 @@ namespace TheCoffe.App
             {
                 if (MessageBox.Show("¿Está seguro que desea eliminar este registro?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    id = Convert.ToInt32(dataCategory.CurrentRow.Cells[2].Value.ToString());
-                    categoriaDAL.Delete(id);
+                    id = Convert.ToInt32(dataCategory.CurrentRow.Cells[0].Value.ToString());
+                    _categoryService.EliminarCategoria(id);
                 }
             }
-
             RefreshPantalla();
         }
 
@@ -99,10 +98,7 @@ namespace TheCoffe.App
         {
             if (txtSearch.Texts != string.Empty)
             {
-                var Lst = categoriaDAL.Search(txtSearch.Texts).Select(p => new {
-                    p.id_categoria,
-                    p.descripcion
-                }).ToList();
+                var Lst = _categoryService.BuscarPorNombre(txtSearch.Texts);
                 dataCategory.DataSource = Lst;
             }
             else

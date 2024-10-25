@@ -12,30 +12,30 @@ using TheCoffe.App;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
 using TheCoffe.CNegocio;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.CPresentacion.Cajero
 {
     public partial class AddClientForm : Form
     {
+        private Cliente cliente = new Cliente();
+        private CustomerService customerService = new CustomerService();
         private bool isShowingMsgBox = false;
         public AddClientForm()
         {
             InitializeComponent();
         }
 
-        Cliente cliente = new Cliente();
-        ClienteDAL clienteDAL = new ClienteDAL();
-
         private void CargarDatos()
         {
             cliente.nombre = txtName.Texts;
             cliente.apellido = txtLastName.Texts;
-            cliente.cuit =  int.Parse(txtCuit.Texts);
+            cliente.cuit = txtCuit.Texts;
             cliente.domicilio = txtAdress.Texts;
             cliente.localidad = txtLocality.Texts;
             cliente.provincia = txtProvince.Texts;
             cliente.email = txtEmail.Texts;
-            cliente.telefono = int.Parse(txtPhone.Texts);
+            cliente.telefono = txtPhone.Texts;
         }
 
         private void AddClientForm_Load(object sender, EventArgs e)
@@ -88,9 +88,18 @@ namespace TheCoffe.CPresentacion.Cajero
             }
             if (IsValidEmail(txtEmail.Texts))
             {
-                CargarDatos();
-                clienteDAL.Create(cliente);
-                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso Finalizado", "Cliente Agregado Exitosamente", Properties.Resources.informacion);
+                try
+                {
+                    CargarDatos();
+                    customerService.CrearCliente(cliente);
+                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso Finalizado", "Cliente Agregado Exitosamente", Properties.Resources.informacion);
+                }
+                catch (Exception ex)
+                {
+                    this.isShowingMsgBox = true;
+                    MessageBox.Show(ex.Message, "Error al insertar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.isShowingMsgBox = false;
+                }
             }
             else
             {

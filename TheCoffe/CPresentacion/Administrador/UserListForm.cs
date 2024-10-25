@@ -11,43 +11,26 @@ using TheCoffe.CPresentacion;
 using TheCoffe.CPresentacion.Cajero;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.App
 {
     public partial class UserListForm : UserControl
     {
+        private UserService _userService = new UserService();
+        private Usuario usuario = new Usuario();
+        private int id;
         public UserListForm()
         {
             InitializeComponent();
+            dataUsers.AutoGenerateColumns = false;
         }
 
-        UsuarioDAL usuarioDAL = new UsuarioDAL();
-        Usuario usuario = new Usuario();
-        private int id;
-
-        public void RefreshPantalla()
+        public async void RefreshPantalla()
         {
-            var usuarios = usuarioDAL.Read(false);
-
-            dataUsers.DataSource = usuarios.Select(p =>
-            new
-            {
-                p.id_usuario,
-                p.usuario1,
-                p.nombre,
-                p.apellido,
-                p.telefono,  
-                c = p.rol_usuario.descripcion
-            }).ToList();
-
-            dataUsers.Columns[2].HeaderText = "ID";
-            dataUsers.Columns[3].HeaderText = "Usuario";
-            dataUsers.Columns[4].HeaderText = "Nombre";
-            dataUsers.Columns[5].HeaderText = "Apellido";
-            dataUsers.Columns[6].HeaderText = "Telefono";
-            dataUsers.Columns[7].HeaderText = "Rol";
-            dataUsers.Columns[0].DisplayIndex = dataUsers.Columns.Count - 1;
-            dataUsers.Columns[1].DisplayIndex = dataUsers.Columns.Count - 1;
+            UserService service = new UserService();
+            var usuarios = await service.ObtenerUsuariosActivos();
+            dataUsers.DataSource = usuarios.Where(u => u.usuario1 != AuthUser.Usuario.usuario1).ToList();
         }
 
         private void UserListForm_Load(object sender, EventArgs e)
@@ -57,40 +40,39 @@ namespace TheCoffe.App
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            /*using (OverlayForm overlay = new OverlayForm())
+            using (OverlayForm overlay = new OverlayForm())
             {
-                overlay.Show();*/
+                overlay.Show();
                 using (AddUserForm modal = new AddUserForm())
                 {
-                    modal.ShowDialog();
+                    modal.ShowDialog(overlay);
                 }
-                /*overlay.Close();
-            }*/
+                overlay.Close();
+            }
             RefreshPantalla();
         }
 
         private void dataUsers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            id = Convert.ToInt32(dataUsers.CurrentRow.Cells[0].Value.ToString());
             if (dataUsers.Columns[e.ColumnIndex].Name == "editar")
             {
-                id = Convert.ToInt32(dataUsers.CurrentRow.Cells[2].Value.ToString());
 
-                /*using (OverlayForm overlay = new OverlayForm())
+                using (OverlayForm overlay = new OverlayForm())
             {
-                overlay.Show();*/
+                overlay.Show();
                 using (AddUserForm modal = new AddUserForm(id))
                     {
-                        modal.ShowDialog();
+                        modal.ShowDialog(overlay);
                     }
-                    /*overlay.Close();
-                }*/
+                    overlay.Close();
+                }
             }
             else if (dataUsers.Columns[e.ColumnIndex].Name == "eliminar")
             {
                 if (MessageBox.Show("¿Está seguro que desea eliminar este registro?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    id = Convert.ToInt32(dataUsers.CurrentRow.Cells[2].Value.ToString());
-                    usuarioDAL.Delete(id);
+                    _userService.CambiarEstado(id);
                 }
             }
             RefreshPantalla();
@@ -113,6 +95,18 @@ namespace TheCoffe.App
                 overlay.Close();
             }
             RefreshPantalla();
+        }
+        private void txtSearch__TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Texts != string.Empty)
+            {
+                var usuarios = _userService.BuscarPorNombre(txtSearch.Texts);
+                dataUsers.DataSource = usuarios;
+            }
+            else
+            {
+                RefreshPantalla();
+            }
         }
     }
 }

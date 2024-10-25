@@ -9,15 +9,40 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheCoffe.CNegocio;
 using TheCoffe.App;
+using TheCoffe.CDatos;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.CPresentacion
 {
     public partial class ProfileForm : UserControl
     {
+        private UserService _userService = new UserService();
+        private Usuario usuario = new Usuario();
+        Usuario usuarioActual = AuthUser.Usuario;
         public ProfileForm()
         {
             InitializeComponent();
-            cboRol.SelectedIndex = 1;
+            RecargarInformacion();
+            txtRol.Texts = "Administrador";
+            usuario = usuarioActual;
+        }
+        private void CargarDatos()
+        {
+            usuario.nombre = txtName.Texts;
+            usuario.apellido = txtLastName.Texts;
+            usuario.telefono = txtNumber.Texts;
+            usuario.usuario1 = txtUser.Texts;
+            usuario.contraseña = txtPassword.Texts;
+            usuario.estado = true;
+        }
+        private void RecargarInformacion()
+        {
+            lblUser.Text = usuarioActual.nombreCompleto;
+            txtName.Texts = usuarioActual.nombre;
+            txtLastName.Texts = usuarioActual.apellido;
+            txtNumber.Texts = usuarioActual.telefono;
+            txtUser.Texts = usuarioActual.usuario1;
+            txtPassword.Texts = usuarioActual.contraseña;
         }
         private void btnWatchPassword_Click(object sender, EventArgs e)
         {
@@ -35,16 +60,15 @@ namespace TheCoffe.CPresentacion
         {
             InputValidator.ValidateInput(e, InputValidator.InputType.Letters);
         }
-
+        private void validateCredendials_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidator.ValidateInput(e, InputValidator.InputType.Credentials);
+        }
         private void txtNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
             InputValidator.ValidateInput(e, InputValidator.InputType.Digits);
         }
 
-        private void btnRol_Click(object sender, EventArgs e)
-        {
-            cboRol.DroppedDown = !cboRol.DroppedDown;
-        }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -59,7 +83,7 @@ namespace TheCoffe.CPresentacion
 
         private void btnEditUser_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtName.Texts) || string.IsNullOrWhiteSpace(txtLastName.Texts) || string.IsNullOrWhiteSpace(txtUser.Texts) || string.IsNullOrWhiteSpace(txtPassword.Texts) || string.IsNullOrWhiteSpace(txtNumber.Texts) || cboRol.SelectedIndex == -1)
+            if (string.IsNullOrWhiteSpace(txtName.Texts) || string.IsNullOrWhiteSpace(txtLastName.Texts) || string.IsNullOrWhiteSpace(txtUser.Texts) || string.IsNullOrWhiteSpace(txtPassword.Texts) || string.IsNullOrWhiteSpace(txtNumber.Texts))
             {
                 MessageBox.Show("Debe Completar todos los campos",
                     "Error",
@@ -69,7 +93,20 @@ namespace TheCoffe.CPresentacion
             }
             else
             {
-                    new AlertBox(this.FindForm(), Color.LightGreen, Color.SeaGreen, "Proceso completado", "Usuario editado correctamente", Properties.Resources.informacion);
+                try
+                {
+                    CargarDatos();
+                    Console.WriteLine(usuario.id_usuario + "--" + usuario.nombreCompleto);
+                    _userService.ActualizarUsuario(usuario);
+                    new AlertBox(null, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Usuario actualizado correctamente", Properties.Resources.informacion);
+                    RecargarInformacion();
+                    AuthUser.Usuario = usuario;
+                    usuarioActual = AuthUser.Usuario;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error al actualizar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

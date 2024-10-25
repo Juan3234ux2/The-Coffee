@@ -18,13 +18,13 @@ namespace TheCoffe.App
     {
         private bool isShowingMsgBox = false;
         private int idProducto = 0;
+        ProductoDAL productoDAL = new ProductoDAL();
+        Producto producto = null;
         public AddProductForm()
         {
             InitializeComponent();
         }
 
-        ProductoDAL productoDAL = new ProductoDAL();
-        Producto producto = null;
 
         public AddProductForm(int id)
         {
@@ -44,6 +44,7 @@ namespace TheCoffe.App
             producto.descripcion = txtDescription.Texts;
             producto.precio = Convert.ToInt32(txtPrice.Texts);
             producto.id_categoria = Convert.ToInt32(cboCategory.SelectedValue);
+            producto.estado = true;
             producto.imagen = "";
         }
 

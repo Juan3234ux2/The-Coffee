@@ -28,11 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataWaiter = new System.Windows.Forms.DataGridView();
+            this.id_mesero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hora_entrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hora_salida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,7 +46,11 @@
             this.btnRemovedWaiter = new WindowsFormsApplication1.RoundButton();
             this.txtSearch = new TheCoffe.Components.ModernTextBox();
             this.btnAddWaiter = new WindowsFormsApplication1.RoundButton();
+            this.processingControl1 = new AltoControls.ProcessingControl();
+            this.pnlLoading = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataWaiter)).BeginInit();
+            this.pnlLoading.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataWaiter
@@ -54,28 +64,34 @@
             this.dataWaiter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataWaiter.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataWaiter.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto Medium", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataWaiter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto Medium", 10F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataWaiter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataWaiter.ColumnHeadersHeight = 45;
             this.dataWaiter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataWaiter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_mesero,
+            this.nombre,
+            this.apellido,
+            this.Telefono,
+            this.hora_entrada,
+            this.hora_salida,
             this.editar,
             this.eliminar});
             this.dataWaiter.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataWaiter.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataWaiter.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataWaiter.EnableHeadersVisualStyles = false;
             this.dataWaiter.GridColor = System.Drawing.Color.Silver;
             this.dataWaiter.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -84,22 +100,22 @@
             this.dataWaiter.Name = "dataWaiter";
             this.dataWaiter.ReadOnly = true;
             this.dataWaiter.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataWaiter.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataWaiter.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataWaiter.RowHeadersVisible = false;
             this.dataWaiter.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataWaiter.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataWaiter.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataWaiter.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dataWaiter.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dataWaiter.RowTemplate.DividerHeight = 1;
@@ -114,9 +130,57 @@
             this.dataWaiter.TabIndex = 22;
             this.dataWaiter.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataWaiter_CellContentClick);
             // 
+            // id_mesero
+            // 
+            this.id_mesero.DataPropertyName = "id_mesero";
+            this.id_mesero.FillWeight = 36.62743F;
+            this.id_mesero.HeaderText = "ID";
+            this.id_mesero.Name = "id_mesero";
+            this.id_mesero.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.FillWeight = 114.846F;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // apellido
+            // 
+            this.apellido.DataPropertyName = "apellido";
+            this.apellido.FillWeight = 114.846F;
+            this.apellido.HeaderText = "Apellido";
+            this.apellido.Name = "apellido";
+            this.apellido.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.DataPropertyName = "telefono";
+            this.Telefono.FillWeight = 114.846F;
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            // 
+            // hora_entrada
+            // 
+            this.hora_entrada.DataPropertyName = "hora_entrada";
+            this.hora_entrada.FillWeight = 114.846F;
+            this.hora_entrada.HeaderText = "Hora Entrada";
+            this.hora_entrada.Name = "hora_entrada";
+            this.hora_entrada.ReadOnly = true;
+            // 
+            // hora_salida
+            // 
+            this.hora_salida.DataPropertyName = "hora_salida";
+            this.hora_salida.FillWeight = 114.846F;
+            this.hora_salida.HeaderText = "Hora Salida";
+            this.hora_salida.Name = "hora_salida";
+            this.hora_salida.ReadOnly = true;
+            // 
             // editar
             // 
-            this.editar.FillWeight = 57.09146F;
+            this.editar.FillWeight = 50.18527F;
             this.editar.HeaderText = "Acciones";
             this.editar.Image = global::TheCoffe.Properties.Resources.pencil;
             this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -127,7 +191,7 @@
             // 
             // eliminar
             // 
-            this.eliminar.FillWeight = 39.30109F;
+            this.eliminar.FillWeight = 35.34988F;
             this.eliminar.HeaderText = "";
             this.eliminar.Image = global::TheCoffe.Properties.Resources.delete;
             this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -237,21 +301,62 @@
             this.btnAddWaiter.UseVisualStyleBackColor = false;
             this.btnAddWaiter.Click += new System.EventHandler(this.btnAddWaiter_Click);
             // 
+            // processingControl1
+            // 
+            this.processingControl1.BackColor = System.Drawing.Color.Transparent;
+            this.processingControl1.IndexColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.processingControl1.Interval = 100;
+            this.processingControl1.Location = new System.Drawing.Point(377, 183);
+            this.processingControl1.Name = "processingControl1";
+            this.processingControl1.NCircle = 8;
+            this.processingControl1.Others = System.Drawing.Color.LightGray;
+            this.processingControl1.Radius = 5;
+            this.processingControl1.Size = new System.Drawing.Size(78, 64);
+            this.processingControl1.Spin = true;
+            this.processingControl1.TabIndex = 28;
+            this.processingControl1.Text = "processingControl1";
+            // 
+            // pnlLoading
+            // 
+            this.pnlLoading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pnlLoading.Controls.Add(this.label2);
+            this.pnlLoading.Controls.Add(this.processingControl1);
+            this.pnlLoading.Location = new System.Drawing.Point(18, 182);
+            this.pnlLoading.Name = "pnlLoading";
+            this.pnlLoading.Size = new System.Drawing.Size(976, 435);
+            this.pnlLoading.TabIndex = 29;
+            this.pnlLoading.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(461, 206);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(128, 17);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Cargando Meseros";
+            // 
             // WaiterListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Controls.Add(this.pnlLoading);
             this.Controls.Add(this.btnRemovedWaiter);
             this.Controls.Add(this.iconButton5);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dataWaiter);
             this.Controls.Add(this.btnAddWaiter);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Name = "WaiterListForm";
             this.Size = new System.Drawing.Size(1014, 681);
             this.Load += new System.EventHandler(this.WaiterListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataWaiter)).EndInit();
+            this.pnlLoading.ResumeLayout(false);
+            this.pnlLoading.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,7 +370,16 @@
         private WindowsFormsApplication1.RoundButton btnAddWaiter;
         private System.Windows.Forms.Label label1;
         private WindowsFormsApplication1.RoundButton btnRemovedWaiter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_mesero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hora_entrada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hora_salida;
         private System.Windows.Forms.DataGridViewImageColumn editar;
         private System.Windows.Forms.DataGridViewImageColumn eliminar;
+        private AltoControls.ProcessingControl processingControl1;
+        private System.Windows.Forms.Panel pnlLoading;
+        private System.Windows.Forms.Label label2;
     }
 }

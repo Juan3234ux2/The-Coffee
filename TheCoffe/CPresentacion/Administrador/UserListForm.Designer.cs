@@ -36,8 +36,13 @@
             this.dataUsers = new System.Windows.Forms.DataGridView();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.btnRemovedUsers = new WindowsFormsApplication1.RoundButton();
-            this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
+            this.txtSearch = new TheCoffe.Components.ModernTextBox();
             this.btnAddUser = new WindowsFormsApplication1.RoundButton();
+            this.id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataUsers)).BeginInit();
@@ -75,6 +80,11 @@
             this.dataUsers.ColumnHeadersHeight = 45;
             this.dataUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_usuario,
+            this.nombre,
+            this.Apellido,
+            this.Telefono,
+            this.Rol,
             this.editar,
             this.eliminar});
             this.dataUsers.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -168,27 +178,27 @@
             this.btnRemovedUsers.UseVisualStyleBackColor = false;
             this.btnRemovedUsers.Click += new System.EventHandler(this.btnRemovedUsers_Click);
             // 
-            // modernTextBox1
+            // txtSearch
             // 
-            this.modernTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.modernTextBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.modernTextBox1.BorderFocusColor = System.Drawing.Color.Black;
-            this.modernTextBox1.BorderRadius = 10;
-            this.modernTextBox1.BorderSize = 1;
-            this.modernTextBox1.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modernTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox1.Location = new System.Drawing.Point(19, 74);
-            this.modernTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.modernTextBox1.Multiline = false;
-            this.modernTextBox1.Name = "modernTextBox1";
-            this.modernTextBox1.Padding = new System.Windows.Forms.Padding(10, 16, 10, 7);
-            this.modernTextBox1.PasswordChar = false;
-            this.modernTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.modernTextBox1.PlaceholderText = "Buscar...";
-            this.modernTextBox1.Size = new System.Drawing.Size(329, 44);
-            this.modernTextBox1.TabIndex = 17;
-            this.modernTextBox1.Texts = "";
-            this.modernTextBox1.UnderlinedStyle = false;
+            this.txtSearch.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSearch.BorderColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BorderFocusColor = System.Drawing.Color.Black;
+            this.txtSearch.BorderRadius = 10;
+            this.txtSearch.BorderSize = 1;
+            this.txtSearch.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSearch.Location = new System.Drawing.Point(19, 74);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Multiline = false;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(10, 16, 10, 7);
+            this.txtSearch.PasswordChar = false;
+            this.txtSearch.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.txtSearch.PlaceholderText = "Buscar...";
+            this.txtSearch.Size = new System.Drawing.Size(329, 44);
+            this.txtSearch.TabIndex = 17;
+            this.txtSearch.Texts = "";
+            this.txtSearch.UnderlinedStyle = false;
             // 
             // btnAddUser
             // 
@@ -216,9 +226,49 @@
             this.btnAddUser.UseVisualStyleBackColor = false;
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
+            // id_usuario
+            // 
+            this.id_usuario.DataPropertyName = "id_usuario";
+            this.id_usuario.FillWeight = 28.4686F;
+            this.id_usuario.HeaderText = "ID";
+            this.id_usuario.Name = "id_usuario";
+            this.id_usuario.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.FillWeight = 115.5222F;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // Apellido
+            // 
+            this.Apellido.DataPropertyName = "apellido";
+            this.Apellido.FillWeight = 115.5222F;
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.DataPropertyName = "telefono";
+            this.Telefono.FillWeight = 115.5222F;
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            // 
+            // Rol
+            // 
+            this.Rol.DataPropertyName = "NombreRol";
+            this.Rol.FillWeight = 115.5222F;
+            this.Rol.HeaderText = "Rol";
+            this.Rol.Name = "Rol";
+            this.Rol.ReadOnly = true;
+            // 
             // editar
             // 
-            this.editar.FillWeight = 37.8979F;
+            this.editar.FillWeight = 43.78051F;
             this.editar.HeaderText = "Acciones";
             this.editar.Image = global::TheCoffe.Properties.Resources.pencil;
             this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -228,7 +278,7 @@
             // 
             // eliminar
             // 
-            this.eliminar.FillWeight = 22.93354F;
+            this.eliminar.FillWeight = 26.49334F;
             this.eliminar.HeaderText = "";
             this.eliminar.Image = global::TheCoffe.Properties.Resources.delete;
             this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -245,7 +295,7 @@
             this.Controls.Add(this.btnRemovedUsers);
             this.Controls.Add(this.dataUsers);
             this.Controls.Add(this.iconButton5);
-            this.Controls.Add(this.modernTextBox1);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.lblUserList);
             this.Name = "UserListForm";
@@ -260,11 +310,16 @@
         #endregion
 
         private FontAwesome.Sharp.IconButton iconButton5;
-        private Components.ModernTextBox modernTextBox1;
+        private Components.ModernTextBox txtSearch;
         private WindowsFormsApplication1.RoundButton btnAddUser;
         private System.Windows.Forms.Label lblUserList;
         private System.Windows.Forms.DataGridView dataUsers;
         private WindowsFormsApplication1.RoundButton btnRemovedUsers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
         private System.Windows.Forms.DataGridViewImageColumn editar;
         private System.Windows.Forms.DataGridViewImageColumn eliminar;
     }

@@ -19,6 +19,7 @@ namespace TheCoffe.CPresentacion
         public RemovedProductsListForm()
         {
             InitializeComponent();
+            dataRemovedProducts.AutoGenerateColumns = false;
         }
 
         ProductoDAL productoDAL = new ProductoDAL();
@@ -27,7 +28,7 @@ namespace TheCoffe.CPresentacion
 
         public void RefreshPantalla()
         {
-            var productos = productoDAL.Read(true);
+            var productos = productoDAL.Read(false);
 
             dataRemovedProducts.DataSource = productos.Select(p =>
             new
@@ -38,11 +39,6 @@ namespace TheCoffe.CPresentacion
                 c = p.Categoria1.descripcion
             }).ToList();
 
-            dataRemovedProducts.Columns[1].HeaderText = "ID";
-            dataRemovedProducts.Columns[2].HeaderText = "Nombre";
-            dataRemovedProducts.Columns[3].HeaderText = "Precio";
-            dataRemovedProducts.Columns[4].HeaderText = "Categoria";
-            dataRemovedProducts.Columns[0].DisplayIndex = dataRemovedProducts.Columns.Count - 1;
         }
         private void RemovedProductsListForm_Load(object sender, EventArgs e)
         {
@@ -67,7 +63,7 @@ namespace TheCoffe.CPresentacion
                     isShowingMsgBox = true;
                     if (MessageBox.Show("¿Está seguro que desea activar este registro?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                    id = Convert.ToInt32(dataRemovedProducts.CurrentRow.Cells[1].Value.ToString());
+                    id = Convert.ToInt32(dataRemovedProducts.CurrentRow.Cells[0].Value.ToString());
                     productoDAL.Delete(id);
                     }
                     isShowingMsgBox = false;

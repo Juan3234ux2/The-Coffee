@@ -37,9 +37,9 @@
             this.dataUsersRemoved = new System.Windows.Forms.DataGridView();
             this.idUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Creado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataUsersRemoved)).BeginInit();
             this.SuspendLayout();
@@ -97,9 +97,9 @@
             this.dataUsersRemoved.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idUser,
             this.Usuario,
+            this.apellido,
             this.Telefono,
             this.Rol,
-            this.Creado,
             this.activar});
             this.dataUsersRemoved.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -150,22 +150,33 @@
             // 
             // idUser
             // 
-            this.idUser.FillWeight = 41.5131F;
+            this.idUser.DataPropertyName = "id_usuario";
+            this.idUser.FillWeight = 31.21479F;
             this.idUser.HeaderText = "ID";
             this.idUser.Name = "idUser";
             this.idUser.ReadOnly = true;
             // 
             // Usuario
             // 
-            this.Usuario.FillWeight = 145.2536F;
-            this.Usuario.HeaderText = "Nombre de Usuario";
+            this.Usuario.DataPropertyName = "nombre";
+            this.Usuario.FillWeight = 147.1426F;
+            this.Usuario.HeaderText = "Nombre";
             this.Usuario.Name = "Usuario";
             this.Usuario.ReadOnly = true;
             this.Usuario.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
+            // apellido
+            // 
+            this.apellido.DataPropertyName = "apellido";
+            this.apellido.FillWeight = 101.3005F;
+            this.apellido.HeaderText = "Apellido";
+            this.apellido.Name = "apellido";
+            this.apellido.ReadOnly = true;
+            // 
             // Telefono
             // 
-            this.Telefono.FillWeight = 88.57064F;
+            this.Telefono.DataPropertyName = "telefono";
+            this.Telefono.FillWeight = 89.7225F;
             this.Telefono.HeaderText = "Teléfono";
             this.Telefono.Name = "Telefono";
             this.Telefono.ReadOnly = true;
@@ -174,21 +185,15 @@
             // 
             // Rol
             // 
-            this.Rol.FillWeight = 101.8936F;
+            this.Rol.DataPropertyName = "NombreRol";
+            this.Rol.FillWeight = 103.2187F;
             this.Rol.HeaderText = "Rol";
             this.Rol.Name = "Rol";
             this.Rol.ReadOnly = true;
             // 
-            // Creado
-            // 
-            this.Creado.FillWeight = 121.153F;
-            this.Creado.HeaderText = "Creado en";
-            this.Creado.Name = "Creado";
-            this.Creado.ReadOnly = true;
-            // 
             // activar
             // 
-            this.activar.FillWeight = 35.21191F;
+            this.activar.FillWeight = 39.84373F;
             this.activar.HeaderText = "Activar";
             this.activar.Image = global::TheCoffe.Properties.Resources.activar;
             this.activar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -226,9 +231,9 @@
         private System.Windows.Forms.DataGridView dataUsersRemoved;
         private System.Windows.Forms.DataGridViewTextBoxColumn idUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Creado;
         private System.Windows.Forms.DataGridViewImageColumn activar;
     }
 }

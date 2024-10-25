@@ -8,42 +8,37 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheCoffe.CPresentacion;
-using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.App
 {
     public partial class WaiterListForm : UserControl
     {
+        private WaiterService _waiterService = new WaiterService();
+        private Mesero mesero = new Mesero();
+        private int id;
         public WaiterListForm()
         {
             InitializeComponent();
+            dataWaiter.AutoGenerateColumns = false;
         }
 
-        MeseroDAL meseroDAL = new MeseroDAL();
-        Mesero mesero = new Mesero();
-        private int id;
 
-        private void WaiterListForm_Load(object sender, EventArgs e)
+        private async void WaiterListForm_Load(object sender, EventArgs e)
         {
-            RefreshPantalla();
+            pnlLoading.Visible = true;
+            WaiterService service = new WaiterService();
+            var mesero = await service.ObtenerMeserosActivos();
+            dataWaiter.DataSource = mesero;
+            pnlLoading.Visible = false;
         }
 
-        public void RefreshPantalla()
+        public async void RefreshPantalla()
         {
-            var Lst = meseroDAL.Read(false).Select(p => new {
-                p.id_mesero, p.nombre, p.apellido, p.dni, p.telefono, p.hora_entrada, p.hora_salida
-            }).ToList();
-            dataWaiter.DataSource = Lst;
-            dataWaiter.Columns[2].HeaderText = "ID";
-            dataWaiter.Columns[3].HeaderText = "Nombre";
-            dataWaiter.Columns[4].HeaderText = "Apellido";
-            dataWaiter.Columns[5].HeaderText = "DNI";
-            dataWaiter.Columns[6].HeaderText = "Teléfono";
-            dataWaiter.Columns[7].HeaderText = "Hora de Ingreso";
-            dataWaiter.Columns[8].HeaderText = "Hora de Salida";
-            dataWaiter.Columns[0].DisplayIndex = dataWaiter.Columns.Count - 1;
-            dataWaiter.Columns[1].DisplayIndex = dataWaiter.Columns.Count - 1;
+            WaiterService service = new WaiterService();
+            var mesero = await service.ObtenerMeserosActivos();
+            dataWaiter.DataSource = mesero;
         }
 
         private void btnAddWaiter_Click(object sender, EventArgs e)
@@ -64,7 +59,7 @@ namespace TheCoffe.App
         {
             if (dataWaiter.Columns[e.ColumnIndex].Name == "editar")
             {
-                id = Convert.ToInt32(dataWaiter.CurrentRow.Cells[2].Value.ToString());
+                id = Convert.ToInt32(dataWaiter.CurrentRow.Cells[0].Value.ToString());
 
                 using (OverlayForm overlay = new OverlayForm())
                 {
@@ -80,8 +75,8 @@ namespace TheCoffe.App
             {
                 if (MessageBox.Show("¿Está seguro que desea eliminar este registro?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    id = Convert.ToInt32(dataWaiter.CurrentRow.Cells[2].Value.ToString());
-                    meseroDAL.Delete(id);
+                    id = Convert.ToInt32(dataWaiter.CurrentRow.Cells[0].Value.ToString());
+                    _waiterService.CambiarEstado(id);
                 }
             }
             RefreshPantalla();
@@ -110,16 +105,8 @@ namespace TheCoffe.App
         {
             if (txtSearch.Texts != string.Empty)
             {
-                var Lst = meseroDAL.Search(txtSearch.Texts).Select(p => new {
-                    p.id_mesero,
-                    p.nombre,
-                    p.apellido,
-                    p.dni,
-                    p.telefono,
-                    p.hora_entrada,
-                    p.hora_salida
-                }).ToList();
-                dataWaiter.DataSource = Lst;
+                var meseros = _waiterService.BuscarPorNombre(txtSearch.Texts);
+                dataWaiter.DataSource = meseros;
             }
             else
             {

@@ -8,16 +8,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheCoffe.CDatos;
+using TheCoffe.CNegocio;
+using TheCoffe.CNegocio.Services;
+using TheCoffe.CPresentacion.Gerente;
 
 namespace TheCoffe
 {
     public partial class LoginForm : Form
     {
+        private WaiterService _waiterService = new WaiterService();
         public LoginForm()
         {
             InitializeComponent();
+            precargarDatos();
         }
-
+        private async void precargarDatos()
+        {
+            var Lst = await _waiterService.ObtenerMeserosActivos();
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -35,8 +44,36 @@ namespace TheCoffe
             }
             else
             {
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                AuthService authService = new AuthService();
+                try
+                {
+                    var usuario = authService.Login(txtUser.Texts, txtPassword.Texts);
+                    AuthUser.Usuario = usuario;
+                    Form mainForm = null;
+                    switch (AuthUser.Usuario.id_rol)
+                    {
+                        case 1:
+                            mainForm = new MainForm();
+                            break;
+                        case 2:
+                            mainForm = new MainFormManager();
+                            break;
+                        case 3:
+                            mainForm = new MainFormCashier();
+                            break;
+                    }                    
+                    mainForm.FormClosed += (s, args) => {
+                        AuthUser.Usuario = null;
+                        this.Show();
+                    };
+                    mainForm.Show();
+                    txtUser.Texts = "";
+                    txtPassword.Texts = "";
+                    this.Hide();
+                }catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -66,6 +103,11 @@ namespace TheCoffe
             {
                 btnWatchPassword.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
             }
+        }
+
+        private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidator.ValidateInput(e, InputValidator.InputType.Credentials);
         }
     }
 }

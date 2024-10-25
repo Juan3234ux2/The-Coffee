@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
 using TheCoffe.CNegocio;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.App
 {
@@ -17,12 +18,12 @@ namespace TheCoffe.App
     {
         private bool isShowingMsgBox = false;
         private int idMesa = 0;
+        private Mesa mesa = null;
+        private readonly TableService _tableService = new TableService();
         public AddTableForm1()
         {
             InitializeComponent();
         }
-        Mesa mesa = null;
-        MesaDAL mesaDAL = new MesaDAL();
         
         public AddTableForm1(int id)
         {
@@ -30,7 +31,7 @@ namespace TheCoffe.App
             lblTitle.Text = "Editar Mesa";
             btnAdd.Text = "Editar";
             this.idMesa = id;
-            mesa = mesaDAL.SearchObject(id);
+            mesa = _tableService.ObtenerMesaPorID(id);
             txtMesa.Texts = Convert.ToString(mesa.nro_mesa);
             txtNroSilla.Texts = Convert.ToString(mesa.cantidad_sillas);
         }
@@ -39,6 +40,7 @@ namespace TheCoffe.App
         {
             mesa.nro_mesa = int.Parse(txtMesa.Texts);
             mesa.cantidad_sillas = int.Parse(txtNroSilla.Texts);
+            mesa.estado = true;
         }
 
         private void AddTableForm1_Deactivate(object sender, EventArgs e)
@@ -85,20 +87,45 @@ namespace TheCoffe.App
             {
                 if(this.idMesa == 0)
                 {
-                    mesa = new Mesa();
-                    CargarDatos();
-                    mesaDAL.Create(mesa);
-                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Mesa agregada correctamente", Properties.Resources.informacion);
+                    AddTable();                 
                 }
                 else
                 {
-                    CargarDatos();
-                    mesaDAL.Update(mesa);
-                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Mesa editada correctamente", Properties.Resources.informacion);
+                    EditTable();
                 }
             }
         }
-
+        private void EditTable()
+        {
+            try
+            {
+                CargarDatos();
+                _tableService.ActualizarMesa(mesa);
+                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Mesa editada correctamente", Properties.Resources.informacion);
+            }
+            catch (Exception ex)
+            {
+                this.isShowingMsgBox = true;
+                MessageBox.Show(ex.Message, "Error al actualizar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.isShowingMsgBox = false;
+            }
+        }
+        private void AddTable()
+        {
+            try
+            {
+                mesa = new Mesa();
+                CargarDatos();
+                _tableService.CrearMesa(mesa);
+                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Mesa agregada correctamente", Properties.Resources.informacion);
+            }
+            catch (Exception ex)
+            {
+                this.isShowingMsgBox = true;
+                MessageBox.Show(ex.Message, "Error al insertar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.isShowingMsgBox = false;
+            }
+        }
         private void txtMesa_KeyPress(object sender, KeyPressEventArgs e)
         {
             InputValidator.ValidateInput(e, InputValidator.InputType.Digits);

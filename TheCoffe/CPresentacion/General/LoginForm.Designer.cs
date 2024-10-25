@@ -159,6 +159,7 @@
             this.txtUser.TabIndex = 11;
             this.txtUser.Texts = "";
             this.txtUser.UnderlinedStyle = false;
+            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             // 
             // txtPassword
             // 
@@ -181,6 +182,7 @@
             this.txtPassword.TabIndex = 12;
             this.txtPassword.Texts = "";
             this.txtPassword.UnderlinedStyle = false;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             // 
             // btnWatchPassword
             // 

@@ -10,34 +10,26 @@ using System.Windows.Forms;
 using TheCoffe.App;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.CPresentacion
 {
     public partial class RemovedTablesForm : Form
     {
         private bool isShowingMsgBox = false;
+        private readonly TableService _tableService = new TableService();
+        private Mesa mesa = new Mesa();
+        private int id;
         public RemovedTablesForm()
         {
             InitializeComponent();
+            dataRemovedTable.AutoGenerateColumns = false;
         }
 
-        MesaDAL mesaDAL = new MesaDAL();
-        Mesa mesa = new Mesa();
-        private int id;
-
-
-        public void RefreshPantalla()
+        public async void RefreshPantalla()
         {
-            var Lst = mesaDAL.Read(true).Select(p => new {
-                p.id_mesa,
-                p.nro_mesa,
-                p.cantidad_sillas
-            }).ToList();
-            dataRemovedTable.DataSource = Lst;
-            dataRemovedTable.Columns[1].HeaderText = "ID";
-            dataRemovedTable.Columns[2].HeaderText = "Nro de Mesa";
-            dataRemovedTable.Columns[3].HeaderText = "Cant. de Sillas";
-            dataRemovedTable.Columns[0].DisplayIndex = dataRemovedTable.Columns.Count - 1;
+            var tables = await _tableService.ObtenerMesasEliminadas();
+            dataRemovedTable.DataSource = tables;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -77,8 +69,8 @@ namespace TheCoffe.CPresentacion
                     isShowingMsgBox = true;
                     if (MessageBox.Show("¿Está seguro que desea activar este registro?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                    id = Convert.ToInt32(dataRemovedTable.CurrentRow.Cells[1].Value.ToString());
-                    mesaDAL.Delete(id);
+                    id = Convert.ToInt32(dataRemovedTable.CurrentRow.Cells[0].Value.ToString());
+                    _tableService.CambiarEstado(id);
                     }
                     isShowingMsgBox = false;
                     RefreshPantalla();

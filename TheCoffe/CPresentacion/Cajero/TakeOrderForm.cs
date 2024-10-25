@@ -26,8 +26,6 @@ namespace TheCoffe.CPresentacion.Cajero
             {
                 lblNroMesa.Text = $"Mesa: {mesaSeleccionada}";
                 MessageBox.Show($"Se seleccionó la mesa: {mesaSeleccionada}");
-                panel6.AutoScroll = false;
-                panel6.AutoScroll = true;
             }
         }
 
@@ -58,6 +56,11 @@ namespace TheCoffe.CPresentacion.Cajero
                     overlay.Close();
                 }
             }
+        }
+
+        private void TakeOrderForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

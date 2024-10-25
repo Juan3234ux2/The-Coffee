@@ -9,25 +9,33 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheCoffe.App;
 using TheCoffe.CNegocio;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.CPresentacion.Cajero
 {
     public partial class FinalizeOrder : Form
     {
         private bool isShowingMsgBox = false;
+        private CustomerService customerService = new CustomerService();
         public FinalizeOrder()
         {
-            InitializeComponent();
+            InitializeComponent();          
         }
-
+        private void CargarClientes()
+        {
+            cboCustomer.DataSource = customerService.ObtenerClientes();
+            cboCustomer.DisplayMember = "nombreYCuit";
+            cboCustomer.ValueMember = "id_cliente";
+        }
         private void btnClient_Click(object sender, EventArgs e)
         {
-            cboClient.DroppedDown = !cboClient.DroppedDown;
+            cboCustomer.DroppedDown = !cboCustomer.DroppedDown;
         }
 
         private void FinalizeOrder_Load(object sender, EventArgs e)
         {
-            cboClient.SelectedIndex = 0;
+            CargarClientes();
+            cboCustomer.SelectedIndex = 0;
             cboRecibo.SelectedIndex = 0;
             this.Opacity = 0;
             Timer timer = new Timer();
@@ -69,6 +77,7 @@ namespace TheCoffe.CPresentacion.Cajero
                 }
                 overlay.Close();
             }
+            CargarClientes();
             isShowingMsgBox = false;
         }
 

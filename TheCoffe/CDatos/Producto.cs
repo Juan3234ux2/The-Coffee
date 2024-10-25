@@ -11,9 +11,11 @@ namespace TheCoffe.CDatos
 {
     using System;
     using System.Collections.Generic;
-    
+    using TheCoffe.CNegocio.Services;
+
     public partial class Producto
     {
+        private ProductService productService = new ProductService();
         public int id_producto { get; set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }
@@ -23,5 +25,12 @@ namespace TheCoffe.CDatos
         public int id_categoria { get; set; }
     
         public virtual Categoria1 Categoria1 { get; set; }
+        public string precioFormateado
+        {
+            get
+            {
+                return $"$ {productService.FormatCurrency(precio)}";
+            }
+        }
     }
 }

@@ -35,6 +35,12 @@
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dataRemovedWaiter = new System.Windows.Forms.DataGridView();
+            this.id_mesero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hora_entrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hora_salida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataRemovedWaiter)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +96,12 @@
             this.dataRemovedWaiter.ColumnHeadersHeight = 45;
             this.dataRemovedWaiter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataRemovedWaiter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_mesero,
+            this.nombre,
+            this.Apellido,
+            this.telefono,
+            this.hora_entrada,
+            this.hora_salida,
             this.activar});
             this.dataRemovedWaiter.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -138,9 +150,57 @@
             this.dataRemovedWaiter.TabIndex = 32;
             this.dataRemovedWaiter.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataRemovedWaiter_CellClick);
             // 
+            // id_mesero
+            // 
+            this.id_mesero.DataPropertyName = "id_mesero";
+            this.id_mesero.FillWeight = 33.3549F;
+            this.id_mesero.HeaderText = "ID";
+            this.id_mesero.Name = "id_mesero";
+            this.id_mesero.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.FillWeight = 113.5201F;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // Apellido
+            // 
+            this.Apellido.DataPropertyName = "apellido";
+            this.Apellido.FillWeight = 113.5201F;
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            // 
+            // telefono
+            // 
+            this.telefono.DataPropertyName = "telefono";
+            this.telefono.FillWeight = 113.5201F;
+            this.telefono.HeaderText = "Teléfono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            // 
+            // hora_entrada
+            // 
+            this.hora_entrada.DataPropertyName = "hora_entrada";
+            this.hora_entrada.FillWeight = 113.5201F;
+            this.hora_entrada.HeaderText = "Hora Entrada";
+            this.hora_entrada.Name = "hora_entrada";
+            this.hora_entrada.ReadOnly = true;
+            // 
+            // hora_salida
+            // 
+            this.hora_salida.DataPropertyName = "hora_salida";
+            this.hora_salida.FillWeight = 113.5201F;
+            this.hora_salida.HeaderText = "Hora Salida";
+            this.hora_salida.Name = "hora_salida";
+            this.hora_salida.ReadOnly = true;
+            // 
             // activar
             // 
-            this.activar.FillWeight = 57.09146F;
+            this.activar.FillWeight = 56.13629F;
             this.activar.HeaderText = "Activar";
             this.activar.Image = global::TheCoffe.Properties.Resources.activar;
             this.activar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -176,6 +236,12 @@
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataRemovedWaiter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_mesero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hora_entrada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hora_salida;
         private System.Windows.Forms.DataGridViewImageColumn activar;
     }
 }

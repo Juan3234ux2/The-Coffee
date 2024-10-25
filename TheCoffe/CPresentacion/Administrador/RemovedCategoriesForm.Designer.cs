@@ -34,9 +34,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dataRemovedCategory = new System.Windows.Forms.DataGridView();
-            this.activar = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.id_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataRemovedCategory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,6 +74,8 @@
             this.dataRemovedCategory.ColumnHeadersHeight = 45;
             this.dataRemovedCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataRemovedCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_categoria,
+            this.nombre,
             this.activar});
             this.dataRemovedCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -121,16 +125,6 @@
             this.dataRemovedCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCategory_CellClick);
             this.dataRemovedCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataRemovedCategory_CellContentClick);
             // 
-            // activar
-            // 
-            this.activar.FillWeight = 21.18868F;
-            this.activar.HeaderText = "Activar";
-            this.activar.Image = global::TheCoffe.Properties.Resources.activar;
-            this.activar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.activar.Name = "activar";
-            this.activar.ReadOnly = true;
-            this.activar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.FillWeight = 21.18868F;
@@ -161,6 +155,32 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // id_categoria
+            // 
+            this.id_categoria.DataPropertyName = "id_categoria";
+            this.id_categoria.FillWeight = 15.93962F;
+            this.id_categoria.HeaderText = "ID";
+            this.id_categoria.Name = "id_categoria";
+            this.id_categoria.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "descripcion";
+            this.nombre.FillWeight = 186.1617F;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // activar
+            // 
+            this.activar.FillWeight = 19.08735F;
+            this.activar.HeaderText = "Activar";
+            this.activar.Image = global::TheCoffe.Properties.Resources.activar;
+            this.activar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.activar.Name = "activar";
+            this.activar.ReadOnly = true;
+            this.activar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // RemovedCategoriesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +209,8 @@
         private System.Windows.Forms.DataGridView dataRemovedCategory;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewImageColumn activar;
     }
 }

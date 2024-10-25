@@ -32,5 +32,6 @@ namespace TheCoffe.CDatos
         public virtual DbSet<Producto> Producto { get; set; }
         public virtual DbSet<rol_usuario> rol_usuario { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<DiaDeTrabajo> DiaDeTrabajo { get; set; }
     }
 }

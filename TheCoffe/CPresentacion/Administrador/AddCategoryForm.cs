@@ -10,21 +10,20 @@ using System.Windows.Forms;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
 using TheCoffe.CNegocio;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.App
 {
     public partial class AddCategoryForm : Form
     {
         private bool isShowingMsgBox = false;
+        private readonly CategoryService _categoryService = new CategoryService();
+        private Categoria1 categoria = null;
         private int idCategoria = 0;
-
         public AddCategoryForm()
         {
             InitializeComponent();
         }
-
-        Categoria1DAL categoriaDAL = new Categoria1DAL();
-        Categoria1 categoria = null;
 
         public AddCategoryForm(int id)
         {
@@ -32,13 +31,14 @@ namespace TheCoffe.App
             lblTitle.Text = "Editar Categoría";
             btnAddCategory.Text = "Editar";
             this.idCategoria = id;
-            categoria = categoriaDAL.SearchObject(id);
+            categoria = _categoryService.ObtenerCategoriaPorID(id);
             txtDescripcion.Texts = categoria.descripcion;
         }
 
         private void CargarDatos()
         {
-            categoria.descripcion = txtDescripcion.Texts;
+            this.categoria.descripcion = txtDescripcion.Texts;
+            this.categoria.estado = true;
         }
 
         private void btnAddCategory_Click(object sender, EventArgs e)
@@ -58,28 +58,44 @@ namespace TheCoffe.App
                 {
                     if (this.idCategoria == 0)
                     {
-                    categoria = new Categoria1();
-                    CargarDatos();
-                    bool result = categoriaDAL.Create(categoria);
-                        if (result)
-                        {
-                            
-                            new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Categoría agregada correctamente", Properties.Resources.informacion);
-                        }
-                        else
-                        {
-                            isShowingMsgBox = true;
-                            MessageBox.Show("Esta categoría ya existe");
-                        isShowingMsgBox = false;
-                        }
+                        AddCategory();
                     }
                     else
                     {
-                        CargarDatos();
-                        categoriaDAL.Update(categoria);
-                        new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Categoría editada correctamente", Properties.Resources.informacion);
+                        EditCategory();
                     }
                 }
+        }
+        private void AddCategory()
+        {
+            try
+            {
+                categoria = new Categoria1();
+                CargarDatos();
+                _categoryService.CrearCategoria(categoria);
+                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Categoría agregada correctamente", Properties.Resources.informacion);
+            }catch(Exception ex)
+            {
+                this.isShowingMsgBox = true;
+                MessageBox.Show(ex.Message,"Error al insertar", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                this.isShowingMsgBox = false;
+            }
+        }
+        private void EditCategory()
+        {
+            try
+            {
+                CargarDatos();
+                _categoryService.ActualizarCategoria(categoria);
+                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Categoría editada correctamente", Properties.Resources.informacion);
+            
+            }
+            catch (Exception ex)
+            {
+                this.isShowingMsgBox = true;
+                MessageBox.Show(ex.Message, "Error al actualizar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.isShowingMsgBox = false;
+            }
         }
         private void AddCategoryForm_Deactivate(object sender, EventArgs e)
         {

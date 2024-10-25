@@ -18,11 +18,21 @@ namespace TheCoffe.CDatos
         public string nombre { get; set; }
         public string contraseña { get; set; }
         public string usuario1 { get; set; }
-        public int telefono { get; set; }
+        public string telefono { get; set; }
         public string apellido { get; set; }
         public bool estado { get; set; }
         public int id_rol { get; set; }
-    
         public virtual rol_usuario rol_usuario { get; set; }
+        public string nombreCompleto
+        {
+            get
+            {
+                return $"{nombre} {apellido}";
+            }
+        }
+        public string NombreRol
+        {
+            get { return rol_usuario != null ? rol_usuario.descripcion : "Sin rol"; }
+        }
     }
 }

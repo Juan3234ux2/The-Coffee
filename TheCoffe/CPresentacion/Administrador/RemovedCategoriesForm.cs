@@ -10,32 +10,27 @@ using System.Windows.Forms;
 using TheCoffe.App;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.CPresentacion.General
 {
     public partial class RemovedCategoriesForm : Form
     {
         private bool isShowingMsgBox = false;
+        private readonly CategoryService _categoryService = new CategoryService();
+        private Categoria1 categoria = new Categoria1();
         public RemovedCategoriesForm()
         {
             InitializeComponent();
+            dataRemovedCategory.AutoGenerateColumns = false;
         }
 
-        Categoria1DAL categoriaDAL = new Categoria1DAL();
-        Categoria1 categoria = new Categoria1();
         private int id;
 
-        public void RefreshPantalla()
+        public async void RefreshPantalla()
         {
-            var Lst = categoriaDAL.Read(true).Select(p => new {
-                p.id_categoria,
-                p.descripcion
-            }).ToList();
-
+            var Lst = await _categoryService.ObtenerCategoriasEliminadas();
             dataRemovedCategory.DataSource = Lst;
-            dataRemovedCategory.Columns[1].HeaderText = "ID";
-            dataRemovedCategory.Columns[2].HeaderText = "Descripción";
-            dataRemovedCategory.Columns[0].DisplayIndex = dataRemovedCategory.Columns.Count - 1;
         }
         private void RemovedCategoriesForm_Load(object sender, EventArgs e)
         {
@@ -61,8 +56,8 @@ namespace TheCoffe.CPresentacion.General
                     isShowingMsgBox = true;
                     if (MessageBox.Show("¿Está seguro que desea activar este registro?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                    id = Convert.ToInt32(dataRemovedCategory.CurrentRow.Cells[1].Value.ToString());
-                    categoriaDAL.Delete(id);
+                    id = Convert.ToInt32(dataRemovedCategory.CurrentRow.Cells[0].Value.ToString());
+                    _categoryService.EliminarCategoria(id);
                     }
                     isShowingMsgBox = false;
                     RefreshPantalla();

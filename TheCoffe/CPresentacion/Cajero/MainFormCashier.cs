@@ -15,13 +15,13 @@ namespace TheCoffe
     public partial class MainFormCashier : Form
     {
         UserControl activeSection = null;
-        private TakeOrderForm TakeOrder;
+        private Cajero TakeOrder;
         private TablesForm tablesForm;
         private SalesBoxForm salesBoxForm;
         public MainFormCashier()
         {
             InitializeComponent();
-            TakeOrder = new TakeOrderForm();
+            TakeOrder = new Cajero();
             tablesForm = new TablesForm();
             salesBoxForm = new SalesBoxForm();
             tablesForm.mesaSeleccionada += selectedTable;        

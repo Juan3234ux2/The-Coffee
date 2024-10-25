@@ -6,22 +6,33 @@ using System.Windows.Forms;
 using AltoControls;
 using FontAwesome.Sharp;
 using TheCoffe.App;
+using TheCoffe.CAccesoADatos;
 using TheCoffe.CPresentacion;
+using TheCoffe.CDatos;
 using WindowsFormsApplication1;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe
 {
     public partial class MainForm : Form
     {
         UserControl activeSection = null;
+        private WaiterService _waiterService = new WaiterService();
+
         public MainForm()
         {
             InitializeComponent();
             this.DoubleBuffered = true;
+            lblUser.Text = AuthUser.Usuario.nombreCompleto;
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
            LoadUserControl(new DashboardForm());
+           precargarDatos();
+        }
+        private async void precargarDatos()
+        {
+                var Lst = await _waiterService.ObtenerMeserosActivos();     
         }
         private void LoadUserControl(UserControl userControl)
         {
@@ -38,6 +49,7 @@ namespace TheCoffe
             activeSection.Dock = DockStyle.Fill;
             pnlMain.Controls.Add(activeSection);
         }
+    
         private void SetActiveSection(RoundButton activeButton) {
             RemoveActiveSection();
             activeButton.ForeColor = Color.FromArgb(96, 75, 232);
@@ -56,13 +68,13 @@ namespace TheCoffe
                 }
             }
         }
-        private void btnDashboard_Click(object sender, EventArgs e)
+        private  void btnDashboard_Click(object sender, EventArgs e)
         {
             SetActiveSection(sender as RoundButton);
             LoadUserControl(new DashboardForm());
         }
         
-        private void btnProducts_Click(object sender, EventArgs e)
+        private  void btnProducts_Click(object sender, EventArgs e)
         {
             SetActiveSection(sender as RoundButton);
             LoadUserControl(new ProductListForm());

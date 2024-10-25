@@ -35,6 +35,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.dataRemovedTable = new System.Windows.Forms.DataGridView();
+            this.id_mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nro_mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cant_sillas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataRemovedTable)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +93,9 @@
             this.dataRemovedTable.ColumnHeadersHeight = 45;
             this.dataRemovedTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataRemovedTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_mesa,
+            this.nro_mesa,
+            this.cant_sillas,
             this.activar});
             this.dataRemovedTable.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -138,9 +144,33 @@
             this.dataRemovedTable.TabIndex = 32;
             this.dataRemovedTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTable_CellClick);
             // 
+            // id_mesa
+            // 
+            this.id_mesa.DataPropertyName = "id_mesa";
+            this.id_mesa.FillWeight = 22.18161F;
+            this.id_mesa.HeaderText = "ID";
+            this.id_mesa.Name = "id_mesa";
+            this.id_mesa.ReadOnly = true;
+            // 
+            // nro_mesa
+            // 
+            this.nro_mesa.DataPropertyName = "nro_mesa";
+            this.nro_mesa.FillWeight = 137.828F;
+            this.nro_mesa.HeaderText = "Nro De Mesa";
+            this.nro_mesa.Name = "nro_mesa";
+            this.nro_mesa.ReadOnly = true;
+            // 
+            // cant_sillas
+            // 
+            this.cant_sillas.DataPropertyName = "cantidad_sillas";
+            this.cant_sillas.FillWeight = 137.828F;
+            this.cant_sillas.HeaderText = "Cantidad Sillas";
+            this.cant_sillas.Name = "cant_sillas";
+            this.cant_sillas.ReadOnly = true;
+            // 
             // activar
             // 
-            this.activar.FillWeight = 27.78767F;
+            this.activar.FillWeight = 29.95014F;
             this.activar.HeaderText = "Activar";
             this.activar.Image = global::TheCoffe.Properties.Resources.activar;
             this.activar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -177,6 +207,9 @@
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataRemovedTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_mesa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nro_mesa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cant_sillas;
         private System.Windows.Forms.DataGridViewImageColumn activar;
     }
 }

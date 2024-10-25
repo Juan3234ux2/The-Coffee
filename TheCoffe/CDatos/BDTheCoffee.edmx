@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBTheCoffeeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DBTheCoffeeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categoria1">
           <Key>
             <PropertyRef Name="id_categoria" />
@@ -18,14 +18,21 @@
             <PropertyRef Name="id_cliente" />
           </Key>
           <Property Name="id_cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="cuit" Type="int" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="apellido" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="domicilio" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="localidad" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="provincia" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="email" Type="varchar" MaxLength="150" Nullable="false" />
-          <Property Name="telefono" Type="int" />
+          <Property Name="cuit" Type="varchar" MaxLength="12" />
+          <Property Name="telefono" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="DiaDeTrabajo">
+          <Key>
+            <PropertyRef Name="id_dia" />
+          </Key>
+          <Property Name="id_dia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre_dia" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Mesa">
           <Key>
@@ -46,8 +53,16 @@
           <Property Name="hora_entrada" Type="int" Nullable="false" />
           <Property Name="hora_salida" Type="int" Nullable="false" />
           <Property Name="dni" Type="int" Nullable="false" />
-          <Property Name="telefono" Type="int" Nullable="false" />
           <Property Name="estado" Type="bit" Nullable="false" />
+          <Property Name="telefono" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MeseroDiaDeTrabajo">
+          <Key>
+            <PropertyRef Name="id_mesero" />
+            <PropertyRef Name="id_dia" />
+          </Key>
+          <Property Name="id_mesero" Type="int" Nullable="false" />
+          <Property Name="id_dia" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Producto">
           <Key>
@@ -77,11 +92,35 @@
           <Property Name="nombre" Type="varchar" MaxLength="90" Nullable="false" />
           <Property Name="contraseña" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="usuario" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="telefono" Type="int" Nullable="false" />
           <Property Name="apellido" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="estado" Type="bit" Nullable="false" />
           <Property Name="id_rol" Type="int" Nullable="false" />
+          <Property Name="telefono" Type="varchar" MaxLength="20" Nullable="false" />
         </EntityType>
+        <Association Name="FK_dia">
+          <End Role="DiaDeTrabajo" Type="Self.DiaDeTrabajo" Multiplicity="1" />
+          <End Role="MeseroDiaDeTrabajo" Type="Self.MeseroDiaDeTrabajo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DiaDeTrabajo">
+              <PropertyRef Name="id_dia" />
+            </Principal>
+            <Dependent Role="MeseroDiaDeTrabajo">
+              <PropertyRef Name="id_dia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mesero">
+          <End Role="Mesero" Type="Self.Mesero" Multiplicity="1" />
+          <End Role="MeseroDiaDeTrabajo" Type="Self.MeseroDiaDeTrabajo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Mesero">
+              <PropertyRef Name="id_mesero" />
+            </Principal>
+            <Dependent Role="MeseroDiaDeTrabajo">
+              <PropertyRef Name="id_mesero" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Producto_Categoria">
           <End Role="Categoria1" Type="Self.Categoria1" Multiplicity="1" />
           <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
@@ -109,11 +148,21 @@
         <EntityContainer Name="DBTheCoffeeModelStoreContainer">
           <EntitySet Name="Categoria1" EntityType="Self.Categoria1" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DiaDeTrabajo" EntityType="Self.DiaDeTrabajo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Mesa" EntityType="Self.Mesa" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Mesero" EntityType="Self.Mesero" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MeseroDiaDeTrabajo" EntityType="Self.MeseroDiaDeTrabajo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="rol_usuario" EntityType="Self.rol_usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dia" Association="Self.FK_dia">
+            <End Role="DiaDeTrabajo" EntitySet="DiaDeTrabajo" />
+            <End Role="MeseroDiaDeTrabajo" EntitySet="MeseroDiaDeTrabajo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mesero" Association="Self.FK_mesero">
+            <End Role="Mesero" EntitySet="Mesero" />
+            <End Role="MeseroDiaDeTrabajo" EntitySet="MeseroDiaDeTrabajo" />
+          </AssociationSet>
           <AssociationSet Name="FK_Producto_Categoria" Association="Self.FK_Producto_Categoria">
             <End Role="Categoria1" EntitySet="Categoria1" />
             <End Role="Producto" EntitySet="Producto" />
@@ -123,8 +172,7 @@
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DBTheCoffeeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -142,14 +190,14 @@
             <PropertyRef Name="id_cliente" />
           </Key>
           <Property Name="id_cliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="cuit" Type="Int32" Nullable="false" />
+          <Property Name="cuit" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
           <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="domicilio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="localidad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="provincia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="telefono" Type="Int32" />
+          <Property Name="telefono" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
         </EntityType>
         <EntityType Name="Mesa">
           <Key>
@@ -170,8 +218,9 @@
           <Property Name="hora_entrada" Type="Int32" Nullable="false" />
           <Property Name="hora_salida" Type="Int32" Nullable="false" />
           <Property Name="dni" Type="Int32" Nullable="false" />
-          <Property Name="telefono" Type="Int32" Nullable="false" />
+          <Property Name="telefono" Type="String" Unicode="false" FixedLength="false" MaxLength="50" />
           <Property Name="estado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="DiaDeTrabajo" Relationship="DBTheCoffeeModel.MeseroDiaDeTrabajo" FromRole="Mesero" ToRole="DiaDeTrabajo" />
         </EntityType>
         <EntityType Name="Producto">
           <Key>
@@ -203,7 +252,7 @@
           <Property Name="nombre" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="contraseña" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="usuario1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="telefono" Type="Int32" Nullable="false" />
+          <Property Name="telefono" Type="String" Nullable="false" />
           <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="estado" Type="Boolean" Nullable="false" />
           <Property Name="id_rol" Type="Int32" Nullable="false" />
@@ -249,7 +298,24 @@
             <End Role="rol_usuario" EntitySet="rol_usuario" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
+          <EntitySet Name="DiaDeTrabajo" EntityType="DBTheCoffeeModel.DiaDeTrabajo" />
+          <AssociationSet Name="MeseroDiaDeTrabajo" Association="DBTheCoffeeModel.MeseroDiaDeTrabajo">
+            <End Role="DiaDeTrabajo" EntitySet="DiaDeTrabajo" />
+            <End Role="Mesero" EntitySet="Mesero" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="DiaDeTrabajo">
+          <Key>
+            <PropertyRef Name="id_dia" />
+          </Key>
+          <Property Name="id_dia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre_dia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Mesero" Relationship="DBTheCoffeeModel.MeseroDiaDeTrabajo" FromRole="DiaDeTrabajo" ToRole="Mesero" />
+        </EntityType>
+        <Association Name="MeseroDiaDeTrabajo">
+          <End Type="DBTheCoffeeModel.DiaDeTrabajo" Role="DiaDeTrabajo" Multiplicity="*" />
+          <End Type="DBTheCoffeeModel.Mesero" Role="Mesero" Multiplicity="*" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -340,6 +406,22 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="DiaDeTrabajo">
+            <EntityTypeMapping TypeName="DBTheCoffeeModel.DiaDeTrabajo">
+              <MappingFragment StoreEntitySet="DiaDeTrabajo">
+                <ScalarProperty Name="nombre_dia" ColumnName="nombre_dia" />
+                <ScalarProperty Name="id_dia" ColumnName="id_dia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="MeseroDiaDeTrabajo" TypeName="DBTheCoffeeModel.MeseroDiaDeTrabajo" StoreEntitySet="MeseroDiaDeTrabajo">
+            <EndProperty Name="Mesero">
+              <ScalarProperty Name="id_mesero" ColumnName="id_mesero" />
+            </EndProperty>
+            <EndProperty Name="DiaDeTrabajo">
+              <ScalarProperty Name="id_dia" ColumnName="id_dia" />
+            </EndProperty>
+          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

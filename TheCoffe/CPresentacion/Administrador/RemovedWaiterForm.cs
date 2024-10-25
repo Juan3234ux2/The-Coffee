@@ -8,43 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheCoffe.App;
-using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.CPresentacion
 {
     public partial class RemovedWaiterForm : Form
     {
         private bool isShowingMsgBox = false;
+        private WaiterService _waiterService = new WaiterService();
         public RemovedWaiterForm()
         {
             InitializeComponent();
+            dataRemovedWaiter.AutoGenerateColumns = false;
         }
 
-        MeseroDAL meseroDAL = new MeseroDAL();
-        Mesero mesero = new Mesero();
-        private int id;
-
-        public void RefreshPantalla()
+        public async void RefreshPantalla()
         {
-            var Lst = meseroDAL.Read(true).Select(p => new {
-                p.id_mesero,
-                p.nombre,
-                p.apellido,
-                p.dni,
-                p.telefono,
-                p.hora_entrada,
-                p.hora_salida
-            }).ToList();
-            dataRemovedWaiter.DataSource = Lst;
-            dataRemovedWaiter.Columns[1].HeaderText = "ID";
-            dataRemovedWaiter.Columns[2].HeaderText = "Nombre";
-            dataRemovedWaiter.Columns[3].HeaderText = "Apellido";
-            dataRemovedWaiter.Columns[4].HeaderText = "DNI";
-            dataRemovedWaiter.Columns[5].HeaderText = "Teléfono";
-            dataRemovedWaiter.Columns[6].HeaderText = "Hora de Ingreso";
-            dataRemovedWaiter.Columns[7].HeaderText = "Hora de Salida";
-            dataRemovedWaiter.Columns[0].DisplayIndex = dataRemovedWaiter.Columns.Count - 1;
+            var meseros = await _waiterService.ObtenerMeserosEliminados();
+            dataRemovedWaiter.DataSource = meseros;
         }
 
         private void RemovedWaiterForm_Load(object sender, EventArgs e)
@@ -71,8 +53,8 @@ namespace TheCoffe.CPresentacion
                     isShowingMsgBox = true;
                     if (MessageBox.Show("¿Está seguro que desea activar este registro?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                    id = Convert.ToInt32(dataRemovedWaiter.CurrentRow.Cells[1].Value.ToString());
-                    meseroDAL.Delete(id);
+                    int id = Convert.ToInt32(dataRemovedWaiter.CurrentRow.Cells[0].Value.ToString());
+                    _waiterService.CambiarEstado(id);
                     }
                     isShowingMsgBox = false;
                     RefreshPantalla();
