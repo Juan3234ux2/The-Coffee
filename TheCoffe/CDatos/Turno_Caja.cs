@@ -12,32 +12,29 @@ namespace TheCoffe.CDatos
     using System;
     using System.Collections.Generic;
     
-    public partial class Cliente
+    public partial class Turno_Caja
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cliente()
+        public Turno_Caja()
         {
+            this.Movimiento_Caja = new HashSet<Movimiento_Caja>();
             this.Venta = new HashSet<Venta>();
         }
     
-        public int id_cliente { get; set; }
-        public string cuit { get; set; }
-        public string nombre { get; set; }
-        public string apellido { get; set; }
-        public string domicilio { get; set; }
-        public string localidad { get; set; }
-        public string provincia { get; set; }
-        public string email { get; set; }
-        public string telefono { get; set; }
+        public int id_turno { get; set; }
+        public Nullable<System.DateTime> fecha_apertura { get; set; }
+        public double monto_inicial { get; set; }
+        public double monto_cierre { get; set; }
+        public string observaciones { get; set; }
+        public Nullable<System.DateTime> fecha_cierre { get; set; }
+        public int id_caja { get; set; }
+        public int id_usuario { get; set; }
     
+        public virtual Caja Caja { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Movimiento_Caja> Movimiento_Caja { get; set; }
+        public virtual Usuario Usuario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Venta> Venta { get; set; }
-        public string nombreYCuit
-        {
-            get
-            {
-                return $"{cuit} -- {apellido} {nombre}";
-            }
-        }
     }
 }

@@ -20,7 +20,7 @@ namespace TheCoffe.App
         private bool isShowingMsgBox = false;
         private int idUsuario = 0;
         private readonly UserService _userService = new UserService();
-        private Usuario usuario = null;
+        private Usuario usuario = new Usuario();
         public AddUserForm()
         {
             InitializeComponent();
@@ -33,6 +33,7 @@ namespace TheCoffe.App
             btnAdd.Text = "Editar";
             this.idUsuario = id;
             usuario = _userService.ObtenerUsuarioPorID(id);
+            pboAvatar.Image = Image.FromFile(_userService.ObtenerImagen(usuario));
             txtName.Texts = usuario.nombre;
             txtLastName.Texts = usuario.apellido;
             txtNumber.Texts = usuario.telefono;
@@ -182,7 +183,6 @@ namespace TheCoffe.App
         {
             try
             {
-                usuario = new Usuario();
                 CargarDatos();
                 _userService.CrearUsuario(usuario);
                 new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Usuario agregado correctamente", Properties.Resources.informacion);
@@ -229,10 +229,10 @@ namespace TheCoffe.App
             if (selectImageDialog.ShowDialog() == DialogResult.OK)
             {
                 string selectedFilePath = selectImageDialog.FileName;
-                string fileName = Path.GetFileName(selectedFilePath);
-                string projectDirectory = AppDomain.CurrentDomain.BaseDirectory;
-                string resourcesFolderPath = Path.Combine(projectDirectory, "Resources");
-                string imagesFolderPath = Path.Combine(resourcesFolderPath, "Users");
+                string extension = Path.GetExtension(selectedFilePath);
+                string fileName = Guid.NewGuid().ToString() + extension;
+                string parentRoot = Directory.GetParent(Application.StartupPath).Parent.FullName;
+                string imagesFolderPath = Path.Combine(parentRoot, "Uploads", "Users");
                 if (!Directory.Exists(imagesFolderPath))
                 {
                     Directory.CreateDirectory(imagesFolderPath);
@@ -242,6 +242,7 @@ namespace TheCoffe.App
                 {
                     File.Copy(selectedFilePath, destinationFilePath, true);
                     pboAvatar.Image = Image.FromFile(destinationFilePath);
+                    usuario.avatar = fileName;
                 }
                 catch (Exception ex)
                 {

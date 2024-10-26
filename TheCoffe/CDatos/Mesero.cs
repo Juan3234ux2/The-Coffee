@@ -18,6 +18,7 @@ namespace TheCoffe.CDatos
         public Mesero()
         {
             this.DiaDeTrabajo = new HashSet<DiaDeTrabajo>();
+            this.Venta = new HashSet<Venta>();
         }
     
         public int id_mesero { get; set; }
@@ -31,5 +32,7 @@ namespace TheCoffe.CDatos
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DiaDeTrabajo> DiaDeTrabajo { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Venta> Venta { get; set; }
     }
 }

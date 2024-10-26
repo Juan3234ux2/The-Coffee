@@ -11,6 +11,7 @@ using TheCoffe.CNegocio;
 using TheCoffe.App;
 using TheCoffe.CDatos;
 using TheCoffe.CNegocio.Services;
+using System.IO;
 
 namespace TheCoffe.CPresentacion
 {
@@ -18,6 +19,7 @@ namespace TheCoffe.CPresentacion
     {
         private UserService _userService = new UserService();
         private Usuario usuario = new Usuario();
+        public event Action UpdatedUser;
         Usuario usuarioActual = AuthUser.Usuario;
         public ProfileForm()
         {
@@ -43,6 +45,7 @@ namespace TheCoffe.CPresentacion
             txtNumber.Texts = usuarioActual.telefono;
             txtUser.Texts = usuarioActual.usuario1;
             txtPassword.Texts = usuarioActual.contraseña;
+            pboUser.Image = Image.FromFile(_userService.ObtenerImagen());
         }
         private void btnWatchPassword_Click(object sender, EventArgs e)
         {
@@ -93,19 +96,51 @@ namespace TheCoffe.CPresentacion
             }
             else
             {
+                EditUser();
+            }
+        }
+        private void EditUser()
+        {
+            try
+            {
+                CargarDatos();
+                _userService.ActualizarUsuario(usuario);
+                new AlertBox(null, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Usuario actualizado correctamente", Properties.Resources.informacion);
+                RecargarInformacion();
+                AuthUser.Usuario = usuario;
+                usuarioActual = AuthUser.Usuario;
+                UpdatedUser?.Invoke();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error al actualizar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void btnEditAvatar_Click(object sender, EventArgs e)
+        {
+            selectImageDialog.Filter = "Imagenes (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
+            if (selectImageDialog.ShowDialog() == DialogResult.OK)
+            {
+                string selectedFilePath = selectImageDialog.FileName;
+                string extension = Path.GetExtension(selectedFilePath);
+                string fileName = Guid.NewGuid().ToString() + extension;
+                string parentRoot = Directory.GetParent(Application.StartupPath).Parent.FullName;
+                string imagesFolderPath = Path.Combine(parentRoot, "Uploads", "Users");
+                if (!Directory.Exists(imagesFolderPath))
+                {
+                    Directory.CreateDirectory(imagesFolderPath);
+                }
+                string destinationFilePath = Path.Combine(imagesFolderPath, fileName);
                 try
                 {
-                    CargarDatos();
-                    Console.WriteLine(usuario.id_usuario + "--" + usuario.nombreCompleto);
-                    _userService.ActualizarUsuario(usuario);
-                    new AlertBox(null, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Usuario actualizado correctamente", Properties.Resources.informacion);
-                    RecargarInformacion();
-                    AuthUser.Usuario = usuario;
-                    usuarioActual = AuthUser.Usuario;
+                    File.Copy(selectedFilePath, destinationFilePath, true);
+                    pboUser.Image = Image.FromFile(destinationFilePath);
+                    usuario.avatar = fileName;
+                    EditUser();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Error al actualizar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Error al copiar la imagen: {ex.Message}");
                 }
             }
         }

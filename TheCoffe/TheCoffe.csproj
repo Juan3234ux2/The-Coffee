@@ -105,6 +105,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDTheCoffee.edmx</DependentUpon>
     </Compile>
+    <Compile Include="CDatos\Caja.cs">
+      <DependentUpon>BDTheCoffee.tt</DependentUpon>
+    </Compile>
     <Compile Include="CDatos\Categoria.cs" />
     <Compile Include="CDatos\Categoria1.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
@@ -123,13 +126,25 @@
     <Compile Include="CDatos\Mesero.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
+    <Compile Include="CDatos\Movimiento_Caja.cs">
+      <DependentUpon>BDTheCoffee.tt</DependentUpon>
+    </Compile>
     <Compile Include="CDatos\Producto.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
     <Compile Include="CDatos\rol_usuario.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
+    <Compile Include="CDatos\Turno_Caja.cs">
+      <DependentUpon>BDTheCoffee.tt</DependentUpon>
+    </Compile>
     <Compile Include="CDatos\Usuario.cs">
+      <DependentUpon>BDTheCoffee.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Venta.cs">
+      <DependentUpon>BDTheCoffee.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Venta_Detalle.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
     <Compile Include="CNegocio\InputValidator.cs" />
@@ -518,6 +533,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\Icons\" />
+    <Folder Include="Resources\Users\" />
+    <Folder Include="Uploads\Users\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\The Coffee %28600 x 600 px%29 %281%29.png" />

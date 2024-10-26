@@ -14,9 +14,19 @@ namespace TheCoffe.CDatos
     
     public partial class Mesa
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Mesa()
+        {
+            this.Venta = new HashSet<Venta>();
+        }
+    
         public int id_mesa { get; set; }
         public int nro_mesa { get; set; }
         public int cantidad_sillas { get; set; }
         public bool estado { get; set; }
+        public bool disponible { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Venta> Venta { get; set; }
     }
 }

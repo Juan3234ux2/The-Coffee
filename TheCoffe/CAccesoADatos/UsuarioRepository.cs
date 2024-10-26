@@ -51,7 +51,7 @@ namespace TheCoffe.CAccesoADatos
         {
             using (db = new DBTheCoffeeEntities())
             {
-                return db.Usuario.SingleOrDefault(u => u.usuario1 == nombreUsuario);
+                return db.Usuario.SingleOrDefault(u => u.usuario1 == nombreUsuario && u.estado);
             }
         }
         public void Update(Usuario usuario)

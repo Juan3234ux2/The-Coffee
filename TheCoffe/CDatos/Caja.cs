@@ -12,32 +12,20 @@ namespace TheCoffe.CDatos
     using System;
     using System.Collections.Generic;
     
-    public partial class Cliente
+    public partial class Caja
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cliente()
+        public Caja()
         {
-            this.Venta = new HashSet<Venta>();
+            this.Turno_Caja = new HashSet<Turno_Caja>();
         }
     
-        public int id_cliente { get; set; }
-        public string cuit { get; set; }
-        public string nombre { get; set; }
-        public string apellido { get; set; }
-        public string domicilio { get; set; }
-        public string localidad { get; set; }
-        public string provincia { get; set; }
-        public string email { get; set; }
-        public string telefono { get; set; }
+        public int id_caja { get; set; }
+        public int nro_caja { get; set; }
+        public bool estado { get; set; }
+        public bool disponible { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Venta> Venta { get; set; }
-        public string nombreYCuit
-        {
-            get
-            {
-                return $"{cuit} -- {apellido} {nombre}";
-            }
-        }
+        public virtual ICollection<Turno_Caja> Turno_Caja { get; set; }
     }
 }

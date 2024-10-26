@@ -16,6 +16,12 @@ namespace TheCoffe.CDatos
     public partial class Producto
     {
         private ProductService productService = new ProductService();
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Producto()
+        {
+            this.Venta_Detalle = new HashSet<Venta_Detalle>();
+        }
+    
         public int id_producto { get; set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }
@@ -25,6 +31,8 @@ namespace TheCoffe.CDatos
         public int id_categoria { get; set; }
     
         public virtual Categoria1 Categoria1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Venta_Detalle> Venta_Detalle { get; set; }
         public string precioFormateado
         {
             get

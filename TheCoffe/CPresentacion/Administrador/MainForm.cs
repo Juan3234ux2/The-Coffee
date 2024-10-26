@@ -11,20 +11,21 @@ using TheCoffe.CPresentacion;
 using TheCoffe.CDatos;
 using WindowsFormsApplication1;
 using TheCoffe.CNegocio.Services;
+using System.IO;
 
 namespace TheCoffe
 {
     public partial class MainForm : Form
     {
         UserControl activeSection = null;
-        private WaiterService _waiterService = new WaiterService();
-
+        private UserService _userService = new UserService();
+        private Usuario usuarioActual = AuthUser.Usuario;
         public MainForm()
         {
             InitializeComponent();
             this.DoubleBuffered = true;
-            lblUser.Text = AuthUser.Usuario.nombreCompleto;
-        }
+            ActualizarInfo();
+        }        
         private void MainForm_Load(object sender, EventArgs e)
         {
            LoadUserControl(new DashboardForm());
@@ -32,7 +33,7 @@ namespace TheCoffe
         }
         private async void precargarDatos()
         {
-                var Lst = await _waiterService.ObtenerMeserosActivos();     
+                var Lst = await _userService.ObtenerUsuariosActivos();     
         }
         private void LoadUserControl(UserControl userControl)
         {
@@ -107,7 +108,9 @@ namespace TheCoffe
         private void btnUserDetails_Click(object sender, EventArgs e)
         {
             RemoveActiveSection();
-            LoadUserControl(new ProfileForm());
+            ProfileForm profileForm = new ProfileForm();
+            profileForm.UpdatedUser += ActualizarInfo;
+            LoadUserControl(profileForm);
         }
 
         private void btnReports_Click(object sender, EventArgs e)
@@ -115,7 +118,10 @@ namespace TheCoffe
             SetActiveSection(sender as RoundButton);
             LoadUserControl(new SalesListForm());
         }
-
-      
+        private void ActualizarInfo()
+        {
+            lblUser.Text = usuarioActual.nombreCompleto;
+            imgUser.Image = Image.FromFile(_userService.ObtenerImagen());
+        }
     }
 }   

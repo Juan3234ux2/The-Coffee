@@ -36,7 +36,7 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pboUser = new System.Windows.Forms.PictureBox();
             this.sPanel2 = new Sipaa.Framework.SPanel();
             this.btnEditUser = new WindowsFormsApplication1.RoundButton();
             this.txtNumber = new TheCoffe.Components.ModernTextBox();
@@ -53,8 +53,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtRol = new TheCoffe.Components.ModernTextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnEditAvatar = new WindowsFormsApplication1.RoundButton();
+            this.selectImageDialog = new System.Windows.Forms.OpenFileDialog();
             this.sPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboUser)).BeginInit();
             this.sPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,13 +76,14 @@
             this.sPanel1.BorderColor = System.Drawing.Color.White;
             this.sPanel1.BorderRadius = 15;
             this.sPanel1.BorderSize = 0;
+            this.sPanel1.Controls.Add(this.btnEditAvatar);
             this.sPanel1.Controls.Add(this.button1);
             this.sPanel1.Controls.Add(this.btnLogout);
             this.sPanel1.Controls.Add(this.iconButton2);
             this.sPanel1.Controls.Add(this.iconButton1);
             this.sPanel1.Controls.Add(this.label3);
             this.sPanel1.Controls.Add(this.lblUser);
-            this.sPanel1.Controls.Add(this.pictureBox1);
+            this.sPanel1.Controls.Add(this.pboUser);
             this.sPanel1.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sPanel1.ForeColor = System.Drawing.Color.White;
             this.sPanel1.Location = new System.Drawing.Point(19, 79);
@@ -169,7 +172,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto Medium", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(129, 224);
+            this.label3.Location = new System.Drawing.Point(129, 227);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 14);
             this.label3.TabIndex = 2;
@@ -180,22 +183,22 @@
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Roboto Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.Black;
-            this.lblUser.Location = new System.Drawing.Point(96, 199);
+            this.lblUser.Location = new System.Drawing.Point(96, 202);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(149, 25);
             this.lblUser.TabIndex = 1;
             this.lblUser.Text = "Juan Coronel";
             // 
-            // pictureBox1
+            // pboUser
             // 
-            this.pictureBox1.Image = global::TheCoffe.Properties.Resources.hombre;
-            this.pictureBox1.InitialImage = global::TheCoffe.Properties.Resources.hombre;
-            this.pictureBox1.Location = new System.Drawing.Point(86, 49);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(171, 143);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pboUser.Image = global::TheCoffe.Properties.Resources.hombre;
+            this.pboUser.InitialImage = global::TheCoffe.Properties.Resources.hombre;
+            this.pboUser.Location = new System.Drawing.Point(86, 49);
+            this.pboUser.Name = "pboUser";
+            this.pboUser.Size = new System.Drawing.Size(171, 143);
+            this.pboUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboUser.TabIndex = 0;
+            this.pboUser.TabStop = false;
             // 
             // sPanel2
             // 
@@ -484,6 +487,36 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Información Personal";
             // 
+            // btnEditAvatar
+            // 
+            this.btnEditAvatar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnEditAvatar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnEditAvatar.BorderColor = System.Drawing.Color.Black;
+            this.btnEditAvatar.BorderRadius = 20;
+            this.btnEditAvatar.BorderSize = 0;
+            this.btnEditAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditAvatar.FlatAppearance.BorderSize = 0;
+            this.btnEditAvatar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnEditAvatar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnEditAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditAvatar.ForeColor = System.Drawing.Color.White;
+            this.btnEditAvatar.IconChar = FontAwesome.Sharp.IconChar.PencilAlt;
+            this.btnEditAvatar.IconColor = System.Drawing.Color.White;
+            this.btnEditAvatar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEditAvatar.IconSize = 25;
+            this.btnEditAvatar.Location = new System.Drawing.Point(215, 164);
+            this.btnEditAvatar.Name = "btnEditAvatar";
+            this.btnEditAvatar.Padding = new System.Windows.Forms.Padding(2, 4, 0, 0);
+            this.btnEditAvatar.Size = new System.Drawing.Size(42, 40);
+            this.btnEditAvatar.TabIndex = 7;
+            this.btnEditAvatar.TextColor = System.Drawing.Color.White;
+            this.btnEditAvatar.UseVisualStyleBackColor = false;
+            this.btnEditAvatar.Click += new System.EventHandler(this.btnEditAvatar_Click);
+            // 
+            // selectImageDialog
+            // 
+            this.selectImageDialog.FileName = "openFileDialog1";
+            // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -496,7 +529,7 @@
             this.Size = new System.Drawing.Size(1014, 681);
             this.sPanel1.ResumeLayout(false);
             this.sPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboUser)).EndInit();
             this.sPanel2.ResumeLayout(false);
             this.sPanel2.PerformLayout();
             this.ResumeLayout(false);
@@ -510,7 +543,7 @@
         private Sipaa.Framework.SPanel sPanel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblUser;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pboUser;
         private FontAwesome.Sharp.IconButton btnLogout;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
@@ -531,5 +564,7 @@
         private Components.ModernTextBox txtRol;
         private WindowsFormsApplication1.RoundButton btnEditUser;
         private System.Windows.Forms.Button button1;
+        private WindowsFormsApplication1.RoundButton btnEditAvatar;
+        private System.Windows.Forms.OpenFileDialog selectImageDialog;
     }
 }

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
 
@@ -11,6 +13,7 @@ namespace TheCoffe.CNegocio.Services
     class UserService
     {
         private readonly UsuarioRepository _userRepository = new UsuarioRepository();
+        private Usuario usuarioActual = AuthUser.Usuario;
         public async Task<List<Usuario>> ObtenerUsuariosActivos()
         {
             return await _userRepository.Read(true);
@@ -62,6 +65,29 @@ namespace TheCoffe.CNegocio.Services
             {
                 throw ex;
             }
+        }
+        public string ObtenerImagen(Usuario usuario = null)
+        {
+            Usuario usuarioAObtenerAvatar;
+            if(usuario == null)
+            {
+                usuarioAObtenerAvatar = usuarioActual;
+            }
+            else
+            {
+                usuarioAObtenerAvatar = ObtenerUsuarioPorID(usuario.id_usuario);
+            }
+            string fileName;
+            if (usuarioAObtenerAvatar.avatar != null)
+            {
+                fileName = usuarioAObtenerAvatar.avatar;
+            }
+            else
+            {
+                fileName = "avatar.png";
+            }
+            string rutaPadre = Directory.GetParent(Application.StartupPath).Parent.FullName;
+            return Path.Combine(rutaPadre, "Uploads", "Users", fileName);
         }
         public bool ValidarDatos(Usuario usuario)
         {
