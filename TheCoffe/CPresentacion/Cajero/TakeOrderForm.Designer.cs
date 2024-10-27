@@ -1,4 +1,6 @@
-﻿namespace TheCoffe.CPresentacion.Cajero
+﻿using TheCoffe.CPresentacion.Components;
+
+namespace TheCoffe.CPresentacion.Cajero
 {
     partial class TakeOrderForm
     {
@@ -1245,7 +1247,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private FontAwesome.Sharp.IconButton btnCategory;
-        private Components.ModernTextBox modernTextBox4;
+        private TheCoffe.Components.ModernTextBox modernTextBox4;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -1279,7 +1281,7 @@
         private WindowsFormsApplication1.RoundButton roundButton6;
         private WindowsFormsApplication1.RoundButton roundButton7;
         private FontAwesome.Sharp.IconButton iconButton5;
-        private Components.ModernTextBox modernTextBox1;
+        private TheCoffe.Components.ModernTextBox modernTextBox1;
         private Sipaa.Framework.SPanel sPanel4;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;

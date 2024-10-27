@@ -34,5 +34,12 @@ namespace TheCoffe.CDatos
         public virtual ICollection<DiaDeTrabajo> DiaDeTrabajo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Venta> Venta { get; set; }
+        public string nombreCompleto
+        {
+            get
+            {
+                return $"{dni}-{nombre} {apellido}";
+            }
+        }
     }
 }

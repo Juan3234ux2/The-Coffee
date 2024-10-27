@@ -87,7 +87,7 @@
     <Compile Include="CAccesoADatos\ClienteRepository.cs" />
     <Compile Include="CAccesoADatos\MesaRepository.cs" />
     <Compile Include="CAccesoADatos\MeseroRepository.cs" />
-    <Compile Include="CAccesoADatos\ProductoDAL.cs" />
+    <Compile Include="CAccesoADatos\ProductoRepository.cs" />
     <Compile Include="CAccesoADatos\UsuarioRepository.cs" />
     <Compile Include="CDatos\AuthUser.cs" />
     <Compile Include="CDatos\BDTheCoffee.Context.cs">
@@ -160,6 +160,12 @@
     </Compile>
     <Compile Include="CPresentacion\Cajero\Cajero.Designer.cs">
       <DependentUpon>Cajero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\Cajero\OpenOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Cajero\OpenOrder.Designer.cs">
+      <DependentUpon>OpenOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="CPresentacion\Components\CustomDateTimePicker.cs">
       <SubType>Component</SubType>
@@ -253,6 +259,36 @@
     </Compile>
     <Compile Include="CPresentacion\Administrador\RemovedCategoriesForm.Designer.cs">
       <DependentUpon>RemovedCategoriesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\Components\Mesas\Table10.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Components\Mesas\Table10.Designer.cs">
+      <DependentUpon>Table10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\Components\Mesas\Table2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Components\Mesas\Table2.Designer.cs">
+      <DependentUpon>Table2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\Components\Mesas\Table4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Components\Mesas\Table4.Designer.cs">
+      <DependentUpon>Table4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\Components\Mesas\Table6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Components\Mesas\Table6.Designer.cs">
+      <DependentUpon>Table6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\Components\Mesas\Table8.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Components\Mesas\Table8.Designer.cs">
+      <DependentUpon>Table8.cs</DependentUpon>
     </Compile>
     <Compile Include="CPresentacion\General\SelectModeForm.cs">
       <SubType>Form</SubType>
@@ -400,6 +436,9 @@
     <EmbeddedResource Include="CPresentacion\Cajero\Cajero.resx">
       <DependentUpon>Cajero.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Cajero\OpenOrder.resx">
+      <DependentUpon>OpenOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\Components\AlertBox.resx">
       <DependentUpon>AlertBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -438,6 +477,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\Administrador\RemovedCategoriesForm.resx">
       <DependentUpon>RemovedCategoriesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Components\Mesas\Table10.resx">
+      <DependentUpon>Table10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Components\Mesas\Table2.resx">
+      <DependentUpon>Table2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Components\Mesas\Table4.resx">
+      <DependentUpon>Table4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Components\Mesas\Table6.resx">
+      <DependentUpon>Table6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Components\Mesas\Table8.resx">
+      <DependentUpon>Table8.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\General\SelectModeForm.resx">
       <DependentUpon>SelectModeForm.cs</DependentUpon>

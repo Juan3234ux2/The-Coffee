@@ -208,12 +208,12 @@
         #endregion
 
         private WindowsFormsApplication1.RoundButton btnCloseBox;
-        private Components.ModernTextBox txtAmount;
+        private TheCoffe.Components.ModernTextBox txtAmount;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblAddClient;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Label label1;
-        private Components.ModernTextBox txtDescription;
+        private TheCoffe.Components.ModernTextBox txtDescription;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
     }

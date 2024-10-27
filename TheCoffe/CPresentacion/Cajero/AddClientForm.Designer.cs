@@ -1,4 +1,5 @@
-﻿namespace TheCoffe.CPresentacion.Cajero
+﻿using TheCoffe.Components;
+namespace TheCoffe.CPresentacion.Cajero
 {
     partial class AddClientForm
     {
@@ -403,23 +404,23 @@
 
         #endregion
         private AltoControls.AltoButton btnAdd;
-        private Components.ModernTextBox txtLocality;
+        private TheCoffe.Components.ModernTextBox txtLocality;
         private System.Windows.Forms.Label label3;
-        private Components.ModernTextBox txtAdress;
+        private TheCoffe.Components.ModernTextBox txtAdress;
         private System.Windows.Forms.Label label2;
-        private Components.ModernTextBox txtLastName;
+        private TheCoffe.Components.ModernTextBox txtLastName;
         private System.Windows.Forms.Label label1;
-        private Components.ModernTextBox txtName;
+        private TheCoffe.Components.ModernTextBox txtName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblAddClient;
         private FontAwesome.Sharp.IconButton btnClose;
-        private Components.ModernTextBox txtCuit;
+        private TheCoffe.Components.ModernTextBox txtCuit;
         private System.Windows.Forms.Label label6;
-        private Components.ModernTextBox txtPhone;
+        private TheCoffe.Components.ModernTextBox txtPhone;
         private System.Windows.Forms.Label label5;
-        private Components.ModernTextBox txtEmail;
+        private TheCoffe.Components.ModernTextBox txtEmail;
         private System.Windows.Forms.Label label7;
-        private Components.ModernTextBox txtProvince;
+        private TheCoffe.Components.ModernTextBox txtProvince;
         private System.Windows.Forms.Label label8;
     }
 }

@@ -1,4 +1,7 @@
-﻿namespace TheCoffe.CPresentacion
+﻿using TheCoffe;
+using TheCoffe.CPresentacion.Components;
+
+namespace TheCoffe.CPresentacion
 {
     partial class SalesListForm
     {
@@ -416,13 +419,13 @@
         #endregion
 
         private FontAwesome.Sharp.IconButton iconButton5;
-        private Components.ModernTextBox modernTextBox1;
+        private TheCoffe.Components.ModernTextBox modernTextBox1;
         private System.Windows.Forms.DataGridView dataSales;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton btnMesero;
         private CustomComboBox cboMesero;
         private System.Windows.Forms.Label label2;
-        private Components.ModernTextBox modernTextBox2;
+        private TheCoffe.Components.ModernTextBox modernTextBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
@@ -431,10 +434,10 @@
         private System.Windows.Forms.DataGridViewImageColumn detalle;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private Components.CustomDateTimePicker customDateTimePicker1;
+        private TheCoffe.Components.CustomDateTimePicker customDateTimePicker1;
         private Sipaa.Framework.SPanel sPanel1;
         private Sipaa.Framework.SPanel sPanel2;
-        private Components.CustomDateTimePicker customDateTimePicker2;
+        private TheCoffe.Components.CustomDateTimePicker customDateTimePicker2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
     }
 }

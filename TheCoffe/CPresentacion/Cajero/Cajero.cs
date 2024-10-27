@@ -14,7 +14,7 @@ namespace TheCoffe.CPresentacion.Cajero
 {
     public partial class Cajero : UserControl
     {
-        private ProductoDAL productoDAL = new ProductoDAL();
+        private ProductoRepository productoDAL = new ProductoRepository();
         public string mesaSeleccionada { get; set; }
         public Cajero()
         {
@@ -28,31 +28,19 @@ namespace TheCoffe.CPresentacion.Cajero
             if (!string.IsNullOrEmpty(mesaSeleccionada))
             {
                 lblNroMesa.Text = $"Mesa: {mesaSeleccionada}";
-                MessageBox.Show($"Se seleccionó la mesa: {mesaSeleccionada}");
             }
         }
 
         private void btnFinalizeOrder_Click(object sender, EventArgs e)
         {
-            if (cboWaiter.SelectedIndex == -1)
+            using (OverlayForm overlay = new OverlayForm())
             {
-                MessageBox.Show("Selecciona un mesero",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-                return;
-            }
-            else
-            {
-                using (OverlayForm overlay = new OverlayForm())
+                overlay.Show();
+                using (FinalizeOrder modal = new FinalizeOrder())
                 {
-                    overlay.Show();
-                    using (FinalizeOrder modal = new FinalizeOrder())
-                    {
-                        modal.ShowDialog(overlay);
-                    }
-                    overlay.Close();
+                    modal.ShowDialog(overlay);
                 }
+                 overlay.Close();
             }
         }
     }

@@ -1,4 +1,6 @@
-﻿namespace TheCoffe.App
+﻿using TheCoffe.CPresentacion.Components;
+
+namespace TheCoffe.App
 {
     partial class AddUserForm
     {

@@ -27,11 +27,9 @@ namespace TheCoffe.App
 
         private async void WaiterListForm_Load(object sender, EventArgs e)
         {
-            pnlLoading.Visible = true;
             WaiterService service = new WaiterService();
             var mesero = await service.ObtenerMeserosActivos();
             dataWaiter.DataSource = mesero;
-            pnlLoading.Visible = false;
         }
 
         public async void RefreshPantalla()

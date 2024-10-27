@@ -18,7 +18,7 @@ namespace TheCoffe.App
     {
         private bool isShowingMsgBox = false;
         private int idProducto = 0;
-        ProductoDAL productoDAL = new ProductoDAL();
+        ProductoRepository productoDAL = new ProductoRepository();
         Producto producto = null;
         public AddProductForm()
         {

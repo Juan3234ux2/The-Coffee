@@ -566,8 +566,8 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label label4;
         private Sipaa.Framework.SPanel sPanel3;
-        private Components.CustomDateTimePicker customDateTimePicker2;
-        private Components.CustomDateTimePicker customDateTimePicker1;
+        private TheCoffe.Components.CustomDateTimePicker customDateTimePicker2;
+        private TheCoffe.Components.CustomDateTimePicker customDateTimePicker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Sipaa.Framework.SPanel sPanel4;

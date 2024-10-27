@@ -149,7 +149,7 @@
 
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Label lblAddClient;
-        private Components.ModernTextBox txtAmount;
+        private TheCoffe.Components.ModernTextBox txtAmount;
         private System.Windows.Forms.Label label5;
         private WindowsFormsApplication1.RoundButton btnOpenBox;
     }

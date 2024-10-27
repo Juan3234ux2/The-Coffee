@@ -1,4 +1,6 @@
-﻿namespace TheCoffe.CPresentacion.Cajero
+﻿using TheCoffe.CPresentacion.Components;
+
+namespace TheCoffe.CPresentacion.Cajero
 {
     partial class FinalizeOrder
     {
@@ -668,7 +670,7 @@
         private FontAwesome.Sharp.IconButton btnClient;
         private CustomComboBox cboCustomer;
         private System.Windows.Forms.Label label7;
-        private Components.ModernTextBox modernTextBox4;
+        private TheCoffe.Components.ModernTextBox modernTextBox4;
         private WindowsFormsApplication1.RoundButton btnAddClient;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -676,13 +678,13 @@
         private FontAwesome.Sharp.IconButton btnPago;
         private CustomComboBox cboPago;
         private System.Windows.Forms.Label label3;
-        private Components.ModernTextBox modernTextBox1;
+        private TheCoffe.Components.ModernTextBox modernTextBox1;
         private FontAwesome.Sharp.IconButton btnRecibo;
         private CustomComboBox cboRecibo;
         private System.Windows.Forms.Label label4;
-        private Components.ModernTextBox modernTextBox2;
+        private TheCoffe.Components.ModernTextBox modernTextBox2;
         private System.Windows.Forms.Label label5;
-        private Components.ModernTextBox txtCash;
+        private TheCoffe.Components.ModernTextBox txtCash;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;

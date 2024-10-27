@@ -344,7 +344,7 @@
         #endregion
 
         private FontAwesome.Sharp.IconButton iconButton5;
-        private Components.ModernTextBox modernTextBox1;
+        private TheCoffe.Components.ModernTextBox modernTextBox1;
         private System.Windows.Forms.DataGridView dataBoxSales;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;

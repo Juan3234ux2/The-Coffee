@@ -41,6 +41,7 @@ namespace TheCoffe.App
             mesa.nro_mesa = int.Parse(txtMesa.Texts);
             mesa.cantidad_sillas = int.Parse(txtNroSilla.Texts);
             mesa.estado = true;
+            mesa.disponible = true;
         }
 
         private void AddTableForm1_Deactivate(object sender, EventArgs e)

@@ -21,7 +21,7 @@ namespace TheCoffe.App
             dataProducts.AutoGenerateColumns = false;
         }
 
-        ProductoDAL productoDAL = new ProductoDAL();
+        ProductoRepository productoDAL = new ProductoRepository();
         Producto producto = new Producto();
         private int id;
 
