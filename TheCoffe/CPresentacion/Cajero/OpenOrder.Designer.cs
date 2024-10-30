@@ -129,7 +129,6 @@ namespace TheCoffe.CPresentacion.Cajero
             this.btnOpenBox.BorderRadius = 6;
             this.btnOpenBox.BorderSize = 0;
             this.btnOpenBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOpenBox.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOpenBox.FlatAppearance.BorderSize = 0;
             this.btnOpenBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenBox.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold);
@@ -145,6 +144,7 @@ namespace TheCoffe.CPresentacion.Cajero
             this.btnOpenBox.Text = "Iniciar Pedido";
             this.btnOpenBox.TextColor = System.Drawing.Color.White;
             this.btnOpenBox.UseVisualStyleBackColor = false;
+            this.btnOpenBox.Click += new System.EventHandler(this.btnOpenBox_Click);
             // 
             // btnClose
             // 

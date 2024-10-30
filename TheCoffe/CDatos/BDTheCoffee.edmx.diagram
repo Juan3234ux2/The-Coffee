@@ -16,20 +16,17 @@
         <AssociationConnector Association="DBTheCoffeeModel.FK_Usuario_id_rol" ManuallyRouted="false" />
         <EntityTypeShape EntityType="DBTheCoffeeModel.DiaDeTrabajo" Width="1.5" PointX="5.5" PointY="7.375" />
         <AssociationConnector Association="DBTheCoffeeModel.MeseroDiaDeTrabajo" />
-        <EntityTypeShape EntityType="DBTheCoffeeModel.Caja" Width="1.5" PointX="6" PointY="10.625" />
-        <EntityTypeShape EntityType="DBTheCoffeeModel.Movimiento_Caja" Width="1.5" PointX="10.5" PointY="9.75" />
-        <EntityTypeShape EntityType="DBTheCoffeeModel.Turno_Caja" Width="1.5" PointX="8.25" PointY="4.875" />
+        <EntityTypeShape EntityType="DBTheCoffeeModel.Turno_Caja" Width="1.5" PointX="9.5" PointY="7.75" />
         <EntityTypeShape EntityType="DBTheCoffeeModel.Venta" Width="1.5" PointX="10.875" PointY="2.625" />
         <EntityTypeShape EntityType="DBTheCoffeeModel.Venta_Detalle" Width="1.5" PointX="13.125" PointY="3.875" />
-        <AssociationConnector Association="DBTheCoffeeModel.FK_Turno_Caja_id_caja" />
         <AssociationConnector Association="DBTheCoffeeModel.FK_Venta_id_cliente" />
         <AssociationConnector Association="DBTheCoffeeModel.FK_Venta_id_mesa" />
         <AssociationConnector Association="DBTheCoffeeModel.FK_Venta_id_mesero" />
-        <AssociationConnector Association="DBTheCoffeeModel.FK_Movimiento_Caja_id_turno_id_caja" />
         <AssociationConnector Association="DBTheCoffeeModel.FK_Venta_Detalle_Producto" />
         <AssociationConnector Association="DBTheCoffeeModel.FK_Turno_Caja_id_usuario" />
         <AssociationConnector Association="DBTheCoffeeModel.FK_Venta_id_turno_id_caja" />
         <AssociationConnector Association="DBTheCoffeeModel.FK_Venta_Detalle_Venta" />
+        <AssociationConnector Association="DBTheCoffeeModel.FK_Venta_turno" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

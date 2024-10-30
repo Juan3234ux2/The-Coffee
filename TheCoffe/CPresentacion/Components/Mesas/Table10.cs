@@ -17,6 +17,7 @@ namespace TheCoffe.CPresentacion.Components
     {
         private Mesa mesa;
         public event Action<string> selectTable;
+        public event Action newOrder;
         public Table10(Mesa p_mesa)
         {
             InitializeComponent();
@@ -27,18 +28,26 @@ namespace TheCoffe.CPresentacion.Components
 
         private void btnMesa_Click(object sender, EventArgs e)
         {
-            using (OverlayForm overlay = new OverlayForm())
+            if (mesa.disponible)
             {
-                overlay.Show();
-                using (OpenOrder modal = new OpenOrder(mesa.nro_mesa))
+                using (OverlayForm overlay = new OverlayForm())
                 {
-                    var result = modal.ShowDialog(overlay);
-                    if (result == DialogResult.OK)
+                    overlay.Show();
+                    using (OpenOrder modal = new OpenOrder(mesa.nro_mesa))
                     {
-                        selectTable?.Invoke(mesa.nro_mesa.ToString());
+                        var result = modal.ShowDialog(overlay);
+                        if (result == DialogResult.OK)
+                        {
+                            selectTable?.Invoke(mesa.nro_mesa.ToString());
+                            newOrder?.Invoke();
+                        }
                     }
+                    overlay.Close();
                 }
-                overlay.Close();
+            }
+            else
+            {
+                selectTable?.Invoke(mesa.nro_mesa.ToString());
             }
         }
     }

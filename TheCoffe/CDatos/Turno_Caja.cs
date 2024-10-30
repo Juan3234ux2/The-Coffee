@@ -17,22 +17,18 @@ namespace TheCoffe.CDatos
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Turno_Caja()
         {
-            this.Movimiento_Caja = new HashSet<Movimiento_Caja>();
             this.Venta = new HashSet<Venta>();
         }
     
         public int id_turno { get; set; }
         public Nullable<System.DateTime> fecha_apertura { get; set; }
         public double monto_inicial { get; set; }
-        public double monto_cierre { get; set; }
+        public Nullable<double> monto_cierre { get; set; }
         public string observaciones { get; set; }
         public Nullable<System.DateTime> fecha_cierre { get; set; }
-        public int id_caja { get; set; }
         public int id_usuario { get; set; }
+        public Nullable<double> diferencia { get; set; }
     
-        public virtual Caja Caja { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Movimiento_Caja> Movimiento_Caja { get; set; }
         public virtual Usuario Usuario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Venta> Venta { get; set; }

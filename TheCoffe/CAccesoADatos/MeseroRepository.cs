@@ -35,9 +35,18 @@ namespace TheCoffe.CAccesoADatos
 
         public async Task<List<Mesero>> Read(bool estado)
         {
-                return await db.Mesero.Where(c => c.estado == estado).ToListAsync();
+                return await db.Mesero.Where(c => c.estado == estado).OrderBy(m => m.nombre).ToListAsync();
         }
-
+        public async Task<List<Mesero>> ObtenerMeserosTrabajando()
+        {
+            var horaActual = DateTime.Now.Hour;
+            int dia = ((int)DateTime.Now.DayOfWeek == 0) ? 7 : (int)DateTime.Now.DayOfWeek;
+            return await db.Mesero.Where(mesero =>
+            mesero.DiaDeTrabajo.Any(d => d.id_dia == dia) &&
+            mesero.hora_entrada <= horaActual &&
+            mesero.hora_salida >= horaActual && mesero.estado
+            ).ToListAsync();
+        }
         public Mesero SearchObject(int id)
         {
             return db.Mesero.Find(id);

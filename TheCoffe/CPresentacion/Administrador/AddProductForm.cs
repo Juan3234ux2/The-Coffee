@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
 using TheCoffe.CNegocio;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.App
 {
@@ -18,13 +19,13 @@ namespace TheCoffe.App
     {
         private bool isShowingMsgBox = false;
         private int idProducto = 0;
-        ProductoRepository productoDAL = new ProductoRepository();
-        Producto producto = null;
+        private ProductService productService = new ProductService();
+        private CategoryService categoryService = new CategoryService();
+        private Producto producto = null;
         public AddProductForm()
         {
             InitializeComponent();
         }
-
 
         public AddProductForm(int id)
         {
@@ -32,7 +33,7 @@ namespace TheCoffe.App
             lblTitle.Text = "Editar Producto";
             btnAdd.Text = "Editar";
             this.idProducto = id;
-            producto = productoDAL.SearchObject(id);
+            producto = productService.ObtenerProductoPorID(id);
             txtName.Texts = producto.nombre;
             txtPrice.Texts = Convert.ToString(producto.precio);
             txtDescription.Texts = producto.descripcion;
@@ -64,21 +65,45 @@ namespace TheCoffe.App
             { 
                 if(this.idProducto == 0)
                 {
-                    producto = new Producto();
-                    CargarDatos();
-                    productoDAL.Create(producto);
-                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Producto agregado correctamente", Properties.Resources.informacion);
+                    AddProduct();
                 }
                 else
                 {
-                    CargarDatos();
-                    productoDAL.Update(producto);
-                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Producto editado correctamente", Properties.Resources.informacion);
-
+                    EditProduct();
                 }
             }
         }
-
+        private void EditProduct()
+        {
+            try
+            {
+                CargarDatos();
+                productService.ActualizarProducto(producto);
+                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Producto editado correctamente", Properties.Resources.informacion);
+            }
+            catch (Exception ex)
+            {
+                isShowingMsgBox = true;
+                MessageBox.Show(ex.Message, "Error al actualizar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isShowingMsgBox = false;
+            }
+        }
+        private void AddProduct()
+        {
+            try
+            {
+                producto = new Producto();
+                CargarDatos();
+                productService.CrearProducto(producto);
+                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso completado", "Producto agregado correctamente", Properties.Resources.informacion);
+            }
+            catch (Exception ex)
+            {
+                isShowingMsgBox = true;
+                MessageBox.Show(ex.Message, "Error al insertar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isShowingMsgBox = false;
+            }
+        }
         private void btnClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
@@ -100,9 +125,9 @@ namespace TheCoffe.App
             CargarCategorias();
         }
 
-        public void CargarCategorias()
+        public async void CargarCategorias()
         {
-            var listCategorias = productoDAL.listCategories();
+            var listCategorias = await categoryService.ObtenerCategoriasActivas();
             cboCategory.DataSource = listCategorias;
             cboCategory.DisplayMember = "descripcion";
             cboCategory.ValueMember = "id_categoria";

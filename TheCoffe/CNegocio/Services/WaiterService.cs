@@ -19,6 +19,10 @@ namespace TheCoffe.CNegocio.Services
         {
             return await _waiterRepository.Read(false);
         }
+        public async Task<List<Mesero>> ObtenerMeserosTrabajando()
+        {
+            return await _waiterRepository.ObtenerMeserosTrabajando();
+        }
         public Mesero ObtenerMeseroPorID(int id)
         {
             return _waiterRepository.SearchObject(id);

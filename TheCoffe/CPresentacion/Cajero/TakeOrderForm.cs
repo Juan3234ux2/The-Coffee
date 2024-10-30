@@ -49,11 +49,12 @@ namespace TheCoffe.CPresentacion.Cajero
                 using (OverlayForm overlay = new OverlayForm())
                 {
                     overlay.Show();
-                    using (FinalizeOrder modal = new FinalizeOrder())
+                    /*using (FinalizeOrder modal = new FinalizeOrder())
                     {
                         modal.ShowDialog(overlay);
                     }
                     overlay.Close();
+                    */
                 }
             }
         }

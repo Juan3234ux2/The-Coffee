@@ -5,15 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="DBTheCoffeeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Caja">
-          <Key>
-            <PropertyRef Name="id_caja" />
-          </Key>
-          <Property Name="id_caja" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nro_caja" Type="int" Nullable="false" />
-          <Property Name="estado" Type="bit" Nullable="false" />
-          <Property Name="disponible" Type="bit" Nullable="false" />
-        </EntityType>
         <EntityType Name="Categoria1">
           <Key>
             <PropertyRef Name="id_categoria" />
@@ -74,18 +65,6 @@
           <Property Name="id_mesero" Type="int" Nullable="false" />
           <Property Name="id_dia" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="Movimiento_Caja">
-          <Key>
-            <PropertyRef Name="id_movimiento" />
-          </Key>
-          <Property Name="id_movimiento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="tipo_movimiento" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="monto" Type="float" Nullable="false" />
-          <Property Name="fecha" Type="date" />
-          <Property Name="descripcion" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="id_turno" Type="int" Nullable="false" />
-          <Property Name="id_caja" Type="int" Nullable="false" />
-        </EntityType>
         <EntityType Name="Producto">
           <Key>
             <PropertyRef Name="id_producto" />
@@ -109,16 +88,15 @@
         <EntityType Name="Turno_Caja">
           <Key>
             <PropertyRef Name="id_turno" />
-            <PropertyRef Name="id_caja" />
           </Key>
           <Property Name="id_turno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="fecha_apertura" Type="date" />
+          <Property Name="fecha_apertura" Type="datetime" />
           <Property Name="monto_inicial" Type="float" Nullable="false" />
-          <Property Name="monto_cierre" Type="float" Nullable="false" />
-          <Property Name="observaciones" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="fecha_cierre" Type="date" />
-          <Property Name="id_caja" Type="int" Nullable="false" />
+          <Property Name="monto_cierre" Type="float" />
+          <Property Name="observaciones" Type="varchar" MaxLength="255" />
+          <Property Name="fecha_cierre" Type="datetime" />
           <Property Name="id_usuario" Type="int" Nullable="false" />
+          <Property Name="diferencia" Type="float" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
@@ -139,14 +117,13 @@
             <PropertyRef Name="id_ventas" />
           </Key>
           <Property Name="id_ventas" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="fecha_venta" Type="date" />
+          <Property Name="fecha_venta" Type="datetime" />
           <Property Name="id_mesero" Type="int" Nullable="false" />
           <Property Name="id_mesa" Type="int" Nullable="false" />
           <Property Name="id_cliente" Type="int" />
-          <Property Name="id_turno" Type="int" Nullable="false" />
-          <Property Name="id_caja" Type="int" Nullable="false" />
           <Property Name="estado" Type="varchar" MaxLength="50" />
           <Property Name="monto_total" Type="float" />
+          <Property Name="id_turno" Type="int" />
         </EntityType>
         <EntityType Name="Venta_Detalle">
           <Key>
@@ -183,20 +160,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Movimiento_Caja_id_turno_id_caja">
-          <End Role="Turno_Caja" Type="Self.Turno_Caja" Multiplicity="1" />
-          <End Role="Movimiento_Caja" Type="Self.Movimiento_Caja" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Turno_Caja">
-              <PropertyRef Name="id_turno" />
-              <PropertyRef Name="id_caja" />
-            </Principal>
-            <Dependent Role="Movimiento_Caja">
-              <PropertyRef Name="id_turno" />
-              <PropertyRef Name="id_caja" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Producto_Categoria">
           <End Role="Categoria1" Type="Self.Categoria1" Multiplicity="1" />
           <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
@@ -206,18 +169,6 @@
             </Principal>
             <Dependent Role="Producto">
               <PropertyRef Name="id_categoria" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Turno_Caja_id_caja">
-          <End Role="Caja" Type="Self.Caja" Multiplicity="1" />
-          <End Role="Turno_Caja" Type="Self.Turno_Caja" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Caja">
-              <PropertyRef Name="id_caja" />
-            </Principal>
-            <Dependent Role="Turno_Caja">
-              <PropertyRef Name="id_caja" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -305,29 +256,25 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Venta_id_turno_id_caja">
-          <End Role="Turno_Caja" Type="Self.Turno_Caja" Multiplicity="1" />
+        <Association Name="FK_Venta_turno">
+          <End Role="Turno_Caja" Type="Self.Turno_Caja" Multiplicity="0..1" />
           <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Turno_Caja">
               <PropertyRef Name="id_turno" />
-              <PropertyRef Name="id_caja" />
             </Principal>
             <Dependent Role="Venta">
               <PropertyRef Name="id_turno" />
-              <PropertyRef Name="id_caja" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="DBTheCoffeeModelStoreContainer">
-          <EntitySet Name="Caja" EntityType="Self.Caja" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Categoria1" EntityType="Self.Categoria1" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DiaDeTrabajo" EntityType="Self.DiaDeTrabajo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Mesa" EntityType="Self.Mesa" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Mesero" EntityType="Self.Mesero" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MeseroDiaDeTrabajo" EntityType="Self.MeseroDiaDeTrabajo" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Movimiento_Caja" EntityType="Self.Movimiento_Caja" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="rol_usuario" EntityType="Self.rol_usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Turno_Caja" EntityType="Self.Turno_Caja" Schema="dbo" store:Type="Tables" />
@@ -342,17 +289,9 @@
             <End Role="Mesero" EntitySet="Mesero" />
             <End Role="MeseroDiaDeTrabajo" EntitySet="MeseroDiaDeTrabajo" />
           </AssociationSet>
-          <AssociationSet Name="FK_Movimiento_Caja_id_turno_id_caja" Association="Self.FK_Movimiento_Caja_id_turno_id_caja">
-            <End Role="Turno_Caja" EntitySet="Turno_Caja" />
-            <End Role="Movimiento_Caja" EntitySet="Movimiento_Caja" />
-          </AssociationSet>
           <AssociationSet Name="FK_Producto_Categoria" Association="Self.FK_Producto_Categoria">
             <End Role="Categoria1" EntitySet="Categoria1" />
             <End Role="Producto" EntitySet="Producto" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Turno_Caja_id_caja" Association="Self.FK_Turno_Caja_id_caja">
-            <End Role="Caja" EntitySet="Caja" />
-            <End Role="Turno_Caja" EntitySet="Turno_Caja" />
           </AssociationSet>
           <AssociationSet Name="FK_Turno_Caja_id_usuario" Association="Self.FK_Turno_Caja_id_usuario">
             <End Role="Usuario" EntitySet="Usuario" />
@@ -382,7 +321,7 @@
             <End Role="Mesero" EntitySet="Mesero" />
             <End Role="Venta" EntitySet="Venta" />
           </AssociationSet>
-          <AssociationSet Name="FK_Venta_id_turno_id_caja" Association="Self.FK_Venta_id_turno_id_caja">
+          <AssociationSet Name="FK_Venta_turno" Association="Self.FK_Venta_turno">
             <End Role="Turno_Caja" EntitySet="Turno_Caja" />
             <End Role="Venta" EntitySet="Venta" />
           </AssociationSet>
@@ -493,7 +432,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Usuario_id_rol">
-          <End Role="rol_usuario" Type="Self.rol_usuario" Multiplicity="1" />
+          <End Role="rol_usuario" Type="DBTheCoffeeModel.rol_usuario" Multiplicity="1" />
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="rol_usuario">
@@ -510,7 +449,7 @@
           <EntitySet Name="Mesa" EntityType="Self.Mesa" />
           <EntitySet Name="Mesero" EntityType="Self.Mesero" />
           <EntitySet Name="Producto" EntityType="Self.Producto" />
-          <EntitySet Name="rol_usuario" EntityType="Self.rol_usuario" />
+          <EntitySet Name="rol_usuario" EntityType="DBTheCoffeeModel.rol_usuario" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <AssociationSet Name="FK_Producto_Categoria" Association="Self.FK_Producto_Categoria">
             <End Role="Categoria1" EntitySet="Categoria1" />
@@ -525,15 +464,9 @@
             <End Role="DiaDeTrabajo" EntitySet="DiaDeTrabajo" />
             <End Role="Mesero" EntitySet="Mesero" />
           </AssociationSet>
-          <EntitySet Name="Caja" EntityType="DBTheCoffeeModel.Caja" />
-          <EntitySet Name="Movimiento_Caja" EntityType="DBTheCoffeeModel.Movimiento_Caja" />
           <EntitySet Name="Turno_Caja" EntityType="DBTheCoffeeModel.Turno_Caja" />
           <EntitySet Name="Venta" EntityType="DBTheCoffeeModel.Venta" />
           <EntitySet Name="Venta_Detalle" EntityType="DBTheCoffeeModel.Venta_Detalle" />
-          <AssociationSet Name="FK_Turno_Caja_id_caja" Association="DBTheCoffeeModel.FK_Turno_Caja_id_caja">
-            <End Role="Caja" EntitySet="Caja" />
-            <End Role="Turno_Caja" EntitySet="Turno_Caja" />
-          </AssociationSet>
           <AssociationSet Name="FK_Venta_id_cliente" Association="DBTheCoffeeModel.FK_Venta_id_cliente">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="Venta" EntitySet="Venta" />
@@ -545,10 +478,6 @@
           <AssociationSet Name="FK_Venta_id_mesero" Association="DBTheCoffeeModel.FK_Venta_id_mesero">
             <End Role="Mesero" EntitySet="Mesero" />
             <End Role="Venta" EntitySet="Venta" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Movimiento_Caja_id_turno_id_caja" Association="DBTheCoffeeModel.FK_Movimiento_Caja_id_turno_id_caja">
-            <End Role="Turno_Caja" EntitySet="Turno_Caja" />
-            <End Role="Movimiento_Caja" EntitySet="Movimiento_Caja" />
           </AssociationSet>
           <AssociationSet Name="FK_Venta_Detalle_Producto" Association="DBTheCoffeeModel.FK_Venta_Detalle_Producto">
             <End Role="Producto" EntitySet="Producto" />
@@ -566,6 +495,10 @@
             <End Role="Venta" EntitySet="Venta" />
             <End Role="Venta_Detalle" EntitySet="Venta_Detalle" />
           </AssociationSet>
+          <AssociationSet Name="FK_Venta_turno" Association="DBTheCoffeeModel.FK_Venta_turno">
+            <End Role="Turno_Caja" EntitySet="Turno_Caja" />
+            <End Role="Venta" EntitySet="Venta" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="DiaDeTrabajo">
           <Key>
@@ -579,65 +512,38 @@
           <End Type="DBTheCoffeeModel.DiaDeTrabajo" Role="DiaDeTrabajo" Multiplicity="*" />
           <End Type="DBTheCoffeeModel.Mesero" Role="Mesero" Multiplicity="*" />
         </Association>
-        <EntityType Name="Caja">
-          <Key>
-            <PropertyRef Name="id_caja" />
-          </Key>
-          <Property Name="id_caja" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nro_caja" Type="Int32" Nullable="false" />
-          <Property Name="estado" Type="Boolean" Nullable="false" />
-          <Property Name="disponible" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Turno_Caja" Relationship="DBTheCoffeeModel.FK_Turno_Caja_id_caja" FromRole="Caja" ToRole="Turno_Caja" />
-        </EntityType>
-        <EntityType Name="Movimiento_Caja">
-          <Key>
-            <PropertyRef Name="id_movimiento" />
-          </Key>
-          <Property Name="id_movimiento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="tipo_movimiento" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="monto" Type="Double" Nullable="false" />
-          <Property Name="fecha" Type="DateTime" Precision="0" />
-          <Property Name="descripcion" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="id_turno" Type="Int32" Nullable="false" />
-          <Property Name="id_caja" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Turno_Caja" Relationship="DBTheCoffeeModel.FK_Movimiento_Caja_id_turno_id_caja" FromRole="Movimiento_Caja" ToRole="Turno_Caja" />
-        </EntityType>
         <EntityType Name="Turno_Caja">
           <Key>
             <PropertyRef Name="id_turno" />
-            <PropertyRef Name="id_caja" />
           </Key>
           <Property Name="id_turno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="fecha_apertura" Type="DateTime" Precision="0" />
+          <Property Name="fecha_apertura" Type="DateTime" Precision="3" />
           <Property Name="monto_inicial" Type="Double" Nullable="false" />
-          <Property Name="monto_cierre" Type="Double" Nullable="false" />
-          <Property Name="observaciones" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="fecha_cierre" Type="DateTime" Precision="0" />
-          <Property Name="id_caja" Type="Int32" Nullable="false" />
+          <Property Name="monto_cierre" Type="Double" />
+          <Property Name="observaciones" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="fecha_cierre" Type="DateTime" Precision="3" />
           <Property Name="id_usuario" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Caja" Relationship="DBTheCoffeeModel.FK_Turno_Caja_id_caja" FromRole="Turno_Caja" ToRole="Caja" />
-          <NavigationProperty Name="Movimiento_Caja" Relationship="DBTheCoffeeModel.FK_Movimiento_Caja_id_turno_id_caja" FromRole="Turno_Caja" ToRole="Movimiento_Caja" />
           <NavigationProperty Name="Usuario" Relationship="DBTheCoffeeModel.FK_Turno_Caja_id_usuario" FromRole="Turno_Caja" ToRole="Usuario" />
-          <NavigationProperty Name="Venta" Relationship="DBTheCoffeeModel.FK_Venta_id_turno_id_caja" FromRole="Turno_Caja" ToRole="Venta" />
+          <NavigationProperty Name="Venta" Relationship="DBTheCoffeeModel.FK_Venta_turno" FromRole="Turno_Caja" ToRole="Venta" />
+          <Property Name="diferencia" Type="Double" />
         </EntityType>
         <EntityType Name="Venta">
           <Key>
             <PropertyRef Name="id_ventas" />
           </Key>
           <Property Name="id_ventas" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="fecha_venta" Type="DateTime" Precision="0" />
+          <Property Name="fecha_venta" Type="DateTime" Precision="3" />
           <Property Name="id_mesero" Type="Int32" Nullable="false" />
           <Property Name="id_mesa" Type="Int32" Nullable="false" />
           <Property Name="id_cliente" Type="Int32" />
-          <Property Name="id_turno" Type="Int32" Nullable="false" />
-          <Property Name="id_caja" Type="Int32" Nullable="false" />
           <Property Name="estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="monto_total" Type="Double" />
           <NavigationProperty Name="Cliente" Relationship="DBTheCoffeeModel.FK_Venta_id_cliente" FromRole="Venta" ToRole="Cliente" />
           <NavigationProperty Name="Mesa" Relationship="DBTheCoffeeModel.FK_Venta_id_mesa" FromRole="Venta" ToRole="Mesa" />
           <NavigationProperty Name="Mesero" Relationship="DBTheCoffeeModel.FK_Venta_id_mesero" FromRole="Venta" ToRole="Mesero" />
-          <NavigationProperty Name="Turno_Caja" Relationship="DBTheCoffeeModel.FK_Venta_id_turno_id_caja" FromRole="Venta" ToRole="Turno_Caja" />
           <NavigationProperty Name="Venta_Detalle" Relationship="DBTheCoffeeModel.FK_Venta_Detalle_Venta" FromRole="Venta" ToRole="Venta_Detalle" />
+          <Property Name="id_turno" Type="Int32" />
+          <NavigationProperty Name="Turno_Caja" Relationship="DBTheCoffeeModel.FK_Venta_turno" FromRole="Venta" ToRole="Turno_Caja" />
         </EntityType>
         <EntityType Name="Venta_Detalle">
           <Key>
@@ -652,18 +558,6 @@
           <NavigationProperty Name="Producto" Relationship="DBTheCoffeeModel.FK_Venta_Detalle_Producto" FromRole="Venta_Detalle" ToRole="Producto" />
           <NavigationProperty Name="Venta" Relationship="DBTheCoffeeModel.FK_Venta_Detalle_Venta" FromRole="Venta_Detalle" ToRole="Venta" />
         </EntityType>
-        <Association Name="FK_Turno_Caja_id_caja">
-          <End Type="DBTheCoffeeModel.Caja" Role="Caja" Multiplicity="1" />
-          <End Type="DBTheCoffeeModel.Turno_Caja" Role="Turno_Caja" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Caja">
-              <PropertyRef Name="id_caja" />
-            </Principal>
-            <Dependent Role="Turno_Caja">
-              <PropertyRef Name="id_caja" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Venta_id_cliente">
           <End Type="DBTheCoffeeModel.Cliente" Role="Cliente" Multiplicity="0..1" />
           <End Type="DBTheCoffeeModel.Venta" Role="Venta" Multiplicity="*" />
@@ -700,20 +594,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Movimiento_Caja_id_turno_id_caja">
-          <End Type="DBTheCoffeeModel.Turno_Caja" Role="Turno_Caja" Multiplicity="1" />
-          <End Type="DBTheCoffeeModel.Movimiento_Caja" Role="Movimiento_Caja" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Turno_Caja">
-              <PropertyRef Name="id_turno" />
-              <PropertyRef Name="id_caja" />
-            </Principal>
-            <Dependent Role="Movimiento_Caja">
-              <PropertyRef Name="id_turno" />
-              <PropertyRef Name="id_caja" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Venta_Detalle_Producto">
           <End Type="DBTheCoffeeModel.Producto" Role="Producto" Multiplicity="1" />
           <End Type="DBTheCoffeeModel.Venta_Detalle" Role="Venta_Detalle" Multiplicity="*" />
@@ -739,16 +619,14 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Venta_id_turno_id_caja">
-          <End Type="DBTheCoffeeModel.Turno_Caja" Role="Turno_Caja" Multiplicity="1" />
+          <End Type="DBTheCoffeeModel.Turno_Caja" Role="Turno_Caja" Multiplicity="0..1" />
           <End Type="DBTheCoffeeModel.Venta" Role="Venta" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Turno_Caja">
               <PropertyRef Name="id_turno" />
-              <PropertyRef Name="id_caja" />
             </Principal>
             <Dependent Role="Venta">
               <PropertyRef Name="id_turno" />
-              <PropertyRef Name="id_caja" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -761,6 +639,18 @@
             </Principal>
             <Dependent Role="Venta_Detalle">
               <PropertyRef Name="id_ventas" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Venta_turno">
+          <End Type="DBTheCoffeeModel.Turno_Caja" Role="Turno_Caja" Multiplicity="0..1" />
+          <End Type="DBTheCoffeeModel.Venta" Role="Venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Turno_Caja">
+              <PropertyRef Name="id_turno" />
+            </Principal>
+            <Dependent Role="Venta">
+              <PropertyRef Name="id_turno" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -872,34 +762,11 @@
               <ScalarProperty Name="id_dia" ColumnName="id_dia" />
             </EndProperty>
           </AssociationSetMapping>
-          <EntitySetMapping Name="Caja">
-            <EntityTypeMapping TypeName="DBTheCoffeeModel.Caja">
-              <MappingFragment StoreEntitySet="Caja">
-                <ScalarProperty Name="disponible" ColumnName="disponible" />
-                <ScalarProperty Name="estado" ColumnName="estado" />
-                <ScalarProperty Name="nro_caja" ColumnName="nro_caja" />
-                <ScalarProperty Name="id_caja" ColumnName="id_caja" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Movimiento_Caja">
-            <EntityTypeMapping TypeName="DBTheCoffeeModel.Movimiento_Caja">
-              <MappingFragment StoreEntitySet="Movimiento_Caja">
-                <ScalarProperty Name="id_caja" ColumnName="id_caja" />
-                <ScalarProperty Name="id_turno" ColumnName="id_turno" />
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-                <ScalarProperty Name="fecha" ColumnName="fecha" />
-                <ScalarProperty Name="monto" ColumnName="monto" />
-                <ScalarProperty Name="tipo_movimiento" ColumnName="tipo_movimiento" />
-                <ScalarProperty Name="id_movimiento" ColumnName="id_movimiento" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Turno_Caja">
             <EntityTypeMapping TypeName="DBTheCoffeeModel.Turno_Caja">
               <MappingFragment StoreEntitySet="Turno_Caja">
+                <ScalarProperty Name="diferencia" ColumnName="diferencia" />
                 <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
-                <ScalarProperty Name="id_caja" ColumnName="id_caja" />
                 <ScalarProperty Name="fecha_cierre" ColumnName="fecha_cierre" />
                 <ScalarProperty Name="observaciones" ColumnName="observaciones" />
                 <ScalarProperty Name="monto_cierre" ColumnName="monto_cierre" />
@@ -912,10 +779,9 @@
           <EntitySetMapping Name="Venta">
             <EntityTypeMapping TypeName="DBTheCoffeeModel.Venta">
               <MappingFragment StoreEntitySet="Venta">
+                <ScalarProperty Name="id_turno" ColumnName="id_turno" />
                 <ScalarProperty Name="monto_total" ColumnName="monto_total" />
                 <ScalarProperty Name="estado" ColumnName="estado" />
-                <ScalarProperty Name="id_caja" ColumnName="id_caja" />
-                <ScalarProperty Name="id_turno" ColumnName="id_turno" />
                 <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
                 <ScalarProperty Name="id_mesa" ColumnName="id_mesa" />
                 <ScalarProperty Name="id_mesero" ColumnName="id_mesero" />

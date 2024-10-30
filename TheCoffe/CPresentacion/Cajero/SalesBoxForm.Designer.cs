@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.dataBoxSales = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,10 +41,8 @@
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detalle = new System.Windows.Forms.DataGridViewImageColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblEnCaja = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -86,14 +84,14 @@
             this.dataBoxSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataBoxSales.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataBoxSales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto Medium", 10F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataBoxSales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto Medium", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataBoxSales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataBoxSales.ColumnHeadersHeight = 45;
             this.dataBoxSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataBoxSales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -104,14 +102,14 @@
             this.total,
             this.detalle});
             this.dataBoxSales.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataBoxSales.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataBoxSales.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataBoxSales.EnableHeadersVisualStyles = false;
             this.dataBoxSales.GridColor = System.Drawing.Color.Silver;
             this.dataBoxSales.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -120,22 +118,22 @@
             this.dataBoxSales.Name = "dataBoxSales";
             this.dataBoxSales.ReadOnly = true;
             this.dataBoxSales.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataBoxSales.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataBoxSales.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataBoxSales.RowHeadersVisible = false;
             this.dataBoxSales.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataBoxSales.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataBoxSales.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataBoxSales.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dataBoxSales.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dataBoxSales.RowTemplate.DividerHeight = 1;
@@ -152,6 +150,7 @@
             // 
             // ID
             // 
+            this.ID.DataPropertyName = "id_ventas";
             this.ID.FillWeight = 94.16002F;
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
@@ -159,6 +158,7 @@
             // 
             // Nombre
             // 
+            this.Nombre.DataPropertyName = "mesero";
             this.Nombre.FillWeight = 99.19505F;
             this.Nombre.HeaderText = "Mesero";
             this.Nombre.Name = "Nombre";
@@ -166,6 +166,7 @@
             // 
             // Precio
             // 
+            this.Precio.DataPropertyName = "fecha";
             this.Precio.FillWeight = 103.6368F;
             this.Precio.HeaderText = "Fecha";
             this.Precio.Name = "Precio";
@@ -173,6 +174,7 @@
             // 
             // Categoria
             // 
+            this.Categoria.DataPropertyName = "hora";
             this.Categoria.FillWeight = 96.17036F;
             this.Categoria.HeaderText = "Hora";
             this.Categoria.Name = "Categoria";
@@ -180,6 +182,7 @@
             // 
             // total
             // 
+            this.total.DataPropertyName = "monto_total";
             this.total.HeaderText = "Total";
             this.total.Name = "total";
             this.total.ReadOnly = true;
@@ -204,47 +207,26 @@
             this.label1.TabIndex = 74;
             this.label1.Text = "Caja";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.label2.Location = new System.Drawing.Point(130, 616);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 18);
-            this.label2.TabIndex = 79;
-            this.label2.Text = "Total De Ventas:";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.label3.Location = new System.Drawing.Point(677, 616);
+            this.label3.Location = new System.Drawing.Point(738, 616);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 18);
             this.label3.TabIndex = 80;
             this.label3.Text = "Monto En Caja:";
             // 
-            // label10
+            // lblEnCaja
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(253, 616);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 18);
-            this.label10.TabIndex = 85;
-            this.label10.Text = "$ 80,000";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(791, 616);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 18);
-            this.label4.TabIndex = 86;
-            this.label4.Text = "$ 90,500";
+            this.lblEnCaja.AutoSize = true;
+            this.lblEnCaja.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
+            this.lblEnCaja.Location = new System.Drawing.Point(852, 616);
+            this.lblEnCaja.Name = "lblEnCaja";
+            this.lblEnCaja.Size = new System.Drawing.Size(70, 18);
+            this.lblEnCaja.TabIndex = 86;
+            this.lblEnCaja.Text = "$ 90,500";
             // 
             // panel2
             // 
@@ -323,10 +305,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblEnCaja);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCloseBox);
             this.Controls.Add(this.iconButton5);
             this.Controls.Add(this.modernTextBox1);
@@ -346,20 +326,18 @@
         private FontAwesome.Sharp.IconButton iconButton5;
         private TheCoffe.Components.ModernTextBox modernTextBox1;
         private System.Windows.Forms.DataGridView dataBoxSales;
+        private System.Windows.Forms.Label label1;
+        private WindowsFormsApplication1.RoundButton btnCloseBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblEnCaja;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewImageColumn detalle;
-        private System.Windows.Forms.Label label1;
-        private WindowsFormsApplication1.RoundButton btnCloseBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
     }
 }

@@ -6,6 +6,8 @@ using System.Windows.Forms;
 using AltoControls;
 using FontAwesome.Sharp;
 using TheCoffe.App;
+using TheCoffe.CDatos;
+using TheCoffe.CNegocio.Services;
 using TheCoffe.CPresentacion;
 using TheCoffe.CPresentacion.Cajero;
 using WindowsFormsApplication1;
@@ -18,18 +20,18 @@ namespace TheCoffe
         private Cajero TakeOrder;
         private TablesForm tablesForm;
         private SalesBoxForm salesBoxForm;
+        private UserService _userService = new UserService();
+        private Usuario usuarioActual = AuthUser.Usuario;
         public MainFormCashier()
         {
             InitializeComponent();
             TakeOrder = new Cajero();
             tablesForm = new TablesForm();
             salesBoxForm = new SalesBoxForm();
-            tablesForm.mesaSeleccionada += selectedTable;        
+            tablesForm.mesaSeleccionada += selectedTable;
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-           LoadUserControl(tablesForm);
-           SetActiveSection(btnTables);
 
             using (OverlayForm overlay = new OverlayForm())
             {
@@ -40,9 +42,15 @@ namespace TheCoffe
                 }
                 overlay.Close();
             }
+           tablesForm.CargarMesas();
+           LoadUserControl(tablesForm);
+           SetActiveSection(btnTables);
+           lblUser.Text = usuarioActual.nombreCompleto;
+           imgUser.Image = Image.FromFile(_userService.ObtenerImagen());
         }
         private void selectedTable(string p_mesaSeleccionada)
-        {
+        {            
+            tablesForm.CargarMesas();
             TakeOrder.mesaSeleccionada = p_mesaSeleccionada;
             LoadUserControl(TakeOrder);
             TakeOrder.OnSection1Loaded();
@@ -85,10 +93,20 @@ namespace TheCoffe
         
         private void btnTables_Click(object sender, EventArgs e)
         {
+            if (Turno.TurnoActual.monto_cierre != null)
+            {
+                MessageBox.Show("La caja está cerrada. No se pueden tomar órdenes.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             SetActiveSection(sender as RoundButton);
             LoadUserControl(tablesForm);
         }
 
+        private void BtnBox_Click(object sender, EventArgs e)
+        {
+            SetActiveSection(sender as RoundButton);
+            LoadUserControl(salesBoxForm);
+        }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -98,12 +116,6 @@ namespace TheCoffe
             {
                 this.Close();
             }
-        }
-
-        private void BtnBox_Click(object sender, EventArgs e)
-        {
-            SetActiveSection(sender as RoundButton);
-            LoadUserControl(salesBoxForm);
         }
     }
 }

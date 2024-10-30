@@ -66,10 +66,10 @@ namespace TheCoffe
                         AuthUser.Usuario = null;
                         this.Show();
                     };
-                    mainForm.Show();
                     txtUser.Texts = "";
                     txtPassword.Texts = "";
                     this.Hide();
+                    mainForm.Show();
                 }catch(Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);

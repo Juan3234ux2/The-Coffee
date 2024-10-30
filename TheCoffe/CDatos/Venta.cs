@@ -25,16 +25,15 @@ namespace TheCoffe.CDatos
         public int id_mesero { get; set; }
         public int id_mesa { get; set; }
         public Nullable<int> id_cliente { get; set; }
-        public int id_turno { get; set; }
-        public int id_caja { get; set; }
         public string estado { get; set; }
         public Nullable<double> monto_total { get; set; }
+        public Nullable<int> id_turno { get; set; }
     
         public virtual Cliente Cliente { get; set; }
         public virtual Mesa Mesa { get; set; }
         public virtual Mesero Mesero { get; set; }
-        public virtual Turno_Caja Turno_Caja { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Venta_Detalle> Venta_Detalle { get; set; }
+        public virtual Turno_Caja Turno_Caja { get; set; }
     }
 }

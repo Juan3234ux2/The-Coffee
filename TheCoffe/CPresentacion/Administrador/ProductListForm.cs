@@ -10,24 +10,23 @@ using System.Windows.Forms;
 using TheCoffe.CPresentacion;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.App
 {
     public partial class ProductListForm : UserControl
     {
+        private ProductService productService = new ProductService();
+        private int id;
         public ProductListForm()
         {
             InitializeComponent();
             dataProducts.AutoGenerateColumns = false;
         }
 
-        ProductoRepository productoDAL = new ProductoRepository();
-        Producto producto = new Producto();
-        private int id;
-
-        public void RefreshPantalla()
+        public async void RefreshPantalla()
         {
-            var productos = productoDAL.Read(true);
+            var productos = await productService.ObtenerProductosActivos();
 
             dataProducts.DataSource = productos.Select(p =>
             new
@@ -79,7 +78,7 @@ namespace TheCoffe.App
                 if (MessageBox.Show("¿Está seguro que desea eliminar este registro?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     id = Convert.ToInt32(dataProducts.CurrentRow.Cells[0].Value.ToString());
-                    productoDAL.Delete(id);
+                    productService.CambiarEstado(id);
                 }
             }
             RefreshPantalla();
@@ -103,7 +102,7 @@ namespace TheCoffe.App
         {
             if (txtSearch.Texts != string.Empty)
             {
-                var Lst = productoDAL.Search(txtSearch.Texts).Select(p => new {
+                var Lst = productService.BuscarPorNombre(txtSearch.Texts).Select(p => new {
                     p.id_producto,
                     p.nombre,
                     p.precio,

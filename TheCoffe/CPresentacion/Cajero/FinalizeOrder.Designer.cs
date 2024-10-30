@@ -41,35 +41,32 @@ namespace TheCoffe.CPresentacion.Cajero
             this.btnRecibo = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.txtCash = new TheCoffe.Components.ModernTextBox();
-            this.cboRecibo = new CustomComboBox();
+            this.cboRecibo = new TheCoffe.CPresentacion.Components.CustomComboBox();
             this.modernTextBox2 = new TheCoffe.Components.ModernTextBox();
-            this.cboPago = new CustomComboBox();
+            this.cboPago = new TheCoffe.CPresentacion.Components.CustomComboBox();
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.btnFinalizeOrder = new WindowsFormsApplication1.RoundButton();
             this.btnAddClient = new WindowsFormsApplication1.RoundButton();
-            this.cboCustomer = new CustomComboBox();
+            this.cboCustomer = new TheCoffe.CPresentacion.Components.CustomComboBox();
             this.modernTextBox4 = new TheCoffe.Components.ModernTextBox();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataProducts = new System.Windows.Forms.DataGridView();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lblCajero = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblVuelto = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).BeginInit();
+            this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblAddClient
@@ -223,16 +220,6 @@ namespace TheCoffe.CPresentacion.Cajero
             this.label5.TabIndex = 79;
             this.label5.Text = "Recibido $";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(736, 355);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 18);
-            this.label6.TabIndex = 81;
-            this.label6.Text = "$ 2,499";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -242,141 +229,6 @@ namespace TheCoffe.CPresentacion.Cajero
             this.label8.Size = new System.Drawing.Size(59, 18);
             this.label8.TabIndex = 82;
             this.label8.Text = "Vuelto: ";
-            // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.label23);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(25, 87);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(373, 229);
-            this.panel1.TabIndex = 83;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Silver;
-            this.panel3.Location = new System.Drawing.Point(1, 84);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(355, 1);
-            this.panel3.TabIndex = 4;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
-            this.label14.Location = new System.Drawing.Point(304, 57);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(48, 15);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "$ 3,600";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
-            this.label15.Location = new System.Drawing.Point(24, 57);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(78, 15);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "Cheesecake";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
-            this.label16.Location = new System.Drawing.Point(4, 57);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(14, 15);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "1";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Silver;
-            this.panel5.Location = new System.Drawing.Point(0, 126);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(355, 1);
-            this.panel5.TabIndex = 10;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
-            this.label22.Location = new System.Drawing.Point(304, 100);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(48, 15);
-            this.label22.TabIndex = 9;
-            this.label22.Text = "$ 3,600";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Location = new System.Drawing.Point(0, 42);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(355, 1);
-            this.panel2.TabIndex = 3;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
-            this.label23.Location = new System.Drawing.Point(24, 100);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(97, 15);
-            this.label23.TabIndex = 8;
-            this.label23.Text = "Café Con Leche";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
-            this.label13.Location = new System.Drawing.Point(304, 16);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(48, 15);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "$ 3,600";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
-            this.label24.Location = new System.Drawing.Point(4, 100);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(14, 15);
-            this.label24.TabIndex = 7;
-            this.label24.Text = "3";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
-            this.label12.Location = new System.Drawing.Point(24, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(97, 15);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Café Con Leche";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
-            this.label11.Location = new System.Drawing.Point(4, 16);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(14, 15);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "3";
             // 
             // label9
             // 
@@ -388,16 +240,6 @@ namespace TheCoffe.CPresentacion.Cajero
             this.label9.TabIndex = 85;
             this.label9.Text = "Total: ";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(322, 356);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 18);
-            this.label10.TabIndex = 84;
-            this.label10.Text = "$ 25,499";
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -407,16 +249,6 @@ namespace TheCoffe.CPresentacion.Cajero
             this.label17.Size = new System.Drawing.Size(62, 18);
             this.label17.TabIndex = 86;
             this.label17.Text = "Mesero:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
-            this.label18.Location = new System.Drawing.Point(285, 331);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(107, 18);
-            this.label18.TabIndex = 87;
-            this.label18.Text = "Pedro Ramirez";
             // 
             // txtCash
             // 
@@ -440,6 +272,7 @@ namespace TheCoffe.CPresentacion.Cajero
             this.txtCash.Texts = "";
             this.txtCash.UnderlinedStyle = false;
             this.txtCash.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCash_KeyPress);
+            this.txtCash._TextChanged += new System.EventHandler(this.txtCash__TextChanged);
             // 
             // cboRecibo
             // 
@@ -615,19 +448,143 @@ namespace TheCoffe.CPresentacion.Cajero
             this.modernTextBox4.Texts = "";
             this.modernTextBox4.UnderlinedStyle = false;
             // 
+            // precio
+            // 
+            this.precio.DataPropertyName = "precio";
+            this.precio.FillWeight = 83.75633F;
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.FillWeight = 156.1607F;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // cantidad
+            // 
+            this.cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cantidad.DataPropertyName = "cantidad";
+            this.cantidad.FillWeight = 60.08295F;
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            // 
+            // dataProducts
+            // 
+            this.dataProducts.AllowUserToAddRows = false;
+            this.dataProducts.AllowUserToDeleteRows = false;
+            this.dataProducts.AllowUserToResizeColumns = false;
+            this.dataProducts.AllowUserToResizeRows = false;
+            this.dataProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataProducts.BackgroundColor = System.Drawing.Color.White;
+            this.dataProducts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataProducts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataProducts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataProducts.ColumnHeadersVisible = false;
+            this.dataProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cantidad,
+            this.nombre,
+            this.precio});
+            this.dataProducts.EnableHeadersVisualStyles = false;
+            this.dataProducts.Location = new System.Drawing.Point(25, 87);
+            this.dataProducts.MultiSelect = false;
+            this.dataProducts.Name = "dataProducts";
+            this.dataProducts.ReadOnly = true;
+            this.dataProducts.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataProducts.RowHeadersVisible = false;
+            this.dataProducts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataProducts.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.dataProducts.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto Medium", 9.5F);
+            this.dataProducts.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataProducts.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
+            this.dataProducts.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataProducts.RowTemplate.DividerHeight = 1;
+            this.dataProducts.RowTemplate.Height = 40;
+            this.dataProducts.RowTemplate.ReadOnly = true;
+            this.dataProducts.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataProducts.ShowCellErrors = false;
+            this.dataProducts.ShowCellToolTips = false;
+            this.dataProducts.ShowEditingIcon = false;
+            this.dataProducts.ShowRowErrors = false;
+            this.dataProducts.Size = new System.Drawing.Size(370, 226);
+            this.dataProducts.TabIndex = 11;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.lblCajero);
+            this.panel6.Location = new System.Drawing.Point(220, 332);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(172, 17);
+            this.panel6.TabIndex = 88;
+            // 
+            // lblCajero
+            // 
+            this.lblCajero.AutoSize = true;
+            this.lblCajero.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblCajero.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
+            this.lblCajero.Location = new System.Drawing.Point(77, 0);
+            this.lblCajero.Name = "lblCajero";
+            this.lblCajero.Size = new System.Drawing.Size(95, 18);
+            this.lblCajero.TabIndex = 6;
+            this.lblCajero.Text = "Juan Coronel";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblTotal);
+            this.panel1.Location = new System.Drawing.Point(220, 358);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(172, 17);
+            this.panel1.TabIndex = 89;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblTotal.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
+            this.lblTotal.Location = new System.Drawing.Point(142, 0);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(30, 18);
+            this.lblTotal.TabIndex = 6;
+            this.lblTotal.Text = "$ 0";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblVuelto);
+            this.panel2.Location = new System.Drawing.Point(626, 356);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(172, 17);
+            this.panel2.TabIndex = 90;
+            // 
+            // lblVuelto
+            // 
+            this.lblVuelto.AutoSize = true;
+            this.lblVuelto.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblVuelto.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
+            this.lblVuelto.Location = new System.Drawing.Point(142, 0);
+            this.lblVuelto.Name = "lblVuelto";
+            this.lblVuelto.Size = new System.Drawing.Size(30, 18);
+            this.lblVuelto.TabIndex = 6;
+            this.lblVuelto.Text = "$ 0";
+            // 
             // FinalizeOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(825, 444);
-            this.Controls.Add(this.label18);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.dataProducts);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtCash);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnRecibo);
@@ -656,8 +613,13 @@ namespace TheCoffe.CPresentacion.Cajero
             this.Text = "FinalizeOrder";
             this.Deactivate += new System.EventHandler(this.FinalizeOrder_Deactivate);
             this.Load += new System.EventHandler(this.FinalizeOrder_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -685,24 +647,18 @@ namespace TheCoffe.CPresentacion.Cajero
         private TheCoffe.Components.ModernTextBox modernTextBox2;
         private System.Windows.Forms.Label label5;
         private TheCoffe.Components.ModernTextBox txtCash;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
+        private System.Windows.Forms.DataGridView dataProducts;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label lblCajero;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lblVuelto;
     }
 }

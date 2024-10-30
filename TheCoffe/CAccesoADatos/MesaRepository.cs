@@ -32,7 +32,7 @@ namespace TheCoffe.CAccesoADatos
         {
             using (_db = new DBTheCoffeeEntities())
             {
-                return await _db.Mesa.Where(c => c.estado == estado).ToListAsync(); 
+                return await _db.Mesa.Where(m => m.estado == estado).OrderBy(m => m.nro_mesa).ToListAsync(); 
             }
         }
 
@@ -79,7 +79,32 @@ namespace TheCoffe.CAccesoADatos
                 }
             }
         }
-
+        public Mesa ObtenerIdPorNro(int nroMesa)
+        {
+            using(_db = new DBTheCoffeeEntities())
+            {
+                return _db.Mesa.First(m => m.nro_mesa == nroMesa);
+            }
+        }
+        public void ChangeDisponibility(int id)
+        {
+            using (_db = new DBTheCoffeeEntities())
+            {
+                try
+                {
+                    var mesa = _db.Mesa.Find(id);
+                    if (mesa != null)
+                    {
+                        mesa.disponible = !mesa.disponible;
+                        _db.SaveChanges();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al actualizar el estado de la mesa.", ex);
+                }
+            }
+        }
         public List<Mesa> Search(int nroMesa)
         {
             using (_db = new DBTheCoffeeEntities())

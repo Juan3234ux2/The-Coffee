@@ -36,6 +36,7 @@ namespace TheCoffe.CAccesoADatos
             {
                 return await db.Usuario.Include(p => p.rol_usuario)
                     .Where(p => p.estado == estado)
+                    .OrderBy(u => u.nombre)
                     .ToListAsync();
             }
         }

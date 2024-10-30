@@ -33,10 +33,10 @@
             this.lblAddClient = new System.Windows.Forms.Label();
             this.btnCloseBox = new WindowsFormsApplication1.RoundButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtDescription = new TheCoffe.Components.ModernTextBox();
+            this.lblMontoRecaudado = new System.Windows.Forms.Label();
+            this.txtObservaciones = new TheCoffe.Components.ModernTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblDiferencia = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtAmount
@@ -61,6 +61,7 @@
             this.txtAmount.Texts = "";
             this.txtAmount.UnderlinedStyle = false;
             this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
+            this.txtAmount._TextChanged += new System.EventHandler(this.txtAmount__TextChanged);
             // 
             // label5
             // 
@@ -127,37 +128,37 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // label1
+            // lblMontoRecaudado
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 15);
-            this.label1.TabIndex = 89;
-            this.label1.Text = "Monto Recaudado $ 90,500";
+            this.lblMontoRecaudado.AutoSize = true;
+            this.lblMontoRecaudado.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMontoRecaudado.Location = new System.Drawing.Point(19, 76);
+            this.lblMontoRecaudado.Name = "lblMontoRecaudado";
+            this.lblMontoRecaudado.Size = new System.Drawing.Size(130, 15);
+            this.lblMontoRecaudado.TabIndex = 89;
+            this.lblMontoRecaudado.Text = "Monto Recaudado $ 0";
             // 
-            // txtDescription
+            // txtObservaciones
             // 
-            this.txtDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.txtDescription.BorderColor = System.Drawing.Color.Transparent;
-            this.txtDescription.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtDescription.BorderRadius = 10;
-            this.txtDescription.BorderSize = 1;
-            this.txtDescription.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDescription.Location = new System.Drawing.Point(267, 90);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
-            this.txtDescription.PasswordChar = false;
-            this.txtDescription.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtDescription.PlaceholderText = "";
-            this.txtDescription.Size = new System.Drawing.Size(243, 104);
-            this.txtDescription.TabIndex = 90;
-            this.txtDescription.Texts = "";
-            this.txtDescription.UnderlinedStyle = false;
+            this.txtObservaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txtObservaciones.BorderColor = System.Drawing.Color.Transparent;
+            this.txtObservaciones.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtObservaciones.BorderRadius = 10;
+            this.txtObservaciones.BorderSize = 1;
+            this.txtObservaciones.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtObservaciones.Location = new System.Drawing.Point(267, 90);
+            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.txtObservaciones.Multiline = true;
+            this.txtObservaciones.Name = "txtObservaciones";
+            this.txtObservaciones.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.txtObservaciones.PasswordChar = false;
+            this.txtObservaciones.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtObservaciones.PlaceholderText = "";
+            this.txtObservaciones.Size = new System.Drawing.Size(243, 104);
+            this.txtObservaciones.TabIndex = 90;
+            this.txtObservaciones.Texts = "";
+            this.txtObservaciones.UnderlinedStyle = false;
             // 
             // label2
             // 
@@ -169,15 +170,15 @@
             this.label2.TabIndex = 91;
             this.label2.Text = "Observaciones";
             // 
-            // label3
+            // lblDiferencia
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 228);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 19);
-            this.label3.TabIndex = 92;
-            this.label3.Text = "Diferencia:  $ X";
+            this.lblDiferencia.AutoSize = true;
+            this.lblDiferencia.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiferencia.Location = new System.Drawing.Point(22, 228);
+            this.lblDiferencia.Name = "lblDiferencia";
+            this.lblDiferencia.Size = new System.Drawing.Size(118, 19);
+            this.lblDiferencia.TabIndex = 92;
+            this.lblDiferencia.Text = "Diferencia:  $ 0";
             // 
             // CloseBoxForm
             // 
@@ -185,10 +186,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(536, 356);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblDiferencia);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtDescription);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtObservaciones);
+            this.Controls.Add(this.lblMontoRecaudado);
             this.Controls.Add(this.btnCloseBox);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.label5);
@@ -212,9 +213,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblAddClient;
         private FontAwesome.Sharp.IconButton btnClose;
-        private System.Windows.Forms.Label label1;
-        private TheCoffe.Components.ModernTextBox txtDescription;
+        private System.Windows.Forms.Label lblMontoRecaudado;
+        private TheCoffe.Components.ModernTextBox txtObservaciones;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDiferencia;
     }
 }

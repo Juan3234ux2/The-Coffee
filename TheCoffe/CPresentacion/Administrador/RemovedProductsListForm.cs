@@ -10,25 +10,25 @@ using TheCoffe.App;
 using System.Windows.Forms;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.CPresentacion
 {
     public partial class RemovedProductsListForm : Form
     {
         private bool isShowingMsgBox = false;
+        private ProductService productService = new ProductService();
+        private int id;
         public RemovedProductsListForm()
         {
             InitializeComponent();
             dataRemovedProducts.AutoGenerateColumns = false;
         }
 
-        ProductoRepository productoDAL = new ProductoRepository();
-        Producto producto = new Producto();
-        private int id;
 
-        public void RefreshPantalla()
+        public async void RefreshPantalla()
         {
-            var productos = productoDAL.Read(false);
+            var productos = await productService.ObtenerProductosEliminados();
 
             dataRemovedProducts.DataSource = productos.Select(p =>
             new
@@ -64,7 +64,7 @@ namespace TheCoffe.CPresentacion
                     if (MessageBox.Show("¿Está seguro que desea activar este registro?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                     id = Convert.ToInt32(dataRemovedProducts.CurrentRow.Cells[0].Value.ToString());
-                    productoDAL.Delete(id);
+                    productService.CambiarEstado(id);
                     }
                     isShowingMsgBox = false;
                     RefreshPantalla();

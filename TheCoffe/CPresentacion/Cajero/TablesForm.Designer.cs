@@ -30,12 +30,12 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.sPanel85 = new Sipaa.Framework.SPanel();
-            this.sPanel86 = new Sipaa.Framework.SPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.pnlTables = new System.Windows.Forms.FlowLayoutPanel();
+            this.roundButton2 = new WindowsFormsApplication1.RoundButton();
+            this.roundButton1 = new WindowsFormsApplication1.RoundButton();
             this.SuspendLayout();
             // 
             // panel2
@@ -55,30 +55,6 @@
             this.label1.Size = new System.Drawing.Size(101, 33);
             this.label1.TabIndex = 19;
             this.label1.Text = "Mesas";
-            // 
-            // sPanel85
-            // 
-            this.sPanel85.BackColor = System.Drawing.Color.OrangeRed;
-            this.sPanel85.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.sPanel85.BorderRadius = 6;
-            this.sPanel85.BorderSize = 1;
-            this.sPanel85.ForeColor = System.Drawing.Color.Red;
-            this.sPanel85.Location = new System.Drawing.Point(22, 77);
-            this.sPanel85.Name = "sPanel85";
-            this.sPanel85.Size = new System.Drawing.Size(40, 30);
-            this.sPanel85.TabIndex = 32;
-            // 
-            // sPanel86
-            // 
-            this.sPanel86.BackColor = System.Drawing.Color.LimeGreen;
-            this.sPanel86.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.sPanel86.BorderRadius = 6;
-            this.sPanel86.BorderSize = 1;
-            this.sPanel86.ForeColor = System.Drawing.Color.Red;
-            this.sPanel86.Location = new System.Drawing.Point(138, 77);
-            this.sPanel86.Name = "sPanel86";
-            this.sPanel86.Size = new System.Drawing.Size(40, 30);
-            this.sPanel86.TabIndex = 33;
             // 
             // label9
             // 
@@ -102,39 +78,84 @@
             this.label2.TabIndex = 35;
             this.label2.Text = "Disponible";
             // 
-            // label3
+            // lblInfo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(836, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 18);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "Seleccione una Mesa";
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.Color.Black;
+            this.lblInfo.Location = new System.Drawing.Point(836, 27);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(150, 18);
+            this.lblInfo.TabIndex = 36;
+            this.lblInfo.Text = "Seleccione una Mesa";
             // 
             // pnlTables
             // 
-            this.pnlTables.Location = new System.Drawing.Point(22, 128);
+            this.pnlTables.Location = new System.Drawing.Point(14, 128);
             this.pnlTables.Name = "pnlTables";
-            this.pnlTables.Size = new System.Drawing.Size(964, 408);
+            this.pnlTables.Size = new System.Drawing.Size(1001, 550);
             this.pnlTables.TabIndex = 37;
+            // 
+            // roundButton2
+            // 
+            this.roundButton2.BackColor = System.Drawing.Color.OrangeRed;
+            this.roundButton2.BackgroundColor = System.Drawing.Color.OrangeRed;
+            this.roundButton2.BorderColor = System.Drawing.Color.Black;
+            this.roundButton2.BorderRadius = 5;
+            this.roundButton2.BorderSize = 0;
+            this.roundButton2.FlatAppearance.BorderSize = 0;
+            this.roundButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
+            this.roundButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
+            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton2.ForeColor = System.Drawing.Color.White;
+            this.roundButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton2.IconColor = System.Drawing.Color.Black;
+            this.roundButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton2.Location = new System.Drawing.Point(16, 77);
+            this.roundButton2.Name = "roundButton2";
+            this.roundButton2.Size = new System.Drawing.Size(48, 30);
+            this.roundButton2.TabIndex = 39;
+            this.roundButton2.TextColor = System.Drawing.Color.White;
+            this.roundButton2.UseVisualStyleBackColor = false;
+            // 
+            // roundButton1
+            // 
+            this.roundButton1.BackColor = System.Drawing.Color.LimeGreen;
+            this.roundButton1.BackgroundColor = System.Drawing.Color.LimeGreen;
+            this.roundButton1.BorderColor = System.Drawing.Color.Black;
+            this.roundButton1.BorderRadius = 5;
+            this.roundButton1.BorderSize = 0;
+            this.roundButton1.FlatAppearance.BorderSize = 0;
+            this.roundButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
+            this.roundButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
+            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton1.ForeColor = System.Drawing.Color.White;
+            this.roundButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton1.IconColor = System.Drawing.Color.Black;
+            this.roundButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton1.Location = new System.Drawing.Point(130, 77);
+            this.roundButton1.Name = "roundButton1";
+            this.roundButton1.Size = new System.Drawing.Size(48, 30);
+            this.roundButton1.TabIndex = 38;
+            this.roundButton1.TextColor = System.Drawing.Color.White;
+            this.roundButton1.UseVisualStyleBackColor = false;
             // 
             // TablesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Controls.Add(this.roundButton2);
+            this.Controls.Add(this.roundButton1);
             this.Controls.Add(this.pnlTables);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.sPanel86);
-            this.Controls.Add(this.sPanel85);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Name = "TablesForm";
             this.Size = new System.Drawing.Size(1030, 720);
+            this.Load += new System.EventHandler(this.TablesForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,11 +164,11 @@
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private Sipaa.Framework.SPanel sPanel85;
-        private Sipaa.Framework.SPanel sPanel86;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.FlowLayoutPanel pnlTables;
+        private WindowsFormsApplication1.RoundButton roundButton1;
+        private WindowsFormsApplication1.RoundButton roundButton2;
     }
 }

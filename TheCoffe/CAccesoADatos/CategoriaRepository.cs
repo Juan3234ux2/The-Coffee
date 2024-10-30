@@ -33,7 +33,9 @@ namespace TheCoffe.CAccesoADatos
         {
             using (_db = new DBTheCoffeeEntities())
             {
-                 return await _db.Categoria1.Where(c => c.estado == estado).ToListAsync();                           
+                 return await _db.Categoria1.Where(c => c.estado == estado)
+                    .OrderBy(c => c.descripcion)
+                    .ToListAsync();                           
             }
         }
 

@@ -87,8 +87,11 @@
     <Compile Include="CAccesoADatos\ClienteRepository.cs" />
     <Compile Include="CAccesoADatos\MesaRepository.cs" />
     <Compile Include="CAccesoADatos\MeseroRepository.cs" />
+    <Compile Include="CAccesoADatos\PedidoRepository.cs" />
     <Compile Include="CAccesoADatos\ProductoRepository.cs" />
+    <Compile Include="CAccesoADatos\TurnoRepository.cs" />
     <Compile Include="CAccesoADatos\UsuarioRepository.cs" />
+    <Compile Include="CAccesoADatos\PedidoDetalleRepository.cs" />
     <Compile Include="CDatos\AuthUser.cs" />
     <Compile Include="CDatos\BDTheCoffee.Context.cs">
       <AutoGen>True</AutoGen>
@@ -105,14 +108,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDTheCoffee.edmx</DependentUpon>
     </Compile>
-    <Compile Include="CDatos\Caja.cs">
-      <DependentUpon>BDTheCoffee.tt</DependentUpon>
-    </Compile>
     <Compile Include="CDatos\Categoria.cs" />
+    <Compile Include="CAccesoADatos\CategoriaRepository.cs" />
     <Compile Include="CDatos\Categoria1.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
-    <Compile Include="CAccesoADatos\CategoriaRepository.cs" />
     <Compile Include="CDatos\Cliente.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
@@ -126,15 +126,13 @@
     <Compile Include="CDatos\Mesero.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
-    <Compile Include="CDatos\Movimiento_Caja.cs">
-      <DependentUpon>BDTheCoffee.tt</DependentUpon>
-    </Compile>
     <Compile Include="CDatos\Producto.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
     <Compile Include="CDatos\rol_usuario.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
+    <Compile Include="CDatos\Turno.cs" />
     <Compile Include="CDatos\Turno_Caja.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
@@ -151,8 +149,10 @@
     <Compile Include="CNegocio\Services\AuthService.cs" />
     <Compile Include="CNegocio\Services\CategoryService.cs" />
     <Compile Include="CNegocio\Services\CustomerService.cs" />
+    <Compile Include="CNegocio\Services\OrderService.cs" />
     <Compile Include="CNegocio\Services\ProductService.cs" />
     <Compile Include="CNegocio\Services\TableService.cs" />
+    <Compile Include="CNegocio\Services\TurnoService.cs" />
     <Compile Include="CNegocio\Services\UserService.cs" />
     <Compile Include="CNegocio\Services\WaiterService.cs" />
     <Compile Include="CPresentacion\Cajero\Cajero.cs">
@@ -160,6 +160,12 @@
     </Compile>
     <Compile Include="CPresentacion\Cajero\Cajero.Designer.cs">
       <DependentUpon>Cajero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\Cajero\CardProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Cajero\CardProduct.Designer.cs">
+      <DependentUpon>CardProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="CPresentacion\Cajero\OpenOrder.cs">
       <SubType>Form</SubType>
@@ -259,6 +265,12 @@
     </Compile>
     <Compile Include="CPresentacion\Administrador\RemovedCategoriesForm.Designer.cs">
       <DependentUpon>RemovedCategoriesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\Components\Mesas\MesaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Components\Mesas\MesaControl.Designer.cs">
+      <DependentUpon>MesaControl.cs</DependentUpon>
     </Compile>
     <Compile Include="CPresentacion\Components\Mesas\Table10.cs">
       <SubType>UserControl</SubType>
@@ -436,6 +448,9 @@
     <EmbeddedResource Include="CPresentacion\Cajero\Cajero.resx">
       <DependentUpon>Cajero.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Cajero\CardProduct.resx">
+      <DependentUpon>CardProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\Cajero\OpenOrder.resx">
       <DependentUpon>OpenOrder.cs</DependentUpon>
     </EmbeddedResource>
@@ -477,6 +492,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\Administrador\RemovedCategoriesForm.resx">
       <DependentUpon>RemovedCategoriesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Components\Mesas\MesaControl.resx">
+      <DependentUpon>MesaControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\Components\Mesas\Table10.resx">
       <DependentUpon>Table10.cs</DependentUpon>

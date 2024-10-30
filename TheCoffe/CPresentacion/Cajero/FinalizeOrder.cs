@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheCoffe.App;
+using TheCoffe.CDatos;
 using TheCoffe.CNegocio;
 using TheCoffe.CNegocio.Services;
 
@@ -17,9 +18,23 @@ namespace TheCoffe.CPresentacion.Cajero
     {
         private bool isShowingMsgBox = false;
         private CustomerService customerService = new CustomerService();
-        public FinalizeOrder()
+        private ProductService productService = new ProductService();
+        private double montoTotal;
+        public FinalizeOrder(Venta venta)
         {
-            InitializeComponent();          
+            InitializeComponent();
+            dataProducts.AutoGenerateColumns = false;
+            var listaVenta = venta.Venta_Detalle.Select(d =>
+            new
+            {
+                d.cantidad,
+                productService.ObtenerProductoPorID(d.id_producto).nombre,
+                precio = $"$ {productService.FormatCurrency(d.subtotal)}",
+            }).ToList();
+            dataProducts.DataSource = listaVenta;
+            lblCajero.Text = venta.Mesero.apellido + " " + venta.Mesero.nombre;
+            montoTotal = venta.Venta_Detalle.Sum(d => d.subtotal);
+            lblTotal.Text = $"$ {productService.FormatCurrency(montoTotal)}";
         }
         private void CargarClientes()
         {
@@ -103,6 +118,14 @@ namespace TheCoffe.CPresentacion.Cajero
             if (!isShowingMsgBox)
             {
                 this.Close();
+            }
+        }
+
+        private void txtCash__TextChanged(object sender, EventArgs e)
+        {
+            if (double.TryParse(txtCash.Texts.Trim(), out double amount))
+            {
+                lblVuelto.Text = $"$ {productService.FormatCurrency((amount - montoTotal))}";
             }
         }
     }

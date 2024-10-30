@@ -27,6 +27,14 @@ namespace TheCoffe.CNegocio.Services
         {
             _tableRepository.ChangeState(id);
         }
+        public void CambiarDisponibilidad(int id)
+        {
+            _tableRepository.ChangeDisponibility(id);
+        }
+        public Mesa ObtenerMesaPorNro(int nroMesa)
+        {
+            return _tableRepository.ObtenerIdPorNro(nroMesa);
+        }
         public List<Mesa> BuscarPorNro(int nroMesa)
         {
             return _tableRepository.Search(nroMesa);
