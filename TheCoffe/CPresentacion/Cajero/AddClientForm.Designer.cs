@@ -227,6 +227,7 @@ namespace TheCoffe.CPresentacion.Cajero
             this.txtPhone.Texts = "";
             this.txtPhone.UnderlinedStyle = false;
             this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
+            this.txtPhone._TextChanged += new System.EventHandler(this.txtPhone__TextChanged);
             // 
             // txtEmail
             // 
@@ -272,6 +273,7 @@ namespace TheCoffe.CPresentacion.Cajero
             this.txtCuit.Texts = "";
             this.txtCuit.UnderlinedStyle = false;
             this.txtCuit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
+            this.txtCuit._TextChanged += new System.EventHandler(this.txtCuit__TextChanged);
             // 
             // txtLocality
             // 

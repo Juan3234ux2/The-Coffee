@@ -61,14 +61,35 @@ namespace TheCoffe.CAccesoADatos
                     .FirstOrDefaultAsync();
             }
         }
-        
+        public bool HayPedidosActivos()
+        {
+            using (var db = new DBTheCoffeeEntities())
+            {
+                return db.Venta
+                    .Any(v => v.estado == "En Preparacion");
+            }
+        }
         public async Task<List<Venta>> Read(string estado)
         {
             using (db = new DBTheCoffeeEntities())
             {
-                return await db.Venta.Include(v => v.Venta_Detalle)
+                return await db.Venta
+                    .Include(v => v.Venta_Detalle)
+                    .Include(v => v.Mesero)
                     .Where(v => v.estado == estado)
-                    .OrderBy(v => v.fecha_venta)
+                    .OrderByDescending(v => v.fecha_venta)
+                    .ToListAsync();
+            }
+        }
+        public async Task<List<Venta>> FiltrarPorFecha(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            using (db = new DBTheCoffeeEntities())
+            {
+                return await db.Venta
+                    .Include(v => v.Venta_Detalle)
+                    .Include(v => v.Mesero)
+                    .Where(v => v.estado == "Completado" && v.fecha_venta >= fechaDesde && v.fecha_venta <= fechaHasta)
+                    .OrderByDescending(v => v.fecha_venta)
                     .ToListAsync();
             }
         }
@@ -101,6 +122,15 @@ namespace TheCoffe.CAccesoADatos
                 {
                     throw new Exception("Error al actualizar la venta.", ex);
                 }
+            }
+        }
+        public async Task<List<Venta>> SearchbyWaiter(String name, int idTurno)
+        {
+            using (db = new DBTheCoffeeEntities())
+            {
+                var ventas = await ObtenerVentasDeTurno(idTurno);
+                return ventas.Where(v =>
+                v.Mesero.nombreCompleto.Contains(name)).ToList();
             }
         }
         public void ChangeState(int id, string estado)

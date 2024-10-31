@@ -18,6 +18,7 @@ namespace TheCoffe.CPresentacion.Cajero
     {
         private bool isShowingMsgBox = false;
         private TurnoService turnoService = new TurnoService();
+        private OrderService orderService = new OrderService();
         private ProductService productService = new ProductService();
         public event Action cerrarCaja;
         private double totalRecaudado;
@@ -49,11 +50,21 @@ namespace TheCoffe.CPresentacion.Cajero
         private async void CargarDatos()
         {
             var ventas = await turnoService.ObtenerVentasDeUnTurno(Turno.TurnoActual.id_turno);
-            totalRecaudado = ventas.Sum(v => v.monto_total ?? 0);
-            lblMontoRecaudado.Text = $"Monto recaudado: $ {productService.FormatCurrency(Turno.TurnoActual.monto_inicial + totalRecaudado)}";
+            totalRecaudado = Turno.TurnoActual.monto_inicial + ventas.Sum(v => v.monto_total ?? 0);
+            lblMontoRecaudado.Text = $"Monto recaudado: {totalRecaudado.ToString("C")}";
         }
         private void btnCloseBox_Click(object sender, EventArgs e)
         {
+            if (orderService.HayPedidosActivos())
+            {
+                isShowingMsgBox = true;
+                MessageBox.Show("No se puede cerrar la caja porque hay pedidos sin finalizar",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                isShowingMsgBox = false;
+                return;
+            }
             if (string.IsNullOrWhiteSpace(txtAmount.Texts))
             {
                 isShowingMsgBox = true;
@@ -103,7 +114,7 @@ namespace TheCoffe.CPresentacion.Cajero
         {
             if (double.TryParse(txtAmount.Texts.Trim(), out double amount))
             {
-                lblDiferencia.Text = $"Diferencia: $ {productService.FormatCurrency(amount - (totalRecaudado + Turno.TurnoActual.monto_inicial))}";
+                lblDiferencia.Text = $"Diferencia: $ {productService.FormatCurrency(amount - (totalRecaudado))}";
             }
         }
     }

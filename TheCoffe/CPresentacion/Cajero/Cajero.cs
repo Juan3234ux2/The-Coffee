@@ -139,6 +139,7 @@ namespace TheCoffe.CPresentacion.Cajero
             {
                 CardProduct producto = new CardProduct(detalle.id_detalle);
                 producto.ChangeQty += ActualizarDatos;
+                producto.deleteProduct += EliminarProducto;
                 producto.CargarDatos();
                 pnlProducts.Controls.Add(producto);
             }
@@ -159,11 +160,16 @@ namespace TheCoffe.CPresentacion.Cajero
                 Venta_Detalle ultimoRegistro = orderService.ObtenerUltimoDetalle();
                 CardProduct producto = new CardProduct(ultimoRegistro.id_detalle);
                 producto.ChangeQty += ActualizarDatos;
+                producto.deleteProduct += EliminarProducto;
                 pnlProducts.Controls.Add(producto);
             }            
             ActualizarDatos();
         }
-
+        private void EliminarProducto(CardProduct producto)
+        {
+            pnlProducts.Controls.Remove(producto);
+            ActualizarDatos();
+        }
         private async void txtSearch__TextChanged(object sender, EventArgs e)
         {
             List<Producto> productos;

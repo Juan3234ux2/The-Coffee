@@ -31,8 +31,6 @@ namespace TheCoffe.CNegocio
             float pageWidth = e.PageBounds.Width;
             float x = 5;
             float y = 10;
-
-            // Datos de la tienda
             graphics.DrawString("The Coffee", h3, Brushes.Black, x, y); y += lineHeight;
             graphics.DrawString("CUIT: 2045759514", h3, Brushes.Black, x, y); y += lineHeight;
             graphics.DrawString("Ing. Brutos: 9053020001", h3, Brushes.Black, x, y); y += lineHeight;
@@ -68,13 +66,13 @@ namespace TheCoffe.CNegocio
             }
             y += lineHeight * 2;
             graphics.DrawString("TOTAL:", h2, Brushes.Black, x, y);
-            AgregarTextoALaDerecha(graphics, h2, CalcularTotal(venta).ToString("C"), 10, y, pageWidth);
+            AgregarTextoALaDerecha(graphics, h2, CalcularTotal(venta).ToString("C"), 6, y, pageWidth);
             y += lineHeight;
             graphics.DrawString("RECIBI(MOS):", h3, Brushes.Black, x, y);
             AgregarTextoALaDerecha(graphics, h3, recibido.ToString("C"), x,y,pageWidth);
             y += lineHeight;
             graphics.DrawString("CAMBIO:", h2, Brushes.Black, x, y);
-            AgregarTextoALaDerecha(graphics, h2, CalcularVuelto(venta,recibido).ToString("C"), 10, y, pageWidth);
+            AgregarTextoALaDerecha(graphics, h2, CalcularVuelto(venta,recibido).ToString("C"), 6, y, pageWidth);
             y += lineHeight;
             graphics.DrawString($"Articulos: {venta.Venta_Detalle.Count.ToString()}", h3, Brushes.Black, x, y); y += lineHeight;
             graphics.DrawString($"Cajero: {AuthUser.Usuario.nombreCompleto}", h3, Brushes.Black, x, y); y += lineHeight * 4;

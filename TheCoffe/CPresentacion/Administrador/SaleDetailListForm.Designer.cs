@@ -155,7 +155,7 @@
             // 
             // Nombre
             // 
-            this.Nombre.DataPropertyName = "Producto.nombre";
+            this.Nombre.DataPropertyName = "producto";
             this.Nombre.FillWeight = 99.19505F;
             this.Nombre.HeaderText = "Producto";
             this.Nombre.Name = "Nombre";

@@ -17,6 +17,7 @@ namespace TheCoffe.CPresentacion.Cajero
     {
         private TurnoService turnoService = new TurnoService();
         private ProductService productService = new ProductService();
+        private OrderService orderSevice = new OrderService();
         public SalesBoxForm()
         {
             InitializeComponent();
@@ -39,9 +40,7 @@ namespace TheCoffe.CPresentacion.Cajero
         {
             if (dataBoxSales.Columns[e.ColumnIndex].Name == "detalle")
             {
-                Console.WriteLine(dataBoxSales.CurrentRow.Cells[0].Value.ToString());
-                /*
-                int id = int.Parse(dataBoxSales.CurrentRow.Cells[0].Value.ToString());
+                int id = int.Parse(dataBoxSales.CurrentRow.Cells[1].Value.ToString());
                 using (OverlayForm overlay = new OverlayForm())
                 {
                     overlay.Show();
@@ -50,7 +49,7 @@ namespace TheCoffe.CPresentacion.Cajero
                         modal.ShowDialog(overlay);
                     }
                     overlay.Close();
-                }*/
+                }
             }
         }
         private void CerrarCaja()
@@ -71,7 +70,7 @@ namespace TheCoffe.CPresentacion.Cajero
         {
             var ventas = await turnoService.ObtenerVentasDeUnTurno(Turno.TurnoActual.id_turno);
             double totalRecaudado = ventas.Sum(v => v.monto_total ?? 0);
-            lblEnCaja.Text = $"{productService.FormatCurrency(Turno.TurnoActual.monto_inicial + totalRecaudado)}";
+            lblEnCaja.Text = $"$ {productService.FormatCurrency(Turno.TurnoActual.monto_inicial + totalRecaudado)}";
             dataBoxSales.DataSource = ventas.Select(v =>
             new
             {
@@ -81,6 +80,27 @@ namespace TheCoffe.CPresentacion.Cajero
                 hora = v.fecha_venta?.ToString("HH:mm"),
                 monto_total = $"$ {productService.FormatCurrency(v.monto_total??0)}",
             }).ToList();
+        }
+
+        private async void txtSearch__TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Texts != string.Empty)
+            {
+                var ventas = await orderSevice.BuscarPedidoPorMesero(txtSearch.Texts, Turno.TurnoActual.id_turno);
+                dataBoxSales.DataSource = ventas.Select(v =>
+                new
+                {
+                    v.id_ventas,
+                    mesero = v.Mesero.nombreCompleto,
+                    fecha = v.fecha_venta?.ToString("dd-MM"),
+                    hora = v.fecha_venta?.ToString("HH:mm"),
+                    monto_total = $"$ {productService.FormatCurrency(v.monto_total ?? 0)}",
+                }).ToList(); ;
+            }
+            else
+            {
+                CargarVentasDelTurno();
+            }
         }
     }
 }

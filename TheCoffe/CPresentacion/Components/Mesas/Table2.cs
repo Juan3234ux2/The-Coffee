@@ -13,7 +13,7 @@ using TheCoffe.CPresentacion.Cajero;
 
 namespace TheCoffe.CPresentacion.Components
 {
-    public partial class Table2 : UserControl
+    public partial class Table2 : UserControl 
     {
         private Mesa mesa;
         public event Action<string> selectTable;

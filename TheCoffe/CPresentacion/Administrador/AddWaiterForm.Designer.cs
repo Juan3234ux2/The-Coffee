@@ -357,6 +357,7 @@
             this.txtNumber.Texts = "";
             this.txtNumber.UnderlinedStyle = false;
             this.txtNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateDigits_KeyPress);
+            this.txtNumber._TextChanged += new System.EventHandler(this.txtNumber__TextChanged);
             // 
             // txtLastName
             // 

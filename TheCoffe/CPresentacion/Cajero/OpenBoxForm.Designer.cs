@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpenBoxForm));
             this.lblAddClient = new System.Windows.Forms.Label();
             this.txtAmount = new TheCoffe.Components.ModernTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -135,6 +136,7 @@
             this.Controls.Add(this.lblAddClient);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OpenBoxForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OpenBoxForm";

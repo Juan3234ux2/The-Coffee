@@ -18,6 +18,7 @@ namespace TheCoffe.CPresentacion.Cajero
         private OrderService orderService = new OrderService();
         private Venta_Detalle detalleVenta = new Venta_Detalle();
         public event Action ChangeQty;
+        public event Action<CardProduct> deleteProduct;
         private int idDetalle;
         private Producto product;
         public CardProduct(int detalle)
@@ -44,7 +45,7 @@ namespace TheCoffe.CPresentacion.Cajero
 
         private void btnMenos_Click(object sender, EventArgs e)
         {
-            if(int.Parse(lblQty.Text) > 0)
+            if(int.Parse(lblQty.Text) > 1)
             {
                 orderService.ModificarCantidad(idDetalle, -1, product.id_producto);
                 CargarDatos();
@@ -59,6 +60,19 @@ namespace TheCoffe.CPresentacion.Cajero
         private void btnMas_MouseLeave(object sender, EventArgs e)
         {
             (sender as AltoControls.AltoButton).ForeColor = Color.Black;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                orderService.EliminarDetalle(detalleVenta);
+                deleteProduct?.Invoke(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error al eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

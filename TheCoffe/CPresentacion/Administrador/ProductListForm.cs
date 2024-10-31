@@ -59,10 +59,9 @@ namespace TheCoffe.App
 
         private void dataProducts_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            id = Convert.ToInt32(dataProducts.CurrentRow.Cells[0].Value.ToString());
             if (dataProducts.Columns[e.ColumnIndex].Name == "editar")
             {
-                id = Convert.ToInt32(dataProducts.CurrentRow.Cells[0].Value.ToString());
-
                 using (OverlayForm overlay = new OverlayForm())
                 {
                     overlay.Show();
@@ -77,7 +76,6 @@ namespace TheCoffe.App
             {
                 if (MessageBox.Show("¿Está seguro que desea eliminar este registro?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    id = Convert.ToInt32(dataProducts.CurrentRow.Cells[0].Value.ToString());
                     productService.CambiarEstado(id);
                 }
             }

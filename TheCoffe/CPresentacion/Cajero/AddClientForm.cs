@@ -118,5 +118,21 @@ namespace TheCoffe.CPresentacion.Cajero
             Regex regex = new Regex(pattern);
             return regex.IsMatch(email);
         }
+
+        private void txtCuit__TextChanged(object sender, EventArgs e)
+        {
+            if (txtCuit.Texts.Length > 11)
+            {
+                txtCuit.Texts = txtCuit.Texts.Substring(0, 11);
+            }
+        }
+
+        private void txtPhone__TextChanged(object sender, EventArgs e)
+        {
+            if (txtPhone.Texts.Length > 12)
+            {
+                txtPhone.Texts = txtPhone.Texts.Substring(0, 12);
+            }
+        }
     }
 }

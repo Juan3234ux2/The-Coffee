@@ -239,6 +239,7 @@
             this.Name = "MainFormCashier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "The Coffe";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainFormCashier_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnlSideBar.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

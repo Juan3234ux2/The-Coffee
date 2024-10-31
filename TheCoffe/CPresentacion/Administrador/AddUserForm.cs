@@ -151,7 +151,7 @@ namespace TheCoffe.App
                     MessageBoxIcon.Error);
                 isShowingMsgBox = false;
                 return;
-            }else if(validarContraseñaYUsuario()){
+            }else if(validarContraseña()){
                 if (this.idUsuario == 0)
                 {
                     AddUser();
@@ -193,7 +193,7 @@ namespace TheCoffe.App
                 isShowingMsgBox = false;
             }
         }
-        private bool validarContraseñaYUsuario()
+        private bool validarContraseña()
         {
             string contraseña = txtPassword.Texts;
             if (contraseña.Length < 6)

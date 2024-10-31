@@ -21,19 +21,19 @@ namespace TheCoffe.CPresentacion
         {
             InitializeComponent();
             this.idPedido = idPedido;
+            dataSaleDetail.AutoGenerateColumns = false;
         }
         private async void CargarDatos()
         {
             var detalle = await orderService.ObtenerDetallesDeUnPedido(idPedido);
-            dataSaleDetail.DataSource = detalle;
-                /*detalle.Select(p => new
+            dataSaleDetail.DataSource = detalle.Select(p => new
             {
                 p.id_detalle,
                 producto = p.Producto.nombre,
                 p.cantidad,
                 p.subtotal,
                 p.precio_unitario
-            }).ToList();*/
+            }).ToList();
         }
         private void SaleDetailListForm_Load(object sender, EventArgs e)
         {

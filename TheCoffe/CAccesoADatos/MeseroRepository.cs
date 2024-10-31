@@ -37,6 +37,10 @@ namespace TheCoffe.CAccesoADatos
         {
                 return await db.Mesero.Where(c => c.estado == estado).OrderBy(m => m.nombre).ToListAsync();
         }
+        public async Task<List<Mesero>> FindAll()
+        {
+            return await db.Mesero.OrderBy(m => m.nombre).ToListAsync();
+        }
         public async Task<List<Mesero>> ObtenerMeserosTrabajando()
         {
             var horaActual = DateTime.Now.Hour;

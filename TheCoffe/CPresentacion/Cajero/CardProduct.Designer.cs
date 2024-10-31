@@ -177,6 +177,7 @@
             this.btnDelete.TabIndex = 10;
             this.btnDelete.TextColor = System.Drawing.Color.White;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // lblName
             // 

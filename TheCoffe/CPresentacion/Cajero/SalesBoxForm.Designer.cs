@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
+            this.txtSearch = new TheCoffe.Components.ModernTextBox();
             this.dataBoxSales = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,30 +48,33 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnCloseBox = new WindowsFormsApplication1.RoundButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataBoxSales)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // modernTextBox1
+            // txtSearch
             // 
-            this.modernTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.modernTextBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.modernTextBox1.BorderFocusColor = System.Drawing.Color.Black;
-            this.modernTextBox1.BorderRadius = 10;
-            this.modernTextBox1.BorderSize = 1;
-            this.modernTextBox1.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modernTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox1.Location = new System.Drawing.Point(20, 74);
-            this.modernTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.modernTextBox1.Multiline = false;
-            this.modernTextBox1.Name = "modernTextBox1";
-            this.modernTextBox1.Padding = new System.Windows.Forms.Padding(10, 16, 10, 7);
-            this.modernTextBox1.PasswordChar = false;
-            this.modernTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.modernTextBox1.PlaceholderText = "Buscar...";
-            this.modernTextBox1.Size = new System.Drawing.Size(329, 44);
-            this.modernTextBox1.TabIndex = 76;
-            this.modernTextBox1.Texts = "";
-            this.modernTextBox1.UnderlinedStyle = false;
+            this.txtSearch.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSearch.BorderColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BorderFocusColor = System.Drawing.Color.Black;
+            this.txtSearch.BorderRadius = 10;
+            this.txtSearch.BorderSize = 1;
+            this.txtSearch.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSearch.Location = new System.Drawing.Point(20, 74);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Multiline = false;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(10, 16, 10, 7);
+            this.txtSearch.PasswordChar = false;
+            this.txtSearch.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.txtSearch.PlaceholderText = "Buscar Por Mesero...";
+            this.txtSearch.Size = new System.Drawing.Size(329, 44);
+            this.txtSearch.TabIndex = 76;
+            this.txtSearch.Texts = "";
+            this.txtSearch.UnderlinedStyle = false;
+            this.txtSearch._TextChanged += new System.EventHandler(this.txtSearch__TextChanged);
             // 
             // dataBoxSales
             // 
@@ -151,15 +154,16 @@
             // ID
             // 
             this.ID.DataPropertyName = "id_ventas";
-            this.ID.FillWeight = 94.16002F;
+            this.ID.FillWeight = 28.59505F;
             this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 10;
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             // 
             // Nombre
             // 
             this.Nombre.DataPropertyName = "mesero";
-            this.Nombre.FillWeight = 99.19505F;
+            this.Nombre.FillWeight = 113.0575F;
             this.Nombre.HeaderText = "Mesero";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
@@ -167,7 +171,7 @@
             // Precio
             // 
             this.Precio.DataPropertyName = "fecha";
-            this.Precio.FillWeight = 103.6368F;
+            this.Precio.FillWeight = 118.1199F;
             this.Precio.HeaderText = "Fecha";
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
@@ -175,7 +179,7 @@
             // Categoria
             // 
             this.Categoria.DataPropertyName = "hora";
-            this.Categoria.FillWeight = 96.17036F;
+            this.Categoria.FillWeight = 109.6101F;
             this.Categoria.HeaderText = "Hora";
             this.Categoria.Name = "Categoria";
             this.Categoria.ReadOnly = true;
@@ -183,13 +187,14 @@
             // total
             // 
             this.total.DataPropertyName = "monto_total";
+            this.total.FillWeight = 113.9749F;
             this.total.HeaderText = "Total";
             this.total.Name = "total";
             this.total.ReadOnly = true;
             // 
             // detalle
             // 
-            this.detalle.FillWeight = 70.1602F;
+            this.detalle.FillWeight = 79.96502F;
             this.detalle.HeaderText = "Detalle";
             this.detalle.Image = global::TheCoffe.Properties.Resources.detalle;
             this.detalle.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -212,17 +217,18 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.label3.Location = new System.Drawing.Point(738, 616);
+            this.label3.Location = new System.Drawing.Point(728, 616);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 18);
+            this.label3.Size = new System.Drawing.Size(122, 18);
             this.label3.TabIndex = 80;
-            this.label3.Text = "Monto En Caja:";
+            this.label3.Text = "Total Recaudado:";
             // 
             // lblEnCaja
             // 
             this.lblEnCaja.AutoSize = true;
+            this.lblEnCaja.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblEnCaja.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
-            this.lblEnCaja.Location = new System.Drawing.Point(852, 616);
+            this.lblEnCaja.Location = new System.Drawing.Point(0, 0);
             this.lblEnCaja.Name = "lblEnCaja";
             this.lblEnCaja.Size = new System.Drawing.Size(70, 18);
             this.lblEnCaja.TabIndex = 86;
@@ -298,24 +304,34 @@
             this.iconButton5.TabIndex = 77;
             this.iconButton5.UseVisualStyleBackColor = false;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lblEnCaja);
+            this.panel3.Location = new System.Drawing.Point(847, 616);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(174, 19);
+            this.panel3.TabIndex = 89;
+            // 
             // SalesBoxForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.lblEnCaja);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCloseBox);
             this.Controls.Add(this.iconButton5);
-            this.Controls.Add(this.modernTextBox1);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dataBoxSales);
             this.Controls.Add(this.label1);
             this.Name = "SalesBoxForm";
             this.Size = new System.Drawing.Size(1014, 681);
             this.Load += new System.EventHandler(this.SalesBoxForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataBoxSales)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,7 +340,7 @@
         #endregion
 
         private FontAwesome.Sharp.IconButton iconButton5;
-        private TheCoffe.Components.ModernTextBox modernTextBox1;
+        private TheCoffe.Components.ModernTextBox txtSearch;
         private System.Windows.Forms.DataGridView dataBoxSales;
         private System.Windows.Forms.Label label1;
         private WindowsFormsApplication1.RoundButton btnCloseBox;
@@ -339,5 +355,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewImageColumn detalle;
+        private System.Windows.Forms.Panel panel3;
     }
 }

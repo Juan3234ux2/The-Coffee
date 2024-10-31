@@ -156,10 +156,6 @@
     <Compile Include="CNegocio\Services\UserService.cs" />
     <Compile Include="CNegocio\Services\WaiterService.cs" />
     <Compile Include="CNegocio\Ticket.cs" />
-    <Compile Include="CNegocio\TicketForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CNegocio\TicketForm.Designer.cs" />
     <Compile Include="CPresentacion\Cajero\Cajero.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,12 +173,6 @@
     </Compile>
     <Compile Include="CPresentacion\Cajero\OpenOrder.Designer.cs">
       <DependentUpon>OpenOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CPresentacion\Cajero\TicketPreview.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CPresentacion\Cajero\TicketPreview.Designer.cs">
-      <DependentUpon>TicketPreview.cs</DependentUpon>
     </Compile>
     <Compile Include="CPresentacion\Components\CustomDateTimePicker.cs">
       <SubType>Component</SubType>
@@ -464,9 +454,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\Cajero\OpenOrder.resx">
       <DependentUpon>OpenOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CPresentacion\Cajero\TicketPreview.resx">
-      <DependentUpon>TicketPreview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\Components\AlertBox.resx">
       <DependentUpon>AlertBox.cs</DependentUpon>

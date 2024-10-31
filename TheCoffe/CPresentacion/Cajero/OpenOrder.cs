@@ -90,7 +90,7 @@ namespace TheCoffe.CPresentacion.Cajero
                 catch (Exception ex)
                 {
                     isShowingMsgBox = true;
-                    MessageBox.Show(ex.Message, "Error al iniciar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Error al iniciar pedido", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     isShowingMsgBox = false;
                 }
             }

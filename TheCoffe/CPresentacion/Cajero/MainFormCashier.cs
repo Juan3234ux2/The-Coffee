@@ -34,7 +34,6 @@ namespace TheCoffe
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-
             using (OverlayForm overlay = new OverlayForm())
             {
                 overlay.Show();
@@ -122,11 +121,28 @@ namespace TheCoffe
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            if (Turno.TurnoActual.monto_cierre == null)
+            {
+                MessageBox.Show("El cierre de caja está pendiente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             DialogResult result = MessageBox.Show("¿Estás seguro que deseas cerrar sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
                 this.Close();
+            }
+        }
+
+        private void MainFormCashier_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(Turno.TurnoActual != null)
+            {
+                if(Turno.TurnoActual.monto_cierre == null)
+                {
+                    MessageBox.Show("El cierre de caja está pendiente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    e.Cancel = true;
+                }
             }
         }
     }

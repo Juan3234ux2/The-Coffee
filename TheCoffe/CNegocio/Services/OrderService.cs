@@ -22,9 +22,21 @@ namespace TheCoffe.CNegocio.Services
         {
             return await _orderRepository.Read("Completado");
         }
+        public async Task<List<Venta>> BuscarPedidoPorMesero(string nombreMesero, int id_turno)
+        {
+            return await _orderRepository.SearchbyWaiter(nombreMesero, id_turno);
+        }
         public async Task<List<Venta_Detalle>> ObtenerDetallesDeUnPedido(int idPedido)
         {
             return await _orderRepository.ObtenerDetallesPedido(idPedido);
+        }
+        public async Task<List<Venta>> FiltrarPorFecha(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            return await _orderRepository.FiltrarPorFecha(fechaDesde, fechaHasta);
+        }
+        public bool HayPedidosActivos()
+        {
+            return _orderRepository.HayPedidosActivos();
         }
         public async Task<List<Venta>> ObtenerTodosLosPedidos()
         {
@@ -41,6 +53,17 @@ namespace TheCoffe.CNegocio.Services
         public Venta_Detalle ObtenerUltimoDetalle()
         {
             return _orderDetailRepository.GetLastRecord();
+        }
+        public void EliminarDetalle(Venta_Detalle detalle)
+        {
+            try
+            {
+                _orderDetailRepository.EliminarDetalle(detalle);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
         public void FinalizarPedido(Venta venta)
         {

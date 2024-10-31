@@ -241,5 +241,13 @@ namespace TheCoffe.App
                 }
             }
         }
+
+        private void txtNumber__TextChanged(object sender, EventArgs e)
+        {
+            if (txtNumber.Texts.Length > 12)
+            {
+                txtNumber.Texts = txtNumber.Texts.Substring(0, 12);
+            }
+        }
     }
 }

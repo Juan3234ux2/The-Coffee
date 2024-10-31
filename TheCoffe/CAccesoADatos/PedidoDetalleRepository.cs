@@ -38,6 +38,22 @@ namespace TheCoffe.CAccesoADatos
                     .ToListAsync();
             }
         }
+        public void EliminarDetalle(Venta_Detalle detalle)
+        {
+            using (db = new DBTheCoffeeEntities())
+            {
+                Venta_Detalle d = db.Venta_Detalle.Find(detalle.id_detalle);
+                try
+                {
+                    db.Venta_Detalle.Remove(d);
+                    db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    throw ex.InnerException;
+                }
+            }
+        }
         public Venta_Detalle SearchObject(int id)
         {
             using (db = new DBTheCoffeeEntities())

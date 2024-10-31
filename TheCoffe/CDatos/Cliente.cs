@@ -39,5 +39,12 @@ namespace TheCoffe.CDatos
                 return $"{cuit} -- {apellido} {nombre}";
             }
         }
+        public string nombreCompleto
+        {
+            get
+            {
+                return $"{apellido} {nombre}";
+            }
+        }
     }
 }

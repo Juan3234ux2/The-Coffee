@@ -31,31 +31,31 @@ namespace TheCoffe.CPresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataSales = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detalle = new System.Windows.Forms.DataGridViewImageColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.sPanel1 = new Sipaa.Framework.SPanel();
             this.sPanel2 = new Sipaa.Framework.SPanel();
-            this.customDateTimePicker2 = new TheCoffe.Components.CustomDateTimePicker();
-            this.customDateTimePicker1 = new TheCoffe.Components.CustomDateTimePicker();
-            this.cboMesero = new CustomComboBox();
+            this.dtpFechaHasta = new TheCoffe.Components.CustomDateTimePicker();
+            this.dtpFechaDesde = new TheCoffe.Components.CustomDateTimePicker();
+            this.cboMesero = new TheCoffe.CPresentacion.Components.CustomComboBox();
             this.modernTextBox2 = new TheCoffe.Components.ModernTextBox();
             this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnMesero = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.detalle = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataSales)).BeginInit();
             this.sPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -71,14 +71,14 @@ namespace TheCoffe.CPresentacion
             this.dataSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataSales.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataSales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto Medium", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataSales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto Medium", 10F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataSales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataSales.ColumnHeadersHeight = 45;
             this.dataSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataSales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -89,14 +89,14 @@ namespace TheCoffe.CPresentacion
             this.total,
             this.detalle});
             this.dataSales.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataSales.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataSales.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataSales.EnableHeadersVisualStyles = false;
             this.dataSales.GridColor = System.Drawing.Color.Silver;
             this.dataSales.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -105,22 +105,22 @@ namespace TheCoffe.CPresentacion
             this.dataSales.Name = "dataSales";
             this.dataSales.ReadOnly = true;
             this.dataSales.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataSales.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataSales.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataSales.RowHeadersVisible = false;
             this.dataSales.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataSales.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataSales.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataSales.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dataSales.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dataSales.RowTemplate.DividerHeight = 1;
@@ -137,37 +137,53 @@ namespace TheCoffe.CPresentacion
             // 
             // ID
             // 
-            this.ID.FillWeight = 94.16002F;
+            this.ID.DataPropertyName = "id_ventas";
+            this.ID.FillWeight = 34.31406F;
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             // 
             // Nombre
             // 
-            this.Nombre.FillWeight = 99.19505F;
+            this.Nombre.DataPropertyName = "mesero";
+            this.Nombre.FillWeight = 136.5347F;
             this.Nombre.HeaderText = "Mesero";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
             // 
             // Precio
             // 
-            this.Precio.FillWeight = 103.6368F;
+            this.Precio.DataPropertyName = "fecha";
+            this.Precio.FillWeight = 104.2719F;
             this.Precio.HeaderText = "Fecha";
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
             // 
             // Categoria
             // 
-            this.Categoria.FillWeight = 96.17036F;
+            this.Categoria.DataPropertyName = "hora";
+            this.Categoria.FillWeight = 98.82233F;
             this.Categoria.HeaderText = "Hora";
             this.Categoria.Name = "Categoria";
             this.Categoria.ReadOnly = true;
             // 
             // total
             // 
+            this.total.DataPropertyName = "monto_total";
+            this.total.FillWeight = 137.6426F;
             this.total.HeaderText = "Total";
             this.total.Name = "total";
             this.total.ReadOnly = true;
+            // 
+            // detalle
+            // 
+            this.detalle.FillWeight = 51.7368F;
+            this.detalle.HeaderText = "Detalle";
+            this.detalle.Image = global::TheCoffe.Properties.Resources.detalle;
+            this.detalle.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.detalle.Name = "detalle";
+            this.detalle.ReadOnly = true;
+            this.detalle.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // label1
             // 
@@ -183,7 +199,7 @@ namespace TheCoffe.CPresentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(371, 50);
+            this.label2.Location = new System.Drawing.Point(336, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 15);
             this.label2.TabIndex = 63;
@@ -227,42 +243,45 @@ namespace TheCoffe.CPresentacion
             this.sPanel2.BorderColor = System.Drawing.Color.White;
             this.sPanel2.BorderRadius = 10;
             this.sPanel2.BorderSize = 0;
-            this.sPanel2.Controls.Add(this.customDateTimePicker2);
+            this.sPanel2.Controls.Add(this.dtpFechaHasta);
             this.sPanel2.ForeColor = System.Drawing.Color.White;
             this.sPanel2.Location = new System.Drawing.Point(800, 74);
             this.sPanel2.Name = "sPanel2";
             this.sPanel2.Size = new System.Drawing.Size(195, 46);
             this.sPanel2.TabIndex = 73;
             // 
-            // customDateTimePicker2
+            // dtpFechaHasta
             // 
-            this.customDateTimePicker2.BorderColor = System.Drawing.Color.Black;
-            this.customDateTimePicker2.BorderSize = 0;
-            this.customDateTimePicker2.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customDateTimePicker2.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
-            this.customDateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.customDateTimePicker2.Location = new System.Drawing.Point(4, 7);
-            this.customDateTimePicker2.MinimumSize = new System.Drawing.Size(4, 35);
-            this.customDateTimePicker2.Name = "customDateTimePicker2";
-            this.customDateTimePicker2.Size = new System.Drawing.Size(188, 35);
-            this.customDateTimePicker2.SkinColor = System.Drawing.Color.White;
-            this.customDateTimePicker2.TabIndex = 74;
-            this.customDateTimePicker2.TextColor = System.Drawing.Color.Black;
+            this.dtpFechaHasta.BorderColor = System.Drawing.Color.Black;
+            this.dtpFechaHasta.BorderSize = 0;
+            this.dtpFechaHasta.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaHasta.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
+            this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaHasta.Location = new System.Drawing.Point(4, 7);
+            this.dtpFechaHasta.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpFechaHasta.Name = "dtpFechaHasta";
+            this.dtpFechaHasta.Size = new System.Drawing.Size(188, 35);
+            this.dtpFechaHasta.SkinColor = System.Drawing.Color.White;
+            this.dtpFechaHasta.TabIndex = 74;
+            this.dtpFechaHasta.TextColor = System.Drawing.Color.Black;
+            this.dtpFechaHasta.ValueChanged += new System.EventHandler(this.dtpFechaHasta_ValueChanged);
             // 
-            // customDateTimePicker1
+            // dtpFechaDesde
             // 
-            this.customDateTimePicker1.BorderColor = System.Drawing.Color.Black;
-            this.customDateTimePicker1.BorderSize = 0;
-            this.customDateTimePicker1.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customDateTimePicker1.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
-            this.customDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.customDateTimePicker1.Location = new System.Drawing.Point(588, 81);
-            this.customDateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.customDateTimePicker1.Name = "customDateTimePicker1";
-            this.customDateTimePicker1.Size = new System.Drawing.Size(188, 35);
-            this.customDateTimePicker1.SkinColor = System.Drawing.Color.White;
-            this.customDateTimePicker1.TabIndex = 71;
-            this.customDateTimePicker1.TextColor = System.Drawing.Color.Black;
+            this.dtpFechaDesde.BorderColor = System.Drawing.Color.Black;
+            this.dtpFechaDesde.BorderSize = 0;
+            this.dtpFechaDesde.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaDesde.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
+            this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaDesde.Location = new System.Drawing.Point(588, 81);
+            this.dtpFechaDesde.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpFechaDesde.Name = "dtpFechaDesde";
+            this.dtpFechaDesde.Size = new System.Drawing.Size(188, 35);
+            this.dtpFechaDesde.SkinColor = System.Drawing.Color.White;
+            this.dtpFechaDesde.TabIndex = 71;
+            this.dtpFechaDesde.TextColor = System.Drawing.Color.Black;
+            this.dtpFechaDesde.Value = new System.DateTime(2024, 10, 29, 0, 0, 0, 0);
+            this.dtpFechaDesde.ValueChanged += new System.EventHandler(this.dtpFechaDesde_ValueChanged);
             // 
             // cboMesero
             // 
@@ -270,7 +289,7 @@ namespace TheCoffe.CPresentacion
             this.cboMesero.BorderColor = System.Drawing.Color.Transparent;
             this.cboMesero.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboMesero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMesero.DropDownWidth = 188;
+            this.cboMesero.DropDownWidth = 226;
             this.cboMesero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboMesero.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMesero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -279,9 +298,9 @@ namespace TheCoffe.CPresentacion
             "Emilia",
             "Juan",
             "Facundo"});
-            this.cboMesero.Location = new System.Drawing.Point(374, 89);
+            this.cboMesero.Location = new System.Drawing.Point(339, 85);
             this.cboMesero.Name = "cboMesero";
-            this.cboMesero.Size = new System.Drawing.Size(160, 24);
+            this.cboMesero.Size = new System.Drawing.Size(193, 24);
             this.cboMesero.TabIndex = 65;
             // 
             // modernTextBox2
@@ -294,7 +313,7 @@ namespace TheCoffe.CPresentacion
             this.modernTextBox2.Enabled = false;
             this.modernTextBox2.Font = new System.Drawing.Font("Roboto Medium", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modernTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox2.Location = new System.Drawing.Point(368, 74);
+            this.modernTextBox2.Location = new System.Drawing.Point(331, 74);
             this.modernTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.modernTextBox2.Multiline = false;
             this.modernTextBox2.Name = "modernTextBox2";
@@ -302,7 +321,7 @@ namespace TheCoffe.CPresentacion
             this.modernTextBox2.PasswordChar = false;
             this.modernTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.modernTextBox2.PlaceholderText = "";
-            this.modernTextBox2.Size = new System.Drawing.Size(195, 46);
+            this.modernTextBox2.Size = new System.Drawing.Size(232, 46);
             this.modernTextBox2.TabIndex = 64;
             this.modernTextBox2.Texts = "";
             this.modernTextBox2.UnderlinedStyle = false;
@@ -324,7 +343,7 @@ namespace TheCoffe.CPresentacion
             this.modernTextBox1.PasswordChar = false;
             this.modernTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
             this.modernTextBox1.PlaceholderText = "Buscar...";
-            this.modernTextBox1.Size = new System.Drawing.Size(329, 44);
+            this.modernTextBox1.Size = new System.Drawing.Size(291, 44);
             this.modernTextBox1.TabIndex = 18;
             this.modernTextBox1.Texts = "";
             this.modernTextBox1.UnderlinedStyle = false;
@@ -372,21 +391,11 @@ namespace TheCoffe.CPresentacion
             this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 25;
-            this.iconButton5.Location = new System.Drawing.Point(309, 84);
+            this.iconButton5.Location = new System.Drawing.Point(270, 82);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(38, 32);
             this.iconButton5.TabIndex = 19;
             this.iconButton5.UseVisualStyleBackColor = false;
-            // 
-            // detalle
-            // 
-            this.detalle.FillWeight = 70.1602F;
-            this.detalle.HeaderText = "Detalle";
-            this.detalle.Image = global::TheCoffe.Properties.Resources.detalle;
-            this.detalle.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.detalle.Name = "detalle";
-            this.detalle.ReadOnly = true;
-            this.detalle.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // SalesListForm
             // 
@@ -394,7 +403,7 @@ namespace TheCoffe.CPresentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Controls.Add(this.sPanel2);
-            this.Controls.Add(this.customDateTimePicker1);
+            this.Controls.Add(this.dtpFechaDesde);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnMesero);
@@ -426,18 +435,18 @@ namespace TheCoffe.CPresentacion
         private CustomComboBox cboMesero;
         private System.Windows.Forms.Label label2;
         private TheCoffe.Components.ModernTextBox modernTextBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private TheCoffe.Components.CustomDateTimePicker dtpFechaDesde;
+        private Sipaa.Framework.SPanel sPanel1;
+        private Sipaa.Framework.SPanel sPanel2;
+        private TheCoffe.Components.CustomDateTimePicker dtpFechaHasta;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewImageColumn detalle;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private TheCoffe.Components.CustomDateTimePicker customDateTimePicker1;
-        private Sipaa.Framework.SPanel sPanel1;
-        private Sipaa.Framework.SPanel sPanel2;
-        private TheCoffe.Components.CustomDateTimePicker customDateTimePicker2;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
     }
 }
