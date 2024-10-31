@@ -34,7 +34,6 @@ namespace TheCoffe.CPresentacion.Cajero
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.modernTextBox1 = new TheCoffe.Components.ModernTextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -42,12 +41,12 @@ namespace TheCoffe.CPresentacion.Cajero
             this.label25 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.cboWaiter = new TheCoffe.CPresentacion.Components.CustomComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlProducts = new System.Windows.Forms.FlowLayoutPanel();
             this.lblCountProduct = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblCajero = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -55,46 +54,24 @@ namespace TheCoffe.CPresentacion.Cajero
             this.lblNroMesa = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.btnCategory = new FontAwesome.Sharp.IconButton();
-            this.modernTextBox4 = new TheCoffe.Components.ModernTextBox();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.roundButton7 = new WindowsFormsApplication1.RoundButton();
-            this.roundButton6 = new WindowsFormsApplication1.RoundButton();
-            this.roundButton5 = new WindowsFormsApplication1.RoundButton();
             this.dataProducts = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.relleno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.pnlCategorias = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnPopulares = new WindowsFormsApplication1.RoundButton();
+            this.txtSearch = new TheCoffe.Components.ModernTextBox();
+            this.cboWaiter = new TheCoffe.CPresentacion.Components.CustomComboBox();
+            this.modernTextBox4 = new TheCoffe.Components.ModernTextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).BeginInit();
-            this.panel7.SuspendLayout();
+            this.pnlCategorias.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // modernTextBox1
-            // 
-            this.modernTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.modernTextBox1.BorderColor = System.Drawing.Color.DimGray;
-            this.modernTextBox1.BorderFocusColor = System.Drawing.Color.Black;
-            this.modernTextBox1.BorderRadius = 10;
-            this.modernTextBox1.BorderSize = 1;
-            this.modernTextBox1.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modernTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox1.Location = new System.Drawing.Point(376, 21);
-            this.modernTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.modernTextBox1.Multiline = false;
-            this.modernTextBox1.Name = "modernTextBox1";
-            this.modernTextBox1.Padding = new System.Windows.Forms.Padding(10, 16, 10, 7);
-            this.modernTextBox1.PasswordChar = false;
-            this.modernTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.modernTextBox1.PlaceholderText = "Buscar producto...";
-            this.modernTextBox1.Size = new System.Drawing.Size(298, 44);
-            this.modernTextBox1.TabIndex = 27;
-            this.modernTextBox1.Texts = "";
-            this.modernTextBox1.UnderlinedStyle = false;
             // 
             // panel4
             // 
@@ -129,7 +106,7 @@ namespace TheCoffe.CPresentacion.Cajero
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto Medium", 10F);
-            this.label4.Location = new System.Drawing.Point(16, 48);
+            this.label4.Location = new System.Drawing.Point(16, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 17);
             this.label4.TabIndex = 3;
@@ -163,26 +140,6 @@ namespace TheCoffe.CPresentacion.Cajero
             this.label1.TabIndex = 0;
             this.label1.Text = "Detalles de la orden";
             // 
-            // cboWaiter
-            // 
-            this.cboWaiter.BackColor = System.Drawing.Color.White;
-            this.cboWaiter.BorderColor = System.Drawing.Color.Transparent;
-            this.cboWaiter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cboWaiter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboWaiter.DropDownWidth = 143;
-            this.cboWaiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboWaiter.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
-            this.cboWaiter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cboWaiter.FormattingEnabled = true;
-            this.cboWaiter.Items.AddRange(new object[] {
-            "Juan Coronel",
-            "Pedro Ramirez",
-            "Jorge Gonzalez"});
-            this.cboWaiter.Location = new System.Drawing.Point(417, 506);
-            this.cboWaiter.Name = "cboWaiter";
-            this.cboWaiter.Size = new System.Drawing.Size(110, 24);
-            this.cboWaiter.TabIndex = 6;
-            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -205,9 +162,10 @@ namespace TheCoffe.CPresentacion.Cajero
             this.pnlProducts.AutoScroll = true;
             this.pnlProducts.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.pnlProducts.Location = new System.Drawing.Point(-1, 137);
-            this.pnlProducts.MaximumSize = new System.Drawing.Size(336, 422);
+            this.pnlProducts.MaximumSize = new System.Drawing.Size(336, 415);
+            this.pnlProducts.MinimumSize = new System.Drawing.Size(336, 405);
             this.pnlProducts.Name = "pnlProducts";
-            this.pnlProducts.Size = new System.Drawing.Size(336, 422);
+            this.pnlProducts.Size = new System.Drawing.Size(336, 412);
             this.pnlProducts.TabIndex = 7;
             this.pnlProducts.WrapContents = false;
             // 
@@ -234,22 +192,29 @@ namespace TheCoffe.CPresentacion.Cajero
             // panel3
             // 
             this.panel3.Controls.Add(this.panel7);
-            this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.label21);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.btnFinalizeOrder);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 555);
+            this.panel3.Location = new System.Drawing.Point(0, 548);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(331, 139);
+            this.panel3.Size = new System.Drawing.Size(331, 146);
             this.panel3.TabIndex = 4;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.lblTotal);
+            this.panel7.Location = new System.Drawing.Point(141, 50);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(172, 21);
+            this.panel7.TabIndex = 8;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.lblCajero);
-            this.panel6.Location = new System.Drawing.Point(136, 21);
+            this.panel6.Location = new System.Drawing.Point(136, 20);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(172, 17);
             this.panel6.TabIndex = 7;
@@ -269,7 +234,7 @@ namespace TheCoffe.CPresentacion.Cajero
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Roboto Medium", 10F);
-            this.label21.Location = new System.Drawing.Point(16, 18);
+            this.label21.Location = new System.Drawing.Point(16, 17);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(56, 17);
             this.label21.TabIndex = 5;
@@ -292,7 +257,7 @@ namespace TheCoffe.CPresentacion.Cajero
             this.btnFinalizeOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFinalizeOrder.IconSize = 35;
             this.btnFinalizeOrder.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnFinalizeOrder.Location = new System.Drawing.Point(13, 75);
+            this.btnFinalizeOrder.Location = new System.Drawing.Point(13, 81);
             this.btnFinalizeOrder.MinimumSize = new System.Drawing.Size(58, 0);
             this.btnFinalizeOrder.Name = "btnFinalizeOrder";
             this.btnFinalizeOrder.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
@@ -343,29 +308,6 @@ namespace TheCoffe.CPresentacion.Cajero
             this.btnCategory.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCategory.UseVisualStyleBackColor = false;
             // 
-            // modernTextBox4
-            // 
-            this.modernTextBox4.BackColor = System.Drawing.Color.White;
-            this.modernTextBox4.BorderColor = System.Drawing.Color.Transparent;
-            this.modernTextBox4.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.modernTextBox4.BorderRadius = 10;
-            this.modernTextBox4.BorderSize = 1;
-            this.modernTextBox4.Enabled = false;
-            this.modernTextBox4.Font = new System.Drawing.Font("Roboto Medium", 1.5F);
-            this.modernTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modernTextBox4.Location = new System.Drawing.Point(406, 500);
-            this.modernTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.modernTextBox4.Multiline = false;
-            this.modernTextBox4.Name = "modernTextBox4";
-            this.modernTextBox4.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
-            this.modernTextBox4.PasswordChar = false;
-            this.modernTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.modernTextBox4.PlaceholderText = "";
-            this.modernTextBox4.Size = new System.Drawing.Size(152, 32);
-            this.modernTextBox4.TabIndex = 74;
-            this.modernTextBox4.Texts = "";
-            this.modernTextBox4.UnderlinedStyle = false;
-            // 
             // iconButton5
             // 
             this.iconButton5.BackColor = System.Drawing.Color.White;
@@ -383,75 +325,6 @@ namespace TheCoffe.CPresentacion.Cajero
             this.iconButton5.Size = new System.Drawing.Size(38, 32);
             this.iconButton5.TabIndex = 28;
             this.iconButton5.UseVisualStyleBackColor = false;
-            // 
-            // roundButton7
-            // 
-            this.roundButton7.BackColor = System.Drawing.Color.White;
-            this.roundButton7.BackgroundColor = System.Drawing.Color.White;
-            this.roundButton7.BorderColor = System.Drawing.Color.DimGray;
-            this.roundButton7.BorderRadius = 20;
-            this.roundButton7.BorderSize = 1;
-            this.roundButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton7.FlatAppearance.BorderSize = 0;
-            this.roundButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton7.Font = new System.Drawing.Font("Roboto Medium", 11F);
-            this.roundButton7.ForeColor = System.Drawing.Color.DimGray;
-            this.roundButton7.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton7.IconColor = System.Drawing.Color.Black;
-            this.roundButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton7.Location = new System.Drawing.Point(288, 97);
-            this.roundButton7.Name = "roundButton7";
-            this.roundButton7.Size = new System.Drawing.Size(115, 40);
-            this.roundButton7.TabIndex = 26;
-            this.roundButton7.Text = "Pastelería";
-            this.roundButton7.TextColor = System.Drawing.Color.DimGray;
-            this.roundButton7.UseVisualStyleBackColor = false;
-            // 
-            // roundButton6
-            // 
-            this.roundButton6.BackColor = System.Drawing.Color.White;
-            this.roundButton6.BackgroundColor = System.Drawing.Color.White;
-            this.roundButton6.BorderColor = System.Drawing.Color.DimGray;
-            this.roundButton6.BorderRadius = 20;
-            this.roundButton6.BorderSize = 1;
-            this.roundButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton6.FlatAppearance.BorderSize = 0;
-            this.roundButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton6.Font = new System.Drawing.Font("Roboto Medium", 11F);
-            this.roundButton6.ForeColor = System.Drawing.Color.DimGray;
-            this.roundButton6.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton6.IconColor = System.Drawing.Color.Black;
-            this.roundButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton6.Location = new System.Drawing.Point(167, 96);
-            this.roundButton6.Name = "roundButton6";
-            this.roundButton6.Size = new System.Drawing.Size(115, 40);
-            this.roundButton6.TabIndex = 25;
-            this.roundButton6.Text = "Cafetería";
-            this.roundButton6.TextColor = System.Drawing.Color.DimGray;
-            this.roundButton6.UseVisualStyleBackColor = false;
-            // 
-            // roundButton5
-            // 
-            this.roundButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.roundButton5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.roundButton5.BorderColor = System.Drawing.Color.Black;
-            this.roundButton5.BorderRadius = 20;
-            this.roundButton5.BorderSize = 0;
-            this.roundButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton5.FlatAppearance.BorderSize = 0;
-            this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton5.Font = new System.Drawing.Font("Roboto Medium", 11F);
-            this.roundButton5.ForeColor = System.Drawing.Color.White;
-            this.roundButton5.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton5.IconColor = System.Drawing.Color.Black;
-            this.roundButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton5.Location = new System.Drawing.Point(14, 96);
-            this.roundButton5.Name = "roundButton5";
-            this.roundButton5.Size = new System.Drawing.Size(146, 40);
-            this.roundButton5.TabIndex = 24;
-            this.roundButton5.Text = "Más Populares";
-            this.roundButton5.TextColor = System.Drawing.Color.White;
-            this.roundButton5.UseVisualStyleBackColor = false;
             // 
             // dataProducts
             // 
@@ -491,7 +364,7 @@ namespace TheCoffe.CPresentacion.Cajero
             this.dataProducts.EnableHeadersVisualStyles = false;
             this.dataProducts.GridColor = System.Drawing.Color.Silver;
             this.dataProducts.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dataProducts.Location = new System.Drawing.Point(14, 168);
+            this.dataProducts.Location = new System.Drawing.Point(14, 177);
             this.dataProducts.MultiSelect = false;
             this.dataProducts.Name = "dataProducts";
             this.dataProducts.ReadOnly = true;
@@ -558,50 +431,134 @@ namespace TheCoffe.CPresentacion.Cajero
             this.precio.Name = "precio";
             this.precio.ReadOnly = true;
             // 
-            // panel5
+            // pnlCategorias
             // 
-            this.panel5.BackColor = System.Drawing.Color.Silver;
-            this.panel5.Location = new System.Drawing.Point(3, 6);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(331, 1);
-            this.panel5.TabIndex = 2;
+            this.pnlCategorias.Controls.Add(this.btnPopulares);
+            this.pnlCategorias.Font = new System.Drawing.Font("Roboto Medium", 11F);
+            this.pnlCategorias.ForeColor = System.Drawing.Color.DimGray;
+            this.pnlCategorias.Location = new System.Drawing.Point(14, 99);
+            this.pnlCategorias.Name = "pnlCategorias";
+            this.pnlCategorias.Size = new System.Drawing.Size(657, 48);
+            this.pnlCategorias.TabIndex = 75;
             // 
-            // panel7
+            // btnPopulares
             // 
-            this.panel7.Controls.Add(this.lblTotal);
-            this.panel7.Location = new System.Drawing.Point(141, 46);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(172, 21);
-            this.panel7.TabIndex = 8;
+            this.btnPopulares.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnPopulares.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnPopulares.BorderColor = System.Drawing.Color.Black;
+            this.btnPopulares.BorderRadius = 20;
+            this.btnPopulares.BorderSize = 0;
+            this.btnPopulares.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPopulares.FlatAppearance.BorderSize = 0;
+            this.btnPopulares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPopulares.Font = new System.Drawing.Font("Roboto Medium", 11F);
+            this.btnPopulares.ForeColor = System.Drawing.Color.White;
+            this.btnPopulares.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnPopulares.IconColor = System.Drawing.Color.Black;
+            this.btnPopulares.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPopulares.Location = new System.Drawing.Point(3, 3);
+            this.btnPopulares.Name = "btnPopulares";
+            this.btnPopulares.Size = new System.Drawing.Size(146, 40);
+            this.btnPopulares.TabIndex = 76;
+            this.btnPopulares.TabStop = false;
+            this.btnPopulares.Text = "Mas Populares";
+            this.btnPopulares.TextColor = System.Drawing.Color.White;
+            this.btnPopulares.UseVisualStyleBackColor = false;
+            this.btnPopulares.Click += new System.EventHandler(this.SeleccionarCategoria);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSearch.BorderColor = System.Drawing.Color.DimGray;
+            this.txtSearch.BorderFocusColor = System.Drawing.Color.Black;
+            this.txtSearch.BorderRadius = 10;
+            this.txtSearch.BorderSize = 1;
+            this.txtSearch.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSearch.Location = new System.Drawing.Point(376, 21);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Multiline = false;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(10, 16, 10, 7);
+            this.txtSearch.PasswordChar = false;
+            this.txtSearch.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.txtSearch.PlaceholderText = "Buscar producto...";
+            this.txtSearch.Size = new System.Drawing.Size(298, 44);
+            this.txtSearch.TabIndex = 27;
+            this.txtSearch.Texts = "";
+            this.txtSearch.UnderlinedStyle = false;
+            this.txtSearch._TextChanged += new System.EventHandler(this.txtSearch__TextChanged);
+            // 
+            // cboWaiter
+            // 
+            this.cboWaiter.BackColor = System.Drawing.Color.White;
+            this.cboWaiter.BorderColor = System.Drawing.Color.Transparent;
+            this.cboWaiter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboWaiter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboWaiter.DropDownWidth = 143;
+            this.cboWaiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboWaiter.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
+            this.cboWaiter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cboWaiter.FormattingEnabled = true;
+            this.cboWaiter.Items.AddRange(new object[] {
+            "Juan Coronel",
+            "Pedro Ramirez",
+            "Jorge Gonzalez"});
+            this.cboWaiter.Location = new System.Drawing.Point(417, 506);
+            this.cboWaiter.Name = "cboWaiter";
+            this.cboWaiter.Size = new System.Drawing.Size(110, 24);
+            this.cboWaiter.TabIndex = 6;
+            // 
+            // modernTextBox4
+            // 
+            this.modernTextBox4.BackColor = System.Drawing.Color.White;
+            this.modernTextBox4.BorderColor = System.Drawing.Color.Transparent;
+            this.modernTextBox4.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.modernTextBox4.BorderRadius = 10;
+            this.modernTextBox4.BorderSize = 1;
+            this.modernTextBox4.Enabled = false;
+            this.modernTextBox4.Font = new System.Drawing.Font("Roboto Medium", 1.5F);
+            this.modernTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.modernTextBox4.Location = new System.Drawing.Point(406, 500);
+            this.modernTextBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.modernTextBox4.Multiline = false;
+            this.modernTextBox4.Name = "modernTextBox4";
+            this.modernTextBox4.Padding = new System.Windows.Forms.Padding(10, 15, 10, 7);
+            this.modernTextBox4.PasswordChar = false;
+            this.modernTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.modernTextBox4.PlaceholderText = "";
+            this.modernTextBox4.Size = new System.Drawing.Size(152, 32);
+            this.modernTextBox4.TabIndex = 74;
+            this.modernTextBox4.Texts = "";
+            this.modernTextBox4.UnderlinedStyle = false;
             // 
             // Cajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlCategorias);
             this.Controls.Add(this.dataProducts);
             this.Controls.Add(this.btnCategory);
             this.Controls.Add(this.iconButton5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.modernTextBox1);
-            this.Controls.Add(this.roundButton7);
-            this.Controls.Add(this.roundButton6);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.cboWaiter);
-            this.Controls.Add(this.roundButton5);
             this.Controls.Add(this.modernTextBox4);
             this.Controls.Add(this.label25);
-            this.Controls.Add(this.panel1);
             this.Name = "Cajero";
             this.Size = new System.Drawing.Size(1014, 681);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.pnlCategorias.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -609,10 +566,7 @@ namespace TheCoffe.CPresentacion.Cajero
 
         #endregion
         private FontAwesome.Sharp.IconButton iconButton5;
-        private TheCoffe.Components.ModernTextBox modernTextBox1;
-        private WindowsFormsApplication1.RoundButton roundButton7;
-        private WindowsFormsApplication1.RoundButton roundButton6;
-        private WindowsFormsApplication1.RoundButton roundButton5;
+        private TheCoffe.Components.ModernTextBox txtSearch;
         private System.Windows.Forms.Panel panel4;
         private FontAwesome.Sharp.IconButton btnCategory;
         private System.Windows.Forms.Label label6;
@@ -640,6 +594,7 @@ namespace TheCoffe.CPresentacion.Cajero
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.FlowLayoutPanel pnlCategorias;
+        private WindowsFormsApplication1.RoundButton btnPopulares;
     }
 }

@@ -33,13 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataSaleDetail = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataSaleDetail)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,40 +116,6 @@
             this.dataSaleDetail.Size = new System.Drawing.Size(976, 479);
             this.dataSaleDetail.TabIndex = 17;
             // 
-            // ID
-            // 
-            this.ID.FillWeight = 94.16002F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.FillWeight = 99.19505F;
-            this.Nombre.HeaderText = "Producto";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.FillWeight = 103.6368F;
-            this.Precio.HeaderText = "Precio c/u";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // Categoria
-            // 
-            this.Categoria.FillWeight = 96.17036F;
-            this.Categoria.HeaderText = "Sub Total";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -178,6 +144,45 @@
             this.btnClose.TabIndex = 27;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "id_detalle";
+            this.ID.FillWeight = 94.16002F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Producto.nombre";
+            this.Nombre.FillWeight = 99.19505F;
+            this.Nombre.HeaderText = "Producto";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // cantidad
+            // 
+            this.cantidad.DataPropertyName = "cantidad";
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.DataPropertyName = "precio_unitario";
+            this.Precio.FillWeight = 103.6368F;
+            this.Precio.HeaderText = "Precio c/u";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Categoria
+            // 
+            this.Categoria.DataPropertyName = "subtotal";
+            this.Categoria.FillWeight = 96.17036F;
+            this.Categoria.HeaderText = "Sub Total";
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
             // 
             // SaleDetailListForm
             // 

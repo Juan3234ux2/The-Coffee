@@ -556,7 +556,7 @@ namespace TheCoffe.CPresentacion.Cajero
             // panel2
             // 
             this.panel2.Controls.Add(this.lblVuelto);
-            this.panel2.Location = new System.Drawing.Point(626, 356);
+            this.panel2.Location = new System.Drawing.Point(629, 356);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(172, 17);
             this.panel2.TabIndex = 90;

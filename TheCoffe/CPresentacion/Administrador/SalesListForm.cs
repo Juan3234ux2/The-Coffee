@@ -49,7 +49,7 @@ namespace TheCoffe.CPresentacion
             using (OverlayForm overlay = new OverlayForm())
                 {
                     overlay.Show();
-                    using (SaleDetailListForm modal = new SaleDetailListForm())
+                    using (SaleDetailListForm modal = new SaleDetailListForm(20))
                     {
                         modal.ShowDialog(overlay);
                     }

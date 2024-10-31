@@ -7,30 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheCoffe.CDatos;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.CPresentacion
 {
     public partial class SaleDetailListForm : Form
     {
         private bool isShowingMsgBox = false;
-        public SaleDetailListForm()
+        private OrderService orderService = new OrderService();
+        private int idPedido;
+        public SaleDetailListForm(int idPedido)
         {
             InitializeComponent();
+            this.idPedido = idPedido;
         }
-
+        private async void CargarDatos()
+        {
+            var detalle = await orderService.ObtenerDetallesDeUnPedido(idPedido);
+            dataSaleDetail.DataSource = detalle;
+                /*detalle.Select(p => new
+            {
+                p.id_detalle,
+                producto = p.Producto.nombre,
+                p.cantidad,
+                p.subtotal,
+                p.precio_unitario
+            }).ToList();*/
+        }
         private void SaleDetailListForm_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 3; i++)
-            {
-                int rowIndex = dataSaleDetail.Rows.Add();
-                DataGridViewRow row = dataSaleDetail.Rows[rowIndex];
-                row.Cells[0].Value = 1;
-                row.Cells[1].Value = "Cafe";
-                row.Cells[2].Value = "2";
-                row.Cells[3].Value = "3000";
-                row.Cells[4].Value = "6000";
-            }
-
             this.Opacity = 0;
             Timer timer = new Timer();
             timer.Interval = 10;
@@ -42,6 +48,7 @@ namespace TheCoffe.CPresentacion
                     timer.Stop();
             };
             timer.Start();
+            CargarDatos();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

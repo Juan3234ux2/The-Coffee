@@ -19,6 +19,10 @@ namespace TheCoffe.CNegocio.Services
         {
             return await _productRepository.Read(true);
         }
+        public async Task<List<Producto>> ObtenerProductosPörCategoria(string nombreCategoria)
+        {
+            return await _productRepository.GetProductsByCategory(nombreCategoria);
+        }
         public async Task<List<Producto>> ObtenerProductosEliminados()
         {
             return await _productRepository.Read(false);
@@ -67,7 +71,7 @@ namespace TheCoffe.CNegocio.Services
         {
             if (_productRepository.ExistProduct(producto))
             {
-                throw new Exception("Este usuario ya esta ocupado");
+                throw new Exception("Ya existe un producto con este nombre");
             }
             else
             {

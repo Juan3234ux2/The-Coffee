@@ -22,7 +22,10 @@ namespace TheCoffe.CNegocio.Services
         {
             return await _orderRepository.Read("Completado");
         }
-
+        public async Task<List<Venta_Detalle>> ObtenerDetallesDeUnPedido(int idPedido)
+        {
+            return await _orderRepository.ObtenerDetallesPedido(idPedido);
+        }
         public async Task<List<Venta>> ObtenerTodosLosPedidos()
         {
             return await _orderRepository.FindAll();
@@ -39,10 +42,12 @@ namespace TheCoffe.CNegocio.Services
         {
             return _orderDetailRepository.GetLastRecord();
         }
-        public void FinalizarPedido(int id)
+        public void FinalizarPedido(Venta venta)
         {
-            _orderRepository.ChangeState(id, "Completado");
-            Venta pedido = ObtenerPedidoPorID(id);
+            Venta pedido = venta;
+            pedido.monto_total = pedido.Venta_Detalle.Sum(d => d.precio_unitario * d.cantidad);
+            pedido.estado = "Completado";
+            ActualizarPedido(pedido);
             _tableService.CambiarDisponibilidad(pedido.id_mesa);
         }
         public void CrearVenta(Venta pedido)

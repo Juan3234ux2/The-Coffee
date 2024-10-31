@@ -21,6 +21,7 @@ namespace TheCoffe
         private TablesForm tablesForm;
         private SalesBoxForm salesBoxForm;
         private UserService _userService = new UserService();
+        private OrderService _orderService = new OrderService();
         private Usuario usuarioActual = AuthUser.Usuario;
         public MainFormCashier()
         {
@@ -29,6 +30,7 @@ namespace TheCoffe
             tablesForm = new TablesForm();
             salesBoxForm = new SalesBoxForm();
             tablesForm.mesaSeleccionada += selectedTable;
+            TakeOrder.finalizarOrden += finalizarPedido;
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -47,6 +49,13 @@ namespace TheCoffe
            SetActiveSection(btnTables);
            lblUser.Text = usuarioActual.nombreCompleto;
            imgUser.Image = Image.FromFile(_userService.ObtenerImagen());
+        }
+        private void finalizarPedido()
+        {            
+            tablesForm.CargarMesas();
+            CargarVistaMesas(btnTables);
+            salesBoxForm.CargarVentasDelTurno();
+            new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Pedido Finalizado", "Pedido Finalizado Exitosamente", Properties.Resources.informacion);
         }
         private void selectedTable(string p_mesaSeleccionada)
         {            
@@ -93,15 +102,18 @@ namespace TheCoffe
         
         private void btnTables_Click(object sender, EventArgs e)
         {
+            CargarVistaMesas(sender as RoundButton);
+        }
+        private void CargarVistaMesas(RoundButton button)
+        {
             if (Turno.TurnoActual.monto_cierre != null)
             {
                 MessageBox.Show("La caja está cerrada. No se pueden tomar órdenes.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            SetActiveSection(sender as RoundButton);
+            SetActiveSection(button);
             LoadUserControl(tablesForm);
         }
-
         private void BtnBox_Click(object sender, EventArgs e)
         {
             SetActiveSection(sender as RoundButton);

@@ -32,16 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFormCashier));
             this.pnlSideBar = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnLogout = new WindowsFormsApplication1.RoundButton();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlMain = new System.Windows.Forms.Panel();
-            this.transitionTimer = new System.Windows.Forms.Timer(this.components);
-            this.btnLogout = new WindowsFormsApplication1.RoundButton();
             this.imgUser = new System.Windows.Forms.PictureBox();
             this.BtnBox = new WindowsFormsApplication1.RoundButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnTables = new WindowsFormsApplication1.RoundButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlMain = new System.Windows.Forms.Panel();
+            this.transitionTimer = new System.Windows.Forms.Timer(this.components);
             this.pnlSideBar.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).BeginInit();
@@ -74,48 +74,6 @@
             this.panel3.Size = new System.Drawing.Size(248, 155);
             this.panel3.TabIndex = 24;
             // 
-            // lblRol
-            // 
-            this.lblRol.AutoSize = true;
-            this.lblRol.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.ForeColor = System.Drawing.Color.DimGray;
-            this.lblRol.Location = new System.Drawing.Point(101, 89);
-            this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(39, 13);
-            this.lblRol.TabIndex = 19;
-            this.lblRol.Text = "Cajero";
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(74, 70);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(95, 18);
-            this.lblUser.TabIndex = 2;
-            this.lblUser.Text = "Juan Coronel";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(249, 1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2, 680);
-            this.panel2.TabIndex = 22;
-            // 
-            // pnlMain
-            // 
-            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlMain.Location = new System.Drawing.Point(250, 0);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1014, 681);
-            this.pnlMain.TabIndex = 2;
-            // 
-            // transitionTimer
-            // 
-            this.transitionTimer.Interval = 30;
-            // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -142,6 +100,27 @@
             this.btnLogout.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // lblRol
+            // 
+            this.lblRol.AutoSize = true;
+            this.lblRol.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.ForeColor = System.Drawing.Color.DimGray;
+            this.lblRol.Location = new System.Drawing.Point(101, 89);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(39, 13);
+            this.lblRol.TabIndex = 19;
+            this.lblRol.Text = "Cajero";
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(74, 70);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(95, 18);
+            this.lblUser.TabIndex = 2;
+            this.lblUser.Text = "Juan Coronel";
             // 
             // imgUser
             // 
@@ -184,6 +163,14 @@
             this.BtnBox.UseVisualStyleBackColor = false;
             this.BtnBox.Click += new System.EventHandler(this.BtnBox_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(249, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(2, 680);
+            this.panel2.TabIndex = 22;
+            // 
             // btnTables
             // 
             this.btnTables.BackColor = System.Drawing.Color.White;
@@ -224,6 +211,19 @@
             this.pictureBox1.Size = new System.Drawing.Size(223, 80);
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
+            // 
+            // pnlMain
+            // 
+            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlMain.Location = new System.Drawing.Point(250, 0);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1014, 681);
+            this.pnlMain.TabIndex = 2;
+            // 
+            // transitionTimer
+            // 
+            this.transitionTimer.Interval = 30;
             // 
             // MainFormCashier
             // 

@@ -39,7 +39,15 @@ namespace TheCoffe.CAccesoADatos
             }
         }
 
-
+        public async Task<List<Producto>> GetProductsByCategory(string categoryName)
+        {
+            using (db = new DBTheCoffeeEntities())
+            {
+                return await db.Producto.Include(p => p.Categoria1)
+                    .Where(p => p.estado && p.Categoria1.descripcion == categoryName)
+                    .ToListAsync();
+            }
+        }
         public Producto SearchObject(int id)
         {
                 using (db = new DBTheCoffeeEntities())
@@ -86,7 +94,7 @@ namespace TheCoffe.CAccesoADatos
                 using (db = new DBTheCoffeeEntities())
                 {
                     return db.Producto.Where(p =>
-                    p.nombre.Contains(name) && p.estado == false).ToList();
+                    p.nombre.Contains(name) && p.estado == true).ToList();
                 }
         }
         public bool ExistProduct(Producto producto)

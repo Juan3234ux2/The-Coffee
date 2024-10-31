@@ -39,15 +39,18 @@ namespace TheCoffe.CPresentacion.Cajero
         {
             if (dataBoxSales.Columns[e.ColumnIndex].Name == "detalle")
             {
+                Console.WriteLine(dataBoxSales.CurrentRow.Cells[0].Value.ToString());
+                /*
+                int id = int.Parse(dataBoxSales.CurrentRow.Cells[0].Value.ToString());
                 using (OverlayForm overlay = new OverlayForm())
                 {
                     overlay.Show();
-                    using (SaleDetailListForm modal = new SaleDetailListForm())
+                    using (SaleDetailListForm modal = new SaleDetailListForm(id))
                     {
                         modal.ShowDialog(overlay);
                     }
                     overlay.Close();
-                }
+                }*/
             }
         }
         private void CerrarCaja()
@@ -63,21 +66,8 @@ namespace TheCoffe.CPresentacion.Cajero
             {
                 CerrarCaja();
             }
-            /*
-            for (int i = 0; i < 3; i++)
-            {
-                int rowIndex = dataBoxSales.Rows.Add();
-            }
-                
-                DataGridViewRow row = dataBoxSales.Rows[rowIndex];
-                row.Cells[0].Value = 1;                
-                row.Cells[1].Value = "Emilia";
-                row.Cells[2].Value = "2024-06-14";
-                row.Cells[3].Value = "20:10:05";
-                row.Cells[4].Value = "30,000";
-            }*/
         }
-        private async void CargarVentasDelTurno()
+        public async void CargarVentasDelTurno()
         {
             var ventas = await turnoService.ObtenerVentasDeUnTurno(Turno.TurnoActual.id_turno);
             double totalRecaudado = ventas.Sum(v => v.monto_total ?? 0);
@@ -89,7 +79,7 @@ namespace TheCoffe.CPresentacion.Cajero
                 mesero = v.Mesero.nombreCompleto,
                 fecha = v.fecha_venta?.ToString("dd-MM"),
                 hora = v.fecha_venta?.ToString("HH:mm"),
-                v.monto_total,
+                monto_total = $"$ {productService.FormatCurrency(v.monto_total??0)}",
             }).ToList();
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,8 +20,13 @@ namespace TheCoffe.CPresentacion.Cajero
         private bool isShowingMsgBox = false;
         private CustomerService customerService = new CustomerService();
         private ProductService productService = new ProductService();
+        private OrderService orderService = new OrderService();
+        private PrintDocument ticketDocument;
+        private PrintPreviewDialog ticketPreviewDialog;
         private double montoTotal;
-        public FinalizeOrder(Venta venta)
+        private Venta ventaTotal;
+        public event Action finishOrder;
+        public FinalizeOrder(Venta venta, Mesa mesa)
         {
             InitializeComponent();
             dataProducts.AutoGenerateColumns = false;
@@ -32,10 +38,46 @@ namespace TheCoffe.CPresentacion.Cajero
                 precio = $"$ {productService.FormatCurrency(d.subtotal)}",
             }).ToList();
             dataProducts.DataSource = listaVenta;
+            lblAddClient.Text = $"Finalizar Pedido - Mesa {mesa.nro_mesa}";
             lblCajero.Text = venta.Mesero.apellido + " " + venta.Mesero.nombre;
             montoTotal = venta.Venta_Detalle.Sum(d => d.subtotal);
+            ventaTotal = venta;
             lblTotal.Text = $"$ {productService.FormatCurrency(montoTotal)}";
+            ConfigurarTicket();
         }
+        private void ConfigurarTicket()
+        {
+            ticketDocument = new PrintDocument();
+            ticketDocument.PrintPage += new PrintPageEventHandler(PrintTicket_PrintPage);
+            int altoContenido = 430;
+            foreach(Venta_Detalle detalle in ventaTotal.Venta_Detalle)
+            {
+                altoContenido += 40;
+            }
+            ticketDocument.DefaultPageSettings.PaperSize = new PaperSize("Custom", 315, altoContenido);
+            ticketPreviewDialog = new PrintPreviewDialog
+            {
+                Document = ticketDocument,
+                Height = altoContenido,
+                ShowIcon = false,
+            };
+            ticketPreviewDialog.Shown += (sender, e) =>
+            {
+                DisablePrintButton(ticketPreviewDialog);
+                CenterPrintPreviewDialog(ticketPreviewDialog);
+            };
+            ticketPreviewDialog.FormClosed += (sender, e) =>
+            {
+                orderService.FinalizarPedido(ventaTotal);
+                finishOrder?.Invoke();
+            };
+        }
+        private void PrintTicket_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Ticket ticket = new Ticket();
+            ticket.CrearTicket(ventaTotal,e, double.Parse(txtCash.Texts.Trim()));
+        }
+
         private void CargarClientes()
         {
             cboCustomer.DataSource = customerService.ObtenerClientes();
@@ -107,9 +149,18 @@ namespace TheCoffe.CPresentacion.Cajero
                     MessageBoxIcon.Error);
                 isShowingMsgBox = false;
                 return;
+            }else if(montoTotal > double.Parse(txtCash.Texts.Trim()) )
+            {
+                isShowingMsgBox = true;
+                MessageBox.Show("El monto recibido no cubre la venta",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                isShowingMsgBox = false;
+                return;
             }
             else {
-                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Pedido Finalizado", "Pedido Finalizado Exitosamente", Properties.Resources.informacion);
+                ticketPreviewDialog.ShowDialog(this);
             }
         }
 
@@ -127,6 +178,39 @@ namespace TheCoffe.CPresentacion.Cajero
             {
                 lblVuelto.Text = $"$ {productService.FormatCurrency((amount - montoTotal))}";
             }
+        }
+        private void DisablePrintButton(PrintPreviewDialog dialog)
+        {
+            ToolStrip toolStrip = null;
+
+            foreach (Control control in dialog.Controls)
+            {
+                if (control is ToolStrip)
+                {
+                    toolStrip = (ToolStrip)control;
+                    break;
+                }
+            }
+
+            if (toolStrip != null)
+            {
+                foreach (ToolStripItem item in toolStrip.Items)
+                {
+                    if (item is ToolStripButton button && button.Text == "Imprimir")
+                    {
+                        button.Enabled = false;
+                    }
+                }
+            }
+        }
+        private void CenterPrintPreviewDialog(PrintPreviewDialog dialog)
+        {
+            var screenBounds = Screen.PrimaryScreen.WorkingArea;
+            dialog.StartPosition = FormStartPosition.Manual;
+            dialog.Location = new Point(
+                (screenBounds.Width - dialog.Width) / 2,
+                (screenBounds.Height - dialog.Height) / 2
+            );
         }
     }
 }

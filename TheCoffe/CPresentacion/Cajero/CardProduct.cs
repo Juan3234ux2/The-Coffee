@@ -34,12 +34,12 @@ namespace TheCoffe.CPresentacion.Cajero
             lblName.Text = product.nombre;            
             lblPrice.Text = $"$  {productService.FormatCurrency(product.precio * detalleVenta.cantidad)}";
             lblQty.Text = detalleVenta.cantidad.ToString();
+            ChangeQty?.Invoke();
         }
         private void btnMas_Click(object sender, EventArgs e)
         {
             orderService.ModificarCantidad(idDetalle,1,product.id_producto);
             CargarDatos();
-            ChangeQty?.Invoke();
         }
 
         private void btnMenos_Click(object sender, EventArgs e)
@@ -48,7 +48,6 @@ namespace TheCoffe.CPresentacion.Cajero
             {
                 orderService.ModificarCantidad(idDetalle, -1, product.id_producto);
                 CargarDatos();
-                ChangeQty?.Invoke();
             }
         }
 

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.sPanel1 = new Sipaa.Framework.SPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.btnMas = new AltoControls.AltoButton();
             this.btnMenos = new AltoControls.AltoButton();
             this.lblQty = new System.Windows.Forms.Label();
             this.btnDelete = new WindowsFormsApplication1.RoundButton();
-            this.lblPrice = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.sPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,12 +56,31 @@
             this.sPanel1.Controls.Add(this.btnDelete);
             this.sPanel1.Controls.Add(this.lblName);
             this.sPanel1.ForeColor = System.Drawing.Color.White;
-            this.sPanel1.Location = new System.Drawing.Point(4, 3);
+            this.sPanel1.Location = new System.Drawing.Point(2, 3);
             this.sPanel1.MaximumSize = new System.Drawing.Size(282, 109);
-            this.sPanel1.MinimumSize = new System.Drawing.Size(282, 109);
             this.sPanel1.Name = "sPanel1";
-            this.sPanel1.Size = new System.Drawing.Size(282, 109);
+            this.sPanel1.Size = new System.Drawing.Size(212, 109);
             this.sPanel1.TabIndex = 18;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblPrice);
+            this.panel1.Location = new System.Drawing.Point(101, 76);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(102, 19);
+            this.panel1.TabIndex = 16;
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblPrice.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblPrice.Location = new System.Drawing.Point(68, 0);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(34, 19);
+            this.lblPrice.TabIndex = 9;
+            this.lblPrice.Text = "$ 0";
             // 
             // lblDescription
             // 
@@ -152,24 +171,12 @@
             this.btnDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDelete.IconSize = 23;
-            this.btnDelete.Location = new System.Drawing.Point(227, 7);
+            this.btnDelete.Location = new System.Drawing.Point(167, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(51, 40);
             this.btnDelete.TabIndex = 10;
             this.btnDelete.TextColor = System.Drawing.Color.White;
             this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblPrice.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblPrice.Location = new System.Drawing.Point(79, 0);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(34, 19);
-            this.lblPrice.TabIndex = 9;
-            this.lblPrice.Text = "$ 0";
             // 
             // lblName
             // 
@@ -182,14 +189,6 @@
             this.lblName.TabIndex = 8;
             this.lblName.Text = "Nombre";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lblPrice);
-            this.panel1.Location = new System.Drawing.Point(150, 76);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(113, 19);
-            this.panel1.TabIndex = 16;
-            // 
             // CardProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,11 +196,10 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Controls.Add(this.sPanel1);
-            this.Margin = new System.Windows.Forms.Padding(17, 3, 3, 3);
+            this.Margin = new System.Windows.Forms.Padding(11, 3, 3, 3);
             this.MaximumSize = new System.Drawing.Size(290, 115);
-            this.MinimumSize = new System.Drawing.Size(290, 115);
             this.Name = "CardProduct";
-            this.Size = new System.Drawing.Size(290, 115);
+            this.Size = new System.Drawing.Size(218, 115);
             this.sPanel1.ResumeLayout(false);
             this.sPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);

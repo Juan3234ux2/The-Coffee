@@ -34,7 +34,19 @@ namespace TheCoffe.CAccesoADatos
             using (var db = new DBTheCoffeeEntities())
             {
                 return await db.Venta
+                              .Include(v => v.Venta_Detalle)
+                              .Include(v => v.Mesero)
                               .Where(v => v.id_turno == id_turno && v.estado == "Completado")
+                              .ToListAsync();
+            }
+        }
+        public async Task<List<Venta_Detalle>> ObtenerDetallesPedido(int id_pedido)
+        {
+            using (var db = new DBTheCoffeeEntities())
+            {
+                return await db.Venta_Detalle
+                              .Include(v => v.Producto)
+                              .Where(v => v.id_ventas == id_pedido)
                               .ToListAsync();
             }
         }
@@ -49,6 +61,7 @@ namespace TheCoffe.CAccesoADatos
                     .FirstOrDefaultAsync();
             }
         }
+        
         public async Task<List<Venta>> Read(string estado)
         {
             using (db = new DBTheCoffeeEntities())
