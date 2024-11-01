@@ -292,6 +292,7 @@ namespace TheCoffe.CPresentacion.Cajero
             this.cboRecibo.Name = "cboRecibo";
             this.cboRecibo.Size = new System.Drawing.Size(319, 24);
             this.cboRecibo.TabIndex = 77;
+            this.cboRecibo.SelectedIndexChanged += new System.EventHandler(this.cboRecibo_SelectedIndexChanged);
             // 
             // modernTextBox2
             // 

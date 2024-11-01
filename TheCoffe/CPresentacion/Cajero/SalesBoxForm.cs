@@ -76,7 +76,7 @@ namespace TheCoffe.CPresentacion.Cajero
             {
                 v.id_ventas,
                 mesero = v.Mesero.nombreCompleto,
-                fecha = v.fecha_venta?.ToString("dd-MM"),
+                fecha = v.fecha_venta?.ToString("dd-MM-yy"),
                 hora = v.fecha_venta?.ToString("HH:mm"),
                 monto_total = $"$ {productService.FormatCurrency(v.monto_total??0)}",
             }).ToList();

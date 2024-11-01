@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TheCoffe.App;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
+using TheCoffe.CNegocio;
 using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.CPresentacion.General
@@ -18,19 +19,26 @@ namespace TheCoffe.CPresentacion.General
     {
         private bool isShowingMsgBox = false;
         private readonly CategoryService _categoryService = new CategoryService();
+        private Paginator<Categoria1> paginator;
         private Categoria1 categoria = new Categoria1();
+        private int id;
         public RemovedCategoriesForm()
         {
             InitializeComponent();
             dataRemovedCategory.AutoGenerateColumns = false;
         }
 
-        private int id;
-
         public async void RefreshPantalla()
         {
             var Lst = await _categoryService.ObtenerCategoriasEliminadas();
-            dataRemovedCategory.DataSource = Lst;
+            paginator = new Paginator<Categoria1>(Lst, 9);
+            CargarDatos(paginator);
+        }
+        public void CargarDatos(Paginator<Categoria1> categorias)
+        {
+            dataRemovedCategory.DataSource = null;
+            dataRemovedCategory.DataSource = categorias.GetPageData();
+            ActualizarPaginacion(categorias);
         }
         private void RemovedCategoriesForm_Load(object sender, EventArgs e)
         {
@@ -45,7 +53,6 @@ namespace TheCoffe.CPresentacion.General
                     timer.Stop();
             };
             timer.Start();
-
             RefreshPantalla();
         }
 
@@ -76,7 +83,24 @@ namespace TheCoffe.CPresentacion.General
         {
             this.Close();
         }
+        private void ActualizarPaginacion(Paginator<Categoria1> categorias)
+        {
+            lblPagina.Text = $"Página {categorias.CurrentPage} de {categorias.TotalPages}";
+            btnAnt.Enabled = categorias.CurrentPage > 1;
+            btnSig.Enabled = categorias.CurrentPage < categorias.TotalPages;
+        }
 
+        private void btnSig_Click(object sender, EventArgs e)
+        {
+            paginator.NextPage();
+            CargarDatos(paginator);
+        }
+
+        private void btnAnt_Click(object sender, EventArgs e)
+        {
+            paginator.PreviousPage();
+            CargarDatos(paginator);
+        }
         private void dataRemovedCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

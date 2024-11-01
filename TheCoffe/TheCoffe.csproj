@@ -146,6 +146,7 @@
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
     <Compile Include="CNegocio\InputValidator.cs" />
+    <Compile Include="CNegocio\Paginator.cs" />
     <Compile Include="CNegocio\Services\AuthService.cs" />
     <Compile Include="CNegocio\Services\CategoryService.cs" />
     <Compile Include="CNegocio\Services\CustomerService.cs" />

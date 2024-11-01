@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using TheCoffe.App;
 using System.Windows.Forms;
 using TheCoffe.CNegocio.Services;
+using TheCoffe.CDatos;
+using TheCoffe.CNegocio;
 
 namespace TheCoffe.CPresentacion
 {
@@ -16,6 +18,7 @@ namespace TheCoffe.CPresentacion
     {
         OrderService orderService = new OrderService();
         WaiterService waiterService = new WaiterService();
+        private Paginator<Venta> paginator;
         public SalesListForm()
         {
             InitializeComponent();
@@ -23,27 +26,13 @@ namespace TheCoffe.CPresentacion
             dataSales.AutoGenerateColumns = false;
         }
 
-        private void roundButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private async void SalesListForm_Load(object sender, EventArgs e)
         {
-            await CargarDatos();
+            await ObtenerVentasFiltradas();
             cboMesero.DataSource = await waiterService.ObtenerTodosLosMeseros();
             cboMesero.DisplayMember = "nombreCompleto";
             cboMesero.ValueMember = "id_mesero";
         }
-        private async Task CargarDatos()
-        {
-            await ObtenerVentasFiltradas();
-        }
-        private void dataSales_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dataSales_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataSales.Columns[e.ColumnIndex].Name == "detalle")
@@ -73,7 +62,12 @@ namespace TheCoffe.CPresentacion
         private async Task ObtenerVentasFiltradas()
         {
             var ventasPorFecha = await orderService.FiltrarPorFecha(dtpFechaDesde.Value, dtpFechaHasta.Value);
-            dataSales.DataSource = ventasPorFecha.Select(v =>
+            paginator = new Paginator<Venta>(ventasPorFecha, 9);
+            CargarDatos(paginator);
+        }
+        public void CargarDatos(Paginator<Venta> ventas)
+        {
+            dataSales.DataSource = ventas.GetPageData().Select(v =>
             new
             {
                 v.id_ventas,
@@ -81,12 +75,26 @@ namespace TheCoffe.CPresentacion
                 fecha = v.fecha_venta?.ToString("dd-MM-yy"),
                 hora = v.fecha_venta?.ToString("HH:mm"),
                 monto_total = $" {(v.monto_total ?? 0).ToString("C")}",
-            }).ToList();
+            }).ToList(); 
+            ActualizarPaginacion(ventas);          
+        }
+        private void ActualizarPaginacion(Paginator<Venta> ventas)
+        {
+            lblPagina.Text = $"Página {ventas.CurrentPage} de {ventas.TotalPages}";
+            btnAnt.Enabled = ventas.CurrentPage > 1;
+            btnSig.Enabled = ventas.CurrentPage < ventas.TotalPages;
         }
 
-        private async void dtpFechaHasta_ValueChanged(object sender, EventArgs e)
+        private void btnAnt_Click(object sender, EventArgs e)
         {
-            await ObtenerVentasFiltradas();
+            paginator.PreviousPage();
+            CargarDatos(paginator);
+        }
+
+        private void btnSig_Click(object sender, EventArgs e)
+        {
+            paginator.NextPage();
+            CargarDatos(paginator);
         }
     }
 }

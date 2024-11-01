@@ -212,5 +212,19 @@ namespace TheCoffe.CPresentacion.Cajero
                 (screenBounds.Height - dialog.Height) / 2
             );
         }
+
+        private void cboRecibo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboRecibo.SelectedIndex == 0)
+            {
+                cboCustomer.Enabled = false;
+                btnAddClient.Enabled = false;
+            }
+            else
+            {
+                cboCustomer.Enabled = true;
+                btnAddClient.Enabled = true;
+            }
+        }
     }
 }

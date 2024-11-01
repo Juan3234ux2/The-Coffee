@@ -12,11 +12,13 @@ using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
 using System.Data.Entity;
 using TheCoffe.CNegocio.Services;
+using TheCoffe.CNegocio;
 
 namespace TheCoffe.App
 {
     public partial class CategoryList : UserControl
     {
+        private Paginator<Categoria1> paginator;
         private CategoryService _categoryService = new CategoryService();
         private Categoria1 categoria = new Categoria1();
         public CategoryList()
@@ -36,9 +38,9 @@ namespace TheCoffe.App
         {
             CategoryService service = new CategoryService();
             var categorias = await service.ObtenerCategoriasActivas();
-            dataCategory.DataSource = categorias;
+            paginator = new Paginator<Categoria1>(categorias,9);
+            CargarDatos(paginator);
         }
-
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
             using (OverlayForm overlay = new OverlayForm())
@@ -105,6 +107,30 @@ namespace TheCoffe.App
             {
                 RefreshPantalla();
             }
+        }
+        public void CargarDatos(Paginator<Categoria1> categorias)
+        {
+            dataCategory.DataSource = null;
+            dataCategory.DataSource = categorias.GetPageData();
+            ActualizarPaginacion(categorias);
+        }
+        private void ActualizarPaginacion(Paginator<Categoria1> categorias)
+        {
+            lblPagina.Text = $"Página {categorias.CurrentPage} de {categorias.TotalPages}";
+            btnAnt.Enabled = categorias.CurrentPage > 1;
+            btnSig.Enabled = categorias.CurrentPage < categorias.TotalPages;
+        }
+
+        private void btnSig_Click(object sender, EventArgs e)
+        {
+            paginator.NextPage();
+            CargarDatos(paginator);
+        }
+
+        private void btnAnt_Click(object sender, EventArgs e)
+        {
+            paginator.PreviousPage();
+            CargarDatos(paginator);
         }
     }
 }
