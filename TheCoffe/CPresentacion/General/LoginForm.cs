@@ -50,15 +50,15 @@ namespace TheCoffe
                     var usuario = authService.Login(txtUser.Texts, txtPassword.Texts);
                     AuthUser.Usuario = usuario;
                     Form mainForm = null;
-                    switch (AuthUser.Usuario.id_rol)
+                    switch (AuthUser.Usuario.rol_usuario.descripcion)
                     {
-                        case 1:
+                        case "Administrador":
                             mainForm = new MainForm();
                             break;
-                        case 2:
+                        case "Gerente":
                             mainForm = new MainFormManager();
                             break;
-                        case 3:
+                        case "Cajero":
                             mainForm = new MainFormCashier();
                             break;
                     }                    

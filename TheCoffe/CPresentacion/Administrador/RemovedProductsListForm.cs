@@ -11,11 +11,13 @@ using System.Windows.Forms;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
 using TheCoffe.CNegocio.Services;
+using TheCoffe.CNegocio;
 
 namespace TheCoffe.CPresentacion
 {
     public partial class RemovedProductsListForm : Form
     {
+        private Paginator<Producto> paginator;
         private bool isShowingMsgBox = false;
         private ProductService productService = new ProductService();
         private int id;
@@ -29,15 +31,8 @@ namespace TheCoffe.CPresentacion
         public async void RefreshPantalla()
         {
             var productos = await productService.ObtenerProductosEliminados();
-
-            dataRemovedProducts.DataSource = productos.Select(p =>
-            new
-            {
-                p.id_producto,
-                p.nombre,
-                p.precio,
-                c = p.Categoria1.descripcion
-            }).ToList();
+            paginator = new Paginator<Producto>(productos, 9);
+            CargarDatos(paginator);
 
         }
         private void RemovedProductsListForm_Load(object sender, EventArgs e)
@@ -71,12 +66,45 @@ namespace TheCoffe.CPresentacion
             }
         }
 
+        public void CargarDatos(Paginator<Producto> producto)
+        {
+            dataRemovedProducts.DataSource = null;
+            dataRemovedProducts.DataSource = producto.GetPageData().Select(p =>
+            new
+            {
+                p.id_producto,
+                p.nombre,
+                p.precio,
+                c = p.Categoria1.descripcion
+            }).ToList();
+            ActualizarPaginacion(producto);
+        }
+        private void ActualizarPaginacion(Paginator<Producto> productos)
+        {
+            lblPagina.Text = $"Página {productos.CurrentPage} de {productos.TotalPages}";
+            btnAnt.Enabled = productos.CurrentPage > 1;
+            btnSig.Enabled = productos.CurrentPage < productos.TotalPages;
+        }
+
+
         private void RemovedProductsListForm_Deactivate(object sender, EventArgs e)
         {
             if (!isShowingMsgBox)
             {
                 this.Close();
             }
+        }
+
+        private void btnAnt_Click(object sender, EventArgs e)
+        {
+            paginator.PreviousPage();
+            CargarDatos(paginator);
+        }
+
+        private void btnSig_Click(object sender, EventArgs e)
+        {
+            paginator.NextPage();
+            CargarDatos(paginator);
         }
     }
 }
