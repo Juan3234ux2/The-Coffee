@@ -20,23 +20,22 @@ namespace TheCoffe.CPresentacion.Gerente
         {
             InitializeComponent();
             PoblarChart();
-            PoblarChartDonas();
-            CargarDatos();
         }
-        private async void CargarDatos()
+        private async void SalesReportsForm_Load(object sender, EventArgs e)
         {
-            try
-            {
-                List<CategoriaEstadistica> ventas = await adminService.ObtenerVentasPorCategoria(dtpDesde.Value, dtpHasta.Value);
-            }catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            
+            await CargarDatos();
         }
-        private void PoblarChartDonas()
+        private async Task CargarDatos()
         {
-            // Crear una nueva serie de tipo Doughnut
+            List<CategoriaEstadistica> categoriaEstadisticas = await adminService.ObtenerVentasPorCategoria(dtpDesde.Value, dtpHasta.Value);
+            double promedioIngresos = await adminService.ObtenerPromedioIngresosDiarios(dtpDesde.Value, dtpHasta.Value);
+            int promedioCantidad = await adminService.ObtenerPromedioCantidadVentas(dtpDesde.Value, dtpHasta.Value);
+            lblIngresoPromedio.Text = promedioIngresos.ToString("C");
+            lblPromedioCantidad.Text = promedioCantidad.ToString();
+            PoblarChartDonas(categoriaEstadisticas);           
+        }
+        private void PoblarChartDonas(List<CategoriaEstadistica> estadisticas)
+        {
             Series serie = new Series("Categorias")
             {
                 ChartType = SeriesChartType.Doughnut,
@@ -44,14 +43,20 @@ namespace TheCoffe.CPresentacion.Gerente
             };
             serie.LabelForeColor = Color.White;
             serie.Font = new Font("Roboto", 10, FontStyle.Bold);
-
-
-            serie.Points.AddXY("Cafetería", 500);
-            serie.Points.AddXY("Pastelería", 300);
-            serie.Points.AddXY("Bebidas", 200);
+            if(estadisticas.Count == 0)
+            {
+                serie.Points.AddXY("Sin registros",100);
+            }
+            else
+            {
+                foreach(var categoria in estadisticas)
+                {
+                    serie.Points.AddXY(categoria.Categoria, categoria.TotalPedidos);
+                }
+            }
+            chartDona.Legends.First().Position.Height = estadisticas.Count == 0 ? 8: 8 * estadisticas.Count();
             chartDona.Series.Clear();
             chartDona.Series.Add(serie);
-
         }
 
         private void PoblarChart()
@@ -66,19 +71,13 @@ namespace TheCoffe.CPresentacion.Gerente
                 BorderWidth = 4,
             };
             serie.Points.AddXY("Enero", 300);
-            serie.Points.AddXY("Febrero", 250);
-            serie.Points.AddXY("Marzo", 200);
-            serie.Points.AddXY("Febrero", 270);
-            serie.Points.AddXY("Marzo", 400);
-            serie.Points.AddXY("Junio", 300);
-            serie.Points.AddXY("Julio", 450);
-            serie.Points.AddXY("Agosto", 450);
-            serie.Points.AddXY("Septiembre", 500);
-
             chart1.Series.Clear();
             chart1.Series.Add(serie);
         }
 
-     
+        private async void dtpDesde_ValueChanged(object sender, EventArgs e)
+        {
+            await CargarDatos();
+        }
     }
 }

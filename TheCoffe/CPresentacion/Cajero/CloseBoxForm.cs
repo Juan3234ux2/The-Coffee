@@ -79,7 +79,7 @@ namespace TheCoffe.CPresentacion.Cajero
             {
                 try
                 {
-                    double montoEsperado = Turno.TurnoActual.monto_inicial + totalRecaudado;
+                    double montoEsperado =  totalRecaudado;
                     Turno.TurnoActual.fecha_cierre = DateTime.Now;
                     Turno.TurnoActual.observaciones = txtObservaciones.Texts;
                     Turno.TurnoActual.monto_cierre = double.Parse(txtAmount.Texts.Trim());

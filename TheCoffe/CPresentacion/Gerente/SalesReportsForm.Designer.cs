@@ -28,30 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(45570D, 5D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(45571D, 10D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(45572D, 8D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(45573D, 15D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(45574D, 12D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(45575D, 3D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(45576D, 9D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(45570D, 5D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(45571D, 10D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(45572D, 8D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(45573D, 15D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(45574D, 12D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(45575D, 3D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(45576D, 9D);
             this.label6 = new System.Windows.Forms.Label();
             this.sPanel2 = new Sipaa.Framework.SPanel();
-            this.label3 = new System.Windows.Forms.Label();
             this.chartDona = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label3 = new System.Windows.Forms.Label();
             this.sPanel1 = new Sipaa.Framework.SPanel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label4 = new System.Windows.Forms.Label();
             this.sPanel3 = new Sipaa.Framework.SPanel();
-            this.dtpHasta = new TheCoffe.Components.CustomDateTimePicker();
-            this.dtpDesde = new TheCoffe.Components.CustomDateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.sPanel4 = new Sipaa.Framework.SPanel();
@@ -59,11 +57,13 @@
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label5 = new System.Windows.Forms.Label();
             this.sPanel6 = new Sipaa.Framework.SPanel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblIngresoPromedio = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.sPanel7 = new Sipaa.Framework.SPanel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblPromedioCantidad = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.dtpHasta = new TheCoffe.Components.CustomDateTimePicker();
+            this.dtpDesde = new TheCoffe.Components.CustomDateTimePicker();
             this.sPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDona)).BeginInit();
             this.sPanel1.SuspendLayout();
@@ -91,13 +91,99 @@
             this.sPanel2.BorderColor = System.Drawing.Color.White;
             this.sPanel2.BorderRadius = 15;
             this.sPanel2.BorderSize = 0;
-            this.sPanel2.Controls.Add(this.label3);
             this.sPanel2.Controls.Add(this.chartDona);
+            this.sPanel2.Controls.Add(this.label3);
             this.sPanel2.ForeColor = System.Drawing.Color.White;
-            this.sPanel2.Location = new System.Drawing.Point(765, 74);
+            this.sPanel2.Location = new System.Drawing.Point(675, 74);
             this.sPanel2.Name = "sPanel2";
-            this.sPanel2.Size = new System.Drawing.Size(230, 301);
+            this.sPanel2.Size = new System.Drawing.Size(320, 301);
             this.sPanel2.TabIndex = 73;
+            // 
+            // chartDona
+            // 
+            this.chartDona.BackSecondaryColor = System.Drawing.Color.White;
+            this.chartDona.BorderSkin.BackColor = System.Drawing.Color.DarkRed;
+            chartArea4.AxisX.Crossing = -1.7976931348623157E+308D;
+            chartArea4.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
+            chartArea4.AxisX.IsLabelAutoFit = false;
+            chartArea4.AxisX.IsStartedFromZero = false;
+            chartArea4.AxisX.LabelStyle.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea4.AxisX.MajorGrid.Enabled = false;
+            chartArea4.AxisX.Maximum = 7D;
+            chartArea4.AxisX.MaximumAutoSize = 90F;
+            chartArea4.AxisX.Minimum = 1D;
+            chartArea4.AxisX.ScrollBar.Enabled = false;
+            chartArea4.AxisX.ScrollBar.Size = 6D;
+            chartArea4.AxisX.TitleFont = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea4.AxisX.TitleForeColor = System.Drawing.Color.White;
+            chartArea4.AxisY.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea4.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea4.AxisY.IsLabelAutoFit = false;
+            chartArea4.AxisY.IsMarginVisible = false;
+            chartArea4.AxisY.IsMarksNextToAxis = false;
+            chartArea4.AxisY.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)(((((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont) 
+            | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.StaggeredLabels) 
+            | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45) 
+            | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.WordWrap)));
+            chartArea4.AxisY.LabelStyle.Font = new System.Drawing.Font("Roboto Medium", 8F);
+            chartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea4.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisY.MajorGrid.Enabled = false;
+            chartArea4.AxisY.TitleFont = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea4.AxisY.TitleForeColor = System.Drawing.Color.White;
+            chartArea4.BackColor = System.Drawing.Color.Transparent;
+            chartArea4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            chartArea4.BorderColor = System.Drawing.Color.Transparent;
+            chartArea4.Name = "ChartArea1";
+            chartArea4.Position.Auto = false;
+            chartArea4.Position.Height = 80F;
+            chartArea4.Position.Width = 80F;
+            chartArea4.Position.X = 3F;
+            chartArea4.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.chartDona.ChartAreas.Add(chartArea4);
+            legend2.Alignment = System.Drawing.StringAlignment.Center;
+            legend2.BackColor = System.Drawing.Color.Transparent;
+            legend2.DockedToChartArea = "ChartArea1";
+            legend2.Font = new System.Drawing.Font("Roboto Medium", 8F);
+            legend2.IsDockedInsideChartArea = false;
+            legend2.IsEquallySpacedItems = true;
+            legend2.IsTextAutoFit = false;
+            legend2.ItemColumnSpacing = 1;
+            legend2.LegendItemOrder = System.Windows.Forms.DataVisualization.Charting.LegendItemOrder.SameAsSeriesOrder;
+            legend2.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Column;
+            legend2.MaximumAutoSize = 100F;
+            legend2.Name = "Legend1";
+            legend2.Position.Auto = false;
+            legend2.Position.Height = 8.363636F;
+            legend2.Position.Width = 30F;
+            legend2.Position.X = 70F;
+            legend2.Position.Y = 1F;
+            legend2.TextWrapThreshold = 30;
+            this.chartDona.Legends.Add(legend2);
+            this.chartDona.Location = new System.Drawing.Point(-37, 51);
+            this.chartDona.Name = "chartDona";
+            this.chartDona.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chartDona.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(49)))), ((int)(((byte)(82))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(129))))),
+        System.Drawing.Color.DarkTurquoise};
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series4.Color = System.Drawing.Color.White;
+            series4.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series4.IsValueShownAsLabel = true;
+            series4.IsVisibleInLegend = false;
+            series4.LabelForeColor = System.Drawing.Color.White;
+            series4.Legend = "Legend1";
+            series4.MarkerBorderWidth = 4;
+            series4.Name = "Series1";
+            series4.SmartLabelStyle.Enabled = false;
+            this.chartDona.Series.Add(series4);
+            this.chartDona.Size = new System.Drawing.Size(349, 276);
+            this.chartDona.TabIndex = 27;
+            this.chartDona.Text = "chart2";
             // 
             // label3
             // 
@@ -106,93 +192,9 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(14, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 19);
+            this.label3.Size = new System.Drawing.Size(191, 19);
             this.label3.TabIndex = 26;
-            this.label3.Text = "Ventas Por Categoría";
-            // 
-            // chartDona
-            // 
-            this.chartDona.BackSecondaryColor = System.Drawing.Color.White;
-            this.chartDona.BorderSkin.BackColor = System.Drawing.Color.DarkRed;
-            chartArea1.AxisX.Crossing = -1.7976931348623157E+308D;
-            chartArea1.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
-            chartArea1.AxisX.IsLabelAutoFit = false;
-            chartArea1.AxisX.IsStartedFromZero = false;
-            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.AxisX.Maximum = 7D;
-            chartArea1.AxisX.MaximumAutoSize = 90F;
-            chartArea1.AxisX.Minimum = 1D;
-            chartArea1.AxisX.ScrollBar.Enabled = false;
-            chartArea1.AxisX.ScrollBar.Size = 6D;
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
-            chartArea1.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea1.AxisY.IsLabelAutoFit = false;
-            chartArea1.AxisY.IsMarginVisible = false;
-            chartArea1.AxisY.IsMarksNextToAxis = false;
-            chartArea1.AxisY.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)(((((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont) 
-            | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.StaggeredLabels) 
-            | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45) 
-            | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.WordWrap)));
-            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Roboto Medium", 8F);
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.MajorGrid.Enabled = false;
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.White;
-            chartArea1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            chartArea1.BorderColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            chartArea1.Position.Auto = false;
-            chartArea1.Position.Height = 85F;
-            chartArea1.Position.Width = 85F;
-            chartArea1.Position.X = 3F;
-            chartArea1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.chartDona.ChartAreas.Add(chartArea1);
-            legend1.Alignment = System.Drawing.StringAlignment.Center;
-            legend1.BackColor = System.Drawing.Color.Transparent;
-            legend1.DockedToChartArea = "ChartArea1";
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend1.Font = new System.Drawing.Font("Roboto Medium", 8F);
-            legend1.IsDockedInsideChartArea = false;
-            legend1.IsEquallySpacedItems = true;
-            legend1.IsTextAutoFit = false;
-            legend1.ItemColumnSpacing = 1;
-            legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
-            legend1.MaximumAutoSize = 100F;
-            legend1.Name = "Legend1";
-            legend1.Position.Auto = false;
-            legend1.Position.Height = 15F;
-            legend1.Position.Width = 100F;
-            legend1.Position.Y = 80F;
-            legend1.TextWrapThreshold = 30;
-            this.chartDona.Legends.Add(legend1);
-            this.chartDona.Location = new System.Drawing.Point(1, 19);
-            this.chartDona.Name = "chartDona";
-            this.chartDona.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.chartDona.PaletteCustomColors = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(49)))), ((int)(((byte)(82))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(129)))))};
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Color = System.Drawing.Color.White;
-            series1.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.IsValueShownAsLabel = true;
-            series1.IsVisibleInLegend = false;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.MarkerBorderWidth = 4;
-            series1.Name = "Series1";
-            series1.SmartLabelStyle.Enabled = false;
-            this.chartDona.Series.Add(series1);
-            this.chartDona.Size = new System.Drawing.Size(252, 276);
-            this.chartDona.TabIndex = 27;
-            this.chartDona.Text = "chart2";
+            this.label3.Text = "Categoría Mas Populares";
             // 
             // sPanel1
             // 
@@ -205,7 +207,7 @@
             this.sPanel1.ForeColor = System.Drawing.Color.White;
             this.sPanel1.Location = new System.Drawing.Point(17, 74);
             this.sPanel1.Name = "sPanel1";
-            this.sPanel1.Size = new System.Drawing.Size(726, 301);
+            this.sPanel1.Size = new System.Drawing.Size(631, 301);
             this.sPanel1.TabIndex = 72;
             // 
             // chart1
@@ -214,57 +216,57 @@
             this.chart1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
             this.chart1.BackSecondaryColor = System.Drawing.Color.Transparent;
             this.chart1.BorderSkin.BackColor = System.Drawing.Color.DarkRed;
-            chartArea2.AxisX.Crossing = -1.7976931348623157E+308D;
-            chartArea2.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
-            chartArea2.AxisX.IsLabelAutoFit = false;
-            chartArea2.AxisX.IsMarginVisible = false;
-            chartArea2.AxisX.IsStartedFromZero = false;
-            chartArea2.AxisX.LabelStyle.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisX.MajorGrid.Enabled = false;
-            chartArea2.AxisX.MaximumAutoSize = 90F;
-            chartArea2.AxisX.ScrollBar.Enabled = false;
-            chartArea2.AxisX.ScrollBar.Size = 6D;
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
-            chartArea2.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea2.AxisY.IsLabelAutoFit = false;
-            chartArea2.AxisY.IsMarksNextToAxis = false;
-            chartArea2.AxisY.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)(((((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont) 
+            chartArea5.AxisX.Crossing = -1.7976931348623157E+308D;
+            chartArea5.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea5.AxisX.IsLabelAutoFit = false;
+            chartArea5.AxisX.IsMarginVisible = false;
+            chartArea5.AxisX.IsStartedFromZero = false;
+            chartArea5.AxisX.LabelStyle.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea5.AxisX.MajorGrid.Enabled = false;
+            chartArea5.AxisX.MaximumAutoSize = 90F;
+            chartArea5.AxisX.ScrollBar.Enabled = false;
+            chartArea5.AxisX.ScrollBar.Size = 6D;
+            chartArea5.AxisX.TitleFont = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea5.AxisY.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea5.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea5.AxisY.IsLabelAutoFit = false;
+            chartArea5.AxisY.IsMarksNextToAxis = false;
+            chartArea5.AxisY.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)(((((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont) 
             | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.StaggeredLabels) 
             | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45) 
             | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.WordWrap)));
-            chartArea2.AxisY.LabelStyle.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.MajorGrid.Enabled = false;
-            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            chartArea2.BorderColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            chartArea2.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.chart1.ChartAreas.Add(chartArea2);
+            chartArea5.AxisY.LabelStyle.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea5.AxisY.MajorGrid.Enabled = false;
+            chartArea5.AxisY.TitleFont = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea5.BackColor = System.Drawing.Color.Transparent;
+            chartArea5.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            chartArea5.BorderColor = System.Drawing.Color.Transparent;
+            chartArea5.Name = "ChartArea1";
+            chartArea5.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.chart1.ChartAreas.Add(chartArea5);
             this.chart1.Location = new System.Drawing.Point(-23, 36);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))))};
-            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            series2.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            series2.BorderColor = System.Drawing.Color.Navy;
-            series2.BorderWidth = 2;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(200)))));
-            series2.Font = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series2.IsValueShownAsLabel = true;
-            series2.IsVisibleInLegend = false;
-            series2.IsXValueIndexed = true;
-            series2.LabelFormat = "        $ {0:N2}";
-            series2.MarkerBorderWidth = 4;
-            series2.Name = "Series1";
-            series2.SmartLabelStyle.Enabled = false;
-            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(771, 267);
+            series5.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            series5.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            series5.BorderColor = System.Drawing.Color.Navy;
+            series5.BorderWidth = 2;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(200)))));
+            series5.Font = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series5.IsValueShownAsLabel = true;
+            series5.IsVisibleInLegend = false;
+            series5.IsXValueIndexed = true;
+            series5.LabelFormat = "        $ {0:N2}";
+            series5.MarkerBorderWidth = 4;
+            series5.Name = "Series1";
+            series5.SmartLabelStyle.Enabled = false;
+            series5.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            this.chart1.Series.Add(series5);
+            this.chart1.Size = new System.Drawing.Size(637, 267);
             this.chart1.TabIndex = 26;
             this.chart1.Text = "chart1";
             // 
@@ -291,37 +293,6 @@
             this.sPanel3.Name = "sPanel3";
             this.sPanel3.Size = new System.Drawing.Size(195, 46);
             this.sPanel3.TabIndex = 78;
-            // 
-            // dtpHasta
-            // 
-            this.dtpHasta.BorderColor = System.Drawing.Color.Black;
-            this.dtpHasta.BorderSize = 0;
-            this.dtpHasta.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpHasta.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
-            this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHasta.Location = new System.Drawing.Point(4, 7);
-            this.dtpHasta.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(188, 35);
-            this.dtpHasta.SkinColor = System.Drawing.Color.White;
-            this.dtpHasta.TabIndex = 74;
-            this.dtpHasta.TextColor = System.Drawing.Color.Black;
-            // 
-            // dtpDesde
-            // 
-            this.dtpDesde.BorderColor = System.Drawing.Color.Black;
-            this.dtpDesde.BorderSize = 0;
-            this.dtpDesde.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDesde.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
-            this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDesde.Location = new System.Drawing.Point(522, 24);
-            this.dtpDesde.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(188, 35);
-            this.dtpDesde.SkinColor = System.Drawing.Color.White;
-            this.dtpDesde.TabIndex = 76;
-            this.dtpDesde.TextColor = System.Drawing.Color.Black;
-            this.dtpDesde.Value = new System.DateTime(2024, 10, 29, 0, 0, 0, 0);
             // 
             // label1
             // 
@@ -366,7 +337,7 @@
             this.sPanel5.ForeColor = System.Drawing.Color.White;
             this.sPanel5.Location = new System.Drawing.Point(17, 392);
             this.sPanel5.Name = "sPanel5";
-            this.sPanel5.Size = new System.Drawing.Size(726, 265);
+            this.sPanel5.Size = new System.Drawing.Size(631, 265);
             this.sPanel5.TabIndex = 73;
             // 
             // chart2
@@ -375,65 +346,65 @@
             this.chart2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
             this.chart2.BackSecondaryColor = System.Drawing.Color.Transparent;
             this.chart2.BorderSkin.BackColor = System.Drawing.Color.DarkRed;
-            chartArea3.AxisX.Crossing = -1.7976931348623157E+308D;
-            chartArea3.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
-            chartArea3.AxisX.IsLabelAutoFit = false;
-            chartArea3.AxisX.IsMarginVisible = false;
-            chartArea3.AxisX.IsStartedFromZero = false;
-            chartArea3.AxisX.LabelStyle.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisX.MajorGrid.Enabled = false;
-            chartArea3.AxisX.MaximumAutoSize = 95F;
-            chartArea3.AxisX.ScaleBreakStyle.Spacing = 1D;
-            chartArea3.AxisX.ScaleBreakStyle.StartFromZero = System.Windows.Forms.DataVisualization.Charting.StartFromZero.Yes;
-            chartArea3.AxisX.ScrollBar.Enabled = false;
-            chartArea3.AxisX.ScrollBar.Size = 6D;
-            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisY.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
-            chartArea3.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea3.AxisY.IsLabelAutoFit = false;
-            chartArea3.AxisY.IsMarginVisible = false;
-            chartArea3.AxisY.IsMarksNextToAxis = false;
-            chartArea3.AxisY.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)(((((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont) 
+            chartArea6.AxisX.Crossing = -1.7976931348623157E+308D;
+            chartArea6.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea6.AxisX.IsLabelAutoFit = false;
+            chartArea6.AxisX.IsMarginVisible = false;
+            chartArea6.AxisX.IsStartedFromZero = false;
+            chartArea6.AxisX.LabelStyle.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.AxisX.MajorGrid.Enabled = false;
+            chartArea6.AxisX.MaximumAutoSize = 95F;
+            chartArea6.AxisX.ScaleBreakStyle.Spacing = 1D;
+            chartArea6.AxisX.ScaleBreakStyle.StartFromZero = System.Windows.Forms.DataVisualization.Charting.StartFromZero.Yes;
+            chartArea6.AxisX.ScrollBar.Enabled = false;
+            chartArea6.AxisX.ScrollBar.Size = 6D;
+            chartArea6.AxisX.TitleFont = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.AxisY.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea6.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea6.AxisY.IsLabelAutoFit = false;
+            chartArea6.AxisY.IsMarginVisible = false;
+            chartArea6.AxisY.IsMarksNextToAxis = false;
+            chartArea6.AxisY.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)(((((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont) 
             | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.StaggeredLabels) 
             | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45) 
             | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.WordWrap)));
-            chartArea3.AxisY.LabelStyle.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisY.MajorGrid.Enabled = false;
-            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            chartArea3.BorderColor = System.Drawing.Color.Transparent;
-            chartArea3.Name = "ChartArea1";
-            chartArea3.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.chart2.ChartAreas.Add(chartArea3);
+            chartArea6.AxisY.LabelStyle.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.AxisY.MajorGrid.Enabled = false;
+            chartArea6.AxisY.TitleFont = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.BackColor = System.Drawing.Color.Transparent;
+            chartArea6.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            chartArea6.BorderColor = System.Drawing.Color.Transparent;
+            chartArea6.Name = "ChartArea1";
+            chartArea6.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.chart2.ChartAreas.Add(chartArea6);
             this.chart2.Location = new System.Drawing.Point(-15, 34);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart2.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))))};
-            series3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            series3.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            series3.BorderColor = System.Drawing.Color.Navy;
-            series3.BorderWidth = 2;
-            series3.ChartArea = "ChartArea1";
-            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(200)))));
-            series3.Font = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series3.IsVisibleInLegend = false;
-            series3.IsXValueIndexed = true;
-            series3.MarkerBorderWidth = 4;
-            series3.Name = "Series1";
-            series3.Points.Add(dataPoint1);
-            series3.Points.Add(dataPoint2);
-            series3.Points.Add(dataPoint3);
-            series3.Points.Add(dataPoint4);
-            series3.Points.Add(dataPoint5);
-            series3.Points.Add(dataPoint6);
-            series3.Points.Add(dataPoint7);
-            series3.SmartLabelStyle.Enabled = false;
-            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series3.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int64;
-            this.chart2.Series.Add(series3);
-            this.chart2.Size = new System.Drawing.Size(738, 235);
+            series6.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            series6.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            series6.BorderColor = System.Drawing.Color.Navy;
+            series6.BorderWidth = 2;
+            series6.ChartArea = "ChartArea1";
+            series6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(200)))));
+            series6.Font = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series6.IsVisibleInLegend = false;
+            series6.IsXValueIndexed = true;
+            series6.MarkerBorderWidth = 4;
+            series6.Name = "Series1";
+            series6.Points.Add(dataPoint8);
+            series6.Points.Add(dataPoint9);
+            series6.Points.Add(dataPoint10);
+            series6.Points.Add(dataPoint11);
+            series6.Points.Add(dataPoint12);
+            series6.Points.Add(dataPoint13);
+            series6.Points.Add(dataPoint14);
+            series6.SmartLabelStyle.Enabled = false;
+            series6.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series6.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int64;
+            this.chart2.Series.Add(series6);
+            this.chart2.Size = new System.Drawing.Size(646, 235);
             this.chart2.TabIndex = 26;
             this.chart2.Text = "chart2";
             // 
@@ -454,24 +425,24 @@
             this.sPanel6.BorderColor = System.Drawing.Color.White;
             this.sPanel6.BorderRadius = 15;
             this.sPanel6.BorderSize = 1;
-            this.sPanel6.Controls.Add(this.label8);
+            this.sPanel6.Controls.Add(this.lblIngresoPromedio);
             this.sPanel6.Controls.Add(this.label7);
             this.sPanel6.ForeColor = System.Drawing.Color.White;
-            this.sPanel6.Location = new System.Drawing.Point(765, 389);
+            this.sPanel6.Location = new System.Drawing.Point(675, 389);
             this.sPanel6.Name = "sPanel6";
-            this.sPanel6.Size = new System.Drawing.Size(230, 120);
+            this.sPanel6.Size = new System.Drawing.Size(320, 120);
             this.sPanel6.TabIndex = 74;
             // 
-            // label8
+            // lblIngresoPromedio
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Roboto", 32F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label8.Location = new System.Drawing.Point(12, 44);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(184, 52);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "$54,800";
+            this.lblIngresoPromedio.AutoSize = true;
+            this.lblIngresoPromedio.Font = new System.Drawing.Font("Roboto", 32F, System.Drawing.FontStyle.Bold);
+            this.lblIngresoPromedio.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblIngresoPromedio.Location = new System.Drawing.Point(8, 44);
+            this.lblIngresoPromedio.Name = "lblIngresoPromedio";
+            this.lblIngresoPromedio.Size = new System.Drawing.Size(73, 52);
+            this.lblIngresoPromedio.TabIndex = 23;
+            this.lblIngresoPromedio.Text = "$0";
             // 
             // label7
             // 
@@ -490,24 +461,24 @@
             this.sPanel7.BorderColor = System.Drawing.Color.White;
             this.sPanel7.BorderRadius = 15;
             this.sPanel7.BorderSize = 1;
-            this.sPanel7.Controls.Add(this.label9);
+            this.sPanel7.Controls.Add(this.lblPromedioCantidad);
             this.sPanel7.Controls.Add(this.label10);
             this.sPanel7.ForeColor = System.Drawing.Color.White;
-            this.sPanel7.Location = new System.Drawing.Point(765, 537);
+            this.sPanel7.Location = new System.Drawing.Point(675, 537);
             this.sPanel7.Name = "sPanel7";
-            this.sPanel7.Size = new System.Drawing.Size(230, 120);
+            this.sPanel7.Size = new System.Drawing.Size(320, 120);
             this.sPanel7.TabIndex = 75;
             // 
-            // label9
+            // lblPromedioCantidad
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Roboto", 32F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.Navy;
-            this.label9.Location = new System.Drawing.Point(12, 44);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 52);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "47";
+            this.lblPromedioCantidad.AutoSize = true;
+            this.lblPromedioCantidad.Font = new System.Drawing.Font("Roboto", 32F, System.Drawing.FontStyle.Bold);
+            this.lblPromedioCantidad.ForeColor = System.Drawing.Color.Navy;
+            this.lblPromedioCantidad.Location = new System.Drawing.Point(9, 44);
+            this.lblPromedioCantidad.Name = "lblPromedioCantidad";
+            this.lblPromedioCantidad.Size = new System.Drawing.Size(73, 52);
+            this.lblPromedioCantidad.TabIndex = 23;
+            this.lblPromedioCantidad.Text = "47";
             // 
             // label10
             // 
@@ -519,6 +490,40 @@
             this.label10.Size = new System.Drawing.Size(210, 19);
             this.label10.TabIndex = 22;
             this.label10.Text = "Promedio De Ventas Diarias";
+            // 
+            // dtpHasta
+            // 
+            this.dtpHasta.BorderColor = System.Drawing.Color.Black;
+            this.dtpHasta.BorderSize = 0;
+            this.dtpHasta.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpHasta.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
+            this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHasta.Location = new System.Drawing.Point(4, 7);
+            this.dtpHasta.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(188, 35);
+            this.dtpHasta.SkinColor = System.Drawing.Color.White;
+            this.dtpHasta.TabIndex = 74;
+            this.dtpHasta.TextColor = System.Drawing.Color.Black;
+            this.dtpHasta.Value = new System.DateTime(2024, 11, 2, 0, 0, 0, 0);
+            this.dtpHasta.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
+            // 
+            // dtpDesde
+            // 
+            this.dtpDesde.BorderColor = System.Drawing.Color.Black;
+            this.dtpDesde.BorderSize = 0;
+            this.dtpDesde.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDesde.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
+            this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDesde.Location = new System.Drawing.Point(522, 24);
+            this.dtpDesde.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpDesde.Name = "dtpDesde";
+            this.dtpDesde.Size = new System.Drawing.Size(188, 35);
+            this.dtpDesde.SkinColor = System.Drawing.Color.White;
+            this.dtpDesde.TabIndex = 76;
+            this.dtpDesde.TextColor = System.Drawing.Color.Black;
+            this.dtpDesde.Value = new System.DateTime(2024, 10, 29, 0, 0, 0, 0);
+            this.dtpDesde.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
             // 
             // SalesReportsForm
             // 
@@ -539,6 +544,7 @@
             this.Location = new System.Drawing.Point(16, 15);
             this.Name = "SalesReportsForm";
             this.Size = new System.Drawing.Size(1014, 681);
+            this.Load += new System.EventHandler(this.SalesReportsForm_Load);
             this.sPanel2.ResumeLayout(false);
             this.sPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDona)).EndInit();
@@ -576,10 +582,10 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.Label label5;
         private Sipaa.Framework.SPanel sPanel6;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblIngresoPromedio;
         private System.Windows.Forms.Label label7;
         private Sipaa.Framework.SPanel sPanel7;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblPromedioCantidad;
         private System.Windows.Forms.Label label10;
     }
 }

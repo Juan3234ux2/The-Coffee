@@ -58,7 +58,7 @@ namespace TheCoffe.CAccesoADatos
         {
             using (db = new DBTheCoffeeEntities())
             {
-                return db.Venta_Detalle.Find(id);
+                return db.Venta_Detalle.Include(pd => pd.Producto).Include(pd => pd.Producto.Categoria1).ToList().Find(pd => pd.id_detalle == id);
             }
         }
         public Venta_Detalle GetLastRecord()
