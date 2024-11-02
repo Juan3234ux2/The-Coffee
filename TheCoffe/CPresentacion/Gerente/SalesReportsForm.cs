@@ -8,16 +8,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using TheCoffe.CNegocio.Services;
+using TheCoffe.CDatos;
 
 namespace TheCoffe.CPresentacion.Gerente
 {
     public partial class SalesReportsForm : UserControl
     {
+        AdminService adminService = new AdminService();
         public SalesReportsForm()
         {
             InitializeComponent();
             PoblarChart();
             PoblarChartDonas();
+            CargarDatos();
+        }
+        private async void CargarDatos()
+        {
+            try
+            {
+                List<CategoriaEstadistica> ventas = await adminService.ObtenerVentasPorCategoria(dtpDesde.Value, dtpHasta.Value);
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
         private void PoblarChartDonas()
         {

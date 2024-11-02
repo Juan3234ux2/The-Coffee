@@ -50,8 +50,8 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label4 = new System.Windows.Forms.Label();
             this.sPanel3 = new Sipaa.Framework.SPanel();
-            this.customDateTimePicker2 = new TheCoffe.Components.CustomDateTimePicker();
-            this.customDateTimePicker1 = new TheCoffe.Components.CustomDateTimePicker();
+            this.dtpHasta = new TheCoffe.Components.CustomDateTimePicker();
+            this.dtpDesde = new TheCoffe.Components.CustomDateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.sPanel4 = new Sipaa.Framework.SPanel();
@@ -59,8 +59,8 @@
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label5 = new System.Windows.Forms.Label();
             this.sPanel6 = new Sipaa.Framework.SPanel();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.sPanel7 = new Sipaa.Framework.SPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -285,42 +285,43 @@
             this.sPanel3.BorderColor = System.Drawing.Color.White;
             this.sPanel3.BorderRadius = 10;
             this.sPanel3.BorderSize = 0;
-            this.sPanel3.Controls.Add(this.customDateTimePicker2);
+            this.sPanel3.Controls.Add(this.dtpHasta);
             this.sPanel3.ForeColor = System.Drawing.Color.White;
             this.sPanel3.Location = new System.Drawing.Point(800, 17);
             this.sPanel3.Name = "sPanel3";
             this.sPanel3.Size = new System.Drawing.Size(195, 46);
             this.sPanel3.TabIndex = 78;
             // 
-            // customDateTimePicker2
+            // dtpHasta
             // 
-            this.customDateTimePicker2.BorderColor = System.Drawing.Color.Black;
-            this.customDateTimePicker2.BorderSize = 0;
-            this.customDateTimePicker2.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customDateTimePicker2.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
-            this.customDateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.customDateTimePicker2.Location = new System.Drawing.Point(4, 7);
-            this.customDateTimePicker2.MinimumSize = new System.Drawing.Size(4, 35);
-            this.customDateTimePicker2.Name = "customDateTimePicker2";
-            this.customDateTimePicker2.Size = new System.Drawing.Size(188, 35);
-            this.customDateTimePicker2.SkinColor = System.Drawing.Color.White;
-            this.customDateTimePicker2.TabIndex = 74;
-            this.customDateTimePicker2.TextColor = System.Drawing.Color.Black;
+            this.dtpHasta.BorderColor = System.Drawing.Color.Black;
+            this.dtpHasta.BorderSize = 0;
+            this.dtpHasta.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpHasta.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
+            this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHasta.Location = new System.Drawing.Point(4, 7);
+            this.dtpHasta.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(188, 35);
+            this.dtpHasta.SkinColor = System.Drawing.Color.White;
+            this.dtpHasta.TabIndex = 74;
+            this.dtpHasta.TextColor = System.Drawing.Color.Black;
             // 
-            // customDateTimePicker1
+            // dtpDesde
             // 
-            this.customDateTimePicker1.BorderColor = System.Drawing.Color.Black;
-            this.customDateTimePicker1.BorderSize = 0;
-            this.customDateTimePicker1.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customDateTimePicker1.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
-            this.customDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.customDateTimePicker1.Location = new System.Drawing.Point(522, 24);
-            this.customDateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.customDateTimePicker1.Name = "customDateTimePicker1";
-            this.customDateTimePicker1.Size = new System.Drawing.Size(188, 35);
-            this.customDateTimePicker1.SkinColor = System.Drawing.Color.White;
-            this.customDateTimePicker1.TabIndex = 76;
-            this.customDateTimePicker1.TextColor = System.Drawing.Color.Black;
+            this.dtpDesde.BorderColor = System.Drawing.Color.Black;
+            this.dtpDesde.BorderSize = 0;
+            this.dtpDesde.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDesde.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
+            this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDesde.Location = new System.Drawing.Point(522, 24);
+            this.dtpDesde.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpDesde.Name = "dtpDesde";
+            this.dtpDesde.Size = new System.Drawing.Size(188, 35);
+            this.dtpDesde.SkinColor = System.Drawing.Color.White;
+            this.dtpDesde.TabIndex = 76;
+            this.dtpDesde.TextColor = System.Drawing.Color.Black;
+            this.dtpDesde.Value = new System.DateTime(2024, 10, 29, 0, 0, 0, 0);
             // 
             // label1
             // 
@@ -461,17 +462,6 @@
             this.sPanel6.Size = new System.Drawing.Size(230, 120);
             this.sPanel6.TabIndex = 74;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(14, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(207, 19);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Promedio De Ingreso Diario";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -482,6 +472,17 @@
             this.label8.Size = new System.Drawing.Size(184, 52);
             this.label8.TabIndex = 23;
             this.label8.Text = "$54,800";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(14, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(207, 19);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Promedio De Ingreso Diario";
             // 
             // sPanel7
             // 
@@ -529,7 +530,7 @@
             this.Controls.Add(this.sPanel5);
             this.Controls.Add(this.sPanel3);
             this.Controls.Add(this.sPanel2);
-            this.Controls.Add(this.customDateTimePicker1);
+            this.Controls.Add(this.dtpDesde);
             this.Controls.Add(this.sPanel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
@@ -566,8 +567,8 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label label4;
         private Sipaa.Framework.SPanel sPanel3;
-        private TheCoffe.Components.CustomDateTimePicker customDateTimePicker2;
-        private TheCoffe.Components.CustomDateTimePicker customDateTimePicker1;
+        private TheCoffe.Components.CustomDateTimePicker dtpHasta;
+        private TheCoffe.Components.CustomDateTimePicker dtpDesde;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Sipaa.Framework.SPanel sPanel4;

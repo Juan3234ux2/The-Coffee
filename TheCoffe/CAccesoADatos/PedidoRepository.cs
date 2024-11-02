@@ -34,7 +34,7 @@ namespace TheCoffe.CAccesoADatos
             using (var db = new DBTheCoffeeEntities())
             {
                 return await db.Venta
-                              .Include(v => v.Venta_Detalle)
+                              .Include(v => v.Venta_Detalle)                              
                               .Include(v => v.Mesero)
                               .Where(v => v.id_turno == id_turno && v.estado == "Completado")
                               .ToListAsync();
@@ -85,12 +85,31 @@ namespace TheCoffe.CAccesoADatos
         {
             using (db = new DBTheCoffeeEntities())
             {
-                return await db.Venta
+                List<Venta> ventas = await db.Venta
                     .Include(v => v.Venta_Detalle)
                     .Include(v => v.Mesero)
                     .Where(v => v.estado == "Completado" && v.fecha_venta >= fechaDesde && v.fecha_venta <= fechaHasta)
                     .OrderByDescending(v => v.fecha_venta)
                     .ToListAsync();
+                var ventaTem = ventas;
+                try
+                {
+                     Console.WriteLine("aca llego");
+                    var detalles = await db.Venta_Detalle.Where(pd => ventaTem.Any(p => p.id_ventas == pd.id_ventas))
+                                   .Include(pd => pd.Producto)
+                                   .Include(pd => pd.Producto.Categoria1)
+                                   .ToListAsync();
+                    Console.WriteLine("aca llego");
+                    foreach(var pedido in ventas)
+                    {
+                        Console.WriteLine("aca no se");
+                        pedido.Venta_Detalle = detalles.Where(pd => pd.id_ventas == pedido.id_ventas).ToList();
+                    }
+                }catch(Exception ex)
+                {
+                    throw ex.InnerException;
+                }
+                return ventas;
             }
         }
         public async Task<List<Venta>> FindAll()

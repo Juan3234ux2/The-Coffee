@@ -219,11 +219,13 @@ namespace TheCoffe.CPresentacion.Cajero
             {
                 cboCustomer.Enabled = false;
                 btnAddClient.Enabled = false;
+                btnClient.Enabled = false;
             }
             else
             {
                 cboCustomer.Enabled = true;
                 btnAddClient.Enabled = true;
+                btnClient.Enabled = true;
             }
         }
     }

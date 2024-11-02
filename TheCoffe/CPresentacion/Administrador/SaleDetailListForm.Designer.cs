@@ -148,7 +148,7 @@
             // ID
             // 
             this.ID.DataPropertyName = "id_detalle";
-            this.ID.FillWeight = 94.16002F;
+            this.ID.FillWeight = 37.55042F;
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
@@ -156,7 +156,7 @@
             // Nombre
             // 
             this.Nombre.DataPropertyName = "producto";
-            this.Nombre.FillWeight = 99.19505F;
+            this.Nombre.FillWeight = 113.2686F;
             this.Nombre.HeaderText = "Producto";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
@@ -164,6 +164,7 @@
             // cantidad
             // 
             this.cantidad.DataPropertyName = "cantidad";
+            this.cantidad.FillWeight = 114.1878F;
             this.cantidad.HeaderText = "Cantidad";
             this.cantidad.Name = "cantidad";
             this.cantidad.ReadOnly = true;
@@ -171,7 +172,7 @@
             // Precio
             // 
             this.Precio.DataPropertyName = "precio_unitario";
-            this.Precio.FillWeight = 103.6368F;
+            this.Precio.FillWeight = 118.3406F;
             this.Precio.HeaderText = "Precio c/u";
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
@@ -179,7 +180,7 @@
             // Categoria
             // 
             this.Categoria.DataPropertyName = "subtotal";
-            this.Categoria.FillWeight = 96.17036F;
+            this.Categoria.FillWeight = 109.8148F;
             this.Categoria.HeaderText = "Sub Total";
             this.Categoria.Name = "Categoria";
             this.Categoria.ReadOnly = true;

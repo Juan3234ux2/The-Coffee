@@ -113,6 +113,7 @@
     <Compile Include="CDatos\Categoria1.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
+    <Compile Include="CDatos\CategoriaEstadistica.cs" />
     <Compile Include="CDatos\Cliente.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
@@ -147,6 +148,7 @@
     </Compile>
     <Compile Include="CNegocio\InputValidator.cs" />
     <Compile Include="CNegocio\Paginator.cs" />
+    <Compile Include="CNegocio\Services\AdminService.cs" />
     <Compile Include="CNegocio\Services\AuthService.cs" />
     <Compile Include="CNegocio\Services\CategoryService.cs" />
     <Compile Include="CNegocio\Services\CustomerService.cs" />
