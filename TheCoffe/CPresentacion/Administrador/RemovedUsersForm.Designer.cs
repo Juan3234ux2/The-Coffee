@@ -41,6 +41,9 @@
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnSig = new WindowsFormsApplication1.RoundButton();
+            this.btnAnt = new WindowsFormsApplication1.RoundButton();
+            this.lblPagina = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataUsersRemoved)).BeginInit();
             this.SuspendLayout();
             // 
@@ -201,12 +204,69 @@
             this.activar.ReadOnly = true;
             this.activar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
+            // btnSig
+            // 
+            this.btnSig.BackColor = System.Drawing.Color.Transparent;
+            this.btnSig.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnSig.BorderColor = System.Drawing.Color.Black;
+            this.btnSig.BorderRadius = 20;
+            this.btnSig.BorderSize = 0;
+            this.btnSig.FlatAppearance.BorderSize = 0;
+            this.btnSig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSig.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnSig.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
+            this.btnSig.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnSig.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSig.Location = new System.Drawing.Point(975, 556);
+            this.btnSig.Name = "btnSig";
+            this.btnSig.Size = new System.Drawing.Size(25, 40);
+            this.btnSig.TabIndex = 35;
+            this.btnSig.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnSig.UseVisualStyleBackColor = false;
+            this.btnSig.Click += new System.EventHandler(this.btnSig_Click);
+            // 
+            // btnAnt
+            // 
+            this.btnAnt.BackColor = System.Drawing.Color.Transparent;
+            this.btnAnt.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnAnt.BorderColor = System.Drawing.Color.Black;
+            this.btnAnt.BorderRadius = 20;
+            this.btnAnt.BorderSize = 0;
+            this.btnAnt.FlatAppearance.BorderSize = 0;
+            this.btnAnt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnAnt.IconChar = FontAwesome.Sharp.IconChar.AngleLeft;
+            this.btnAnt.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnAnt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAnt.Location = new System.Drawing.Point(838, 556);
+            this.btnAnt.Name = "btnAnt";
+            this.btnAnt.Size = new System.Drawing.Size(25, 40);
+            this.btnAnt.TabIndex = 34;
+            this.btnAnt.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnAnt.UseVisualStyleBackColor = false;
+            this.btnAnt.Click += new System.EventHandler(this.btnAnt_Click);
+            // 
+            // lblPagina
+            // 
+            this.lblPagina.AutoSize = true;
+            this.lblPagina.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPagina.Location = new System.Drawing.Point(869, 566);
+            this.lblPagina.Name = "lblPagina";
+            this.lblPagina.Size = new System.Drawing.Size(102, 17);
+            this.lblPagina.TabIndex = 33;
+            this.lblPagina.Text = "Pagina 1 de 10";
+            // 
             // RemovedUsersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1030, 600);
+            this.Controls.Add(this.btnSig);
+            this.Controls.Add(this.btnAnt);
+            this.Controls.Add(this.lblPagina);
             this.Controls.Add(this.dataUsersRemoved);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
@@ -235,5 +295,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
         private System.Windows.Forms.DataGridViewImageColumn activar;
+        private WindowsFormsApplication1.RoundButton btnSig;
+        private WindowsFormsApplication1.RoundButton btnAnt;
+        private System.Windows.Forms.Label lblPagina;
     }
 }

@@ -52,7 +52,13 @@ namespace TheCoffe.CAccesoADatos
         {
             using (db = new DBTheCoffeeEntities())
             {
-                return db.Usuario.SingleOrDefault(u => u.usuario1 == nombreUsuario && u.estado);
+                try
+                {
+                    return db.Usuario.Include(u => u.rol_usuario).SingleOrDefault(u => u.usuario1 == nombreUsuario && u.estado);
+                }catch(Exception ex)
+                {
+                    throw ex.InnerException;
+                }
             }
         }
         public void Update(Usuario usuario)

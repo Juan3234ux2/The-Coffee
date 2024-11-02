@@ -12,6 +12,7 @@ using TheCoffe.CPresentacion.Cajero;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
 using TheCoffe.CNegocio.Services;
+using TheCoffe.CNegocio;
 
 namespace TheCoffe.App
 {
@@ -19,6 +20,7 @@ namespace TheCoffe.App
     {
         private UserService _userService = new UserService();
         private Usuario usuario = new Usuario();
+        private Paginator<Usuario> paginator;
         private int id;
         public UserListForm()
         {
@@ -30,7 +32,8 @@ namespace TheCoffe.App
         {
             UserService service = new UserService();
             var usuarios = await service.ObtenerUsuariosActivos();
-            dataUsers.DataSource = usuarios.Where(u => u.usuario1 != AuthUser.Usuario.usuario1).ToList();
+            paginator = new Paginator<Usuario>(usuarios, 9);
+            CargarDatos(paginator);
         }
 
         private void UserListForm_Load(object sender, EventArgs e)
@@ -107,6 +110,31 @@ namespace TheCoffe.App
             {
                 RefreshPantalla();
             }
+        }
+
+        public void CargarDatos(Paginator<Usuario> usuarios)
+        {
+            dataUsers.DataSource = null;
+            dataUsers.DataSource = usuarios.GetPageData();
+            ActualizarPaginacion(usuarios);
+        }
+        private void ActualizarPaginacion(Paginator<Usuario> usuario)
+        {
+            lblPagina.Text = $"Página {usuario.CurrentPage} de {usuario.TotalPages}";
+            btnAnt.Enabled = usuario.CurrentPage > 1;
+            btnSig.Enabled = usuario.CurrentPage < usuario.TotalPages;
+        }
+
+        private void btnSig_Click(object sender, EventArgs e)
+        {
+            paginator.NextPage();
+            CargarDatos(paginator);
+        }
+
+        private void btnAnt_Click(object sender, EventArgs e)
+        {
+            paginator.PreviousPage();
+            CargarDatos(paginator);
         }
     }
 }

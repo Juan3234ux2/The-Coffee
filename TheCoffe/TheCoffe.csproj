@@ -159,6 +159,12 @@
     <Compile Include="CNegocio\Services\UserService.cs" />
     <Compile Include="CNegocio\Services\WaiterService.cs" />
     <Compile Include="CNegocio\Ticket.cs" />
+    <Compile Include="CPresentacion\Administrador\SettingsForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Administrador\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CPresentacion\Cajero\Cajero.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -448,6 +454,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\Administrador\AddWaiterForm.resx">
       <DependentUpon>AddWaiterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Administrador\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\Cajero\Cajero.resx">
       <DependentUpon>Cajero.cs</DependentUpon>

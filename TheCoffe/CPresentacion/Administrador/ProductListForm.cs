@@ -11,11 +11,13 @@ using TheCoffe.CPresentacion;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
 using TheCoffe.CNegocio.Services;
+using TheCoffe.CNegocio;
 
 namespace TheCoffe.App
 {
     public partial class ProductListForm : UserControl
     {
+        private Paginator<Producto> paginator;
         private ProductService productService = new ProductService();
         private int id;
         public ProductListForm()
@@ -27,15 +29,8 @@ namespace TheCoffe.App
         public async void RefreshPantalla()
         {
             var productos = await productService.ObtenerProductosActivos();
-
-            dataProducts.DataSource = productos.Select(p =>
-            new
-            {
-                p.id_producto,
-                p.nombre,
-                p.precio,
-                c = p.Categoria1.descripcion
-            }).ToList();
+            paginator = new Paginator<Producto>(productos, 9);
+            CargarDatos(paginator);
         }
 
         private void ProductList_Load(object sender, EventArgs e)
@@ -112,6 +107,38 @@ namespace TheCoffe.App
             {
                 RefreshPantalla();
             }
+        }
+
+        public void CargarDatos(Paginator<Producto> producto)
+        {
+            dataProducts.DataSource = null;
+            dataProducts.DataSource = producto.GetPageData().Select(p => 
+            new
+            {
+                p.id_producto,
+                p.nombre,
+                p.precio,
+                c = p.Categoria1.descripcion
+            }).ToList();
+            ActualizarPaginacion(producto);
+        }
+        private void ActualizarPaginacion(Paginator<Producto> productos)
+        {
+            lblPagina.Text = $"Página {productos.CurrentPage} de {productos.TotalPages}";
+            btnAnt.Enabled = productos.CurrentPage > 1;
+            btnSig.Enabled = productos.CurrentPage < productos.TotalPages;
+        }
+
+        private void btnAnt_Click(object sender, EventArgs e)
+        {
+            paginator.PreviousPage();
+            CargarDatos(paginator);
+        }
+
+        private void btnSig_Click(object sender, EventArgs e)
+        {
+            paginator.NextPage();
+            CargarDatos(paginator);
         }
     }
 }

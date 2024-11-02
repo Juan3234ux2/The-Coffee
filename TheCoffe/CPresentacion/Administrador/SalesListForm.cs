@@ -16,8 +16,8 @@ namespace TheCoffe.CPresentacion
 {
     public partial class SalesListForm : UserControl
     {
-        OrderService orderService = new OrderService();
-        WaiterService waiterService = new WaiterService();
+        private OrderService orderService = new OrderService();
+        private WaiterService waiterService = new WaiterService();
         private Paginator<Venta> paginator;
         public SalesListForm()
         {
@@ -29,7 +29,17 @@ namespace TheCoffe.CPresentacion
         private async void SalesListForm_Load(object sender, EventArgs e)
         {
             await ObtenerVentasFiltradas();
-            cboMesero.DataSource = await waiterService.ObtenerTodosLosMeseros();
+            var meseros = await waiterService.ObtenerTodosLosMeseros();
+            Mesero mesero = new Mesero
+            {
+                id_mesero = 0,
+                nombre = "Todos los meseros",
+                apellido = "",
+                dni = 1
+            };
+            meseros.Insert(0, mesero);
+            cboMesero.SelectedIndex = 0;
+            cboMesero.DataSource = meseros;
             cboMesero.DisplayMember = "nombreCompleto";
             cboMesero.ValueMember = "id_mesero";
         }
@@ -59,9 +69,13 @@ namespace TheCoffe.CPresentacion
         {
             await ObtenerVentasFiltradas();
         }
-        private async Task ObtenerVentasFiltradas()
+        private async Task ObtenerVentasFiltradas(int idMesero = 0)
         {
             var ventasPorFecha = await orderService.FiltrarPorFecha(dtpFechaDesde.Value, dtpFechaHasta.Value);
+            if(idMesero != 0)
+            {
+                ventasPorFecha = ventasPorFecha.Where(v => v.id_mesero == idMesero).ToList();
+            }
             paginator = new Paginator<Venta>(ventasPorFecha, 9);
             CargarDatos(paginator);
         }
@@ -96,5 +110,20 @@ namespace TheCoffe.CPresentacion
             paginator.NextPage();
             CargarDatos(paginator);
         }
+
+        private void cboMesero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private async void cboMesero_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(cboMesero.SelectedValue != null)
+            {
+                if (int.TryParse(cboMesero.SelectedValue.ToString(), out int idMesero))
+                {
+                    await ObtenerVentasFiltradas(idMesero);
+                }
+            }
+        }
     }
-}
+ }

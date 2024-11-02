@@ -80,9 +80,14 @@ namespace TheCoffe.CPresentacion.Cajero
 
         private void CargarClientes()
         {
-            cboCustomer.DataSource = customerService.ObtenerClientes();
+            var clientes = customerService.ObtenerClientes();
+            cboCustomer.DataSource = clientes;
             cboCustomer.DisplayMember = "nombreYCuit";
             cboCustomer.ValueMember = "id_cliente";
+            if(clientes.Count > 0)
+            {
+                cboCustomer.SelectedIndex = 0;
+            }
         }
         private void btnClient_Click(object sender, EventArgs e)
         {
@@ -92,7 +97,6 @@ namespace TheCoffe.CPresentacion.Cajero
         private void FinalizeOrder_Load(object sender, EventArgs e)
         {
             CargarClientes();
-            cboCustomer.SelectedIndex = 0;
             cboRecibo.SelectedIndex = 0;
             this.Opacity = 0;
             Timer timer = new Timer();

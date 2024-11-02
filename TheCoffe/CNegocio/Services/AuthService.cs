@@ -13,21 +13,27 @@ namespace TheCoffe.CNegocio.Services
         private readonly UsuarioRepository _userRepository = new UsuarioRepository();
         public Usuario Login(string nombreUsuario, string contraseña)
         {
-            var usuario = _userRepository.SearchByUsername(nombreUsuario);
-            if (usuario == null)
+            try
             {
-                throw new Exception("No existe el usuario");
-            }
-            else
-            {
-                if(usuario.contraseña == contraseña)
+                var usuario = _userRepository.SearchByUsername(nombreUsuario);
+                if (usuario == null)
                 {
-                    return usuario;
+                    throw new Exception("No existe el usuario");
                 }
                 else
                 {
-                    throw new Exception("Contraseña incorrecta");
+                    if(usuario.contraseña == contraseña)
+                    {
+                        return usuario;
+                    }
+                    else
+                    {
+                        throw new Exception("Contraseña incorrecta");
+                    }
                 }
+            }catch(Exception ex)
+            {
+                throw ex;
             }
         }
     }

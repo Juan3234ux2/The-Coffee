@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheCoffe.CDatos;
+using TheCoffe.CNegocio;
 using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.CPresentacion
@@ -15,6 +17,7 @@ namespace TheCoffe.CPresentacion
     {
         private UserService _userService = new UserService();
         private bool isShowingMsgBox = false;
+        private Paginator<Usuario>  paginator;
         public RemovedUsersForm()
         {
             InitializeComponent();
@@ -28,7 +31,8 @@ namespace TheCoffe.CPresentacion
         public async void RefreshPantalla()
         {
             var usuarios = await _userService.ObtenerUsuariosEliminados();
-            dataUsersRemoved.DataSource = usuarios;
+            paginator = new Paginator<Usuario>(usuarios, 9);
+            CargarDatos(paginator);
         }
         private void RemovedUsersForm_Load(object sender, EventArgs e)
         {
@@ -66,6 +70,31 @@ namespace TheCoffe.CPresentacion
                 isShowingMsgBox = false;
                 RefreshPantalla();
             }         
+        }
+
+        public void CargarDatos(Paginator<Usuario> usuarios)
+        {
+            dataUsersRemoved.DataSource = null;
+            dataUsersRemoved.DataSource = usuarios.GetPageData();
+            ActualizarPaginacion(usuarios);
+        }
+        private void ActualizarPaginacion(Paginator<Usuario> usuario)
+        {
+            lblPagina.Text = $"Página {usuario.CurrentPage} de {usuario.TotalPages}";
+            btnAnt.Enabled = usuario.CurrentPage > 1;
+            btnSig.Enabled = usuario.CurrentPage < usuario.TotalPages;
+        }
+
+        private void btnAnt_Click(object sender, EventArgs e)
+        {
+            paginator.NextPage();
+            CargarDatos(paginator);
+        }
+
+        private void btnSig_Click(object sender, EventArgs e)
+        {
+            paginator.PreviousPage();
+            CargarDatos(paginator);
         }
     }
 }
