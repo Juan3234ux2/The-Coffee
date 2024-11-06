@@ -161,7 +161,7 @@ namespace TheCoffe.CNegocio
             infoText.Format.SpaceBefore = "0.9cm";
             infoText.Format.LeftIndent = "0.4cm";
             infoText.Format.LineSpacingRule = LineSpacingRule.OnePtFive;
-            //Codigo que genera las lineas de los margenes
+            //Codigo que renderiza el pdf
 #pragma warning disable CS0618 
             PdfDocumentRenderer pdfRenderer = new PdfDocumentRenderer(true)
             {
@@ -170,7 +170,7 @@ namespace TheCoffe.CNegocio
 #pragma warning restore CS0618 
             pdfRenderer.RenderDocument();
             PdfDocument pdfDocument = pdfRenderer.PdfDocument;
-
+            //Codigo que genera las lineas de los margenes
             foreach (PdfPage page in pdfDocument.Pages)
             {
                 XGraphics gfx = XGraphics.FromPdfPage(page);
@@ -189,7 +189,7 @@ namespace TheCoffe.CNegocio
         private string GenerarQR()
         {
             var qrGenerator = new QRCodeGenerator();
-            var qrData = qrGenerator.CreateQrCode("https://thecoffee.com/factura", QRCodeGenerator.ECCLevel.Q);
+            var qrData = qrGenerator.CreateQrCode("https://thecoffee.com/", QRCodeGenerator.ECCLevel.Q);
             var qrCode = new QRCode(qrData);
 
             string base64Image;

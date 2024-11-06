@@ -22,6 +22,7 @@ namespace TheCoffe.CPresentacion.Gerente
         }
         private async void SalesReportsForm_Load(object sender, EventArgs e)
         {
+            dtpDesde.Value = DateTime.Now.AddMonths(-1);
             await CargarDatos();
         }
         private async Task CargarDatos()

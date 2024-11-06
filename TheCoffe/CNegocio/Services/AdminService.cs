@@ -69,6 +69,8 @@ namespace TheCoffe.CNegocio.Services
                     Recaudado = ingresosReales.ContainsKey(fecha) ? ingresosReales[fecha] : 0
                 });
             }
+            listaCompletaIngresos
+                .GroupBy(v => ObtenerGrupoDeFecha(v.Fecha, diasEnRango)).ToList();
             return listaCompletaIngresos;
         }
         private DateTime ObtenerGrupoDeFecha(DateTime fecha, int rangoDias)

@@ -69,6 +69,7 @@ namespace TheCoffe.CPresentacion
         private async void dtpFechaDesde_ValueChanged(object sender, EventArgs e)
         {
             await ObtenerVentasFiltradas();
+            dtpFechaHasta.MinDate = dtpFechaDesde.Value;
         }
         private async Task ObtenerVentasFiltradas(int idMesero = 0)
         {
