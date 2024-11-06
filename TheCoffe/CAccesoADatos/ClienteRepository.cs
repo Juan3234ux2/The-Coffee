@@ -35,6 +35,13 @@ namespace TheCoffe.CAccesoADatos
                  return _db.Cliente.ToList();    
             }
         }
+        public Cliente Find(int id_cliente)
+        {
+            using (_db = new DBTheCoffeeEntities())
+            {
+                return _db.Cliente.Find(id_cliente);
+            }
+        }
         public bool ExistCUIT(Cliente cliente)
         {
             using (_db = new DBTheCoffeeEntities())

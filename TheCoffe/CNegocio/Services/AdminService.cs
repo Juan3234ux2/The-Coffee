@@ -47,5 +47,43 @@ namespace TheCoffe.CNegocio.Services
             int promedioCantidad = diasEnRango > 0 ? ventas.Count() / diasEnRango : 0;
             return promedioCantidad;
         }
+        public async Task<List<IngresoDiario>> ObtenerTotalRecaudado(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            List<Venta> ventas = await orderService.FiltrarPorFecha(fechaDesde, fechaHasta);
+            int diasEnRango = (fechaHasta - fechaDesde).Days;
+            var ingresosReales = ventas
+                                  .GroupBy(v => ObtenerGrupoDeFecha(v.fecha_venta ?? DateTime.Now, diasEnRango))
+                                  .Select(g => new IngresoDiario
+                                  {
+                                      Fecha = g.Key,
+                                      Recaudado = g.Sum(v => v.monto_total ?? 0)
+                                  })
+                                  .ToDictionary(v => v.Fecha , v => v.Recaudado);
+            var listaCompletaIngresos = new List<IngresoDiario>();
+
+            for(var fecha = fechaDesde.Date; fecha <= fechaHasta.Date; fecha = fecha.AddDays(1))
+            {
+                listaCompletaIngresos.Add(new IngresoDiario
+                {
+                    Fecha = fecha,
+                    Recaudado = ingresosReales.ContainsKey(fecha) ? ingresosReales[fecha] : 0
+                });
+            }
+            return listaCompletaIngresos;
+        }
+        private DateTime ObtenerGrupoDeFecha(DateTime fecha, int rangoDias)
+        {
+            if(rangoDias <= 7)
+            {
+                return fecha.Date;
+            }else if(rangoDias <= 30)
+            {
+                return fecha.AddDays(-(int)fecha.DayOfWeek).Date;
+            }
+            else
+            {
+                return new DateTime(fecha.Year, fecha.Month,1);
+            }
+        }
     }
 }

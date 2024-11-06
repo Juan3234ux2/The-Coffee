@@ -19,7 +19,6 @@ namespace TheCoffe.CPresentacion.Gerente
         public SalesReportsForm()
         {
             InitializeComponent();
-            PoblarChart();
         }
         private async void SalesReportsForm_Load(object sender, EventArgs e)
         {
@@ -28,13 +27,19 @@ namespace TheCoffe.CPresentacion.Gerente
         private async Task CargarDatos()
         {
             List<CategoriaEstadistica> categoriaEstadisticas = await adminService.ObtenerVentasPorCategoria(dtpDesde.Value, dtpHasta.Value);
+            List<IngresoDiario> recaudadoEstadisticas = await adminService.ObtenerTotalRecaudado(dtpDesde.Value, dtpHasta.Value);
             double promedioIngresos = await adminService.ObtenerPromedioIngresosDiarios(dtpDesde.Value, dtpHasta.Value);
             int promedioCantidad = await adminService.ObtenerPromedioCantidadVentas(dtpDesde.Value, dtpHasta.Value);
             lblIngresoPromedio.Text = promedioIngresos.ToString("C");
             lblPromedioCantidad.Text = promedioCantidad.ToString();
-            PoblarChartDonas(categoriaEstadisticas);           
+            CargarChartDonas(categoriaEstadisticas);
+            CargarChartRecaudado(recaudadoEstadisticas);
+            foreach(var e in recaudadoEstadisticas)
+            {
+                Console.WriteLine(e.Fecha.Date + "-" + e.Recaudado);
+            }
         }
-        private void PoblarChartDonas(List<CategoriaEstadistica> estadisticas)
+        private void CargarChartDonas(List<CategoriaEstadistica> estadisticas)
         {
             Series serie = new Series("Categorias")
             {
@@ -59,7 +64,7 @@ namespace TheCoffe.CPresentacion.Gerente
             chartDona.Series.Add(serie);
         }
 
-        private void PoblarChart()
+        private void CargarChartRecaudado(List<IngresoDiario> estadisticas)
         {
             Series serie = new Series("Ventas")
             {
@@ -69,8 +74,13 @@ namespace TheCoffe.CPresentacion.Gerente
                 BackSecondaryColor = Color.FromArgb(230, 230, 230),
                 BorderColor = Color.Navy,
                 BorderWidth = 4,
+                ToolTip = "#VALY{C}"
             };
-            serie.Points.AddXY("Enero", 300);
+
+                foreach (var recaudado in estadisticas)
+                {
+                    serie.Points.AddXY(recaudado.Fecha, recaudado.Recaudado);
+                }
             chart1.Series.Clear();
             chart1.Series.Add(serie);
         }
@@ -78,6 +88,7 @@ namespace TheCoffe.CPresentacion.Gerente
         private async void dtpDesde_ValueChanged(object sender, EventArgs e)
         {
             await CargarDatos();
+            dtpHasta.MinDate = dtpDesde.Value;
         }
     }
 }
