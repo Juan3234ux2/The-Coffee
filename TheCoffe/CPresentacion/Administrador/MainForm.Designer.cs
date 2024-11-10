@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnlSideBar = new System.Windows.Forms.Panel();
+            this.btnConfiguration = new WindowsFormsApplication1.RoundButton();
             this.btnTables = new WindowsFormsApplication1.RoundButton();
             this.btnCategory = new WindowsFormsApplication1.RoundButton();
             this.btnUserList = new WindowsFormsApplication1.RoundButton();
@@ -55,6 +56,7 @@
             // pnlSideBar
             // 
             this.pnlSideBar.BackColor = System.Drawing.Color.White;
+            this.pnlSideBar.Controls.Add(this.btnConfiguration);
             this.pnlSideBar.Controls.Add(this.btnTables);
             this.pnlSideBar.Controls.Add(this.btnCategory);
             this.pnlSideBar.Controls.Add(this.btnUserList);
@@ -70,6 +72,37 @@
             this.pnlSideBar.Name = "pnlSideBar";
             this.pnlSideBar.Size = new System.Drawing.Size(250, 681);
             this.pnlSideBar.TabIndex = 0;
+            // 
+            // btnConfiguration
+            // 
+            this.btnConfiguration.BackColor = System.Drawing.Color.White;
+            this.btnConfiguration.BackgroundColor = System.Drawing.Color.White;
+            this.btnConfiguration.BorderColor = System.Drawing.Color.Transparent;
+            this.btnConfiguration.BorderRadius = 10;
+            this.btnConfiguration.BorderSize = 0;
+            this.btnConfiguration.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfiguration.FlatAppearance.BorderSize = 0;
+            this.btnConfiguration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfiguration.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguration.ForeColor = System.Drawing.Color.DimGray;
+            this.btnConfiguration.IconChar = FontAwesome.Sharp.IconChar.EllipsisV;
+            this.btnConfiguration.IconColor = System.Drawing.Color.DimGray;
+            this.btnConfiguration.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnConfiguration.IconSize = 35;
+            this.btnConfiguration.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnConfiguration.Location = new System.Drawing.Point(3, 423);
+            this.btnConfiguration.MinimumSize = new System.Drawing.Size(58, 0);
+            this.btnConfiguration.Name = "btnConfiguration";
+            this.btnConfiguration.Padding = new System.Windows.Forms.Padding(8, 3, 0, 0);
+            this.btnConfiguration.Size = new System.Drawing.Size(244, 45);
+            this.btnConfiguration.TabIndex = 21;
+            this.btnConfiguration.Tag = "Reportes";
+            this.btnConfiguration.Text = "  Configuración";
+            this.btnConfiguration.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConfiguration.TextColor = System.Drawing.Color.DimGray;
+            this.btnConfiguration.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConfiguration.UseVisualStyleBackColor = false;
+            this.btnConfiguration.Click += new System.EventHandler(this.btnConfiguration_Click);
             // 
             // btnTables
             // 
@@ -423,6 +456,7 @@
         private WindowsFormsApplication1.RoundButton btnUserList;
         private WindowsFormsApplication1.RoundButton btnTables;
         private WindowsFormsApplication1.RoundButton btnCategory;
+        private WindowsFormsApplication1.RoundButton btnConfiguration;
     }
 }
 

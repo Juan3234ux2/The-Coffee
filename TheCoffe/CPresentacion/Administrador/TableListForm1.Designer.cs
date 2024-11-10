@@ -33,6 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataTable = new System.Windows.Forms.DataGridView();
+            this.id_mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nro_mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cant_sillas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -40,11 +45,9 @@
             this.btnRemovedTables = new WindowsFormsApplication1.RoundButton();
             this.txtSearch = new TheCoffe.Components.ModernTextBox();
             this.btnAddTable = new WindowsFormsApplication1.RoundButton();
-            this.id_mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nro_mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cant_sillas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnSig = new WindowsFormsApplication1.RoundButton();
+            this.btnAnt = new WindowsFormsApplication1.RoundButton();
+            this.lblPagina = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,6 +124,51 @@
             this.dataTable.Size = new System.Drawing.Size(976, 479);
             this.dataTable.TabIndex = 22;
             this.dataTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCategory_CellClick);
+
+            // 
+            // id_mesa
+            // 
+            this.id_mesa.DataPropertyName = "id_mesa";
+            this.id_mesa.FillWeight = 24.68968F;
+            this.id_mesa.HeaderText = "ID";
+            this.id_mesa.Name = "id_mesa";
+            this.id_mesa.ReadOnly = true;
+            // 
+            // nro_mesa
+            // 
+            this.nro_mesa.DataPropertyName = "nro_mesa";
+            this.nro_mesa.FillWeight = 140.4164F;
+            this.nro_mesa.HeaderText = "Nro De Mesa";
+            this.nro_mesa.Name = "nro_mesa";
+            this.nro_mesa.ReadOnly = true;
+            // 
+            // cant_sillas
+            // 
+            this.cant_sillas.DataPropertyName = "cantidad_sillas";
+            this.cant_sillas.FillWeight = 140.4164F;
+            this.cant_sillas.HeaderText = "Cantidad Sillas";
+            this.cant_sillas.Name = "cant_sillas";
+            this.cant_sillas.ReadOnly = true;
+            // 
+            // editar
+            // 
+            this.editar.FillWeight = 25.63799F;
+            this.editar.HeaderText = "Acciones";
+            this.editar.Image = global::TheCoffe.Properties.Resources.pencil;
+            this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // eliminar
+            // 
+            this.eliminar.FillWeight = 17.70912F;
+            this.eliminar.HeaderText = "";
+            this.eliminar.Image = global::TheCoffe.Properties.Resources.delete;
+            this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
             // 
             // label1
             // 
@@ -248,55 +296,68 @@
             this.btnAddTable.UseVisualStyleBackColor = false;
             this.btnAddTable.Click += new System.EventHandler(this.btnAddTable_Click);
             // 
-            // id_mesa
+            // btnSig
             // 
-            this.id_mesa.DataPropertyName = "id_mesa";
-            this.id_mesa.FillWeight = 24.68968F;
-            this.id_mesa.HeaderText = "ID";
-            this.id_mesa.Name = "id_mesa";
-            this.id_mesa.ReadOnly = true;
+            this.btnSig.BackColor = System.Drawing.Color.Transparent;
+            this.btnSig.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnSig.BorderColor = System.Drawing.Color.Black;
+            this.btnSig.BorderRadius = 20;
+            this.btnSig.BorderSize = 0;
+            this.btnSig.FlatAppearance.BorderSize = 0;
+            this.btnSig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSig.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnSig.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
+            this.btnSig.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnSig.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSig.Location = new System.Drawing.Point(953, 623);
+            this.btnSig.Name = "btnSig";
+            this.btnSig.Size = new System.Drawing.Size(25, 40);
+            this.btnSig.TabIndex = 33;
+            this.btnSig.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnSig.UseVisualStyleBackColor = false;
+            this.btnSig.Click += new System.EventHandler(this.btnSig_Click);
             // 
-            // nro_mesa
+            // btnAnt
             // 
-            this.nro_mesa.DataPropertyName = "nro_mesa";
-            this.nro_mesa.FillWeight = 140.4164F;
-            this.nro_mesa.HeaderText = "Nro De Mesa";
-            this.nro_mesa.Name = "nro_mesa";
-            this.nro_mesa.ReadOnly = true;
+            this.btnAnt.BackColor = System.Drawing.Color.Transparent;
+            this.btnAnt.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnAnt.BorderColor = System.Drawing.Color.Black;
+            this.btnAnt.BorderRadius = 20;
+            this.btnAnt.BorderSize = 0;
+            this.btnAnt.FlatAppearance.BorderSize = 0;
+            this.btnAnt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnAnt.IconChar = FontAwesome.Sharp.IconChar.AngleLeft;
+            this.btnAnt.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnAnt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAnt.Location = new System.Drawing.Point(814, 623);
+            this.btnAnt.Name = "btnAnt";
+            this.btnAnt.Size = new System.Drawing.Size(25, 40);
+            this.btnAnt.TabIndex = 32;
+            this.btnAnt.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnAnt.UseVisualStyleBackColor = false;
+            this.btnAnt.Click += new System.EventHandler(this.btnAnt_Click);
             // 
-            // cant_sillas
+            // lblPagina
             // 
-            this.cant_sillas.DataPropertyName = "cantidad_sillas";
-            this.cant_sillas.FillWeight = 140.4164F;
-            this.cant_sillas.HeaderText = "Cantidad Sillas";
-            this.cant_sillas.Name = "cant_sillas";
-            this.cant_sillas.ReadOnly = true;
-            // 
-            // editar
-            // 
-            this.editar.FillWeight = 25.63799F;
-            this.editar.HeaderText = "Acciones";
-            this.editar.Image = global::TheCoffe.Properties.Resources.pencil;
-            this.editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.editar.Name = "editar";
-            this.editar.ReadOnly = true;
-            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // eliminar
-            // 
-            this.eliminar.FillWeight = 17.70912F;
-            this.eliminar.HeaderText = "";
-            this.eliminar.Image = global::TheCoffe.Properties.Resources.delete;
-            this.eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.eliminar.Name = "eliminar";
-            this.eliminar.ReadOnly = true;
+            this.lblPagina.AutoSize = true;
+            this.lblPagina.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPagina.Location = new System.Drawing.Point(845, 633);
+            this.lblPagina.Name = "lblPagina";
+            this.lblPagina.Size = new System.Drawing.Size(102, 17);
+            this.lblPagina.TabIndex = 31;
+            this.lblPagina.Text = "Pagina 1 de 10";
             // 
             // TableList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Controls.Add(this.btnSig);
+            this.Controls.Add(this.btnAnt);
+            this.Controls.Add(this.lblPagina);
             this.Controls.Add(this.btnRemovedTables);
             this.Controls.Add(this.iconSearch);
             this.Controls.Add(this.txtSearch);
@@ -327,5 +388,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cant_sillas;
         private System.Windows.Forms.DataGridViewImageColumn editar;
         private System.Windows.Forms.DataGridViewImageColumn eliminar;
+        private WindowsFormsApplication1.RoundButton btnSig;
+        private WindowsFormsApplication1.RoundButton btnAnt;
+        private System.Windows.Forms.Label lblPagina;
     }
 }

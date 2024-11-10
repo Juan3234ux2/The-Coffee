@@ -10,11 +10,13 @@ using System.Windows.Forms;
 using TheCoffe.CPresentacion;
 using TheCoffe.CDatos;
 using TheCoffe.CNegocio.Services;
+using TheCoffe.CNegocio;
 
 namespace TheCoffe.App
 {
     public partial class WaiterListForm : UserControl
     {
+        private Paginator<Mesero> paginator;
         private WaiterService _waiterService = new WaiterService();
         private Mesero mesero = new Mesero();
         private int id;
@@ -29,7 +31,8 @@ namespace TheCoffe.App
         {
             WaiterService service = new WaiterService();
             var mesero = await service.ObtenerMeserosActivos();
-            dataWaiter.DataSource = mesero;
+            paginator = new Paginator<Mesero>(mesero, 9);
+            CargarDatos(paginator);
         }
 
         public async void RefreshPantalla()
@@ -110,6 +113,31 @@ namespace TheCoffe.App
             {
                 RefreshPantalla();
             }
+        }
+
+        public void CargarDatos(Paginator<Mesero> meseros)
+        {
+            dataWaiter.DataSource = null;
+            dataWaiter.DataSource = meseros.GetPageData();
+            ActualizarPaginacion(meseros);
+        }
+        private void ActualizarPaginacion(Paginator<Mesero> mesero)
+        {
+            lblPagina.Text = $"Página {mesero.CurrentPage} de {mesero.TotalPages}";
+            btnAnt.Enabled = mesero.CurrentPage > 1;
+            btnSig.Enabled = mesero.CurrentPage < mesero.TotalPages;
+        }
+
+        private void btnAnt_Click(object sender, EventArgs e)
+        {
+            paginator.PreviousPage();
+            CargarDatos(paginator);
+        }
+
+        private void btnSig_Click(object sender, EventArgs e)
+        {
+            paginator.NextPage();
+            CargarDatos(paginator);
         }
     }
 }

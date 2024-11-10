@@ -218,7 +218,7 @@
             this.btnSig.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
             this.btnSig.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnSig.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSig.Location = new System.Drawing.Point(975, 556);
+            this.btnSig.Location = new System.Drawing.Point(959, 548);
             this.btnSig.Name = "btnSig";
             this.btnSig.Size = new System.Drawing.Size(25, 40);
             this.btnSig.TabIndex = 35;
@@ -240,7 +240,7 @@
             this.btnAnt.IconChar = FontAwesome.Sharp.IconChar.AngleLeft;
             this.btnAnt.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
             this.btnAnt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAnt.Location = new System.Drawing.Point(838, 556);
+            this.btnAnt.Location = new System.Drawing.Point(821, 548);
             this.btnAnt.Name = "btnAnt";
             this.btnAnt.Size = new System.Drawing.Size(25, 40);
             this.btnAnt.TabIndex = 34;
@@ -250,9 +250,10 @@
             // 
             // lblPagina
             // 
+            this.lblPagina.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.lblPagina.AutoSize = true;
             this.lblPagina.Font = new System.Drawing.Font("Roboto Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPagina.Location = new System.Drawing.Point(869, 566);
+            this.lblPagina.Location = new System.Drawing.Point(852, 557);
             this.lblPagina.Name = "lblPagina";
             this.lblPagina.Size = new System.Drawing.Size(102, 17);
             this.lblPagina.TabIndex = 33;

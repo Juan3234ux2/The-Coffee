@@ -33,7 +33,7 @@ namespace TheCoffe.CAccesoADatos
         {
             using (db = new DBTheCoffeeEntities())
             {
-                return await db.Turno_Caja.ToListAsync();
+                return await db.Turno_Caja.Include(p => p.Usuario).ToListAsync();
             }
         }
 
@@ -66,6 +66,18 @@ namespace TheCoffe.CAccesoADatos
             {
                 return db.Turno_Caja.Where(p =>
                 p.Usuario.nombreCompleto.Contains(name)).ToList();
+            }
+        }
+
+        public async Task<List<Turno_Caja>> FiltrarPorFecha(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            using (db = new DBTheCoffeeEntities())
+            {
+                return await db.Turno_Caja
+                    .Include(t => t.Usuario)
+                    .Where(t =>  t.fecha_cierre >= fechaDesde && t.fecha_cierre <= fechaHasta)
+                    .OrderByDescending(t => t.fecha_cierre)
+                    .ToListAsync();
             }
         }
     }

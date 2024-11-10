@@ -31,12 +31,12 @@
             this.txtAmount = new TheCoffe.Components.ModernTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lblAddClient = new System.Windows.Forms.Label();
-            this.btnCloseBox = new WindowsFormsApplication1.RoundButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.lblMontoRecaudado = new System.Windows.Forms.Label();
             this.txtObservaciones = new TheCoffe.Components.ModernTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblDiferencia = new System.Windows.Forms.Label();
+            this.btnCloseBox = new WindowsFormsApplication1.RoundButton();
             this.SuspendLayout();
             // 
             // txtAmount
@@ -83,31 +83,6 @@
             this.lblAddClient.Size = new System.Drawing.Size(104, 22);
             this.lblAddClient.TabIndex = 85;
             this.lblAddClient.Text = "Cerrar Caja";
-            // 
-            // btnCloseBox
-            // 
-            this.btnCloseBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnCloseBox.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnCloseBox.BorderColor = System.Drawing.Color.Black;
-            this.btnCloseBox.BorderRadius = 6;
-            this.btnCloseBox.BorderSize = 0;
-            this.btnCloseBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCloseBox.FlatAppearance.BorderSize = 0;
-            this.btnCloseBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseBox.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnCloseBox.ForeColor = System.Drawing.Color.White;
-            this.btnCloseBox.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnCloseBox.IconColor = System.Drawing.Color.White;
-            this.btnCloseBox.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCloseBox.IconSize = 34;
-            this.btnCloseBox.Location = new System.Drawing.Point(22, 284);
-            this.btnCloseBox.Name = "btnCloseBox";
-            this.btnCloseBox.Size = new System.Drawing.Size(487, 46);
-            this.btnCloseBox.TabIndex = 88;
-            this.btnCloseBox.Text = "Cerrar e Imprimir";
-            this.btnCloseBox.TextColor = System.Drawing.Color.White;
-            this.btnCloseBox.UseVisualStyleBackColor = false;
-            this.btnCloseBox.Click += new System.EventHandler(this.btnCloseBox_Click);
             // 
             // btnClose
             // 
@@ -180,6 +155,31 @@
             this.lblDiferencia.TabIndex = 92;
             this.lblDiferencia.Text = "Diferencia:  $ 0";
             // 
+            // btnCloseBox
+            // 
+            this.btnCloseBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnCloseBox.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnCloseBox.BorderColor = System.Drawing.Color.Black;
+            this.btnCloseBox.BorderRadius = 6;
+            this.btnCloseBox.BorderSize = 0;
+            this.btnCloseBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCloseBox.FlatAppearance.BorderSize = 0;
+            this.btnCloseBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseBox.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnCloseBox.ForeColor = System.Drawing.Color.White;
+            this.btnCloseBox.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnCloseBox.IconColor = System.Drawing.Color.White;
+            this.btnCloseBox.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCloseBox.IconSize = 34;
+            this.btnCloseBox.Location = new System.Drawing.Point(22, 284);
+            this.btnCloseBox.Name = "btnCloseBox";
+            this.btnCloseBox.Size = new System.Drawing.Size(487, 46);
+            this.btnCloseBox.TabIndex = 88;
+            this.btnCloseBox.Text = "Cerrar e Imprimir";
+            this.btnCloseBox.TextColor = System.Drawing.Color.White;
+            this.btnCloseBox.UseVisualStyleBackColor = false;
+            this.btnCloseBox.Click += new System.EventHandler(this.btnCloseBox_Click);
+            // 
             // CloseBoxForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,8 +207,6 @@
         }
 
         #endregion
-
-        private WindowsFormsApplication1.RoundButton btnCloseBox;
         private TheCoffe.Components.ModernTextBox txtAmount;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblAddClient;
@@ -217,5 +215,6 @@
         private TheCoffe.Components.ModernTextBox txtObservaciones;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblDiferencia;
+        private WindowsFormsApplication1.RoundButton btnCloseBox;
     }
 }

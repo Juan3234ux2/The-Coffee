@@ -51,5 +51,9 @@ namespace TheCoffe.CNegocio.Services
                 throw ex;
             }
         }
+        public async Task<List<Turno_Caja>> FiltrarPorFecha(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            return await _turnoRepository.FiltrarPorFecha(fechaDesde, fechaHasta);
+        }
     }
 }
