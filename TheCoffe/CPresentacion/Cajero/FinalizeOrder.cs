@@ -43,7 +43,6 @@ namespace TheCoffe.CPresentacion.Cajero
             montoTotal = venta.Venta_Detalle.Sum(d => d.subtotal);
             ventaTotal = venta;
             lblTotal.Text = $"$ {productService.FormatCurrency(montoTotal)}";
-            ConfigurarTicket();
         }
         private void ConfigurarTicket()
         {
@@ -163,8 +162,27 @@ namespace TheCoffe.CPresentacion.Cajero
                 isShowingMsgBox = false;
                 return;
             }
-            else {
+            if(cboRecibo.SelectedIndex == 0)
+            {
+                ConfigurarTicket();
                 ticketPreviewDialog.ShowDialog(this);
+            }
+            else {
+                if(cboCustomer.SelectedIndex == -1)
+                {
+                    isShowingMsgBox = true;
+                    MessageBox.Show("Debe seleccionar un cliente",
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    isShowingMsgBox = false;
+                    return;
+                }
+                Factura factura = new Factura();
+                Cliente cliente = customerService.ObtenerClientePorID(int.Parse(cboCustomer.SelectedValue.ToString()));
+                orderService.FinalizarPedido(ventaTotal);
+                factura.CrearFactura(ventaTotal,cliente);
+                finishOrder?.Invoke();
             }
         }
 
@@ -223,11 +241,13 @@ namespace TheCoffe.CPresentacion.Cajero
             {
                 cboCustomer.Enabled = false;
                 btnAddClient.Enabled = false;
+                btnClient.Enabled = false;
             }
             else
             {
                 cboCustomer.Enabled = true;
                 btnAddClient.Enabled = true;
+                btnClient.Enabled = true;
             }
         }
     }

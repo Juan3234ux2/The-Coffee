@@ -28,6 +28,7 @@ namespace TheCoffe.CPresentacion
 
         private async void SalesListForm_Load(object sender, EventArgs e)
         {
+            dtpFechaDesde.Value = DateTime.Now.AddMonths(-1);
             await ObtenerVentasFiltradas();
             var meseros = await waiterService.ObtenerTodosLosMeseros();
             Mesero mesero = new Mesero
@@ -68,6 +69,7 @@ namespace TheCoffe.CPresentacion
         private async void dtpFechaDesde_ValueChanged(object sender, EventArgs e)
         {
             await ObtenerVentasFiltradas();
+            dtpFechaHasta.MinDate = dtpFechaDesde.Value;
         }
         private async Task ObtenerVentasFiltradas(int idMesero = 0)
         {

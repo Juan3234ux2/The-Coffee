@@ -34,7 +34,7 @@ namespace TheCoffe.CAccesoADatos
             using (var db = new DBTheCoffeeEntities())
             {
                 return await db.Venta
-                              .Include(v => v.Venta_Detalle)
+                              .Include(v => v.Venta_Detalle)                              
                               .Include(v => v.Mesero)
                               .Where(v => v.id_turno == id_turno && v.estado == "Completado")
                               .ToListAsync();
@@ -88,7 +88,8 @@ namespace TheCoffe.CAccesoADatos
                 return await db.Venta
                     .Include(v => v.Venta_Detalle)
                     .Include(v => v.Mesero)
-                    .Where(v => v.estado == "Completado" && v.fecha_venta >= fechaDesde && v.fecha_venta <= fechaHasta)
+                    .Where(v => v.estado == "Completado" && DbFunctions.TruncateTime(v.fecha_venta) >= DbFunctions.TruncateTime(fechaDesde) &&
+                    DbFunctions.TruncateTime(v.fecha_venta) <= DbFunctions.TruncateTime(fechaHasta))
                     .OrderByDescending(v => v.fecha_venta)
                     .ToListAsync();
             }

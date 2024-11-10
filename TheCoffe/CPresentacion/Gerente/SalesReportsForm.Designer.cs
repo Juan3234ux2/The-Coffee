@@ -44,14 +44,12 @@
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(45576D, 9D);
             this.label6 = new System.Windows.Forms.Label();
             this.sPanel2 = new Sipaa.Framework.SPanel();
-            this.label3 = new System.Windows.Forms.Label();
             this.chartDona = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label3 = new System.Windows.Forms.Label();
             this.sPanel1 = new Sipaa.Framework.SPanel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label4 = new System.Windows.Forms.Label();
             this.sPanel3 = new Sipaa.Framework.SPanel();
-            this.customDateTimePicker2 = new TheCoffe.Components.CustomDateTimePicker();
-            this.customDateTimePicker1 = new TheCoffe.Components.CustomDateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.sPanel4 = new Sipaa.Framework.SPanel();
@@ -59,11 +57,13 @@
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label5 = new System.Windows.Forms.Label();
             this.sPanel6 = new Sipaa.Framework.SPanel();
+            this.lblIngresoPromedio = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.sPanel7 = new Sipaa.Framework.SPanel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblPromedioCantidad = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.dtpHasta = new TheCoffe.Components.CustomDateTimePicker();
+            this.dtpDesde = new TheCoffe.Components.CustomDateTimePicker();
             this.sPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDona)).BeginInit();
             this.sPanel1.SuspendLayout();
@@ -91,24 +91,13 @@
             this.sPanel2.BorderColor = System.Drawing.Color.White;
             this.sPanel2.BorderRadius = 15;
             this.sPanel2.BorderSize = 0;
-            this.sPanel2.Controls.Add(this.label3);
             this.sPanel2.Controls.Add(this.chartDona);
+            this.sPanel2.Controls.Add(this.label3);
             this.sPanel2.ForeColor = System.Drawing.Color.White;
-            this.sPanel2.Location = new System.Drawing.Point(765, 74);
+            this.sPanel2.Location = new System.Drawing.Point(675, 74);
             this.sPanel2.Name = "sPanel2";
-            this.sPanel2.Size = new System.Drawing.Size(230, 301);
+            this.sPanel2.Size = new System.Drawing.Size(320, 301);
             this.sPanel2.TabIndex = 73;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(14, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 19);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Ventas Por Categoría";
             // 
             // chartDona
             // 
@@ -148,36 +137,38 @@
             chartArea1.BorderColor = System.Drawing.Color.Transparent;
             chartArea1.Name = "ChartArea1";
             chartArea1.Position.Auto = false;
-            chartArea1.Position.Height = 85F;
-            chartArea1.Position.Width = 85F;
+            chartArea1.Position.Height = 80F;
+            chartArea1.Position.Width = 80F;
             chartArea1.Position.X = 3F;
             chartArea1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.chartDona.ChartAreas.Add(chartArea1);
             legend1.Alignment = System.Drawing.StringAlignment.Center;
             legend1.BackColor = System.Drawing.Color.Transparent;
             legend1.DockedToChartArea = "ChartArea1";
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
             legend1.Font = new System.Drawing.Font("Roboto Medium", 8F);
             legend1.IsDockedInsideChartArea = false;
             legend1.IsEquallySpacedItems = true;
             legend1.IsTextAutoFit = false;
             legend1.ItemColumnSpacing = 1;
-            legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
+            legend1.LegendItemOrder = System.Windows.Forms.DataVisualization.Charting.LegendItemOrder.SameAsSeriesOrder;
+            legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Column;
             legend1.MaximumAutoSize = 100F;
             legend1.Name = "Legend1";
             legend1.Position.Auto = false;
-            legend1.Position.Height = 15F;
-            legend1.Position.Width = 100F;
-            legend1.Position.Y = 80F;
+            legend1.Position.Height = 8.363636F;
+            legend1.Position.Width = 30F;
+            legend1.Position.X = 70F;
+            legend1.Position.Y = 1F;
             legend1.TextWrapThreshold = 30;
             this.chartDona.Legends.Add(legend1);
-            this.chartDona.Location = new System.Drawing.Point(1, 19);
+            this.chartDona.Location = new System.Drawing.Point(-37, 51);
             this.chartDona.Name = "chartDona";
             this.chartDona.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartDona.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(49)))), ((int)(((byte)(82))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(129)))))};
+        System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(129))))),
+        System.Drawing.Color.DarkTurquoise};
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             series1.Color = System.Drawing.Color.White;
@@ -190,9 +181,20 @@
             series1.Name = "Series1";
             series1.SmartLabelStyle.Enabled = false;
             this.chartDona.Series.Add(series1);
-            this.chartDona.Size = new System.Drawing.Size(252, 276);
+            this.chartDona.Size = new System.Drawing.Size(349, 276);
             this.chartDona.TabIndex = 27;
             this.chartDona.Text = "chart2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(14, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(191, 19);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Categoría Mas Populares";
             // 
             // sPanel1
             // 
@@ -205,7 +207,7 @@
             this.sPanel1.ForeColor = System.Drawing.Color.White;
             this.sPanel1.Location = new System.Drawing.Point(17, 74);
             this.sPanel1.Name = "sPanel1";
-            this.sPanel1.Size = new System.Drawing.Size(726, 301);
+            this.sPanel1.Size = new System.Drawing.Size(631, 301);
             this.sPanel1.TabIndex = 72;
             // 
             // chart1
@@ -234,6 +236,7 @@
             | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45) 
             | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.WordWrap)));
             chartArea2.AxisY.LabelStyle.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.LabelStyle.Format = "C";
             chartArea2.AxisY.MajorGrid.Enabled = false;
             chartArea2.AxisY.TitleFont = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea2.BackColor = System.Drawing.Color.Transparent;
@@ -264,7 +267,7 @@
             series2.SmartLabelStyle.Enabled = false;
             series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(771, 267);
+            this.chart1.Size = new System.Drawing.Size(651, 267);
             this.chart1.TabIndex = 26;
             this.chart1.Text = "chart1";
             // 
@@ -285,42 +288,12 @@
             this.sPanel3.BorderColor = System.Drawing.Color.White;
             this.sPanel3.BorderRadius = 10;
             this.sPanel3.BorderSize = 0;
-            this.sPanel3.Controls.Add(this.customDateTimePicker2);
+            this.sPanel3.Controls.Add(this.dtpHasta);
             this.sPanel3.ForeColor = System.Drawing.Color.White;
             this.sPanel3.Location = new System.Drawing.Point(800, 17);
             this.sPanel3.Name = "sPanel3";
             this.sPanel3.Size = new System.Drawing.Size(195, 46);
             this.sPanel3.TabIndex = 78;
-            // 
-            // customDateTimePicker2
-            // 
-            this.customDateTimePicker2.BorderColor = System.Drawing.Color.Black;
-            this.customDateTimePicker2.BorderSize = 0;
-            this.customDateTimePicker2.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customDateTimePicker2.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
-            this.customDateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.customDateTimePicker2.Location = new System.Drawing.Point(4, 7);
-            this.customDateTimePicker2.MinimumSize = new System.Drawing.Size(4, 35);
-            this.customDateTimePicker2.Name = "customDateTimePicker2";
-            this.customDateTimePicker2.Size = new System.Drawing.Size(188, 35);
-            this.customDateTimePicker2.SkinColor = System.Drawing.Color.White;
-            this.customDateTimePicker2.TabIndex = 74;
-            this.customDateTimePicker2.TextColor = System.Drawing.Color.Black;
-            // 
-            // customDateTimePicker1
-            // 
-            this.customDateTimePicker1.BorderColor = System.Drawing.Color.Black;
-            this.customDateTimePicker1.BorderSize = 0;
-            this.customDateTimePicker1.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customDateTimePicker1.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
-            this.customDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.customDateTimePicker1.Location = new System.Drawing.Point(522, 24);
-            this.customDateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.customDateTimePicker1.Name = "customDateTimePicker1";
-            this.customDateTimePicker1.Size = new System.Drawing.Size(188, 35);
-            this.customDateTimePicker1.SkinColor = System.Drawing.Color.White;
-            this.customDateTimePicker1.TabIndex = 76;
-            this.customDateTimePicker1.TextColor = System.Drawing.Color.Black;
             // 
             // label1
             // 
@@ -365,7 +338,7 @@
             this.sPanel5.ForeColor = System.Drawing.Color.White;
             this.sPanel5.Location = new System.Drawing.Point(17, 392);
             this.sPanel5.Name = "sPanel5";
-            this.sPanel5.Size = new System.Drawing.Size(726, 265);
+            this.sPanel5.Size = new System.Drawing.Size(631, 265);
             this.sPanel5.TabIndex = 73;
             // 
             // chart2
@@ -432,7 +405,7 @@
             series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             series3.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int64;
             this.chart2.Series.Add(series3);
-            this.chart2.Size = new System.Drawing.Size(738, 235);
+            this.chart2.Size = new System.Drawing.Size(646, 235);
             this.chart2.TabIndex = 26;
             this.chart2.Text = "chart2";
             // 
@@ -453,13 +426,24 @@
             this.sPanel6.BorderColor = System.Drawing.Color.White;
             this.sPanel6.BorderRadius = 15;
             this.sPanel6.BorderSize = 1;
-            this.sPanel6.Controls.Add(this.label8);
+            this.sPanel6.Controls.Add(this.lblIngresoPromedio);
             this.sPanel6.Controls.Add(this.label7);
             this.sPanel6.ForeColor = System.Drawing.Color.White;
-            this.sPanel6.Location = new System.Drawing.Point(765, 389);
+            this.sPanel6.Location = new System.Drawing.Point(675, 389);
             this.sPanel6.Name = "sPanel6";
-            this.sPanel6.Size = new System.Drawing.Size(230, 120);
+            this.sPanel6.Size = new System.Drawing.Size(320, 120);
             this.sPanel6.TabIndex = 74;
+            // 
+            // lblIngresoPromedio
+            // 
+            this.lblIngresoPromedio.AutoSize = true;
+            this.lblIngresoPromedio.Font = new System.Drawing.Font("Roboto", 32F, System.Drawing.FontStyle.Bold);
+            this.lblIngresoPromedio.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblIngresoPromedio.Location = new System.Drawing.Point(8, 44);
+            this.lblIngresoPromedio.Name = "lblIngresoPromedio";
+            this.lblIngresoPromedio.Size = new System.Drawing.Size(73, 52);
+            this.lblIngresoPromedio.TabIndex = 23;
+            this.lblIngresoPromedio.Text = "$0";
             // 
             // label7
             // 
@@ -472,41 +456,30 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "Promedio De Ingreso Diario";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Roboto", 32F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label8.Location = new System.Drawing.Point(12, 44);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(184, 52);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "$54,800";
-            // 
             // sPanel7
             // 
             this.sPanel7.BackColor = System.Drawing.Color.White;
             this.sPanel7.BorderColor = System.Drawing.Color.White;
             this.sPanel7.BorderRadius = 15;
             this.sPanel7.BorderSize = 1;
-            this.sPanel7.Controls.Add(this.label9);
+            this.sPanel7.Controls.Add(this.lblPromedioCantidad);
             this.sPanel7.Controls.Add(this.label10);
             this.sPanel7.ForeColor = System.Drawing.Color.White;
-            this.sPanel7.Location = new System.Drawing.Point(765, 537);
+            this.sPanel7.Location = new System.Drawing.Point(675, 537);
             this.sPanel7.Name = "sPanel7";
-            this.sPanel7.Size = new System.Drawing.Size(230, 120);
+            this.sPanel7.Size = new System.Drawing.Size(320, 120);
             this.sPanel7.TabIndex = 75;
             // 
-            // label9
+            // lblPromedioCantidad
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Roboto", 32F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.Navy;
-            this.label9.Location = new System.Drawing.Point(12, 44);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 52);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "47";
+            this.lblPromedioCantidad.AutoSize = true;
+            this.lblPromedioCantidad.Font = new System.Drawing.Font("Roboto", 32F, System.Drawing.FontStyle.Bold);
+            this.lblPromedioCantidad.ForeColor = System.Drawing.Color.Navy;
+            this.lblPromedioCantidad.Location = new System.Drawing.Point(9, 44);
+            this.lblPromedioCantidad.Name = "lblPromedioCantidad";
+            this.lblPromedioCantidad.Size = new System.Drawing.Size(73, 52);
+            this.lblPromedioCantidad.TabIndex = 23;
+            this.lblPromedioCantidad.Text = "47";
             // 
             // label10
             // 
@@ -519,6 +492,40 @@
             this.label10.TabIndex = 22;
             this.label10.Text = "Promedio De Ventas Diarias";
             // 
+            // dtpHasta
+            // 
+            this.dtpHasta.BorderColor = System.Drawing.Color.Black;
+            this.dtpHasta.BorderSize = 0;
+            this.dtpHasta.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpHasta.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
+            this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHasta.Location = new System.Drawing.Point(4, 7);
+            this.dtpHasta.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(188, 35);
+            this.dtpHasta.SkinColor = System.Drawing.Color.White;
+            this.dtpHasta.TabIndex = 74;
+            this.dtpHasta.TextColor = System.Drawing.Color.Black;
+            this.dtpHasta.Value = new System.DateTime(2024, 11, 2, 0, 0, 0, 0);
+            this.dtpHasta.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
+            // 
+            // dtpDesde
+            // 
+            this.dtpDesde.BorderColor = System.Drawing.Color.Black;
+            this.dtpDesde.BorderSize = 0;
+            this.dtpDesde.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDesde.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
+            this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDesde.Location = new System.Drawing.Point(522, 24);
+            this.dtpDesde.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpDesde.Name = "dtpDesde";
+            this.dtpDesde.Size = new System.Drawing.Size(188, 35);
+            this.dtpDesde.SkinColor = System.Drawing.Color.White;
+            this.dtpDesde.TabIndex = 76;
+            this.dtpDesde.TextColor = System.Drawing.Color.Black;
+            this.dtpDesde.Value = new System.DateTime(2024, 10, 29, 0, 0, 0, 0);
+            this.dtpDesde.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
+            // 
             // SalesReportsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -529,7 +536,7 @@
             this.Controls.Add(this.sPanel5);
             this.Controls.Add(this.sPanel3);
             this.Controls.Add(this.sPanel2);
-            this.Controls.Add(this.customDateTimePicker1);
+            this.Controls.Add(this.dtpDesde);
             this.Controls.Add(this.sPanel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
@@ -538,6 +545,7 @@
             this.Location = new System.Drawing.Point(16, 15);
             this.Name = "SalesReportsForm";
             this.Size = new System.Drawing.Size(1014, 681);
+            this.Load += new System.EventHandler(this.SalesReportsForm_Load);
             this.sPanel2.ResumeLayout(false);
             this.sPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDona)).EndInit();
@@ -566,8 +574,8 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label label4;
         private Sipaa.Framework.SPanel sPanel3;
-        private TheCoffe.Components.CustomDateTimePicker customDateTimePicker2;
-        private TheCoffe.Components.CustomDateTimePicker customDateTimePicker1;
+        private TheCoffe.Components.CustomDateTimePicker dtpHasta;
+        private TheCoffe.Components.CustomDateTimePicker dtpDesde;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Sipaa.Framework.SPanel sPanel4;
@@ -575,10 +583,10 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.Label label5;
         private Sipaa.Framework.SPanel sPanel6;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblIngresoPromedio;
         private System.Windows.Forms.Label label7;
         private Sipaa.Framework.SPanel sPanel7;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblPromedioCantidad;
         private System.Windows.Forms.Label label10;
     }
 }

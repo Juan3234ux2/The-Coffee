@@ -29,6 +29,10 @@ namespace TheCoffe.CNegocio.Services
                 }
             }
         }
+        public Cliente ObtenerClientePorID(int id_cliente)
+        {
+            return _customerRepository.Find(id_cliente);
+        }
         public bool ValidarDatos(Cliente cliente)
         {
             if (_customerRepository.ExistCUIT(cliente))

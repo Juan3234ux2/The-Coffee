@@ -17,31 +17,16 @@ namespace TheCoffe.CPresentacion.Cajero
     public partial class CloseBoxForm : Form
     {
         private bool isShowingMsgBox = false;
-        private int idTurno = 0;
         private TurnoService turnoService = new TurnoService();
         private OrderService orderService = new OrderService();
         private ProductService productService = new ProductService();
         public event Action cerrarCaja;
         private double totalRecaudado;
-        private Turno_Caja turno = null;
         public CloseBoxForm()
         {
             InitializeComponent();
         }
 
-        public CloseBoxForm(int id)
-        {
-            InitializeComponent();
-            this.idTurno = id;
-            turno = turnoService.ObtenerTurnoPorID(id);
-            lblMontoRecaudado.Text = $"Monto recaudado: $ {turno.monto_cierre - turno.diferencia}";
-            txtAmount.Texts = Convert.ToString(turno.monto_cierre);
-            lblDiferencia.Text = $"Diferencia: $ {turno.diferencia}";
-            txtAmount.Enabled = false;
-            txtObservaciones.Texts = turno.observaciones;
-            txtObservaciones.Enabled = false;
-            btnCloseBox.Visible = false;
-        }
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
             InputValidator.ValidateInput(e, InputValidator.InputType.Digits);           
@@ -60,11 +45,7 @@ namespace TheCoffe.CPresentacion.Cajero
                     timer.Stop();
             };
             timer.Start();
-
-            if (idTurno == 0)
-            {
-                CargarDatos();
-            }
+            CargarDatos();
         }
         private async void CargarDatos()
         {
@@ -97,15 +78,15 @@ namespace TheCoffe.CPresentacion.Cajero
             else
             {
                 try
-                    {
-                        double montoEsperado = totalRecaudado;
-                        Turno.TurnoActual.fecha_cierre = DateTime.Now;
-                        Turno.TurnoActual.observaciones = txtObservaciones.Texts;
-                        Turno.TurnoActual.monto_cierre = double.Parse(txtAmount.Texts.Trim());
-                        Turno.TurnoActual.diferencia = Turno.TurnoActual.monto_cierre - montoEsperado;
-                        turnoService.ActualizarTurno(Turno.TurnoActual);
-                        cerrarCaja?.Invoke();
-                        new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso Finalizado", "Caja Cerrada Exitosamente", Properties.Resources.informacion);
+                {
+                    double montoEsperado =  totalRecaudado;
+                    Turno.TurnoActual.fecha_cierre = DateTime.Now;
+                    Turno.TurnoActual.observaciones = txtObservaciones.Texts;
+                    Turno.TurnoActual.monto_cierre = double.Parse(txtAmount.Texts.Trim());
+                    Turno.TurnoActual.diferencia = Turno.TurnoActual.monto_cierre - montoEsperado;
+                    turnoService.ActualizarTurno(Turno.TurnoActual);
+                    cerrarCaja?.Invoke();
+                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso Finalizado", "Caja Cerrada Exitosamente", Properties.Resources.informacion);
                 }
                 catch (Exception ex)
                 {

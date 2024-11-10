@@ -30,6 +30,10 @@ namespace TheCoffe.CNegocio.Services
         {
             return await _orderRepository.ObtenerDetallesPedido(idPedido);
         }
+        public async Task<List<Venta_Detalle>> ObtenerTodosLosDetalles()
+        {
+            return await _orderDetailRepository.Read();
+        }
         public async Task<List<Venta>> FiltrarPorFecha(DateTime fechaDesde, DateTime fechaHasta)
         {
             return await _orderRepository.FiltrarPorFecha(fechaDesde, fechaHasta);
