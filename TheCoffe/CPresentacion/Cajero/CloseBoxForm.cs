@@ -20,11 +20,26 @@ namespace TheCoffe.CPresentacion.Cajero
         private TurnoService turnoService = new TurnoService();
         private OrderService orderService = new OrderService();
         private ProductService productService = new ProductService();
+        private Turno_Caja turno;
         public event Action cerrarCaja;
         private double totalRecaudado;
+        private int idTurno = 0;
         public CloseBoxForm()
         {
             InitializeComponent();
+        }
+
+        public CloseBoxForm(int id)
+        {
+            InitializeComponent();
+            turno = turnoService.ObtenerTurnoPorID(id);
+            this.idTurno = id;
+            txtAmount.Texts = Convert.ToString(turno.monto_cierre);
+            lblDiferencia.Text = $"Diferencia: $ {turno.diferencia}";
+            lblMontoRecaudado.Text = $"Monto recaudado: $ {turno.monto_cierre - turno.diferencia}";
+            txtObservaciones.Texts = turno.observaciones;
+            txtAmount.Enabled = false;
+            btnCloseBox.Visible = false;
         }
 
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
@@ -45,7 +60,11 @@ namespace TheCoffe.CPresentacion.Cajero
                     timer.Stop();
             };
             timer.Start();
-            CargarDatos();
+
+            if (idTurno == 0)
+            {
+                CargarDatos();
+            }
         }
         private async void CargarDatos()
         {
