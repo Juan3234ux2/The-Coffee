@@ -42,6 +42,18 @@ namespace TheCoffe.CNegocio.Services
         {
             return _orderRepository.HayPedidosActivos();
         }
+        public void CancelarPedido(Venta pedido)
+        {
+            try
+            {
+                _orderRepository.CancelOrder(pedido);
+                _tableService.CambiarDisponibilidad(pedido.id_mesa);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public async Task<List<Venta>> ObtenerTodosLosPedidos()
         {
             return await _orderRepository.FindAll();

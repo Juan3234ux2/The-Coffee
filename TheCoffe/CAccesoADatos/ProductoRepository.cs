@@ -48,6 +48,44 @@ namespace TheCoffe.CAccesoADatos
                     .ToListAsync();
             }
         }
+        public async Task<List<Producto>> ObtenerProductosPopulares()
+        {
+            using (db = new DBTheCoffeeEntities())
+            {
+                if (db.Venta_Detalle.Count() > 8)
+                {
+                    return await db.Venta_Detalle
+                            .GroupBy(d => d.id_producto)
+                            .Select(g => new
+                            {
+                                ProductoId = g.Key,
+                                TotalVentas = g.Sum(d => d.cantidad) 
+                            })
+                            .Join(db.Producto,
+                                  resultado => resultado.ProductoId,
+                                  producto => producto.id_producto,
+                                  (resultado, producto) => new 
+                                  {
+                                      p = producto,
+                                      resultado.TotalVentas
+                                  })
+                            .OrderByDescending(p => p.TotalVentas)
+                            .Select(p => p.p)
+                            .Where(p => p.estado)
+                            .Take(9)
+                            .OrderBy(p => p.nombre)
+                            .ToListAsync();
+                }
+                else
+                {
+                    return await db.Producto
+                    .Where(p => p.estado)
+                    .Take(9)
+                    .OrderBy(p => p.nombre)
+                    .ToListAsync();
+                }
+            }
+        }
         public Producto SearchObject(int id)
         {
                 using (db = new DBTheCoffeeEntities())

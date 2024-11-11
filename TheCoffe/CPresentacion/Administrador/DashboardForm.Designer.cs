@@ -56,13 +56,10 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.sPanel7 = new Sipaa.Framework.SPanel();
-            this.roundButton3 = new WindowsFormsApplication1.RoundButton();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.roundButton2 = new WindowsFormsApplication1.RoundButton();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.roundButton1 = new WindowsFormsApplication1.RoundButton();
             this.label20 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -71,28 +68,29 @@
             this.sPanel6 = new Sipaa.Framework.SPanel();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lbltotalRecaudado = new System.Windows.Forms.Label();
             this.sPanel5 = new Sipaa.Framework.SPanel();
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblTotalPedidos = new System.Windows.Forms.Label();
             this.sPanel4 = new Sipaa.Framework.SPanel();
             this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblTotalEmpleados = new System.Windows.Forms.Label();
             this.sPanel3 = new Sipaa.Framework.SPanel();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblProducts = new System.Windows.Forms.Label();
             this.sPanel2 = new Sipaa.Framework.SPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.chartDona = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.h = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.sPanel1 = new Sipaa.Framework.SPanel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.roundButton5 = new WindowsFormsApplication1.RoundButton();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.roundButton3 = new WindowsFormsApplication1.RoundButton();
+            this.roundButton2 = new WindowsFormsApplication1.RoundButton();
+            this.roundButton1 = new WindowsFormsApplication1.RoundButton();
+            this.roundButton5 = new WindowsFormsApplication1.RoundButton();
             this.panel1.SuspendLayout();
             this.sPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -108,7 +106,7 @@
             this.sPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.sPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartDona)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.h)).BeginInit();
             this.sPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
@@ -308,28 +306,6 @@
             this.sPanel7.Size = new System.Drawing.Size(480, 169);
             this.sPanel7.TabIndex = 27;
             // 
-            // roundButton3
-            // 
-            this.roundButton3.BackColor = System.Drawing.Color.LimeGreen;
-            this.roundButton3.BackgroundColor = System.Drawing.Color.LimeGreen;
-            this.roundButton3.BackgroundImage = global::TheCoffe.Properties.Resources.rebanada_de_pastel;
-            this.roundButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.roundButton3.BorderColor = System.Drawing.Color.Black;
-            this.roundButton3.BorderRadius = 20;
-            this.roundButton3.BorderSize = 0;
-            this.roundButton3.FlatAppearance.BorderSize = 0;
-            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton3.ForeColor = System.Drawing.Color.White;
-            this.roundButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton3.IconColor = System.Drawing.Color.Black;
-            this.roundButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton3.Location = new System.Drawing.Point(25, 126);
-            this.roundButton3.Name = "roundButton3";
-            this.roundButton3.Size = new System.Drawing.Size(39, 39);
-            this.roundButton3.TabIndex = 37;
-            this.roundButton3.TextColor = System.Drawing.Color.White;
-            this.roundButton3.UseVisualStyleBackColor = false;
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -350,28 +326,6 @@
             this.label22.TabIndex = 35;
             this.label22.Text = "200";
             // 
-            // roundButton2
-            // 
-            this.roundButton2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.roundButton2.BackgroundColor = System.Drawing.Color.CornflowerBlue;
-            this.roundButton2.BackgroundImage = global::TheCoffe.Properties.Resources.taza_de_cafe1;
-            this.roundButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.roundButton2.BorderColor = System.Drawing.Color.Black;
-            this.roundButton2.BorderRadius = 20;
-            this.roundButton2.BorderSize = 0;
-            this.roundButton2.FlatAppearance.BorderSize = 0;
-            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton2.ForeColor = System.Drawing.Color.White;
-            this.roundButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton2.IconColor = System.Drawing.Color.Black;
-            this.roundButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton2.Location = new System.Drawing.Point(25, 86);
-            this.roundButton2.Name = "roundButton2";
-            this.roundButton2.Size = new System.Drawing.Size(39, 39);
-            this.roundButton2.TabIndex = 34;
-            this.roundButton2.TextColor = System.Drawing.Color.White;
-            this.roundButton2.UseVisualStyleBackColor = false;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -391,28 +345,6 @@
             this.label19.Size = new System.Drawing.Size(35, 17);
             this.label19.TabIndex = 32;
             this.label19.Text = "240";
-            // 
-            // roundButton1
-            // 
-            this.roundButton1.BackColor = System.Drawing.Color.Navy;
-            this.roundButton1.BackgroundColor = System.Drawing.Color.Navy;
-            this.roundButton1.BackgroundImage = global::TheCoffe.Properties.Resources.vaso_de_cafe;
-            this.roundButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.roundButton1.BorderColor = System.Drawing.Color.Black;
-            this.roundButton1.BorderRadius = 20;
-            this.roundButton1.BorderSize = 0;
-            this.roundButton1.FlatAppearance.BorderSize = 0;
-            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton1.ForeColor = System.Drawing.Color.White;
-            this.roundButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundButton1.IconColor = System.Drawing.Color.Black;
-            this.roundButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundButton1.Location = new System.Drawing.Point(25, 46);
-            this.roundButton1.Name = "roundButton1";
-            this.roundButton1.Size = new System.Drawing.Size(39, 39);
-            this.roundButton1.TabIndex = 31;
-            this.roundButton1.TextColor = System.Drawing.Color.White;
-            this.roundButton1.UseVisualStyleBackColor = false;
             // 
             // label20
             // 
@@ -472,7 +404,7 @@
             this.sPanel6.BorderSize = 0;
             this.sPanel6.Controls.Add(this.chart3);
             this.sPanel6.Controls.Add(this.label12);
-            this.sPanel6.Controls.Add(this.label11);
+            this.sPanel6.Controls.Add(this.lbltotalRecaudado);
             this.sPanel6.ForeColor = System.Drawing.Color.White;
             this.sPanel6.Location = new System.Drawing.Point(266, 25);
             this.sPanel6.Name = "sPanel6";
@@ -491,7 +423,7 @@
             chartArea1.Name = "ChartArea1";
             this.chart3.ChartAreas.Add(chartArea1);
             this.chart3.IsSoftShadows = false;
-            this.chart3.Location = new System.Drawing.Point(99, 13);
+            this.chart3.Location = new System.Drawing.Point(134, 13);
             this.chart3.Name = "chart3";
             series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
             series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -502,7 +434,7 @@
             series1.Color = System.Drawing.Color.LimeGreen;
             series1.Name = "Empleados";
             this.chart3.Series.Add(series1);
-            this.chart3.Size = new System.Drawing.Size(126, 68);
+            this.chart3.Size = new System.Drawing.Size(91, 68);
             this.chart3.TabIndex = 2;
             this.chart3.Text = "chart3";
             this.chart3.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.SystemDefault;
@@ -518,16 +450,16 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Total Recaudado";
             // 
-            // label11
+            // lbltotalRecaudado
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label11.Location = new System.Drawing.Point(4, 35);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(103, 29);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "$65,570";
+            this.lbltotalRecaudado.AutoSize = true;
+            this.lbltotalRecaudado.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotalRecaudado.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lbltotalRecaudado.Location = new System.Drawing.Point(4, 35);
+            this.lbltotalRecaudado.Name = "lbltotalRecaudado";
+            this.lbltotalRecaudado.Size = new System.Drawing.Size(103, 29);
+            this.lbltotalRecaudado.TabIndex = 1;
+            this.lbltotalRecaudado.Text = "$65,570";
             // 
             // sPanel5
             // 
@@ -537,7 +469,7 @@
             this.sPanel5.BorderSize = 0;
             this.sPanel5.Controls.Add(this.chart4);
             this.sPanel5.Controls.Add(this.label10);
-            this.sPanel5.Controls.Add(this.label9);
+            this.sPanel5.Controls.Add(this.lblTotalPedidos);
             this.sPanel5.ForeColor = System.Drawing.Color.Black;
             this.sPanel5.Location = new System.Drawing.Point(515, 25);
             this.sPanel5.Name = "sPanel5";
@@ -556,7 +488,7 @@
             chartArea2.Name = "ChartArea1";
             this.chart4.ChartAreas.Add(chartArea2);
             this.chart4.IsSoftShadows = false;
-            this.chart4.Location = new System.Drawing.Point(98, 13);
+            this.chart4.Location = new System.Drawing.Point(125, 13);
             this.chart4.Name = "chart4";
             series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
             series2.BackSecondaryColor = System.Drawing.Color.GhostWhite;
@@ -567,7 +499,7 @@
             series2.Color = System.Drawing.Color.Blue;
             series2.Name = "Pedidos";
             this.chart4.Series.Add(series2);
-            this.chart4.Size = new System.Drawing.Size(126, 68);
+            this.chart4.Size = new System.Drawing.Size(99, 68);
             this.chart4.TabIndex = 2;
             this.chart4.Text = "chart4";
             this.chart4.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.SystemDefault;
@@ -582,16 +514,16 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Total Pedidos";
             // 
-            // label9
+            // lblTotalPedidos
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label9.Location = new System.Drawing.Point(6, 35);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 29);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "75";
+            this.lblTotalPedidos.AutoSize = true;
+            this.lblTotalPedidos.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPedidos.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lblTotalPedidos.Location = new System.Drawing.Point(6, 35);
+            this.lblTotalPedidos.Name = "lblTotalPedidos";
+            this.lblTotalPedidos.Size = new System.Drawing.Size(41, 29);
+            this.lblTotalPedidos.TabIndex = 1;
+            this.lblTotalPedidos.Text = "75";
             // 
             // sPanel4
             // 
@@ -601,7 +533,7 @@
             this.sPanel4.BorderSize = 0;
             this.sPanel4.Controls.Add(this.chart5);
             this.sPanel4.Controls.Add(this.label8);
-            this.sPanel4.Controls.Add(this.label7);
+            this.sPanel4.Controls.Add(this.lblTotalEmpleados);
             this.sPanel4.ForeColor = System.Drawing.Color.Black;
             this.sPanel4.Location = new System.Drawing.Point(768, 25);
             this.sPanel4.Name = "sPanel4";
@@ -620,7 +552,7 @@
             chartArea3.Name = "ChartArea1";
             this.chart5.ChartAreas.Add(chartArea3);
             this.chart5.IsSoftShadows = false;
-            this.chart5.Location = new System.Drawing.Point(100, 13);
+            this.chart5.Location = new System.Drawing.Point(120, 13);
             this.chart5.Name = "chart5";
             series3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
             series3.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
@@ -631,7 +563,7 @@
             series3.Color = System.Drawing.Color.Red;
             series3.Name = "Recaudado";
             this.chart5.Series.Add(series3);
-            this.chart5.Size = new System.Drawing.Size(126, 68);
+            this.chart5.Size = new System.Drawing.Size(106, 68);
             this.chart5.TabIndex = 2;
             this.chart5.Text = "chart5";
             this.chart5.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.SystemDefault;
@@ -643,20 +575,20 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(7, 13);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 14);
+            this.label8.Size = new System.Drawing.Size(83, 14);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Total Empleados";
+            this.label8.Text = "Total Meseros";
             // 
-            // label7
+            // lblTotalEmpleados
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(8, 35);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 29);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "10";
+            this.lblTotalEmpleados.AutoSize = true;
+            this.lblTotalEmpleados.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalEmpleados.ForeColor = System.Drawing.Color.Red;
+            this.lblTotalEmpleados.Location = new System.Drawing.Point(8, 35);
+            this.lblTotalEmpleados.Name = "lblTotalEmpleados";
+            this.lblTotalEmpleados.Size = new System.Drawing.Size(41, 29);
+            this.lblTotalEmpleados.TabIndex = 1;
+            this.lblTotalEmpleados.Text = "10";
             // 
             // sPanel3
             // 
@@ -666,7 +598,7 @@
             this.sPanel3.BorderSize = 0;
             this.sPanel3.Controls.Add(this.chart2);
             this.sPanel3.Controls.Add(this.label2);
-            this.sPanel3.Controls.Add(this.label6);
+            this.sPanel3.Controls.Add(this.lblProducts);
             this.sPanel3.ForeColor = System.Drawing.Color.White;
             this.sPanel3.Location = new System.Drawing.Point(19, 25);
             this.sPanel3.Name = "sPanel3";
@@ -685,7 +617,7 @@
             chartArea4.Name = "ChartArea1";
             this.chart2.ChartAreas.Add(chartArea4);
             this.chart2.IsSoftShadows = false;
-            this.chart2.Location = new System.Drawing.Point(98, 13);
+            this.chart2.Location = new System.Drawing.Point(124, 13);
             this.chart2.Name = "chart2";
             series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
             series4.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
@@ -696,7 +628,7 @@
             series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(200)))));
             series4.Name = "Productos";
             this.chart2.Series.Add(series4);
-            this.chart2.Size = new System.Drawing.Size(126, 68);
+            this.chart2.Size = new System.Drawing.Size(100, 68);
             this.chart2.TabIndex = 2;
             this.chart2.Text = "chart2";
             this.chart2.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.SystemDefault;
@@ -712,16 +644,16 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Total Productos";
             // 
-            // label6
+            // lblProducts
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label6.Location = new System.Drawing.Point(6, 35);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 29);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "65";
+            this.lblProducts.AutoSize = true;
+            this.lblProducts.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProducts.ForeColor = System.Drawing.Color.SlateBlue;
+            this.lblProducts.Location = new System.Drawing.Point(6, 35);
+            this.lblProducts.Name = "lblProducts";
+            this.lblProducts.Size = new System.Drawing.Size(41, 29);
+            this.lblProducts.TabIndex = 1;
+            this.lblProducts.Text = "65";
             // 
             // sPanel2
             // 
@@ -730,7 +662,7 @@
             this.sPanel2.BorderRadius = 15;
             this.sPanel2.BorderSize = 0;
             this.sPanel2.Controls.Add(this.label3);
-            this.sPanel2.Controls.Add(this.chartDona);
+            this.sPanel2.Controls.Add(this.h);
             this.sPanel2.ForeColor = System.Drawing.Color.White;
             this.sPanel2.Location = new System.Drawing.Point(767, 142);
             this.sPanel2.Name = "sPanel2";
@@ -748,10 +680,10 @@
             this.label3.TabIndex = 26;
             this.label3.Text = "Ventas Por Categoría";
             // 
-            // chartDona
+            // h
             // 
-            this.chartDona.BackSecondaryColor = System.Drawing.Color.White;
-            this.chartDona.BorderSkin.BackColor = System.Drawing.Color.DarkRed;
+            this.h.BackSecondaryColor = System.Drawing.Color.White;
+            this.h.BorderSkin.BackColor = System.Drawing.Color.DarkRed;
             chartArea5.AxisX.Crossing = -1.7976931348623157E+308D;
             chartArea5.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
             chartArea5.AxisX.IsLabelAutoFit = false;
@@ -790,7 +722,7 @@
             chartArea5.Position.Width = 85F;
             chartArea5.Position.X = 3F;
             chartArea5.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.chartDona.ChartAreas.Add(chartArea5);
+            this.h.ChartAreas.Add(chartArea5);
             legend1.Alignment = System.Drawing.StringAlignment.Center;
             legend1.BackColor = System.Drawing.Color.Transparent;
             legend1.DockedToChartArea = "ChartArea1";
@@ -808,11 +740,11 @@
             legend1.Position.Width = 100F;
             legend1.Position.Y = 80F;
             legend1.TextWrapThreshold = 30;
-            this.chartDona.Legends.Add(legend1);
-            this.chartDona.Location = new System.Drawing.Point(1, 34);
-            this.chartDona.Name = "chartDona";
-            this.chartDona.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.chartDona.PaletteCustomColors = new System.Drawing.Color[] {
+            this.h.Legends.Add(legend1);
+            this.h.Location = new System.Drawing.Point(1, 34);
+            this.h.Name = "h";
+            this.h.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.h.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(49)))), ((int)(((byte)(82))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(129)))))};
@@ -827,10 +759,10 @@
             series5.MarkerBorderWidth = 4;
             series5.Name = "Series1";
             series5.SmartLabelStyle.Enabled = false;
-            this.chartDona.Series.Add(series5);
-            this.chartDona.Size = new System.Drawing.Size(252, 290);
-            this.chartDona.TabIndex = 27;
-            this.chartDona.Text = "chart2";
+            this.h.Series.Add(series5);
+            this.h.Size = new System.Drawing.Size(252, 290);
+            this.h.TabIndex = 27;
+            this.h.Text = "chart2";
             // 
             // sPanel1
             // 
@@ -839,9 +771,7 @@
             this.sPanel1.BorderRadius = 15;
             this.sPanel1.BorderSize = 1;
             this.sPanel1.Controls.Add(this.chart1);
-            this.sPanel1.Controls.Add(this.iconButton4);
             this.sPanel1.Controls.Add(this.roundButton5);
-            this.sPanel1.Controls.Add(this.label5);
             this.sPanel1.Controls.Add(this.label4);
             this.sPanel1.ForeColor = System.Drawing.Color.White;
             this.sPanel1.Location = new System.Drawing.Point(19, 142);
@@ -884,7 +814,7 @@
             chartArea6.Name = "ChartArea1";
             chartArea6.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.chart1.ChartAreas.Add(chartArea6);
-            this.chart1.Location = new System.Drawing.Point(-22, 65);
+            this.chart1.Location = new System.Drawing.Point(-22, 44);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
@@ -903,29 +833,86 @@
             series6.Name = "Series1";
             series6.SmartLabelStyle.Enabled = false;
             this.chart1.Series.Add(series6);
-            this.chart1.Size = new System.Drawing.Size(771, 258);
+            this.chart1.Size = new System.Drawing.Size(771, 279);
             this.chart1.TabIndex = 26;
             this.chart1.Text = "chart1";
             // 
-            // iconButton4
+            // label4
             // 
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.iconButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Roboto", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.ForeColor = System.Drawing.Color.Black;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.ArrowUp;
-            this.iconButton4.IconColor = System.Drawing.Color.Black;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 13;
-            this.iconButton4.Location = new System.Drawing.Point(17, 49);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(157, 23);
-            this.iconButton4.TabIndex = 24;
-            this.iconButton4.Text = "2.1% vs última semana";
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(21, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 19);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Ventas Diarias";
+            // 
+            // roundButton3
+            // 
+            this.roundButton3.BackColor = System.Drawing.Color.LimeGreen;
+            this.roundButton3.BackgroundColor = System.Drawing.Color.LimeGreen;
+            this.roundButton3.BackgroundImage = global::TheCoffe.Properties.Resources.rebanada_de_pastel;
+            this.roundButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.roundButton3.BorderColor = System.Drawing.Color.Black;
+            this.roundButton3.BorderRadius = 20;
+            this.roundButton3.BorderSize = 0;
+            this.roundButton3.FlatAppearance.BorderSize = 0;
+            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton3.ForeColor = System.Drawing.Color.White;
+            this.roundButton3.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton3.IconColor = System.Drawing.Color.Black;
+            this.roundButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton3.Location = new System.Drawing.Point(25, 126);
+            this.roundButton3.Name = "roundButton3";
+            this.roundButton3.Size = new System.Drawing.Size(39, 39);
+            this.roundButton3.TabIndex = 37;
+            this.roundButton3.TextColor = System.Drawing.Color.White;
+            this.roundButton3.UseVisualStyleBackColor = false;
+            // 
+            // roundButton2
+            // 
+            this.roundButton2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.roundButton2.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.roundButton2.BackgroundImage = global::TheCoffe.Properties.Resources.taza_de_cafe1;
+            this.roundButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.roundButton2.BorderColor = System.Drawing.Color.Black;
+            this.roundButton2.BorderRadius = 20;
+            this.roundButton2.BorderSize = 0;
+            this.roundButton2.FlatAppearance.BorderSize = 0;
+            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton2.ForeColor = System.Drawing.Color.White;
+            this.roundButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton2.IconColor = System.Drawing.Color.Black;
+            this.roundButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton2.Location = new System.Drawing.Point(25, 86);
+            this.roundButton2.Name = "roundButton2";
+            this.roundButton2.Size = new System.Drawing.Size(39, 39);
+            this.roundButton2.TabIndex = 34;
+            this.roundButton2.TextColor = System.Drawing.Color.White;
+            this.roundButton2.UseVisualStyleBackColor = false;
+            // 
+            // roundButton1
+            // 
+            this.roundButton1.BackColor = System.Drawing.Color.Navy;
+            this.roundButton1.BackgroundColor = System.Drawing.Color.Navy;
+            this.roundButton1.BackgroundImage = global::TheCoffe.Properties.Resources.vaso_de_cafe;
+            this.roundButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.roundButton1.BorderColor = System.Drawing.Color.Black;
+            this.roundButton1.BorderRadius = 20;
+            this.roundButton1.BorderSize = 0;
+            this.roundButton1.FlatAppearance.BorderSize = 0;
+            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton1.ForeColor = System.Drawing.Color.White;
+            this.roundButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundButton1.IconColor = System.Drawing.Color.Black;
+            this.roundButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundButton1.Location = new System.Drawing.Point(25, 46);
+            this.roundButton1.Name = "roundButton1";
+            this.roundButton1.Size = new System.Drawing.Size(39, 39);
+            this.roundButton1.TabIndex = 31;
+            this.roundButton1.TextColor = System.Drawing.Color.White;
+            this.roundButton1.UseVisualStyleBackColor = false;
             // 
             // roundButton5
             // 
@@ -952,28 +939,6 @@
             this.roundButton5.Text = "Ver Reporte";
             this.roundButton5.TextColor = System.Drawing.Color.White;
             this.roundButton5.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.label5.Location = new System.Drawing.Point(21, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 23);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "2.548";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(21, 8);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 19);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Ventas Diarias";
             // 
             // DashboardForm
             // 
@@ -1005,7 +970,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.sPanel2.ResumeLayout(false);
             this.sPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartDona)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.h)).EndInit();
             this.sPanel1.ResumeLayout(false);
             this.sPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
@@ -1017,21 +982,19 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblProducts;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbltotalRecaudado;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblTotalPedidos;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblTotalEmpleados;
         private System.Windows.Forms.Label label8;
         private Sipaa.Framework.SPanel sPanel1;
-        private FontAwesome.Sharp.IconButton iconButton4;
         private WindowsFormsApplication1.RoundButton roundButton5;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private Sipaa.Framework.SPanel sPanel6;
         private Sipaa.Framework.SPanel sPanel5;
@@ -1039,7 +1002,7 @@
         private Sipaa.Framework.SPanel sPanel3;
         private Sipaa.Framework.SPanel sPanel2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartDona;
+        private System.Windows.Forms.DataVisualization.Charting.Chart h;
         private Sipaa.Framework.SPanel sPanel8;
         private System.Windows.Forms.Label label13;
         private Sipaa.Framework.SPanel sPanel7;

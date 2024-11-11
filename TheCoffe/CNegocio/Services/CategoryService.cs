@@ -19,6 +19,10 @@ namespace TheCoffe.CNegocio.Services
         {
             return await _categoryRepository.Read(false);
         }
+        public async Task<List<Categoria1>> ObtenerCategoriasPopulares()
+        {
+            return await _categoryRepository.ObtenerCategoriasPopulares();
+        }
         public Categoria1 ObtenerCategoriaPorID(int id)
         {
             return _categoryRepository.SearchObject(id);

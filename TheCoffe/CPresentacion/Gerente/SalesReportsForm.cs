@@ -20,25 +20,27 @@ namespace TheCoffe.CPresentacion.Gerente
         {
             InitializeComponent();
         }
-        private async void SalesReportsForm_Load(object sender, EventArgs e)
+        private void SalesReportsForm_Load(object sender, EventArgs e)
         {
             dtpDesde.Value = DateTime.Now.AddMonths(-1);
-            await CargarDatos();
+            dtpHasta.Value = DateTime.Now;
+            CargarDatos();
         }
-        private async Task CargarDatos()
+        private async void CargarDatos()
         {
             List<CategoriaEstadistica> categoriaEstadisticas = await adminService.ObtenerVentasPorCategoria(dtpDesde.Value, dtpHasta.Value);
-            List<IngresoDiario> recaudadoEstadisticas = await adminService.ObtenerTotalRecaudado(dtpDesde.Value, dtpHasta.Value);
+            var recaudadoEstadisticas = await adminService.ObtenerTotalRecaudado(dtpDesde.Value, dtpHasta.Value);
             double promedioIngresos = await adminService.ObtenerPromedioIngresosDiarios(dtpDesde.Value, dtpHasta.Value);
             int promedioCantidad = await adminService.ObtenerPromedioCantidadVentas(dtpDesde.Value, dtpHasta.Value);
             lblIngresoPromedio.Text = promedioIngresos.ToString("C");
             lblPromedioCantidad.Text = promedioCantidad.ToString();
             CargarChartDonas(categoriaEstadisticas);
-            CargarChartRecaudado(recaudadoEstadisticas);
+ 
+            CargarChartRecaudado(recaudadoEstadisticas);/*
             foreach(var e in recaudadoEstadisticas)
             {
                 Console.WriteLine(e.Fecha.Date + "-" + e.Recaudado);
-            }
+            }*/
         }
         private void CargarChartDonas(List<CategoriaEstadistica> estadisticas)
         {
@@ -75,7 +77,7 @@ namespace TheCoffe.CPresentacion.Gerente
                 BackSecondaryColor = Color.FromArgb(230, 230, 230),
                 BorderColor = Color.Navy,
                 BorderWidth = 4,
-                ToolTip = "#VALY{C}"
+                ToolTip = "#VALY{C}",
             };
 
                 foreach (var recaudado in estadisticas)
@@ -86,10 +88,11 @@ namespace TheCoffe.CPresentacion.Gerente
             chart1.Series.Add(serie);
         }
 
-        private async void dtpDesde_ValueChanged(object sender, EventArgs e)
+        private  void dtpDesde_ValueChanged(object sender, EventArgs e)
         {
-            await CargarDatos();
+            CargarDatos();
             dtpHasta.MinDate = dtpDesde.Value;
+            dtpDesde.MaxDate = dtpHasta.Value;
         }
     }
 }

@@ -1,37 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
 
 namespace TheCoffe.CNegocio.Services
 {
     class AdminService
     {
+        DBTheCoffeeEntities db;
         private OrderService orderService = new OrderService();
+        private CategoriaRepository categoriaRepository = new CategoriaRepository();
         public async Task<List<CategoriaEstadistica>> ObtenerVentasPorCategoria(DateTime fechaDesde, DateTime fechaHasta)
         {
-            List<Venta> ventas = await orderService.FiltrarPorFecha(fechaDesde, fechaHasta);
-            List<Venta_Detalle> detalles = new List<Venta_Detalle>();
-            foreach (Venta_Detalle venta in ventas.SelectMany(p => p.Venta_Detalle).ToList())
-            {
-                var detalle = orderService.ObtenerDetallePorID(venta.id_detalle);
-                detalles.Add(detalle);
-            }
-            var categoriasPopulares = detalles
-                                      .Where(pd => pd.Producto.Categoria1 != null)
-                                      .GroupBy(pd => pd.Producto.Categoria1.descripcion)
-                                      .Select(g => new CategoriaEstadistica
-                                      {
-                                         TotalPedidos = g.Count(),
-                                         Categoria = g.Key
-                                      })
-                                      .OrderByDescending(t => t.TotalPedidos)
-                                      .Take(3)
-                                      .ToList();
-              return categoriasPopulares;            
+            return await categoriaRepository.ObtenerVentasPorCategoria(fechaDesde, fechaHasta);
         }
+
         public async Task<double> ObtenerPromedioIngresosDiarios(DateTime fechaDesde, DateTime fechaHasta)
         {
             List<Venta> ventas = await orderService.FiltrarPorFecha(fechaDesde, fechaHasta);
@@ -51,27 +38,15 @@ namespace TheCoffe.CNegocio.Services
         {
             List<Venta> ventas = await orderService.FiltrarPorFecha(fechaDesde, fechaHasta);
             int diasEnRango = (fechaHasta - fechaDesde).Days;
-            var ingresosReales = ventas
-                                  .GroupBy(v => ObtenerGrupoDeFecha(v.fecha_venta ?? DateTime.Now, diasEnRango))
-                                  .Select(g => new IngresoDiario
-                                  {
-                                      Fecha = g.Key,
-                                      Recaudado = g.Sum(v => v.monto_total ?? 0)
-                                  })
-                                  .ToDictionary(v => v.Fecha , v => v.Recaudado);
-            var listaCompletaIngresos = new List<IngresoDiario>();
+            return ventas
+                   .GroupBy(v => ObtenerGrupoDeFecha(v.fecha_venta ?? DateTime.Now, diasEnRango))
+                   .Select(g => new IngresoDiario
+                   {
+                       Fecha = g.Key,
+                       Recaudado = g.Sum(v => v.monto_total ?? 0)
+                   })
+                   .ToList();
 
-            for(var fecha = fechaDesde.Date; fecha <= fechaHasta.Date; fecha = fecha.AddDays(1))
-            {
-                listaCompletaIngresos.Add(new IngresoDiario
-                {
-                    Fecha = fecha,
-                    Recaudado = ingresosReales.ContainsKey(fecha) ? ingresosReales[fecha] : 0
-                });
-            }
-            listaCompletaIngresos
-                .GroupBy(v => ObtenerGrupoDeFecha(v.Fecha, diasEnRango)).ToList();
-            return listaCompletaIngresos;
         }
         private DateTime ObtenerGrupoDeFecha(DateTime fecha, int rangoDias)
         {
@@ -85,6 +60,21 @@ namespace TheCoffe.CNegocio.Services
             else
             {
                 return new DateTime(fecha.Year, fecha.Month,1);
+            }
+        }
+        public async Task<InfoDashboard> ObtenerCantidadesDashboard()
+        {
+            using(db = new DBTheCoffeeEntities())
+            {
+                List<Venta> ventasHoy = await orderService.FiltrarPorFecha(DateTime.Now, DateTime.Now);
+                var recaudadoHoy = ventasHoy.GroupBy(v => v.fecha_venta ?? DateTime.Now).Select(r => r.Sum(v => v.monto_total ?? 0)).First();
+                return new InfoDashboard
+                {
+                    CantidadProductos = db.Producto.Where(p => p.estado).Count(),
+                    TotalRecaudado = recaudadoHoy,
+                    TotalMeseros = db.Mesero.Where(m => m.estado).Count(),
+                    TotalPedido = db.Venta.Where(v => DbFunctions.TruncateTime(v.fecha_venta) == DbFunctions.TruncateTime(DateTime.Now)).Count()
+                };
             }
         }
     }
