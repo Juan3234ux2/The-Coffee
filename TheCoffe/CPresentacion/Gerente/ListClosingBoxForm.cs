@@ -67,6 +67,7 @@ namespace TheCoffe.CPresentacion.Gerente
 
         private async void ListClosingBoxForm_Load(object sender, EventArgs e)
         {
+            dtpFechaDesde.Value = DateTime.Now.AddMonths(-1);
             await ObtenerTurnosFiltrados();
             var  usuarios = await userService.ObtenerTodosLosUsuarios();
             Usuario usuario = new Usuario
@@ -133,6 +134,8 @@ namespace TheCoffe.CPresentacion.Gerente
         private async void dtpFechaDesde_ValueChanged(object sender, EventArgs e)
         {
             await ObtenerTurnosFiltrados();
+            dtpFechaHasta.MinDate = dtpFechaDesde.Value;
+            dtpFechaDesde.MaxDate = dtpFechaHasta.Value;
         }
     }
 }

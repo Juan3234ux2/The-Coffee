@@ -29,18 +29,13 @@ namespace TheCoffe.CPresentacion.Gerente
         private async void CargarDatos()
         {
             List<CategoriaEstadistica> categoriaEstadisticas = await adminService.ObtenerVentasPorCategoria(dtpDesde.Value, dtpHasta.Value);
-            var recaudadoEstadisticas = await adminService.ObtenerTotalRecaudado(dtpDesde.Value, dtpHasta.Value);
             double promedioIngresos = await adminService.ObtenerPromedioIngresosDiarios(dtpDesde.Value, dtpHasta.Value);
             int promedioCantidad = await adminService.ObtenerPromedioCantidadVentas(dtpDesde.Value, dtpHasta.Value);
             lblIngresoPromedio.Text = promedioIngresos.ToString("C");
             lblPromedioCantidad.Text = promedioCantidad.ToString();
             CargarChartDonas(categoriaEstadisticas);
- 
-            CargarChartRecaudado(recaudadoEstadisticas);/*
-            foreach(var e in recaudadoEstadisticas)
-            {
-                Console.WriteLine(e.Fecha.Date + "-" + e.Recaudado);
-            }*/
+            CargarChartRecaudado();
+            MostrarGraficoDeBarras();
         }
         private void CargarChartDonas(List<CategoriaEstadistica> estadisticas)
         {
@@ -67,8 +62,10 @@ namespace TheCoffe.CPresentacion.Gerente
             chartDona.Series.Add(serie);
         }
 
-        private void CargarChartRecaudado(List<IngresoDiario> estadisticas)
+        private async void CargarChartRecaudado()
         {
+            var estadisticas = await adminService.ObtenerTotalRecaudado(dtpDesde.Value, dtpHasta.Value);
+
             Series serie = new Series("Ventas")
             {
                 ChartType = SeriesChartType.SplineArea,
@@ -78,12 +75,20 @@ namespace TheCoffe.CPresentacion.Gerente
                 BorderColor = Color.Navy,
                 BorderWidth = 4,
                 ToolTip = "#VALY{C}",
+                IsValueShownAsLabel = true
             };
-
+            if (estadisticas.Count > 0)
+            {
                 foreach (var recaudado in estadisticas)
                 {
-                    serie.Points.AddXY(recaudado.Fecha, recaudado.Recaudado);
+                    serie.Points.AddXY(recaudado.Periodo, recaudado.Recaudado);
                 }
+            }
+            else
+            {
+                serie.Points.AddXY("Sin Registros", 0);
+            }
+            
             chart1.Series.Clear();
             chart1.Series.Add(serie);
         }
@@ -91,8 +96,42 @@ namespace TheCoffe.CPresentacion.Gerente
         private  void dtpDesde_ValueChanged(object sender, EventArgs e)
         {
             CargarDatos();
-            dtpHasta.MinDate = dtpDesde.Value;
-            dtpDesde.MaxDate = dtpHasta.Value;
+            dtpHasta.MinDate =  dtpDesde.Value.AddDays(2);
+            dtpDesde.MaxDate = dtpHasta.Value.AddDays(-2);
         }
+        private async void MostrarGraficoDeBarras()
+        {
+            var datos = await adminService.ObtenerPedidosAgrupados(dtpDesde.Value, dtpHasta.Value);
+
+
+
+            var serie = new Series
+            {
+                Name = "Pedidos",
+                ChartType = SeriesChartType.Column,
+                Color = Color.FromArgb(96, 75, 200),
+                BackGradientStyle = GradientStyle.TopBottom,
+                BackSecondaryColor = Color.FromArgb(230, 230, 230),
+                BorderColor = Color.Navy,
+                BorderWidth = 2,
+                ToolTip = "#VALY",
+                IsValueShownAsLabel = true,
+            };
+            if(datos.Count > 0)
+            {
+                foreach (var dato in datos)
+                {
+                    serie.Points.AddXY(dato.Periodo, dato.CantidadPedidos);
+                }
+            }
+            else
+            {
+                serie.Points.AddXY("Sin Registros", 0);
+            }
+            chartTotalPedidos.Series.Clear();
+            chartTotalPedidos.Series.Add(serie);
+            chartTotalPedidos.ChartAreas["Principal"].AxisX.Interval = 1;
+        }
+
     }
 }

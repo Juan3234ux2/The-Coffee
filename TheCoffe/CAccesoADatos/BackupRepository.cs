@@ -14,7 +14,7 @@ namespace TheCoffe.CAccesoADatos
 
         public void Backup()
         {
-            SqlConnection conexion = new SqlConnection("Server=DESKTOP-LLJLUNV;Database=marketplaces;Integrated Security=True;");
+            SqlConnection conexion = new SqlConnection("Server=DESKTOP-F6IRILK\\SQL2;Database=marketplaces;Integrated Security=True;");
 
             string nombre_copia = (System.DateTime.Today.Day.ToString() + "-" + System.DateTime.Today.Month.ToString() + "-" + System.DateTime.Today.Year.ToString() + "-" + System.DateTime.Now.Hour.ToString() + "-" + System.DateTime.Now.Minute.ToString() + "-" + System.DateTime.Now.Second.ToString() + " TheCoffee");
 
@@ -47,7 +47,7 @@ namespace TheCoffe.CAccesoADatos
             {
                 string backupFilePath = openFileDialog1.FileName;
 
-                string connectionString = "Server=DESKTOP-LLJLUNV;Integrated Security=True;";
+                string connectionString = "Server=DESKTOP-F6IRILK\\SQL2;Integrated Security=True;";
 
                 string restoreQuery = $@"
                     RESTORE DATABASE  [TheCoffee] 

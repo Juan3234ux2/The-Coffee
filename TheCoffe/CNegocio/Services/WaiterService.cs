@@ -19,6 +19,10 @@ namespace TheCoffe.CNegocio.Services
         {
             return await _waiterRepository.Read(false);
         }
+        public async Task<List<EstadisticaMesero>> ObtenerMejoresMeseros()
+        {
+            return await _waiterRepository.ObtenerMejoresMeseros();
+        }
         public async Task<List<Mesero>> ObtenerTodosLosMeseros()
         {
             return await _waiterRepository.FindAll();

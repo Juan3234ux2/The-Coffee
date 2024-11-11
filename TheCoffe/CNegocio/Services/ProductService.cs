@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
+using TheCoffe.CDatos.Estadisticas;
 
 namespace TheCoffe.CNegocio.Services
 {
@@ -26,6 +27,10 @@ namespace TheCoffe.CNegocio.Services
         public async Task<List<Producto>> ObtenerProductosPörCategoria(string nombreCategoria)
         {
             return await _productRepository.GetProductsByCategory(nombreCategoria);
+        }
+        public async Task<List<ProductosEstadistica>> ObtenerEstadisticaProductos()
+        {
+            return await _productRepository.ObtenerEstadisticaProductos();
         }
         public async Task<List<Producto>> ObtenerProductosEliminados()
         {

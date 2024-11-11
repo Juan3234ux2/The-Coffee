@@ -187,7 +187,7 @@
     <Compile Include="CDatos\Categoria1.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
-    <Compile Include="CDatos\CategoriaEstadistica.cs" />
+    <Compile Include="CDatos\Estadisticas\CategoriaEstadistica.cs" />
     <Compile Include="CDatos\Cliente.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
@@ -195,8 +195,11 @@
     <Compile Include="CDatos\DiaDeTrabajo.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
-    <Compile Include="CDatos\InfoDashboard.cs" />
-    <Compile Include="CDatos\IngresoDiario.cs" />
+    <Compile Include="CDatos\Estadisticas\EstadisticaMesero.cs" />
+    <Compile Include="CDatos\Estadisticas\InfoDashboard.cs" />
+    <Compile Include="CDatos\Estadisticas\IngresoDiario.cs" />
+    <Compile Include="CDatos\Estadisticas\ProductosEstadistica.cs" />
+    <Compile Include="CDatos\Estadisticas\TotalPedidoEstadistica.cs" />
     <Compile Include="CDatos\Mesa.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>

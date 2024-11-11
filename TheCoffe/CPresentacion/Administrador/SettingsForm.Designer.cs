@@ -34,8 +34,8 @@
             this.btnRestore = new WindowsFormsApplication1.RoundButton();
             this.btnCopia = new WindowsFormsApplication1.RoundButton();
             this.sPanel5 = new Sipaa.Framework.SPanel();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.sPanel1 = new Sipaa.Framework.SPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,6 +66,7 @@
             this.btnRestore.BorderColor = System.Drawing.Color.Black;
             this.btnRestore.BorderRadius = 10;
             this.btnRestore.BorderSize = 0;
+            this.btnRestore.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRestore.FlatAppearance.BorderSize = 0;
             this.btnRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRestore.ForeColor = System.Drawing.Color.White;
@@ -92,6 +93,7 @@
             this.btnCopia.BorderColor = System.Drawing.Color.Black;
             this.btnCopia.BorderRadius = 10;
             this.btnCopia.BorderSize = 0;
+            this.btnCopia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCopia.FlatAppearance.BorderSize = 0;
             this.btnCopia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCopia.ForeColor = System.Drawing.Color.White;
@@ -126,16 +128,6 @@
             this.sPanel5.Size = new System.Drawing.Size(280, 342);
             this.sPanel5.TabIndex = 32;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(55, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 29);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Generar Copia";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -144,6 +136,16 @@
             this.pictureBox1.Size = new System.Drawing.Size(136, 134);
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(62, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(158, 28);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Generar Copia";
             // 
             // sPanel1
             // 
@@ -172,10 +174,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1, 27);
+            this.label3.Font = new System.Drawing.Font("Roboto", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(279, 29);
+            this.label3.Size = new System.Drawing.Size(266, 28);
             this.label3.TabIndex = 18;
             this.label3.Text = "Restaurar Base de Datos";
             // 

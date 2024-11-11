@@ -16,13 +16,17 @@ namespace TheCoffe.App
     public partial class DashboardForm : UserControl
     {
         private AdminService adminService = new AdminService();
+        private WaiterService waiterService = new WaiterService();
+        private ProductService productService = new ProductService();
         public DashboardForm()
         {
             InitializeComponent();
+            dataWaiters.AutoGenerateColumns = false;
             PoblarChart();
             PoblarChartDonas();
             PoblarChartChicos();
             CargarCantidades();
+            CargarMeserosYProductos();
         }
         private async void CargarCantidades()
         {
@@ -31,6 +35,16 @@ namespace TheCoffe.App
             lblTotalEmpleados.Text = cantidades.TotalMeseros.ToString();
             lblTotalPedidos.Text = cantidades.TotalPedido.ToString();
             lbltotalRecaudado.Text = cantidades.TotalRecaudado.ToString("C");
+        }
+        private async void CargarMeserosYProductos()
+        {
+            var meseros = await waiterService.ObtenerMejoresMeseros();
+            dataWaiters.DataSource = meseros.Select(m => new
+            {
+                Nombre = $"{m.Mesero.nombre} {m.Mesero.apellido}",
+                Recaudado = m.Recaudado.ToString("C")
+            }).ToList();
+            dataProducts.DataSource = await productService.ObtenerEstadisticaProductos();
         }
         private async void PoblarChartDonas()
         {
@@ -59,8 +73,9 @@ namespace TheCoffe.App
 
         }
 
-        private void PoblarChart()
+        private async void PoblarChart()
         {
+
             Series serie = new Series("Ventas")
             {
                 ChartType = SeriesChartType.SplineArea,
@@ -68,18 +83,21 @@ namespace TheCoffe.App
                 BackGradientStyle = GradientStyle.TopBottom,
                 BackSecondaryColor = Color.FromArgb(230, 230, 230),
                 BorderColor = Color.Navy,
-                BorderWidth = 4
+                BorderWidth = 4,
+                ToolTip = "#VALY{C}",
             };
-            serie.Points.AddXY("Enero", 300);
-            serie.Points.AddXY("Febrero", 250);
-            serie.Points.AddXY("Marzo", 200);
-            serie.Points.AddXY("Febrero", 270);
-            serie.Points.AddXY("Marzo", 400);
-            serie.Points.AddXY("Junio", 300);
-            serie.Points.AddXY("Julio", 450);
-            serie.Points.AddXY("Agosto", 450);
-            serie.Points.AddXY("Septiembre", 500);
-
+            var recaudado = await adminService.ObtenerTotalRecaudado(DateTime.Now.AddDays(-7), DateTime.Now);
+            if(recaudado.Count() > 0)
+            {
+                foreach (var estadistica in recaudado)
+                {
+                    serie.Points.AddXY(estadistica.Periodo, estadistica.Recaudado);
+                }
+            }
+            else
+            {
+                serie.Points.AddXY("Sin Registros", 0);
+            }
             chart1.Series.Clear(); 
             chart1.Series.Add(serie);
         }

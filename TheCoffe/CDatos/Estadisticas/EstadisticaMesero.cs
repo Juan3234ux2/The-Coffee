@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TheCoffe.CDatos
 {
-    public class IngresoDiario
+    class EstadisticaMesero
     {
-        public DateTime Fecha { get; set; }
+        public Mesero Mesero { get; set; }
         public double Recaudado { get; set; }
     }
 }

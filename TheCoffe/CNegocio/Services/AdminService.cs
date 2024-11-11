@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
+using TheCoffe.CDatos.Estadisticas;
 
 namespace TheCoffe.CNegocio.Services
 {
@@ -36,38 +38,64 @@ namespace TheCoffe.CNegocio.Services
         }
         public async Task<List<IngresoDiario>> ObtenerTotalRecaudado(DateTime fechaDesde, DateTime fechaHasta)
         {
-            List<Venta> ventas = await orderService.FiltrarPorFecha(fechaDesde, fechaHasta);
-            int diasEnRango = (fechaHasta - fechaDesde).Days;
-            return ventas
-                   .GroupBy(v => ObtenerGrupoDeFecha(v.fecha_venta ?? DateTime.Now, diasEnRango))
-                   .Select(g => new IngresoDiario
-                   {
-                       Fecha = g.Key,
-                       Recaudado = g.Sum(v => v.monto_total ?? 0)
-                   })
-                   .ToList();
+            {
+                List<Venta> ventas = await orderService.FiltrarPorFecha(fechaDesde, fechaHasta);
+                int diasEnRango = (fechaHasta - fechaDesde).Days + 1;
+
+                var pedidosAgrupados = new List<IngresoDiario>();
+
+                if (diasEnRango <= 8)
+                {
+                    pedidosAgrupados = ventas
+                        .GroupBy(v => v.fecha_venta?.Date)
+                        .Select(g => new IngresoDiario
+                        {
+                            Periodo = g.Key.Value.ToShortDateString(),
+                            Recaudado = g.Sum(v => v.monto_total ?? 0)
+                        })
+                        .OrderBy(g => g.Periodo)
+                        .ToList();
+                }
+                else if (diasEnRango <= 50)
+                {
+                    pedidosAgrupados = ventas
+                        .GroupBy(v => new { Año = v.fecha_venta?.Year, Semana = CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(v.fecha_venta.Value, CalendarWeekRule.FirstDay, DayOfWeek.Monday) })
+                        .Select(g => new IngresoDiario
+                        {
+                            Periodo = $"Semana {g.Key.Semana} de {g.Key.Año}",
+                            Recaudado = g.Sum(v => v.monto_total ?? 0)
+                        })
+                        .OrderBy(g => g.Periodo)
+                        .ToList();
+                }
+                else
+                {
+                    pedidosAgrupados = ventas
+                        .GroupBy(v => new { Año = v.fecha_venta?.Year, Mes = v.fecha_venta?.Month })
+                        .Select(g => new IngresoDiario
+                        {
+                            Periodo = $"{g.Key.Mes}/{g.Key.Año}",
+                            Recaudado = g.Sum(v => v.monto_total??0)
+                        })
+                        .OrderBy(g => g.Periodo)
+                        .ToList();
+                }
+
+                return pedidosAgrupados;
+            }
 
         }
-        private DateTime ObtenerGrupoDeFecha(DateTime fecha, int rangoDias)
-        {
-            if(rangoDias <= 7)
-            {
-                return fecha.Date;
-            }else if(rangoDias <= 30)
-            {
-                return fecha.AddDays(-(int)fecha.DayOfWeek).Date;
-            }
-            else
-            {
-                return new DateTime(fecha.Year, fecha.Month,1);
-            }
-        }
+
         public async Task<InfoDashboard> ObtenerCantidadesDashboard()
         {
             using(db = new DBTheCoffeeEntities())
             {
                 List<Venta> ventasHoy = await orderService.FiltrarPorFecha(DateTime.Now, DateTime.Now);
-                var recaudadoHoy = ventasHoy.GroupBy(v => v.fecha_venta ?? DateTime.Now).Select(r => r.Sum(v => v.monto_total ?? 0)).First();
+                double recaudadoHoy = 0;
+                if(ventasHoy.Count > 0)
+                {
+                    recaudadoHoy = ventasHoy.GroupBy(v => v.fecha_venta ?? DateTime.Now).Select(r => r.Sum(v => v.monto_total ?? 0)).First();
+                }
                 return new InfoDashboard
                 {
                     CantidadProductos = db.Producto.Where(p => p.estado).Count(),
@@ -77,5 +105,52 @@ namespace TheCoffe.CNegocio.Services
                 };
             }
         }
+        public async Task<List<TotalPedidoEstadistica>> ObtenerPedidosAgrupados(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            List<Venta> ventas = await orderService.FiltrarPorFecha(fechaDesde, fechaHasta);
+            int diasEnRango = (fechaHasta - fechaDesde).Days + 1;
+
+            var pedidosAgrupados = new List<TotalPedidoEstadistica>();
+
+            if (diasEnRango <= 8)
+            {
+                pedidosAgrupados = ventas
+                    .GroupBy(v => v.fecha_venta?.Date)
+                    .Select(g => new TotalPedidoEstadistica
+                    {
+                        Periodo = g.Key.Value.ToShortDateString(),
+                        CantidadPedidos = g.Count()
+                    })
+                    .OrderBy(g => g.Periodo)
+                    .ToList();
+            }
+            else if (diasEnRango <= 50)
+            {
+                pedidosAgrupados = ventas
+                    .GroupBy(v => new { Año = v.fecha_venta?.Year, Semana = CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(v.fecha_venta.Value, CalendarWeekRule.FirstDay, DayOfWeek.Monday) })
+                    .Select(g => new TotalPedidoEstadistica
+                    {
+                        Periodo = $"Semana {g.Key.Semana} de {g.Key.Año}",
+                        CantidadPedidos = g.Count()
+                    })
+                    .OrderBy(g => g.Periodo)
+                    .ToList();
+            }
+            else
+            {
+                pedidosAgrupados = ventas
+                    .GroupBy(v => new { Año = v.fecha_venta?.Year, Mes = v.fecha_venta?.Month })
+                    .Select(g => new TotalPedidoEstadistica
+                    {
+                        Periodo = $"{g.Key.Mes}/{g.Key.Año}",
+                        CantidadPedidos = g.Count()
+                    })
+                    .OrderBy(g => g.Periodo)
+                    .ToList();
+            }
+
+            return pedidosAgrupados;
+        }
+
     }
 }

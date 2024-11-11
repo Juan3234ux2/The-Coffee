@@ -273,6 +273,7 @@
             this.dtpFechaHasta.SkinColor = System.Drawing.Color.White;
             this.dtpFechaHasta.TabIndex = 74;
             this.dtpFechaHasta.TextColor = System.Drawing.Color.Black;
+            this.dtpFechaHasta.ValueChanged += new System.EventHandler(this.dtpFechaDesde_ValueChanged);
             // 
             // dtpFechaDesde
             // 

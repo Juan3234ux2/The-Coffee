@@ -37,6 +37,27 @@ namespace TheCoffe.CAccesoADatos
         {
                 return await db.Mesero.Where(c => c.estado == estado).OrderBy(m => m.nombre).ToListAsync();
         }
+        public async Task<List<EstadisticaMesero>> ObtenerMejoresMeseros()
+        {
+                    return await db.Venta
+                            .GroupBy(v => v.id_mesero)
+                            .Select(g => new
+                            {
+                                MeseroId = g.Key,
+                                TotalVentas = g.Sum(v => v.monto_total??0)
+                            })
+                            .Join(db.Mesero,
+                                  r => r.MeseroId,
+                                  m => m.id_mesero,
+                                  (resultado, mesero) => new EstadisticaMesero
+                                  {
+                                      Mesero = mesero,
+                                      Recaudado = resultado.TotalVentas
+                                  })
+                            .OrderByDescending(m => m.Recaudado)
+                            .Take(3)
+                            .ToListAsync();
+        }
         public async Task<List<Mesero>> FindAll()
         {
             return await db.Mesero.OrderBy(m => m.nombre).ToListAsync();

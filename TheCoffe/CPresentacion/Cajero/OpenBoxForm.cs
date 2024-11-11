@@ -16,6 +16,7 @@ namespace TheCoffe.CPresentacion.Cajero
     public partial class OpenBoxForm : Form
     {
         private bool isShowingMsgBox = false;
+        private TurnoService turnoService = new TurnoService();
         public OpenBoxForm()
         {
             InitializeComponent();
@@ -73,6 +74,15 @@ namespace TheCoffe.CPresentacion.Cajero
                     timer.Stop();
             };
             timer.Start();
+            if (turnoService.HayTurnos())
+            {
+                var ultimoTurno = turnoService.ObtenerUltimoTurno();
+                DialogResult result = MessageBox.Show($"El último monto de cierre fue {ultimoTurno.monto_cierre?.ToString("C")}\nDesea abrir la Caja con este monto?","Monto Apertura", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                if(result == DialogResult.Yes)
+                {
+                    txtAmount.Texts = ultimoTurno.monto_cierre.ToString();
+                }
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

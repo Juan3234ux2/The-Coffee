@@ -14,11 +14,15 @@ namespace TheCoffe.CNegocio.Services
         private readonly PedidoRepository _orderRepository = new PedidoRepository();
         public async Task<List<Turno_Caja>> ObtenerTurno()
         {
-            return await _turnoRepository.Read(true);
+            return await _turnoRepository.Read();
         }
         public async Task<List<Venta>> ObtenerVentasDeUnTurno(int id_turno)
         {
             return await _orderRepository.ObtenerVentasDeTurno(id_turno);
+        }
+        public bool HayTurnos()
+        {
+            return _turnoRepository.HayTurnos();
         }
         public Turno_Caja ObtenerTurnoPorID(int id)
         {
@@ -27,6 +31,11 @@ namespace TheCoffe.CNegocio.Services
         public List<Turno_Caja> BuscarPorNombreDeUsuario(string nombre)
         {
             return _turnoRepository.Search(nombre);
+        }
+        public Turno_Caja ObtenerUltimoTurno()
+
+        {
+            return  _turnoRepository.ObtenerUltimoTurno();
         }
         public void CrearTurno(Turno_Caja turno)
         {

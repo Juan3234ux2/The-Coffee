@@ -50,11 +50,12 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label4 = new System.Windows.Forms.Label();
             this.sPanel3 = new Sipaa.Framework.SPanel();
+            this.dtpHasta = new TheCoffe.Components.CustomDateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.sPanel4 = new Sipaa.Framework.SPanel();
             this.sPanel5 = new Sipaa.Framework.SPanel();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartTotalPedidos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label5 = new System.Windows.Forms.Label();
             this.sPanel6 = new Sipaa.Framework.SPanel();
             this.lblIngresoPromedio = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.sPanel7 = new Sipaa.Framework.SPanel();
             this.lblPromedioCantidad = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.dtpHasta = new TheCoffe.Components.CustomDateTimePicker();
             this.dtpDesde = new TheCoffe.Components.CustomDateTimePicker();
             this.sPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDona)).BeginInit();
@@ -70,7 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.sPanel3.SuspendLayout();
             this.sPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTotalPedidos)).BeginInit();
             this.sPanel6.SuspendLayout();
             this.sPanel7.SuspendLayout();
             this.SuspendLayout();
@@ -230,10 +230,12 @@
             chartArea2.AxisY.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
             chartArea2.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
             chartArea2.AxisY.IsMarksNextToAxis = false;
+            chartArea2.AxisY.IsStartedFromZero = false;
             chartArea2.AxisY.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)(((((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont) 
             | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.StaggeredLabels) 
             | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45) 
             | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.WordWrap)));
+            chartArea2.AxisY.LabelStyle.Enabled = false;
             chartArea2.AxisY.LabelStyle.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea2.AxisY.LabelStyle.Format = "C";
             chartArea2.AxisY.LabelStyle.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
@@ -248,7 +250,7 @@
             chartArea2.Name = "ChartArea1";
             chartArea2.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.chart1.ChartAreas.Add(chartArea2);
-            this.chart1.Location = new System.Drawing.Point(-24, 28);
+            this.chart1.Location = new System.Drawing.Point(-11, 28);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
@@ -269,7 +271,7 @@
             series2.SmartLabelStyle.Enabled = false;
             series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(630, 282);
+            this.chart1.Size = new System.Drawing.Size(652, 282);
             this.chart1.TabIndex = 26;
             this.chart1.Text = "chart1";
             // 
@@ -296,6 +298,23 @@
             this.sPanel3.Name = "sPanel3";
             this.sPanel3.Size = new System.Drawing.Size(195, 46);
             this.sPanel3.TabIndex = 78;
+            // 
+            // dtpHasta
+            // 
+            this.dtpHasta.BorderColor = System.Drawing.Color.Black;
+            this.dtpHasta.BorderSize = 0;
+            this.dtpHasta.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpHasta.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
+            this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHasta.Location = new System.Drawing.Point(4, 7);
+            this.dtpHasta.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(188, 35);
+            this.dtpHasta.SkinColor = System.Drawing.Color.White;
+            this.dtpHasta.TabIndex = 74;
+            this.dtpHasta.TextColor = System.Drawing.Color.Black;
+            this.dtpHasta.Value = new System.DateTime(2024, 11, 2, 0, 0, 0, 0);
+            this.dtpHasta.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
             // 
             // label1
             // 
@@ -335,7 +354,7 @@
             this.sPanel5.BorderColor = System.Drawing.Color.White;
             this.sPanel5.BorderRadius = 15;
             this.sPanel5.BorderSize = 1;
-            this.sPanel5.Controls.Add(this.chart2);
+            this.sPanel5.Controls.Add(this.chartTotalPedidos);
             this.sPanel5.Controls.Add(this.label5);
             this.sPanel5.ForeColor = System.Drawing.Color.White;
             this.sPanel5.Location = new System.Drawing.Point(17, 392);
@@ -343,12 +362,12 @@
             this.sPanel5.Size = new System.Drawing.Size(631, 265);
             this.sPanel5.TabIndex = 73;
             // 
-            // chart2
+            // chartTotalPedidos
             // 
-            this.chart2.BackColor = System.Drawing.Color.Transparent;
-            this.chart2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            this.chart2.BackSecondaryColor = System.Drawing.Color.Transparent;
-            this.chart2.BorderSkin.BackColor = System.Drawing.Color.DarkRed;
+            this.chartTotalPedidos.BackColor = System.Drawing.Color.Transparent;
+            this.chartTotalPedidos.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            this.chartTotalPedidos.BackSecondaryColor = System.Drawing.Color.Transparent;
+            this.chartTotalPedidos.BorderSkin.BackColor = System.Drawing.Color.DarkRed;
             chartArea3.AxisX.Crossing = -1.7976931348623157E+308D;
             chartArea3.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
             chartArea3.AxisX.IsLabelAutoFit = false;
@@ -377,19 +396,19 @@
             chartArea3.BackColor = System.Drawing.Color.Transparent;
             chartArea3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
             chartArea3.BorderColor = System.Drawing.Color.Transparent;
-            chartArea3.Name = "ChartArea1";
+            chartArea3.Name = "Principal";
             chartArea3.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.chart2.ChartAreas.Add(chartArea3);
-            this.chart2.Location = new System.Drawing.Point(-15, 34);
-            this.chart2.Name = "chart2";
-            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.chart2.PaletteCustomColors = new System.Drawing.Color[] {
+            this.chartTotalPedidos.ChartAreas.Add(chartArea3);
+            this.chartTotalPedidos.Location = new System.Drawing.Point(-15, 34);
+            this.chartTotalPedidos.Name = "chartTotalPedidos";
+            this.chartTotalPedidos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chartTotalPedidos.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))))};
             series3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
             series3.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             series3.BorderColor = System.Drawing.Color.Navy;
             series3.BorderWidth = 2;
-            series3.ChartArea = "ChartArea1";
+            series3.ChartArea = "Principal";
             series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(200)))));
             series3.Font = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series3.IsVisibleInLegend = false;
@@ -406,10 +425,10 @@
             series3.SmartLabelStyle.Enabled = false;
             series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             series3.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int64;
-            this.chart2.Series.Add(series3);
-            this.chart2.Size = new System.Drawing.Size(646, 235);
-            this.chart2.TabIndex = 26;
-            this.chart2.Text = "chart2";
+            this.chartTotalPedidos.Series.Add(series3);
+            this.chartTotalPedidos.Size = new System.Drawing.Size(646, 235);
+            this.chartTotalPedidos.TabIndex = 26;
+            this.chartTotalPedidos.Text = "chartTotalPedidos";
             // 
             // label5
             // 
@@ -494,23 +513,6 @@
             this.label10.TabIndex = 22;
             this.label10.Text = "Promedio De Ventas Diarias";
             // 
-            // dtpHasta
-            // 
-            this.dtpHasta.BorderColor = System.Drawing.Color.Black;
-            this.dtpHasta.BorderSize = 0;
-            this.dtpHasta.CalendarFont = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpHasta.Font = new System.Drawing.Font("Roboto Medium", 10.5F);
-            this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHasta.Location = new System.Drawing.Point(4, 7);
-            this.dtpHasta.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(188, 35);
-            this.dtpHasta.SkinColor = System.Drawing.Color.White;
-            this.dtpHasta.TabIndex = 74;
-            this.dtpHasta.TextColor = System.Drawing.Color.Black;
-            this.dtpHasta.Value = new System.DateTime(2024, 11, 2, 0, 0, 0, 0);
-            this.dtpHasta.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
-            // 
             // dtpDesde
             // 
             this.dtpDesde.BorderColor = System.Drawing.Color.Black;
@@ -557,7 +559,7 @@
             this.sPanel3.ResumeLayout(false);
             this.sPanel5.ResumeLayout(false);
             this.sPanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTotalPedidos)).EndInit();
             this.sPanel6.ResumeLayout(false);
             this.sPanel6.PerformLayout();
             this.sPanel7.ResumeLayout(false);
@@ -582,7 +584,7 @@
         private System.Windows.Forms.Label label2;
         private Sipaa.Framework.SPanel sPanel4;
         private Sipaa.Framework.SPanel sPanel5;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartTotalPedidos;
         private System.Windows.Forms.Label label5;
         private Sipaa.Framework.SPanel sPanel6;
         private System.Windows.Forms.Label lblIngresoPromedio;

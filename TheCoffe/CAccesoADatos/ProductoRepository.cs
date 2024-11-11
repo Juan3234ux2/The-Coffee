@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using TheCoffe.CDatos;
+using TheCoffe.CDatos.Estadisticas;
 
 namespace TheCoffe.CAccesoADatos
 {
@@ -84,6 +85,30 @@ namespace TheCoffe.CAccesoADatos
                     .OrderBy(p => p.nombre)
                     .ToListAsync();
                 }
+            }
+        }
+        public async Task<List<ProductosEstadistica>> ObtenerEstadisticaProductos()
+            {
+            using (db = new DBTheCoffeeEntities())
+            {
+                    return await db.Venta_Detalle
+                            .GroupBy(d => d.id_producto)
+                            .Select(g => new
+                            {
+                                ProductoId = g.Key,
+                                TotalVentas = g.Sum(d => d.cantidad) 
+                            })
+                            .Join(db.Producto,
+                                  resultado => resultado.ProductoId,
+                                  producto => producto.id_producto,
+                                  (resultado, producto) => new ProductosEstadistica
+                                  {
+                                      Producto = producto.nombre,
+                                      TotalPedidos = resultado.TotalVentas
+                                  })
+                            .OrderByDescending(p => p.TotalPedidos)
+                            .Take(3)
+                            .ToListAsync();
             }
         }
         public Producto SearchObject(int id)

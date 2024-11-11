@@ -29,14 +29,20 @@ namespace TheCoffe.CAccesoADatos
         }
 
 
-        public async Task<List<Turno_Caja>> Read(bool estado)
+        public async Task<List<Turno_Caja>> Read()
         {
             using (db = new DBTheCoffeeEntities())
             {
                 return await db.Turno_Caja.Include(p => p.Usuario).ToListAsync();
             }
         }
-
+        public bool HayTurnos()
+        {
+            using (db = new DBTheCoffeeEntities())
+            {
+                return db.Turno_Caja.Count() > 0;
+            }
+        }
         public Turno_Caja SearchObject(int id)
         {
             using (db = new DBTheCoffeeEntities())
@@ -66,6 +72,13 @@ namespace TheCoffe.CAccesoADatos
             {
                 return db.Turno_Caja.Where(p =>
                 p.Usuario.nombreCompleto.Contains(name)).ToList();
+            }
+        }
+        public Turno_Caja ObtenerUltimoTurno()
+        {
+            using (db = new DBTheCoffeeEntities())
+            {
+                return db.Turno_Caja.OrderByDescending(t => t.id_turno).First();
             }
         }
 

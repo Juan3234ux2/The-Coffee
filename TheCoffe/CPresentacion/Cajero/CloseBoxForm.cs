@@ -39,6 +39,7 @@ namespace TheCoffe.CPresentacion.Cajero
             lblMontoRecaudado.Text = $"Monto recaudado: $ {turno.monto_cierre - turno.diferencia}";
             txtObservaciones.Texts = turno.observaciones;
             txtAmount.Enabled = false;
+            this.Height = 271;
             btnCloseBox.Visible = false;
         }
 
