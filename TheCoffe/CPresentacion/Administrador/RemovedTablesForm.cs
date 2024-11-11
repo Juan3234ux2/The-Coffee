@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using TheCoffe.App;
 using TheCoffe.CAccesoADatos;
 using TheCoffe.CDatos;
+using TheCoffe.CNegocio;
 using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.CPresentacion
 {
     public partial class RemovedTablesForm : Form
     {
+        private Paginator<Mesa> paginator;
         private bool isShowingMsgBox = false;
         private readonly TableService _tableService = new TableService();
         private Mesa mesa = new Mesa();
@@ -29,7 +31,8 @@ namespace TheCoffe.CPresentacion
         public async void RefreshPantalla()
         {
             var tables = await _tableService.ObtenerMesasEliminadas();
-            dataRemovedTable.DataSource = tables;
+            paginator = new Paginator<Mesa>(tables, 9);
+            CargarDatos(paginator);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -75,6 +78,31 @@ namespace TheCoffe.CPresentacion
                     isShowingMsgBox = false;
                     RefreshPantalla();
             }
+        }
+
+        public void CargarDatos(Paginator<Mesa> mesas)
+        {
+            dataRemovedTable.DataSource = null;
+            dataRemovedTable.DataSource = mesas.GetPageData();
+            ActualizarPaginacion(mesas);
+        }
+        private void ActualizarPaginacion(Paginator<Mesa> mesas)
+        {
+            lblPagina.Text = $"Página {mesas.CurrentPage} de {mesas.TotalPages}";
+            btnAnt.Enabled = mesas.CurrentPage > 1;
+            btnSig.Enabled = mesas.CurrentPage < mesas.TotalPages;
+        }
+
+        private void btnAnt_Click(object sender, EventArgs e)
+        {
+            paginator.PreviousPage();
+            CargarDatos(paginator);
+        }
+
+        private void btnSig_Click(object sender, EventArgs e)
+        {
+            paginator.NextPage();
+            CargarDatos(paginator);
         }
     }
 }

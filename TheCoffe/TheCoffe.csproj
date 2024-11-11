@@ -157,6 +157,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CAccesoADatos\BackupRepository.cs" />
     <Compile Include="CAccesoADatos\ClienteRepository.cs" />
     <Compile Include="CAccesoADatos\MesaRepository.cs" />
     <Compile Include="CAccesoADatos\MeseroRepository.cs" />
@@ -226,6 +227,7 @@
     <Compile Include="CNegocio\Paginator.cs" />
     <Compile Include="CNegocio\Services\AdminService.cs" />
     <Compile Include="CNegocio\Services\AuthService.cs" />
+    <Compile Include="CNegocio\Services\BackupService.cs" />
     <Compile Include="CNegocio\Services\CategoryService.cs" />
     <Compile Include="CNegocio\Services\CustomerService.cs" />
     <Compile Include="CNegocio\Services\OrderService.cs" />
@@ -393,6 +395,12 @@
     </Compile>
     <Compile Include="CPresentacion\General\SelectModeForm.Designer.cs">
       <DependentUpon>SelectModeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\Gerente\ListClosingBoxForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Gerente\ListClosingBoxForm.Designer.cs">
+      <DependentUpon>ListClosingBoxForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CPresentacion\Gerente\MainFormManager.cs">
       <SubType>Form</SubType>
@@ -602,6 +610,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\General\SelectModeForm.resx">
       <DependentUpon>SelectModeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Gerente\ListClosingBoxForm.resx">
+      <DependentUpon>ListClosingBoxForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\Gerente\MainFormManager.resx">
       <DependentUpon>MainFormManager.cs</DependentUpon>

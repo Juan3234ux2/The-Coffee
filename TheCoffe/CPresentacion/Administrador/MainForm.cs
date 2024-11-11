@@ -12,6 +12,7 @@ using TheCoffe.CDatos;
 using WindowsFormsApplication1;
 using TheCoffe.CNegocio.Services;
 using System.IO;
+using TheCoffe.CPresentacion.Administrador;
 
 namespace TheCoffe
 {
@@ -122,6 +123,12 @@ namespace TheCoffe
         {
             lblUser.Text = usuarioActual.nombreCompleto;
             imgUser.Image = Image.FromFile(_userService.ObtenerImagen());
+        }
+
+        private void btnConfiguration_Click(object sender, EventArgs e)
+        {
+            SetActiveSection(sender as RoundButton);
+            LoadUserControl(new SettingsForm());
         }
     }
 }   

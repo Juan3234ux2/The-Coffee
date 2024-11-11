@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheCoffe.App;
 using TheCoffe.CDatos;
+using TheCoffe.CNegocio;
 using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.CPresentacion
 {
     public partial class RemovedWaiterForm : Form
     {
+        private Paginator<Mesero> paginator;
         private bool isShowingMsgBox = false;
         private WaiterService _waiterService = new WaiterService();
         public RemovedWaiterForm()
@@ -26,7 +28,8 @@ namespace TheCoffe.CPresentacion
         public async void RefreshPantalla()
         {
             var meseros = await _waiterService.ObtenerMeserosEliminados();
-            dataRemovedWaiter.DataSource = meseros;
+            paginator = new Paginator<Mesero>(meseros, 9);
+            CargarDatos(paginator);
         }
 
         private void RemovedWaiterForm_Load(object sender, EventArgs e)
@@ -72,6 +75,32 @@ namespace TheCoffe.CPresentacion
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+
+        public void CargarDatos(Paginator<Mesero> meseros)
+        {
+            dataRemovedWaiter.DataSource = null;
+            dataRemovedWaiter.DataSource = meseros.GetPageData();
+            ActualizarPaginacion(meseros);
+        }
+        private void ActualizarPaginacion(Paginator<Mesero> mesero)
+        {
+            lblPagina.Text = $"Página {mesero.CurrentPage} de {mesero.TotalPages}";
+            btnAnt.Enabled = mesero.CurrentPage > 1;
+            btnSig.Enabled = mesero.CurrentPage < mesero.TotalPages;
+        }
+
+        private void btnAnt_Click(object sender, EventArgs e)
+        {
+            paginator.PreviousPage();
+            CargarDatos(paginator);
+        }
+
+        private void btnSig_Click(object sender, EventArgs e)
+        {
+            paginator.NextPage();
+            CargarDatos(paginator);
         }
     }
 }

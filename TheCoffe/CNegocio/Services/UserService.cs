@@ -22,6 +22,10 @@ namespace TheCoffe.CNegocio.Services
         {
             return await _userRepository.Read(false);
         }
+        public async Task<List<Usuario>> ObtenerTodosLosUsuarios()
+        {
+            return await _userRepository.FindAll();
+        }
         public Usuario ObtenerUsuarioPorID(int id)
         {
             return _userRepository.SearchObject(id);

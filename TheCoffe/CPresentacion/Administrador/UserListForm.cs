@@ -99,12 +99,15 @@ namespace TheCoffe.App
             }
             RefreshPantalla();
         }
+
         private void txtSearch__TextChanged(object sender, EventArgs e)
         {
             if (txtSearch.Texts != string.Empty)
             {
-                var usuarios = _userService.BuscarPorNombre(txtSearch.Texts);
-                dataUsers.DataSource = usuarios;
+
+                UserService service = new UserService();
+                var usuarioss = service.BuscarPorNombre(txtSearch.Texts);
+                dataUsers.DataSource = usuarioss;
             }
             else
             {

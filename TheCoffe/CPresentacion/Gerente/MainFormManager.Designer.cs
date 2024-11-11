@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFormManager));
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlSideBar = new System.Windows.Forms.Panel();
+            this.btnClosingBox = new WindowsFormsApplication1.RoundButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogout = new WindowsFormsApplication1.RoundButton();
             this.btnReports = new WindowsFormsApplication1.RoundButton();
@@ -53,6 +54,7 @@
             // pnlSideBar
             // 
             this.pnlSideBar.BackColor = System.Drawing.Color.White;
+            this.pnlSideBar.Controls.Add(this.btnClosingBox);
             this.pnlSideBar.Controls.Add(this.panel2);
             this.pnlSideBar.Controls.Add(this.btnLogout);
             this.pnlSideBar.Controls.Add(this.btnReports);
@@ -64,6 +66,37 @@
             this.pnlSideBar.Name = "pnlSideBar";
             this.pnlSideBar.Size = new System.Drawing.Size(250, 681);
             this.pnlSideBar.TabIndex = 3;
+            // 
+            // btnClosingBox
+            // 
+            this.btnClosingBox.BackColor = System.Drawing.Color.White;
+            this.btnClosingBox.BackgroundColor = System.Drawing.Color.White;
+            this.btnClosingBox.BorderColor = System.Drawing.Color.Transparent;
+            this.btnClosingBox.BorderRadius = 10;
+            this.btnClosingBox.BorderSize = 0;
+            this.btnClosingBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClosingBox.FlatAppearance.BorderSize = 0;
+            this.btnClosingBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClosingBox.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClosingBox.ForeColor = System.Drawing.Color.DimGray;
+            this.btnClosingBox.IconChar = FontAwesome.Sharp.IconChar.FileArchive;
+            this.btnClosingBox.IconColor = System.Drawing.Color.DimGray;
+            this.btnClosingBox.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClosingBox.IconSize = 35;
+            this.btnClosingBox.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnClosingBox.Location = new System.Drawing.Point(3, 202);
+            this.btnClosingBox.MinimumSize = new System.Drawing.Size(58, 0);
+            this.btnClosingBox.Name = "btnClosingBox";
+            this.btnClosingBox.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
+            this.btnClosingBox.Size = new System.Drawing.Size(244, 45);
+            this.btnClosingBox.TabIndex = 23;
+            this.btnClosingBox.Tag = "Mesas";
+            this.btnClosingBox.Text = "  Cierres de Caja";
+            this.btnClosingBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClosingBox.TextColor = System.Drawing.Color.DimGray;
+            this.btnClosingBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClosingBox.UseVisualStyleBackColor = false;
+            this.btnClosingBox.Click += new System.EventHandler(this.btnClosingBox_Click);
             // 
             // panel2
             // 
@@ -206,5 +239,6 @@
         private WindowsFormsApplication1.RoundButton btnReports;
         private System.Windows.Forms.PictureBox pictureBox1;
         private WindowsFormsApplication1.RoundButton btnMain;
+        private WindowsFormsApplication1.RoundButton btnClosingBox;
     }
 }

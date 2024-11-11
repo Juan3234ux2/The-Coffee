@@ -99,7 +99,7 @@ namespace TheCoffe.App
                     p.id_producto,
                     p.nombre,
                     p.precio,
-                    p.id_categoria
+                    c = p.Categoria1.descripcion
                 }).ToList();
                 dataProducts.DataSource = Lst;
             }

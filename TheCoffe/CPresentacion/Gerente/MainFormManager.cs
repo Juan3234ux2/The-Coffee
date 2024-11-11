@@ -99,5 +99,11 @@ namespace TheCoffe.CPresentacion.Gerente
                 this.Close();
             }
         }
+
+        private void btnClosingBox_Click(object sender, EventArgs e)
+        {
+            SetActiveSection(sender as RoundButton);
+            LoadUserControl(new ListClosingBoxForm());
+        }
     }
 }

@@ -17,6 +17,7 @@ namespace TheCoffe.App
 {
     public partial class TableList : UserControl
     {
+        private Paginator<Mesa> paginator;
         private readonly TableService _tableService = new TableService();
         private Mesa mesa = new Mesa();
         private int id;
@@ -31,7 +32,8 @@ namespace TheCoffe.App
         {
             TableService service = new TableService();
             var tables = await service.ObtenerMesasActivas();
-            dataTable.DataSource = tables;
+            paginator = new Paginator<Mesa>(tables, 9);
+            CargarDatos(paginator);
         }
 
         private void TableList_Load(object sender, EventArgs e)
@@ -110,5 +112,31 @@ namespace TheCoffe.App
         {
             InputValidator.ValidateInput(e, InputValidator.InputType.Digits);
         }
+
+        public void CargarDatos(Paginator<Mesa> mesas)
+        {
+            dataTable.DataSource = null;
+            dataTable.DataSource = mesas.GetPageData();
+            ActualizarPaginacion(mesas);
+        }
+        private void ActualizarPaginacion(Paginator<Mesa> mesas)
+        {
+            lblPagina.Text = $"Página {mesas.CurrentPage} de {mesas.TotalPages}";
+            btnAnt.Enabled = mesas.CurrentPage > 1;
+            btnSig.Enabled = mesas.CurrentPage < mesas.TotalPages;
+        }
+
+        private void btnAnt_Click(object sender, EventArgs e)
+        {
+            paginator.PreviousPage();
+            CargarDatos(paginator);
+        }
+
+        private void btnSig_Click(object sender, EventArgs e)
+        {
+            paginator.NextPage();
+            CargarDatos(paginator);
+        }
+
     }
 }

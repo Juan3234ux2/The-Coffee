@@ -97,12 +97,26 @@ namespace TheCoffe.CAccesoADatos
             }
         }
 
+        public async Task<List<Usuario>> FindAll()
+        {
+            using (db = new DBTheCoffeeEntities())
+            {
+                return await db.Usuario
+                    .Where(p => p.id_rol == 3)
+                    .OrderBy(u => u.usuario1)
+                    .ToListAsync();
+            }
+        }
+
         public List<Usuario> Search(String name)
         {
                 using (db = new DBTheCoffeeEntities())
                 {
-                    return db.Usuario.Where(p =>
-                    p.nombre.Contains(name) && p.estado == true).ToList();
+                   return  db.Usuario
+                    .Include(p => p.rol_usuario)
+                    .Where(p => p.estado == true && p.nombre.Contains(name))
+                    .OrderBy(u => u.nombre)
+                    .ToList();
                 }
         }
 

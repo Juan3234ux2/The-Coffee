@@ -131,7 +131,8 @@ namespace TheCoffe.CAccesoADatos
         {
                 using (db = new DBTheCoffeeEntities())
                 {
-                    return db.Producto.Where(p =>
+                    return db.Producto.Include(p => p.Categoria1)
+                    .Where(p =>
                     p.nombre.Contains(name) && p.estado == true).ToList();
                 }
         }
