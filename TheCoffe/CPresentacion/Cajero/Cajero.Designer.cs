@@ -60,6 +60,7 @@ namespace TheCoffe.CPresentacion.Cajero
             this.relleno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agregar = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnlCategorias = new System.Windows.Forms.FlowLayoutPanel();
             this.btnPopulares = new WindowsFormsApplication1.RoundButton();
             this.txtSearch = new TheCoffe.Components.ModernTextBox();
@@ -242,8 +243,8 @@ namespace TheCoffe.CPresentacion.Cajero
             // 
             // btnFinalizeOrder
             // 
-            this.btnFinalizeOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
-            this.btnFinalizeOrder.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(75)))), ((int)(((byte)(232)))));
+            this.btnFinalizeOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnFinalizeOrder.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnFinalizeOrder.BorderColor = System.Drawing.Color.Transparent;
             this.btnFinalizeOrder.BorderRadius = 10;
             this.btnFinalizeOrder.BorderSize = 0;
@@ -264,7 +265,7 @@ namespace TheCoffe.CPresentacion.Cajero
             this.btnFinalizeOrder.Size = new System.Drawing.Size(300, 45);
             this.btnFinalizeOrder.TabIndex = 2;
             this.btnFinalizeOrder.Tag = "";
-            this.btnFinalizeOrder.Text = "Finalizar Pedido";
+            this.btnFinalizeOrder.Text = "Cancelar Pedido";
             this.btnFinalizeOrder.TextColor = System.Drawing.Color.White;
             this.btnFinalizeOrder.UseVisualStyleBackColor = false;
             this.btnFinalizeOrder.Click += new System.EventHandler(this.btnFinalizeOrder_Click);
@@ -351,7 +352,8 @@ namespace TheCoffe.CPresentacion.Cajero
             this.id,
             this.relleno,
             this.nombre,
-            this.precio});
+            this.precio,
+            this.agregar});
             this.dataProducts.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(232)))), ((int)(((byte)(250)))));
@@ -410,7 +412,7 @@ namespace TheCoffe.CPresentacion.Cajero
             // 
             // relleno
             // 
-            this.relleno.FillWeight = 11.13618F;
+            this.relleno.FillWeight = 12.56365F;
             this.relleno.HeaderText = "";
             this.relleno.Name = "relleno";
             this.relleno.ReadOnly = true;
@@ -418,7 +420,7 @@ namespace TheCoffe.CPresentacion.Cajero
             // nombre
             // 
             this.nombre.DataPropertyName = "nombre";
-            this.nombre.FillWeight = 340.8011F;
+            this.nombre.FillWeight = 384.4861F;
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
@@ -426,10 +428,20 @@ namespace TheCoffe.CPresentacion.Cajero
             // precio
             // 
             this.precio.DataPropertyName = "precioFormateado";
-            this.precio.FillWeight = 86.8283F;
+            this.precio.FillWeight = 97.95823F;
             this.precio.HeaderText = "Precio";
             this.precio.Name = "precio";
             this.precio.ReadOnly = true;
+            // 
+            // agregar
+            // 
+            this.agregar.FillWeight = 43.75761F;
+            this.agregar.HeaderText = "";
+            this.agregar.Image = global::TheCoffe.Properties.Resources.detalle;
+            this.agregar.Name = "agregar";
+            this.agregar.ReadOnly = true;
+            this.agregar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.agregar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // pnlCategorias
             // 
@@ -589,12 +601,13 @@ namespace TheCoffe.CPresentacion.Cajero
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.FlowLayoutPanel pnlProducts;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.FlowLayoutPanel pnlCategorias;
+        private WindowsFormsApplication1.RoundButton btnPopulares;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn relleno;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.FlowLayoutPanel pnlCategorias;
-        private WindowsFormsApplication1.RoundButton btnPopulares;
+        private System.Windows.Forms.DataGridViewImageColumn agregar;
     }
 }

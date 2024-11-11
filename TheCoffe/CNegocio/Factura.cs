@@ -35,7 +35,15 @@ namespace TheCoffe.CNegocio
             titulo.AddLineBreak();
 
             // Información de la empresa
-            var empresaParrafo = factura.AddParagraph();
+            var headerTable = factura.AddTable();
+            headerTable.Borders.Visible = false;
+            var logoColumn = headerTable.AddColumn("4.5cm");
+            var textColumn = headerTable.AddColumn("8cm");
+            var headerRow = headerTable.AddRow();
+            var empresaParrafo = headerRow.Cells[1].AddParagraph();
+            var logoImage = headerRow.Cells[0].AddParagraph().AddImage("base64:" + GenerarImagenLogo());
+            logoImage.Width = "4.5cm";
+            logoImage.LockAspectRatio = true;
             empresaParrafo.Format.SpaceBefore = "0.7cm";
             empresaParrafo.Format.Alignment = ParagraphAlignment.Left;
             empresaParrafo.Format.Font.Size = 10;
@@ -52,7 +60,7 @@ namespace TheCoffe.CNegocio
             empresaParrafo.AddLineBreak();
             empresaParrafo.AddText("Condición IVA: Responsable Inscripto");
             empresaParrafo.AddLineBreak();
-            empresaParrafo.Format.SpaceAfter = "0.25cm";
+            empresaParrafo.Format.SpaceAfter = "0.5cm";
             empresaParrafo.Format.LineSpacingRule = LineSpacingRule.OnePtFive;
             //Linea horizontal
             var line = factura.AddParagraph();
@@ -144,7 +152,7 @@ namespace TheCoffe.CNegocio
             var infoTable = footer.AddTable();
             infoTable.Borders.Visible = false;
             var qrColumn = infoTable.AddColumn("3.5cm");
-            var textColumn = infoTable.AddColumn("7cm");
+            textColumn = infoTable.AddColumn("7cm");
             var infoRow = infoTable.AddRow();
             //QR
             var qrImage = infoRow.Cells[0].AddParagraph().AddImage("base64:" + GenerarQR());
@@ -197,6 +205,16 @@ namespace TheCoffe.CNegocio
             using (var ms = new MemoryStream())
             {
                 bitmap.Save(ms, ImageFormat.Png);
+                base64Image = Convert.ToBase64String(ms.ToArray());
+            }
+            return base64Image;
+        }
+        private string GenerarImagenLogo()
+        {
+            string base64Image;
+            using (var ms = new MemoryStream())
+            {
+                Properties.Resources.TheCoffeeLogo.Save(ms, ImageFormat.Png);
                 base64Image = Convert.ToBase64String(ms.ToArray());
             }
             return base64Image;

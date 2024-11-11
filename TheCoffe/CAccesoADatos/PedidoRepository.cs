@@ -125,6 +125,23 @@ namespace TheCoffe.CAccesoADatos
                 }
             }
         }
+        public void CancelOrder(Venta venta)
+        {
+            using (db = new DBTheCoffeeEntities())
+            {
+                try
+                {
+                    venta.fecha_venta = DateTime.Now;
+                    venta.estado = "Cancelado";
+                    venta.monto_total = 0;
+                    this.Update(venta);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al cancelar la venta.", ex);
+                }
+            }
+        }
         public async Task<List<Venta>> SearchbyWaiter(String name, int idTurno)
         {
             using (db = new DBTheCoffeeEntities())

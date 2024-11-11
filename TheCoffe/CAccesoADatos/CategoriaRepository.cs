@@ -7,12 +7,14 @@ using System.Windows.Forms;
 using TheCoffe.CDatos;
 using System.Data.Entity;
 using System.Data.SqlClient;
+using TheCoffe.CNegocio.Services;
 
 namespace TheCoffe.CAccesoADatos
 {
     class CategoriaRepository
     {
         private DBTheCoffeeEntities _db;
+        private OrderService orderService = new OrderService();
         public void Create(Categoria1 categoria)
         {
             using (_db = new DBTheCoffeeEntities())
@@ -28,7 +30,26 @@ namespace TheCoffe.CAccesoADatos
                 }
             }
         }
-
+        public async Task<List<CategoriaEstadistica>> ObtenerVentasPorCategoria(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            List<Venta> ventas = await orderService.FiltrarPorFecha(fechaDesde, fechaHasta);
+            var idVentas = ventas.Select(v => v.id_ventas).ToList();
+            using (_db = new DBTheCoffeeEntities())
+            {
+                var categoriasPopulares = await _db.Venta_Detalle
+                    .Where(vd => idVentas.Contains(vd.id_ventas) && vd.Producto.Categoria1 != null)
+                    .GroupBy(vd => vd.Producto.Categoria1.descripcion)
+                    .Select(g => new CategoriaEstadistica
+                    {
+                        TotalPedidos = g.Count(),
+                        Categoria = g.Key
+                    })
+                    .OrderByDescending(t => t.TotalPedidos)
+                    .Take(3)
+                    .ToListAsync();
+                return categoriasPopulares;
+            }
+        }
         public async Task<List<Categoria1>> Read(bool estado)
         {
             using (_db = new DBTheCoffeeEntities())
@@ -38,6 +59,58 @@ namespace TheCoffe.CAccesoADatos
                     .ToListAsync();                           
             }
         }
+        public async Task<List<Categoria1>> ObtenerCategoriasPopulares()
+        {
+            using (_db = new DBTheCoffeeEntities())
+            {
+                if(_db.Venta_Detalle.Count() > 3)
+                {
+                    return await _db.Venta_Detalle
+                                .GroupBy(d => d.id_producto)
+                                .Select(g => new
+                                {
+                                    ProductoId = g.Key,
+                                    TotalVentas = g.Sum(d => d.cantidad)
+                                })
+                                .Join(_db.Producto,
+                                      resultado => resultado.ProductoId,
+                                      producto => producto.id_producto,
+                                      (resultado, producto) => new
+                                      {
+                                          prod = producto,
+                                          resultado.TotalVentas
+                                      })
+                                .Join(_db.Categoria1,
+                                      p => p.prod.id_categoria,
+                                      categoria => categoria.id_categoria,
+                                      (productoConVentas, categoria) => new
+                                      {
+                                          ca = categoria,
+                                          productoConVentas.TotalVentas
+                                      })
+                                      .GroupBy(c => c.ca.id_categoria)
+                                        .Select(g => new
+                                        {
+                                            categoria = g.FirstOrDefault().ca,
+                                            TotalVentasPorCategoria = g.Sum(x => x.TotalVentas)
+                                        })
+                                    .OrderByDescending(c => c.TotalVentasPorCategoria)
+                                    .Select(c => c.categoria)
+                                    .Where(c => c.estado)
+                                    .Take(3)
+                                    .OrderBy(c => c.descripcion)
+                                    .ToListAsync();
+
+                }
+                else
+                {
+                    return await _db.Categoria1.Where(c => c.estado)
+                   .OrderBy(c => c.descripcion)
+                   .ToListAsync();
+                }
+            }
+        }
+
 
         public Categoria1 SearchObject(int id)
         {

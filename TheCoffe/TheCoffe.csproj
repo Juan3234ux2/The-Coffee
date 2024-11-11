@@ -194,6 +194,7 @@
     <Compile Include="CDatos\DiaDeTrabajo.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
     </Compile>
+    <Compile Include="CDatos\InfoDashboard.cs" />
     <Compile Include="CDatos\IngresoDiario.cs" />
     <Compile Include="CDatos\Mesa.cs">
       <DependentUpon>BDTheCoffee.tt</DependentUpon>
@@ -782,6 +783,7 @@
     <None Include="Resources\basura %281%29.png" />
     <None Include="Resources\lapiz.png" />
     <None Include="Resources\loading.gif" />
+    <None Include="Resources\TheCoffeeLogo.png" />
     <Content Include="ScriptTheCoffee.txt" />
   </ItemGroup>
   <ItemGroup>

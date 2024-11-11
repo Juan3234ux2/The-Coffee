@@ -70,6 +70,7 @@ namespace TheCoffe.CPresentacion
         {
             await ObtenerVentasFiltradas();
             dtpFechaHasta.MinDate = dtpFechaDesde.Value;
+            dtpFechaDesde.MaxDate = dtpFechaHasta.Value;
         }
         private async Task ObtenerVentasFiltradas(int idMesero = 0)
         {

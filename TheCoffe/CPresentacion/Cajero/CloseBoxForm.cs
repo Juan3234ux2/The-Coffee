@@ -65,38 +65,41 @@ namespace TheCoffe.CPresentacion.Cajero
                 isShowingMsgBox = false;
                 return;
             }
-            if (string.IsNullOrWhiteSpace(txtAmount.Texts))
+            if (string.IsNullOrWhiteSpace(txtAmount.Texts) || ValidarDiferencia())
             {
                 isShowingMsgBox = true;
-                MessageBox.Show("Debe Completar el campo",
+                MessageBox.Show("Debe Completar los campos",
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 isShowingMsgBox = false;
                 return;
             }
-            else
+            CerrarCaja();
+        }
+        private bool ValidarDiferencia()
+        {
+            return Math.Abs((double.Parse(txtAmount.Texts)- totalRecaudado)) > 10000;
+        }
+        private void CerrarCaja()
+        {
+            try
             {
-                try
-                {
-                    double montoEsperado =  totalRecaudado;
-                    Turno.TurnoActual.fecha_cierre = DateTime.Now;
-                    Turno.TurnoActual.observaciones = txtObservaciones.Texts;
-                    Turno.TurnoActual.monto_cierre = double.Parse(txtAmount.Texts.Trim());
-                    Turno.TurnoActual.diferencia = Turno.TurnoActual.monto_cierre - montoEsperado;
-                    turnoService.ActualizarTurno(Turno.TurnoActual);
-                    cerrarCaja?.Invoke();
-                    new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso Finalizado", "Caja Cerrada Exitosamente", Properties.Resources.informacion);
-                }
-                catch (Exception ex)
-                {
-                    isShowingMsgBox = true;
-                    MessageBox.Show(ex.Message, "Error al actualizar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    isShowingMsgBox = false;
-                }
+                Turno.TurnoActual.fecha_cierre = DateTime.Now;
+                Turno.TurnoActual.observaciones = txtObservaciones.Texts;
+                Turno.TurnoActual.monto_cierre = double.Parse(txtAmount.Texts.Trim());
+                Turno.TurnoActual.diferencia = Turno.TurnoActual.monto_cierre - totalRecaudado;
+                turnoService.ActualizarTurno(Turno.TurnoActual);
+                cerrarCaja?.Invoke();
+                new AlertBox(this.Owner as Form, Color.LightGreen, Color.SeaGreen, "Proceso Finalizado", "Caja Cerrada Exitosamente", Properties.Resources.informacion);
+            }
+            catch (Exception ex)
+            {
+                isShowingMsgBox = true;
+                MessageBox.Show(ex.Message, "Error al actualizar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isShowingMsgBox = false;
             }
         }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();

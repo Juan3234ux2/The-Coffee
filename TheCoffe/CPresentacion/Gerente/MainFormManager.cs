@@ -16,10 +16,14 @@ namespace TheCoffe.CPresentacion.Gerente
     {
         UserControl activeSection = null;
         private UserService _userService = new UserService();
+        private SalesReportsForm salesReport;
+        private SalesListForm saleslist;
         public MainFormManager()
         {
             InitializeComponent();
             this.DoubleBuffered = true;
+            salesReport = new SalesReportsForm();
+            saleslist = new SalesListForm();
         }
 
         private void pnlMain_Paint(object sender, PaintEventArgs e)
@@ -29,7 +33,7 @@ namespace TheCoffe.CPresentacion.Gerente
 
         private void MainFormManager_Load(object sender, EventArgs e)
         {
-            LoadUserControl(new SalesReportsForm());
+            LoadUserControl(salesReport);
             precargarDatos();
         }
         private async void precargarDatos()
@@ -77,13 +81,13 @@ namespace TheCoffe.CPresentacion.Gerente
         private void btnReports_Click(object sender, EventArgs e)
         {
             SetActiveSection(sender as RoundButton);
-            LoadUserControl(new SalesListForm());
+            LoadUserControl(saleslist);
         }
 
         private void btnMain_Click(object sender, EventArgs e)
         {
             SetActiveSection(sender as RoundButton);
-            LoadUserControl(new SalesReportsForm());
+            LoadUserControl(salesReport);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

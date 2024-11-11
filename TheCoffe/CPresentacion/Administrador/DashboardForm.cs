@@ -8,21 +8,33 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using TheCoffe.CNegocio.Services;
+using TheCoffe.CDatos;
 
 namespace TheCoffe.App
 {
     public partial class DashboardForm : UserControl
     {
+        private AdminService adminService = new AdminService();
         public DashboardForm()
         {
             InitializeComponent();
             PoblarChart();
             PoblarChartDonas();
             PoblarChartChicos();
+            CargarCantidades();
         }
-        private void PoblarChartDonas()
+        private async void CargarCantidades()
         {
-            // Crear una nueva serie de tipo Doughnut
+            var cantidades = await adminService.ObtenerCantidadesDashboard();
+            lblProducts.Text = cantidades.CantidadProductos.ToString();
+            lblTotalEmpleados.Text = cantidades.TotalMeseros.ToString();
+            lblTotalPedidos.Text = cantidades.TotalPedido.ToString();
+            lbltotalRecaudado.Text = cantidades.TotalRecaudado.ToString("C");
+        }
+        private async void PoblarChartDonas()
+        {
+            List<CategoriaEstadistica> categoriaEstadisticas = await adminService.ObtenerVentasPorCategoria(DateTime.Now, DateTime.Now);
             Series serie = new Series("Categorias")
             {
                 ChartType = SeriesChartType.Doughnut,
@@ -30,13 +42,20 @@ namespace TheCoffe.App
             };
             serie.LabelForeColor = Color.White;
             serie.Font = new Font("Roboto", 10, FontStyle.Bold);
-
-
-            serie.Points.AddXY("Cafetería", 500);
-            serie.Points.AddXY("Pastelería", 300);
-            serie.Points.AddXY("Bebidas", 200);
-            chartDona.Series.Clear();
-            chartDona.Series.Add(serie);
+            if (categoriaEstadisticas.Count == 0)
+            {
+                serie.Points.AddXY("Sin registros", 100);
+            }
+            else
+            {
+                foreach (var categoria in categoriaEstadisticas)
+                {
+                    serie.Points.AddXY(categoria.Categoria, categoria.TotalPedidos);
+                }
+            }
+            h.Legends.First().Position.Height = categoriaEstadisticas.Count == 0 ? 8 : 8 * categoriaEstadisticas.Count();
+            h.Series.Clear();
+            h.Series.Add(serie);
 
         }
 

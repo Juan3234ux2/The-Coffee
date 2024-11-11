@@ -36,15 +36,16 @@ namespace TheCoffe.CPresentacion.Cajero
         }
         public async void CargarProductosYCategorias()
         {
-            var productos = await productservice.ObtenerProductosActivos();
+            var productos = await productservice.ObtenerProductosPopulares();
             dataProducts.DataSource = productos;
             await CargarCategorias();
         }
         public async Task CargarCategorias()
         {
-            categorias = await categoryService.ObtenerCategoriasActivas();
-            for(int i = 0; i < 3; i++)
+            categorias = await categoryService.ObtenerCategoriasPopulares();
+            foreach(var categoria in categorias)
             {
+
                 RoundButton btnCategory = new RoundButton
                 {
                     ForeColor = Color.DimGray,
@@ -52,11 +53,10 @@ namespace TheCoffe.CPresentacion.Cajero
                     BorderRadius = 20,
                     BackColor = Color.White,
                     Height = 40,
-                    Text = categorias[i].descripcion,
+                    Text = categoria.descripcion,
                     BorderSize = 1,
                     TabStop = false
                 };
-                btnCategory.FlatAppearance.MouseDownBackColor = Color.White;
                 btnCategory.FlatAppearance.MouseDownBackColor = Color.White;
                 btnCategory.Click += new EventHandler(SeleccionarCategoria);
                 pnlCategorias.Controls.Add(btnCategory);
@@ -73,7 +73,7 @@ namespace TheCoffe.CPresentacion.Cajero
             }
             else
             {
-                productos = await productservice.ObtenerProductosActivos();
+                productos = await productservice.ObtenerProductosPopulares();
             }
             dataProducts.DataSource = productos;
             ModificarBotonesCategoria(sender as RoundButton);
@@ -107,6 +107,16 @@ namespace TheCoffe.CPresentacion.Cajero
         }
         public async void ActualizarDatos()
         {
+            if(0 < pnlProducts.Controls.Count)
+            {
+                btnFinalizeOrder.Text = "Finalizar Pedido";
+                btnFinalizeOrder.BackColor = Color.FromArgb(96, 75, 232);
+            }
+            else
+            {
+                btnFinalizeOrder.Text = "Cancelar Pedido";
+                btnFinalizeOrder.BackColor = Color.FromArgb(192, 0, 0);
+            }
             await CargarPedido();
             lblCountProduct.Text = pnlProducts.Controls.Count.ToString();
             lblTotal.Text = $"$ {productservice.FormatCurrency(order.Venta_Detalle.Sum(d => d.subtotal))}";
@@ -117,18 +127,37 @@ namespace TheCoffe.CPresentacion.Cajero
         }
         private void btnFinalizeOrder_Click(object sender, EventArgs e)
         {
-            using (OverlayForm overlay = new OverlayForm())
+            if(pnlProducts.Controls.Count == 0)
             {
-                overlay.Show();
-                using (FinalizeOrder modal = new FinalizeOrder(order,mesa))
+                DialogResult result = MessageBox.Show("Está seguro que desea cancelar el pedido?", "Cancelar Pedido", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(result == DialogResult.Yes)
                 {
-                    modal.finishOrder += () =>
+                    try
                     {
+                        orderService.CancelarPedido(order);
                         finalizarOrden?.Invoke();
-                    }; 
-                    modal.ShowDialog(overlay);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error al cancelar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                 overlay.Close();
+            }
+            else
+            {
+                using (OverlayForm overlay = new OverlayForm())
+                {
+                    overlay.Show();
+                    using (FinalizeOrder modal = new FinalizeOrder(order,mesa))
+                    {
+                        modal.finishOrder += () =>
+                        {
+                            finalizarOrden?.Invoke();
+                        }; 
+                        modal.ShowDialog(overlay);
+                    }
+                     overlay.Close();
+                }
             }
         }
         public void CargarProductosAlPedido()
@@ -146,24 +175,27 @@ namespace TheCoffe.CPresentacion.Cajero
         }
         private void dataProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int idProducto = Convert.ToInt32(dataProducts.CurrentRow.Cells[0].Value.ToString());
-            bool esNuevoProducto = orderService.AgregarProductoAlPedido(order, idProducto);
-            foreach (Control control in pnlProducts.Controls)
+            if (dataProducts.Columns[e.ColumnIndex].Name == "agregar")
             {
-                if (control is CardProduct card)
+                int idProducto = Convert.ToInt32(dataProducts.CurrentRow.Cells[0].Value.ToString());
+                bool esNuevoProducto = orderService.AgregarProductoAlPedido(order, idProducto);
+                foreach (Control control in pnlProducts.Controls)
                 {
-                    card.CargarDatos();
+                    if (control is CardProduct card)
+                    {
+                        card.CargarDatos();
+                    }
                 }
-            }
-            if (esNuevoProducto)
-            {
-                Venta_Detalle ultimoRegistro = orderService.ObtenerUltimoDetalle();
-                CardProduct producto = new CardProduct(ultimoRegistro.id_detalle);
-                producto.ChangeQty += ActualizarDatos;
-                producto.deleteProduct += EliminarProducto;
-                pnlProducts.Controls.Add(producto);
-            }            
-            ActualizarDatos();
+                if (esNuevoProducto)
+                {
+                    Venta_Detalle ultimoRegistro = orderService.ObtenerUltimoDetalle();
+                    CardProduct producto = new CardProduct(ultimoRegistro.id_detalle);
+                    producto.ChangeQty += ActualizarDatos;
+                    producto.deleteProduct += EliminarProducto;
+                    pnlProducts.Controls.Add(producto);
+                }
+                ActualizarDatos();
+            }          
         }
         private void EliminarProducto(CardProduct producto)
         {
@@ -180,7 +212,7 @@ namespace TheCoffe.CPresentacion.Cajero
             }
             else
             {
-                productos = await productservice.ObtenerProductosActivos();
+                productos = await productservice.ObtenerProductosPopulares();
             }
             dataProducts.DataSource = productos;
             ModificarBotonesCategoria(btnPopulares);

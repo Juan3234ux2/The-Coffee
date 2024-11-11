@@ -185,7 +185,7 @@ namespace TheCoffe.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap logo_sidebar {
             get {
-                object obj = ResourceManager.GetObject("logo sidebar", resourceCulture);
+                object obj = ResourceManager.GetObject("logo_sidebar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +246,16 @@ namespace TheCoffe.Properties {
         internal static System.Drawing.Bitmap The_Coffee__600_x_600_px___1_ {
             get {
                 object obj = ResourceManager.GetObject("The Coffee (600 x 600 px) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TheCoffeeLogo {
+            get {
+                object obj = ResourceManager.GetObject("TheCoffeeLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
