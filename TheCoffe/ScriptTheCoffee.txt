@@ -1,10 +1,525 @@
-CREATE DATABASE TheCoffee
+USE [master]
 GO
-USE TheCoffee
+/****** Object:  Database [TheCoffee]    Script Date: 1/11/2024 10:14:29 ******/
+CREATE DATABASE [TheCoffee]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'TheCoffee', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER2\MSSQL\DATA\TheCoffee.mdf' , SIZE = 4160KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
+ LOG ON 
+( NAME = N'TheCoffee_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER2\MSSQL\DATA\TheCoffee_log.ldf' , SIZE = 1040KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
 GO
-CREATE TABLE Categoria
+ALTER DATABASE [TheCoffee] SET COMPATIBILITY_LEVEL = 110
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [TheCoffee].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [TheCoffee] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [TheCoffee] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [TheCoffee] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [TheCoffee] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [TheCoffee] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [TheCoffee] SET AUTO_CLOSE ON 
+GO
+ALTER DATABASE [TheCoffee] SET AUTO_CREATE_STATISTICS ON 
+GO
+ALTER DATABASE [TheCoffee] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [TheCoffee] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [TheCoffee] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [TheCoffee] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [TheCoffee] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [TheCoffee] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [TheCoffee] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [TheCoffee] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [TheCoffee] SET  ENABLE_BROKER 
+GO
+ALTER DATABASE [TheCoffee] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [TheCoffee] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [TheCoffee] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [TheCoffee] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [TheCoffee] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [TheCoffee] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [TheCoffee] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [TheCoffee] SET RECOVERY SIMPLE 
+GO
+ALTER DATABASE [TheCoffee] SET  MULTI_USER 
+GO
+ALTER DATABASE [TheCoffee] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [TheCoffee] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [TheCoffee] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [TheCoffee] SET TARGET_RECOVERY_TIME = 0 SECONDS 
+GO
+USE [TheCoffee]
+GO
+/****** Object:  Table [dbo].[Categoria1]    Script Date: 1/11/2024 10:14:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Categoria1](
+	[id_categoria] [int] IDENTITY(1,1) NOT NULL,
+	[descripcion] [varchar](50) NOT NULL,
+	[estado] [bit] NOT NULL,
+ CONSTRAINT [PK_Categoria_id] PRIMARY KEY CLUSTERED 
 (
-  id_categoria INT IDENTITY(1,1) NOT NULL,
-  descripcion VARCHAR(100) NOT NULL,
-  CONSTRAINT PK_categoria_id PRIMARY KEY (id_categoria)
-);
+	[id_categoria] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_Categoria_descripcion] UNIQUE NONCLUSTERED 
+(
+	[descripcion] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[Cliente]    Script Date: 1/11/2024 10:14:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Cliente](
+	[id_cliente] [int] IDENTITY(1,1) NOT NULL,
+	[nombre] [varchar](50) NOT NULL,
+	[apellido] [varchar](50) NOT NULL,
+	[domicilio] [varchar](100) NOT NULL,
+	[localidad] [varchar](100) NOT NULL,
+	[provincia] [varchar](50) NOT NULL,
+	[email] [varchar](150) NOT NULL,
+	[cuit] [varchar](12) NULL,
+	[telefono] [varchar](20) NULL,
+ CONSTRAINT [PK_Cliente_id] PRIMARY KEY CLUSTERED 
+(
+	[id_cliente] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_Cliente_cuit] UNIQUE NONCLUSTERED 
+(
+	[cuit] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_Cliente_email] UNIQUE NONCLUSTERED 
+(
+	[email] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[DiaDeTrabajo]    Script Date: 1/11/2024 10:14:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[DiaDeTrabajo](
+	[id_dia] [int] IDENTITY(1,1) NOT NULL,
+	[nombre_dia] [varchar](50) NULL,
+ CONSTRAINT [PK_dia] PRIMARY KEY CLUSTERED 
+(
+	[id_dia] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[Medio_Pago]    Script Date: 1/11/2024 10:14:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Medio_Pago](
+	[id_medio_pago] [int] IDENTITY(1,1) NOT NULL,
+	[nombre] [varchar](100) NOT NULL,
+ CONSTRAINT [PK_medio_pago_id] PRIMARY KEY CLUSTERED 
+(
+	[id_medio_pago] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[Mesa]    Script Date: 1/11/2024 10:14:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Mesa](
+	[id_mesa] [int] IDENTITY(1,1) NOT NULL,
+	[nro_mesa] [int] NOT NULL,
+	[cantidad_sillas] [int] NOT NULL,
+	[estado] [bit] NOT NULL,
+	[disponible] [bit] NOT NULL,
+ CONSTRAINT [PK_Mesa_id] PRIMARY KEY CLUSTERED 
+(
+	[id_mesa] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_Mesa_nro_mesa] UNIQUE NONCLUSTERED 
+(
+	[nro_mesa] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Mesero]    Script Date: 1/11/2024 10:14:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Mesero](
+	[id_mesero] [int] IDENTITY(1,1) NOT NULL,
+	[nombre] [varchar](50) NOT NULL,
+	[apellido] [varchar](50) NOT NULL,
+	[hora_entrada] [int] NOT NULL,
+	[hora_salida] [int] NOT NULL,
+	[dni] [int] NOT NULL,
+	[estado] [bit] NOT NULL,
+	[telefono] [varchar](50) NULL,
+ CONSTRAINT [PK_Mesero_id] PRIMARY KEY CLUSTERED 
+(
+	[id_mesero] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_Mesero_dni] UNIQUE NONCLUSTERED 
+(
+	[dni] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_Mesero_telefono] UNIQUE NONCLUSTERED 
+(
+	[telefono] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[MeseroDiaDeTrabajo]    Script Date: 1/11/2024 10:14:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MeseroDiaDeTrabajo](
+	[id_mesero] [int] NOT NULL,
+	[id_dia] [int] NOT NULL,
+ CONSTRAINT [PK_mesero_dia] PRIMARY KEY CLUSTERED 
+(
+	[id_mesero] ASC,
+	[id_dia] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Pago]    Script Date: 1/11/2024 10:14:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Pago](
+	[id_pago] [int] IDENTITY(1,1) NOT NULL,
+	[estado] [varchar](50) NULL,
+	[id_ventas] [int] NOT NULL,
+	[id_medio_pago] [int] NOT NULL,
+ CONSTRAINT [PK_Pago_id] PRIMARY KEY CLUSTERED 
+(
+	[id_pago] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[Producto]    Script Date: 1/11/2024 10:14:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Producto](
+	[id_producto] [int] IDENTITY(1,1) NOT NULL,
+	[nombre] [varchar](100) NOT NULL,
+	[descripcion] [varchar](255) NOT NULL,
+	[precio] [float] NOT NULL,
+	[imagen] [varchar](150) NOT NULL,
+	[estado] [bit] NOT NULL,
+	[id_categoria] [int] NOT NULL,
+ CONSTRAINT [PK_Producto_id] PRIMARY KEY CLUSTERED 
+(
+	[id_producto] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[rol_usuario]    Script Date: 1/11/2024 10:14:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[rol_usuario](
+	[id_rol] [int] IDENTITY(1,1) NOT NULL,
+	[descripcion] [varchar](50) NOT NULL,
+	[estado] [bit] NOT NULL,
+ CONSTRAINT [PK_Rol_id] PRIMARY KEY CLUSTERED 
+(
+	[id_rol] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_Rol_descripcion] UNIQUE NONCLUSTERED 
+(
+	[descripcion] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[Turno_Caja]    Script Date: 1/11/2024 10:14:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Turno_Caja](
+	[id_turno] [int] IDENTITY(1,1) NOT NULL,
+	[fecha_apertura] [datetime] NULL,
+	[monto_inicial] [float] NOT NULL,
+	[monto_cierre] [float] NULL,
+	[observaciones] [varchar](255) NULL,
+	[fecha_cierre] [datetime] NULL,
+	[id_usuario] [int] NOT NULL,
+	[diferencia] [float] NULL,
+ CONSTRAINT [PK_Turno_Caja_id_turno_id_caja] PRIMARY KEY CLUSTERED 
+(
+	[id_turno] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[Usuario]    Script Date: 1/11/2024 10:14:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Usuario](
+	[id_usuario] [int] IDENTITY(1,1) NOT NULL,
+	[nombre] [varchar](90) NOT NULL,
+	[contraseña] [varchar](100) NOT NULL,
+	[usuario] [varchar](50) NOT NULL,
+	[apellido] [varchar](50) NOT NULL,
+	[estado] [bit] NOT NULL,
+	[id_rol] [int] NOT NULL,
+	[telefono] [varchar](20) NOT NULL,
+	[avatar] [varchar](200) NULL,
+ CONSTRAINT [PK_Usuario_id] PRIMARY KEY CLUSTERED 
+(
+	[id_usuario] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_Usuario_telefono] UNIQUE NONCLUSTERED 
+(
+	[telefono] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_Usuario_usuario] UNIQUE NONCLUSTERED 
+(
+	[usuario] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[Venta]    Script Date: 1/11/2024 10:14:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Venta](
+	[id_ventas] [int] IDENTITY(1,1) NOT NULL,
+	[fecha_venta] [datetime] NULL,
+	[id_mesero] [int] NOT NULL,
+	[id_mesa] [int] NOT NULL,
+	[id_cliente] [int] NULL,
+	[estado] [varchar](50) NULL,
+	[monto_total] [float] NULL,
+	[id_turno] [int] NULL,
+ CONSTRAINT [PK_Venta_id] PRIMARY KEY CLUSTERED 
+(
+	[id_ventas] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[Venta_Detalle]    Script Date: 1/11/2024 10:14:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Venta_Detalle](
+	[id_detalle] [int] IDENTITY(1,1) NOT NULL,
+	[cantidad] [int] NOT NULL,
+	[subtotal] [float] NOT NULL,
+	[precio_unitario] [float] NOT NULL,
+	[id_producto] [int] NOT NULL,
+	[id_ventas] [int] NOT NULL,
+ CONSTRAINT [PK_Venta_Detalle_id] PRIMARY KEY CLUSTERED 
+(
+	[id_detalle] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+ALTER TABLE [dbo].[Categoria1] ADD  CONSTRAINT [DF_Categoria_estado]  DEFAULT ((1)) FOR [estado]
+GO
+ALTER TABLE [dbo].[Mesa] ADD  CONSTRAINT [DF_Mesa_estado]  DEFAULT ((1)) FOR [estado]
+GO
+ALTER TABLE [dbo].[Mesa] ADD  CONSTRAINT [DF_Mesa_disponible]  DEFAULT ((1)) FOR [disponible]
+GO
+ALTER TABLE [dbo].[Mesero] ADD  CONSTRAINT [DF_Mesero_estado]  DEFAULT ((1)) FOR [estado]
+GO
+ALTER TABLE [dbo].[Pago] ADD  CONSTRAINT [DF_Pago_estado]  DEFAULT ('en proceso') FOR [estado]
+GO
+ALTER TABLE [dbo].[Producto] ADD  CONSTRAINT [DF_Producto_estado]  DEFAULT ((1)) FOR [estado]
+GO
+ALTER TABLE [dbo].[rol_usuario] ADD  CONSTRAINT [DF_rol_usuario_estado]  DEFAULT ((1)) FOR [estado]
+GO
+ALTER TABLE [dbo].[Usuario] ADD  CONSTRAINT [DF_Usuario_estado]  DEFAULT ((1)) FOR [estado]
+GO
+ALTER TABLE [dbo].[MeseroDiaDeTrabajo]  WITH CHECK ADD  CONSTRAINT [FK_dia] FOREIGN KEY([id_dia])
+REFERENCES [dbo].[DiaDeTrabajo] ([id_dia])
+GO
+ALTER TABLE [dbo].[MeseroDiaDeTrabajo] CHECK CONSTRAINT [FK_dia]
+GO
+ALTER TABLE [dbo].[MeseroDiaDeTrabajo]  WITH CHECK ADD  CONSTRAINT [FK_mesero] FOREIGN KEY([id_mesero])
+REFERENCES [dbo].[Mesero] ([id_mesero])
+GO
+ALTER TABLE [dbo].[MeseroDiaDeTrabajo] CHECK CONSTRAINT [FK_mesero]
+GO
+ALTER TABLE [dbo].[Pago]  WITH CHECK ADD  CONSTRAINT [FK_Pago_Medio_pago] FOREIGN KEY([id_medio_pago])
+REFERENCES [dbo].[Medio_Pago] ([id_medio_pago])
+GO
+ALTER TABLE [dbo].[Pago] CHECK CONSTRAINT [FK_Pago_Medio_pago]
+GO
+ALTER TABLE [dbo].[Pago]  WITH CHECK ADD  CONSTRAINT [FK_Pago_Venta] FOREIGN KEY([id_ventas])
+REFERENCES [dbo].[Venta] ([id_ventas])
+GO
+ALTER TABLE [dbo].[Pago] CHECK CONSTRAINT [FK_Pago_Venta]
+GO
+ALTER TABLE [dbo].[Producto]  WITH CHECK ADD  CONSTRAINT [FK_Producto_Categoria] FOREIGN KEY([id_categoria])
+REFERENCES [dbo].[Categoria1] ([id_categoria])
+GO
+ALTER TABLE [dbo].[Producto] CHECK CONSTRAINT [FK_Producto_Categoria]
+GO
+ALTER TABLE [dbo].[Turno_Caja]  WITH CHECK ADD  CONSTRAINT [FK_Turno_Caja_id_usuario] FOREIGN KEY([id_usuario])
+REFERENCES [dbo].[Usuario] ([id_usuario])
+GO
+ALTER TABLE [dbo].[Turno_Caja] CHECK CONSTRAINT [FK_Turno_Caja_id_usuario]
+GO
+ALTER TABLE [dbo].[Usuario]  WITH CHECK ADD  CONSTRAINT [FK_Usuario_id_rol] FOREIGN KEY([id_rol])
+REFERENCES [dbo].[rol_usuario] ([id_rol])
+GO
+ALTER TABLE [dbo].[Usuario] CHECK CONSTRAINT [FK_Usuario_id_rol]
+GO
+ALTER TABLE [dbo].[Venta]  WITH CHECK ADD  CONSTRAINT [FK_Venta_id_cliente] FOREIGN KEY([id_cliente])
+REFERENCES [dbo].[Cliente] ([id_cliente])
+GO
+ALTER TABLE [dbo].[Venta] CHECK CONSTRAINT [FK_Venta_id_cliente]
+GO
+ALTER TABLE [dbo].[Venta]  WITH CHECK ADD  CONSTRAINT [FK_Venta_id_mesa] FOREIGN KEY([id_mesa])
+REFERENCES [dbo].[Mesa] ([id_mesa])
+GO
+ALTER TABLE [dbo].[Venta] CHECK CONSTRAINT [FK_Venta_id_mesa]
+GO
+ALTER TABLE [dbo].[Venta]  WITH CHECK ADD  CONSTRAINT [FK_Venta_id_mesero] FOREIGN KEY([id_mesero])
+REFERENCES [dbo].[Mesero] ([id_mesero])
+GO
+ALTER TABLE [dbo].[Venta] CHECK CONSTRAINT [FK_Venta_id_mesero]
+GO
+ALTER TABLE [dbo].[Venta]  WITH CHECK ADD  CONSTRAINT [FK_Venta_turno] FOREIGN KEY([id_turno])
+REFERENCES [dbo].[Turno_Caja] ([id_turno])
+GO
+ALTER TABLE [dbo].[Venta] CHECK CONSTRAINT [FK_Venta_turno]
+GO
+ALTER TABLE [dbo].[Venta_Detalle]  WITH CHECK ADD  CONSTRAINT [FK_Venta_Detalle_Producto] FOREIGN KEY([id_producto])
+REFERENCES [dbo].[Producto] ([id_producto])
+GO
+ALTER TABLE [dbo].[Venta_Detalle] CHECK CONSTRAINT [FK_Venta_Detalle_Producto]
+GO
+ALTER TABLE [dbo].[Venta_Detalle]  WITH CHECK ADD  CONSTRAINT [FK_Venta_Detalle_Venta] FOREIGN KEY([id_ventas])
+REFERENCES [dbo].[Venta] ([id_ventas])
+GO
+ALTER TABLE [dbo].[Venta_Detalle] CHECK CONSTRAINT [FK_Venta_Detalle_Venta]
+GO
+ALTER TABLE [dbo].[Mesero]  WITH CHECK ADD  CONSTRAINT [CK_Diferencia_Horas] CHECK  ((([hora_salida]-[hora_entrada])<=(8)))
+GO
+ALTER TABLE [dbo].[Mesero] CHECK CONSTRAINT [CK_Diferencia_Horas]
+GO
+ALTER TABLE [dbo].[Mesero]  WITH CHECK ADD  CONSTRAINT [CK_DNI] CHECK  (([dni]>=(0) AND [dni]<=(99999999)))
+GO
+ALTER TABLE [dbo].[Mesero] CHECK CONSTRAINT [CK_DNI]
+GO
+ALTER TABLE [dbo].[Mesero]  WITH CHECK ADD  CONSTRAINT [CK_hora] CHECK  (([hora_entrada]>=(1) AND [hora_entrada]<=(24) AND ([hora_salida]>=(1) AND [hora_salida]<=(24))))
+GO
+ALTER TABLE [dbo].[Mesero] CHECK CONSTRAINT [CK_hora]
+GO
+ALTER TABLE [dbo].[Mesero]  WITH CHECK ADD  CONSTRAINT [CK_Horario] CHECK  (([hora_entrada]<[hora_salida]))
+GO
+ALTER TABLE [dbo].[Mesero] CHECK CONSTRAINT [CK_Horario]
+GO
+ALTER TABLE [dbo].[Pago]  WITH CHECK ADD  CONSTRAINT [CK_Pago_Estado] CHECK  (([estado]='finalizado' OR [estado]='rechazado' OR [estado]='en proceso'))
+GO
+ALTER TABLE [dbo].[Pago] CHECK CONSTRAINT [CK_Pago_Estado]
+GO
+ALTER TABLE [dbo].[Venta]  WITH CHECK ADD  CONSTRAINT [CK_Estado] CHECK  (([estado]='Completado' OR [estado]='Cancelado' OR [estado]='En Preparacion'))
+GO
+ALTER TABLE [dbo].[Venta] CHECK CONSTRAINT [CK_Estado]
+GO
+USE [master]
+GO
+ALTER DATABASE [TheCoffee] SET  READ_WRITE 
+GO
