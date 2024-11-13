@@ -525,7 +525,7 @@ ALTER DATABASE [TheCoffee] SET  READ_WRITE
 GO
 Use TheCoffee
 go
-
+--Lote de datos obligatorio
 INSERT INTO DiaDeTrabajo (nombre_dia) VALUES 
 ('Lunes'), 
 ('Martes'), 
