@@ -523,3 +523,19 @@ USE [master]
 GO
 ALTER DATABASE [TheCoffee] SET  READ_WRITE 
 GO
+Use TheCoffee
+go
+
+INSERT INTO DiaDeTrabajo (nombre_dia) VALUES 
+('Lunes'), 
+('Martes'), 
+('Miércoles'), 
+('Jueves'), 
+('Viernes'), 
+('Sábado'), 
+('Domingo');
+
+Insert into rol_usuario (descripcion) values
+('Administrador'), 
+('Gerente'), 
+('Cajero'),  
